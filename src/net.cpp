@@ -949,7 +949,7 @@ PHP_METHOD(php_wxURI, __construct)
 	long uri_len1;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval uri2;
+	zval* uri2;
 	wxURI* object_pointer2_0 = 0;
 	bool overload2_called = false;
 		
@@ -996,17 +996,17 @@ PHP_METHOD(php_wxURI, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &uri2, php_wxURI_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(uri2) == IS_OBJECT)
+				if(Z_TYPE_P(uri2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxURI_P(&uri2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxURI_P(&uri2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxURI_P(uri2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxURI_P(uri2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxURI*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'uri' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(uri2) != IS_NULL)
+				else if(Z_TYPE_P(uri2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'uri' not null, could not be retreived correctly.");
 				}
@@ -1067,7 +1067,7 @@ PHP_METHOD(php_wxURI, __construct)
 				native_object = new wxURI_php(*(wxURI*) object_pointer2_0);
 
 				native_object->references.Initialize();
-				((wxURI_php*) native_object)->references.AddReference(&uri2, "wxURI::wxURI at call 4 with 1 argument(s)");
+				((wxURI_php*) native_object)->references.AddReference(uri2, "wxURI::wxURI at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -1261,7 +1261,7 @@ PHP_METHOD(php_wxURI, Resolve)
 	#endif
 	
 	//Parameters for overload 0
-	zval base0;
+	zval* base0;
 	wxURI* object_pointer0_0 = 0;
 	long flags0;
 	bool overload0_called = false;
@@ -1279,17 +1279,17 @@ PHP_METHOD(php_wxURI, Resolve)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &base0, php_wxURI_entry, &flags0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(base0) == IS_OBJECT)
+				if(Z_TYPE_P(base0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxURI_P(&base0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxURI_P(&base0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxURI_P(base0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxURI_P(base0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxURI*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'base' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(base0) != IS_NULL)
+				else if(Z_TYPE_P(base0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'base' not null, could not be retreived correctly.");
 				}
@@ -1313,7 +1313,7 @@ PHP_METHOD(php_wxURI, Resolve)
 
 				((wxURI_php*)native_object)->Resolve(*(wxURI*) object_pointer0_0);
 
-				references->AddReference(&base0, "wxURI::Resolve at call 3 with 1 argument(s)");
+				references->AddReference(base0, "wxURI::Resolve at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -1326,7 +1326,7 @@ PHP_METHOD(php_wxURI, Resolve)
 
 				((wxURI_php*)native_object)->Resolve(*(wxURI*) object_pointer0_0, (int) flags0);
 
-				references->AddReference(&base0, "wxURI::Resolve at call 3 with 2 argument(s)");
+				references->AddReference(base0, "wxURI::Resolve at call 3 with 2 argument(s)");
 
 				return;
 				break;

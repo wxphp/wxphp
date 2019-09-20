@@ -147,13 +147,13 @@ PHP_METHOD(php_wxMediaCtrl, Load)
 	long fileName_len0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval uri1;
+	zval* uri1;
 	wxURI* object_pointer1_0 = 0;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval uri2;
+	zval* uri2;
 	wxURI* object_pointer2_0 = 0;
-	zval proxy2;
+	zval* proxy2;
 	wxURI* object_pointer2_1 = 0;
 	bool overload2_called = false;
 		
@@ -187,17 +187,17 @@ PHP_METHOD(php_wxMediaCtrl, Load)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &uri1, php_wxURI_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(uri1) == IS_OBJECT)
+				if(Z_TYPE_P(uri1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxURI_P(&uri1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxURI_P(&uri1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxURI_P(uri1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxURI_P(uri1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxURI*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(uri1) != IS_NULL)
+				else if(Z_TYPE_P(uri1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -221,34 +221,34 @@ PHP_METHOD(php_wxMediaCtrl, Load)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &uri2, php_wxURI_entry, &proxy2, php_wxURI_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(uri2) == IS_OBJECT)
+				if(Z_TYPE_P(uri2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxURI_P(&uri2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxURI_P(&uri2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxURI_P(uri2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxURI_P(uri2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxURI*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'uri' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(uri2) != IS_NULL)
+				else if(Z_TYPE_P(uri2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'uri' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(proxy2) == IS_OBJECT)
+				if(Z_TYPE_P(proxy2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxURI_P(&proxy2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxURI_P(&proxy2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxURI_P(proxy2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxURI_P(proxy2 TSRMLS_CC)->native_object;
 					object_pointer2_1 = (wxURI*) argument_native_object;
 					if (!object_pointer2_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'proxy' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(proxy2) != IS_NULL)
+				else if(Z_TYPE_P(proxy2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'proxy' not null, could not be retreived correctly.");
 				}
@@ -291,7 +291,7 @@ PHP_METHOD(php_wxMediaCtrl, Load)
 
 				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Load(*(wxURI*) object_pointer1_0));
 
-				references->AddReference(&uri1, "wxMediaCtrl::Load at call 3 with 1 argument(s)");
+				references->AddReference(uri1, "wxMediaCtrl::Load at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -311,8 +311,8 @@ PHP_METHOD(php_wxMediaCtrl, Load)
 
 				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Load(*(wxURI*) object_pointer2_0, *(wxURI*) object_pointer2_1));
 
-				references->AddReference(&uri2, "wxMediaCtrl::Load at call 3 with 2 argument(s)");
-				references->AddReference(&proxy2, "wxMediaCtrl::Load at call 3 with 2 argument(s)");
+				references->AddReference(uri2, "wxMediaCtrl::Load at call 3 with 2 argument(s)");
+				references->AddReference(proxy2, "wxMediaCtrl::Load at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -383,19 +383,19 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	char* fileName0;
 	long fileName_len0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
 	char* szBackend0;
 	long szBackend_len0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_7 = 0;
 	char* name0;
 	long name_len0;
@@ -414,68 +414,68 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &fileName0, &fileName_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &szBackend0, &szBackend_len0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 8){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_7 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -499,7 +499,7 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(&parent0, "wxMediaCtrl::Create at call 1 with 2 argument(s)");
+				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -512,7 +512,7 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxMediaCtrl::Create at call 1 with 3 argument(s)");
+				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -525,8 +525,8 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(&parent0, "wxMediaCtrl::Create at call 1 with 4 argument(s)");
-				references->AddReference(&pos0, "wxMediaCtrl::Create at call 3 with 4 argument(s)");
+				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 4 argument(s)");
+				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -539,9 +539,9 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(&parent0, "wxMediaCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(&pos0, "wxMediaCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(&size0, "wxMediaCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 5 argument(s)");
+				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -554,9 +554,9 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(&parent0, "wxMediaCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(&pos0, "wxMediaCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(&size0, "wxMediaCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 6 argument(s)");
+				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -569,9 +569,9 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxMediaCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(&pos0, "wxMediaCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&size0, "wxMediaCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 7 argument(s)");
+				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -584,10 +584,10 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7));
 
-				references->AddReference(&parent0, "wxMediaCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(&pos0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&size0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&validator0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 8 argument(s)");
+				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(validator0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
 
 				return;
 				break;
@@ -600,10 +600,10 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxMediaCtrl::Create at call 1 with 9 argument(s)");
-				references->AddReference(&pos0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(&size0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(&validator0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
+				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 9 argument(s)");
+				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
+				references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
+				references->AddReference(validator0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
 
 				return;
 				break;
@@ -1983,19 +1983,19 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval parent1;
+	zval* parent1;
 	wxWindow* object_pointer1_0 = 0;
 	long id1;
 	char* fileName1;
 	long fileName_len1;
-	zval pos1;
+	zval* pos1;
 	wxPoint* object_pointer1_3 = 0;
-	zval size1;
+	zval* size1;
 	wxSize* object_pointer1_4 = 0;
 	long style1;
 	char* szBackend1;
 	long szBackend_len1;
-	zval validator1;
+	zval* validator1;
 	wxValidator* object_pointer1_7 = 0;
 	char* name1;
 	long name_len1;
@@ -2027,68 +2027,68 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &fileName1, &fileName_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &szBackend1, &szBackend_len1, &validator1, &name1, &name_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent1) == IS_OBJECT)
+				if(Z_TYPE_P(parent1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent1) != IS_NULL)
+				else if(Z_TYPE_P(parent1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(pos1) == IS_OBJECT)
+				if(Z_TYPE_P(pos1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos1 TSRMLS_CC)->native_object;
 					object_pointer1_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos1) != IS_NULL)
+				else if(Z_TYPE_P(pos1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(size1) == IS_OBJECT)
+				if(Z_TYPE_P(size1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size1 TSRMLS_CC)->native_object;
 					object_pointer1_4 = (wxSize*) argument_native_object;
 					if (!object_pointer1_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size1) != IS_NULL)
+				else if(Z_TYPE_P(size1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 8){
-				if(Z_TYPE(validator1) == IS_OBJECT)
+				if(Z_TYPE_P(validator1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator1 TSRMLS_CC)->native_object;
 					object_pointer1_7 = (wxValidator*) argument_native_object;
 					if (!object_pointer1_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator1) != IS_NULL)
+				else if(Z_TYPE_P(validator1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -2131,7 +2131,7 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 2 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -2143,7 +2143,7 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 3 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -2155,8 +2155,8 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3);
 
 				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 4 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 4 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 4 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -2168,9 +2168,9 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4);
 
 				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 5 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 5 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 5 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 5 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 5 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -2182,9 +2182,9 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1);
 
 				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 6 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 6 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 6 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 6 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 6 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -2196,9 +2196,9 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 7 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 7 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 7 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 7 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 7 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -2210,10 +2210,10 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8), *(wxValidator*) object_pointer1_7);
 
 				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 8 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&validator1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 8 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(validator1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
 				break;
 			}
 			case 9:
@@ -2225,10 +2225,10 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8), *(wxValidator*) object_pointer1_7, wxString(name1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 9 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(&validator1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 9 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
+				((wxMediaCtrl_php*) native_object)->references.AddReference(validator1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
 				break;
 			}
 		}

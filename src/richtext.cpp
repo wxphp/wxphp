@@ -141,15 +141,15 @@ PHP_METHOD(php_wxTextAttr, __construct)
 	
 	
 	//Parameters for overload 0
-	zval attr0;
+	zval* attr0;
 	wxTextAttr* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval colText1;
+	zval* colText1;
 	wxColour* object_pointer1_0 = 0;
-	zval colBack1;
+	zval* colBack1;
 	wxColour* object_pointer1_1 = 0;
-	zval font1;
+	zval* font1;
 	wxFont* object_pointer1_2 = 0;
 	long alignment1;
 	bool overload1_called = false;
@@ -169,17 +169,17 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(attr0) == IS_OBJECT)
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxTextAttr_P(&attr0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTextAttr_P(&attr0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(attr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(attr0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(attr0) != IS_NULL)
+				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -203,51 +203,51 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry, &alignment1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colText1) == IS_OBJECT)
+				if(Z_TYPE_P(colText1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colText1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colText1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colText1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colText1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxColour*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(colText1) != IS_NULL)
+				else if(Z_TYPE_P(colText1) != IS_NULL)
 				{
 					goto overload2;
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(colBack1) == IS_OBJECT)
+				if(Z_TYPE_P(colBack1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colBack1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colBack1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colBack1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colBack1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxColour*) argument_native_object;
 					if (!object_pointer1_1 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(colBack1) != IS_NULL)
+				else if(Z_TYPE_P(colBack1) != IS_NULL)
 				{
 					goto overload2;
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(font1) == IS_OBJECT)
+				if(Z_TYPE_P(font1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font1 TSRMLS_CC)->native_object;
 					object_pointer1_2 = (wxFont*) argument_native_object;
 					if (!object_pointer1_2 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(font1) != IS_NULL)
+				else if(Z_TYPE_P(font1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -285,7 +285,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				native_object = new wxTextAttr_php(*(wxTextAttr*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxTextAttr_php*) native_object)->references.AddReference(&attr0, "wxTextAttr::wxTextAttr at call 4 with 1 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(attr0, "wxTextAttr::wxTextAttr at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -304,7 +304,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0);
 
 				native_object->references.Initialize();
-				((wxTextAttr_php*) native_object)->references.AddReference(&colText1, "wxTextAttr::wxTextAttr at call 4 with 1 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call 4 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -316,8 +316,8 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1);
 
 				native_object->references.Initialize();
-				((wxTextAttr_php*) native_object)->references.AddReference(&colText1, "wxTextAttr::wxTextAttr at call 4 with 2 argument(s)");
-				((wxTextAttr_php*) native_object)->references.AddReference(&colBack1, "wxTextAttr::wxTextAttr at call 4 with 2 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call 4 with 2 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call 4 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -329,9 +329,9 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2);
 
 				native_object->references.Initialize();
-				((wxTextAttr_php*) native_object)->references.AddReference(&colText1, "wxTextAttr::wxTextAttr at call 4 with 3 argument(s)");
-				((wxTextAttr_php*) native_object)->references.AddReference(&colBack1, "wxTextAttr::wxTextAttr at call 4 with 3 argument(s)");
-				((wxTextAttr_php*) native_object)->references.AddReference(&font1, "wxTextAttr::wxTextAttr at call 4 with 3 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call 4 with 3 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call 4 with 3 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(font1, "wxTextAttr::wxTextAttr at call 4 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -343,9 +343,9 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (wxTextAttrAlignment) alignment1);
 
 				native_object->references.Initialize();
-				((wxTextAttr_php*) native_object)->references.AddReference(&colText1, "wxTextAttr::wxTextAttr at call 4 with 4 argument(s)");
-				((wxTextAttr_php*) native_object)->references.AddReference(&colBack1, "wxTextAttr::wxTextAttr at call 4 with 4 argument(s)");
-				((wxTextAttr_php*) native_object)->references.AddReference(&font1, "wxTextAttr::wxTextAttr at call 4 with 4 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call 4 with 4 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call 4 with 4 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(font1, "wxTextAttr::wxTextAttr at call 4 with 4 argument(s)");
 				break;
 			}
 		}
@@ -450,7 +450,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 	#endif
 	
 	//Parameters for overload 0
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_0 = 0;
 	long flags0;
 	bool overload0_called = false;
@@ -468,17 +468,17 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry, &flags0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -502,7 +502,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 
 				((wxTextAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(&font0, "wxTextAttr::SetFont at call 3 with 1 argument(s)");
+				references->AddReference(font0, "wxTextAttr::SetFont at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -515,7 +515,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 
 				((wxTextAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0, (int) flags0);
 
-				references->AddReference(&font0, "wxTextAttr::SetFont at call 3 with 2 argument(s)");
+				references->AddReference(font0, "wxTextAttr::SetFont at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -896,7 +896,7 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colText0;
+	zval* colText0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -913,17 +913,17 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colText0) == IS_OBJECT)
+				if(Z_TYPE_P(colText0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colText0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colText0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colText0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colText0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colText' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colText0) != IS_NULL)
+				else if(Z_TYPE_P(colText0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colText' not null, could not be retreived correctly.");
 				}
@@ -947,7 +947,7 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 
 				((wxTextAttr_php*)native_object)->SetTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colText0, "wxTextAttr::SetTextColour at call 3 with 1 argument(s)");
+				references->AddReference(colText0, "wxTextAttr::SetTextColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -2269,9 +2269,9 @@ PHP_METHOD(php_wxTextAttr, Apply)
 	#endif
 	
 	//Parameters for overload 0
-	zval style0;
+	zval* style0;
 	wxTextAttr* object_pointer0_0 = 0;
-	zval compareWith0;
+	zval* compareWith0;
 	wxTextAttr* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -2288,34 +2288,34 @@ PHP_METHOD(php_wxTextAttr, Apply)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, php_wxTextAttr_entry, &compareWith0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(style0) == IS_OBJECT)
+				if(Z_TYPE_P(style0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxTextAttr_P(&style0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTextAttr_P(&style0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(style0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(style0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'style' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(style0) != IS_NULL)
+				else if(Z_TYPE_P(style0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'style' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(compareWith0) == IS_OBJECT)
+				if(Z_TYPE_P(compareWith0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxTextAttr_P(&compareWith0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTextAttr_P(&compareWith0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(compareWith0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(compareWith0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXTEXTATTR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'compareWith' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(compareWith0) != IS_NULL)
+				else if(Z_TYPE_P(compareWith0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'compareWith' not null, could not be retreived correctly.");
 				}
@@ -2339,7 +2339,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
 
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->Apply(*(wxTextAttr*) object_pointer0_0));
 
-				references->AddReference(&style0, "wxTextAttr::Apply at call 3 with 1 argument(s)");
+				references->AddReference(style0, "wxTextAttr::Apply at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -2352,8 +2352,8 @@ PHP_METHOD(php_wxTextAttr, Apply)
 
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->Apply(*(wxTextAttr*) object_pointer0_0, (const wxTextAttr*) object_pointer0_1));
 
-				references->AddReference(&style0, "wxTextAttr::Apply at call 3 with 2 argument(s)");
-				references->AddReference(&compareWith0, "wxTextAttr::Apply at call 1 with 2 argument(s)");
+				references->AddReference(style0, "wxTextAttr::Apply at call 3 with 2 argument(s)");
+				references->AddReference(compareWith0, "wxTextAttr::Apply at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -3440,7 +3440,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 	#endif
 	
 	//Parameters for overload 0
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_0 = 0;
 	long flags0;
 	bool overload0_called = false;
@@ -3458,17 +3458,17 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry, &flags0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -3492,7 +3492,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->GetFontAttributes(*(wxFont*) object_pointer0_0));
 
-				references->AddReference(&font0, "wxTextAttr::GetFontAttributes at call 3 with 1 argument(s)");
+				references->AddReference(font0, "wxTextAttr::GetFontAttributes at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -3505,7 +3505,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->GetFontAttributes(*(wxFont*) object_pointer0_0, (int) flags0));
 
-				references->AddReference(&font0, "wxTextAttr::GetFontAttributes at call 3 with 2 argument(s)");
+				references->AddReference(font0, "wxTextAttr::GetFontAttributes at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -8705,13 +8705,13 @@ PHP_METHOD(php_wxTextAttr, Merge)
 	#endif
 	
 	//Parameters for overload 0
-	zval overlay0;
+	zval* overlay0;
 	wxTextAttr* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval base1;
+	zval* base1;
 	wxTextAttr* object_pointer1_0 = 0;
-	zval overlay1;
+	zval* overlay1;
 	wxTextAttr* object_pointer1_1 = 0;
 	bool overload1_called = false;
 		
@@ -8728,17 +8728,17 @@ PHP_METHOD(php_wxTextAttr, Merge)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &overlay0, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(overlay0) == IS_OBJECT)
+				if(Z_TYPE_P(overlay0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxTextAttr_P(&overlay0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTextAttr_P(&overlay0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(overlay0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(overlay0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(overlay0) != IS_NULL)
+				else if(Z_TYPE_P(overlay0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -8762,34 +8762,34 @@ PHP_METHOD(php_wxTextAttr, Merge)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &base1, php_wxTextAttr_entry, &overlay1, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(base1) == IS_OBJECT)
+				if(Z_TYPE_P(base1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxTextAttr_P(&base1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTextAttr_P(&base1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(base1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(base1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'base' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(base1) != IS_NULL)
+				else if(Z_TYPE_P(base1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'base' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(overlay1) == IS_OBJECT)
+				if(Z_TYPE_P(overlay1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxTextAttr_P(&overlay1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTextAttr_P(&overlay1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(overlay1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(overlay1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer1_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'overlay' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(overlay1) != IS_NULL)
+				else if(Z_TYPE_P(overlay1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'overlay' not null, could not be retreived correctly.");
 				}
@@ -8813,7 +8813,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 
 				((wxTextAttr_php*)native_object)->Merge(*(wxTextAttr*) object_pointer0_0);
 
-				references->AddReference(&overlay0, "wxTextAttr::Merge at call 3 with 1 argument(s)");
+				references->AddReference(overlay0, "wxTextAttr::Merge at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -9014,7 +9014,7 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colBack0;
+	zval* colBack0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -9031,17 +9031,17 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colBack0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colBack0) == IS_OBJECT)
+				if(Z_TYPE_P(colBack0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colBack0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colBack0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colBack0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colBack0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colBack' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colBack0) != IS_NULL)
+				else if(Z_TYPE_P(colBack0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colBack' not null, could not be retreived correctly.");
 				}
@@ -9065,7 +9065,7 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 
 				((wxTextAttr_php*)native_object)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colBack0, "wxTextAttr::SetBackgroundColour at call 3 with 1 argument(s)");
+				references->AddReference(colBack0, "wxTextAttr::SetBackgroundColour at call 3 with 1 argument(s)");
 
 				return;
 				break;

@@ -280,7 +280,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval menu1;
+	zval* menu1;
 	wxMenu* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -310,17 +310,17 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(menu1) == IS_OBJECT)
+				if(Z_TYPE_P(menu1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&menu1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&menu1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(menu1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(menu1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(menu1) != IS_NULL)
+				else if(Z_TYPE_P(menu1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -363,7 +363,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 
 				((wxFileHistory_php*)native_object)->AddFilesToMenu((wxMenu*) object_pointer1_0);
 
-				references->AddReference(&menu1, "wxFileHistory::AddFilesToMenu at call 1 with 1 argument(s)");
+				references->AddReference(menu1, "wxFileHistory::AddFilesToMenu at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -833,7 +833,7 @@ PHP_METHOD(php_wxFileHistory, Load)
 	#endif
 	
 	//Parameters for overload 0
-	zval config0;
+	zval* config0;
 	wxConfigBase* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -850,17 +850,17 @@ PHP_METHOD(php_wxFileHistory, Load)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(config0) == IS_OBJECT)
+				if(Z_TYPE_P(config0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxConfigBase_P(&config0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxConfigBase_P(&config0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxConfigBase_P(config0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxConfigBase_P(config0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxConfigBase*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXCONFIGBASE_TYPE && argument_type != PHP_WXFILECONFIG_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'config' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(config0) != IS_NULL)
+				else if(Z_TYPE_P(config0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'config' not null, could not be retreived correctly.");
 				}
@@ -884,7 +884,7 @@ PHP_METHOD(php_wxFileHistory, Load)
 
 				((wxFileHistory_php*)native_object)->Load(*(wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(&config0, "wxFileHistory::Load at call 3 with 1 argument(s)");
+				references->AddReference(config0, "wxFileHistory::Load at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -1058,7 +1058,7 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 	#endif
 	
 	//Parameters for overload 0
-	zval menu0;
+	zval* menu0;
 	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1075,17 +1075,17 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(menu0) == IS_OBJECT)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&menu0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&menu0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(menu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(menu0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(menu0) != IS_NULL)
+				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -1109,7 +1109,7 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 
 				((wxFileHistory_php*)native_object)->RemoveMenu((wxMenu*) object_pointer0_0);
 
-				references->AddReference(&menu0, "wxFileHistory::RemoveMenu at call 1 with 1 argument(s)");
+				references->AddReference(menu0, "wxFileHistory::RemoveMenu at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -1180,7 +1180,7 @@ PHP_METHOD(php_wxFileHistory, Save)
 	#endif
 	
 	//Parameters for overload 0
-	zval config0;
+	zval* config0;
 	wxConfigBase* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1197,17 +1197,17 @@ PHP_METHOD(php_wxFileHistory, Save)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(config0) == IS_OBJECT)
+				if(Z_TYPE_P(config0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxConfigBase_P(&config0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxConfigBase_P(&config0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxConfigBase_P(config0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxConfigBase_P(config0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxConfigBase*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXCONFIGBASE_TYPE && argument_type != PHP_WXFILECONFIG_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'config' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(config0) != IS_NULL)
+				else if(Z_TYPE_P(config0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'config' not null, could not be retreived correctly.");
 				}
@@ -1231,7 +1231,7 @@ PHP_METHOD(php_wxFileHistory, Save)
 
 				((wxFileHistory_php*)native_object)->Save(*(wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(&config0, "wxFileHistory::Save at call 3 with 1 argument(s)");
+				references->AddReference(config0, "wxFileHistory::Save at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -1405,7 +1405,7 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 	#endif
 	
 	//Parameters for overload 0
-	zval menu0;
+	zval* menu0;
 	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1422,17 +1422,17 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(menu0) == IS_OBJECT)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&menu0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&menu0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(menu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(menu0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(menu0) != IS_NULL)
+				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -1456,7 +1456,7 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 
 				((wxFileHistory_php*)native_object)->UseMenu((wxMenu*) object_pointer0_0);
 
-				references->AddReference(&menu0, "wxFileHistory::UseMenu at call 1 with 1 argument(s)");
+				references->AddReference(menu0, "wxFileHistory::UseMenu at call 1 with 1 argument(s)");
 
 				return;
 				break;

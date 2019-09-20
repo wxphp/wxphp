@@ -1342,7 +1342,7 @@ PHP_METHOD(php_wxEventLoopBase, SetActive)
 	#endif
 	
 	//Parameters for overload 0
-	zval loop0;
+	zval* loop0;
 	wxEventLoopBase* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1359,17 +1359,17 @@ PHP_METHOD(php_wxEventLoopBase, SetActive)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &loop0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(loop0) == IS_OBJECT)
+				if(Z_TYPE_P(loop0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxEventLoopBase_P(&loop0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxEventLoopBase_P(&loop0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxEventLoopBase_P(loop0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxEventLoopBase_P(loop0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxEventLoopBase*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXEVENTLOOPBASE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'loop' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(loop0) != IS_NULL)
+				else if(Z_TYPE_P(loop0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'loop' not null, could not be retreived correctly.");
 				}
@@ -1887,7 +1887,7 @@ PHP_METHOD(php_wxEventLoopActivator, __construct)
 	
 	
 	//Parameters for overload 0
-	zval loop0;
+	zval* loop0;
 	wxEventLoopBase* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1904,17 +1904,17 @@ PHP_METHOD(php_wxEventLoopActivator, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &loop0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(loop0) == IS_OBJECT)
+				if(Z_TYPE_P(loop0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxEventLoopBase_P(&loop0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxEventLoopBase_P(&loop0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxEventLoopBase_P(loop0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxEventLoopBase_P(loop0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxEventLoopBase*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXEVENTLOOPBASE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'loop' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(loop0) != IS_NULL)
+				else if(Z_TYPE_P(loop0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'loop' not null, could not be retreived correctly.");
 				}
@@ -1939,7 +1939,7 @@ PHP_METHOD(php_wxEventLoopActivator, __construct)
 				native_object = new wxEventLoopActivator_php((wxEventLoopBase*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxEventLoopActivator_php*) native_object)->references.AddReference(&loop0, "wxEventLoopActivator::wxEventLoopActivator at call 2 with 1 argument(s)");
+				((wxEventLoopActivator_php*) native_object)->references.AddReference(loop0, "wxEventLoopActivator::wxEventLoopActivator at call 2 with 1 argument(s)");
 				break;
 			}
 		}
@@ -3852,7 +3852,7 @@ PHP_METHOD(php_wxProcess, __construct)
 	
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxEvtHandler* object_pointer0_0 = 0;
 	long id0;
 	bool overload0_called = false;
@@ -3873,17 +3873,17 @@ PHP_METHOD(php_wxProcess, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxEvtHandler_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxEvtHandler_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxEvtHandler_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxEvtHandler_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxEvtHandler*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXEVTHANDLER_TYPE && argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE && argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE && argument_type != PHP_WXMENU_TYPE && argument_type != PHP_WXAUIMANAGER_TYPE && argument_type != PHP_WXMOUSEEVENTSMANAGER_TYPE && argument_type != PHP_WXTIMER_TYPE && argument_type != PHP_WXEVENTBLOCKER_TYPE && argument_type != PHP_WXPROCESS_TYPE && argument_type != PHP_WXFILESYSTEMWATCHER_TYPE && argument_type != PHP_WXTASKBARICON_TYPE && argument_type != PHP_WXNOTIFICATIONMESSAGE_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -3936,7 +3936,7 @@ PHP_METHOD(php_wxProcess, __construct)
 				native_object = new wxProcess_php((wxEvtHandler*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxProcess_php*) native_object)->references.AddReference(&parent0, "wxProcess::wxProcess at call 2 with 1 argument(s)");
+				((wxProcess_php*) native_object)->references.AddReference(parent0, "wxProcess::wxProcess at call 2 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -3948,7 +3948,7 @@ PHP_METHOD(php_wxProcess, __construct)
 				native_object = new wxProcess_php((wxEvtHandler*) object_pointer0_0, (int) id0);
 
 				native_object->references.Initialize();
-				((wxProcess_php*) native_object)->references.AddReference(&parent0, "wxProcess::wxProcess at call 2 with 2 argument(s)");
+				((wxProcess_php*) native_object)->references.AddReference(parent0, "wxProcess::wxProcess at call 2 with 2 argument(s)");
 				break;
 			}
 		}

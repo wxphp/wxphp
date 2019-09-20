@@ -3955,7 +3955,7 @@ PHP_METHOD(php_wxPathList, Add)
 	long path_len0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval arr1;
+	zval* arr1;
 	bool overload1_called = false;
 		
 	//Overload 0
@@ -4025,7 +4025,7 @@ PHP_METHOD(php_wxPathList, Add)
 				zval* temp_array_value1_0 = 0;
 				while(strings_continue1_0)
 				{
-					if((temp_array_value1_0 = zend_hash_index_find(HASH_OF(&arr1), array_index1_0)) != NULL)
+					if((temp_array_value1_0 = zend_hash_index_find(HASH_OF(arr1), array_index1_0)) != NULL)
 					{
 						convert_to_string(temp_array_value1_0);
 						strings_array1_0.Add(wxString(Z_STRVAL_P(temp_array_value1_0), wxConvUTF8));
@@ -4501,7 +4501,7 @@ PHP_METHOD(php_wxPathList, __construct)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval arr1;
+	zval* arr1;
 	bool overload1_called = false;
 		
 	//Overload 0
@@ -4566,7 +4566,7 @@ PHP_METHOD(php_wxPathList, __construct)
 				zval* temp_array_value1_0 = 0;
 				while(strings_continue1_0)
 				{
-					if((temp_array_value1_0 = zend_hash_index_find(HASH_OF(&arr1), array_index1_0)) != NULL)
+					if((temp_array_value1_0 = zend_hash_index_find(HASH_OF(arr1), array_index1_0)) != NULL)
 					{
 						convert_to_string(temp_array_value1_0);
 						strings_array1_0.Add(wxString(Z_STRVAL_P(temp_array_value1_0), wxConvUTF8));
@@ -4947,7 +4947,7 @@ PHP_METHOD(php_wxFileName, Assign)
 	#endif
 	
 	//Parameters for overload 0
-	zval filepath0;
+	zval* filepath0;
 	wxFileName* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
@@ -5008,17 +5008,17 @@ PHP_METHOD(php_wxFileName, Assign)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filepath0, php_wxFileName_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(filepath0) == IS_OBJECT)
+				if(Z_TYPE_P(filepath0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileName_P(&filepath0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(&filepath0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileName_P(filepath0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileName_P(filepath0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileName*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(filepath0) != IS_NULL)
+				else if(Z_TYPE_P(filepath0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -5127,7 +5127,7 @@ PHP_METHOD(php_wxFileName, Assign)
 
 				((wxFileName_php*)native_object)->Assign(*(wxFileName*) object_pointer0_0);
 
-				references->AddReference(&filepath0, "wxFileName::Assign at call 3 with 1 argument(s)");
+				references->AddReference(filepath0, "wxFileName::Assign at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -5320,7 +5320,7 @@ PHP_METHOD(php_wxFileName, __construct)
 	
 	
 	//Parameters for overload 0
-	zval filename0;
+	zval* filename0;
 	wxFileName* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
@@ -5371,17 +5371,17 @@ PHP_METHOD(php_wxFileName, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, php_wxFileName_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(filename0) == IS_OBJECT)
+				if(Z_TYPE_P(filename0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileName_P(&filename0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(&filename0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileName_P(filename0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileName_P(filename0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileName*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(filename0) != IS_NULL)
+				else if(Z_TYPE_P(filename0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -5487,7 +5487,7 @@ PHP_METHOD(php_wxFileName, __construct)
 				native_object = new wxFileName_php(*(wxFileName*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxFileName_php*) native_object)->references.AddReference(&filename0, "wxFileName::wxFileName at call 4 with 1 argument(s)");
+				((wxFileName_php*) native_object)->references.AddReference(filename0, "wxFileName::wxFileName at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -7331,7 +7331,7 @@ PHP_METHOD(php_wxFileName, SameAs)
 	#endif
 	
 	//Parameters for overload 0
-	zval filepath0;
+	zval* filepath0;
 	wxFileName* object_pointer0_0 = 0;
 	long format0;
 	bool overload0_called = false;
@@ -7349,17 +7349,17 @@ PHP_METHOD(php_wxFileName, SameAs)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filepath0, php_wxFileName_entry, &format0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(filepath0) == IS_OBJECT)
+				if(Z_TYPE_P(filepath0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileName_P(&filepath0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(&filepath0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileName_P(filepath0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileName_P(filepath0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileName*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'filepath' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(filepath0) != IS_NULL)
+				else if(Z_TYPE_P(filepath0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'filepath' not null, could not be retreived correctly.");
 				}
@@ -7383,7 +7383,7 @@ PHP_METHOD(php_wxFileName, SameAs)
 
 				ZVAL_BOOL(return_value, ((wxFileName_php*)native_object)->SameAs(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(&filepath0, "wxFileName::SameAs at call 3 with 1 argument(s)");
+				references->AddReference(filepath0, "wxFileName::SameAs at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -7396,7 +7396,7 @@ PHP_METHOD(php_wxFileName, SameAs)
 
 				ZVAL_BOOL(return_value, ((wxFileName_php*)native_object)->SameAs(*(wxFileName*) object_pointer0_0, (wxPathFormat) format0));
 
-				references->AddReference(&filepath0, "wxFileName::SameAs at call 3 with 2 argument(s)");
+				references->AddReference(filepath0, "wxFileName::SameAs at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -8525,13 +8525,13 @@ PHP_METHOD(php_wxFileName, AssignTempFileName)
 	//Parameters for overload 1
 	char* prefix1;
 	long prefix_len1;
-	zval fileTemp1;
+	zval* fileTemp1;
 	wxFile* object_pointer1_1 = 0;
 	bool overload1_called = false;
 	//Parameters for overload 2
 	char* prefix2;
 	long prefix_len2;
-	zval fileTemp2;
+	zval* fileTemp2;
 	wxFFile* object_pointer2_1 = 0;
 	bool overload2_called = false;
 		
@@ -8565,17 +8565,17 @@ PHP_METHOD(php_wxFileName, AssignTempFileName)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &prefix1, &prefix_len1, &fileTemp1 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(fileTemp1) == IS_OBJECT)
+				if(Z_TYPE_P(fileTemp1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFile_P(&fileTemp1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFile_P(&fileTemp1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFile_P(fileTemp1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFile_P(fileTemp1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxFile*) argument_native_object;
 					if (!object_pointer1_1 || (argument_type != PHP_WXFILE_TYPE))
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(fileTemp1) != IS_NULL)
+				else if(Z_TYPE_P(fileTemp1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -8599,17 +8599,17 @@ PHP_METHOD(php_wxFileName, AssignTempFileName)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &prefix2, &prefix_len2, &fileTemp2 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(fileTemp2) == IS_OBJECT)
+				if(Z_TYPE_P(fileTemp2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFFile_P(&fileTemp2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFFile_P(&fileTemp2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFFile_P(fileTemp2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFFile_P(fileTemp2 TSRMLS_CC)->native_object;
 					object_pointer2_1 = (wxFFile*) argument_native_object;
 					if (!object_pointer2_1 || (argument_type != PHP_WXFFILE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'fileTemp' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fileTemp2) != IS_NULL)
+				else if(Z_TYPE_P(fileTemp2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fileTemp' not null, could not be retreived correctly.");
 				}
@@ -8652,7 +8652,7 @@ PHP_METHOD(php_wxFileName, AssignTempFileName)
 
 				((wxFileName_php*)native_object)->AssignTempFileName(wxString(prefix1, wxConvUTF8), (wxFile*) object_pointer1_1);
 
-				references->AddReference(&fileTemp1, "wxFileName::AssignTempFileName at call 1 with 2 argument(s)");
+				references->AddReference(fileTemp1, "wxFileName::AssignTempFileName at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -8672,7 +8672,7 @@ PHP_METHOD(php_wxFileName, AssignTempFileName)
 
 				((wxFileName_php*)native_object)->AssignTempFileName(wxString(prefix2, wxConvUTF8), (wxFFile*) object_pointer2_1);
 
-				references->AddReference(&fileTemp2, "wxFileName::AssignTempFileName at call 1 with 2 argument(s)");
+				references->AddReference(fileTemp2, "wxFileName::AssignTempFileName at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -8941,13 +8941,13 @@ PHP_METHOD(php_wxFileName, CreateTempFileName)
 	//Parameters for overload 0
 	char* prefix0;
 	long prefix_len0;
-	zval fileTemp0;
+	zval* fileTemp0;
 	wxFile* object_pointer0_1 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
 	char* prefix1;
 	long prefix_len1;
-	zval fileTemp1;
+	zval* fileTemp1;
 	wxFFile* object_pointer1_1 = 0;
 	bool overload1_called = false;
 		
@@ -8964,17 +8964,17 @@ PHP_METHOD(php_wxFileName, CreateTempFileName)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &prefix0, &prefix_len0, &fileTemp0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(fileTemp0) == IS_OBJECT)
+				if(Z_TYPE_P(fileTemp0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFile_P(&fileTemp0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFile_P(&fileTemp0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFile_P(fileTemp0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFile_P(fileTemp0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxFile*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXFILE_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(fileTemp0) != IS_NULL)
+				else if(Z_TYPE_P(fileTemp0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -8998,17 +8998,17 @@ PHP_METHOD(php_wxFileName, CreateTempFileName)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &prefix1, &prefix_len1, &fileTemp1 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(fileTemp1) == IS_OBJECT)
+				if(Z_TYPE_P(fileTemp1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFFile_P(&fileTemp1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFFile_P(&fileTemp1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFFile_P(fileTemp1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFFile_P(fileTemp1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxFFile*) argument_native_object;
 					if (!object_pointer1_1 || (argument_type != PHP_WXFFILE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'fileTemp' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fileTemp1) != IS_NULL)
+				else if(Z_TYPE_P(fileTemp1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fileTemp' not null, could not be retreived correctly.");
 				}
@@ -14333,7 +14333,7 @@ PHP_METHOD(php_wxFSFile, __construct)
 	
 	
 	//Parameters for overload 0
-	zval stream0;
+	zval* stream0;
 	wxInputStream* object_pointer0_0 = 0;
 	char* location0;
 	long location_len0;
@@ -14357,17 +14357,17 @@ PHP_METHOD(php_wxFSFile, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, &location0, &location_len0, &mimetype0, &mimetype_len0, &anchor0, &anchor_len0, &modif0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(stream0) == IS_OBJECT)
+				if(Z_TYPE_P(stream0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxInputStream_P(&stream0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxInputStream_P(&stream0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxInputStream_P(stream0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxInputStream_P(stream0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxInputStream*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'stream' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(stream0) != IS_NULL)
+				else if(Z_TYPE_P(stream0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'stream' not null, could not be retreived correctly.");
 				}
@@ -14392,7 +14392,7 @@ PHP_METHOD(php_wxFSFile, __construct)
 				native_object = new wxFSFile_php((wxInputStream*) object_pointer0_0, wxString(location0, wxConvUTF8), wxString(mimetype0, wxConvUTF8), wxString(anchor0, wxConvUTF8), wxDateTime(modif0));
 
 				native_object->references.Initialize();
-				((wxFSFile_php*) native_object)->references.AddReference(&stream0, "wxFSFile::wxFSFile at call 2 with 5 argument(s)");
+				((wxFSFile_php*) native_object)->references.AddReference(stream0, "wxFSFile::wxFSFile at call 2 with 5 argument(s)");
 				break;
 			}
 		}
@@ -15189,7 +15189,7 @@ PHP_METHOD(php_wxFileSystemWatcher, Add)
 	#endif
 	
 	//Parameters for overload 0
-	zval path0;
+	zval* path0;
 	wxFileName* object_pointer0_0 = 0;
 	long events0;
 	bool overload0_called = false;
@@ -15207,17 +15207,17 @@ PHP_METHOD(php_wxFileSystemWatcher, Add)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &path0, php_wxFileName_entry, &events0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(path0) == IS_OBJECT)
+				if(Z_TYPE_P(path0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileName_P(&path0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(&path0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileName_P(path0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileName_P(path0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileName*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'path' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(path0) != IS_NULL)
+				else if(Z_TYPE_P(path0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'path' not null, could not be retreived correctly.");
 				}
@@ -15241,7 +15241,7 @@ PHP_METHOD(php_wxFileSystemWatcher, Add)
 
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)native_object)->Add(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(&path0, "wxFileSystemWatcher::Add at call 3 with 1 argument(s)");
+				references->AddReference(path0, "wxFileSystemWatcher::Add at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -15254,7 +15254,7 @@ PHP_METHOD(php_wxFileSystemWatcher, Add)
 
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)native_object)->Add(*(wxFileName*) object_pointer0_0, (int) events0));
 
-				references->AddReference(&path0, "wxFileSystemWatcher::Add at call 3 with 2 argument(s)");
+				references->AddReference(path0, "wxFileSystemWatcher::Add at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -15325,7 +15325,7 @@ PHP_METHOD(php_wxFileSystemWatcher, AddTree)
 	#endif
 	
 	//Parameters for overload 0
-	zval path0;
+	zval* path0;
 	wxFileName* object_pointer0_0 = 0;
 	long events0;
 	char* filter0;
@@ -15345,17 +15345,17 @@ PHP_METHOD(php_wxFileSystemWatcher, AddTree)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &path0, php_wxFileName_entry, &events0, &filter0, &filter_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(path0) == IS_OBJECT)
+				if(Z_TYPE_P(path0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileName_P(&path0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(&path0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileName_P(path0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileName_P(path0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileName*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'path' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(path0) != IS_NULL)
+				else if(Z_TYPE_P(path0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'path' not null, could not be retreived correctly.");
 				}
@@ -15379,7 +15379,7 @@ PHP_METHOD(php_wxFileSystemWatcher, AddTree)
 
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)native_object)->AddTree(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(&path0, "wxFileSystemWatcher::AddTree at call 3 with 1 argument(s)");
+				references->AddReference(path0, "wxFileSystemWatcher::AddTree at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -15392,7 +15392,7 @@ PHP_METHOD(php_wxFileSystemWatcher, AddTree)
 
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)native_object)->AddTree(*(wxFileName*) object_pointer0_0, (int) events0));
 
-				references->AddReference(&path0, "wxFileSystemWatcher::AddTree at call 3 with 2 argument(s)");
+				references->AddReference(path0, "wxFileSystemWatcher::AddTree at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -15405,7 +15405,7 @@ PHP_METHOD(php_wxFileSystemWatcher, AddTree)
 
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)native_object)->AddTree(*(wxFileName*) object_pointer0_0, (int) events0, wxString(filter0, wxConvUTF8)));
 
-				references->AddReference(&path0, "wxFileSystemWatcher::AddTree at call 3 with 3 argument(s)");
+				references->AddReference(path0, "wxFileSystemWatcher::AddTree at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -15574,7 +15574,7 @@ PHP_METHOD(php_wxFileSystemWatcher, Remove)
 	#endif
 	
 	//Parameters for overload 0
-	zval path0;
+	zval* path0;
 	wxFileName* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -15591,17 +15591,17 @@ PHP_METHOD(php_wxFileSystemWatcher, Remove)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &path0, php_wxFileName_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(path0) == IS_OBJECT)
+				if(Z_TYPE_P(path0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileName_P(&path0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(&path0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileName_P(path0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileName_P(path0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileName*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'path' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(path0) != IS_NULL)
+				else if(Z_TYPE_P(path0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'path' not null, could not be retreived correctly.");
 				}
@@ -15625,7 +15625,7 @@ PHP_METHOD(php_wxFileSystemWatcher, Remove)
 
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)native_object)->Remove(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(&path0, "wxFileSystemWatcher::Remove at call 3 with 1 argument(s)");
+				references->AddReference(path0, "wxFileSystemWatcher::Remove at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -15794,7 +15794,7 @@ PHP_METHOD(php_wxFileSystemWatcher, RemoveTree)
 	#endif
 	
 	//Parameters for overload 0
-	zval path0;
+	zval* path0;
 	wxFileName* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -15811,17 +15811,17 @@ PHP_METHOD(php_wxFileSystemWatcher, RemoveTree)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &path0, php_wxFileName_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(path0) == IS_OBJECT)
+				if(Z_TYPE_P(path0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileName_P(&path0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(&path0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileName_P(path0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileName_P(path0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileName*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'path' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(path0) != IS_NULL)
+				else if(Z_TYPE_P(path0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'path' not null, could not be retreived correctly.");
 				}
@@ -15845,7 +15845,7 @@ PHP_METHOD(php_wxFileSystemWatcher, RemoveTree)
 
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)native_object)->RemoveTree(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(&path0, "wxFileSystemWatcher::RemoveTree at call 3 with 1 argument(s)");
+				references->AddReference(path0, "wxFileSystemWatcher::RemoveTree at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -15916,7 +15916,7 @@ PHP_METHOD(php_wxFileSystemWatcher, SetOwner)
 	#endif
 	
 	//Parameters for overload 0
-	zval handler0;
+	zval* handler0;
 	wxEvtHandler* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -15933,17 +15933,17 @@ PHP_METHOD(php_wxFileSystemWatcher, SetOwner)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &handler0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(handler0) == IS_OBJECT)
+				if(Z_TYPE_P(handler0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxEvtHandler_P(&handler0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxEvtHandler_P(&handler0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxEvtHandler_P(handler0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxEvtHandler_P(handler0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxEvtHandler*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXEVTHANDLER_TYPE && argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE && argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE && argument_type != PHP_WXMENU_TYPE && argument_type != PHP_WXAUIMANAGER_TYPE && argument_type != PHP_WXMOUSEEVENTSMANAGER_TYPE && argument_type != PHP_WXTIMER_TYPE && argument_type != PHP_WXEVENTBLOCKER_TYPE && argument_type != PHP_WXPROCESS_TYPE && argument_type != PHP_WXFILESYSTEMWATCHER_TYPE && argument_type != PHP_WXTASKBARICON_TYPE && argument_type != PHP_WXNOTIFICATIONMESSAGE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'handler' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(handler0) != IS_NULL)
+				else if(Z_TYPE_P(handler0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'handler' not null, could not be retreived correctly.");
 				}
@@ -15967,7 +15967,7 @@ PHP_METHOD(php_wxFileSystemWatcher, SetOwner)
 
 				((wxFileSystemWatcher_php*)native_object)->SetOwner((wxEvtHandler*) object_pointer0_0);
 
-				references->AddReference(&handler0, "wxFileSystemWatcher::SetOwner at call 1 with 1 argument(s)");
+				references->AddReference(handler0, "wxFileSystemWatcher::SetOwner at call 1 with 1 argument(s)");
 
 				return;
 				break;

@@ -6,7 +6,7 @@ class MyDialog extends wxDialog
 {
     public function __construct()
     {
-        parent::__construct(null, -1, 'Foobar', new wxPoint(10, 10), new wxSize(100, 100), 0);
+        parent::__construct(null, -1, 'Foobar', wxDefaultPosition, new wxSize(100, 100), 0);
 
         $gridSizer = new wxGridSizer(0, 2, 0, 0);
 

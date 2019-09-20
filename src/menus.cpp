@@ -241,7 +241,7 @@ PHP_METHOD(php_wxMenuBar, Append)
 	#endif
 	
 	//Parameters for overload 0
-	zval menu0;
+	zval* menu0;
 	wxMenu* object_pointer0_0 = 0;
 	char* title0;
 	long title_len0;
@@ -260,17 +260,17 @@ PHP_METHOD(php_wxMenuBar, Append)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(menu0) == IS_OBJECT)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&menu0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&menu0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(menu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(menu0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(menu0) != IS_NULL)
+				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -294,7 +294,7 @@ PHP_METHOD(php_wxMenuBar, Append)
 
 				ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->Append((wxMenu*) object_pointer0_0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(&menu0, "wxMenuBar::Append at call 1 with 2 argument(s)");
+				references->AddReference(menu0, "wxMenuBar::Append at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -364,7 +364,7 @@ PHP_METHOD(php_wxMenuBar, Attach)
 	#endif
 	
 	//Parameters for overload 0
-	zval frame0;
+	zval* frame0;
 	wxFrame* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -381,17 +381,17 @@ PHP_METHOD(php_wxMenuBar, Attach)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &frame0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(frame0) == IS_OBJECT)
+				if(Z_TYPE_P(frame0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFrame_P(&frame0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFrame_P(&frame0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFrame_P(frame0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFrame_P(frame0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFrame*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'frame' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(frame0) != IS_NULL)
+				else if(Z_TYPE_P(frame0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'frame' not null, could not be retreived correctly.");
 				}
@@ -415,7 +415,7 @@ PHP_METHOD(php_wxMenuBar, Attach)
 
 				((wxMenuBar_php*)native_object)->Attach((wxFrame*) object_pointer0_0);
 
-				references->AddReference(&frame0, "wxMenuBar::Attach at call 1 with 1 argument(s)");
+				references->AddReference(frame0, "wxMenuBar::Attach at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -1870,7 +1870,7 @@ PHP_METHOD(php_wxMenuBar, Insert)
 	
 	//Parameters for overload 0
 	long pos0;
-	zval menu0;
+	zval* menu0;
 	wxMenu* object_pointer0_1 = 0;
 	char* title0;
 	long title_len0;
@@ -1889,17 +1889,17 @@ PHP_METHOD(php_wxMenuBar, Insert)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(menu0) == IS_OBJECT)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&menu0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&menu0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(menu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(menu0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(menu0) != IS_NULL)
+				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -1923,7 +1923,7 @@ PHP_METHOD(php_wxMenuBar, Insert)
 
 				ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->Insert((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(&menu0, "wxMenuBar::Insert at call 1 with 3 argument(s)");
+				references->AddReference(menu0, "wxMenuBar::Insert at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -2298,7 +2298,7 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 	
 	//Parameters for overload 0
 	bool eraseBackground0;
-	zval rect0;
+	zval* rect0;
 	wxRect* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -2315,17 +2315,17 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eraseBackground0, &rect0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(rect0) == IS_OBJECT)
+				if(Z_TYPE_P(rect0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxRect*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXRECT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'rect' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(rect0) != IS_NULL)
+				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'rect' not null, could not be retreived correctly.");
 				}
@@ -2373,7 +2373,7 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 
 				((wxMenuBar_php*)native_object)->Refresh(eraseBackground0, (const wxRect*) object_pointer0_1);
 
-				references->AddReference(&rect0, "wxMenuBar::Refresh at call 1 with 2 argument(s)");
+				references->AddReference(rect0, "wxMenuBar::Refresh at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -2571,7 +2571,7 @@ PHP_METHOD(php_wxMenuBar, Replace)
 	
 	//Parameters for overload 0
 	long pos0;
-	zval menu0;
+	zval* menu0;
 	wxMenu* object_pointer0_1 = 0;
 	char* title0;
 	long title_len0;
@@ -2590,17 +2590,17 @@ PHP_METHOD(php_wxMenuBar, Replace)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(menu0) == IS_OBJECT)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&menu0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&menu0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(menu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(menu0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(menu0) != IS_NULL)
+				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -2647,7 +2647,7 @@ PHP_METHOD(php_wxMenuBar, Replace)
 					references->AddReference(return_value, "wxMenuBar::Replace at call 5 with 3 argument(s)");
 				}
 
-				references->AddReference(&menu0, "wxMenuBar::Replace at call 1 with 3 argument(s)");
+				references->AddReference(menu0, "wxMenuBar::Replace at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -3344,7 +3344,7 @@ PHP_METHOD(php_wxMenu, SetParent)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -3361,17 +3361,17 @@ PHP_METHOD(php_wxMenu, SetParent)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
@@ -3395,7 +3395,7 @@ PHP_METHOD(php_wxMenu, SetParent)
 
 				((wxMenu_php*)native_object)->SetParent((wxMenu*) object_pointer0_0);
 
-				references->AddReference(&parent0, "wxMenu::SetParent at call 1 with 1 argument(s)");
+				references->AddReference(parent0, "wxMenu::SetParent at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -3570,7 +3570,7 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 	#endif
 	
 	//Parameters for overload 0
-	zval win0;
+	zval* win0;
 	wxWindow* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -3587,17 +3587,17 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(win0) == IS_OBJECT)
+				if(Z_TYPE_P(win0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&win0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&win0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(win0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(win0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'win' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(win0) != IS_NULL)
+				else if(Z_TYPE_P(win0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'win' not null, could not be retreived correctly.");
 				}
@@ -3621,7 +3621,7 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 
 				((wxMenu_php*)native_object)->SetInvokingWindow((wxWindow*) object_pointer0_0);
 
-				references->AddReference(&win0, "wxMenu::SetInvokingWindow at call 1 with 1 argument(s)");
+				references->AddReference(win0, "wxMenu::SetInvokingWindow at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -3797,7 +3797,7 @@ PHP_METHOD(php_wxMenu, Remove)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxMenuItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
@@ -3817,17 +3817,17 @@ PHP_METHOD(php_wxMenu, Remove)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenuItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenuItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenuItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenuItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENUITEM_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -3891,7 +3891,7 @@ PHP_METHOD(php_wxMenu, Remove)
 					references->AddReference(return_value, "wxMenu::Remove at call 5 with 1 argument(s)");
 				}
 
-				references->AddReference(&item0, "wxMenu::Remove at call 1 with 1 argument(s)");
+				references->AddReference(item0, "wxMenu::Remove at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -4463,7 +4463,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 	long kind0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval item1;
+	zval* item1;
 	wxMenuItem* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -4497,17 +4497,17 @@ PHP_METHOD(php_wxMenu, Prepend)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item1) == IS_OBJECT)
+				if(Z_TYPE_P(item1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenuItem_P(&item1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenuItem_P(&item1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenuItem_P(item1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenuItem_P(item1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXMENUITEM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item1) != IS_NULL)
+				else if(Z_TYPE_P(item1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -4701,7 +4701,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 					references->AddReference(return_value, "wxMenu::Prepend at call 5 with 1 argument(s)");
 				}
 
-				references->AddReference(&item1, "wxMenu::Prepend at call 1 with 1 argument(s)");
+				references->AddReference(item1, "wxMenu::Prepend at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -4783,13 +4783,13 @@ PHP_METHOD(php_wxMenu, Append)
 	long id1;
 	char* item1;
 	long item_len1;
-	zval subMenu1;
+	zval* subMenu1;
 	wxMenu* object_pointer1_2 = 0;
 	char* helpString1;
 	long helpString_len1;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval menuItem2;
+	zval* menuItem2;
 	wxMenuItem* object_pointer2_0 = 0;
 	bool overload2_called = false;
 		
@@ -4823,17 +4823,17 @@ PHP_METHOD(php_wxMenu, Append)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &item1, &item_len1, &subMenu1, &helpString1, &helpString_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
-				if(Z_TYPE(subMenu1) == IS_OBJECT)
+				if(Z_TYPE_P(subMenu1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&subMenu1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&subMenu1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(subMenu1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(subMenu1 TSRMLS_CC)->native_object;
 					object_pointer1_2 = (wxMenu*) argument_native_object;
 					if (!object_pointer1_2 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(subMenu1) != IS_NULL)
+				else if(Z_TYPE_P(subMenu1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -4857,17 +4857,17 @@ PHP_METHOD(php_wxMenu, Append)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menuItem2 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(menuItem2) == IS_OBJECT)
+				if(Z_TYPE_P(menuItem2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenuItem_P(&menuItem2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenuItem_P(&menuItem2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenuItem_P(menuItem2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenuItem_P(menuItem2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer2_0 || (argument_type != PHP_WXMENUITEM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menuItem' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(menuItem2) != IS_NULL)
+				else if(Z_TYPE_P(menuItem2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menuItem' not null, could not be retreived correctly.");
 				}
@@ -5061,7 +5061,7 @@ PHP_METHOD(php_wxMenu, Append)
 					references->AddReference(return_value, "wxMenu::Append at call 5 with 3 argument(s)");
 				}
 
-				references->AddReference(&subMenu1, "wxMenu::Append at call 1 with 3 argument(s)");
+				references->AddReference(subMenu1, "wxMenu::Append at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -5097,7 +5097,7 @@ PHP_METHOD(php_wxMenu, Append)
 					references->AddReference(return_value, "wxMenu::Append at call 5 with 4 argument(s)");
 				}
 
-				references->AddReference(&subMenu1, "wxMenu::Append at call 1 with 4 argument(s)");
+				references->AddReference(subMenu1, "wxMenu::Append at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -5140,7 +5140,7 @@ PHP_METHOD(php_wxMenu, Append)
 					references->AddReference(return_value, "wxMenu::Append at call 5 with 1 argument(s)");
 				}
 
-				references->AddReference(&menuItem2, "wxMenu::Append at call 1 with 1 argument(s)");
+				references->AddReference(menuItem2, "wxMenu::Append at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -5662,7 +5662,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 	#endif
 	
 	//Parameters for overload 0
-	zval submenu0;
+	zval* submenu0;
 	wxMenu* object_pointer0_0 = 0;
 	char* text0;
 	long text_len0;
@@ -5683,17 +5683,17 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &submenu0, &text0, &text_len0, &help0, &help_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(submenu0) == IS_OBJECT)
+				if(Z_TYPE_P(submenu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&submenu0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&submenu0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(submenu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(submenu0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'submenu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(submenu0) != IS_NULL)
+				else if(Z_TYPE_P(submenu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'submenu' not null, could not be retreived correctly.");
 				}
@@ -5740,7 +5740,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 					references->AddReference(return_value, "wxMenu::AppendSubMenu at call 5 with 2 argument(s)");
 				}
 
-				references->AddReference(&submenu0, "wxMenu::AppendSubMenu at call 1 with 2 argument(s)");
+				references->AddReference(submenu0, "wxMenu::AppendSubMenu at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -5776,7 +5776,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 					references->AddReference(return_value, "wxMenu::AppendSubMenu at call 5 with 3 argument(s)");
 				}
 
-				references->AddReference(&submenu0, "wxMenu::AppendSubMenu at call 1 with 3 argument(s)");
+				references->AddReference(submenu0, "wxMenu::AppendSubMenu at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -5846,7 +5846,7 @@ PHP_METHOD(php_wxMenu, Attach)
 	#endif
 	
 	//Parameters for overload 0
-	zval menubar0;
+	zval* menubar0;
 	wxMenuBar* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -5863,17 +5863,17 @@ PHP_METHOD(php_wxMenu, Attach)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menubar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(menubar0) == IS_OBJECT)
+				if(Z_TYPE_P(menubar0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenuBar_P(&menubar0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenuBar_P(&menubar0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenuBar_P(menubar0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenuBar_P(menubar0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenuBar*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENUBAR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menubar' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(menubar0) != IS_NULL)
+				else if(Z_TYPE_P(menubar0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menubar' not null, could not be retreived correctly.");
 				}
@@ -5897,7 +5897,7 @@ PHP_METHOD(php_wxMenu, Attach)
 
 				((wxMenu_php*)native_object)->Attach((wxMenuBar*) object_pointer0_0);
 
-				references->AddReference(&menubar0, "wxMenu::Attach at call 1 with 1 argument(s)");
+				references->AddReference(menubar0, "wxMenu::Attach at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -6173,7 +6173,7 @@ PHP_METHOD(php_wxMenu, Delete)
 	long id0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval item1;
+	zval* item1;
 	wxMenuItem* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -6207,17 +6207,17 @@ PHP_METHOD(php_wxMenu, Delete)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item1) == IS_OBJECT)
+				if(Z_TYPE_P(item1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenuItem_P(&item1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenuItem_P(&item1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenuItem_P(item1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenuItem_P(item1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXMENUITEM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item1) != IS_NULL)
+				else if(Z_TYPE_P(item1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -6260,7 +6260,7 @@ PHP_METHOD(php_wxMenu, Delete)
 
 				ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->Delete((wxMenuItem*) object_pointer1_0));
 
-				references->AddReference(&item1, "wxMenu::Delete at call 1 with 1 argument(s)");
+				references->AddReference(item1, "wxMenu::Delete at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -6334,7 +6334,7 @@ PHP_METHOD(php_wxMenu, Destroy)
 	long id0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval item1;
+	zval* item1;
 	wxMenuItem* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -6368,17 +6368,17 @@ PHP_METHOD(php_wxMenu, Destroy)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item1) == IS_OBJECT)
+				if(Z_TYPE_P(item1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenuItem_P(&item1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenuItem_P(&item1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenuItem_P(item1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenuItem_P(item1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXMENUITEM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item1) != IS_NULL)
+				else if(Z_TYPE_P(item1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -6421,7 +6421,7 @@ PHP_METHOD(php_wxMenu, Destroy)
 
 				ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->Destroy((wxMenuItem*) object_pointer1_0));
 
-				references->AddReference(&item1, "wxMenu::Destroy at call 1 with 1 argument(s)");
+				references->AddReference(item1, "wxMenu::Destroy at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -7894,7 +7894,7 @@ PHP_METHOD(php_wxMenu, Insert)
 	
 	//Parameters for overload 0
 	long pos0;
-	zval menuItem0;
+	zval* menuItem0;
 	wxMenuItem* object_pointer0_1 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
@@ -7920,17 +7920,17 @@ PHP_METHOD(php_wxMenu, Insert)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menuItem0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(menuItem0) == IS_OBJECT)
+				if(Z_TYPE_P(menuItem0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenuItem_P(&menuItem0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenuItem_P(&menuItem0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenuItem_P(menuItem0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenuItem_P(menuItem0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXMENUITEM_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(menuItem0) != IS_NULL)
+				else if(Z_TYPE_P(menuItem0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -7994,7 +7994,7 @@ PHP_METHOD(php_wxMenu, Insert)
 					references->AddReference(return_value, "wxMenu::Insert at call 5 with 2 argument(s)");
 				}
 
-				references->AddReference(&menuItem0, "wxMenu::Insert at call 1 with 2 argument(s)");
+				references->AddReference(menuItem0, "wxMenu::Insert at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -9149,7 +9149,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 	
 	
 	//Parameters for overload 0
-	zval parentMenu0;
+	zval* parentMenu0;
 	wxMenu* object_pointer0_0 = 0;
 	long id0;
 	char* text0;
@@ -9157,7 +9157,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 	char* helpString0;
 	long helpString_len0;
 	long kind0;
-	zval subMenu0;
+	zval* subMenu0;
 	wxMenu* object_pointer0_5 = 0;
 	bool overload0_called = false;
 		
@@ -9174,34 +9174,34 @@ PHP_METHOD(php_wxMenuItem, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parentMenu0, &id0, &text0, &text_len0, &helpString0, &helpString_len0, &kind0, &subMenu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parentMenu0) == IS_OBJECT)
+				if(Z_TYPE_P(parentMenu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&parentMenu0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&parentMenu0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(parentMenu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(parentMenu0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parentMenu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parentMenu0) != IS_NULL)
+				else if(Z_TYPE_P(parentMenu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parentMenu' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 6){
-				if(Z_TYPE(subMenu0) == IS_OBJECT)
+				if(Z_TYPE_P(subMenu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&subMenu0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&subMenu0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(subMenu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(subMenu0 TSRMLS_CC)->native_object;
 					object_pointer0_5 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_5 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'subMenu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(subMenu0) != IS_NULL)
+				else if(Z_TYPE_P(subMenu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'subMenu' not null, could not be retreived correctly.");
 				}
@@ -9237,7 +9237,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxMenuItem_php*) native_object)->references.AddReference(&parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 1 argument(s)");
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -9249,7 +9249,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0);
 
 				native_object->references.Initialize();
-				((wxMenuItem_php*) native_object)->references.AddReference(&parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 2 argument(s)");
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -9261,7 +9261,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxMenuItem_php*) native_object)->references.AddReference(&parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 3 argument(s)");
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -9273,7 +9273,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxMenuItem_php*) native_object)->references.AddReference(&parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 4 argument(s)");
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -9285,7 +9285,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
 
 				native_object->references.Initialize();
-				((wxMenuItem_php*) native_object)->references.AddReference(&parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 5 argument(s)");
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -9297,8 +9297,8 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0, (wxMenu*) object_pointer0_5);
 
 				native_object->references.Initialize();
-				((wxMenuItem_php*) native_object)->references.AddReference(&parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 6 argument(s)");
-				((wxMenuItem_php*) native_object)->references.AddReference(&subMenu0, "wxMenuItem::wxMenuItem at call 2 with 6 argument(s)");
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call 2 with 6 argument(s)");
+				((wxMenuItem_php*) native_object)->references.AddReference(subMenu0, "wxMenuItem::wxMenuItem at call 2 with 6 argument(s)");
 				break;
 			}
 		}
@@ -9385,7 +9385,7 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 	#endif
 	
 	//Parameters for overload 0
-	zval menu0;
+	zval* menu0;
 	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -9402,17 +9402,17 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(menu0) == IS_OBJECT)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&menu0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&menu0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(menu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(menu0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(menu0) != IS_NULL)
+				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -9436,7 +9436,7 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 
 				((wxMenuItem_php*)native_object)->SetSubMenu((wxMenu*) object_pointer0_0);
 
-				references->AddReference(&menu0, "wxMenuItem::SetSubMenu at call 1 with 1 argument(s)");
+				references->AddReference(menu0, "wxMenuItem::SetSubMenu at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -9507,7 +9507,7 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 	#endif
 	
 	//Parameters for overload 0
-	zval menu0;
+	zval* menu0;
 	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -9524,17 +9524,17 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(menu0) == IS_OBJECT)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenu_P(&menu0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenu_P(&menu0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(menu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(menu0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(menu0) != IS_NULL)
+				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -9558,7 +9558,7 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 
 				((wxMenuItem_php*)native_object)->SetMenu((wxMenu*) object_pointer0_0);
 
-				references->AddReference(&menu0, "wxMenuItem::SetMenu at call 1 with 1 argument(s)");
+				references->AddReference(menu0, "wxMenuItem::SetMenu at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -11402,7 +11402,7 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 	#endif
 	
 	//Parameters for overload 0
-	zval bmp0;
+	zval* bmp0;
 	wxBitmap* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -11419,17 +11419,17 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(bmp0) == IS_OBJECT)
+				if(Z_TYPE_P(bmp0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxBitmap_P(&bmp0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxBitmap_P(&bmp0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxBitmap_P(bmp0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxBitmap_P(bmp0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxBitmap*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'bmp' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(bmp0) != IS_NULL)
+				else if(Z_TYPE_P(bmp0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bmp' not null, could not be retreived correctly.");
 				}
@@ -11453,7 +11453,7 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 
 				((wxMenuItem_php*)native_object)->SetBitmap(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(&bmp0, "wxMenuItem::SetBitmap at call 3 with 1 argument(s)");
+				references->AddReference(bmp0, "wxMenuItem::SetBitmap at call 3 with 1 argument(s)");
 
 				return;
 				break;

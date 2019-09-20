@@ -141,14 +141,14 @@ PHP_METHOD(php_wxAcceleratorEntry, __construct)
 	
 	
 	//Parameters for overload 0
-	zval entry0;
+	zval* entry0;
 	wxAcceleratorEntry* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
 	long flags1;
 	long keyCode1;
 	long cmd1;
-	zval item1;
+	zval* item1;
 	wxMenuItem* object_pointer1_3 = 0;
 	bool overload1_called = false;
 		
@@ -165,17 +165,17 @@ PHP_METHOD(php_wxAcceleratorEntry, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &entry0, php_wxAcceleratorEntry_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(entry0) == IS_OBJECT)
+				if(Z_TYPE_P(entry0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxAcceleratorEntry_P(&entry0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxAcceleratorEntry_P(&entry0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxAcceleratorEntry_P(entry0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxAcceleratorEntry_P(entry0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxAcceleratorEntry*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(entry0) != IS_NULL)
+				else if(Z_TYPE_P(entry0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -199,17 +199,17 @@ PHP_METHOD(php_wxAcceleratorEntry, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags1, &keyCode1, &cmd1, &item1 ) == SUCCESS)
 		{
 			if(arguments_received >= 4){
-				if(Z_TYPE(item1) == IS_OBJECT)
+				if(Z_TYPE_P(item1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenuItem_P(&item1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenuItem_P(&item1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenuItem_P(item1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenuItem_P(item1 TSRMLS_CC)->native_object;
 					object_pointer1_3 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer1_3 || (argument_type != PHP_WXMENUITEM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item1) != IS_NULL)
+				else if(Z_TYPE_P(item1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -234,7 +234,7 @@ PHP_METHOD(php_wxAcceleratorEntry, __construct)
 				native_object = new wxAcceleratorEntry_php(*(wxAcceleratorEntry*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxAcceleratorEntry_php*) native_object)->references.AddReference(&entry0, "wxAcceleratorEntry::wxAcceleratorEntry at call 4 with 1 argument(s)");
+				((wxAcceleratorEntry_php*) native_object)->references.AddReference(entry0, "wxAcceleratorEntry::wxAcceleratorEntry at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -297,7 +297,7 @@ PHP_METHOD(php_wxAcceleratorEntry, __construct)
 				native_object = new wxAcceleratorEntry_php((int) flags1, (int) keyCode1, (int) cmd1, (wxMenuItem*) object_pointer1_3);
 
 				native_object->references.Initialize();
-				((wxAcceleratorEntry_php*) native_object)->references.AddReference(&item1, "wxAcceleratorEntry::wxAcceleratorEntry at call 2 with 4 argument(s)");
+				((wxAcceleratorEntry_php*) native_object)->references.AddReference(item1, "wxAcceleratorEntry::wxAcceleratorEntry at call 2 with 4 argument(s)");
 				break;
 			}
 		}
@@ -487,7 +487,7 @@ PHP_METHOD(php_wxAcceleratorEntry, Set)
 	long flags0;
 	long keyCode0;
 	long cmd0;
-	zval item0;
+	zval* item0;
 	wxMenuItem* object_pointer0_3 = 0;
 	bool overload0_called = false;
 		
@@ -504,17 +504,17 @@ PHP_METHOD(php_wxAcceleratorEntry, Set)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0, &keyCode0, &cmd0, &item0 ) == SUCCESS)
 		{
 			if(arguments_received >= 4){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMenuItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMenuItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMenuItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenuItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer0_3 || (argument_type != PHP_WXMENUITEM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -550,7 +550,7 @@ PHP_METHOD(php_wxAcceleratorEntry, Set)
 
 				((wxAcceleratorEntry_php*)native_object)->Set((int) flags0, (int) keyCode0, (int) cmd0, (wxMenuItem*) object_pointer0_3);
 
-				references->AddReference(&item0, "wxAcceleratorEntry::Set at call 1 with 4 argument(s)");
+				references->AddReference(item0, "wxAcceleratorEntry::Set at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -1522,17 +1522,17 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 	
 	//Parameters for overload 0
 	long border0;
-	zval colBorder0;
+	zval* colBorder0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval colText1;
+	zval* colText1;
 	wxColour* object_pointer1_0 = 0;
-	zval colBack1;
+	zval* colBack1;
 	wxColour* object_pointer1_1 = 0;
-	zval colBorder1;
+	zval* colBorder1;
 	wxColour* object_pointer1_2 = 0;
-	zval font1;
+	zval* font1;
 	wxFont* object_pointer1_3 = 0;
 	long border1;
 	bool overload1_called = false;
@@ -1550,17 +1550,17 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &border0, &colBorder0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(colBorder0) == IS_OBJECT)
+				if(Z_TYPE_P(colBorder0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colBorder0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colBorder0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colBorder0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colBorder0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(colBorder0) != IS_NULL)
+				else if(Z_TYPE_P(colBorder0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -1584,68 +1584,68 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &colBorder1, php_wxColour_entry, &font1, php_wxFont_entry, &border1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colText1) == IS_OBJECT)
+				if(Z_TYPE_P(colText1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colText1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colText1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colText1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colText1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxColour*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colText' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colText1) != IS_NULL)
+				else if(Z_TYPE_P(colText1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colText' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(colBack1) == IS_OBJECT)
+				if(Z_TYPE_P(colBack1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colBack1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colBack1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colBack1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colBack1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxColour*) argument_native_object;
 					if (!object_pointer1_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'colBack' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colBack1) != IS_NULL)
+				else if(Z_TYPE_P(colBack1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colBack' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(colBorder1) == IS_OBJECT)
+				if(Z_TYPE_P(colBorder1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colBorder1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colBorder1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colBorder1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colBorder1 TSRMLS_CC)->native_object;
 					object_pointer1_2 = (wxColour*) argument_native_object;
 					if (!object_pointer1_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'colBorder' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colBorder1) != IS_NULL)
+				else if(Z_TYPE_P(colBorder1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colBorder' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(font1) == IS_OBJECT)
+				if(Z_TYPE_P(font1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font1 TSRMLS_CC)->native_object;
 					object_pointer1_3 = (wxFont*) argument_native_object;
 					if (!object_pointer1_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font1) != IS_NULL)
+				else if(Z_TYPE_P(font1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -1681,7 +1681,7 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				native_object = new wxCalendarDateAttr_php((wxCalendarDateBorder) border0, *(wxColour*) object_pointer0_1);
 
 				native_object->references.Initialize();
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colBorder0, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 2 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colBorder0, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 2 argument(s)");
 				break;
 			}
 		}
@@ -1711,7 +1711,7 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				native_object = new wxCalendarDateAttr_php(*(wxColour*) object_pointer1_0);
 
 				native_object->references.Initialize();
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 1 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -1723,8 +1723,8 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				native_object = new wxCalendarDateAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1);
 
 				native_object->references.Initialize();
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 2 argument(s)");
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 2 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 2 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -1736,9 +1736,9 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				native_object = new wxCalendarDateAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxColour*) object_pointer1_2);
 
 				native_object->references.Initialize();
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 3 argument(s)");
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 3 argument(s)");
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colBorder1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 3 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 3 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 3 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colBorder1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -1750,10 +1750,10 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				native_object = new wxCalendarDateAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxColour*) object_pointer1_2, *(wxFont*) object_pointer1_3);
 
 				native_object->references.Initialize();
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 4 argument(s)");
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 4 argument(s)");
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colBorder1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 4 argument(s)");
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&font1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 4 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 4 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 4 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colBorder1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 4 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(font1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -1765,10 +1765,10 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				native_object = new wxCalendarDateAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxColour*) object_pointer1_2, *(wxFont*) object_pointer1_3, (wxCalendarDateBorder) border1);
 
 				native_object->references.Initialize();
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 5 argument(s)");
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 5 argument(s)");
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&colBorder1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 5 argument(s)");
-				((wxCalendarDateAttr_php*) native_object)->references.AddReference(&font1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 5 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 5 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 5 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(colBorder1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 5 argument(s)");
+				((wxCalendarDateAttr_php*) native_object)->references.AddReference(font1, "wxCalendarDateAttr::wxCalendarDateAttr at call 4 with 5 argument(s)");
 				break;
 			}
 		}
@@ -1855,7 +1855,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetTextColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colText0;
+	zval* colText0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1872,17 +1872,17 @@ PHP_METHOD(php_wxCalendarDateAttr, SetTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colText0) == IS_OBJECT)
+				if(Z_TYPE_P(colText0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colText0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colText0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colText0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colText0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colText' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colText0) != IS_NULL)
+				else if(Z_TYPE_P(colText0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colText' not null, could not be retreived correctly.");
 				}
@@ -1906,7 +1906,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetTextColour)
 
 				((wxCalendarDateAttr_php*)native_object)->SetTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colText0, "wxCalendarDateAttr::SetTextColour at call 3 with 1 argument(s)");
+				references->AddReference(colText0, "wxCalendarDateAttr::SetTextColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -2080,7 +2080,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetFont)
 	#endif
 	
 	//Parameters for overload 0
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -2097,17 +2097,17 @@ PHP_METHOD(php_wxCalendarDateAttr, SetFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -2131,7 +2131,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetFont)
 
 				((wxCalendarDateAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(&font0, "wxCalendarDateAttr::SetFont at call 3 with 1 argument(s)");
+				references->AddReference(font0, "wxCalendarDateAttr::SetFont at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -2202,7 +2202,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBorderColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval col0;
+	zval* col0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -2219,17 +2219,17 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBorderColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(col0) == IS_OBJECT)
+				if(Z_TYPE_P(col0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&col0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&col0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(col0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(col0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'col' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(col0) != IS_NULL)
+				else if(Z_TYPE_P(col0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'col' not null, could not be retreived correctly.");
 				}
@@ -2253,7 +2253,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBorderColour)
 
 				((wxCalendarDateAttr_php*)native_object)->SetBorderColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&col0, "wxCalendarDateAttr::SetBorderColour at call 3 with 1 argument(s)");
+				references->AddReference(col0, "wxCalendarDateAttr::SetBorderColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -2427,7 +2427,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBackgroundColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colBack0;
+	zval* colBack0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -2444,17 +2444,17 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBackgroundColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colBack0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colBack0) == IS_OBJECT)
+				if(Z_TYPE_P(colBack0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colBack0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colBack0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colBack0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colBack0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colBack' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colBack0) != IS_NULL)
+				else if(Z_TYPE_P(colBack0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colBack' not null, could not be retreived correctly.");
 				}
@@ -2478,7 +2478,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBackgroundColour)
 
 				((wxCalendarDateAttr_php*)native_object)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colBack0, "wxCalendarDateAttr::SetBackgroundColour at call 3 with 1 argument(s)");
+				references->AddReference(colBack0, "wxCalendarDateAttr::SetBackgroundColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -3822,7 +3822,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetMark)
 	#endif
 	
 	//Parameters for overload 0
-	zval m0;
+	zval* m0;
 	wxCalendarDateAttr* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -3839,17 +3839,17 @@ PHP_METHOD(php_wxCalendarDateAttr, SetMark)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &m0, php_wxCalendarDateAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(m0) == IS_OBJECT)
+				if(Z_TYPE_P(m0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxCalendarDateAttr_P(&m0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxCalendarDateAttr_P(&m0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxCalendarDateAttr_P(m0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxCalendarDateAttr_P(m0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxCalendarDateAttr*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'm' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(m0) != IS_NULL)
+				else if(Z_TYPE_P(m0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'm' not null, could not be retreived correctly.");
 				}
@@ -6316,7 +6316,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMarginBottomRight)
 	#endif
 	
 	//Parameters for overload 0
-	zval pt0;
+	zval* pt0;
 	wxPoint* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -6333,17 +6333,17 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMarginBottomRight)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pt0) == IS_OBJECT)
+				if(Z_TYPE_P(pt0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pt0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pt0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pt0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pt0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pt' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pt0) != IS_NULL)
+				else if(Z_TYPE_P(pt0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pt' not null, could not be retreived correctly.");
 				}
@@ -6367,7 +6367,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMarginBottomRight)
 
 				((wxPageSetupDialogData_php*)native_object)->SetMarginBottomRight(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(&pt0, "wxPageSetupDialogData::SetMarginBottomRight at call 3 with 1 argument(s)");
+				references->AddReference(pt0, "wxPageSetupDialogData::SetMarginBottomRight at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -6438,7 +6438,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMarginTopLeft)
 	#endif
 	
 	//Parameters for overload 0
-	zval pt0;
+	zval* pt0;
 	wxPoint* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -6455,17 +6455,17 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMarginTopLeft)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pt0) == IS_OBJECT)
+				if(Z_TYPE_P(pt0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pt0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pt0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pt0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pt0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pt' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pt0) != IS_NULL)
+				else if(Z_TYPE_P(pt0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pt' not null, could not be retreived correctly.");
 				}
@@ -6489,7 +6489,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMarginTopLeft)
 
 				((wxPageSetupDialogData_php*)native_object)->SetMarginTopLeft(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(&pt0, "wxPageSetupDialogData::SetMarginTopLeft at call 3 with 1 argument(s)");
+				references->AddReference(pt0, "wxPageSetupDialogData::SetMarginTopLeft at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -6560,7 +6560,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginBottomRight)
 	#endif
 	
 	//Parameters for overload 0
-	zval pt0;
+	zval* pt0;
 	wxPoint* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -6577,17 +6577,17 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginBottomRight)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pt0) == IS_OBJECT)
+				if(Z_TYPE_P(pt0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pt0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pt0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pt0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pt0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pt' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pt0) != IS_NULL)
+				else if(Z_TYPE_P(pt0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pt' not null, could not be retreived correctly.");
 				}
@@ -6611,7 +6611,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginBottomRight)
 
 				((wxPageSetupDialogData_php*)native_object)->SetMinMarginBottomRight(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(&pt0, "wxPageSetupDialogData::SetMinMarginBottomRight at call 3 with 1 argument(s)");
+				references->AddReference(pt0, "wxPageSetupDialogData::SetMinMarginBottomRight at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -6682,7 +6682,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginTopLeft)
 	#endif
 	
 	//Parameters for overload 0
-	zval pt0;
+	zval* pt0;
 	wxPoint* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -6699,17 +6699,17 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginTopLeft)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pt0) == IS_OBJECT)
+				if(Z_TYPE_P(pt0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pt0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pt0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pt0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pt0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pt' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pt0) != IS_NULL)
+				else if(Z_TYPE_P(pt0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pt' not null, could not be retreived correctly.");
 				}
@@ -6733,7 +6733,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginTopLeft)
 
 				((wxPageSetupDialogData_php*)native_object)->SetMinMarginTopLeft(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(&pt0, "wxPageSetupDialogData::SetMinMarginTopLeft at call 3 with 1 argument(s)");
+				references->AddReference(pt0, "wxPageSetupDialogData::SetMinMarginTopLeft at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -6907,7 +6907,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetPaperSize)
 	#endif
 	
 	//Parameters for overload 0
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -6924,17 +6924,17 @@ PHP_METHOD(php_wxPageSetupDialogData, SetPaperSize)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxSize*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -6958,7 +6958,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetPaperSize)
 
 				((wxPageSetupDialogData_php*)native_object)->SetPaperSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(&size0, "wxPageSetupDialogData::SetPaperSize at call 3 with 1 argument(s)");
+				references->AddReference(size0, "wxPageSetupDialogData::SetPaperSize at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -7029,7 +7029,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetPrintData)
 	#endif
 	
 	//Parameters for overload 0
-	zval printData0;
+	zval* printData0;
 	wxPrintData* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -7046,17 +7046,17 @@ PHP_METHOD(php_wxPageSetupDialogData, SetPrintData)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &printData0, php_wxPrintData_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(printData0) == IS_OBJECT)
+				if(Z_TYPE_P(printData0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPrintData_P(&printData0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPrintData_P(&printData0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPrintData_P(printData0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintData_P(printData0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPrintData*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'printData' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(printData0) != IS_NULL)
+				else if(Z_TYPE_P(printData0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'printData' not null, could not be retreived correctly.");
 				}
@@ -7080,7 +7080,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetPrintData)
 
 				((wxPageSetupDialogData_php*)native_object)->SetPrintData(*(wxPrintData*) object_pointer0_0);
 
-				references->AddReference(&printData0, "wxPageSetupDialogData::SetPrintData at call 3 with 1 argument(s)");
+				references->AddReference(printData0, "wxPageSetupDialogData::SetPrintData at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -7120,7 +7120,7 @@ PHP_METHOD(php_wxPageSetupDialogData, __construct)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval printData1;
+	zval* printData1;
 	wxPrintData* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -7150,17 +7150,17 @@ PHP_METHOD(php_wxPageSetupDialogData, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &printData1, php_wxPrintData_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(printData1) == IS_OBJECT)
+				if(Z_TYPE_P(printData1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPrintData_P(&printData1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPrintData_P(&printData1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPrintData_P(printData1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintData_P(printData1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxPrintData*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'printData' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(printData1) != IS_NULL)
+				else if(Z_TYPE_P(printData1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'printData' not null, could not be retreived correctly.");
 				}
@@ -7203,7 +7203,7 @@ PHP_METHOD(php_wxPageSetupDialogData, __construct)
 				native_object = new wxPageSetupDialogData_php(*(wxPrintData*) object_pointer1_0);
 
 				native_object->references.Initialize();
-				((wxPageSetupDialogData_php*) native_object)->references.AddReference(&printData1, "wxPageSetupDialogData::wxPageSetupDialogData at call 4 with 1 argument(s)");
+				((wxPageSetupDialogData_php*) native_object)->references.AddReference(printData1, "wxPageSetupDialogData::wxPageSetupDialogData at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -9793,7 +9793,7 @@ PHP_METHOD(php_wxRealPoint, __construct)
 	double y1;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval pt2;
+	zval* pt2;
 	wxPoint* object_pointer2_0 = 0;
 	bool overload2_called = false;
 		
@@ -9840,17 +9840,17 @@ PHP_METHOD(php_wxRealPoint, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt2, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pt2) == IS_OBJECT)
+				if(Z_TYPE_P(pt2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pt2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pt2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pt2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pt2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pt' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pt2) != IS_NULL)
+				else if(Z_TYPE_P(pt2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pt' not null, could not be retreived correctly.");
 				}
@@ -9911,7 +9911,7 @@ PHP_METHOD(php_wxRealPoint, __construct)
 				native_object = new wxRealPoint_php(*(wxPoint*) object_pointer2_0);
 
 				native_object->references.Initialize();
-				((wxRealPoint_php*) native_object)->references.AddReference(&pt2, "wxRealPoint::wxRealPoint at call 4 with 1 argument(s)");
+				((wxRealPoint_php*) native_object)->references.AddReference(pt2, "wxRealPoint::wxRealPoint at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -10104,19 +10104,19 @@ PHP_METHOD(php_wxRect, __construct)
 	long height1;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval topLeft2;
+	zval* topLeft2;
 	wxPoint* object_pointer2_0 = 0;
-	zval bottomRight2;
+	zval* bottomRight2;
 	wxPoint* object_pointer2_1 = 0;
 	bool overload2_called = false;
 	//Parameters for overload 3
-	zval pos3;
+	zval* pos3;
 	wxPoint* object_pointer3_0 = 0;
-	zval size3;
+	zval* size3;
 	wxSize* object_pointer3_1 = 0;
 	bool overload3_called = false;
 	//Parameters for overload 4
-	zval size4;
+	zval* size4;
 	wxSize* object_pointer4_0 = 0;
 	bool overload4_called = false;
 		
@@ -10163,34 +10163,34 @@ PHP_METHOD(php_wxRect, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &topLeft2, php_wxPoint_entry, &bottomRight2, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(topLeft2) == IS_OBJECT)
+				if(Z_TYPE_P(topLeft2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&topLeft2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&topLeft2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(topLeft2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(topLeft2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						goto overload3;
 					}
 				}
-				else if(Z_TYPE(topLeft2) != IS_NULL)
+				else if(Z_TYPE_P(topLeft2) != IS_NULL)
 				{
 					goto overload3;
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(bottomRight2) == IS_OBJECT)
+				if(Z_TYPE_P(bottomRight2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&bottomRight2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&bottomRight2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(bottomRight2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(bottomRight2 TSRMLS_CC)->native_object;
 					object_pointer2_1 = (wxPoint*) argument_native_object;
 					if (!object_pointer2_1 )
 					{
 						goto overload3;
 					}
 				}
-				else if(Z_TYPE(bottomRight2) != IS_NULL)
+				else if(Z_TYPE_P(bottomRight2) != IS_NULL)
 				{
 					goto overload3;
 				}
@@ -10214,34 +10214,34 @@ PHP_METHOD(php_wxRect, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos3, php_wxPoint_entry, &size3, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pos3) == IS_OBJECT)
+				if(Z_TYPE_P(pos3) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos3 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos3 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos3 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos3 TSRMLS_CC)->native_object;
 					object_pointer3_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer3_0 )
 					{
 						goto overload4;
 					}
 				}
-				else if(Z_TYPE(pos3) != IS_NULL)
+				else if(Z_TYPE_P(pos3) != IS_NULL)
 				{
 					goto overload4;
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(size3) == IS_OBJECT)
+				if(Z_TYPE_P(size3) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size3 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size3 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size3 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size3 TSRMLS_CC)->native_object;
 					object_pointer3_1 = (wxSize*) argument_native_object;
 					if (!object_pointer3_1 )
 					{
 						goto overload4;
 					}
 				}
-				else if(Z_TYPE(size3) != IS_NULL)
+				else if(Z_TYPE_P(size3) != IS_NULL)
 				{
 					goto overload4;
 				}
@@ -10265,17 +10265,17 @@ PHP_METHOD(php_wxRect, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size4, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(size4) == IS_OBJECT)
+				if(Z_TYPE_P(size4) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size4 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size4 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size4 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size4 TSRMLS_CC)->native_object;
 					object_pointer4_0 = (wxSize*) argument_native_object;
 					if (!object_pointer4_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size4) != IS_NULL)
+				else if(Z_TYPE_P(size4) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -10336,8 +10336,8 @@ PHP_METHOD(php_wxRect, __construct)
 				native_object = new wxRect_php(*(wxPoint*) object_pointer2_0, *(wxPoint*) object_pointer2_1);
 
 				native_object->references.Initialize();
-				((wxRect_php*) native_object)->references.AddReference(&topLeft2, "wxRect::wxRect at call 4 with 2 argument(s)");
-				((wxRect_php*) native_object)->references.AddReference(&bottomRight2, "wxRect::wxRect at call 4 with 2 argument(s)");
+				((wxRect_php*) native_object)->references.AddReference(topLeft2, "wxRect::wxRect at call 4 with 2 argument(s)");
+				((wxRect_php*) native_object)->references.AddReference(bottomRight2, "wxRect::wxRect at call 4 with 2 argument(s)");
 				break;
 			}
 		}
@@ -10356,8 +10356,8 @@ PHP_METHOD(php_wxRect, __construct)
 				native_object = new wxRect_php(*(wxPoint*) object_pointer3_0, *(wxSize*) object_pointer3_1);
 
 				native_object->references.Initialize();
-				((wxRect_php*) native_object)->references.AddReference(&pos3, "wxRect::wxRect at call 4 with 2 argument(s)");
-				((wxRect_php*) native_object)->references.AddReference(&size3, "wxRect::wxRect at call 4 with 2 argument(s)");
+				((wxRect_php*) native_object)->references.AddReference(pos3, "wxRect::wxRect at call 4 with 2 argument(s)");
+				((wxRect_php*) native_object)->references.AddReference(size3, "wxRect::wxRect at call 4 with 2 argument(s)");
 				break;
 			}
 		}
@@ -10376,7 +10376,7 @@ PHP_METHOD(php_wxRect, __construct)
 				native_object = new wxRect_php(*(wxSize*) object_pointer4_0);
 
 				native_object->references.Initialize();
-				((wxRect_php*) native_object)->references.AddReference(&size4, "wxRect::wxRect at call 4 with 1 argument(s)");
+				((wxRect_php*) native_object)->references.AddReference(size4, "wxRect::wxRect at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -10739,7 +10739,7 @@ PHP_METHOD(php_wxRect, Union)
 	#endif
 	
 	//Parameters for overload 0
-	zval rect0;
+	zval* rect0;
 	wxRect* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -10756,17 +10756,17 @@ PHP_METHOD(php_wxRect, Union)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect0) == IS_OBJECT)
+				if(Z_TYPE_P(rect0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxRect*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'rect' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(rect0) != IS_NULL)
+				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'rect' not null, could not be retreived correctly.");
 				}
@@ -10810,7 +10810,7 @@ PHP_METHOD(php_wxRect, Union)
 					references->AddReference(return_value, "wxRect::Union at call 6 with 1 argument(s)");
 				}
 
-				references->AddReference(&rect0, "wxRect::Union at call 3 with 1 argument(s)");
+				references->AddReference(rect0, "wxRect::Union at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -10984,7 +10984,7 @@ PHP_METHOD(php_wxRect, SetSize)
 	#endif
 	
 	//Parameters for overload 0
-	zval s0;
+	zval* s0;
 	wxSize* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -11001,17 +11001,17 @@ PHP_METHOD(php_wxRect, SetSize)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(s0) == IS_OBJECT)
+				if(Z_TYPE_P(s0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&s0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&s0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(s0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(s0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxSize*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 's' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(s0) != IS_NULL)
+				else if(Z_TYPE_P(s0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 's' not null, could not be retreived correctly.");
 				}
@@ -11035,7 +11035,7 @@ PHP_METHOD(php_wxRect, SetSize)
 
 				((wxRect_php*)native_object)->SetSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(&s0, "wxRect::SetSize at call 3 with 1 argument(s)");
+				references->AddReference(s0, "wxRect::SetSize at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -11213,7 +11213,7 @@ PHP_METHOD(php_wxRect, Offset)
 	long dy0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval pt1;
+	zval* pt1;
 	wxPoint* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -11247,17 +11247,17 @@ PHP_METHOD(php_wxRect, Offset)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pt1) == IS_OBJECT)
+				if(Z_TYPE_P(pt1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pt1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pt1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pt1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pt1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pt' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pt1) != IS_NULL)
+				else if(Z_TYPE_P(pt1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pt' not null, could not be retreived correctly.");
 				}
@@ -11300,7 +11300,7 @@ PHP_METHOD(php_wxRect, Offset)
 
 				((wxRect_php*)native_object)->Offset(*(wxPoint*) object_pointer1_0);
 
-				references->AddReference(&pt1, "wxRect::Offset at call 3 with 1 argument(s)");
+				references->AddReference(pt1, "wxRect::Offset at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -11469,7 +11469,7 @@ PHP_METHOD(php_wxRect, Intersects)
 	#endif
 	
 	//Parameters for overload 0
-	zval rect0;
+	zval* rect0;
 	wxRect* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -11486,17 +11486,17 @@ PHP_METHOD(php_wxRect, Intersects)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect0) == IS_OBJECT)
+				if(Z_TYPE_P(rect0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxRect*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'rect' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(rect0) != IS_NULL)
+				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'rect' not null, could not be retreived correctly.");
 				}
@@ -11520,7 +11520,7 @@ PHP_METHOD(php_wxRect, Intersects)
 
 				ZVAL_BOOL(return_value, ((wxRect_php*)native_object)->Intersects(*(wxRect*) object_pointer0_0));
 
-				references->AddReference(&rect0, "wxRect::Intersects at call 3 with 1 argument(s)");
+				references->AddReference(rect0, "wxRect::Intersects at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -11591,11 +11591,11 @@ PHP_METHOD(php_wxRect, Intersect)
 	#endif
 	
 	//Parameters for overload 0
-	zval rect0;
+	zval* rect0;
 	wxRect* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval rect1;
+	zval* rect1;
 	wxRect* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -11612,17 +11612,17 @@ PHP_METHOD(php_wxRect, Intersect)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect0) == IS_OBJECT)
+				if(Z_TYPE_P(rect0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxRect*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(rect0) != IS_NULL)
+				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -11646,17 +11646,17 @@ PHP_METHOD(php_wxRect, Intersect)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect1, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect1) == IS_OBJECT)
+				if(Z_TYPE_P(rect1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxRect*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'rect' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(rect1) != IS_NULL)
+				else if(Z_TYPE_P(rect1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'rect' not null, could not be retreived correctly.");
 				}
@@ -11688,7 +11688,7 @@ PHP_METHOD(php_wxRect, Intersect)
 				zo_wxRect* zo1 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo1->native_object = (wxRect_php*) ptr;
 
-				references->AddReference(&rect0, "wxRect::Intersect at call 3 with 1 argument(s)");
+				references->AddReference(rect0, "wxRect::Intersect at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -11728,7 +11728,7 @@ PHP_METHOD(php_wxRect, Intersect)
 					references->AddReference(return_value, "wxRect::Intersect at call 6 with 1 argument(s)");
 				}
 
-				references->AddReference(&rect1, "wxRect::Intersect at call 3 with 1 argument(s)");
+				references->AddReference(rect1, "wxRect::Intersect at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -11806,7 +11806,7 @@ PHP_METHOD(php_wxRect, Inflate)
 	long diff1;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval diff2;
+	zval* diff2;
 	wxSize* object_pointer2_0 = 0;
 	bool overload2_called = false;
 	//Parameters for overload 3
@@ -11861,17 +11861,17 @@ PHP_METHOD(php_wxRect, Inflate)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &diff2, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(diff2) == IS_OBJECT)
+				if(Z_TYPE_P(diff2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&diff2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&diff2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(diff2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(diff2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxSize*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						goto overload3;
 					}
 				}
-				else if(Z_TYPE(diff2) != IS_NULL)
+				else if(Z_TYPE_P(diff2) != IS_NULL)
 				{
 					goto overload3;
 				}
@@ -11998,7 +11998,7 @@ PHP_METHOD(php_wxRect, Inflate)
 					references->AddReference(return_value, "wxRect::Inflate at call 6 with 1 argument(s)");
 				}
 
-				references->AddReference(&diff2, "wxRect::Inflate at call 3 with 1 argument(s)");
+				references->AddReference(diff2, "wxRect::Inflate at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -13021,7 +13021,7 @@ PHP_METHOD(php_wxRect, CenterIn)
 	#endif
 	
 	//Parameters for overload 0
-	zval r0;
+	zval* r0;
 	wxRect* object_pointer0_0 = 0;
 	long dir0;
 	bool overload0_called = false;
@@ -13039,17 +13039,17 @@ PHP_METHOD(php_wxRect, CenterIn)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &r0, php_wxRect_entry, &dir0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(r0) == IS_OBJECT)
+				if(Z_TYPE_P(r0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&r0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&r0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(r0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(r0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxRect*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'r' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(r0) != IS_NULL)
+				else if(Z_TYPE_P(r0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'r' not null, could not be retreived correctly.");
 				}
@@ -13081,7 +13081,7 @@ PHP_METHOD(php_wxRect, CenterIn)
 				zo_wxRect* zo1 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo1->native_object = (wxRect_php*) ptr;
 
-				references->AddReference(&r0, "wxRect::CenterIn at call 3 with 1 argument(s)");
+				references->AddReference(r0, "wxRect::CenterIn at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -13102,7 +13102,7 @@ PHP_METHOD(php_wxRect, CenterIn)
 				zo_wxRect* zo2 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo2->native_object = (wxRect_php*) ptr;
 
-				references->AddReference(&r0, "wxRect::CenterIn at call 3 with 2 argument(s)");
+				references->AddReference(r0, "wxRect::CenterIn at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -13173,7 +13173,7 @@ PHP_METHOD(php_wxRect, CentreIn)
 	#endif
 	
 	//Parameters for overload 0
-	zval r0;
+	zval* r0;
 	wxRect* object_pointer0_0 = 0;
 	long dir0;
 	bool overload0_called = false;
@@ -13191,17 +13191,17 @@ PHP_METHOD(php_wxRect, CentreIn)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &r0, php_wxRect_entry, &dir0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(r0) == IS_OBJECT)
+				if(Z_TYPE_P(r0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&r0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&r0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(r0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(r0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxRect*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'r' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(r0) != IS_NULL)
+				else if(Z_TYPE_P(r0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'r' not null, could not be retreived correctly.");
 				}
@@ -13233,7 +13233,7 @@ PHP_METHOD(php_wxRect, CentreIn)
 				zo_wxRect* zo1 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo1->native_object = (wxRect_php*) ptr;
 
-				references->AddReference(&r0, "wxRect::CentreIn at call 3 with 1 argument(s)");
+				references->AddReference(r0, "wxRect::CentreIn at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -13254,7 +13254,7 @@ PHP_METHOD(php_wxRect, CentreIn)
 				zo_wxRect* zo2 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo2->native_object = (wxRect_php*) ptr;
 
-				references->AddReference(&r0, "wxRect::CentreIn at call 3 with 2 argument(s)");
+				references->AddReference(r0, "wxRect::CentreIn at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -13329,11 +13329,11 @@ PHP_METHOD(php_wxRect, Contains)
 	long y0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval pt1;
+	zval* pt1;
 	wxPoint* object_pointer1_0 = 0;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval rect2;
+	zval* rect2;
 	wxRect* object_pointer2_0 = 0;
 	bool overload2_called = false;
 		
@@ -13367,17 +13367,17 @@ PHP_METHOD(php_wxRect, Contains)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pt1) == IS_OBJECT)
+				if(Z_TYPE_P(pt1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pt1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pt1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pt1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pt1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(pt1) != IS_NULL)
+				else if(Z_TYPE_P(pt1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -13401,17 +13401,17 @@ PHP_METHOD(php_wxRect, Contains)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect2, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect2) == IS_OBJECT)
+				if(Z_TYPE_P(rect2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxRect*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'rect' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(rect2) != IS_NULL)
+				else if(Z_TYPE_P(rect2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'rect' not null, could not be retreived correctly.");
 				}
@@ -13454,7 +13454,7 @@ PHP_METHOD(php_wxRect, Contains)
 
 				ZVAL_BOOL(return_value, ((wxRect_php*)native_object)->Contains(*(wxPoint*) object_pointer1_0));
 
-				references->AddReference(&pt1, "wxRect::Contains at call 3 with 1 argument(s)");
+				references->AddReference(pt1, "wxRect::Contains at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -13474,7 +13474,7 @@ PHP_METHOD(php_wxRect, Contains)
 
 				ZVAL_BOOL(return_value, ((wxRect_php*)native_object)->Contains(*(wxRect*) object_pointer2_0));
 
-				references->AddReference(&rect2, "wxRect::Contains at call 3 with 1 argument(s)");
+				references->AddReference(rect2, "wxRect::Contains at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -13549,7 +13549,7 @@ PHP_METHOD(php_wxRect, Deflate)
 	long dy0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval diff1;
+	zval* diff1;
 	wxSize* object_pointer1_0 = 0;
 	bool overload1_called = false;
 	//Parameters for overload 2
@@ -13590,17 +13590,17 @@ PHP_METHOD(php_wxRect, Deflate)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &diff1, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(diff1) == IS_OBJECT)
+				if(Z_TYPE_P(diff1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&diff1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&diff1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(diff1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(diff1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxSize*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(diff1) != IS_NULL)
+				else if(Z_TYPE_P(diff1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -13717,7 +13717,7 @@ PHP_METHOD(php_wxRect, Deflate)
 					references->AddReference(return_value, "wxRect::Deflate at call 6 with 1 argument(s)");
 				}
 
-				references->AddReference(&diff1, "wxRect::Deflate at call 3 with 1 argument(s)");
+				references->AddReference(diff1, "wxRect::Deflate at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -14402,7 +14402,7 @@ PHP_METHOD(php_wxPoint, __construct)
 	long y1;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval pt2;
+	zval* pt2;
 	wxRealPoint* object_pointer2_0 = 0;
 	bool overload2_called = false;
 		
@@ -14449,17 +14449,17 @@ PHP_METHOD(php_wxPoint, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt2, php_wxRealPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pt2) == IS_OBJECT)
+				if(Z_TYPE_P(pt2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRealPoint_P(&pt2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRealPoint_P(&pt2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRealPoint_P(pt2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRealPoint_P(pt2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxRealPoint*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pt' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pt2) != IS_NULL)
+				else if(Z_TYPE_P(pt2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pt' not null, could not be retreived correctly.");
 				}
@@ -14520,7 +14520,7 @@ PHP_METHOD(php_wxPoint, __construct)
 				native_object = new wxPoint_php(*(wxRealPoint*) object_pointer2_0);
 
 				native_object->references.Initialize();
-				((wxPoint_php*) native_object)->references.AddReference(&pt2, "wxPoint::wxPoint at call 4 with 1 argument(s)");
+				((wxPoint_php*) native_object)->references.AddReference(pt2, "wxPoint::wxPoint at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -15162,7 +15162,7 @@ PHP_METHOD(php_wxSize, SetDefaults)
 	#endif
 	
 	//Parameters for overload 0
-	zval sizeDefault0;
+	zval* sizeDefault0;
 	wxSize* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -15179,17 +15179,17 @@ PHP_METHOD(php_wxSize, SetDefaults)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizeDefault0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(sizeDefault0) == IS_OBJECT)
+				if(Z_TYPE_P(sizeDefault0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&sizeDefault0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&sizeDefault0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(sizeDefault0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(sizeDefault0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxSize*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'sizeDefault' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(sizeDefault0) != IS_NULL)
+				else if(Z_TYPE_P(sizeDefault0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'sizeDefault' not null, could not be retreived correctly.");
 				}
@@ -15213,7 +15213,7 @@ PHP_METHOD(php_wxSize, SetDefaults)
 
 				((wxSize_php*)native_object)->SetDefaults(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(&sizeDefault0, "wxSize::SetDefaults at call 3 with 1 argument(s)");
+				references->AddReference(sizeDefault0, "wxSize::SetDefaults at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -15806,7 +15806,7 @@ PHP_METHOD(php_wxSize, DecTo)
 	#endif
 	
 	//Parameters for overload 0
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -15823,17 +15823,17 @@ PHP_METHOD(php_wxSize, DecTo)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxSize*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -15857,7 +15857,7 @@ PHP_METHOD(php_wxSize, DecTo)
 
 				((wxSize_php*)native_object)->DecTo(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(&size0, "wxSize::DecTo at call 3 with 1 argument(s)");
+				references->AddReference(size0, "wxSize::DecTo at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -15928,7 +15928,7 @@ PHP_METHOD(php_wxSize, IncTo)
 	#endif
 	
 	//Parameters for overload 0
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -15945,17 +15945,17 @@ PHP_METHOD(php_wxSize, IncTo)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxSize*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -15979,7 +15979,7 @@ PHP_METHOD(php_wxSize, IncTo)
 
 				((wxSize_php*)native_object)->IncTo(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(&size0, "wxSize::IncTo at call 3 with 1 argument(s)");
+				references->AddReference(size0, "wxSize::IncTo at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -16205,11 +16205,11 @@ PHP_METHOD(php_wxListItemAttr, __construct)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval colText1;
+	zval* colText1;
 	wxColour* object_pointer1_0 = 0;
-	zval colBack1;
+	zval* colBack1;
 	wxColour* object_pointer1_1 = 0;
-	zval font1;
+	zval* font1;
 	wxFont* object_pointer1_2 = 0;
 	bool overload1_called = false;
 		
@@ -16239,51 +16239,51 @@ PHP_METHOD(php_wxListItemAttr, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colText1) == IS_OBJECT)
+				if(Z_TYPE_P(colText1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colText1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colText1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colText1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colText1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxColour*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colText' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colText1) != IS_NULL)
+				else if(Z_TYPE_P(colText1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colText' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(colBack1) == IS_OBJECT)
+				if(Z_TYPE_P(colBack1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colBack1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colBack1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colBack1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colBack1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxColour*) argument_native_object;
 					if (!object_pointer1_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'colBack' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colBack1) != IS_NULL)
+				else if(Z_TYPE_P(colBack1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colBack' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(font1) == IS_OBJECT)
+				if(Z_TYPE_P(font1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font1 TSRMLS_CC)->native_object;
 					object_pointer1_2 = (wxFont*) argument_native_object;
 					if (!object_pointer1_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font1) != IS_NULL)
+				else if(Z_TYPE_P(font1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -16326,9 +16326,9 @@ PHP_METHOD(php_wxListItemAttr, __construct)
 				native_object = new wxListItemAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2);
 
 				native_object->references.Initialize();
-				((wxListItemAttr_php*) native_object)->references.AddReference(&colText1, "wxListItemAttr::wxListItemAttr at call 4 with 3 argument(s)");
-				((wxListItemAttr_php*) native_object)->references.AddReference(&colBack1, "wxListItemAttr::wxListItemAttr at call 4 with 3 argument(s)");
-				((wxListItemAttr_php*) native_object)->references.AddReference(&font1, "wxListItemAttr::wxListItemAttr at call 4 with 3 argument(s)");
+				((wxListItemAttr_php*) native_object)->references.AddReference(colText1, "wxListItemAttr::wxListItemAttr at call 4 with 3 argument(s)");
+				((wxListItemAttr_php*) native_object)->references.AddReference(colBack1, "wxListItemAttr::wxListItemAttr at call 4 with 3 argument(s)");
+				((wxListItemAttr_php*) native_object)->references.AddReference(font1, "wxListItemAttr::wxListItemAttr at call 4 with 3 argument(s)");
 				break;
 			}
 		}
@@ -16415,7 +16415,7 @@ PHP_METHOD(php_wxListItemAttr, SetTextColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -16432,17 +16432,17 @@ PHP_METHOD(php_wxListItemAttr, SetTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
@@ -16466,7 +16466,7 @@ PHP_METHOD(php_wxListItemAttr, SetTextColour)
 
 				((wxListItemAttr_php*)native_object)->SetTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colour0, "wxListItemAttr::SetTextColour at call 3 with 1 argument(s)");
+				references->AddReference(colour0, "wxListItemAttr::SetTextColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -16537,7 +16537,7 @@ PHP_METHOD(php_wxListItemAttr, SetFont)
 	#endif
 	
 	//Parameters for overload 0
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -16554,17 +16554,17 @@ PHP_METHOD(php_wxListItemAttr, SetFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -16588,7 +16588,7 @@ PHP_METHOD(php_wxListItemAttr, SetFont)
 
 				((wxListItemAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(&font0, "wxListItemAttr::SetFont at call 3 with 1 argument(s)");
+				references->AddReference(font0, "wxListItemAttr::SetFont at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -16659,7 +16659,7 @@ PHP_METHOD(php_wxListItemAttr, SetBackgroundColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -16676,17 +16676,17 @@ PHP_METHOD(php_wxListItemAttr, SetBackgroundColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
@@ -16710,7 +16710,7 @@ PHP_METHOD(php_wxListItemAttr, SetBackgroundColour)
 
 				((wxListItemAttr_php*)native_object)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colour0, "wxListItemAttr::SetBackgroundColour at call 3 with 1 argument(s)");
+				references->AddReference(colour0, "wxListItemAttr::SetBackgroundColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -17662,7 +17662,7 @@ PHP_METHOD(php_wxListItem, SetTextColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colText0;
+	zval* colText0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -17679,17 +17679,17 @@ PHP_METHOD(php_wxListItem, SetTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colText0) == IS_OBJECT)
+				if(Z_TYPE_P(colText0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colText0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colText0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colText0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colText0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colText' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colText0) != IS_NULL)
+				else if(Z_TYPE_P(colText0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colText' not null, could not be retreived correctly.");
 				}
@@ -17713,7 +17713,7 @@ PHP_METHOD(php_wxListItem, SetTextColour)
 
 				((wxListItem_php*)native_object)->SetTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colText0, "wxListItem::SetTextColour at call 3 with 1 argument(s)");
+				references->AddReference(colText0, "wxListItem::SetTextColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -18403,7 +18403,7 @@ PHP_METHOD(php_wxListItem, SetFont)
 	#endif
 	
 	//Parameters for overload 0
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -18420,17 +18420,17 @@ PHP_METHOD(php_wxListItem, SetFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -18454,7 +18454,7 @@ PHP_METHOD(php_wxListItem, SetFont)
 
 				((wxListItem_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(&font0, "wxListItem::SetFont at call 3 with 1 argument(s)");
+				references->AddReference(font0, "wxListItem::SetFont at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -18731,7 +18731,7 @@ PHP_METHOD(php_wxListItem, SetBackgroundColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colBack0;
+	zval* colBack0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -18748,17 +18748,17 @@ PHP_METHOD(php_wxListItem, SetBackgroundColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colBack0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colBack0) == IS_OBJECT)
+				if(Z_TYPE_P(colBack0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colBack0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colBack0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colBack0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colBack0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colBack' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colBack0) != IS_NULL)
+				else if(Z_TYPE_P(colBack0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colBack' not null, could not be retreived correctly.");
 				}
@@ -18782,7 +18782,7 @@ PHP_METHOD(php_wxListItem, SetBackgroundColour)
 
 				((wxListItem_php*)native_object)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colBack0, "wxListItem::SetBackgroundColour at call 3 with 1 argument(s)");
+				references->AddReference(colBack0, "wxListItem::SetBackgroundColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -20238,7 +20238,7 @@ PHP_METHOD(php_wxFileType, GetExtensions)
 	#endif
 	
 	//Parameters for overload 0
-	zval extensions0;
+	zval* extensions0;
 	zval extensions0_ref;
 	bool overload0_called = false;
 		
@@ -20273,7 +20273,7 @@ PHP_METHOD(php_wxFileType, GetExtensions)
 				zval* temp_array_value0_0 = 0;
 				while(strings_continue0_0)
 				{
-					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(&extensions0), array_index0_0)) != NULL)
+					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(extensions0), array_index0_0)) != NULL)
 					{
 						convert_to_string(temp_array_value0_0);
 						strings_array0_0.Add(wxString(Z_STRVAL_P(temp_array_value0_0), wxConvUTF8));
@@ -20290,10 +20290,10 @@ PHP_METHOD(php_wxFileType, GetExtensions)
 
 				ZVAL_BOOL(return_value, ((wxFileType_php*)native_object)->GetExtensions(strings_array0_0));
 
-				array_init(&extensions0);
+				array_init(extensions0);
 				for(size_t i=0; i<strings_array0_0.GetCount(); i++)
 				{
-					add_next_index_string(&extensions0, strings_array0_0[i].char_str());
+					add_next_index_string(extensions0, strings_array0_0[i].char_str());
 				}
 
 				return;
@@ -20475,7 +20475,7 @@ PHP_METHOD(php_wxFileType, GetMimeTypes)
 	#endif
 	
 	//Parameters for overload 0
-	zval mimeTypes0;
+	zval* mimeTypes0;
 	zval mimeTypes0_ref;
 	bool overload0_called = false;
 		
@@ -20510,7 +20510,7 @@ PHP_METHOD(php_wxFileType, GetMimeTypes)
 				zval* temp_array_value0_0 = 0;
 				while(strings_continue0_0)
 				{
-					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(&mimeTypes0), array_index0_0)) != NULL)
+					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(mimeTypes0), array_index0_0)) != NULL)
 					{
 						convert_to_string(temp_array_value0_0);
 						strings_array0_0.Add(wxString(Z_STRVAL_P(temp_array_value0_0), wxConvUTF8));
@@ -20527,10 +20527,10 @@ PHP_METHOD(php_wxFileType, GetMimeTypes)
 
 				ZVAL_BOOL(return_value, ((wxFileType_php*)native_object)->GetMimeTypes(strings_array0_0));
 
-				array_init(&mimeTypes0);
+				array_init(mimeTypes0);
 				for(size_t i=0; i<strings_array0_0.GetCount(); i++)
 				{
-					add_next_index_string(&mimeTypes0, strings_array0_0[i].char_str());
+					add_next_index_string(mimeTypes0, strings_array0_0[i].char_str());
 				}
 
 				return;
@@ -20675,7 +20675,7 @@ PHP_METHOD(php_wxFileType, __construct)
 	
 	
 	//Parameters for overload 0
-	zval ftInfo0;
+	zval* ftInfo0;
 	wxFileTypeInfo* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -20692,17 +20692,17 @@ PHP_METHOD(php_wxFileType, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &ftInfo0, php_wxFileTypeInfo_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(ftInfo0) == IS_OBJECT)
+				if(Z_TYPE_P(ftInfo0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileTypeInfo_P(&ftInfo0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileTypeInfo_P(&ftInfo0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileTypeInfo_P(ftInfo0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileTypeInfo_P(ftInfo0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileTypeInfo*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'ftInfo' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(ftInfo0) != IS_NULL)
+				else if(Z_TYPE_P(ftInfo0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'ftInfo' not null, could not be retreived correctly.");
 				}
@@ -20727,7 +20727,7 @@ PHP_METHOD(php_wxFileType, __construct)
 				native_object = new wxFileType_php(*(wxFileTypeInfo*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxFileType_php*) native_object)->references.AddReference(&ftInfo0, "wxFileType::wxFileType at call 4 with 1 argument(s)");
+				((wxFileType_php*) native_object)->references.AddReference(ftInfo0, "wxFileType::wxFileType at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -21776,7 +21776,7 @@ PHP_METHOD(php_wxRegion, Contains)
 	long y0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval pt1;
+	zval* pt1;
 	wxPoint* object_pointer1_0 = 0;
 	bool overload1_called = false;
 	//Parameters for overload 2
@@ -21786,7 +21786,7 @@ PHP_METHOD(php_wxRegion, Contains)
 	long height2;
 	bool overload2_called = false;
 	//Parameters for overload 3
-	zval rect3;
+	zval* rect3;
 	wxRect* object_pointer3_0 = 0;
 	bool overload3_called = false;
 		
@@ -21820,17 +21820,17 @@ PHP_METHOD(php_wxRegion, Contains)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pt1) == IS_OBJECT)
+				if(Z_TYPE_P(pt1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pt1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pt1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pt1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pt1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(pt1) != IS_NULL)
+				else if(Z_TYPE_P(pt1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -21871,17 +21871,17 @@ PHP_METHOD(php_wxRegion, Contains)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect3, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect3) == IS_OBJECT)
+				if(Z_TYPE_P(rect3) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect3 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect3 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect3 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect3 TSRMLS_CC)->native_object;
 					object_pointer3_0 = (wxRect*) argument_native_object;
 					if (!object_pointer3_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'rect' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(rect3) != IS_NULL)
+				else if(Z_TYPE_P(rect3) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'rect' not null, could not be retreived correctly.");
 				}
@@ -21924,7 +21924,7 @@ PHP_METHOD(php_wxRegion, Contains)
 
 				ZVAL_LONG(return_value, ((wxRegion_php*)native_object)->Contains(*(wxPoint*) object_pointer1_0));
 
-				references->AddReference(&pt1, "wxRegion::Contains at call 3 with 1 argument(s)");
+				references->AddReference(pt1, "wxRegion::Contains at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -21963,7 +21963,7 @@ PHP_METHOD(php_wxRegion, Contains)
 
 				ZVAL_LONG(return_value, ((wxRegion_php*)native_object)->Contains(*(wxRect*) object_pointer3_0));
 
-				references->AddReference(&rect3, "wxRegion::Contains at call 3 with 1 argument(s)");
+				references->AddReference(rect3, "wxRegion::Contains at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -22294,11 +22294,11 @@ PHP_METHOD(php_wxRegion, Intersect)
 	long height0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval rect1;
+	zval* rect1;
 	wxRect* object_pointer1_0 = 0;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval region2;
+	zval* region2;
 	wxRegion* object_pointer2_0 = 0;
 	bool overload2_called = false;
 		
@@ -22332,17 +22332,17 @@ PHP_METHOD(php_wxRegion, Intersect)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect1, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect1) == IS_OBJECT)
+				if(Z_TYPE_P(rect1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxRect*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(rect1) != IS_NULL)
+				else if(Z_TYPE_P(rect1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -22366,17 +22366,17 @@ PHP_METHOD(php_wxRegion, Intersect)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &region2, php_wxRegion_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(region2) == IS_OBJECT)
+				if(Z_TYPE_P(region2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRegion_P(&region2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRegion_P(&region2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRegion_P(region2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRegion_P(region2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxRegion*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'region' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(region2) != IS_NULL)
+				else if(Z_TYPE_P(region2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'region' not null, could not be retreived correctly.");
 				}
@@ -22419,7 +22419,7 @@ PHP_METHOD(php_wxRegion, Intersect)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Intersect(*(wxRect*) object_pointer1_0));
 
-				references->AddReference(&rect1, "wxRegion::Intersect at call 3 with 1 argument(s)");
+				references->AddReference(rect1, "wxRegion::Intersect at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -22439,7 +22439,7 @@ PHP_METHOD(php_wxRegion, Intersect)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Intersect(*(wxRegion*) object_pointer2_0));
 
-				references->AddReference(&region2, "wxRegion::Intersect at call 3 with 1 argument(s)");
+				references->AddReference(region2, "wxRegion::Intersect at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -22608,7 +22608,7 @@ PHP_METHOD(php_wxRegion, IsEqual)
 	#endif
 	
 	//Parameters for overload 0
-	zval region0;
+	zval* region0;
 	wxRegion* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -22625,17 +22625,17 @@ PHP_METHOD(php_wxRegion, IsEqual)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &region0, php_wxRegion_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(region0) == IS_OBJECT)
+				if(Z_TYPE_P(region0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRegion_P(&region0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRegion_P(&region0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRegion_P(region0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRegion_P(region0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxRegion*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'region' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(region0) != IS_NULL)
+				else if(Z_TYPE_P(region0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'region' not null, could not be retreived correctly.");
 				}
@@ -22659,7 +22659,7 @@ PHP_METHOD(php_wxRegion, IsEqual)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->IsEqual(*(wxRegion*) object_pointer0_0));
 
-				references->AddReference(&region0, "wxRegion::IsEqual at call 3 with 1 argument(s)");
+				references->AddReference(region0, "wxRegion::IsEqual at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -22734,7 +22734,7 @@ PHP_METHOD(php_wxRegion, Offset)
 	long y0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval pt1;
+	zval* pt1;
 	wxPoint* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -22768,17 +22768,17 @@ PHP_METHOD(php_wxRegion, Offset)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pt1) == IS_OBJECT)
+				if(Z_TYPE_P(pt1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pt1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pt1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pt1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pt1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pt' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pt1) != IS_NULL)
+				else if(Z_TYPE_P(pt1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pt' not null, could not be retreived correctly.");
 				}
@@ -22821,7 +22821,7 @@ PHP_METHOD(php_wxRegion, Offset)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Offset(*(wxPoint*) object_pointer1_0));
 
-				references->AddReference(&pt1, "wxRegion::Offset at call 3 with 1 argument(s)");
+				references->AddReference(pt1, "wxRegion::Offset at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -22892,11 +22892,11 @@ PHP_METHOD(php_wxRegion, Subtract)
 	#endif
 	
 	//Parameters for overload 0
-	zval rect0;
+	zval* rect0;
 	wxRect* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval region1;
+	zval* region1;
 	wxRegion* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -22913,17 +22913,17 @@ PHP_METHOD(php_wxRegion, Subtract)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect0) == IS_OBJECT)
+				if(Z_TYPE_P(rect0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxRect*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(rect0) != IS_NULL)
+				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -22947,17 +22947,17 @@ PHP_METHOD(php_wxRegion, Subtract)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &region1, php_wxRegion_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(region1) == IS_OBJECT)
+				if(Z_TYPE_P(region1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRegion_P(&region1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRegion_P(&region1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRegion_P(region1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRegion_P(region1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxRegion*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'region' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(region1) != IS_NULL)
+				else if(Z_TYPE_P(region1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'region' not null, could not be retreived correctly.");
 				}
@@ -22981,7 +22981,7 @@ PHP_METHOD(php_wxRegion, Subtract)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Subtract(*(wxRect*) object_pointer0_0));
 
-				references->AddReference(&rect0, "wxRegion::Subtract at call 3 with 1 argument(s)");
+				references->AddReference(rect0, "wxRegion::Subtract at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -23001,7 +23001,7 @@ PHP_METHOD(php_wxRegion, Subtract)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Subtract(*(wxRegion*) object_pointer1_0));
 
-				references->AddReference(&region1, "wxRegion::Subtract at call 3 with 1 argument(s)");
+				references->AddReference(region1, "wxRegion::Subtract at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -23078,21 +23078,21 @@ PHP_METHOD(php_wxRegion, Union)
 	long height0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval rect1;
+	zval* rect1;
 	wxRect* object_pointer1_0 = 0;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval region2;
+	zval* region2;
 	wxRegion* object_pointer2_0 = 0;
 	bool overload2_called = false;
 	//Parameters for overload 3
-	zval bmp3;
+	zval* bmp3;
 	wxBitmap* object_pointer3_0 = 0;
 	bool overload3_called = false;
 	//Parameters for overload 4
-	zval bmp4;
+	zval* bmp4;
 	wxBitmap* object_pointer4_0 = 0;
-	zval transColour4;
+	zval* transColour4;
 	wxColour* object_pointer4_1 = 0;
 	long tolerance4;
 	bool overload4_called = false;
@@ -23127,17 +23127,17 @@ PHP_METHOD(php_wxRegion, Union)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect1, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect1) == IS_OBJECT)
+				if(Z_TYPE_P(rect1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxRect*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(rect1) != IS_NULL)
+				else if(Z_TYPE_P(rect1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -23161,17 +23161,17 @@ PHP_METHOD(php_wxRegion, Union)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &region2, php_wxRegion_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(region2) == IS_OBJECT)
+				if(Z_TYPE_P(region2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRegion_P(&region2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRegion_P(&region2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRegion_P(region2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRegion_P(region2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxRegion*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						goto overload3;
 					}
 				}
-				else if(Z_TYPE(region2) != IS_NULL)
+				else if(Z_TYPE_P(region2) != IS_NULL)
 				{
 					goto overload3;
 				}
@@ -23195,17 +23195,17 @@ PHP_METHOD(php_wxRegion, Union)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp3, php_wxBitmap_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(bmp3) == IS_OBJECT)
+				if(Z_TYPE_P(bmp3) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxBitmap_P(&bmp3 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxBitmap_P(&bmp3 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxBitmap_P(bmp3 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxBitmap_P(bmp3 TSRMLS_CC)->native_object;
 					object_pointer3_0 = (wxBitmap*) argument_native_object;
 					if (!object_pointer3_0 )
 					{
 						goto overload4;
 					}
 				}
-				else if(Z_TYPE(bmp3) != IS_NULL)
+				else if(Z_TYPE_P(bmp3) != IS_NULL)
 				{
 					goto overload4;
 				}
@@ -23229,34 +23229,34 @@ PHP_METHOD(php_wxRegion, Union)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp4, php_wxBitmap_entry, &transColour4, php_wxColour_entry, &tolerance4 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(bmp4) == IS_OBJECT)
+				if(Z_TYPE_P(bmp4) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxBitmap_P(&bmp4 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxBitmap_P(&bmp4 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxBitmap_P(bmp4 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxBitmap_P(bmp4 TSRMLS_CC)->native_object;
 					object_pointer4_0 = (wxBitmap*) argument_native_object;
 					if (!object_pointer4_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'bmp' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(bmp4) != IS_NULL)
+				else if(Z_TYPE_P(bmp4) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bmp' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(transColour4) == IS_OBJECT)
+				if(Z_TYPE_P(transColour4) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&transColour4 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&transColour4 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(transColour4 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(transColour4 TSRMLS_CC)->native_object;
 					object_pointer4_1 = (wxColour*) argument_native_object;
 					if (!object_pointer4_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'transColour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(transColour4) != IS_NULL)
+				else if(Z_TYPE_P(transColour4) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'transColour' not null, could not be retreived correctly.");
 				}
@@ -23299,7 +23299,7 @@ PHP_METHOD(php_wxRegion, Union)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Union(*(wxRect*) object_pointer1_0));
 
-				references->AddReference(&rect1, "wxRegion::Union at call 3 with 1 argument(s)");
+				references->AddReference(rect1, "wxRegion::Union at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -23319,7 +23319,7 @@ PHP_METHOD(php_wxRegion, Union)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Union(*(wxRegion*) object_pointer2_0));
 
-				references->AddReference(&region2, "wxRegion::Union at call 3 with 1 argument(s)");
+				references->AddReference(region2, "wxRegion::Union at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -23339,7 +23339,7 @@ PHP_METHOD(php_wxRegion, Union)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Union(*(wxBitmap*) object_pointer3_0));
 
-				references->AddReference(&bmp3, "wxRegion::Union at call 3 with 1 argument(s)");
+				references->AddReference(bmp3, "wxRegion::Union at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -23359,8 +23359,8 @@ PHP_METHOD(php_wxRegion, Union)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Union(*(wxBitmap*) object_pointer4_0, *(wxColour*) object_pointer4_1));
 
-				references->AddReference(&bmp4, "wxRegion::Union at call 3 with 2 argument(s)");
-				references->AddReference(&transColour4, "wxRegion::Union at call 3 with 2 argument(s)");
+				references->AddReference(bmp4, "wxRegion::Union at call 3 with 2 argument(s)");
+				references->AddReference(transColour4, "wxRegion::Union at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -23373,8 +23373,8 @@ PHP_METHOD(php_wxRegion, Union)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Union(*(wxBitmap*) object_pointer4_0, *(wxColour*) object_pointer4_1, (int) tolerance4));
 
-				references->AddReference(&bmp4, "wxRegion::Union at call 3 with 3 argument(s)");
-				references->AddReference(&transColour4, "wxRegion::Union at call 3 with 3 argument(s)");
+				references->AddReference(bmp4, "wxRegion::Union at call 3 with 3 argument(s)");
+				references->AddReference(transColour4, "wxRegion::Union at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -23451,11 +23451,11 @@ PHP_METHOD(php_wxRegion, XorMethod)
 	long height0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval rect1;
+	zval* rect1;
 	wxRect* object_pointer1_0 = 0;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval region2;
+	zval* region2;
 	wxRegion* object_pointer2_0 = 0;
 	bool overload2_called = false;
 		
@@ -23489,17 +23489,17 @@ PHP_METHOD(php_wxRegion, XorMethod)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect1, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect1) == IS_OBJECT)
+				if(Z_TYPE_P(rect1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxRect*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(rect1) != IS_NULL)
+				else if(Z_TYPE_P(rect1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -23523,17 +23523,17 @@ PHP_METHOD(php_wxRegion, XorMethod)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &region2, php_wxRegion_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(region2) == IS_OBJECT)
+				if(Z_TYPE_P(region2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRegion_P(&region2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRegion_P(&region2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRegion_P(region2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRegion_P(region2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxRegion*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'region' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(region2) != IS_NULL)
+				else if(Z_TYPE_P(region2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'region' not null, could not be retreived correctly.");
 				}
@@ -23576,7 +23576,7 @@ PHP_METHOD(php_wxRegion, XorMethod)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Xor(*(wxRect*) object_pointer1_0));
 
-				references->AddReference(&rect1, "wxRegion::Xor at call 3 with 1 argument(s)");
+				references->AddReference(rect1, "wxRegion::Xor at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -23596,7 +23596,7 @@ PHP_METHOD(php_wxRegion, XorMethod)
 
 				ZVAL_BOOL(return_value, ((wxRegion_php*)native_object)->Xor(*(wxRegion*) object_pointer2_0));
 
-				references->AddReference(&region2, "wxRegion::Xor at call 3 with 1 argument(s)");
+				references->AddReference(region2, "wxRegion::Xor at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -23642,33 +23642,33 @@ PHP_METHOD(php_wxRegion, __construct)
 	long height1;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval topLeft2;
+	zval* topLeft2;
 	wxPoint* object_pointer2_0 = 0;
-	zval bottomRight2;
+	zval* bottomRight2;
 	wxPoint* object_pointer2_1 = 0;
 	bool overload2_called = false;
 	//Parameters for overload 3
-	zval rect3;
+	zval* rect3;
 	wxRect* object_pointer3_0 = 0;
 	bool overload3_called = false;
 	//Parameters for overload 4
-	zval region4;
+	zval* region4;
 	wxRegion* object_pointer4_0 = 0;
 	bool overload4_called = false;
 	//Parameters for overload 5
 	long n5;
-	zval points5;
+	zval* points5;
 	wxPoint* object_pointer5_1 = 0;
 	long fillStyle5;
 	bool overload5_called = false;
 	//Parameters for overload 6
-	zval bmp6;
+	zval* bmp6;
 	wxBitmap* object_pointer6_0 = 0;
 	bool overload6_called = false;
 	//Parameters for overload 7
-	zval bmp7;
+	zval* bmp7;
 	wxBitmap* object_pointer7_0 = 0;
-	zval transColour7;
+	zval* transColour7;
 	wxColour* object_pointer7_1 = 0;
 	long tolerance7;
 	bool overload7_called = false;
@@ -23716,34 +23716,34 @@ PHP_METHOD(php_wxRegion, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &topLeft2, php_wxPoint_entry, &bottomRight2, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(topLeft2) == IS_OBJECT)
+				if(Z_TYPE_P(topLeft2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&topLeft2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&topLeft2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(topLeft2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(topLeft2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						goto overload3;
 					}
 				}
-				else if(Z_TYPE(topLeft2) != IS_NULL)
+				else if(Z_TYPE_P(topLeft2) != IS_NULL)
 				{
 					goto overload3;
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(bottomRight2) == IS_OBJECT)
+				if(Z_TYPE_P(bottomRight2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&bottomRight2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&bottomRight2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(bottomRight2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(bottomRight2 TSRMLS_CC)->native_object;
 					object_pointer2_1 = (wxPoint*) argument_native_object;
 					if (!object_pointer2_1 )
 					{
 						goto overload3;
 					}
 				}
-				else if(Z_TYPE(bottomRight2) != IS_NULL)
+				else if(Z_TYPE_P(bottomRight2) != IS_NULL)
 				{
 					goto overload3;
 				}
@@ -23767,17 +23767,17 @@ PHP_METHOD(php_wxRegion, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect3, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect3) == IS_OBJECT)
+				if(Z_TYPE_P(rect3) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect3 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect3 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect3 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect3 TSRMLS_CC)->native_object;
 					object_pointer3_0 = (wxRect*) argument_native_object;
 					if (!object_pointer3_0 )
 					{
 						goto overload4;
 					}
 				}
-				else if(Z_TYPE(rect3) != IS_NULL)
+				else if(Z_TYPE_P(rect3) != IS_NULL)
 				{
 					goto overload4;
 				}
@@ -23801,17 +23801,17 @@ PHP_METHOD(php_wxRegion, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &region4, php_wxRegion_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(region4) == IS_OBJECT)
+				if(Z_TYPE_P(region4) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRegion_P(&region4 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRegion_P(&region4 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRegion_P(region4 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRegion_P(region4 TSRMLS_CC)->native_object;
 					object_pointer4_0 = (wxRegion*) argument_native_object;
 					if (!object_pointer4_0 )
 					{
 						goto overload5;
 					}
 				}
-				else if(Z_TYPE(region4) != IS_NULL)
+				else if(Z_TYPE_P(region4) != IS_NULL)
 				{
 					goto overload5;
 				}
@@ -23835,17 +23835,17 @@ PHP_METHOD(php_wxRegion, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n5, &points5, &fillStyle5 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(points5) == IS_OBJECT)
+				if(Z_TYPE_P(points5) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&points5 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&points5 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(points5 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(points5 TSRMLS_CC)->native_object;
 					object_pointer5_1 = (wxPoint*) argument_native_object;
 					if (!object_pointer5_1 || (argument_type != PHP_WXPOINT_TYPE))
 					{
 						goto overload6;
 					}
 				}
-				else if(Z_TYPE(points5) != IS_NULL)
+				else if(Z_TYPE_P(points5) != IS_NULL)
 				{
 					goto overload6;
 				}
@@ -23869,17 +23869,17 @@ PHP_METHOD(php_wxRegion, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp6, php_wxBitmap_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(bmp6) == IS_OBJECT)
+				if(Z_TYPE_P(bmp6) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxBitmap_P(&bmp6 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxBitmap_P(&bmp6 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxBitmap_P(bmp6 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxBitmap_P(bmp6 TSRMLS_CC)->native_object;
 					object_pointer6_0 = (wxBitmap*) argument_native_object;
 					if (!object_pointer6_0 )
 					{
 						goto overload7;
 					}
 				}
-				else if(Z_TYPE(bmp6) != IS_NULL)
+				else if(Z_TYPE_P(bmp6) != IS_NULL)
 				{
 					goto overload7;
 				}
@@ -23903,34 +23903,34 @@ PHP_METHOD(php_wxRegion, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp7, php_wxBitmap_entry, &transColour7, php_wxColour_entry, &tolerance7 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(bmp7) == IS_OBJECT)
+				if(Z_TYPE_P(bmp7) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxBitmap_P(&bmp7 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxBitmap_P(&bmp7 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxBitmap_P(bmp7 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxBitmap_P(bmp7 TSRMLS_CC)->native_object;
 					object_pointer7_0 = (wxBitmap*) argument_native_object;
 					if (!object_pointer7_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'bmp' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(bmp7) != IS_NULL)
+				else if(Z_TYPE_P(bmp7) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bmp' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(transColour7) == IS_OBJECT)
+				if(Z_TYPE_P(transColour7) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&transColour7 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&transColour7 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(transColour7 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(transColour7 TSRMLS_CC)->native_object;
 					object_pointer7_1 = (wxColour*) argument_native_object;
 					if (!object_pointer7_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'transColour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(transColour7) != IS_NULL)
+				else if(Z_TYPE_P(transColour7) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'transColour' not null, could not be retreived correctly.");
 				}
@@ -23991,8 +23991,8 @@ PHP_METHOD(php_wxRegion, __construct)
 				native_object = new wxRegion_php(*(wxPoint*) object_pointer2_0, *(wxPoint*) object_pointer2_1);
 
 				native_object->references.Initialize();
-				((wxRegion_php*) native_object)->references.AddReference(&topLeft2, "wxRegion::wxRegion at call 4 with 2 argument(s)");
-				((wxRegion_php*) native_object)->references.AddReference(&bottomRight2, "wxRegion::wxRegion at call 4 with 2 argument(s)");
+				((wxRegion_php*) native_object)->references.AddReference(topLeft2, "wxRegion::wxRegion at call 4 with 2 argument(s)");
+				((wxRegion_php*) native_object)->references.AddReference(bottomRight2, "wxRegion::wxRegion at call 4 with 2 argument(s)");
 				break;
 			}
 		}
@@ -24011,7 +24011,7 @@ PHP_METHOD(php_wxRegion, __construct)
 				native_object = new wxRegion_php(*(wxRect*) object_pointer3_0);
 
 				native_object->references.Initialize();
-				((wxRegion_php*) native_object)->references.AddReference(&rect3, "wxRegion::wxRegion at call 4 with 1 argument(s)");
+				((wxRegion_php*) native_object)->references.AddReference(rect3, "wxRegion::wxRegion at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -24030,7 +24030,7 @@ PHP_METHOD(php_wxRegion, __construct)
 				native_object = new wxRegion_php(*(wxRegion*) object_pointer4_0);
 
 				native_object->references.Initialize();
-				((wxRegion_php*) native_object)->references.AddReference(&region4, "wxRegion::wxRegion at call 4 with 1 argument(s)");
+				((wxRegion_php*) native_object)->references.AddReference(region4, "wxRegion::wxRegion at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -24049,7 +24049,7 @@ PHP_METHOD(php_wxRegion, __construct)
 				native_object = new wxRegion_php((size_t) n5, (const wxPoint*) object_pointer5_1);
 
 				native_object->references.Initialize();
-				((wxRegion_php*) native_object)->references.AddReference(&points5, "wxRegion::wxRegion at call 2 with 2 argument(s)");
+				((wxRegion_php*) native_object)->references.AddReference(points5, "wxRegion::wxRegion at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -24061,7 +24061,7 @@ PHP_METHOD(php_wxRegion, __construct)
 				native_object = new wxRegion_php((size_t) n5, (const wxPoint*) object_pointer5_1, (wxPolygonFillMode) fillStyle5);
 
 				native_object->references.Initialize();
-				((wxRegion_php*) native_object)->references.AddReference(&points5, "wxRegion::wxRegion at call 2 with 3 argument(s)");
+				((wxRegion_php*) native_object)->references.AddReference(points5, "wxRegion::wxRegion at call 2 with 3 argument(s)");
 				break;
 			}
 		}
@@ -24080,7 +24080,7 @@ PHP_METHOD(php_wxRegion, __construct)
 				native_object = new wxRegion_php(*(wxBitmap*) object_pointer6_0);
 
 				native_object->references.Initialize();
-				((wxRegion_php*) native_object)->references.AddReference(&bmp6, "wxRegion::wxRegion at call 4 with 1 argument(s)");
+				((wxRegion_php*) native_object)->references.AddReference(bmp6, "wxRegion::wxRegion at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -24099,8 +24099,8 @@ PHP_METHOD(php_wxRegion, __construct)
 				native_object = new wxRegion_php(*(wxBitmap*) object_pointer7_0, *(wxColour*) object_pointer7_1);
 
 				native_object->references.Initialize();
-				((wxRegion_php*) native_object)->references.AddReference(&bmp7, "wxRegion::wxRegion at call 4 with 2 argument(s)");
-				((wxRegion_php*) native_object)->references.AddReference(&transColour7, "wxRegion::wxRegion at call 4 with 2 argument(s)");
+				((wxRegion_php*) native_object)->references.AddReference(bmp7, "wxRegion::wxRegion at call 4 with 2 argument(s)");
+				((wxRegion_php*) native_object)->references.AddReference(transColour7, "wxRegion::wxRegion at call 4 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -24112,8 +24112,8 @@ PHP_METHOD(php_wxRegion, __construct)
 				native_object = new wxRegion_php(*(wxBitmap*) object_pointer7_0, *(wxColour*) object_pointer7_1, (int) tolerance7);
 
 				native_object->references.Initialize();
-				((wxRegion_php*) native_object)->references.AddReference(&bmp7, "wxRegion::wxRegion at call 4 with 3 argument(s)");
-				((wxRegion_php*) native_object)->references.AddReference(&transColour7, "wxRegion::wxRegion at call 4 with 3 argument(s)");
+				((wxRegion_php*) native_object)->references.AddReference(bmp7, "wxRegion::wxRegion at call 4 with 3 argument(s)");
+				((wxRegion_php*) native_object)->references.AddReference(transColour7, "wxRegion::wxRegion at call 4 with 3 argument(s)");
 				break;
 			}
 		}
@@ -24990,7 +24990,7 @@ PHP_METHOD(php_wxVariant, Append)
 	#endif
 	
 	//Parameters for overload 0
-	zval value0;
+	zval* value0;
 	wxVariant* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -25007,17 +25007,17 @@ PHP_METHOD(php_wxVariant, Append)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, php_wxVariant_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(value0) == IS_OBJECT)
+				if(Z_TYPE_P(value0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariant_P(&value0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariant_P(&value0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariant_P(value0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariant_P(value0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxVariant*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'value' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(value0) != IS_NULL)
+				else if(Z_TYPE_P(value0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'value' not null, could not be retreived correctly.");
 				}
@@ -25041,7 +25041,7 @@ PHP_METHOD(php_wxVariant, Append)
 
 				((wxVariant_php*)native_object)->Append(*(wxVariant*) object_pointer0_0);
 
-				references->AddReference(&value0, "wxVariant::Append at call 3 with 1 argument(s)");
+				references->AddReference(value0, "wxVariant::Append at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -26751,7 +26751,7 @@ PHP_METHOD(php_wxVariant, Insert)
 	#endif
 	
 	//Parameters for overload 0
-	zval value0;
+	zval* value0;
 	wxVariant* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -26768,17 +26768,17 @@ PHP_METHOD(php_wxVariant, Insert)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, php_wxVariant_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(value0) == IS_OBJECT)
+				if(Z_TYPE_P(value0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariant_P(&value0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariant_P(&value0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariant_P(value0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariant_P(value0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxVariant*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'value' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(value0) != IS_NULL)
+				else if(Z_TYPE_P(value0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'value' not null, could not be retreived correctly.");
 				}
@@ -26802,7 +26802,7 @@ PHP_METHOD(php_wxVariant, Insert)
 
 				((wxVariant_php*)native_object)->Insert(*(wxVariant*) object_pointer0_0);
 
-				references->AddReference(&value0, "wxVariant::Insert at call 3 with 1 argument(s)");
+				references->AddReference(value0, "wxVariant::Insert at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -26971,7 +26971,7 @@ PHP_METHOD(php_wxVariant, IsValueKindOf)
 	#endif
 	
 	//Parameters for overload 0
-	zval type0;
+	zval* type0;
 	wxClassInfo* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -26988,17 +26988,17 @@ PHP_METHOD(php_wxVariant, IsValueKindOf)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(type0) == IS_OBJECT)
+				if(Z_TYPE_P(type0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxClassInfo_P(&type0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxClassInfo_P(&type0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxClassInfo_P(type0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxClassInfo_P(type0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxClassInfo*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXCLASSINFO_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'type' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(type0) != IS_NULL)
+				else if(Z_TYPE_P(type0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'type' not null, could not be retreived correctly.");
 				}
@@ -27022,7 +27022,7 @@ PHP_METHOD(php_wxVariant, IsValueKindOf)
 
 				ZVAL_BOOL(return_value, ((wxVariant_php*)native_object)->IsValueKindOf((const wxClassInfo*) object_pointer0_0));
 
-				references->AddReference(&type0, "wxVariant::IsValueKindOf at call 1 with 1 argument(s)");
+				references->AddReference(type0, "wxVariant::IsValueKindOf at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -27291,7 +27291,7 @@ PHP_METHOD(php_wxVariant, Member)
 	#endif
 	
 	//Parameters for overload 0
-	zval value0;
+	zval* value0;
 	wxVariant* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -27308,17 +27308,17 @@ PHP_METHOD(php_wxVariant, Member)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, php_wxVariant_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(value0) == IS_OBJECT)
+				if(Z_TYPE_P(value0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariant_P(&value0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariant_P(&value0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariant_P(value0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariant_P(value0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxVariant*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'value' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(value0) != IS_NULL)
+				else if(Z_TYPE_P(value0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'value' not null, could not be retreived correctly.");
 				}
@@ -27342,7 +27342,7 @@ PHP_METHOD(php_wxVariant, Member)
 
 				ZVAL_BOOL(return_value, ((wxVariant_php*)native_object)->Member(*(wxVariant*) object_pointer0_0));
 
-				references->AddReference(&value0, "wxVariant::Member at call 3 with 1 argument(s)");
+				references->AddReference(value0, "wxVariant::Member at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -27813,7 +27813,7 @@ PHP_METHOD(php_wxVariant, SetData)
 	#endif
 	
 	//Parameters for overload 0
-	zval data0;
+	zval* data0;
 	wxVariantData* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -27830,17 +27830,17 @@ PHP_METHOD(php_wxVariant, SetData)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(data0) == IS_OBJECT)
+				if(Z_TYPE_P(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariantData_P(&data0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariantData_P(&data0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariantData_P(data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariantData_P(data0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxVariantData*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXVARIANTDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(data0) != IS_NULL)
+				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -27864,7 +27864,7 @@ PHP_METHOD(php_wxVariant, SetData)
 
 				((wxVariant_php*)native_object)->SetData((wxVariantData*) object_pointer0_0);
 
-				references->AddReference(&data0, "wxVariant::SetData at call 1 with 1 argument(s)");
+				references->AddReference(data0, "wxVariant::SetData at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -27930,7 +27930,7 @@ PHP_METHOD(php_wxVariant, __construct)
 	long name_len4;
 	bool overload4_called = false;
 	//Parameters for overload 5
-	zval value5;
+	zval* value5;
 	wxObject* object_pointer5_0 = 0;
 	char* name5;
 	long name_len5;
@@ -27941,12 +27941,12 @@ PHP_METHOD(php_wxVariant, __construct)
 	long name_len6;
 	bool overload6_called = false;
 	//Parameters for overload 7
-	zval val7;
+	zval* val7;
 	char* name7;
 	long name_len7;
 	bool overload7_called = false;
 	//Parameters for overload 8
-	zval variant8;
+	zval* variant8;
 	wxVariant* object_pointer8_0 = 0;
 	bool overload8_called = false;
 		
@@ -28051,17 +28051,17 @@ PHP_METHOD(php_wxVariant, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value5, &name5, &name_len5 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(value5) == IS_OBJECT)
+				if(Z_TYPE_P(value5) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxObject_P(&value5 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxObject_P(&value5 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxObject_P(value5 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxObject_P(value5 TSRMLS_CC)->native_object;
 					object_pointer5_0 = (wxObject*) argument_native_object;
 					if (!object_pointer5_0 || (argument_type != PHP_WXOBJECT_TYPE && argument_type != PHP_WXEVTHANDLER_TYPE && argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE && argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE && argument_type != PHP_WXMENU_TYPE && argument_type != PHP_WXAUIMANAGER_TYPE && argument_type != PHP_WXMOUSEEVENTSMANAGER_TYPE && argument_type != PHP_WXTIMER_TYPE && argument_type != PHP_WXEVENTBLOCKER_TYPE && argument_type != PHP_WXPROCESS_TYPE && argument_type != PHP_WXFILESYSTEMWATCHER_TYPE && argument_type != PHP_WXTASKBARICON_TYPE && argument_type != PHP_WXNOTIFICATIONMESSAGE_TYPE && argument_type != PHP_WXBITMAPHANDLER_TYPE && argument_type != PHP_WXIMAGE_TYPE && argument_type != PHP_WXSIZER_TYPE && argument_type != PHP_WXBOXSIZER_TYPE && argument_type != PHP_WXSTATICBOXSIZER_TYPE && argument_type != PHP_WXWRAPSIZER_TYPE && argument_type != PHP_WXSTDDIALOGBUTTONSIZER_TYPE && argument_type != PHP_WXGRIDSIZER_TYPE && argument_type != PHP_WXFLEXGRIDSIZER_TYPE && argument_type != PHP_WXGRIDBAGSIZER_TYPE && argument_type != PHP_WXSIZERITEM_TYPE && argument_type != PHP_WXGBSIZERITEM_TYPE && argument_type != PHP_WXIMAGELIST_TYPE && argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE && argument_type != PHP_WXCOLOUR_TYPE && argument_type != PHP_WXMENUITEM_TYPE && argument_type != PHP_WXEVENT_TYPE && argument_type != PHP_WXMENUEVENT_TYPE && argument_type != PHP_WXKEYEVENT_TYPE && argument_type != PHP_WXCOMMANDEVENT_TYPE && argument_type != PHP_WXNOTIFYEVENT_TYPE && argument_type != PHP_WXTREEEVENT_TYPE && argument_type != PHP_WXBOOKCTRLEVENT_TYPE && argument_type != PHP_WXAUINOTEBOOKEVENT_TYPE && argument_type != PHP_WXAUITOOLBAREVENT_TYPE && argument_type != PHP_WXLISTEVENT_TYPE && argument_type != PHP_WXSPINEVENT_TYPE && argument_type != PHP_WXSPLITTEREVENT_TYPE && argument_type != PHP_WXSPINDOUBLEEVENT_TYPE && argument_type != PHP_WXGRIDSIZEEVENT_TYPE && argument_type != PHP_WXWIZARDEVENT_TYPE && argument_type != PHP_WXGRIDEVENT_TYPE && argument_type != PHP_WXGRIDRANGESELECTEVENT_TYPE && argument_type != PHP_WXDATAVIEWEVENT_TYPE && argument_type != PHP_WXHEADERCTRLEVENT_TYPE && argument_type != PHP_WXRIBBONBAREVENT_TYPE && argument_type != PHP_WXWEBVIEWEVENT_TYPE && argument_type != PHP_WXMEDIAEVENT_TYPE && argument_type != PHP_WXSTYLEDTEXTEVENT_TYPE && argument_type != PHP_WXCHILDFOCUSEVENT_TYPE && argument_type != PHP_WXHTMLCELLEVENT_TYPE && argument_type != PHP_WXHTMLLINKEVENT_TYPE && argument_type != PHP_WXHYPERLINKEVENT_TYPE && argument_type != PHP_WXCOLOURPICKEREVENT_TYPE && argument_type != PHP_WXFONTPICKEREVENT_TYPE && argument_type != PHP_WXSCROLLEVENT_TYPE && argument_type != PHP_WXWINDOWMODALDIALOGEVENT_TYPE && argument_type != PHP_WXDATEEVENT_TYPE && argument_type != PHP_WXCALENDAREVENT_TYPE && argument_type != PHP_WXWINDOWCREATEEVENT_TYPE && argument_type != PHP_WXWINDOWDESTROYEVENT_TYPE && argument_type != PHP_WXUPDATEUIEVENT_TYPE && argument_type != PHP_WXHELPEVENT_TYPE && argument_type != PHP_WXGRIDEDITORCREATEDEVENT_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANEEVENT_TYPE && argument_type != PHP_WXCLIPBOARDTEXTEVENT_TYPE && argument_type != PHP_WXFILECTRLEVENT_TYPE && argument_type != PHP_WXSASHEVENT_TYPE && argument_type != PHP_WXFILEDIRPICKEREVENT_TYPE && argument_type != PHP_WXCONTEXTMENUEVENT_TYPE && argument_type != PHP_WXRIBBONBUTTONBAREVENT_TYPE && argument_type != PHP_WXRIBBONGALLERYEVENT_TYPE && argument_type != PHP_WXCLOSEEVENT_TYPE && argument_type != PHP_WXACTIVATEEVENT_TYPE && argument_type != PHP_WXAUIMANAGEREVENT_TYPE && argument_type != PHP_WXSIZEEVENT_TYPE && argument_type != PHP_WXMOUSEEVENT_TYPE && argument_type != PHP_WXMOVEEVENT_TYPE && argument_type != PHP_WXTIMEREVENT_TYPE && argument_type != PHP_WXTHREADEVENT_TYPE && argument_type != PHP_WXSCROLLWINEVENT_TYPE && argument_type != PHP_WXSYSCOLOURCHANGEDEVENT_TYPE && argument_type != PHP_WXPROCESSEVENT_TYPE && argument_type != PHP_WXERASEEVENT_TYPE && argument_type != PHP_WXSETCURSOREVENT_TYPE && argument_type != PHP_WXIDLEEVENT_TYPE && argument_type != PHP_WXPAINTEVENT_TYPE && argument_type != PHP_WXPALETTECHANGEDEVENT_TYPE && argument_type != PHP_WXINITDIALOGEVENT_TYPE && argument_type != PHP_WXMAXIMIZEEVENT_TYPE && argument_type != PHP_WXNAVIGATIONKEYEVENT_TYPE && argument_type != PHP_WXFOCUSEVENT_TYPE && argument_type != PHP_WXFILESYSTEMWATCHEREVENT_TYPE && argument_type != PHP_WXDISPLAYCHANGEDEVENT_TYPE && argument_type != PHP_WXCALCULATELAYOUTEVENT_TYPE && argument_type != PHP_WXQUERYLAYOUTINFOEVENT_TYPE && argument_type != PHP_WXTASKBARICONEVENT_TYPE && argument_type != PHP_WXACCELERATORTABLE_TYPE && argument_type != PHP_WXGDIOBJECT_TYPE && argument_type != PHP_WXBITMAP_TYPE && argument_type != PHP_WXPALETTE_TYPE && argument_type != PHP_WXICON_TYPE && argument_type != PHP_WXFONT_TYPE && argument_type != PHP_WXANIMATION_TYPE && argument_type != PHP_WXICONBUNDLE_TYPE && argument_type != PHP_WXCURSOR_TYPE && argument_type != PHP_WXREGION_TYPE && argument_type != PHP_WXPEN_TYPE && argument_type != PHP_WXBRUSH_TYPE && argument_type != PHP_WXARTPROVIDER_TYPE && argument_type != PHP_WXHTMLCELL_TYPE && argument_type != PHP_WXHTMLCONTAINERCELL_TYPE && argument_type != PHP_WXHTMLCOLOURCELL_TYPE && argument_type != PHP_WXHTMLWIDGETCELL_TYPE && argument_type != PHP_WXHTMLEASYPRINTING_TYPE && argument_type != PHP_WXHTMLLINKINFO_TYPE && argument_type != PHP_WXFINDREPLACEDATA_TYPE && argument_type != PHP_WXSOUND_TYPE && argument_type != PHP_WXFILESYSTEM_TYPE && argument_type != PHP_WXFILESYSTEMHANDLER_TYPE && argument_type != PHP_WXMASK_TYPE && argument_type != PHP_WXTOOLTIP_TYPE && argument_type != PHP_WXGRAPHICSRENDERER_TYPE && argument_type != PHP_WXLAYOUTCONSTRAINTS_TYPE && argument_type != PHP_WXFSFILE_TYPE && argument_type != PHP_WXCOLOURDATA_TYPE && argument_type != PHP_WXFONTDATA_TYPE && argument_type != PHP_WXGRIDTABLEBASE_TYPE && argument_type != PHP_WXDATAVIEWRENDERER_TYPE && argument_type != PHP_WXDATAVIEWBITMAPRENDERER_TYPE && argument_type != PHP_WXDATAVIEWCHOICERENDERER_TYPE && argument_type != PHP_WXDATAVIEWCUSTOMRENDERER_TYPE && argument_type != PHP_WXDATAVIEWSPINRENDERER_TYPE && argument_type != PHP_WXDATAVIEWDATERENDERER_TYPE && argument_type != PHP_WXDATAVIEWICONTEXTRENDERER_TYPE && argument_type != PHP_WXDATAVIEWPROGRESSRENDERER_TYPE && argument_type != PHP_WXDATAVIEWTEXTRENDERER_TYPE && argument_type != PHP_WXDATAVIEWTOGGLERENDERER_TYPE && argument_type != PHP_WXDATAVIEWICONTEXT_TYPE && argument_type != PHP_WXVARIANT_TYPE && argument_type != PHP_WXCLIPBOARD_TYPE && argument_type != PHP_WXCONFIGBASE_TYPE && argument_type != PHP_WXFILECONFIG_TYPE && argument_type != PHP_WXXMLRESOURCE_TYPE && argument_type != PHP_WXPAGESETUPDIALOG_TYPE && argument_type != PHP_WXPAGESETUPDIALOGDATA_TYPE && argument_type != PHP_WXPRINTDIALOG_TYPE && argument_type != PHP_WXPRINTDIALOGDATA_TYPE && argument_type != PHP_WXPRINTDATA_TYPE && argument_type != PHP_WXPRINTPREVIEW_TYPE && argument_type != PHP_WXPRINTER_TYPE && argument_type != PHP_WXPRINTOUT_TYPE && argument_type != PHP_WXHTMLPRINTOUT_TYPE && argument_type != PHP_WXHTMLDCRENDERER_TYPE && argument_type != PHP_WXHTMLFILTER_TYPE && argument_type != PHP_WXHTMLHELPDATA_TYPE && argument_type != PHP_WXHTMLTAGHANDLER_TYPE && argument_type != PHP_WXHTMLWINTAGHANDLER_TYPE && argument_type != PHP_WXMODULE_TYPE && argument_type != PHP_WXHTMLTAGSMODULE_TYPE && argument_type != PHP_WXIMAGEHANDLER_TYPE && argument_type != PHP_WXXMLRESOURCEHANDLER_TYPE && argument_type != PHP_WXXMLDOCUMENT_TYPE && argument_type != PHP_WXLAYOUTALGORITHM_TYPE && argument_type != PHP_WXFILEHISTORY_TYPE && argument_type != PHP_WXTOOLBARTOOLBASE_TYPE))
 					{
 						goto overload6;
 					}
 				}
-				else if(Z_TYPE(value5) != IS_NULL)
+				else if(Z_TYPE_P(value5) != IS_NULL)
 				{
 					goto overload6;
 				}
@@ -28119,17 +28119,17 @@ PHP_METHOD(php_wxVariant, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &variant8, php_wxVariant_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(variant8) == IS_OBJECT)
+				if(Z_TYPE_P(variant8) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariant_P(&variant8 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariant_P(&variant8 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariant_P(variant8 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariant_P(variant8 TSRMLS_CC)->native_object;
 					object_pointer8_0 = (wxVariant*) argument_native_object;
 					if (!object_pointer8_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'variant' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(variant8) != IS_NULL)
+				else if(Z_TYPE_P(variant8) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'variant' not null, could not be retreived correctly.");
 				}
@@ -28299,7 +28299,7 @@ PHP_METHOD(php_wxVariant, __construct)
 				native_object = new wxVariant_php((wxObject*) object_pointer5_0);
 
 				native_object->references.Initialize();
-				((wxVariant_php*) native_object)->references.AddReference(&value5, "wxVariant::wxVariant at call 2 with 1 argument(s)");
+				((wxVariant_php*) native_object)->references.AddReference(value5, "wxVariant::wxVariant at call 2 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -28311,7 +28311,7 @@ PHP_METHOD(php_wxVariant, __construct)
 				native_object = new wxVariant_php((wxObject*) object_pointer5_0, wxString(name5, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxVariant_php*) native_object)->references.AddReference(&value5, "wxVariant::wxVariant at call 2 with 2 argument(s)");
+				((wxVariant_php*) native_object)->references.AddReference(value5, "wxVariant::wxVariant at call 2 with 2 argument(s)");
 				break;
 			}
 		}
@@ -28359,7 +28359,7 @@ PHP_METHOD(php_wxVariant, __construct)
 				zval* temp_array_value7_0 = 0;
 				while(strings_continue7_0)
 				{
-					if((temp_array_value7_0 = zend_hash_index_find(HASH_OF(&val7), array_index7_0)) != NULL)
+					if((temp_array_value7_0 = zend_hash_index_find(HASH_OF(val7), array_index7_0)) != NULL)
 					{
 						convert_to_string(temp_array_value7_0);
 						strings_array7_0.Add(wxString(Z_STRVAL_P(temp_array_value7_0), wxConvUTF8));
@@ -28385,7 +28385,7 @@ PHP_METHOD(php_wxVariant, __construct)
 				zval* temp_array_value7_0 = 0;
 				while(strings_continue7_0)
 				{
-					if((temp_array_value7_0 = zend_hash_index_find(HASH_OF(&val7), array_index7_0)) != NULL)
+					if((temp_array_value7_0 = zend_hash_index_find(HASH_OF(val7), array_index7_0)) != NULL)
 					{
 						convert_to_string(temp_array_value7_0);
 						strings_array7_0.Add(wxString(Z_STRVAL_P(temp_array_value7_0), wxConvUTF8));
@@ -28421,7 +28421,7 @@ PHP_METHOD(php_wxVariant, __construct)
 				native_object = new wxVariant_php(*(wxVariant*) object_pointer8_0);
 
 				native_object->references.Initialize();
-				((wxVariant_php*) native_object)->references.AddReference(&variant8, "wxVariant::wxVariant at call 4 with 1 argument(s)");
+				((wxVariant_php*) native_object)->references.AddReference(variant8, "wxVariant::wxVariant at call 4 with 1 argument(s)");
 				break;
 			}
 		}

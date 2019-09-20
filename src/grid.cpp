@@ -2509,11 +2509,11 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 	#endif
 	
 	//Parameters for overload 0
-	zval dc0;
+	zval* dc0;
 	wxDC* object_pointer0_0 = 0;
-	zval rectCell0;
+	zval* rectCell0;
 	wxRect* object_pointer0_1 = 0;
-	zval attr0;
+	zval* attr0;
 	wxGridCellAttr* object_pointer0_2 = 0;
 	bool overload0_called = false;
 		
@@ -2530,51 +2530,51 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &rectCell0, php_wxRect_entry, &attr0, php_wxGridCellAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(dc0) == IS_OBJECT)
+				if(Z_TYPE_P(dc0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDC_P(&dc0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDC_P(&dc0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDC_P(dc0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDC_P(dc0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(dc0) != IS_NULL)
+				else if(Z_TYPE_P(dc0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'dc' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(rectCell0) == IS_OBJECT)
+				if(Z_TYPE_P(rectCell0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rectCell0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rectCell0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rectCell0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rectCell0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxRect*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'rectCell' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(rectCell0) != IS_NULL)
+				else if(Z_TYPE_P(rectCell0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'rectCell' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(attr0) == IS_OBJECT)
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxGridCellAttr*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(attr0) != IS_NULL)
+				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'attr' not null, could not be retreived correctly.");
 				}
@@ -2629,9 +2629,9 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 					((wxGridCellEditor_php*)native_object)->PaintBackground(*(wxDC*) object_pointer0_0, *(wxRect*) object_pointer0_1, *(wxGridCellAttr*) object_pointer0_2);
 				}
 
-				references->AddReference(&dc0, "wxGridCellEditor::PaintBackground at call 3 with 3 argument(s)");
-				references->AddReference(&rectCell0, "wxGridCellEditor::PaintBackground at call 3 with 3 argument(s)");
-				references->AddReference(&attr0, "wxGridCellEditor::PaintBackground at call 3 with 3 argument(s)");
+				references->AddReference(dc0, "wxGridCellEditor::PaintBackground at call 3 with 3 argument(s)");
+				references->AddReference(rectCell0, "wxGridCellEditor::PaintBackground at call 3 with 3 argument(s)");
+				references->AddReference(attr0, "wxGridCellEditor::PaintBackground at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -3252,7 +3252,7 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 	#endif
 	
 	//Parameters for overload 0
-	zval event0;
+	zval* event0;
 	wxKeyEvent* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -3269,17 +3269,17 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxKeyEvent_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(event0) == IS_OBJECT)
+				if(Z_TYPE_P(event0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxKeyEvent_P(&event0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxKeyEvent_P(&event0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxKeyEvent_P(event0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxKeyEvent_P(event0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxKeyEvent*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'event' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(event0) != IS_NULL)
+				else if(Z_TYPE_P(event0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'event' not null, could not be retreived correctly.");
 				}
@@ -3334,7 +3334,7 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 					((wxGridCellEditor_php*)native_object)->HandleReturn(*(wxKeyEvent*) object_pointer0_0);
 				}
 
-				references->AddReference(&event0, "wxGridCellEditor::HandleReturn at call 3 with 1 argument(s)");
+				references->AddReference(event0, "wxGridCellEditor::HandleReturn at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -3590,7 +3590,7 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 	#endif
 	
 	//Parameters for overload 0
-	zval rect0;
+	zval* rect0;
 	wxRect* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -3607,17 +3607,17 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(rect0) == IS_OBJECT)
+				if(Z_TYPE_P(rect0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&rect0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&rect0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(rect0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(rect0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxRect*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'rect' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(rect0) != IS_NULL)
+				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'rect' not null, could not be retreived correctly.");
 				}
@@ -3672,7 +3672,7 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 					((wxGridCellEditor_php*)native_object)->SetSize(*(wxRect*) object_pointer0_0);
 				}
 
-				references->AddReference(&rect0, "wxGridCellEditor::SetSize at call 3 with 1 argument(s)");
+				references->AddReference(rect0, "wxGridCellEditor::SetSize at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -3832,7 +3832,7 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 	
 	//Parameters for overload 0
 	bool show0;
-	zval attr0;
+	zval* attr0;
 	wxGridCellAttr* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -3849,17 +3849,17 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0, &attr0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(attr0) == IS_OBJECT)
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxGridCellAttr*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXGRIDCELLATTR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(attr0) != IS_NULL)
+				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'attr' not null, could not be retreived correctly.");
 				}
@@ -3957,7 +3957,7 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 					((wxGridCellEditor_php*)native_object)->Show(show0, (wxGridCellAttr*) object_pointer0_1);
 				}
 
-				references->AddReference(&attr0, "wxGridCellEditor::Show at call 1 with 2 argument(s)");
+				references->AddReference(attr0, "wxGridCellEditor::Show at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -4213,7 +4213,7 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 	#endif
 	
 	//Parameters for overload 0
-	zval event0;
+	zval* event0;
 	wxKeyEvent* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -4230,17 +4230,17 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxKeyEvent_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(event0) == IS_OBJECT)
+				if(Z_TYPE_P(event0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxKeyEvent_P(&event0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxKeyEvent_P(&event0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxKeyEvent_P(event0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxKeyEvent_P(event0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxKeyEvent*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'event' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(event0) != IS_NULL)
+				else if(Z_TYPE_P(event0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'event' not null, could not be retreived correctly.");
 				}
@@ -4295,7 +4295,7 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 					((wxGridCellEditor_php*)native_object)->StartingKey(*(wxKeyEvent*) object_pointer0_0);
 				}
 
-				references->AddReference(&event0, "wxGridCellEditor::StartingKey at call 3 with 1 argument(s)");
+				references->AddReference(event0, "wxGridCellEditor::StartingKey at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -4956,7 +4956,7 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 	
 	
 	//Parameters for overload 0
-	zval choices0;
+	zval* choices0;
 	bool allowOthers0;
 	bool overload0_called = false;
 		
@@ -4991,7 +4991,7 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 				zval* temp_array_value0_0 = 0;
 				while(strings_continue0_0)
 				{
-					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(&choices0), array_index0_0)) != NULL)
+					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(choices0), array_index0_0)) != NULL)
 					{
 						convert_to_string(temp_array_value0_0);
 						strings_array0_0.Add(wxString(Z_STRVAL_P(temp_array_value0_0), wxConvUTF8));
@@ -5017,7 +5017,7 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 				zval* temp_array_value0_0 = 0;
 				while(strings_continue0_0)
 				{
-					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(&choices0), array_index0_0)) != NULL)
+					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(choices0), array_index0_0)) != NULL)
 					{
 						convert_to_string(temp_array_value0_0);
 						strings_array0_0.Add(wxString(Z_STRVAL_P(temp_array_value0_0), wxConvUTF8));
@@ -6522,7 +6522,7 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 	#endif
 	
 	//Parameters for overload 0
-	zval grid0;
+	zval* grid0;
 	wxGrid* object_pointer0_0 = 0;
 	long row0;
 	long col0;
@@ -6541,17 +6541,17 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, &row0, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(grid0) == IS_OBJECT)
+				if(Z_TYPE_P(grid0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGrid_P(&grid0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGrid_P(&grid0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGrid_P(grid0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGrid_P(grid0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGrid*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRID_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'grid' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(grid0) != IS_NULL)
+				else if(Z_TYPE_P(grid0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'grid' not null, could not be retreived correctly.");
 				}
@@ -6598,7 +6598,7 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 					references->AddReference(return_value, "wxGridCellAttr::GetEditor at call 5 with 3 argument(s)");
 				}
 
-				references->AddReference(&grid0, "wxGridCellAttr::GetEditor at call 1 with 3 argument(s)");
+				references->AddReference(grid0, "wxGridCellAttr::GetEditor at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -6908,7 +6908,7 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 	#endif
 	
 	//Parameters for overload 0
-	zval grid0;
+	zval* grid0;
 	wxGrid* object_pointer0_0 = 0;
 	long row0;
 	long col0;
@@ -6927,17 +6927,17 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, &row0, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(grid0) == IS_OBJECT)
+				if(Z_TYPE_P(grid0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGrid_P(&grid0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGrid_P(&grid0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGrid_P(grid0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGrid_P(grid0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGrid*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRID_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'grid' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(grid0) != IS_NULL)
+				else if(Z_TYPE_P(grid0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'grid' not null, could not be retreived correctly.");
 				}
@@ -6984,7 +6984,7 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 					references->AddReference(return_value, "wxGridCellAttr::GetRenderer at call 5 with 3 argument(s)");
 				}
 
-				references->AddReference(&grid0, "wxGridCellAttr::GetRenderer at call 1 with 3 argument(s)");
+				references->AddReference(grid0, "wxGridCellAttr::GetRenderer at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -8061,7 +8061,7 @@ PHP_METHOD(php_wxGridCellAttr, SetBackgroundColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colBack0;
+	zval* colBack0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -8078,17 +8078,17 @@ PHP_METHOD(php_wxGridCellAttr, SetBackgroundColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colBack0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colBack0) == IS_OBJECT)
+				if(Z_TYPE_P(colBack0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colBack0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colBack0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colBack0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colBack0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colBack' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colBack0) != IS_NULL)
+				else if(Z_TYPE_P(colBack0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colBack' not null, could not be retreived correctly.");
 				}
@@ -8112,7 +8112,7 @@ PHP_METHOD(php_wxGridCellAttr, SetBackgroundColour)
 
 				((wxGridCellAttr_php*)native_object)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colBack0, "wxGridCellAttr::SetBackgroundColour at call 3 with 1 argument(s)");
+				references->AddReference(colBack0, "wxGridCellAttr::SetBackgroundColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -8182,7 +8182,7 @@ PHP_METHOD(php_wxGridCellAttr, SetDefAttr)
 	#endif
 	
 	//Parameters for overload 0
-	zval defAttr0;
+	zval* defAttr0;
 	wxGridCellAttr* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -8199,17 +8199,17 @@ PHP_METHOD(php_wxGridCellAttr, SetDefAttr)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &defAttr0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(defAttr0) == IS_OBJECT)
+				if(Z_TYPE_P(defAttr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellAttr_P(&defAttr0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellAttr_P(&defAttr0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellAttr_P(defAttr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellAttr_P(defAttr0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellAttr*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLATTR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'defAttr' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(defAttr0) != IS_NULL)
+				else if(Z_TYPE_P(defAttr0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'defAttr' not null, could not be retreived correctly.");
 				}
@@ -8233,7 +8233,7 @@ PHP_METHOD(php_wxGridCellAttr, SetDefAttr)
 
 				((wxGridCellAttr_php*)native_object)->SetDefAttr((wxGridCellAttr*) object_pointer0_0);
 
-				references->AddReference(&defAttr0, "wxGridCellAttr::SetDefAttr at call 1 with 1 argument(s)");
+				references->AddReference(defAttr0, "wxGridCellAttr::SetDefAttr at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -8304,7 +8304,7 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 	#endif
 	
 	//Parameters for overload 0
-	zval editor0;
+	zval* editor0;
 	wxGridCellEditor* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -8321,17 +8321,17 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &editor0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(editor0) == IS_OBJECT)
+				if(Z_TYPE_P(editor0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellEditor_P(&editor0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellEditor_P(&editor0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellEditor_P(editor0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellEditor_P(editor0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellEditor*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLFLOATEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'editor' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(editor0) != IS_NULL)
+				else if(Z_TYPE_P(editor0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'editor' not null, could not be retreived correctly.");
 				}
@@ -8355,7 +8355,7 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 
 				((wxGridCellAttr_php*)native_object)->SetEditor((wxGridCellEditor*) object_pointer0_0);
 
-				references->AddReference(&editor0, "wxGridCellAttr::SetEditor at call 1 with 1 argument(s)");
+				references->AddReference(editor0, "wxGridCellAttr::SetEditor at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -8426,7 +8426,7 @@ PHP_METHOD(php_wxGridCellAttr, SetFont)
 	#endif
 	
 	//Parameters for overload 0
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -8443,17 +8443,17 @@ PHP_METHOD(php_wxGridCellAttr, SetFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -8477,7 +8477,7 @@ PHP_METHOD(php_wxGridCellAttr, SetFont)
 
 				((wxGridCellAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(&font0, "wxGridCellAttr::SetFont at call 3 with 1 argument(s)");
+				references->AddReference(font0, "wxGridCellAttr::SetFont at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -8663,7 +8663,7 @@ PHP_METHOD(php_wxGridCellAttr, SetRenderer)
 	#endif
 	
 	//Parameters for overload 0
-	zval renderer0;
+	zval* renderer0;
 	wxGridCellRenderer* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -8680,17 +8680,17 @@ PHP_METHOD(php_wxGridCellAttr, SetRenderer)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &renderer0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(renderer0) == IS_OBJECT)
+				if(Z_TYPE_P(renderer0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellRenderer_P(&renderer0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellRenderer_P(&renderer0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellRenderer_P(renderer0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellRenderer_P(renderer0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellRenderer*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLRENDERER_TYPE && argument_type != PHP_WXGRIDCELLBOOLRENDERER_TYPE && argument_type != PHP_WXGRIDCELLSTRINGRENDERER_TYPE && argument_type != PHP_WXGRIDCELLDATETIMERENDERER_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGRENDERER_TYPE && argument_type != PHP_WXGRIDCELLENUMRENDERER_TYPE && argument_type != PHP_WXGRIDCELLFLOATRENDERER_TYPE && argument_type != PHP_WXGRIDCELLNUMBERRENDERER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'renderer' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(renderer0) != IS_NULL)
+				else if(Z_TYPE_P(renderer0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'renderer' not null, could not be retreived correctly.");
 				}
@@ -8714,7 +8714,7 @@ PHP_METHOD(php_wxGridCellAttr, SetRenderer)
 
 				((wxGridCellAttr_php*)native_object)->SetRenderer((wxGridCellRenderer*) object_pointer0_0);
 
-				references->AddReference(&renderer0, "wxGridCellAttr::SetRenderer at call 1 with 1 argument(s)");
+				references->AddReference(renderer0, "wxGridCellAttr::SetRenderer at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -8785,7 +8785,7 @@ PHP_METHOD(php_wxGridCellAttr, SetTextColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colText0;
+	zval* colText0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -8802,17 +8802,17 @@ PHP_METHOD(php_wxGridCellAttr, SetTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colText0) == IS_OBJECT)
+				if(Z_TYPE_P(colText0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colText0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colText0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colText0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colText0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colText' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colText0) != IS_NULL)
+				else if(Z_TYPE_P(colText0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colText' not null, could not be retreived correctly.");
 				}
@@ -8836,7 +8836,7 @@ PHP_METHOD(php_wxGridCellAttr, SetTextColour)
 
 				((wxGridCellAttr_php*)native_object)->SetTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colText0, "wxGridCellAttr::SetTextColour at call 3 with 1 argument(s)");
+				references->AddReference(colText0, "wxGridCellAttr::SetTextColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -8874,15 +8874,15 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 	
 	
 	//Parameters for overload 0
-	zval attrDefault0;
+	zval* attrDefault0;
 	wxGridCellAttr* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval colText1;
+	zval* colText1;
 	wxColour* object_pointer1_0 = 0;
-	zval colBack1;
+	zval* colBack1;
 	wxColour* object_pointer1_1 = 0;
-	zval font1;
+	zval* font1;
 	wxFont* object_pointer1_2 = 0;
 	long hAlign1;
 	long vAlign1;
@@ -8901,17 +8901,17 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attrDefault0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(attrDefault0) == IS_OBJECT)
+				if(Z_TYPE_P(attrDefault0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellAttr_P(&attrDefault0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellAttr_P(&attrDefault0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellAttr_P(attrDefault0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellAttr_P(attrDefault0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellAttr*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLATTR_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(attrDefault0) != IS_NULL)
+				else if(Z_TYPE_P(attrDefault0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -8935,51 +8935,51 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry, &hAlign1, &vAlign1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colText1) == IS_OBJECT)
+				if(Z_TYPE_P(colText1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colText1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colText1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colText1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colText1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxColour*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colText' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colText1) != IS_NULL)
+				else if(Z_TYPE_P(colText1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colText' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(colBack1) == IS_OBJECT)
+				if(Z_TYPE_P(colBack1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colBack1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colBack1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colBack1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colBack1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxColour*) argument_native_object;
 					if (!object_pointer1_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'colBack' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colBack1) != IS_NULL)
+				else if(Z_TYPE_P(colBack1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colBack' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(font1) == IS_OBJECT)
+				if(Z_TYPE_P(font1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font1 TSRMLS_CC)->native_object;
 					object_pointer1_2 = (wxFont*) argument_native_object;
 					if (!object_pointer1_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font1) != IS_NULL)
+				else if(Z_TYPE_P(font1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -9015,7 +9015,7 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 				native_object = new wxGridCellAttr_php((wxGridCellAttr*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxGridCellAttr_php*) native_object)->references.AddReference(&attrDefault0, "wxGridCellAttr::wxGridCellAttr at call 2 with 1 argument(s)");
+				((wxGridCellAttr_php*) native_object)->references.AddReference(attrDefault0, "wxGridCellAttr::wxGridCellAttr at call 2 with 1 argument(s)");
 				break;
 			}
 		}
@@ -9034,9 +9034,9 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 				native_object = new wxGridCellAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (int) hAlign1, (int) vAlign1);
 
 				native_object->references.Initialize();
-				((wxGridCellAttr_php*) native_object)->references.AddReference(&colText1, "wxGridCellAttr::wxGridCellAttr at call 4 with 5 argument(s)");
-				((wxGridCellAttr_php*) native_object)->references.AddReference(&colBack1, "wxGridCellAttr::wxGridCellAttr at call 4 with 5 argument(s)");
-				((wxGridCellAttr_php*) native_object)->references.AddReference(&font1, "wxGridCellAttr::wxGridCellAttr at call 4 with 5 argument(s)");
+				((wxGridCellAttr_php*) native_object)->references.AddReference(colText1, "wxGridCellAttr::wxGridCellAttr at call 4 with 5 argument(s)");
+				((wxGridCellAttr_php*) native_object)->references.AddReference(colBack1, "wxGridCellAttr::wxGridCellAttr at call 4 with 5 argument(s)");
+				((wxGridCellAttr_php*) native_object)->references.AddReference(font1, "wxGridCellAttr::wxGridCellAttr at call 4 with 5 argument(s)");
 				break;
 			}
 		}
@@ -11832,7 +11832,7 @@ PHP_METHOD(php_wxGridTableBase, IsEmpty)
 	#endif
 	
 	//Parameters for overload 0
-	zval coords0;
+	zval* coords0;
 	wxGridCellCoords* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -11849,17 +11849,17 @@ PHP_METHOD(php_wxGridTableBase, IsEmpty)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &coords0, php_wxGridCellCoords_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(coords0) == IS_OBJECT)
+				if(Z_TYPE_P(coords0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&coords0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&coords0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(coords0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(coords0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'coords' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(coords0) != IS_NULL)
+				else if(Z_TYPE_P(coords0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'coords' not null, could not be retreived correctly.");
 				}
@@ -11883,7 +11883,7 @@ PHP_METHOD(php_wxGridTableBase, IsEmpty)
 
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->IsEmpty(*(wxGridCellCoords*) object_pointer0_0));
 
-				references->AddReference(&coords0, "wxGridTableBase::IsEmpty at call 3 with 1 argument(s)");
+				references->AddReference(coords0, "wxGridTableBase::IsEmpty at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -12058,7 +12058,7 @@ PHP_METHOD(php_wxGridTableBase, SetAttr)
 	#endif
 	
 	//Parameters for overload 0
-	zval attr0;
+	zval* attr0;
 	wxGridCellAttr* object_pointer0_0 = 0;
 	long row0;
 	long col0;
@@ -12077,17 +12077,17 @@ PHP_METHOD(php_wxGridTableBase, SetAttr)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, &row0, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(attr0) == IS_OBJECT)
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellAttr*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLATTR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(attr0) != IS_NULL)
+				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'attr' not null, could not be retreived correctly.");
 				}
@@ -12111,7 +12111,7 @@ PHP_METHOD(php_wxGridTableBase, SetAttr)
 
 				((wxGridTableBase_php*)native_object)->SetAttr((wxGridCellAttr*) object_pointer0_0, (int) row0, (int) col0);
 
-				references->AddReference(&attr0, "wxGridTableBase::SetAttr at call 1 with 3 argument(s)");
+				references->AddReference(attr0, "wxGridTableBase::SetAttr at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -12182,7 +12182,7 @@ PHP_METHOD(php_wxGridTableBase, SetAttrProvider)
 	#endif
 	
 	//Parameters for overload 0
-	zval attrProvider0;
+	zval* attrProvider0;
 	wxGridCellAttrProvider* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -12199,17 +12199,17 @@ PHP_METHOD(php_wxGridTableBase, SetAttrProvider)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attrProvider0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(attrProvider0) == IS_OBJECT)
+				if(Z_TYPE_P(attrProvider0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellAttrProvider_P(&attrProvider0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellAttrProvider_P(&attrProvider0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellAttrProvider_P(attrProvider0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellAttrProvider_P(attrProvider0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellAttrProvider*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLATTRPROVIDER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'attrProvider' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(attrProvider0) != IS_NULL)
+				else if(Z_TYPE_P(attrProvider0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'attrProvider' not null, could not be retreived correctly.");
 				}
@@ -12233,7 +12233,7 @@ PHP_METHOD(php_wxGridTableBase, SetAttrProvider)
 
 				((wxGridTableBase_php*)native_object)->SetAttrProvider((wxGridCellAttrProvider*) object_pointer0_0);
 
-				references->AddReference(&attrProvider0, "wxGridTableBase::SetAttrProvider at call 1 with 1 argument(s)");
+				references->AddReference(attrProvider0, "wxGridTableBase::SetAttrProvider at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -12304,7 +12304,7 @@ PHP_METHOD(php_wxGridTableBase, SetColAttr)
 	#endif
 	
 	//Parameters for overload 0
-	zval attr0;
+	zval* attr0;
 	wxGridCellAttr* object_pointer0_0 = 0;
 	long col0;
 	bool overload0_called = false;
@@ -12322,17 +12322,17 @@ PHP_METHOD(php_wxGridTableBase, SetColAttr)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(attr0) == IS_OBJECT)
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellAttr*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLATTR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(attr0) != IS_NULL)
+				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'attr' not null, could not be retreived correctly.");
 				}
@@ -12356,7 +12356,7 @@ PHP_METHOD(php_wxGridTableBase, SetColAttr)
 
 				((wxGridTableBase_php*)native_object)->SetColAttr((wxGridCellAttr*) object_pointer0_0, (int) col0);
 
-				references->AddReference(&attr0, "wxGridTableBase::SetColAttr at call 1 with 2 argument(s)");
+				references->AddReference(attr0, "wxGridTableBase::SetColAttr at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -12532,7 +12532,7 @@ PHP_METHOD(php_wxGridTableBase, SetRowAttr)
 	#endif
 	
 	//Parameters for overload 0
-	zval attr0;
+	zval* attr0;
 	wxGridCellAttr* object_pointer0_0 = 0;
 	long row0;
 	bool overload0_called = false;
@@ -12550,17 +12550,17 @@ PHP_METHOD(php_wxGridTableBase, SetRowAttr)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, &row0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(attr0) == IS_OBJECT)
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellAttr*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLATTR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(attr0) != IS_NULL)
+				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'attr' not null, could not be retreived correctly.");
 				}
@@ -12584,7 +12584,7 @@ PHP_METHOD(php_wxGridTableBase, SetRowAttr)
 
 				((wxGridTableBase_php*)native_object)->SetRowAttr((wxGridCellAttr*) object_pointer0_0, (int) row0);
 
-				references->AddReference(&attr0, "wxGridTableBase::SetRowAttr at call 1 with 2 argument(s)");
+				references->AddReference(attr0, "wxGridTableBase::SetRowAttr at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -13260,7 +13260,7 @@ PHP_METHOD(php_wxGridTableBase, SetView)
 	#endif
 	
 	//Parameters for overload 0
-	zval grid0;
+	zval* grid0;
 	wxGrid* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -13277,17 +13277,17 @@ PHP_METHOD(php_wxGridTableBase, SetView)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(grid0) == IS_OBJECT)
+				if(Z_TYPE_P(grid0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGrid_P(&grid0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGrid_P(&grid0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGrid_P(grid0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGrid_P(grid0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGrid*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRID_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'grid' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(grid0) != IS_NULL)
+				else if(Z_TYPE_P(grid0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'grid' not null, could not be retreived correctly.");
 				}
@@ -13311,7 +13311,7 @@ PHP_METHOD(php_wxGridTableBase, SetView)
 
 				((wxGridTableBase_php*)native_object)->SetView((wxGrid*) object_pointer0_0);
 
-				references->AddReference(&grid0, "wxGridTableBase::SetView at call 1 with 1 argument(s)");
+				references->AddReference(grid0, "wxGridTableBase::SetView at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -15132,9 +15132,9 @@ PHP_METHOD(php_wxGrid, BlockToDeviceRect)
 	#endif
 	
 	//Parameters for overload 0
-	zval topLeft0;
+	zval* topLeft0;
 	wxGridCellCoords* object_pointer0_0 = 0;
-	zval bottomRight0;
+	zval* bottomRight0;
 	wxGridCellCoords* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -15151,34 +15151,34 @@ PHP_METHOD(php_wxGrid, BlockToDeviceRect)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &topLeft0, php_wxGridCellCoords_entry, &bottomRight0, php_wxGridCellCoords_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(topLeft0) == IS_OBJECT)
+				if(Z_TYPE_P(topLeft0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&topLeft0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&topLeft0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(topLeft0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(topLeft0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'topLeft' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(topLeft0) != IS_NULL)
+				else if(Z_TYPE_P(topLeft0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'topLeft' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(bottomRight0) == IS_OBJECT)
+				if(Z_TYPE_P(bottomRight0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&bottomRight0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&bottomRight0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(bottomRight0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(bottomRight0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'bottomRight' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(bottomRight0) != IS_NULL)
+				else if(Z_TYPE_P(bottomRight0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bottomRight' not null, could not be retreived correctly.");
 				}
@@ -15210,8 +15210,8 @@ PHP_METHOD(php_wxGrid, BlockToDeviceRect)
 				zo_wxRect* zo2 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo2->native_object = (wxRect_php*) ptr;
 
-				references->AddReference(&topLeft0, "wxGrid::BlockToDeviceRect at call 3 with 2 argument(s)");
-				references->AddReference(&bottomRight0, "wxGrid::BlockToDeviceRect at call 3 with 2 argument(s)");
+				references->AddReference(topLeft0, "wxGrid::BlockToDeviceRect at call 3 with 2 argument(s)");
+				references->AddReference(bottomRight0, "wxGrid::BlockToDeviceRect at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -15884,7 +15884,7 @@ PHP_METHOD(php_wxGrid, CellToRect)
 	long col0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval coords1;
+	zval* coords1;
 	wxGridCellCoords* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -15918,17 +15918,17 @@ PHP_METHOD(php_wxGrid, CellToRect)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(coords1) == IS_OBJECT)
+				if(Z_TYPE_P(coords1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'coords' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(coords1) != IS_NULL)
+				else if(Z_TYPE_P(coords1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'coords' not null, could not be retreived correctly.");
 				}
@@ -15987,7 +15987,7 @@ PHP_METHOD(php_wxGrid, CellToRect)
 				zo_wxRect* zo1 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo1->native_object = (wxRect_php*) ptr;
 
-				references->AddReference(&coords1, "wxGrid::CellToRect at call 3 with 1 argument(s)");
+				references->AddReference(coords1, "wxGrid::CellToRect at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -16460,12 +16460,12 @@ PHP_METHOD(php_wxGrid, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_2 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_3 = 0;
 	long style0;
 	char* name0;
@@ -16485,51 +16485,51 @@ PHP_METHOD(php_wxGrid, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxSize*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -16553,7 +16553,7 @@ PHP_METHOD(php_wxGrid, Create)
 
 				ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(&parent0, "wxGrid::Create at call 1 with 2 argument(s)");
+				references->AddReference(parent0, "wxGrid::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -16566,8 +16566,8 @@ PHP_METHOD(php_wxGrid, Create)
 
 				ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(&parent0, "wxGrid::Create at call 1 with 3 argument(s)");
-				references->AddReference(&pos0, "wxGrid::Create at call 3 with 3 argument(s)");
+				references->AddReference(parent0, "wxGrid::Create at call 1 with 3 argument(s)");
+				references->AddReference(pos0, "wxGrid::Create at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -16580,9 +16580,9 @@ PHP_METHOD(php_wxGrid, Create)
 
 				ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(&parent0, "wxGrid::Create at call 1 with 4 argument(s)");
-				references->AddReference(&pos0, "wxGrid::Create at call 3 with 4 argument(s)");
-				references->AddReference(&size0, "wxGrid::Create at call 3 with 4 argument(s)");
+				references->AddReference(parent0, "wxGrid::Create at call 1 with 4 argument(s)");
+				references->AddReference(pos0, "wxGrid::Create at call 3 with 4 argument(s)");
+				references->AddReference(size0, "wxGrid::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -16595,9 +16595,9 @@ PHP_METHOD(php_wxGrid, Create)
 
 				ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
-				references->AddReference(&parent0, "wxGrid::Create at call 1 with 5 argument(s)");
-				references->AddReference(&pos0, "wxGrid::Create at call 3 with 5 argument(s)");
-				references->AddReference(&size0, "wxGrid::Create at call 3 with 5 argument(s)");
+				references->AddReference(parent0, "wxGrid::Create at call 1 with 5 argument(s)");
+				references->AddReference(pos0, "wxGrid::Create at call 3 with 5 argument(s)");
+				references->AddReference(size0, "wxGrid::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -16610,9 +16610,9 @@ PHP_METHOD(php_wxGrid, Create)
 
 				ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxGrid::Create at call 1 with 6 argument(s)");
-				references->AddReference(&pos0, "wxGrid::Create at call 3 with 6 argument(s)");
-				references->AddReference(&size0, "wxGrid::Create at call 3 with 6 argument(s)");
+				references->AddReference(parent0, "wxGrid::Create at call 1 with 6 argument(s)");
+				references->AddReference(pos0, "wxGrid::Create at call 3 with 6 argument(s)");
+				references->AddReference(size0, "wxGrid::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -19687,7 +19687,7 @@ PHP_METHOD(php_wxGrid, GetCellSize)
 	zval num_cols0_ref;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval coords1;
+	zval* coords1;
 	wxGridCellCoords* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -19724,17 +19724,17 @@ PHP_METHOD(php_wxGrid, GetCellSize)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(coords1) == IS_OBJECT)
+				if(Z_TYPE_P(coords1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'coords' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(coords1) != IS_NULL)
+				else if(Z_TYPE_P(coords1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'coords' not null, could not be retreived correctly.");
 				}
@@ -19796,7 +19796,7 @@ PHP_METHOD(php_wxGrid, GetCellSize)
 				zo_wxSize* zo1 = Z_wxSize_P(return_value TSRMLS_CC);
 				zo1->native_object = (wxSize_php*) ptr;
 
-				references->AddReference(&coords1, "wxGrid::GetCellSize at call 3 with 1 argument(s)");
+				references->AddReference(coords1, "wxGrid::GetCellSize at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -19983,7 +19983,7 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 	long col0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval coords1;
+	zval* coords1;
 	wxGridCellCoords* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -20017,17 +20017,17 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(coords1) == IS_OBJECT)
+				if(Z_TYPE_P(coords1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'coords' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(coords1) != IS_NULL)
+				else if(Z_TYPE_P(coords1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'coords' not null, could not be retreived correctly.");
 				}
@@ -20074,7 +20074,7 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 				value_to_return1 = ((wxGrid_php*)native_object)->GetCellValue(*(wxGridCellCoords*) object_pointer1_0);
 				ZVAL_STRING(return_value, value_to_return1.char_str());
 
-				references->AddReference(&coords1, "wxGrid::GetCellValue at call 3 with 1 argument(s)");
+				references->AddReference(coords1, "wxGrid::GetCellValue at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -21947,7 +21947,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForCell)
 	#endif
 	
 	//Parameters for overload 0
-	zval c0;
+	zval* c0;
 	wxGridCellCoords* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -21964,17 +21964,17 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForCell)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0, php_wxGridCellCoords_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(c0) == IS_OBJECT)
+				if(Z_TYPE_P(c0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&c0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&c0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(c0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(c0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'c' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(c0) != IS_NULL)
+				else if(Z_TYPE_P(c0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'c' not null, could not be retreived correctly.");
 				}
@@ -22021,7 +22021,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForCell)
 					references->AddReference(return_value, "wxGrid::GetDefaultEditorForCell at call 5 with 1 argument(s)");
 				}
 
-				references->AddReference(&c0, "wxGrid::GetDefaultEditorForCell at call 3 with 1 argument(s)");
+				references->AddReference(c0, "wxGrid::GetDefaultEditorForCell at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -25915,7 +25915,7 @@ PHP_METHOD(php_wxGrid, GoToCell)
 	long col0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval coords1;
+	zval* coords1;
 	wxGridCellCoords* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -25949,17 +25949,17 @@ PHP_METHOD(php_wxGrid, GoToCell)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(coords1) == IS_OBJECT)
+				if(Z_TYPE_P(coords1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'coords' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(coords1) != IS_NULL)
+				else if(Z_TYPE_P(coords1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'coords' not null, could not be retreived correctly.");
 				}
@@ -26002,7 +26002,7 @@ PHP_METHOD(php_wxGrid, GoToCell)
 
 				((wxGrid_php*)native_object)->GoToCell(*(wxGridCellCoords*) object_pointer1_0);
 
-				references->AddReference(&coords1, "wxGrid::GoToCell at call 3 with 1 argument(s)");
+				references->AddReference(coords1, "wxGrid::GoToCell at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -27354,7 +27354,7 @@ PHP_METHOD(php_wxGrid, IsInSelection)
 	long col0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval coords1;
+	zval* coords1;
 	wxGridCellCoords* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -27388,17 +27388,17 @@ PHP_METHOD(php_wxGrid, IsInSelection)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(coords1) == IS_OBJECT)
+				if(Z_TYPE_P(coords1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'coords' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(coords1) != IS_NULL)
+				else if(Z_TYPE_P(coords1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'coords' not null, could not be retreived correctly.");
 				}
@@ -27441,7 +27441,7 @@ PHP_METHOD(php_wxGrid, IsInSelection)
 
 				ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsInSelection(*(wxGridCellCoords*) object_pointer1_0));
 
-				references->AddReference(&coords1, "wxGrid::IsInSelection at call 3 with 1 argument(s)");
+				references->AddReference(coords1, "wxGrid::IsInSelection at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -28023,7 +28023,7 @@ PHP_METHOD(php_wxGrid, IsVisible)
 	bool wholeCellVisible0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval coords1;
+	zval* coords1;
 	wxGridCellCoords* object_pointer1_0 = 0;
 	bool wholeCellVisible1;
 	bool overload1_called = false;
@@ -28058,17 +28058,17 @@ PHP_METHOD(php_wxGrid, IsVisible)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &coords1, php_wxGridCellCoords_entry, &wholeCellVisible1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(coords1) == IS_OBJECT)
+				if(Z_TYPE_P(coords1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'coords' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(coords1) != IS_NULL)
+				else if(Z_TYPE_P(coords1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'coords' not null, could not be retreived correctly.");
 				}
@@ -28123,7 +28123,7 @@ PHP_METHOD(php_wxGrid, IsVisible)
 
 				ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsVisible(*(wxGridCellCoords*) object_pointer1_0));
 
-				references->AddReference(&coords1, "wxGrid::IsVisible at call 3 with 1 argument(s)");
+				references->AddReference(coords1, "wxGrid::IsVisible at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -28136,7 +28136,7 @@ PHP_METHOD(php_wxGrid, IsVisible)
 
 				ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsVisible(*(wxGridCellCoords*) object_pointer1_0, wholeCellVisible1));
 
-				references->AddReference(&coords1, "wxGrid::IsVisible at call 3 with 2 argument(s)");
+				references->AddReference(coords1, "wxGrid::IsVisible at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -28211,7 +28211,7 @@ PHP_METHOD(php_wxGrid, MakeCellVisible)
 	long col0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval coords1;
+	zval* coords1;
 	wxGridCellCoords* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -28245,17 +28245,17 @@ PHP_METHOD(php_wxGrid, MakeCellVisible)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(coords1) == IS_OBJECT)
+				if(Z_TYPE_P(coords1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'coords' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(coords1) != IS_NULL)
+				else if(Z_TYPE_P(coords1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'coords' not null, could not be retreived correctly.");
 				}
@@ -28298,7 +28298,7 @@ PHP_METHOD(php_wxGrid, MakeCellVisible)
 
 				((wxGrid_php*)native_object)->MakeCellVisible(*(wxGridCellCoords*) object_pointer1_0);
 
-				references->AddReference(&coords1, "wxGrid::MakeCellVisible at call 3 with 1 argument(s)");
+				references->AddReference(coords1, "wxGrid::MakeCellVisible at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -29495,9 +29495,9 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 	//Parameters for overload 0
 	char* typeName0;
 	long typeName_len0;
-	zval renderer0;
+	zval* renderer0;
 	wxGridCellRenderer* object_pointer0_1 = 0;
-	zval editor0;
+	zval* editor0;
 	wxGridCellEditor* object_pointer0_2 = 0;
 	bool overload0_called = false;
 		
@@ -29514,34 +29514,34 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &typeName0, &typeName_len0, &renderer0, &editor0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(renderer0) == IS_OBJECT)
+				if(Z_TYPE_P(renderer0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellRenderer_P(&renderer0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellRenderer_P(&renderer0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellRenderer_P(renderer0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellRenderer_P(renderer0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxGridCellRenderer*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXGRIDCELLRENDERER_TYPE && argument_type != PHP_WXGRIDCELLBOOLRENDERER_TYPE && argument_type != PHP_WXGRIDCELLSTRINGRENDERER_TYPE && argument_type != PHP_WXGRIDCELLDATETIMERENDERER_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGRENDERER_TYPE && argument_type != PHP_WXGRIDCELLENUMRENDERER_TYPE && argument_type != PHP_WXGRIDCELLFLOATRENDERER_TYPE && argument_type != PHP_WXGRIDCELLNUMBERRENDERER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'renderer' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(renderer0) != IS_NULL)
+				else if(Z_TYPE_P(renderer0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'renderer' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(editor0) == IS_OBJECT)
+				if(Z_TYPE_P(editor0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellEditor_P(&editor0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellEditor_P(&editor0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellEditor_P(editor0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellEditor_P(editor0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxGridCellEditor*) argument_native_object;
 					if (!object_pointer0_2 || (argument_type != PHP_WXGRIDCELLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLFLOATEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'editor' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(editor0) != IS_NULL)
+				else if(Z_TYPE_P(editor0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'editor' not null, could not be retreived correctly.");
 				}
@@ -29565,8 +29565,8 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 
 				((wxGrid_php*)native_object)->RegisterDataType(wxString(typeName0, wxConvUTF8), (wxGridCellRenderer*) object_pointer0_1, (wxGridCellEditor*) object_pointer0_2);
 
-				references->AddReference(&renderer0, "wxGrid::RegisterDataType at call 1 with 3 argument(s)");
-				references->AddReference(&editor0, "wxGrid::RegisterDataType at call 1 with 3 argument(s)");
+				references->AddReference(renderer0, "wxGrid::RegisterDataType at call 1 with 3 argument(s)");
+				references->AddReference(editor0, "wxGrid::RegisterDataType at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -29938,9 +29938,9 @@ PHP_METHOD(php_wxGrid, SelectBlock)
 	bool addToSelected0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval topLeft1;
+	zval* topLeft1;
 	wxGridCellCoords* object_pointer1_0 = 0;
-	zval bottomRight1;
+	zval* bottomRight1;
 	wxGridCellCoords* object_pointer1_1 = 0;
 	bool addToSelected1;
 	bool overload1_called = false;
@@ -29975,34 +29975,34 @@ PHP_METHOD(php_wxGrid, SelectBlock)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &topLeft1, php_wxGridCellCoords_entry, &bottomRight1, php_wxGridCellCoords_entry, &addToSelected1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(topLeft1) == IS_OBJECT)
+				if(Z_TYPE_P(topLeft1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&topLeft1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&topLeft1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(topLeft1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(topLeft1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'topLeft' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(topLeft1) != IS_NULL)
+				else if(Z_TYPE_P(topLeft1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'topLeft' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(bottomRight1) == IS_OBJECT)
+				if(Z_TYPE_P(bottomRight1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&bottomRight1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&bottomRight1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(bottomRight1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(bottomRight1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'bottomRight' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(bottomRight1) != IS_NULL)
+				else if(Z_TYPE_P(bottomRight1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bottomRight' not null, could not be retreived correctly.");
 				}
@@ -30057,8 +30057,8 @@ PHP_METHOD(php_wxGrid, SelectBlock)
 
 				((wxGrid_php*)native_object)->SelectBlock(*(wxGridCellCoords*) object_pointer1_0, *(wxGridCellCoords*) object_pointer1_1);
 
-				references->AddReference(&topLeft1, "wxGrid::SelectBlock at call 3 with 2 argument(s)");
-				references->AddReference(&bottomRight1, "wxGrid::SelectBlock at call 3 with 2 argument(s)");
+				references->AddReference(topLeft1, "wxGrid::SelectBlock at call 3 with 2 argument(s)");
+				references->AddReference(bottomRight1, "wxGrid::SelectBlock at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -30071,8 +30071,8 @@ PHP_METHOD(php_wxGrid, SelectBlock)
 
 				((wxGrid_php*)native_object)->SelectBlock(*(wxGridCellCoords*) object_pointer1_0, *(wxGridCellCoords*) object_pointer1_1, addToSelected1);
 
-				references->AddReference(&topLeft1, "wxGrid::SelectBlock at call 3 with 3 argument(s)");
-				references->AddReference(&bottomRight1, "wxGrid::SelectBlock at call 3 with 3 argument(s)");
+				references->AddReference(topLeft1, "wxGrid::SelectBlock at call 3 with 3 argument(s)");
+				references->AddReference(bottomRight1, "wxGrid::SelectBlock at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -30524,7 +30524,7 @@ PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 	//Parameters for overload 0
 	long row0;
 	long col0;
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_2 = 0;
 	bool overload0_called = false;
 		
@@ -30541,17 +30541,17 @@ PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxColour*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
@@ -30575,7 +30575,7 @@ PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 
 				((wxGrid_php*)native_object)->SetCellBackgroundColour((int) row0, (int) col0, *(wxColour*) object_pointer0_2);
 
-				references->AddReference(&colour0, "wxGrid::SetCellBackgroundColour at call 3 with 3 argument(s)");
+				references->AddReference(colour0, "wxGrid::SetCellBackgroundColour at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -30648,7 +30648,7 @@ PHP_METHOD(php_wxGrid, SetCellEditor)
 	//Parameters for overload 0
 	long row0;
 	long col0;
-	zval editor0;
+	zval* editor0;
 	wxGridCellEditor* object_pointer0_2 = 0;
 	bool overload0_called = false;
 		
@@ -30665,17 +30665,17 @@ PHP_METHOD(php_wxGrid, SetCellEditor)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &editor0 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
-				if(Z_TYPE(editor0) == IS_OBJECT)
+				if(Z_TYPE_P(editor0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellEditor_P(&editor0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellEditor_P(&editor0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellEditor_P(editor0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellEditor_P(editor0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxGridCellEditor*) argument_native_object;
 					if (!object_pointer0_2 || (argument_type != PHP_WXGRIDCELLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLFLOATEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'editor' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(editor0) != IS_NULL)
+				else if(Z_TYPE_P(editor0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'editor' not null, could not be retreived correctly.");
 				}
@@ -30699,7 +30699,7 @@ PHP_METHOD(php_wxGrid, SetCellEditor)
 
 				((wxGrid_php*)native_object)->SetCellEditor((int) row0, (int) col0, (wxGridCellEditor*) object_pointer0_2);
 
-				references->AddReference(&editor0, "wxGrid::SetCellEditor at call 1 with 3 argument(s)");
+				references->AddReference(editor0, "wxGrid::SetCellEditor at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -30772,7 +30772,7 @@ PHP_METHOD(php_wxGrid, SetCellFont)
 	//Parameters for overload 0
 	long row0;
 	long col0;
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_2 = 0;
 	bool overload0_called = false;
 		
@@ -30789,17 +30789,17 @@ PHP_METHOD(php_wxGrid, SetCellFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxFont*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -30823,7 +30823,7 @@ PHP_METHOD(php_wxGrid, SetCellFont)
 
 				((wxGrid_php*)native_object)->SetCellFont((int) row0, (int) col0, *(wxFont*) object_pointer0_2);
 
-				references->AddReference(&font0, "wxGrid::SetCellFont at call 3 with 3 argument(s)");
+				references->AddReference(font0, "wxGrid::SetCellFont at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -30896,7 +30896,7 @@ PHP_METHOD(php_wxGrid, SetCellRenderer)
 	//Parameters for overload 0
 	long row0;
 	long col0;
-	zval renderer0;
+	zval* renderer0;
 	wxGridCellRenderer* object_pointer0_2 = 0;
 	bool overload0_called = false;
 		
@@ -30913,17 +30913,17 @@ PHP_METHOD(php_wxGrid, SetCellRenderer)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &renderer0 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
-				if(Z_TYPE(renderer0) == IS_OBJECT)
+				if(Z_TYPE_P(renderer0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellRenderer_P(&renderer0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellRenderer_P(&renderer0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellRenderer_P(renderer0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellRenderer_P(renderer0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxGridCellRenderer*) argument_native_object;
 					if (!object_pointer0_2 || (argument_type != PHP_WXGRIDCELLRENDERER_TYPE && argument_type != PHP_WXGRIDCELLBOOLRENDERER_TYPE && argument_type != PHP_WXGRIDCELLSTRINGRENDERER_TYPE && argument_type != PHP_WXGRIDCELLDATETIMERENDERER_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGRENDERER_TYPE && argument_type != PHP_WXGRIDCELLENUMRENDERER_TYPE && argument_type != PHP_WXGRIDCELLFLOATRENDERER_TYPE && argument_type != PHP_WXGRIDCELLNUMBERRENDERER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'renderer' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(renderer0) != IS_NULL)
+				else if(Z_TYPE_P(renderer0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'renderer' not null, could not be retreived correctly.");
 				}
@@ -30947,7 +30947,7 @@ PHP_METHOD(php_wxGrid, SetCellRenderer)
 
 				((wxGrid_php*)native_object)->SetCellRenderer((int) row0, (int) col0, (wxGridCellRenderer*) object_pointer0_2);
 
-				references->AddReference(&renderer0, "wxGrid::SetCellRenderer at call 1 with 3 argument(s)");
+				references->AddReference(renderer0, "wxGrid::SetCellRenderer at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -31126,17 +31126,17 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 	//Parameters for overload 0
 	long row0;
 	long col0;
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_2 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval val1;
+	zval* val1;
 	wxColour* object_pointer1_0 = 0;
 	long row1;
 	long col1;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval colour2;
+	zval* colour2;
 	wxColour* object_pointer2_0 = 0;
 	bool overload2_called = false;
 		
@@ -31153,17 +31153,17 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxColour*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -31187,17 +31187,17 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val1, php_wxColour_entry, &row1, &col1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(val1) == IS_OBJECT)
+				if(Z_TYPE_P(val1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&val1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&val1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(val1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(val1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxColour*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(val1) != IS_NULL)
+				else if(Z_TYPE_P(val1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -31221,17 +31221,17 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour2, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colour2) == IS_OBJECT)
+				if(Z_TYPE_P(colour2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour2 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxColour*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour2) != IS_NULL)
+				else if(Z_TYPE_P(colour2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
@@ -31255,7 +31255,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 
 				((wxGrid_php*)native_object)->SetCellTextColour((int) row0, (int) col0, *(wxColour*) object_pointer0_2);
 
-				references->AddReference(&colour0, "wxGrid::SetCellTextColour at call 3 with 3 argument(s)");
+				references->AddReference(colour0, "wxGrid::SetCellTextColour at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -31275,7 +31275,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 
 				((wxGrid_php*)native_object)->SetCellTextColour(*(wxColour*) object_pointer1_0, (int) row1, (int) col1);
 
-				references->AddReference(&val1, "wxGrid::SetCellTextColour at call 3 with 3 argument(s)");
+				references->AddReference(val1, "wxGrid::SetCellTextColour at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -31295,7 +31295,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 
 				((wxGrid_php*)native_object)->SetCellTextColour(*(wxColour*) object_pointer2_0);
 
-				references->AddReference(&colour2, "wxGrid::SetCellTextColour at call 3 with 1 argument(s)");
+				references->AddReference(colour2, "wxGrid::SetCellTextColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -31372,7 +31372,7 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 	long s_len0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval coords1;
+	zval* coords1;
 	wxGridCellCoords* object_pointer1_0 = 0;
 	char* s1;
 	long s_len1;
@@ -31408,17 +31408,17 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &coords1, php_wxGridCellCoords_entry, &s1, &s_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(coords1) == IS_OBJECT)
+				if(Z_TYPE_P(coords1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'coords' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(coords1) != IS_NULL)
+				else if(Z_TYPE_P(coords1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'coords' not null, could not be retreived correctly.");
 				}
@@ -31461,7 +31461,7 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 
 				((wxGrid_php*)native_object)->SetCellValue(*(wxGridCellCoords*) object_pointer1_0, wxString(s1, wxConvUTF8));
 
-				references->AddReference(&coords1, "wxGrid::SetCellValue at call 3 with 2 argument(s)");
+				references->AddReference(coords1, "wxGrid::SetCellValue at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -31533,7 +31533,7 @@ PHP_METHOD(php_wxGrid, SetColAttr)
 	
 	//Parameters for overload 0
 	long col0;
-	zval attr0;
+	zval* attr0;
 	wxGridCellAttr* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -31550,17 +31550,17 @@ PHP_METHOD(php_wxGrid, SetColAttr)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &attr0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(attr0) == IS_OBJECT)
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxGridCellAttr*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXGRIDCELLATTR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(attr0) != IS_NULL)
+				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'attr' not null, could not be retreived correctly.");
 				}
@@ -31584,7 +31584,7 @@ PHP_METHOD(php_wxGrid, SetColAttr)
 
 				((wxGrid_php*)native_object)->SetColAttr((int) col0, (wxGridCellAttr*) object_pointer0_1);
 
-				references->AddReference(&attr0, "wxGrid::SetColAttr at call 1 with 2 argument(s)");
+				references->AddReference(attr0, "wxGrid::SetColAttr at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -32925,7 +32925,7 @@ PHP_METHOD(php_wxGrid, SetColSizes)
 	#endif
 	
 	//Parameters for overload 0
-	zval sizeInfo0;
+	zval* sizeInfo0;
 	wxGridSizesInfo* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -32942,17 +32942,17 @@ PHP_METHOD(php_wxGrid, SetColSizes)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizeInfo0, php_wxGridSizesInfo_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(sizeInfo0) == IS_OBJECT)
+				if(Z_TYPE_P(sizeInfo0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridSizesInfo_P(&sizeInfo0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridSizesInfo_P(&sizeInfo0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridSizesInfo_P(sizeInfo0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridSizesInfo_P(sizeInfo0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridSizesInfo*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'sizeInfo' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(sizeInfo0) != IS_NULL)
+				else if(Z_TYPE_P(sizeInfo0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'sizeInfo' not null, could not be retreived correctly.");
 				}
@@ -32976,7 +32976,7 @@ PHP_METHOD(php_wxGrid, SetColSizes)
 
 				((wxGrid_php*)native_object)->SetColSizes(*(wxGridSizesInfo*) object_pointer0_0);
 
-				references->AddReference(&sizeInfo0, "wxGrid::SetColSizes at call 3 with 1 argument(s)");
+				references->AddReference(sizeInfo0, "wxGrid::SetColSizes at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -33151,7 +33151,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -33168,17 +33168,17 @@ PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
@@ -33202,7 +33202,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
 
 				((wxGrid_php*)native_object)->SetDefaultCellBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colour0, "wxGrid::SetDefaultCellBackgroundColour at call 3 with 1 argument(s)");
+				references->AddReference(colour0, "wxGrid::SetDefaultCellBackgroundColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -33273,7 +33273,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellFont)
 	#endif
 	
 	//Parameters for overload 0
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -33290,17 +33290,17 @@ PHP_METHOD(php_wxGrid, SetDefaultCellFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -33324,7 +33324,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellFont)
 
 				((wxGrid_php*)native_object)->SetDefaultCellFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(&font0, "wxGrid::SetDefaultCellFont at call 3 with 1 argument(s)");
+				references->AddReference(font0, "wxGrid::SetDefaultCellFont at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -33395,7 +33395,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -33412,17 +33412,17 @@ PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
@@ -33446,7 +33446,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
 
 				((wxGrid_php*)native_object)->SetDefaultCellTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colour0, "wxGrid::SetDefaultCellTextColour at call 3 with 1 argument(s)");
+				references->AddReference(colour0, "wxGrid::SetDefaultCellTextColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -33633,7 +33633,7 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 	#endif
 	
 	//Parameters for overload 0
-	zval editor0;
+	zval* editor0;
 	wxGridCellEditor* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -33650,17 +33650,17 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &editor0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(editor0) == IS_OBJECT)
+				if(Z_TYPE_P(editor0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellEditor_P(&editor0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellEditor_P(&editor0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellEditor_P(editor0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellEditor_P(editor0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellEditor*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLFLOATEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'editor' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(editor0) != IS_NULL)
+				else if(Z_TYPE_P(editor0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'editor' not null, could not be retreived correctly.");
 				}
@@ -33684,7 +33684,7 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 
 				((wxGrid_php*)native_object)->SetDefaultEditor((wxGridCellEditor*) object_pointer0_0);
 
-				references->AddReference(&editor0, "wxGrid::SetDefaultEditor at call 1 with 1 argument(s)");
+				references->AddReference(editor0, "wxGrid::SetDefaultEditor at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -33755,7 +33755,7 @@ PHP_METHOD(php_wxGrid, SetDefaultRenderer)
 	#endif
 	
 	//Parameters for overload 0
-	zval renderer0;
+	zval* renderer0;
 	wxGridCellRenderer* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -33772,17 +33772,17 @@ PHP_METHOD(php_wxGrid, SetDefaultRenderer)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &renderer0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(renderer0) == IS_OBJECT)
+				if(Z_TYPE_P(renderer0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellRenderer_P(&renderer0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellRenderer_P(&renderer0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellRenderer_P(renderer0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellRenderer_P(renderer0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridCellRenderer*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLRENDERER_TYPE && argument_type != PHP_WXGRIDCELLBOOLRENDERER_TYPE && argument_type != PHP_WXGRIDCELLSTRINGRENDERER_TYPE && argument_type != PHP_WXGRIDCELLDATETIMERENDERER_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGRENDERER_TYPE && argument_type != PHP_WXGRIDCELLENUMRENDERER_TYPE && argument_type != PHP_WXGRIDCELLFLOATRENDERER_TYPE && argument_type != PHP_WXGRIDCELLNUMBERRENDERER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'renderer' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(renderer0) != IS_NULL)
+				else if(Z_TYPE_P(renderer0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'renderer' not null, could not be retreived correctly.");
 				}
@@ -33806,7 +33806,7 @@ PHP_METHOD(php_wxGrid, SetDefaultRenderer)
 
 				((wxGrid_php*)native_object)->SetDefaultRenderer((wxGridCellRenderer*) object_pointer0_0);
 
-				references->AddReference(&renderer0, "wxGrid::SetDefaultRenderer at call 1 with 1 argument(s)");
+				references->AddReference(renderer0, "wxGrid::SetDefaultRenderer at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -33997,7 +33997,7 @@ PHP_METHOD(php_wxGrid, SetGridCursor)
 	long col0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval coords1;
+	zval* coords1;
 	wxGridCellCoords* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -34031,17 +34031,17 @@ PHP_METHOD(php_wxGrid, SetGridCursor)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(coords1) == IS_OBJECT)
+				if(Z_TYPE_P(coords1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellCoords_P(&coords1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellCoords_P(coords1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'coords' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(coords1) != IS_NULL)
+				else if(Z_TYPE_P(coords1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'coords' not null, could not be retreived correctly.");
 				}
@@ -34084,7 +34084,7 @@ PHP_METHOD(php_wxGrid, SetGridCursor)
 
 				((wxGrid_php*)native_object)->SetGridCursor(*(wxGridCellCoords*) object_pointer1_0);
 
-				references->AddReference(&coords1, "wxGrid::SetGridCursor at call 3 with 1 argument(s)");
+				references->AddReference(coords1, "wxGrid::SetGridCursor at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -34155,7 +34155,7 @@ PHP_METHOD(php_wxGrid, SetGridLineColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -34172,17 +34172,17 @@ PHP_METHOD(php_wxGrid, SetGridLineColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
@@ -34206,7 +34206,7 @@ PHP_METHOD(php_wxGrid, SetGridLineColour)
 
 				((wxGrid_php*)native_object)->SetGridLineColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colour0, "wxGrid::SetGridLineColour at call 3 with 1 argument(s)");
+				references->AddReference(colour0, "wxGrid::SetGridLineColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -34277,7 +34277,7 @@ PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -34294,17 +34294,17 @@ PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
@@ -34328,7 +34328,7 @@ PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
 
 				((wxGrid_php*)native_object)->SetLabelBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colour0, "wxGrid::SetLabelBackgroundColour at call 3 with 1 argument(s)");
+				references->AddReference(colour0, "wxGrid::SetLabelBackgroundColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -34399,7 +34399,7 @@ PHP_METHOD(php_wxGrid, SetLabelFont)
 	#endif
 	
 	//Parameters for overload 0
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -34416,17 +34416,17 @@ PHP_METHOD(php_wxGrid, SetLabelFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -34450,7 +34450,7 @@ PHP_METHOD(php_wxGrid, SetLabelFont)
 
 				((wxGrid_php*)native_object)->SetLabelFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(&font0, "wxGrid::SetLabelFont at call 3 with 1 argument(s)");
+				references->AddReference(font0, "wxGrid::SetLabelFont at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -34521,7 +34521,7 @@ PHP_METHOD(php_wxGrid, SetLabelTextColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -34538,17 +34538,17 @@ PHP_METHOD(php_wxGrid, SetLabelTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
@@ -34572,7 +34572,7 @@ PHP_METHOD(php_wxGrid, SetLabelTextColour)
 
 				((wxGrid_php*)native_object)->SetLabelTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colour0, "wxGrid::SetLabelTextColour at call 3 with 1 argument(s)");
+				references->AddReference(colour0, "wxGrid::SetLabelTextColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -34865,7 +34865,7 @@ PHP_METHOD(php_wxGrid, SetRowAttr)
 	
 	//Parameters for overload 0
 	long row0;
-	zval attr0;
+	zval* attr0;
 	wxGridCellAttr* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -34882,17 +34882,17 @@ PHP_METHOD(php_wxGrid, SetRowAttr)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &attr0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(attr0) == IS_OBJECT)
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridCellAttr_P(&attr0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridCellAttr_P(attr0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxGridCellAttr*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXGRIDCELLATTR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(attr0) != IS_NULL)
+				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'attr' not null, could not be retreived correctly.");
 				}
@@ -34916,7 +34916,7 @@ PHP_METHOD(php_wxGrid, SetRowAttr)
 
 				((wxGrid_php*)native_object)->SetRowAttr((int) row0, (wxGridCellAttr*) object_pointer0_1);
 
-				references->AddReference(&attr0, "wxGrid::SetRowAttr at call 1 with 2 argument(s)");
+				references->AddReference(attr0, "wxGrid::SetRowAttr at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -35610,7 +35610,7 @@ PHP_METHOD(php_wxGrid, SetRowSizes)
 	#endif
 	
 	//Parameters for overload 0
-	zval sizeInfo0;
+	zval* sizeInfo0;
 	wxGridSizesInfo* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -35627,17 +35627,17 @@ PHP_METHOD(php_wxGrid, SetRowSizes)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizeInfo0, php_wxGridSizesInfo_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(sizeInfo0) == IS_OBJECT)
+				if(Z_TYPE_P(sizeInfo0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridSizesInfo_P(&sizeInfo0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridSizesInfo_P(&sizeInfo0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridSizesInfo_P(sizeInfo0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridSizesInfo_P(sizeInfo0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridSizesInfo*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'sizeInfo' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(sizeInfo0) != IS_NULL)
+				else if(Z_TYPE_P(sizeInfo0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'sizeInfo' not null, could not be retreived correctly.");
 				}
@@ -35661,7 +35661,7 @@ PHP_METHOD(php_wxGrid, SetRowSizes)
 
 				((wxGrid_php*)native_object)->SetRowSizes(*(wxGridSizesInfo*) object_pointer0_0);
 
-				references->AddReference(&sizeInfo0, "wxGrid::SetRowSizes at call 3 with 1 argument(s)");
+				references->AddReference(sizeInfo0, "wxGrid::SetRowSizes at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -35938,7 +35938,7 @@ PHP_METHOD(php_wxGrid, SetSelectionBackground)
 	#endif
 	
 	//Parameters for overload 0
-	zval c0;
+	zval* c0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -35955,17 +35955,17 @@ PHP_METHOD(php_wxGrid, SetSelectionBackground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(c0) == IS_OBJECT)
+				if(Z_TYPE_P(c0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&c0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&c0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(c0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(c0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'c' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(c0) != IS_NULL)
+				else if(Z_TYPE_P(c0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'c' not null, could not be retreived correctly.");
 				}
@@ -35989,7 +35989,7 @@ PHP_METHOD(php_wxGrid, SetSelectionBackground)
 
 				((wxGrid_php*)native_object)->SetSelectionBackground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&c0, "wxGrid::SetSelectionBackground at call 3 with 1 argument(s)");
+				references->AddReference(c0, "wxGrid::SetSelectionBackground at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -36060,7 +36060,7 @@ PHP_METHOD(php_wxGrid, SetSelectionForeground)
 	#endif
 	
 	//Parameters for overload 0
-	zval c0;
+	zval* c0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -36077,17 +36077,17 @@ PHP_METHOD(php_wxGrid, SetSelectionForeground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(c0) == IS_OBJECT)
+				if(Z_TYPE_P(c0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&c0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&c0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(c0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(c0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'c' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(c0) != IS_NULL)
+				else if(Z_TYPE_P(c0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'c' not null, could not be retreived correctly.");
 				}
@@ -36111,7 +36111,7 @@ PHP_METHOD(php_wxGrid, SetSelectionForeground)
 
 				((wxGrid_php*)native_object)->SetSelectionForeground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&c0, "wxGrid::SetSelectionForeground at call 3 with 1 argument(s)");
+				references->AddReference(c0, "wxGrid::SetSelectionForeground at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -36401,7 +36401,7 @@ PHP_METHOD(php_wxGrid, SetTable)
 	#endif
 	
 	//Parameters for overload 0
-	zval table0;
+	zval* table0;
 	wxGridTableBase* object_pointer0_0 = 0;
 	bool takeOwnership0;
 	long selmode0;
@@ -36420,17 +36420,17 @@ PHP_METHOD(php_wxGrid, SetTable)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &table0, &takeOwnership0, &selmode0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(table0) == IS_OBJECT)
+				if(Z_TYPE_P(table0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGridTableBase_P(&table0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGridTableBase_P(&table0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGridTableBase_P(table0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGridTableBase_P(table0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGridTableBase*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDTABLEBASE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'table' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(table0) != IS_NULL)
+				else if(Z_TYPE_P(table0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'table' not null, could not be retreived correctly.");
 				}
@@ -36454,7 +36454,7 @@ PHP_METHOD(php_wxGrid, SetTable)
 
 				ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->SetTable((wxGridTableBase*) object_pointer0_0));
 
-				references->AddReference(&table0, "wxGrid::SetTable at call 1 with 1 argument(s)");
+				references->AddReference(table0, "wxGrid::SetTable at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -36467,7 +36467,7 @@ PHP_METHOD(php_wxGrid, SetTable)
 
 				ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0));
 
-				references->AddReference(&table0, "wxGrid::SetTable at call 1 with 2 argument(s)");
+				references->AddReference(table0, "wxGrid::SetTable at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -36480,7 +36480,7 @@ PHP_METHOD(php_wxGrid, SetTable)
 
 				ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0, (wxGrid::wxGridSelectionModes) selmode0));
 
-				references->AddReference(&table0, "wxGrid::SetTable at call 1 with 3 argument(s)");
+				references->AddReference(table0, "wxGrid::SetTable at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -37406,7 +37406,7 @@ PHP_METHOD(php_wxGrid, XYToCell)
 	long y0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval pos1;
+	zval* pos1;
 	wxPoint* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -37440,17 +37440,17 @@ PHP_METHOD(php_wxGrid, XYToCell)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos1, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pos1) == IS_OBJECT)
+				if(Z_TYPE_P(pos1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos1) != IS_NULL)
+				else if(Z_TYPE_P(pos1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
@@ -37507,7 +37507,7 @@ PHP_METHOD(php_wxGrid, XYToCell)
 				zo_wxGridCellCoords* zo1 = Z_wxGridCellCoords_P(return_value TSRMLS_CC);
 				zo1->native_object = (wxGridCellCoords_php*) ptr;
 
-				references->AddReference(&pos1, "wxGrid::XYToCell at call 3 with 1 argument(s)");
+				references->AddReference(pos1, "wxGrid::XYToCell at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -37766,12 +37766,12 @@ PHP_METHOD(php_wxGrid, __construct)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval parent1;
+	zval* parent1;
 	wxWindow* object_pointer1_0 = 0;
 	long id1;
-	zval pos1;
+	zval* pos1;
 	wxPoint* object_pointer1_2 = 0;
-	zval size1;
+	zval* size1;
 	wxSize* object_pointer1_3 = 0;
 	long style1;
 	char* name1;
@@ -37804,51 +37804,51 @@ PHP_METHOD(php_wxGrid, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent1) == IS_OBJECT)
+				if(Z_TYPE_P(parent1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent1) != IS_NULL)
+				else if(Z_TYPE_P(parent1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(pos1) == IS_OBJECT)
+				if(Z_TYPE_P(pos1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos1 TSRMLS_CC)->native_object;
 					object_pointer1_2 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos1) != IS_NULL)
+				else if(Z_TYPE_P(pos1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(size1) == IS_OBJECT)
+				if(Z_TYPE_P(size1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size1 TSRMLS_CC)->native_object;
 					object_pointer1_3 = (wxSize*) argument_native_object;
 					if (!object_pointer1_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size1) != IS_NULL)
+				else if(Z_TYPE_P(size1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -37891,7 +37891,7 @@ PHP_METHOD(php_wxGrid, __construct)
 				native_object = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				native_object->references.Initialize();
-				((wxGrid_php*) native_object)->references.AddReference(&parent1, "wxGrid::wxGrid at call 2 with 2 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(parent1, "wxGrid::wxGrid at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -37903,8 +37903,8 @@ PHP_METHOD(php_wxGrid, __construct)
 				native_object = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				native_object->references.Initialize();
-				((wxGrid_php*) native_object)->references.AddReference(&parent1, "wxGrid::wxGrid at call 2 with 3 argument(s)");
-				((wxGrid_php*) native_object)->references.AddReference(&pos1, "wxGrid::wxGrid at call 4 with 3 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(parent1, "wxGrid::wxGrid at call 2 with 3 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(pos1, "wxGrid::wxGrid at call 4 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -37916,9 +37916,9 @@ PHP_METHOD(php_wxGrid, __construct)
 				native_object = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				native_object->references.Initialize();
-				((wxGrid_php*) native_object)->references.AddReference(&parent1, "wxGrid::wxGrid at call 2 with 4 argument(s)");
-				((wxGrid_php*) native_object)->references.AddReference(&pos1, "wxGrid::wxGrid at call 4 with 4 argument(s)");
-				((wxGrid_php*) native_object)->references.AddReference(&size1, "wxGrid::wxGrid at call 4 with 4 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(parent1, "wxGrid::wxGrid at call 2 with 4 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(pos1, "wxGrid::wxGrid at call 4 with 4 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(size1, "wxGrid::wxGrid at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -37930,9 +37930,9 @@ PHP_METHOD(php_wxGrid, __construct)
 				native_object = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				native_object->references.Initialize();
-				((wxGrid_php*) native_object)->references.AddReference(&parent1, "wxGrid::wxGrid at call 2 with 5 argument(s)");
-				((wxGrid_php*) native_object)->references.AddReference(&pos1, "wxGrid::wxGrid at call 4 with 5 argument(s)");
-				((wxGrid_php*) native_object)->references.AddReference(&size1, "wxGrid::wxGrid at call 4 with 5 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(parent1, "wxGrid::wxGrid at call 2 with 5 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(pos1, "wxGrid::wxGrid at call 4 with 5 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(size1, "wxGrid::wxGrid at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -37944,9 +37944,9 @@ PHP_METHOD(php_wxGrid, __construct)
 				native_object = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxGrid_php*) native_object)->references.AddReference(&parent1, "wxGrid::wxGrid at call 2 with 6 argument(s)");
-				((wxGrid_php*) native_object)->references.AddReference(&pos1, "wxGrid::wxGrid at call 4 with 6 argument(s)");
-				((wxGrid_php*) native_object)->references.AddReference(&size1, "wxGrid::wxGrid at call 4 with 6 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(parent1, "wxGrid::wxGrid at call 2 with 6 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(pos1, "wxGrid::wxGrid at call 4 with 6 argument(s)");
+				((wxGrid_php*) native_object)->references.AddReference(size1, "wxGrid::wxGrid at call 4 with 6 argument(s)");
 				break;
 			}
 		}
@@ -38101,7 +38101,7 @@ PHP_METHOD(php_wxGridUpdateLocker, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval grid0;
+	zval* grid0;
 	wxGrid* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -38118,17 +38118,17 @@ PHP_METHOD(php_wxGridUpdateLocker, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(grid0) == IS_OBJECT)
+				if(Z_TYPE_P(grid0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGrid_P(&grid0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGrid_P(&grid0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGrid_P(grid0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGrid_P(grid0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGrid*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRID_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'grid' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(grid0) != IS_NULL)
+				else if(Z_TYPE_P(grid0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'grid' not null, could not be retreived correctly.");
 				}
@@ -38152,7 +38152,7 @@ PHP_METHOD(php_wxGridUpdateLocker, Create)
 
 				((wxGridUpdateLocker_php*)native_object)->Create((wxGrid*) object_pointer0_0);
 
-				references->AddReference(&grid0, "wxGridUpdateLocker::Create at call 1 with 1 argument(s)");
+				references->AddReference(grid0, "wxGridUpdateLocker::Create at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -38190,7 +38190,7 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 	
 	
 	//Parameters for overload 0
-	zval grid0;
+	zval* grid0;
 	wxGrid* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -38207,17 +38207,17 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(grid0) == IS_OBJECT)
+				if(Z_TYPE_P(grid0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxGrid_P(&grid0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxGrid_P(&grid0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxGrid_P(grid0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxGrid_P(grid0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxGrid*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXGRID_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'grid' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(grid0) != IS_NULL)
+				else if(Z_TYPE_P(grid0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'grid' not null, could not be retreived correctly.");
 				}
@@ -38253,7 +38253,7 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 				native_object = new wxGridUpdateLocker_php((wxGrid*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxGridUpdateLocker_php*) native_object)->references.AddReference(&grid0, "wxGridUpdateLocker::wxGridUpdateLocker at call 2 with 1 argument(s)");
+				((wxGridUpdateLocker_php*) native_object)->references.AddReference(grid0, "wxGridUpdateLocker::wxGridUpdateLocker at call 2 with 1 argument(s)");
 				break;
 			}
 		}

@@ -3132,7 +3132,7 @@ PHP_METHOD(php_wxOutputStream, Write)
 	#endif
 	
 	//Parameters for overload 0
-	zval stream_in0;
+	zval* stream_in0;
 	wxInputStream* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
@@ -3154,17 +3154,17 @@ PHP_METHOD(php_wxOutputStream, Write)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream_in0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(stream_in0) == IS_OBJECT)
+				if(Z_TYPE_P(stream_in0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxInputStream_P(&stream_in0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxInputStream_P(&stream_in0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxInputStream_P(stream_in0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxInputStream_P(stream_in0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxInputStream*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(stream_in0) != IS_NULL)
+				else if(Z_TYPE_P(stream_in0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -3225,7 +3225,7 @@ PHP_METHOD(php_wxOutputStream, Write)
 					references->AddReference(return_value, "wxOutputStream::Write at call 6 with 1 argument(s)");
 				}
 
-				references->AddReference(&stream_in0, "wxOutputStream::Write at call 3 with 1 argument(s)");
+				references->AddReference(stream_in0, "wxOutputStream::Write at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -4500,7 +4500,7 @@ PHP_METHOD(php_wxInputStream, Read)
 	#endif
 	
 	//Parameters for overload 0
-	zval stream_out0;
+	zval* stream_out0;
 	wxOutputStream* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
@@ -4523,17 +4523,17 @@ PHP_METHOD(php_wxInputStream, Read)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream_out0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(stream_out0) == IS_OBJECT)
+				if(Z_TYPE_P(stream_out0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxOutputStream_P(&stream_out0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxOutputStream_P(&stream_out0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxOutputStream_P(stream_out0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxOutputStream_P(stream_out0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxOutputStream*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(stream_out0) != IS_NULL)
+				else if(Z_TYPE_P(stream_out0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -4597,7 +4597,7 @@ PHP_METHOD(php_wxInputStream, Read)
 					references->AddReference(return_value, "wxInputStream::Read at call 6 with 1 argument(s)");
 				}
 
-				references->AddReference(&stream_out0, "wxInputStream::Read at call 3 with 1 argument(s)");
+				references->AddReference(stream_out0, "wxInputStream::Read at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -5498,7 +5498,7 @@ PHP_METHOD(php_wxFFileOutputStream, __construct)
 	long mode_len0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval file1;
+	zval* file1;
 	wxFFile* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -5532,17 +5532,17 @@ PHP_METHOD(php_wxFFileOutputStream, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file1, php_wxFFile_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(file1) == IS_OBJECT)
+				if(Z_TYPE_P(file1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFFile_P(&file1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFFile_P(&file1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFFile_P(file1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFFile_P(file1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxFFile*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'file' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(file1) != IS_NULL)
+				else if(Z_TYPE_P(file1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'file' not null, could not be retreived correctly.");
 				}
@@ -5596,7 +5596,7 @@ PHP_METHOD(php_wxFFileOutputStream, __construct)
 				native_object = new wxFFileOutputStream_php(*(wxFFile*) object_pointer1_0);
 
 				native_object->references.Initialize();
-				((wxFFileOutputStream_php*) native_object)->references.AddReference(&file1, "wxFFileOutputStream::wxFFileOutputStream at call 4 with 1 argument(s)");
+				((wxFFileOutputStream_php*) native_object)->references.AddReference(file1, "wxFFileOutputStream::wxFFileOutputStream at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -5824,7 +5824,7 @@ PHP_METHOD(php_wxFileOutputStream, __construct)
 	long ofileName_len0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval file1;
+	zval* file1;
 	wxFile* object_pointer1_0 = 0;
 	bool overload1_called = false;
 	//Parameters for overload 2
@@ -5861,17 +5861,17 @@ PHP_METHOD(php_wxFileOutputStream, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file1, php_wxFile_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(file1) == IS_OBJECT)
+				if(Z_TYPE_P(file1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFile_P(&file1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFile_P(&file1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFile_P(file1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFile_P(file1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxFile*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(file1) != IS_NULL)
+				else if(Z_TYPE_P(file1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -5931,7 +5931,7 @@ PHP_METHOD(php_wxFileOutputStream, __construct)
 				native_object = new wxFileOutputStream_php(*(wxFile*) object_pointer1_0);
 
 				native_object->references.Initialize();
-				((wxFileOutputStream_php*) native_object)->references.AddReference(&file1, "wxFileOutputStream::wxFileOutputStream at call 4 with 1 argument(s)");
+				((wxFileOutputStream_php*) native_object)->references.AddReference(file1, "wxFileOutputStream::wxFileOutputStream at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -6177,7 +6177,7 @@ PHP_METHOD(php_wxFileInputStream, __construct)
 	long ifileName_len0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval file1;
+	zval* file1;
 	wxFile* object_pointer1_0 = 0;
 	bool overload1_called = false;
 	//Parameters for overload 2
@@ -6214,17 +6214,17 @@ PHP_METHOD(php_wxFileInputStream, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file1, php_wxFile_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(file1) == IS_OBJECT)
+				if(Z_TYPE_P(file1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFile_P(&file1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFile_P(&file1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFile_P(file1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFile_P(file1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxFile*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(file1) != IS_NULL)
+				else if(Z_TYPE_P(file1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -6284,7 +6284,7 @@ PHP_METHOD(php_wxFileInputStream, __construct)
 				native_object = new wxFileInputStream_php(*(wxFile*) object_pointer1_0);
 
 				native_object->references.Initialize();
-				((wxFileInputStream_php*) native_object)->references.AddReference(&file1, "wxFileInputStream::wxFileInputStream at call 4 with 1 argument(s)");
+				((wxFileInputStream_php*) native_object)->references.AddReference(file1, "wxFileInputStream::wxFileInputStream at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -6424,7 +6424,7 @@ PHP_METHOD(php_wxFFileInputStream, __construct)
 	
 	
 	//Parameters for overload 0
-	zval file0;
+	zval* file0;
 	wxFFile* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
@@ -6447,17 +6447,17 @@ PHP_METHOD(php_wxFFileInputStream, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file0, php_wxFFile_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(file0) == IS_OBJECT)
+				if(Z_TYPE_P(file0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFFile_P(&file0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFFile_P(&file0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFFile_P(file0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFFile_P(file0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFFile*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(file0) != IS_NULL)
+				else if(Z_TYPE_P(file0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -6499,7 +6499,7 @@ PHP_METHOD(php_wxFFileInputStream, __construct)
 				native_object = new wxFFileInputStream_php(*(wxFFile*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxFFileInputStream_php*) native_object)->references.AddReference(&file0, "wxFFileInputStream::wxFFileInputStream at call 4 with 1 argument(s)");
+				((wxFFileInputStream_php*) native_object)->references.AddReference(file0, "wxFFileInputStream::wxFFileInputStream at call 4 with 1 argument(s)");
 				break;
 			}
 		}

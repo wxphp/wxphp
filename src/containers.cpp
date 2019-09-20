@@ -412,7 +412,7 @@ PHP_METHOD(php_wxTreeItemData, SetId)
 	#endif
 	
 	//Parameters for overload 0
-	zval id0;
+	zval* id0;
 	wxTreeItemId* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -429,17 +429,17 @@ PHP_METHOD(php_wxTreeItemData, SetId)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, php_wxTreeItemId_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(id0) == IS_OBJECT)
+				if(Z_TYPE_P(id0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxTreeItemId_P(&id0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTreeItemId_P(&id0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxTreeItemId_P(id0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTreeItemId_P(id0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxTreeItemId*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'id' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(id0) != IS_NULL)
+				else if(Z_TYPE_P(id0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'id' not null, could not be retreived correctly.");
 				}
@@ -463,7 +463,7 @@ PHP_METHOD(php_wxTreeItemData, SetId)
 
 				((wxTreeItemData_php*)native_object)->SetId(*(wxTreeItemId*) object_pointer0_0);
 
-				references->AddReference(&id0, "wxTreeItemData::SetId at call 3 with 1 argument(s)");
+				references->AddReference(id0, "wxTreeItemData::SetId at call 3 with 1 argument(s)");
 
 				return;
 				break;

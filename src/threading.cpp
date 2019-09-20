@@ -636,7 +636,7 @@ PHP_METHOD(php_wxCondition, __construct)
 	
 	
 	//Parameters for overload 0
-	zval mutex0;
+	zval* mutex0;
 	wxMutex* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -653,17 +653,17 @@ PHP_METHOD(php_wxCondition, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mutex0, php_wxMutex_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(mutex0) == IS_OBJECT)
+				if(Z_TYPE_P(mutex0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMutex_P(&mutex0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMutex_P(&mutex0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMutex_P(mutex0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMutex_P(mutex0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMutex*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'mutex' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(mutex0) != IS_NULL)
+				else if(Z_TYPE_P(mutex0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'mutex' not null, could not be retreived correctly.");
 				}
@@ -688,7 +688,7 @@ PHP_METHOD(php_wxCondition, __construct)
 				native_object = new wxCondition_php(*(wxMutex*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxCondition_php*) native_object)->references.AddReference(&mutex0, "wxCondition::wxCondition at call 4 with 1 argument(s)");
+				((wxCondition_php*) native_object)->references.AddReference(mutex0, "wxCondition::wxCondition at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -810,7 +810,7 @@ PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 	
 	
 	//Parameters for overload 0
-	zval criticalsection0;
+	zval* criticalsection0;
 	wxCriticalSection* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -827,17 +827,17 @@ PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &criticalsection0, php_wxCriticalSection_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(criticalsection0) == IS_OBJECT)
+				if(Z_TYPE_P(criticalsection0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxCriticalSection_P(&criticalsection0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxCriticalSection_P(&criticalsection0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxCriticalSection_P(criticalsection0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxCriticalSection_P(criticalsection0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxCriticalSection*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'criticalsection' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(criticalsection0) != IS_NULL)
+				else if(Z_TYPE_P(criticalsection0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'criticalsection' not null, could not be retreived correctly.");
 				}
@@ -862,7 +862,7 @@ PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 				native_object = new wxCriticalSectionLocker_php(*(wxCriticalSection*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxCriticalSectionLocker_php*) native_object)->references.AddReference(&criticalsection0, "wxCriticalSectionLocker::wxCriticalSectionLocker at call 4 with 1 argument(s)");
+				((wxCriticalSectionLocker_php*) native_object)->references.AddReference(criticalsection0, "wxCriticalSectionLocker::wxCriticalSectionLocker at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -5104,7 +5104,7 @@ PHP_METHOD(php_wxMutexLocker, __construct)
 	
 	
 	//Parameters for overload 0
-	zval mutex0;
+	zval* mutex0;
 	wxMutex* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -5121,17 +5121,17 @@ PHP_METHOD(php_wxMutexLocker, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mutex0, php_wxMutex_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(mutex0) == IS_OBJECT)
+				if(Z_TYPE_P(mutex0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMutex_P(&mutex0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMutex_P(&mutex0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMutex_P(mutex0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMutex_P(mutex0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMutex*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'mutex' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(mutex0) != IS_NULL)
+				else if(Z_TYPE_P(mutex0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'mutex' not null, could not be retreived correctly.");
 				}
@@ -5156,7 +5156,7 @@ PHP_METHOD(php_wxMutexLocker, __construct)
 				native_object = new wxMutexLocker_php(*(wxMutex*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxMutexLocker_php*) native_object)->references.AddReference(&mutex0, "wxMutexLocker::wxMutexLocker at call 4 with 1 argument(s)");
+				((wxMutexLocker_php*) native_object)->references.AddReference(mutex0, "wxMutexLocker::wxMutexLocker at call 4 with 1 argument(s)");
 				break;
 			}
 		}

@@ -1071,7 +1071,7 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 	#endif
 	
 	//Parameters for overload 0
-	zval filename0;
+	zval* filename0;
 	wxFileName* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1088,17 +1088,17 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, php_wxFileName_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(filename0) == IS_OBJECT)
+				if(Z_TYPE_P(filename0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileName_P(&filename0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(&filename0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileName_P(filename0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileName_P(filename0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileName*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'filename' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(filename0) != IS_NULL)
+				else if(Z_TYPE_P(filename0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'filename' not null, could not be retreived correctly.");
 				}
@@ -1312,7 +1312,7 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 	#endif
 	
 	//Parameters for overload 0
-	zval handler0;
+	zval* handler0;
 	wxFileSystemHandler* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1329,17 +1329,17 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &handler0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(handler0) == IS_OBJECT)
+				if(Z_TYPE_P(handler0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileSystemHandler_P(&handler0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileSystemHandler_P(&handler0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileSystemHandler_P(handler0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileSystemHandler_P(handler0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileSystemHandler*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXFILESYSTEMHANDLER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'handler' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(handler0) != IS_NULL)
+				else if(Z_TYPE_P(handler0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'handler' not null, could not be retreived correctly.");
 				}

@@ -110,12 +110,12 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 	
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_2 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_3 = 0;
 	long style0;
 	char* name0;
@@ -135,51 +135,51 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxSize*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -204,7 +204,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				native_object = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 1 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -216,7 +216,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				native_object = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				native_object->references.Initialize();
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 2 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -228,8 +228,8 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				native_object = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2);
 
 				native_object->references.Initialize();
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 3 argument(s)");
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 3 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 3 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -241,9 +241,9 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				native_object = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3);
 
 				native_object->references.Initialize();
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 4 argument(s)");
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 4 argument(s)");
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&size0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 4 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 4 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 4 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(size0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -255,9 +255,9 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				native_object = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0);
 
 				native_object->references.Initialize();
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 5 argument(s)");
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 5 argument(s)");
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&size0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 5 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 5 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 5 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(size0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -269,9 +269,9 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				native_object = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 6 argument(s)");
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 6 argument(s)");
-				((wxStyledTextCtrl_php*) native_object)->references.AddReference(&size0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 6 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call 2 with 6 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 6 argument(s)");
+				((wxStyledTextCtrl_php*) native_object)->references.AddReference(size0, "wxStyledTextCtrl::wxStyledTextCtrl at call 4 with 6 argument(s)");
 				break;
 			}
 		}
@@ -6738,7 +6738,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 	#endif
 	
 	//Parameters for overload 0
-	zval back0;
+	zval* back0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -6755,17 +6755,17 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(back0) == IS_OBJECT)
+				if(Z_TYPE_P(back0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&back0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&back0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(back0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(back0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'back' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(back0) != IS_NULL)
+				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'back' not null, could not be retreived correctly.");
 				}
@@ -6789,7 +6789,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 
 				((wxStyledTextCtrl_php*)native_object)->CallTipSetBackground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&back0, "wxStyledTextCtrl::CallTipSetBackground at call 3 with 1 argument(s)");
+				references->AddReference(back0, "wxStyledTextCtrl::CallTipSetBackground at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -6860,7 +6860,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 	#endif
 	
 	//Parameters for overload 0
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -6877,17 +6877,17 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -6911,7 +6911,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 
 				((wxStyledTextCtrl_php*)native_object)->CallTipSetForeground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::CallTipSetForeground at call 3 with 1 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::CallTipSetForeground at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -6982,7 +6982,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 	#endif
 	
 	//Parameters for overload 0
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -6999,17 +6999,17 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -7033,7 +7033,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 
 				((wxStyledTextCtrl_php*)native_object)->CallTipSetForegroundHighlight(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::CallTipSetForegroundHighlight at call 3 with 1 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::CallTipSetForegroundHighlight at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -10214,12 +10214,12 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_2 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_3 = 0;
 	long style0;
 	char* name0;
@@ -10239,51 +10239,51 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxSize*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -10307,7 +10307,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(&parent0, "wxStyledTextCtrl::Create at call 1 with 1 argument(s)");
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -10320,7 +10320,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(&parent0, "wxStyledTextCtrl::Create at call 1 with 2 argument(s)");
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -10333,8 +10333,8 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(&parent0, "wxStyledTextCtrl::Create at call 1 with 3 argument(s)");
-				references->AddReference(&pos0, "wxStyledTextCtrl::Create at call 3 with 3 argument(s)");
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 3 argument(s)");
+				references->AddReference(pos0, "wxStyledTextCtrl::Create at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -10347,9 +10347,9 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(&parent0, "wxStyledTextCtrl::Create at call 1 with 4 argument(s)");
-				references->AddReference(&pos0, "wxStyledTextCtrl::Create at call 3 with 4 argument(s)");
-				references->AddReference(&size0, "wxStyledTextCtrl::Create at call 3 with 4 argument(s)");
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 4 argument(s)");
+				references->AddReference(pos0, "wxStyledTextCtrl::Create at call 3 with 4 argument(s)");
+				references->AddReference(size0, "wxStyledTextCtrl::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -10362,9 +10362,9 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
-				references->AddReference(&parent0, "wxStyledTextCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(&pos0, "wxStyledTextCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(&size0, "wxStyledTextCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 5 argument(s)");
+				references->AddReference(pos0, "wxStyledTextCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(size0, "wxStyledTextCtrl::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -10377,9 +10377,9 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxStyledTextCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(&pos0, "wxStyledTextCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(&size0, "wxStyledTextCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 6 argument(s)");
+				references->AddReference(pos0, "wxStyledTextCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(size0, "wxStyledTextCtrl::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -12757,13 +12757,13 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 	bool doDraw0;
 	long startPos0;
 	long endPos0;
-	zval draw0;
+	zval* draw0;
 	wxDC* object_pointer0_3 = 0;
-	zval target0;
+	zval* target0;
 	wxDC* object_pointer0_4 = 0;
-	zval renderRect0;
+	zval* renderRect0;
 	wxRect* object_pointer0_5 = 0;
-	zval pageRect0;
+	zval* pageRect0;
 	wxRect* object_pointer0_6 = 0;
 	bool overload0_called = false;
 		
@@ -12780,68 +12780,68 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &doDraw0, &startPos0, &endPos0, &draw0, &target0, &renderRect0, php_wxRect_entry, &pageRect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 4){
-				if(Z_TYPE(draw0) == IS_OBJECT)
+				if(Z_TYPE_P(draw0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDC_P(&draw0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDC_P(&draw0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDC_P(draw0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDC_P(draw0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxDC*) argument_native_object;
 					if (!object_pointer0_3 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'draw' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(draw0) != IS_NULL)
+				else if(Z_TYPE_P(draw0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'draw' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(target0) == IS_OBJECT)
+				if(Z_TYPE_P(target0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDC_P(&target0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDC_P(&target0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDC_P(target0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDC_P(target0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxDC*) argument_native_object;
 					if (!object_pointer0_4 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'target' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(target0) != IS_NULL)
+				else if(Z_TYPE_P(target0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'target' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 6){
-				if(Z_TYPE(renderRect0) == IS_OBJECT)
+				if(Z_TYPE_P(renderRect0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&renderRect0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&renderRect0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(renderRect0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(renderRect0 TSRMLS_CC)->native_object;
 					object_pointer0_5 = (wxRect*) argument_native_object;
 					if (!object_pointer0_5 )
 					{
 						zend_error(E_ERROR, "Parameter 'renderRect' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(renderRect0) != IS_NULL)
+				else if(Z_TYPE_P(renderRect0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'renderRect' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE(pageRect0) == IS_OBJECT)
+				if(Z_TYPE_P(pageRect0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&pageRect0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&pageRect0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(pageRect0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(pageRect0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxRect*) argument_native_object;
 					if (!object_pointer0_6 )
 					{
 						zend_error(E_ERROR, "Parameter 'pageRect' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pageRect0) != IS_NULL)
+				else if(Z_TYPE_P(pageRect0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pageRect' not null, could not be retreived correctly.");
 				}
@@ -12865,8 +12865,8 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->FormatRange(doDraw0, (int) startPos0, (int) endPos0, (wxDC*) object_pointer0_3, (wxDC*) object_pointer0_4, *(wxRect*) object_pointer0_5, *(wxRect*) object_pointer0_6));
 
-				references->AddReference(&draw0, "wxStyledTextCtrl::FormatRange at call 1 with 7 argument(s)");
-				references->AddReference(&target0, "wxStyledTextCtrl::FormatRange at call 1 with 7 argument(s)");
+				references->AddReference(draw0, "wxStyledTextCtrl::FormatRange at call 1 with 7 argument(s)");
+				references->AddReference(target0, "wxStyledTextCtrl::FormatRange at call 1 with 7 argument(s)");
 
 				return;
 				break;
@@ -26609,7 +26609,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 	
 	//Parameters for overload 0
 	long indic0;
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -26626,17 +26626,17 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indic0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -26660,7 +26660,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 
 				((wxStyledTextCtrl_php*)native_object)->IndicatorSetForeground((int) indic0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::IndicatorSetForeground at call 3 with 2 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::IndicatorSetForeground at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -30846,9 +30846,9 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 	//Parameters for overload 0
 	long markerNumber0;
 	long markerSymbol0;
-	zval foreground0;
+	zval* foreground0;
 	wxColour* object_pointer0_2 = 0;
-	zval background0;
+	zval* background0;
 	wxColour* object_pointer0_3 = 0;
 	bool overload0_called = false;
 		
@@ -30865,34 +30865,34 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &markerSymbol0, &foreground0, php_wxColour_entry, &background0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
-				if(Z_TYPE(foreground0) == IS_OBJECT)
+				if(Z_TYPE_P(foreground0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&foreground0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&foreground0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(foreground0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(foreground0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxColour*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'foreground' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(foreground0) != IS_NULL)
+				else if(Z_TYPE_P(foreground0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'foreground' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(background0) == IS_OBJECT)
+				if(Z_TYPE_P(background0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&background0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&background0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(background0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(background0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxColour*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'background' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(background0) != IS_NULL)
+				else if(Z_TYPE_P(background0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'background' not null, could not be retreived correctly.");
 				}
@@ -30928,7 +30928,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 
 				((wxStyledTextCtrl_php*)native_object)->MarkerDefine((int) markerNumber0, (int) markerSymbol0, *(wxColour*) object_pointer0_2);
 
-				references->AddReference(&foreground0, "wxStyledTextCtrl::MarkerDefine at call 3 with 3 argument(s)");
+				references->AddReference(foreground0, "wxStyledTextCtrl::MarkerDefine at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -30941,8 +30941,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 
 				((wxStyledTextCtrl_php*)native_object)->MarkerDefine((int) markerNumber0, (int) markerSymbol0, *(wxColour*) object_pointer0_2, *(wxColour*) object_pointer0_3);
 
-				references->AddReference(&foreground0, "wxStyledTextCtrl::MarkerDefine at call 3 with 4 argument(s)");
-				references->AddReference(&background0, "wxStyledTextCtrl::MarkerDefine at call 3 with 4 argument(s)");
+				references->AddReference(foreground0, "wxStyledTextCtrl::MarkerDefine at call 3 with 4 argument(s)");
+				references->AddReference(background0, "wxStyledTextCtrl::MarkerDefine at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -31014,7 +31014,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 	
 	//Parameters for overload 0
 	long markerNumber0;
-	zval bmp0;
+	zval* bmp0;
 	wxBitmap* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -31031,17 +31031,17 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(bmp0) == IS_OBJECT)
+				if(Z_TYPE_P(bmp0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxBitmap_P(&bmp0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxBitmap_P(&bmp0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxBitmap_P(bmp0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxBitmap_P(bmp0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxBitmap*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'bmp' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(bmp0) != IS_NULL)
+				else if(Z_TYPE_P(bmp0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bmp' not null, could not be retreived correctly.");
 				}
@@ -31065,7 +31065,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 
 				((wxStyledTextCtrl_php*)native_object)->MarkerDefineBitmap((int) markerNumber0, *(wxBitmap*) object_pointer0_1);
 
-				references->AddReference(&bmp0, "wxStyledTextCtrl::MarkerDefineBitmap at call 3 with 2 argument(s)");
+				references->AddReference(bmp0, "wxStyledTextCtrl::MarkerDefineBitmap at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -31965,7 +31965,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 	
 	//Parameters for overload 0
 	long markerNumber0;
-	zval back0;
+	zval* back0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -31982,17 +31982,17 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(back0) == IS_OBJECT)
+				if(Z_TYPE_P(back0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&back0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&back0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(back0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(back0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'back' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(back0) != IS_NULL)
+				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'back' not null, could not be retreived correctly.");
 				}
@@ -32016,7 +32016,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 
 				((wxStyledTextCtrl_php*)native_object)->MarkerSetBackground((int) markerNumber0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&back0, "wxStyledTextCtrl::MarkerSetBackground at call 3 with 2 argument(s)");
+				references->AddReference(back0, "wxStyledTextCtrl::MarkerSetBackground at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -32088,7 +32088,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 	
 	//Parameters for overload 0
 	long markerNumber0;
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -32105,17 +32105,17 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -32139,7 +32139,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 
 				((wxStyledTextCtrl_php*)native_object)->MarkerSetForeground((int) markerNumber0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::MarkerSetForeground at call 3 with 2 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::MarkerSetForeground at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -33901,7 +33901,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPoint)
 	#endif
 	
 	//Parameters for overload 0
-	zval pt0;
+	zval* pt0;
 	wxPoint* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -33918,17 +33918,17 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPoint)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pt0) == IS_OBJECT)
+				if(Z_TYPE_P(pt0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pt0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pt0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pt0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pt0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pt' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pt0) != IS_NULL)
+				else if(Z_TYPE_P(pt0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pt' not null, could not be retreived correctly.");
 				}
@@ -34225,7 +34225,7 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterImage)
 	
 	//Parameters for overload 0
 	long type0;
-	zval bmp0;
+	zval* bmp0;
 	wxBitmap* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -34242,17 +34242,17 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterImage)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(bmp0) == IS_OBJECT)
+				if(Z_TYPE_P(bmp0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxBitmap_P(&bmp0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxBitmap_P(&bmp0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxBitmap_P(bmp0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxBitmap_P(bmp0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxBitmap*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'bmp' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(bmp0) != IS_NULL)
+				else if(Z_TYPE_P(bmp0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bmp' not null, could not be retreived correctly.");
 				}
@@ -34276,7 +34276,7 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterImage)
 
 				((wxStyledTextCtrl_php*)native_object)->RegisterImage((int) type0, *(wxBitmap*) object_pointer0_1);
 
-				references->AddReference(&bmp0, "wxStyledTextCtrl::RegisterImage at call 3 with 2 argument(s)");
+				references->AddReference(bmp0, "wxStyledTextCtrl::RegisterImage at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -35669,7 +35669,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretForeground)
 	#endif
 	
 	//Parameters for overload 0
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -35686,17 +35686,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretForeground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -35720,7 +35720,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretForeground)
 
 				((wxStyledTextCtrl_php*)native_object)->SetAdditionalCaretForeground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::SetAdditionalCaretForeground at call 3 with 1 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::SetAdditionalCaretForeground at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -36100,7 +36100,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelBackground)
 	#endif
 	
 	//Parameters for overload 0
-	zval back0;
+	zval* back0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -36117,17 +36117,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelBackground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(back0) == IS_OBJECT)
+				if(Z_TYPE_P(back0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&back0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&back0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(back0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(back0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'back' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(back0) != IS_NULL)
+				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'back' not null, could not be retreived correctly.");
 				}
@@ -36151,7 +36151,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelBackground)
 
 				((wxStyledTextCtrl_php*)native_object)->SetAdditionalSelBackground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&back0, "wxStyledTextCtrl::SetAdditionalSelBackground at call 3 with 1 argument(s)");
+				references->AddReference(back0, "wxStyledTextCtrl::SetAdditionalSelBackground at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -36222,7 +36222,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelForeground)
 	#endif
 	
 	//Parameters for overload 0
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -36239,17 +36239,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelForeground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -36273,7 +36273,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelForeground)
 
 				((wxStyledTextCtrl_php*)native_object)->SetAdditionalSelForeground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::SetAdditionalSelForeground at call 3 with 1 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::SetAdditionalSelForeground at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -36756,7 +36756,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 	#endif
 	
 	//Parameters for overload 0
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -36773,17 +36773,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -36807,7 +36807,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 
 				((wxStyledTextCtrl_php*)native_object)->SetCaretForeground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::SetCaretForeground at call 3 with 1 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::SetCaretForeground at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -36981,7 +36981,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackground)
 	#endif
 	
 	//Parameters for overload 0
-	zval back0;
+	zval* back0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -36998,17 +36998,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(back0) == IS_OBJECT)
+				if(Z_TYPE_P(back0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&back0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&back0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(back0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(back0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'back' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(back0) != IS_NULL)
+				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'back' not null, could not be retreived correctly.");
 				}
@@ -37032,7 +37032,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackground)
 
 				((wxStyledTextCtrl_php*)native_object)->SetCaretLineBackground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&back0, "wxStyledTextCtrl::SetCaretLineBackground at call 3 with 1 argument(s)");
+				references->AddReference(back0, "wxStyledTextCtrl::SetCaretLineBackground at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -37922,7 +37922,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval edgeColour0;
+	zval* edgeColour0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -37939,17 +37939,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &edgeColour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(edgeColour0) == IS_OBJECT)
+				if(Z_TYPE_P(edgeColour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&edgeColour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&edgeColour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(edgeColour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(edgeColour0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'edgeColour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(edgeColour0) != IS_NULL)
+				else if(Z_TYPE_P(edgeColour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'edgeColour' not null, could not be retreived correctly.");
 				}
@@ -37973,7 +37973,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColour)
 
 				((wxStyledTextCtrl_php*)native_object)->SetEdgeColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&edgeColour0, "wxStyledTextCtrl::SetEdgeColour at call 3 with 1 argument(s)");
+				references->AddReference(edgeColour0, "wxStyledTextCtrl::SetEdgeColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -38974,7 +38974,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 	
 	//Parameters for overload 0
 	bool useSetting0;
-	zval back0;
+	zval* back0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -38991,17 +38991,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(back0) == IS_OBJECT)
+				if(Z_TYPE_P(back0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&back0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&back0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(back0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(back0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'back' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(back0) != IS_NULL)
+				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'back' not null, could not be retreived correctly.");
 				}
@@ -39025,7 +39025,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 
 				((wxStyledTextCtrl_php*)native_object)->SetFoldMarginColour(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&back0, "wxStyledTextCtrl::SetFoldMarginColour at call 3 with 2 argument(s)");
+				references->AddReference(back0, "wxStyledTextCtrl::SetFoldMarginColour at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -39096,7 +39096,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 	
 	//Parameters for overload 0
 	bool useSetting0;
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -39113,17 +39113,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -39147,7 +39147,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 
 				((wxStyledTextCtrl_php*)native_object)->SetFoldMarginHiColour(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::SetFoldMarginHiColour at call 3 with 2 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::SetFoldMarginHiColour at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -39218,7 +39218,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHScrollBar)
 	#endif
 	
 	//Parameters for overload 0
-	zval bar0;
+	zval* bar0;
 	wxScrollBar* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -39235,17 +39235,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHScrollBar)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(bar0) == IS_OBJECT)
+				if(Z_TYPE_P(bar0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxScrollBar_P(&bar0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxScrollBar_P(&bar0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxScrollBar_P(bar0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxScrollBar_P(bar0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxScrollBar*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXSCROLLBAR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'bar' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(bar0) != IS_NULL)
+				else if(Z_TYPE_P(bar0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bar' not null, could not be retreived correctly.");
 				}
@@ -39269,7 +39269,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHScrollBar)
 
 				((wxStyledTextCtrl_php*)native_object)->SetHScrollBar((wxScrollBar*) object_pointer0_0);
 
-				references->AddReference(&bar0, "wxStyledTextCtrl::SetHScrollBar at call 1 with 1 argument(s)");
+				references->AddReference(bar0, "wxStyledTextCtrl::SetHScrollBar at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -39444,7 +39444,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveBackground)
 	
 	//Parameters for overload 0
 	bool useSetting0;
-	zval back0;
+	zval* back0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -39461,17 +39461,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveBackground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(back0) == IS_OBJECT)
+				if(Z_TYPE_P(back0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&back0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&back0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(back0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(back0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'back' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(back0) != IS_NULL)
+				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'back' not null, could not be retreived correctly.");
 				}
@@ -39495,7 +39495,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveBackground)
 
 				((wxStyledTextCtrl_php*)native_object)->SetHotspotActiveBackground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&back0, "wxStyledTextCtrl::SetHotspotActiveBackground at call 3 with 2 argument(s)");
+				references->AddReference(back0, "wxStyledTextCtrl::SetHotspotActiveBackground at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -39567,7 +39567,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveForeground)
 	
 	//Parameters for overload 0
 	bool useSetting0;
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -39584,17 +39584,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveForeground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -39618,7 +39618,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveForeground)
 
 				((wxStyledTextCtrl_php*)native_object)->SetHotspotActiveForeground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::SetHotspotActiveForeground at call 3 with 2 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::SetHotspotActiveForeground at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -44019,7 +44019,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 	
 	//Parameters for overload 0
 	bool useSetting0;
-	zval back0;
+	zval* back0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -44036,17 +44036,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(back0) == IS_OBJECT)
+				if(Z_TYPE_P(back0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&back0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&back0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(back0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(back0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'back' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(back0) != IS_NULL)
+				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'back' not null, could not be retreived correctly.");
 				}
@@ -44070,7 +44070,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 
 				((wxStyledTextCtrl_php*)native_object)->SetSelBackground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&back0, "wxStyledTextCtrl::SetSelBackground at call 3 with 2 argument(s)");
+				references->AddReference(back0, "wxStyledTextCtrl::SetSelBackground at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -44142,7 +44142,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 	
 	//Parameters for overload 0
 	bool useSetting0;
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -44159,17 +44159,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -44193,7 +44193,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 
 				((wxStyledTextCtrl_php*)native_object)->SetSelForeground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::SetSelForeground at call 3 with 2 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::SetSelForeground at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -46742,7 +46742,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVScrollBar)
 	#endif
 	
 	//Parameters for overload 0
-	zval bar0;
+	zval* bar0;
 	wxScrollBar* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -46759,17 +46759,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVScrollBar)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(bar0) == IS_OBJECT)
+				if(Z_TYPE_P(bar0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxScrollBar_P(&bar0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxScrollBar_P(&bar0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxScrollBar_P(bar0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxScrollBar_P(bar0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxScrollBar*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXSCROLLBAR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'bar' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(bar0) != IS_NULL)
+				else if(Z_TYPE_P(bar0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bar' not null, could not be retreived correctly.");
 				}
@@ -46793,7 +46793,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVScrollBar)
 
 				((wxStyledTextCtrl_php*)native_object)->SetVScrollBar((wxScrollBar*) object_pointer0_0);
 
-				references->AddReference(&bar0, "wxStyledTextCtrl::SetVScrollBar at call 1 with 1 argument(s)");
+				references->AddReference(bar0, "wxStyledTextCtrl::SetVScrollBar at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -47277,7 +47277,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 	
 	//Parameters for overload 0
 	bool useSetting0;
-	zval back0;
+	zval* back0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -47294,17 +47294,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(back0) == IS_OBJECT)
+				if(Z_TYPE_P(back0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&back0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&back0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(back0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(back0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'back' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(back0) != IS_NULL)
+				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'back' not null, could not be retreived correctly.");
 				}
@@ -47328,7 +47328,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 
 				((wxStyledTextCtrl_php*)native_object)->SetWhitespaceBackground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&back0, "wxStyledTextCtrl::SetWhitespaceBackground at call 3 with 2 argument(s)");
+				references->AddReference(back0, "wxStyledTextCtrl::SetWhitespaceBackground at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -47504,7 +47504,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 	
 	//Parameters for overload 0
 	bool useSetting0;
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -47521,17 +47521,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -47555,7 +47555,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 
 				((wxStyledTextCtrl_php*)native_object)->SetWhitespaceForeground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::SetWhitespaceForeground at call 3 with 2 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::SetWhitespaceForeground at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -49755,7 +49755,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 	
 	//Parameters for overload 0
 	long style0;
-	zval back0;
+	zval* back0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -49772,17 +49772,17 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(back0) == IS_OBJECT)
+				if(Z_TYPE_P(back0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&back0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&back0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(back0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(back0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'back' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(back0) != IS_NULL)
+				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'back' not null, could not be retreived correctly.");
 				}
@@ -49806,7 +49806,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 
 				((wxStyledTextCtrl_php*)native_object)->StyleSetBackground((int) style0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&back0, "wxStyledTextCtrl::StyleSetBackground at call 3 with 2 argument(s)");
+				references->AddReference(back0, "wxStyledTextCtrl::StyleSetBackground at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -50503,7 +50503,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 	
 	//Parameters for overload 0
 	long styleNum0;
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -50520,17 +50520,17 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &styleNum0, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxFont*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -50554,7 +50554,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 
 				((wxStyledTextCtrl_php*)native_object)->StyleSetFont((int) styleNum0, *(wxFont*) object_pointer0_1);
 
-				references->AddReference(&font0, "wxStyledTextCtrl::StyleSetFont at call 3 with 2 argument(s)");
+				references->AddReference(font0, "wxStyledTextCtrl::StyleSetFont at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -50852,7 +50852,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 	
 	//Parameters for overload 0
 	long style0;
-	zval fore0;
+	zval* fore0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -50869,17 +50869,17 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(fore0) == IS_OBJECT)
+				if(Z_TYPE_P(fore0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&fore0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&fore0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(fore0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(fore0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'fore' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(fore0) != IS_NULL)
+				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'fore' not null, could not be retreived correctly.");
 				}
@@ -50903,7 +50903,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 
 				((wxStyledTextCtrl_php*)native_object)->StyleSetForeground((int) style0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&fore0, "wxStyledTextCtrl::StyleSetForeground at call 3 with 2 argument(s)");
+				references->AddReference(fore0, "wxStyledTextCtrl::StyleSetForeground at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -60647,7 +60647,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackgroundSelected)
 	
 	//Parameters for overload 0
 	long markerNumber0;
-	zval back0;
+	zval* back0;
 	wxColour* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -60664,17 +60664,17 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackgroundSelected)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(back0) == IS_OBJECT)
+				if(Z_TYPE_P(back0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&back0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&back0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(back0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(back0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxColour*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'back' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(back0) != IS_NULL)
+				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'back' not null, could not be retreived correctly.");
 				}
@@ -60698,7 +60698,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackgroundSelected)
 
 				((wxStyledTextCtrl_php*)native_object)->MarkerSetBackgroundSelected((int) markerNumber0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(&back0, "wxStyledTextCtrl::MarkerSetBackgroundSelected at call 3 with 2 argument(s)");
+				references->AddReference(back0, "wxStyledTextCtrl::MarkerSetBackgroundSelected at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -64207,7 +64207,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyle)
 	//Parameters for overload 0
 	long start0;
 	long end0;
-	zval style0;
+	zval* style0;
 	wxTextAttr* object_pointer0_2 = 0;
 	bool overload0_called = false;
 		
@@ -64224,17 +64224,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyle)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &start0, &end0, &style0, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
-				if(Z_TYPE(style0) == IS_OBJECT)
+				if(Z_TYPE_P(style0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxTextAttr_P(&style0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTextAttr_P(&style0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(style0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(style0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'style' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(style0) != IS_NULL)
+				else if(Z_TYPE_P(style0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'style' not null, could not be retreived correctly.");
 				}
@@ -64258,7 +64258,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyle)
 
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->SetStyle((long) start0, (long) end0, *(wxTextAttr*) object_pointer0_2));
 
-				references->AddReference(&style0, "wxStyledTextCtrl::SetStyle at call 3 with 3 argument(s)");
+				references->AddReference(style0, "wxStyledTextCtrl::SetStyle at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -65153,7 +65153,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetDefaultStyle)
 	#endif
 	
 	//Parameters for overload 0
-	zval style0;
+	zval* style0;
 	wxTextAttr* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -65170,17 +65170,17 @@ PHP_METHOD(php_wxStyledTextCtrl, SetDefaultStyle)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(style0) == IS_OBJECT)
+				if(Z_TYPE_P(style0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxTextAttr_P(&style0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTextAttr_P(&style0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(style0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(style0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'style' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(style0) != IS_NULL)
+				else if(Z_TYPE_P(style0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'style' not null, could not be retreived correctly.");
 				}
@@ -65204,7 +65204,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetDefaultStyle)
 
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->SetDefaultStyle(*(wxTextAttr*) object_pointer0_0));
 
-				references->AddReference(&style0, "wxStyledTextCtrl::SetDefaultStyle at call 3 with 1 argument(s)");
+				references->AddReference(style0, "wxStyledTextCtrl::SetDefaultStyle at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -65275,7 +65275,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyle)
 	
 	//Parameters for overload 0
 	long position0;
-	zval style0;
+	zval* style0;
 	wxTextAttr* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -65292,17 +65292,17 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyle)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &position0, &style0, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(style0) == IS_OBJECT)
+				if(Z_TYPE_P(style0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxTextAttr_P(&style0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTextAttr_P(&style0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(style0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(style0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'style' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(style0) != IS_NULL)
+				else if(Z_TYPE_P(style0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'style' not null, could not be retreived correctly.");
 				}
@@ -65326,7 +65326,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyle)
 
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetStyle((long) position0, *(wxTextAttr*) object_pointer0_1));
 
-				references->AddReference(&style0, "wxStyledTextCtrl::GetStyle at call 3 with 2 argument(s)");
+				references->AddReference(style0, "wxStyledTextCtrl::GetStyle at call 3 with 2 argument(s)");
 
 				return;
 				break;

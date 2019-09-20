@@ -143,17 +143,17 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_2 = 0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_6 = 0;
 	char* name0;
 	long name_len0;
@@ -172,85 +172,85 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxColour*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -274,7 +274,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(&parent0, "wxColourPickerCtrl::Create at call 1 with 2 argument(s)");
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -287,8 +287,8 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2));
 
-				references->AddReference(&parent0, "wxColourPickerCtrl::Create at call 1 with 3 argument(s)");
-				references->AddReference(&colour0, "wxColourPickerCtrl::Create at call 3 with 3 argument(s)");
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 3 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -301,9 +301,9 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(&parent0, "wxColourPickerCtrl::Create at call 1 with 4 argument(s)");
-				references->AddReference(&colour0, "wxColourPickerCtrl::Create at call 3 with 4 argument(s)");
-				references->AddReference(&pos0, "wxColourPickerCtrl::Create at call 3 with 4 argument(s)");
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 4 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 4 argument(s)");
+				references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -316,10 +316,10 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(&parent0, "wxColourPickerCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(&colour0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(&pos0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(&size0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 5 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -332,10 +332,10 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(&parent0, "wxColourPickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(&colour0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(&pos0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(&size0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 6 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -348,11 +348,11 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
-				references->AddReference(&parent0, "wxColourPickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(&colour0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&pos0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&size0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&validator0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 7 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(validator0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -365,11 +365,11 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxColourPickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(&colour0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&pos0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&size0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&validator0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 8 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(validator0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
 
 				return;
 				break;
@@ -546,7 +546,7 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval col0;
+	zval* col0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
@@ -567,17 +567,17 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(col0) == IS_OBJECT)
+				if(Z_TYPE_P(col0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&col0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&col0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(col0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(col0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(col0) != IS_NULL)
+				else if(Z_TYPE_P(col0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -618,7 +618,7 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 
 				((wxColourPickerCtrl_php*)native_object)->SetColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&col0, "wxColourPickerCtrl::SetColour at call 3 with 1 argument(s)");
+				references->AddReference(col0, "wxColourPickerCtrl::SetColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -675,17 +675,17 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 	
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_2 = 0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_6 = 0;
 	char* name0;
 	long name_len0;
@@ -704,85 +704,85 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxColour*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -807,7 +807,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 2 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -819,8 +819,8 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2);
 
 				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 3 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 3 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 3 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -832,9 +832,9 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
 
 				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 4 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 4 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 4 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 4 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 4 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -846,10 +846,10 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 5 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 5 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -861,10 +861,10 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 6 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 6 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -876,11 +876,11 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 7 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 7 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -892,11 +892,11 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 8 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 8 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
+				((wxColourPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
 				break;
 			}
 		}
@@ -987,16 +987,16 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 	
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	time_t dt0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_6 = 0;
 	char* name0;
 	long name_len0;
@@ -1015,68 +1015,68 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -1101,7 +1101,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 2 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -1113,7 +1113,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0));
 
 				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 3 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -1125,8 +1125,8 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3);
 
 				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 4 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 4 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 4 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -1138,9 +1138,9 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 5 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 5 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 5 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 5 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 5 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -1152,9 +1152,9 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 6 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 6 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 6 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 6 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 6 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -1166,10 +1166,10 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 7 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 7 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -1181,10 +1181,10 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 8 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 8 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
+				((wxDatePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
 				break;
 			}
 		}
@@ -1271,16 +1271,16 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	time_t dt0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_6 = 0;
 	char* name0;
 	long name_len0;
@@ -1299,68 +1299,68 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -1384,7 +1384,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(&parent0, "wxDatePickerCtrl::Create at call 1 with 2 argument(s)");
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -1397,7 +1397,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
 
-				references->AddReference(&parent0, "wxDatePickerCtrl::Create at call 1 with 3 argument(s)");
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -1410,8 +1410,8 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(&parent0, "wxDatePickerCtrl::Create at call 1 with 4 argument(s)");
-				references->AddReference(&pos0, "wxDatePickerCtrl::Create at call 3 with 4 argument(s)");
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 4 argument(s)");
+				references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -1424,9 +1424,9 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(&parent0, "wxDatePickerCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(&pos0, "wxDatePickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(&size0, "wxDatePickerCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 5 argument(s)");
+				references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -1439,9 +1439,9 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(&parent0, "wxDatePickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(&pos0, "wxDatePickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(&size0, "wxDatePickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 6 argument(s)");
+				references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -1454,10 +1454,10 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
-				references->AddReference(&parent0, "wxDatePickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(&pos0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&size0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&validator0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 7 argument(s)");
+				references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(validator0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -1470,10 +1470,10 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxDatePickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(&pos0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&size0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&validator0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 8 argument(s)");
+				references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(validator0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
 
 				return;
 				break;
@@ -2001,7 +2001,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	char* path0;
@@ -2010,12 +2010,12 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 	long message_len0;
 	char* wildcard0;
 	long wildcard_len0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_5 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_6 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_8 = 0;
 	char* name0;
 	long name_len0;
@@ -2034,68 +2034,68 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 6){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_5 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_5 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxSize*) argument_native_object;
 					if (!object_pointer0_6 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 9){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_8 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_8 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -2119,7 +2119,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(&parent0, "wxFilePickerCtrl::Create at call 1 with 2 argument(s)");
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -2132,7 +2132,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxFilePickerCtrl::Create at call 1 with 3 argument(s)");
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -2145,7 +2145,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxFilePickerCtrl::Create at call 1 with 4 argument(s)");
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -2158,7 +2158,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxFilePickerCtrl::Create at call 1 with 5 argument(s)");
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 5 argument(s)");
 
 				return;
 				break;
@@ -2171,8 +2171,8 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5));
 
-				references->AddReference(&parent0, "wxFilePickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(&pos0, "wxFilePickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 6 argument(s)");
+				references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -2185,9 +2185,9 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6));
 
-				references->AddReference(&parent0, "wxFilePickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(&pos0, "wxFilePickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&size0, "wxFilePickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 7 argument(s)");
+				references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -2200,9 +2200,9 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0));
 
-				references->AddReference(&parent0, "wxFilePickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(&pos0, "wxFilePickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&size0, "wxFilePickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 8 argument(s)");
+				references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 8 argument(s)");
 
 				return;
 				break;
@@ -2215,10 +2215,10 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8));
 
-				references->AddReference(&parent0, "wxFilePickerCtrl::Create at call 1 with 9 argument(s)");
-				references->AddReference(&pos0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(&size0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(&validator0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 9 argument(s)");
+				references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
+				references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
+				references->AddReference(validator0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
 
 				return;
 				break;
@@ -2231,10 +2231,10 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxFilePickerCtrl::Create at call 1 with 10 argument(s)");
-				references->AddReference(&pos0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
-				references->AddReference(&size0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
-				references->AddReference(&validator0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 10 argument(s)");
+				references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
+				references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
+				references->AddReference(validator0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
 
 				return;
 				break;
@@ -2405,7 +2405,7 @@ PHP_METHOD(php_wxFilePickerCtrl, SetFileName)
 	#endif
 	
 	//Parameters for overload 0
-	zval filename0;
+	zval* filename0;
 	wxFileName* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -2422,17 +2422,17 @@ PHP_METHOD(php_wxFilePickerCtrl, SetFileName)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, php_wxFileName_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(filename0) == IS_OBJECT)
+				if(Z_TYPE_P(filename0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileName_P(&filename0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(&filename0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileName_P(filename0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileName_P(filename0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileName*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'filename' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(filename0) != IS_NULL)
+				else if(Z_TYPE_P(filename0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'filename' not null, could not be retreived correctly.");
 				}
@@ -2456,7 +2456,7 @@ PHP_METHOD(php_wxFilePickerCtrl, SetFileName)
 
 				((wxFilePickerCtrl_php*)native_object)->SetFileName(*(wxFileName*) object_pointer0_0);
 
-				references->AddReference(&filename0, "wxFilePickerCtrl::SetFileName at call 3 with 1 argument(s)");
+				references->AddReference(filename0, "wxFilePickerCtrl::SetFileName at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -2598,7 +2598,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 	
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	char* path0;
@@ -2607,12 +2607,12 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 	long message_len0;
 	char* wildcard0;
 	long wildcard_len0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_5 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_6 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_8 = 0;
 	char* name0;
 	long name_len0;
@@ -2631,68 +2631,68 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 6){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_5 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_5 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxSize*) argument_native_object;
 					if (!object_pointer0_6 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 9){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_8 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_8 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -2717,7 +2717,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 2 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -2729,7 +2729,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 3 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -2741,7 +2741,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 4 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -2753,7 +2753,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 5 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -2765,8 +2765,8 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5);
 
 				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 6 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 6 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 6 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -2778,9 +2778,9 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6);
 
 				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 7 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 7 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 7 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 7 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 7 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -2792,9 +2792,9 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0);
 
 				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 8 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 8 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 8 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 8 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 8 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 8 argument(s)");
 				break;
 			}
 			case 9:
@@ -2806,10 +2806,10 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8);
 
 				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 9 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 9 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
 				break;
 			}
 			case 10:
@@ -2821,10 +2821,10 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 10 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 10 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
+				((wxFilePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
 				break;
 			}
 		}
@@ -3053,19 +3053,19 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	char* path0;
 	long path_len0;
 	char* message0;
 	long message_len0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_4 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_5 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_7 = 0;
 	char* name0;
 	long name_len0;
@@ -3084,68 +3084,68 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 6){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_5 = (wxSize*) argument_native_object;
 					if (!object_pointer0_5 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 8){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_7 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -3169,7 +3169,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(&parent0, "wxDirPickerCtrl::Create at call 1 with 2 argument(s)");
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -3182,7 +3182,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxDirPickerCtrl::Create at call 1 with 3 argument(s)");
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -3195,7 +3195,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxDirPickerCtrl::Create at call 1 with 4 argument(s)");
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -3208,8 +3208,8 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4));
 
-				references->AddReference(&parent0, "wxDirPickerCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(&pos0, "wxDirPickerCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 5 argument(s)");
+				references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -3222,9 +3222,9 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5));
 
-				references->AddReference(&parent0, "wxDirPickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(&pos0, "wxDirPickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(&size0, "wxDirPickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 6 argument(s)");
+				references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -3237,9 +3237,9 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0));
 
-				references->AddReference(&parent0, "wxDirPickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(&pos0, "wxDirPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&size0, "wxDirPickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 7 argument(s)");
+				references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -3252,10 +3252,10 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7));
 
-				references->AddReference(&parent0, "wxDirPickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(&pos0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&size0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&validator0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 8 argument(s)");
+				references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(validator0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
 
 				return;
 				break;
@@ -3268,10 +3268,10 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxDirPickerCtrl::Create at call 1 with 9 argument(s)");
-				references->AddReference(&pos0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(&size0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(&validator0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 9 argument(s)");
+				references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
+				references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
+				references->AddReference(validator0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
 
 				return;
 				break;
@@ -3547,7 +3547,7 @@ PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
 	#endif
 	
 	//Parameters for overload 0
-	zval dirname0;
+	zval* dirname0;
 	wxFileName* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -3564,17 +3564,17 @@ PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dirname0, php_wxFileName_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(dirname0) == IS_OBJECT)
+				if(Z_TYPE_P(dirname0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFileName_P(&dirname0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(&dirname0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFileName_P(dirname0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileName_P(dirname0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileName*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'dirname' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(dirname0) != IS_NULL)
+				else if(Z_TYPE_P(dirname0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'dirname' not null, could not be retreived correctly.");
 				}
@@ -3598,7 +3598,7 @@ PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
 
 				((wxDirPickerCtrl_php*)native_object)->SetDirName(*(wxFileName*) object_pointer0_0);
 
-				references->AddReference(&dirname0, "wxDirPickerCtrl::SetDirName at call 3 with 1 argument(s)");
+				references->AddReference(dirname0, "wxDirPickerCtrl::SetDirName at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -3740,19 +3740,19 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 	
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	char* path0;
 	long path_len0;
 	char* message0;
 	long message_len0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_4 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_5 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_7 = 0;
 	char* name0;
 	long name_len0;
@@ -3771,68 +3771,68 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 6){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_5 = (wxSize*) argument_native_object;
 					if (!object_pointer0_5 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 8){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_7 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -3857,7 +3857,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 2 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -3869,7 +3869,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 3 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -3881,7 +3881,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 4 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -3893,8 +3893,8 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4);
 
 				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 5 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 5 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 5 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -3906,9 +3906,9 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5);
 
 				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 6 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 6 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 6 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 6 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 6 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -3920,9 +3920,9 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0);
 
 				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 7 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 7 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 7 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 7 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 7 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -3934,10 +3934,10 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7);
 
 				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 8 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 8 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
 				break;
 			}
 			case 9:
@@ -3949,10 +3949,10 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 9 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 9 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
+				((wxDirPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
 				break;
 			}
 		}
@@ -4076,17 +4076,17 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_2 = 0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_6 = 0;
 	char* name0;
 	long name_len0;
@@ -4105,85 +4105,85 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxFont*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -4207,7 +4207,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(&parent0, "wxFontPickerCtrl::Create at call 1 with 2 argument(s)");
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -4220,8 +4220,8 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2));
 
-				references->AddReference(&parent0, "wxFontPickerCtrl::Create at call 1 with 3 argument(s)");
-				references->AddReference(&font0, "wxFontPickerCtrl::Create at call 3 with 3 argument(s)");
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 3 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -4234,9 +4234,9 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(&parent0, "wxFontPickerCtrl::Create at call 1 with 4 argument(s)");
-				references->AddReference(&font0, "wxFontPickerCtrl::Create at call 3 with 4 argument(s)");
-				references->AddReference(&pos0, "wxFontPickerCtrl::Create at call 3 with 4 argument(s)");
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 4 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 4 argument(s)");
+				references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -4249,10 +4249,10 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(&parent0, "wxFontPickerCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(&font0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(&pos0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(&size0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 5 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -4265,10 +4265,10 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(&parent0, "wxFontPickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(&font0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(&pos0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(&size0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 6 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -4281,11 +4281,11 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
-				references->AddReference(&parent0, "wxFontPickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(&font0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&pos0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&size0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&validator0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 7 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(validator0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -4298,11 +4298,11 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxFontPickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(&font0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&pos0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&size0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&validator0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 8 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(validator0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
 
 				return;
 				break;
@@ -4680,7 +4680,7 @@ PHP_METHOD(php_wxFontPickerCtrl, SetSelectedFont)
 	#endif
 	
 	//Parameters for overload 0
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -4697,17 +4697,17 @@ PHP_METHOD(php_wxFontPickerCtrl, SetSelectedFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -4731,7 +4731,7 @@ PHP_METHOD(php_wxFontPickerCtrl, SetSelectedFont)
 
 				((wxFontPickerCtrl_php*)native_object)->SetSelectedFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(&font0, "wxFontPickerCtrl::SetSelectedFont at call 3 with 1 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::SetSelectedFont at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -4769,17 +4769,17 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 	
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
-	zval font0;
+	zval* font0;
 	wxFont* object_pointer0_2 = 0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_6 = 0;
 	char* name0;
 	long name_len0;
@@ -4798,85 +4798,85 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(font0) == IS_OBJECT)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxFont*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(font0) != IS_NULL)
+				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -4901,7 +4901,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 2 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -4913,8 +4913,8 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2);
 
 				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 3 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 3 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 3 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -4926,9 +4926,9 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
 
 				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 4 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 4 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 4 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 4 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 4 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -4940,10 +4940,10 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 5 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 5 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -4955,10 +4955,10 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 6 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 6 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -4970,11 +4970,11 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 7 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 7 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -4986,11 +4986,11 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 8 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 8 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
+				((wxFontPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
 				break;
 			}
 		}
@@ -6988,16 +6988,16 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 	
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	time_t dt0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_6 = 0;
 	char* name0;
 	long name_len0;
@@ -7016,68 +7016,68 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -7102,7 +7102,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 2 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -7114,7 +7114,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0));
 
 				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 3 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -7126,8 +7126,8 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3);
 
 				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 4 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 4 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 4 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -7139,9 +7139,9 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 5 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 5 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 5 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 5 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 5 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -7153,9 +7153,9 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 6 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 6 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 6 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 6 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 6 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -7167,10 +7167,10 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 7 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 7 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -7182,10 +7182,10 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 8 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(&validator0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 8 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
+				((wxTimePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
 				break;
 			}
 		}
@@ -7272,16 +7272,16 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	time_t dt0;
-	zval pos0;
+	zval* pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval size0;
+	zval* size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
-	zval validator0;
+	zval* validator0;
 	wxValidator* object_pointer0_6 = 0;
 	char* name0;
 	long name_len0;
@@ -7300,68 +7300,68 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(pos0) == IS_OBJECT)
+				if(Z_TYPE_P(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pos0) != IS_NULL)
+				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(size0) == IS_OBJECT)
+				if(Z_TYPE_P(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(size0) != IS_NULL)
+				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE(validator0) == IS_OBJECT)
+				if(Z_TYPE_P(validator0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxValidator_P(&validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(&validator0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
 					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(validator0) != IS_NULL)
+				else if(Z_TYPE_P(validator0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
 				}
@@ -7385,7 +7385,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(&parent0, "wxTimePickerCtrl::Create at call 1 with 2 argument(s)");
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -7398,7 +7398,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
 
-				references->AddReference(&parent0, "wxTimePickerCtrl::Create at call 1 with 3 argument(s)");
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -7411,8 +7411,8 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(&parent0, "wxTimePickerCtrl::Create at call 1 with 4 argument(s)");
-				references->AddReference(&pos0, "wxTimePickerCtrl::Create at call 3 with 4 argument(s)");
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 4 argument(s)");
+				references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -7425,9 +7425,9 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(&parent0, "wxTimePickerCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(&pos0, "wxTimePickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(&size0, "wxTimePickerCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 5 argument(s)");
+				references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 5 argument(s)");
+				references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -7440,9 +7440,9 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(&parent0, "wxTimePickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(&pos0, "wxTimePickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(&size0, "wxTimePickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 6 argument(s)");
+				references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 6 argument(s)");
+				references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -7455,10 +7455,10 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
-				references->AddReference(&parent0, "wxTimePickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(&pos0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&size0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(&validator0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 7 argument(s)");
+				references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
+				references->AddReference(validator0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -7471,10 +7471,10 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(&parent0, "wxTimePickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(&pos0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&size0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(&validator0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 8 argument(s)");
+				references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
+				references->AddReference(validator0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
 
 				return;
 				break;

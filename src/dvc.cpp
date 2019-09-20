@@ -350,7 +350,7 @@ PHP_METHOD(php_wxDataViewChoiceRenderer, __construct)
 	
 	
 	//Parameters for overload 0
-	zval choices0;
+	zval* choices0;
 	long mode0;
 	long alignment0;
 	bool overload0_called = false;
@@ -386,7 +386,7 @@ PHP_METHOD(php_wxDataViewChoiceRenderer, __construct)
 				zval* temp_array_value0_0 = 0;
 				while(strings_continue0_0)
 				{
-					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(&choices0), array_index0_0)) != NULL)
+					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(choices0), array_index0_0)) != NULL)
 					{
 						convert_to_string(temp_array_value0_0);
 						strings_array0_0.Add(wxString(Z_STRVAL_P(temp_array_value0_0), wxConvUTF8));
@@ -412,7 +412,7 @@ PHP_METHOD(php_wxDataViewChoiceRenderer, __construct)
 				zval* temp_array_value0_0 = 0;
 				while(strings_continue0_0)
 				{
-					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(&choices0), array_index0_0)) != NULL)
+					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(choices0), array_index0_0)) != NULL)
 					{
 						convert_to_string(temp_array_value0_0);
 						strings_array0_0.Add(wxString(Z_STRVAL_P(temp_array_value0_0), wxConvUTF8));
@@ -438,7 +438,7 @@ PHP_METHOD(php_wxDataViewChoiceRenderer, __construct)
 				zval* temp_array_value0_0 = 0;
 				while(strings_continue0_0)
 				{
-					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(&choices0), array_index0_0)) != NULL)
+					if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(choices0), array_index0_0)) != NULL)
 					{
 						convert_to_string(temp_array_value0_0);
 						strings_array0_0.Add(wxString(Z_STRVAL_P(temp_array_value0_0), wxConvUTF8));
@@ -600,7 +600,7 @@ PHP_METHOD(php_wxDataViewModel, AddNotifier)
 	#endif
 	
 	//Parameters for overload 0
-	zval notifier0;
+	zval* notifier0;
 	wxDataViewModelNotifier* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -617,17 +617,17 @@ PHP_METHOD(php_wxDataViewModel, AddNotifier)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &notifier0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(notifier0) == IS_OBJECT)
+				if(Z_TYPE_P(notifier0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewModelNotifier_P(&notifier0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewModelNotifier_P(&notifier0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewModelNotifier_P(notifier0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewModelNotifier_P(notifier0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewModelNotifier*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXDATAVIEWMODELNOTIFIER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'notifier' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(notifier0) != IS_NULL)
+				else if(Z_TYPE_P(notifier0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'notifier' not null, could not be retreived correctly.");
 				}
@@ -674,7 +674,7 @@ PHP_METHOD(php_wxDataViewModel, AddNotifier)
 					((wxDataViewModel_php*)native_object)->AddNotifier((wxDataViewModelNotifier*) object_pointer0_0);
 				}
 
-				references->AddReference(&notifier0, "wxDataViewModel::AddNotifier at call 1 with 1 argument(s)");
+				references->AddReference(notifier0, "wxDataViewModel::AddNotifier at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -765,9 +765,9 @@ PHP_METHOD(php_wxDataViewModel, ChangeValue)
 	#endif
 	
 	//Parameters for overload 0
-	zval variant0;
+	zval* variant0;
 	wxVariant* object_pointer0_0 = 0;
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_1 = 0;
 	long col0;
 	bool overload0_called = false;
@@ -785,34 +785,34 @@ PHP_METHOD(php_wxDataViewModel, ChangeValue)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &variant0, php_wxVariant_entry, &item0, php_wxDataViewItem_entry, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(variant0) == IS_OBJECT)
+				if(Z_TYPE_P(variant0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariant_P(&variant0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariant_P(&variant0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariant_P(variant0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariant_P(variant0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxVariant*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'variant' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(variant0) != IS_NULL)
+				else if(Z_TYPE_P(variant0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'variant' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -859,8 +859,8 @@ PHP_METHOD(php_wxDataViewModel, ChangeValue)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)native_object)->ChangeValue(*(wxVariant*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1, (unsigned int) col0));
 				}
 
-				references->AddReference(&variant0, "wxDataViewModel::ChangeValue at call 3 with 3 argument(s)");
-				references->AddReference(&item0, "wxDataViewModel::ChangeValue at call 3 with 3 argument(s)");
+				references->AddReference(variant0, "wxDataViewModel::ChangeValue at call 3 with 3 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::ChangeValue at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -1092,9 +1092,9 @@ PHP_METHOD(php_wxDataViewModel, Compare)
 	#endif
 	
 	//Parameters for overload 0
-	zval item10;
+	zval* item10;
 	wxDataViewItem* object_pointer0_0 = 0;
-	zval item20;
+	zval* item20;
 	wxDataViewItem* object_pointer0_1 = 0;
 	long column0;
 	bool ascending0;
@@ -1113,34 +1113,34 @@ PHP_METHOD(php_wxDataViewModel, Compare)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item10, php_wxDataViewItem_entry, &item20, php_wxDataViewItem_entry, &column0, &ascending0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item10) == IS_OBJECT)
+				if(Z_TYPE_P(item10) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item10 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item10 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item10 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item10 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item1' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item10) != IS_NULL)
+				else if(Z_TYPE_P(item10) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item1' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(item20) == IS_OBJECT)
+				if(Z_TYPE_P(item20) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item20 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item20 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item20 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item20 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'item2' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item20) != IS_NULL)
+				else if(Z_TYPE_P(item20) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item2' not null, could not be retreived correctly.");
 				}
@@ -1187,8 +1187,8 @@ PHP_METHOD(php_wxDataViewModel, Compare)
 					ZVAL_LONG(return_value, ((wxDataViewModel_php*)native_object)->Compare(*(wxDataViewItem*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1, (unsigned int) column0, ascending0));
 				}
 
-				references->AddReference(&item10, "wxDataViewModel::Compare at call 3 with 4 argument(s)");
-				references->AddReference(&item20, "wxDataViewModel::Compare at call 3 with 4 argument(s)");
+				references->AddReference(item10, "wxDataViewModel::Compare at call 3 with 4 argument(s)");
+				references->AddReference(item20, "wxDataViewModel::Compare at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -1279,10 +1279,10 @@ PHP_METHOD(php_wxDataViewModel, GetAttr)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	long col0;
-	zval attr0;
+	zval* attr0;
 	wxDataViewItemAttr* object_pointer0_2 = 0;
 	bool overload0_called = false;
 		
@@ -1299,34 +1299,34 @@ PHP_METHOD(php_wxDataViewModel, GetAttr)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry, &col0, &attr0, php_wxDataViewItemAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(attr0) == IS_OBJECT)
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItemAttr_P(&attr0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItemAttr_P(&attr0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItemAttr_P(attr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItemAttr_P(attr0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxDataViewItemAttr*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(attr0) != IS_NULL)
+				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'attr' not null, could not be retreived correctly.");
 				}
@@ -1373,8 +1373,8 @@ PHP_METHOD(php_wxDataViewModel, GetAttr)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)native_object)->GetAttr(*(wxDataViewItem*) object_pointer0_0, (unsigned int) col0, *(wxDataViewItemAttr*) object_pointer0_2));
 				}
 
-				references->AddReference(&item0, "wxDataViewModel::GetAttr at call 3 with 3 argument(s)");
-				references->AddReference(&attr0, "wxDataViewModel::GetAttr at call 3 with 3 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::GetAttr at call 3 with 3 argument(s)");
+				references->AddReference(attr0, "wxDataViewModel::GetAttr at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -1750,7 +1750,7 @@ PHP_METHOD(php_wxDataViewModel, HasContainerColumns)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1767,17 +1767,17 @@ PHP_METHOD(php_wxDataViewModel, HasContainerColumns)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -1824,7 +1824,7 @@ PHP_METHOD(php_wxDataViewModel, HasContainerColumns)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)native_object)->HasContainerColumns(*(wxDataViewItem*) object_pointer0_0));
 				}
 
-				references->AddReference(&item0, "wxDataViewModel::HasContainerColumns at call 3 with 1 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::HasContainerColumns at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -2056,7 +2056,7 @@ PHP_METHOD(php_wxDataViewModel, HasValue)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	long col0;
 	bool overload0_called = false;
@@ -2074,17 +2074,17 @@ PHP_METHOD(php_wxDataViewModel, HasValue)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -2131,7 +2131,7 @@ PHP_METHOD(php_wxDataViewModel, HasValue)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)native_object)->HasValue(*(wxDataViewItem*) object_pointer0_0, (unsigned) col0));
 				}
 
-				references->AddReference(&item0, "wxDataViewModel::HasValue at call 3 with 2 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::HasValue at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -2293,7 +2293,7 @@ PHP_METHOD(php_wxDataViewModel, IsEnabled)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	long col0;
 	bool overload0_called = false;
@@ -2311,17 +2311,17 @@ PHP_METHOD(php_wxDataViewModel, IsEnabled)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -2368,7 +2368,7 @@ PHP_METHOD(php_wxDataViewModel, IsEnabled)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)native_object)->IsEnabled(*(wxDataViewItem*) object_pointer0_0, (unsigned int) col0));
 				}
 
-				references->AddReference(&item0, "wxDataViewModel::IsEnabled at call 3 with 2 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::IsEnabled at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -2459,9 +2459,9 @@ PHP_METHOD(php_wxDataViewModel, ItemAdded)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxDataViewItem* object_pointer0_0 = 0;
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -2478,34 +2478,34 @@ PHP_METHOD(php_wxDataViewModel, ItemAdded)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, php_wxDataViewItem_entry, &item0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -2552,8 +2552,8 @@ PHP_METHOD(php_wxDataViewModel, ItemAdded)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)native_object)->ItemAdded(*(wxDataViewItem*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1));
 				}
 
-				references->AddReference(&parent0, "wxDataViewModel::ItemAdded at call 3 with 2 argument(s)");
-				references->AddReference(&item0, "wxDataViewModel::ItemAdded at call 3 with 2 argument(s)");
+				references->AddReference(parent0, "wxDataViewModel::ItemAdded at call 3 with 2 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::ItemAdded at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -2644,7 +2644,7 @@ PHP_METHOD(php_wxDataViewModel, ItemChanged)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -2661,17 +2661,17 @@ PHP_METHOD(php_wxDataViewModel, ItemChanged)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -2718,7 +2718,7 @@ PHP_METHOD(php_wxDataViewModel, ItemChanged)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)native_object)->ItemChanged(*(wxDataViewItem*) object_pointer0_0));
 				}
 
-				references->AddReference(&item0, "wxDataViewModel::ItemChanged at call 3 with 1 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::ItemChanged at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -2809,9 +2809,9 @@ PHP_METHOD(php_wxDataViewModel, ItemDeleted)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxDataViewItem* object_pointer0_0 = 0;
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -2828,34 +2828,34 @@ PHP_METHOD(php_wxDataViewModel, ItemDeleted)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, php_wxDataViewItem_entry, &item0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -2902,8 +2902,8 @@ PHP_METHOD(php_wxDataViewModel, ItemDeleted)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)native_object)->ItemDeleted(*(wxDataViewItem*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1));
 				}
 
-				references->AddReference(&parent0, "wxDataViewModel::ItemDeleted at call 3 with 2 argument(s)");
-				references->AddReference(&item0, "wxDataViewModel::ItemDeleted at call 3 with 2 argument(s)");
+				references->AddReference(parent0, "wxDataViewModel::ItemDeleted at call 3 with 2 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::ItemDeleted at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -2994,7 +2994,7 @@ PHP_METHOD(php_wxDataViewModel, RemoveNotifier)
 	#endif
 	
 	//Parameters for overload 0
-	zval notifier0;
+	zval* notifier0;
 	wxDataViewModelNotifier* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -3011,17 +3011,17 @@ PHP_METHOD(php_wxDataViewModel, RemoveNotifier)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &notifier0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(notifier0) == IS_OBJECT)
+				if(Z_TYPE_P(notifier0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewModelNotifier_P(&notifier0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewModelNotifier_P(&notifier0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewModelNotifier_P(notifier0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewModelNotifier_P(notifier0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewModelNotifier*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXDATAVIEWMODELNOTIFIER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'notifier' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(notifier0) != IS_NULL)
+				else if(Z_TYPE_P(notifier0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'notifier' not null, could not be retreived correctly.");
 				}
@@ -3068,7 +3068,7 @@ PHP_METHOD(php_wxDataViewModel, RemoveNotifier)
 					((wxDataViewModel_php*)native_object)->RemoveNotifier((wxDataViewModelNotifier*) object_pointer0_0);
 				}
 
-				references->AddReference(&notifier0, "wxDataViewModel::RemoveNotifier at call 1 with 1 argument(s)");
+				references->AddReference(notifier0, "wxDataViewModel::RemoveNotifier at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -3374,7 +3374,7 @@ PHP_METHOD(php_wxDataViewModel, ValueChanged)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	long col0;
 	bool overload0_called = false;
@@ -3392,17 +3392,17 @@ PHP_METHOD(php_wxDataViewModel, ValueChanged)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -3449,7 +3449,7 @@ PHP_METHOD(php_wxDataViewModel, ValueChanged)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)native_object)->ValueChanged(*(wxDataViewItem*) object_pointer0_0, (unsigned int) col0));
 				}
 
-				references->AddReference(&item0, "wxDataViewModel::ValueChanged at call 3 with 2 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::ValueChanged at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -3602,7 +3602,7 @@ PHP_METHOD(php_wxDataViewListModel, GetAttrByRow)
 	//Parameters for overload 0
 	long row0;
 	long col0;
-	zval attr0;
+	zval* attr0;
 	wxDataViewItemAttr* object_pointer0_2 = 0;
 	bool overload0_called = false;
 		
@@ -3619,17 +3619,17 @@ PHP_METHOD(php_wxDataViewListModel, GetAttrByRow)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &attr0, php_wxDataViewItemAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
-				if(Z_TYPE(attr0) == IS_OBJECT)
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItemAttr_P(&attr0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItemAttr_P(&attr0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItemAttr_P(attr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItemAttr_P(attr0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxDataViewItemAttr*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(attr0) != IS_NULL)
+				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'attr' not null, could not be retreived correctly.");
 				}
@@ -3668,7 +3668,7 @@ PHP_METHOD(php_wxDataViewListModel, GetAttrByRow)
 					ZVAL_BOOL(return_value, ((wxDataViewListModel_php*)native_object)->GetAttrByRow((unsigned int) row0, (unsigned int) col0, *(wxDataViewItemAttr*) object_pointer0_2));
 				}
 
-				references->AddReference(&attr0, "wxDataViewListModel::GetAttrByRow at call 3 with 3 argument(s)");
+				references->AddReference(attr0, "wxDataViewListModel::GetAttrByRow at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -4454,7 +4454,7 @@ PHP_METHOD(php_wxDataViewItemAttr, SetColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval colour0;
+	zval* colour0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -4471,17 +4471,17 @@ PHP_METHOD(php_wxDataViewItemAttr, SetColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(colour0) == IS_OBJECT)
+				if(Z_TYPE_P(colour0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxColour_P(&colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(&colour0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(colour0) != IS_NULL)
+				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
 				}
@@ -4505,7 +4505,7 @@ PHP_METHOD(php_wxDataViewItemAttr, SetColour)
 
 				((wxDataViewItemAttr_php*)native_object)->SetColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(&colour0, "wxDataViewItemAttr::SetColour at call 3 with 1 argument(s)");
+				references->AddReference(colour0, "wxDataViewItemAttr::SetColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -4994,7 +4994,7 @@ PHP_METHOD(php_wxDataViewItem, __construct)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval item1;
+	zval* item1;
 	wxDataViewItem* object_pointer1_0 = 0;
 	bool overload1_called = false;
 	//Parameters for overload 2
@@ -5029,17 +5029,17 @@ PHP_METHOD(php_wxDataViewItem, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item1) == IS_OBJECT)
+				if(Z_TYPE_P(item1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE(item1) != IS_NULL)
+				else if(Z_TYPE_P(item1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -5102,7 +5102,7 @@ PHP_METHOD(php_wxDataViewItem, __construct)
 				native_object = new wxDataViewItem_php(*(wxDataViewItem*) object_pointer1_0);
 
 				native_object->references.Initialize();
-				((wxDataViewItem_php*) native_object)->references.AddReference(&item1, "wxDataViewItem::wxDataViewItem at call 4 with 1 argument(s)");
+				((wxDataViewItem_php*) native_object)->references.AddReference(item1, "wxDataViewItem::wxDataViewItem at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -5733,7 +5733,7 @@ PHP_METHOD(php_wxDataViewModelNotifier, SetOwner)
 	#endif
 	
 	//Parameters for overload 0
-	zval owner0;
+	zval* owner0;
 	wxDataViewModel* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -5750,17 +5750,17 @@ PHP_METHOD(php_wxDataViewModelNotifier, SetOwner)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &owner0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(owner0) == IS_OBJECT)
+				if(Z_TYPE_P(owner0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewModel_P(&owner0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewModel_P(&owner0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewModel_P(owner0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewModel_P(owner0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewModel*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXDATAVIEWMODEL_TYPE && argument_type != PHP_WXDATAVIEWLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWINDEXLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWLISTSTORE_TYPE && argument_type != PHP_WXDATAVIEWVIRTUALLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWTREESTORE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'owner' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(owner0) != IS_NULL)
+				else if(Z_TYPE_P(owner0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'owner' not null, could not be retreived correctly.");
 				}
@@ -5784,7 +5784,7 @@ PHP_METHOD(php_wxDataViewModelNotifier, SetOwner)
 
 				((wxDataViewModelNotifier_php*)native_object)->SetOwner((wxDataViewModel*) object_pointer0_0);
 
-				references->AddReference(&owner0, "wxDataViewModelNotifier::SetOwner at call 1 with 1 argument(s)");
+				references->AddReference(owner0, "wxDataViewModelNotifier::SetOwner at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -7663,7 +7663,7 @@ PHP_METHOD(php_wxDataViewRenderer, SetOwner)
 	#endif
 	
 	//Parameters for overload 0
-	zval owner0;
+	zval* owner0;
 	wxDataViewColumn* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -7680,17 +7680,17 @@ PHP_METHOD(php_wxDataViewRenderer, SetOwner)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &owner0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(owner0) == IS_OBJECT)
+				if(Z_TYPE_P(owner0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewColumn_P(&owner0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewColumn_P(&owner0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewColumn_P(owner0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewColumn_P(owner0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewColumn*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXDATAVIEWCOLUMN_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'owner' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(owner0) != IS_NULL)
+				else if(Z_TYPE_P(owner0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'owner' not null, could not be retreived correctly.");
 				}
@@ -7753,7 +7753,7 @@ PHP_METHOD(php_wxDataViewRenderer, SetOwner)
 					((wxDataViewRenderer_php*)native_object)->SetOwner((wxDataViewColumn*) object_pointer0_0);
 				}
 
-				references->AddReference(&owner0, "wxDataViewRenderer::SetOwner at call 1 with 1 argument(s)");
+				references->AddReference(owner0, "wxDataViewRenderer::SetOwner at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -7931,7 +7931,7 @@ PHP_METHOD(php_wxDataViewRenderer, Validate)
 	#endif
 	
 	//Parameters for overload 0
-	zval value0;
+	zval* value0;
 	wxVariant* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -7948,17 +7948,17 @@ PHP_METHOD(php_wxDataViewRenderer, Validate)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, php_wxVariant_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(value0) == IS_OBJECT)
+				if(Z_TYPE_P(value0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariant_P(&value0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariant_P(&value0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariant_P(value0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariant_P(value0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxVariant*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'value' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(value0) != IS_NULL)
+				else if(Z_TYPE_P(value0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'value' not null, could not be retreived correctly.");
 				}
@@ -8021,7 +8021,7 @@ PHP_METHOD(php_wxDataViewRenderer, Validate)
 					ZVAL_BOOL(return_value, ((wxDataViewRenderer_php*)native_object)->Validate(*(wxVariant*) object_pointer0_0));
 				}
 
-				references->AddReference(&value0, "wxDataViewRenderer::Validate at call 3 with 1 argument(s)");
+				references->AddReference(value0, "wxDataViewRenderer::Validate at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -9312,14 +9312,14 @@ PHP_METHOD(php_wxDataViewCustomRenderer, ActivateCell)
 	#endif
 	
 	//Parameters for overload 0
-	zval cell0;
+	zval* cell0;
 	wxRect* object_pointer0_0 = 0;
-	zval model0;
+	zval* model0;
 	wxDataViewModel* object_pointer0_1 = 0;
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_2 = 0;
 	long col0;
-	zval mouseEvent0;
+	zval* mouseEvent0;
 	wxMouseEvent* object_pointer0_4 = 0;
 	bool overload0_called = false;
 		
@@ -9336,68 +9336,68 @@ PHP_METHOD(php_wxDataViewCustomRenderer, ActivateCell)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cell0, php_wxRect_entry, &model0, &item0, php_wxDataViewItem_entry, &col0, &mouseEvent0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(cell0) == IS_OBJECT)
+				if(Z_TYPE_P(cell0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&cell0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&cell0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(cell0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(cell0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxRect*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'cell' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(cell0) != IS_NULL)
+				else if(Z_TYPE_P(cell0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'cell' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(model0) == IS_OBJECT)
+				if(Z_TYPE_P(model0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewModel_P(&model0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewModel_P(&model0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewModel_P(model0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewModel_P(model0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxDataViewModel*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXDATAVIEWMODEL_TYPE && argument_type != PHP_WXDATAVIEWLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWINDEXLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWLISTSTORE_TYPE && argument_type != PHP_WXDATAVIEWVIRTUALLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWTREESTORE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'model' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(model0) != IS_NULL)
+				else if(Z_TYPE_P(model0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'model' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(mouseEvent0) == IS_OBJECT)
+				if(Z_TYPE_P(mouseEvent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxMouseEvent_P(&mouseEvent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxMouseEvent_P(&mouseEvent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxMouseEvent_P(mouseEvent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMouseEvent_P(mouseEvent0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxMouseEvent*) argument_native_object;
 					if (!object_pointer0_4 || (argument_type != PHP_WXMOUSEEVENT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'mouseEvent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(mouseEvent0) != IS_NULL)
+				else if(Z_TYPE_P(mouseEvent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'mouseEvent' not null, could not be retreived correctly.");
 				}
@@ -9428,10 +9428,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, ActivateCell)
 					ZVAL_BOOL(return_value, ((wxDataViewCustomRenderer_php*)native_object)->ActivateCell(*(wxRect*) object_pointer0_0, (wxDataViewModel*) object_pointer0_1, *(wxDataViewItem*) object_pointer0_2, (unsigned int) col0, (const wxMouseEvent*) object_pointer0_4));
 				}
 
-				references->AddReference(&cell0, "wxDataViewCustomRenderer::ActivateCell at call 3 with 5 argument(s)");
-				references->AddReference(&model0, "wxDataViewCustomRenderer::ActivateCell at call 1 with 5 argument(s)");
-				references->AddReference(&item0, "wxDataViewCustomRenderer::ActivateCell at call 3 with 5 argument(s)");
-				references->AddReference(&mouseEvent0, "wxDataViewCustomRenderer::ActivateCell at call 1 with 5 argument(s)");
+				references->AddReference(cell0, "wxDataViewCustomRenderer::ActivateCell at call 3 with 5 argument(s)");
+				references->AddReference(model0, "wxDataViewCustomRenderer::ActivateCell at call 1 with 5 argument(s)");
+				references->AddReference(item0, "wxDataViewCustomRenderer::ActivateCell at call 3 with 5 argument(s)");
+				references->AddReference(mouseEvent0, "wxDataViewCustomRenderer::ActivateCell at call 1 with 5 argument(s)");
 
 				return;
 				break;
@@ -9506,11 +9506,11 @@ PHP_METHOD(php_wxDataViewCustomRenderer, CreateEditorCtrl)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxWindow* object_pointer0_0 = 0;
-	zval labelRect0;
+	zval* labelRect0;
 	wxRect* object_pointer0_1 = 0;
-	zval value0;
+	zval* value0;
 	wxVariant* object_pointer0_2 = 0;
 	bool overload0_called = false;
 		
@@ -9527,51 +9527,51 @@ PHP_METHOD(php_wxDataViewCustomRenderer, CreateEditorCtrl)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &labelRect0, php_wxRect_entry, &value0, php_wxVariant_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(labelRect0) == IS_OBJECT)
+				if(Z_TYPE_P(labelRect0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&labelRect0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&labelRect0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(labelRect0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(labelRect0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxRect*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'labelRect' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(labelRect0) != IS_NULL)
+				else if(Z_TYPE_P(labelRect0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'labelRect' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(value0) == IS_OBJECT)
+				if(Z_TYPE_P(value0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariant_P(&value0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariant_P(&value0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariant_P(value0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariant_P(value0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxVariant*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'value' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(value0) != IS_NULL)
+				else if(Z_TYPE_P(value0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'value' not null, could not be retreived correctly.");
 				}
@@ -9626,8 +9626,8 @@ PHP_METHOD(php_wxDataViewCustomRenderer, CreateEditorCtrl)
 					references->AddReference(return_value, "wxDataViewCustomRenderer::CreateEditorCtrl at call 5 with 3 argument(s)");
 				}
 
-				references->AddReference(&parent0, "wxDataViewCustomRenderer::CreateEditorCtrl at call 1 with 3 argument(s)");
-				references->AddReference(&value0, "wxDataViewCustomRenderer::CreateEditorCtrl at call 3 with 3 argument(s)");
+				references->AddReference(parent0, "wxDataViewCustomRenderer::CreateEditorCtrl at call 1 with 3 argument(s)");
+				references->AddReference(value0, "wxDataViewCustomRenderer::CreateEditorCtrl at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -9902,9 +9902,9 @@ PHP_METHOD(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl)
 	#endif
 	
 	//Parameters for overload 0
-	zval editor0;
+	zval* editor0;
 	wxWindow* object_pointer0_0 = 0;
-	zval value0;
+	zval* value0;
 	wxVariant* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -9921,34 +9921,34 @@ PHP_METHOD(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &editor0, &value0, php_wxVariant_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(editor0) == IS_OBJECT)
+				if(Z_TYPE_P(editor0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&editor0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&editor0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(editor0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(editor0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'editor' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(editor0) != IS_NULL)
+				else if(Z_TYPE_P(editor0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'editor' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(value0) == IS_OBJECT)
+				if(Z_TYPE_P(value0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariant_P(&value0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariant_P(&value0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariant_P(value0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariant_P(value0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxVariant*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'value' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(value0) != IS_NULL)
+				else if(Z_TYPE_P(value0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'value' not null, could not be retreived correctly.");
 				}
@@ -9979,8 +9979,8 @@ PHP_METHOD(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl)
 					ZVAL_BOOL(return_value, ((wxDataViewCustomRenderer_php*)native_object)->GetValueFromEditorCtrl((wxWindow*) object_pointer0_0, *(wxVariant*) object_pointer0_1));
 				}
 
-				references->AddReference(&editor0, "wxDataViewCustomRenderer::GetValueFromEditorCtrl at call 1 with 2 argument(s)");
-				references->AddReference(&value0, "wxDataViewCustomRenderer::GetValueFromEditorCtrl at call 3 with 2 argument(s)");
+				references->AddReference(editor0, "wxDataViewCustomRenderer::GetValueFromEditorCtrl at call 1 with 2 argument(s)");
+				references->AddReference(value0, "wxDataViewCustomRenderer::GetValueFromEditorCtrl at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -10241,9 +10241,9 @@ PHP_METHOD(php_wxDataViewCustomRenderer, RenderText)
 	char* text0;
 	long text_len0;
 	long xoffset0;
-	zval cell0;
+	zval* cell0;
 	wxRect* object_pointer0_2 = 0;
-	zval dc0;
+	zval* dc0;
 	wxDC* object_pointer0_3 = 0;
 	long state0;
 	bool overload0_called = false;
@@ -10261,34 +10261,34 @@ PHP_METHOD(php_wxDataViewCustomRenderer, RenderText)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0, &xoffset0, &cell0, php_wxRect_entry, &dc0, &state0 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
-				if(Z_TYPE(cell0) == IS_OBJECT)
+				if(Z_TYPE_P(cell0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&cell0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&cell0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(cell0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(cell0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxRect*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'cell' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(cell0) != IS_NULL)
+				else if(Z_TYPE_P(cell0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'cell' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(dc0) == IS_OBJECT)
+				if(Z_TYPE_P(dc0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDC_P(&dc0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDC_P(&dc0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDC_P(dc0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDC_P(dc0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxDC*) argument_native_object;
 					if (!object_pointer0_3 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(dc0) != IS_NULL)
+				else if(Z_TYPE_P(dc0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'dc' not null, could not be retreived correctly.");
 				}
@@ -10319,7 +10319,7 @@ PHP_METHOD(php_wxDataViewCustomRenderer, RenderText)
 					((wxDataViewCustomRenderer_php*)native_object)->RenderText(wxString(text0, wxConvUTF8), (int) xoffset0, *(wxRect*) object_pointer0_2, (wxDC*) object_pointer0_3, (int) state0);
 				}
 
-				references->AddReference(&dc0, "wxDataViewCustomRenderer::RenderText at call 1 with 5 argument(s)");
+				references->AddReference(dc0, "wxDataViewCustomRenderer::RenderText at call 1 with 5 argument(s)");
 
 				return;
 				break;
@@ -10394,13 +10394,13 @@ PHP_METHOD(php_wxDataViewCustomRenderer, StartDrag)
 	#endif
 	
 	//Parameters for overload 0
-	zval cursor0;
+	zval* cursor0;
 	wxPoint* object_pointer0_0 = 0;
-	zval cell0;
+	zval* cell0;
 	wxRect* object_pointer0_1 = 0;
-	zval model0;
+	zval* model0;
 	wxDataViewModel* object_pointer0_2 = 0;
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_3 = 0;
 	long col0;
 	bool overload0_called = false;
@@ -10418,68 +10418,68 @@ PHP_METHOD(php_wxDataViewCustomRenderer, StartDrag)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cursor0, php_wxPoint_entry, &cell0, php_wxRect_entry, &model0, &item0, php_wxDataViewItem_entry, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(cursor0) == IS_OBJECT)
+				if(Z_TYPE_P(cursor0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxPoint_P(&cursor0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(&cursor0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(cursor0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(cursor0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'cursor' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(cursor0) != IS_NULL)
+				else if(Z_TYPE_P(cursor0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'cursor' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(cell0) == IS_OBJECT)
+				if(Z_TYPE_P(cell0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxRect_P(&cell0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxRect_P(&cell0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxRect_P(cell0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxRect_P(cell0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxRect*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'cell' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(cell0) != IS_NULL)
+				else if(Z_TYPE_P(cell0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'cell' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(model0) == IS_OBJECT)
+				if(Z_TYPE_P(model0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewModel_P(&model0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewModel_P(&model0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewModel_P(model0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewModel_P(model0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxDataViewModel*) argument_native_object;
 					if (!object_pointer0_2 || (argument_type != PHP_WXDATAVIEWMODEL_TYPE && argument_type != PHP_WXDATAVIEWLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWINDEXLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWLISTSTORE_TYPE && argument_type != PHP_WXDATAVIEWVIRTUALLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWTREESTORE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'model' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(model0) != IS_NULL)
+				else if(Z_TYPE_P(model0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'model' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -10510,10 +10510,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, StartDrag)
 					ZVAL_BOOL(return_value, ((wxDataViewCustomRenderer_php*)native_object)->StartDrag(*(wxPoint*) object_pointer0_0, *(wxRect*) object_pointer0_1, (wxDataViewModel*) object_pointer0_2, *(wxDataViewItem*) object_pointer0_3, (unsigned int) col0));
 				}
 
-				references->AddReference(&cursor0, "wxDataViewCustomRenderer::StartDrag at call 3 with 5 argument(s)");
-				references->AddReference(&cell0, "wxDataViewCustomRenderer::StartDrag at call 3 with 5 argument(s)");
-				references->AddReference(&model0, "wxDataViewCustomRenderer::StartDrag at call 1 with 5 argument(s)");
-				references->AddReference(&item0, "wxDataViewCustomRenderer::StartDrag at call 3 with 5 argument(s)");
+				references->AddReference(cursor0, "wxDataViewCustomRenderer::StartDrag at call 3 with 5 argument(s)");
+				references->AddReference(cell0, "wxDataViewCustomRenderer::StartDrag at call 3 with 5 argument(s)");
+				references->AddReference(model0, "wxDataViewCustomRenderer::StartDrag at call 1 with 5 argument(s)");
+				references->AddReference(item0, "wxDataViewCustomRenderer::StartDrag at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -11031,7 +11031,7 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 	//Parameters for overload 0
 	char* title0;
 	long title_len0;
-	zval renderer0;
+	zval* renderer0;
 	wxDataViewRenderer* object_pointer0_1 = 0;
 	long model_column0;
 	long width0;
@@ -11039,9 +11039,9 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 	long flags0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval bitmap1;
+	zval* bitmap1;
 	wxBitmap* object_pointer1_0 = 0;
-	zval renderer1;
+	zval* renderer1;
 	wxDataViewRenderer* object_pointer1_1 = 0;
 	long model_column1;
 	long width1;
@@ -11062,17 +11062,17 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title0, &title_len0, &renderer0, &model_column0, &width0, &align0, &flags0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(renderer0) == IS_OBJECT)
+				if(Z_TYPE_P(renderer0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewRenderer_P(&renderer0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewRenderer_P(&renderer0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewRenderer_P(renderer0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewRenderer_P(renderer0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxDataViewRenderer*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXDATAVIEWRENDERER_TYPE && argument_type != PHP_WXDATAVIEWBITMAPRENDERER_TYPE && argument_type != PHP_WXDATAVIEWCHOICERENDERER_TYPE && argument_type != PHP_WXDATAVIEWCUSTOMRENDERER_TYPE && argument_type != PHP_WXDATAVIEWSPINRENDERER_TYPE && argument_type != PHP_WXDATAVIEWDATERENDERER_TYPE && argument_type != PHP_WXDATAVIEWICONTEXTRENDERER_TYPE && argument_type != PHP_WXDATAVIEWPROGRESSRENDERER_TYPE && argument_type != PHP_WXDATAVIEWTEXTRENDERER_TYPE && argument_type != PHP_WXDATAVIEWTOGGLERENDERER_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(renderer0) != IS_NULL)
+				else if(Z_TYPE_P(renderer0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -11096,34 +11096,34 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bitmap1, php_wxBitmap_entry, &renderer1, &model_column1, &width1, &align1, &flags1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(bitmap1) == IS_OBJECT)
+				if(Z_TYPE_P(bitmap1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxBitmap_P(&bitmap1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxBitmap_P(&bitmap1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxBitmap_P(bitmap1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxBitmap_P(bitmap1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxBitmap*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'bitmap' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(bitmap1) != IS_NULL)
+				else if(Z_TYPE_P(bitmap1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bitmap' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(renderer1) == IS_OBJECT)
+				if(Z_TYPE_P(renderer1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewRenderer_P(&renderer1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewRenderer_P(&renderer1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewRenderer_P(renderer1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewRenderer_P(renderer1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxDataViewRenderer*) argument_native_object;
 					if (!object_pointer1_1 || (argument_type != PHP_WXDATAVIEWRENDERER_TYPE && argument_type != PHP_WXDATAVIEWBITMAPRENDERER_TYPE && argument_type != PHP_WXDATAVIEWCHOICERENDERER_TYPE && argument_type != PHP_WXDATAVIEWCUSTOMRENDERER_TYPE && argument_type != PHP_WXDATAVIEWSPINRENDERER_TYPE && argument_type != PHP_WXDATAVIEWDATERENDERER_TYPE && argument_type != PHP_WXDATAVIEWICONTEXTRENDERER_TYPE && argument_type != PHP_WXDATAVIEWPROGRESSRENDERER_TYPE && argument_type != PHP_WXDATAVIEWTEXTRENDERER_TYPE && argument_type != PHP_WXDATAVIEWTOGGLERENDERER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'renderer' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(renderer1) != IS_NULL)
+				else if(Z_TYPE_P(renderer1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'renderer' not null, could not be retreived correctly.");
 				}
@@ -11148,7 +11148,7 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				native_object = new wxDataViewColumn_php(wxString(title0, wxConvUTF8), (wxDataViewRenderer*) object_pointer0_1, (unsigned int) model_column0);
 
 				native_object->references.Initialize();
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&renderer0, "wxDataViewColumn::wxDataViewColumn at call 2 with 3 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(renderer0, "wxDataViewColumn::wxDataViewColumn at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -11160,7 +11160,7 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				native_object = new wxDataViewColumn_php(wxString(title0, wxConvUTF8), (wxDataViewRenderer*) object_pointer0_1, (unsigned int) model_column0, (int) width0);
 
 				native_object->references.Initialize();
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&renderer0, "wxDataViewColumn::wxDataViewColumn at call 2 with 4 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(renderer0, "wxDataViewColumn::wxDataViewColumn at call 2 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -11172,7 +11172,7 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				native_object = new wxDataViewColumn_php(wxString(title0, wxConvUTF8), (wxDataViewRenderer*) object_pointer0_1, (unsigned int) model_column0, (int) width0, (wxAlignment) align0);
 
 				native_object->references.Initialize();
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&renderer0, "wxDataViewColumn::wxDataViewColumn at call 2 with 5 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(renderer0, "wxDataViewColumn::wxDataViewColumn at call 2 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -11184,7 +11184,7 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				native_object = new wxDataViewColumn_php(wxString(title0, wxConvUTF8), (wxDataViewRenderer*) object_pointer0_1, (unsigned int) model_column0, (int) width0, (wxAlignment) align0, (int) flags0);
 
 				native_object->references.Initialize();
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&renderer0, "wxDataViewColumn::wxDataViewColumn at call 2 with 6 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(renderer0, "wxDataViewColumn::wxDataViewColumn at call 2 with 6 argument(s)");
 				break;
 			}
 		}
@@ -11203,8 +11203,8 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				native_object = new wxDataViewColumn_php(*(wxBitmap*) object_pointer1_0, (wxDataViewRenderer*) object_pointer1_1, (unsigned int) model_column1);
 
 				native_object->references.Initialize();
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&bitmap1, "wxDataViewColumn::wxDataViewColumn at call 4 with 3 argument(s)");
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&renderer1, "wxDataViewColumn::wxDataViewColumn at call 2 with 3 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(bitmap1, "wxDataViewColumn::wxDataViewColumn at call 4 with 3 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(renderer1, "wxDataViewColumn::wxDataViewColumn at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -11216,8 +11216,8 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				native_object = new wxDataViewColumn_php(*(wxBitmap*) object_pointer1_0, (wxDataViewRenderer*) object_pointer1_1, (unsigned int) model_column1, (int) width1);
 
 				native_object->references.Initialize();
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&bitmap1, "wxDataViewColumn::wxDataViewColumn at call 4 with 4 argument(s)");
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&renderer1, "wxDataViewColumn::wxDataViewColumn at call 2 with 4 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(bitmap1, "wxDataViewColumn::wxDataViewColumn at call 4 with 4 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(renderer1, "wxDataViewColumn::wxDataViewColumn at call 2 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -11229,8 +11229,8 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				native_object = new wxDataViewColumn_php(*(wxBitmap*) object_pointer1_0, (wxDataViewRenderer*) object_pointer1_1, (unsigned int) model_column1, (int) width1, (wxAlignment) align1);
 
 				native_object->references.Initialize();
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&bitmap1, "wxDataViewColumn::wxDataViewColumn at call 4 with 5 argument(s)");
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&renderer1, "wxDataViewColumn::wxDataViewColumn at call 2 with 5 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(bitmap1, "wxDataViewColumn::wxDataViewColumn at call 4 with 5 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(renderer1, "wxDataViewColumn::wxDataViewColumn at call 2 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -11242,8 +11242,8 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				native_object = new wxDataViewColumn_php(*(wxBitmap*) object_pointer1_0, (wxDataViewRenderer*) object_pointer1_1, (unsigned int) model_column1, (int) width1, (wxAlignment) align1, (int) flags1);
 
 				native_object->references.Initialize();
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&bitmap1, "wxDataViewColumn::wxDataViewColumn at call 4 with 6 argument(s)");
-				((wxDataViewColumn_php*) native_object)->references.AddReference(&renderer1, "wxDataViewColumn::wxDataViewColumn at call 2 with 6 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(bitmap1, "wxDataViewColumn::wxDataViewColumn at call 4 with 6 argument(s)");
+				((wxDataViewColumn_php*) native_object)->references.AddReference(renderer1, "wxDataViewColumn::wxDataViewColumn at call 2 with 6 argument(s)");
 				break;
 			}
 		}
@@ -12027,7 +12027,7 @@ PHP_METHOD(php_wxDataViewListStore, GetValueByRow)
 	#endif
 	
 	//Parameters for overload 0
-	zval value0;
+	zval* value0;
 	wxVariant* object_pointer0_0 = 0;
 	long row0;
 	long col0;
@@ -12046,17 +12046,17 @@ PHP_METHOD(php_wxDataViewListStore, GetValueByRow)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, php_wxVariant_entry, &row0, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(value0) == IS_OBJECT)
+				if(Z_TYPE_P(value0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariant_P(&value0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariant_P(&value0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariant_P(value0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariant_P(value0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxVariant*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'value' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(value0) != IS_NULL)
+				else if(Z_TYPE_P(value0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'value' not null, could not be retreived correctly.");
 				}
@@ -12080,7 +12080,7 @@ PHP_METHOD(php_wxDataViewListStore, GetValueByRow)
 
 				((wxDataViewListStore_php*)native_object)->GetValueByRow(*(wxVariant*) object_pointer0_0, (unsigned int) row0, (unsigned int) col0);
 
-				references->AddReference(&value0, "wxDataViewListStore::GetValueByRow at call 3 with 3 argument(s)");
+				references->AddReference(value0, "wxDataViewListStore::GetValueByRow at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -12360,7 +12360,7 @@ PHP_METHOD(php_wxDataViewListStore, SetValueByRow)
 	#endif
 	
 	//Parameters for overload 0
-	zval value0;
+	zval* value0;
 	wxVariant* object_pointer0_0 = 0;
 	long row0;
 	long col0;
@@ -12379,17 +12379,17 @@ PHP_METHOD(php_wxDataViewListStore, SetValueByRow)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, php_wxVariant_entry, &row0, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(value0) == IS_OBJECT)
+				if(Z_TYPE_P(value0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariant_P(&value0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariant_P(&value0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariant_P(value0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariant_P(value0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxVariant*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'value' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(value0) != IS_NULL)
+				else if(Z_TYPE_P(value0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'value' not null, could not be retreived correctly.");
 				}
@@ -12413,7 +12413,7 @@ PHP_METHOD(php_wxDataViewListStore, SetValueByRow)
 
 				ZVAL_BOOL(return_value, ((wxDataViewListStore_php*)native_object)->SetValueByRow(*(wxVariant*) object_pointer0_0, (unsigned int) row0, (unsigned int) col0));
 
-				references->AddReference(&value0, "wxDataViewListStore::SetValueByRow at call 3 with 3 argument(s)");
+				references->AddReference(value0, "wxDataViewListStore::SetValueByRow at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -12634,15 +12634,15 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	char* text0;
 	long text_len0;
-	zval icon0;
+	zval* icon0;
 	wxIcon* object_pointer0_2 = 0;
-	zval expanded0;
+	zval* expanded0;
 	wxIcon* object_pointer0_3 = 0;
-	zval data0;
+	zval* data0;
 	wxClientData* object_pointer0_4 = 0;
 	bool overload0_called = false;
 		
@@ -12659,68 +12659,68 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, php_wxDataViewItem_entry, &text0, &text_len0, &icon0, php_wxIcon_entry, &expanded0, php_wxIcon_entry, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(icon0) == IS_OBJECT)
+				if(Z_TYPE_P(icon0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&icon0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&icon0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(icon0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(icon0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'icon' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(icon0) != IS_NULL)
+				else if(Z_TYPE_P(icon0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'icon' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(expanded0) == IS_OBJECT)
+				if(Z_TYPE_P(expanded0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&expanded0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&expanded0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(expanded0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(expanded0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'expanded' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(expanded0) != IS_NULL)
+				else if(Z_TYPE_P(expanded0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'expanded' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(data0) == IS_OBJECT)
+				if(Z_TYPE_P(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxClientData_P(&data0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxClientData_P(&data0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxClientData_P(data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxClientData_P(data0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxClientData*) argument_native_object;
 					if (!object_pointer0_4 || (argument_type != PHP_WXCLIENTDATA_TYPE && argument_type != PHP_WXTREEITEMDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(data0) != IS_NULL)
+				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -12751,7 +12751,7 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				zo_wxDataViewItem* zo2 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::AppendContainer at call 3 with 2 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -12771,8 +12771,8 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				zo_wxDataViewItem* zo3 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::AppendContainer at call 3 with 3 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::AppendContainer at call 3 with 3 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call 3 with 3 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -12792,9 +12792,9 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				zo_wxDataViewItem* zo4 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::AppendContainer at call 3 with 4 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::AppendContainer at call 3 with 4 argument(s)");
-				references->AddReference(&expanded0, "wxDataViewTreeStore::AppendContainer at call 3 with 4 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call 3 with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call 3 with 4 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::AppendContainer at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -12814,10 +12814,10 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				zo_wxDataViewItem* zo5 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::AppendContainer at call 3 with 5 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::AppendContainer at call 3 with 5 argument(s)");
-				references->AddReference(&expanded0, "wxDataViewTreeStore::AppendContainer at call 3 with 5 argument(s)");
-				references->AddReference(&data0, "wxDataViewTreeStore::AppendContainer at call 1 with 5 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call 3 with 5 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call 3 with 5 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::AppendContainer at call 3 with 5 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::AppendContainer at call 1 with 5 argument(s)");
 
 				return;
 				break;
@@ -12888,13 +12888,13 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	char* text0;
 	long text_len0;
-	zval icon0;
+	zval* icon0;
 	wxIcon* object_pointer0_2 = 0;
-	zval data0;
+	zval* data0;
 	wxClientData* object_pointer0_3 = 0;
 	bool overload0_called = false;
 		
@@ -12911,51 +12911,51 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, php_wxDataViewItem_entry, &text0, &text_len0, &icon0, php_wxIcon_entry, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(icon0) == IS_OBJECT)
+				if(Z_TYPE_P(icon0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&icon0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&icon0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(icon0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(icon0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'icon' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(icon0) != IS_NULL)
+				else if(Z_TYPE_P(icon0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'icon' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(data0) == IS_OBJECT)
+				if(Z_TYPE_P(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxClientData_P(&data0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxClientData_P(&data0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxClientData_P(data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxClientData_P(data0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxClientData*) argument_native_object;
 					if (!object_pointer0_3 || (argument_type != PHP_WXCLIENTDATA_TYPE && argument_type != PHP_WXTREEITEMDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(data0) != IS_NULL)
+				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -12986,7 +12986,7 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				zo_wxDataViewItem* zo2 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::AppendItem at call 3 with 2 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -13006,8 +13006,8 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				zo_wxDataViewItem* zo3 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::AppendItem at call 3 with 3 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::AppendItem at call 3 with 3 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call 3 with 3 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::AppendItem at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -13027,9 +13027,9 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				zo_wxDataViewItem* zo4 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::AppendItem at call 3 with 4 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::AppendItem at call 3 with 4 argument(s)");
-				references->AddReference(&data0, "wxDataViewTreeStore::AppendItem at call 1 with 4 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call 3 with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::AppendItem at call 3 with 4 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::AppendItem at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -13198,7 +13198,7 @@ PHP_METHOD(php_wxDataViewTreeStore, DeleteChildren)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -13215,17 +13215,17 @@ PHP_METHOD(php_wxDataViewTreeStore, DeleteChildren)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -13249,7 +13249,7 @@ PHP_METHOD(php_wxDataViewTreeStore, DeleteChildren)
 
 				((wxDataViewTreeStore_php*)native_object)->DeleteChildren(*(wxDataViewItem*) object_pointer0_0);
 
-				references->AddReference(&item0, "wxDataViewTreeStore::DeleteChildren at call 3 with 1 argument(s)");
+				references->AddReference(item0, "wxDataViewTreeStore::DeleteChildren at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -13320,7 +13320,7 @@ PHP_METHOD(php_wxDataViewTreeStore, DeleteItem)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -13337,17 +13337,17 @@ PHP_METHOD(php_wxDataViewTreeStore, DeleteItem)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -13371,7 +13371,7 @@ PHP_METHOD(php_wxDataViewTreeStore, DeleteItem)
 
 				((wxDataViewTreeStore_php*)native_object)->DeleteItem(*(wxDataViewItem*) object_pointer0_0);
 
-				references->AddReference(&item0, "wxDataViewTreeStore::DeleteItem at call 3 with 1 argument(s)");
+				references->AddReference(item0, "wxDataViewTreeStore::DeleteItem at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -13442,7 +13442,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetChildCount)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -13459,17 +13459,17 @@ PHP_METHOD(php_wxDataViewTreeStore, GetChildCount)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
@@ -13493,7 +13493,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetChildCount)
 
 				ZVAL_LONG(return_value, ((wxDataViewTreeStore_php*)native_object)->GetChildCount(*(wxDataViewItem*) object_pointer0_0));
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::GetChildCount at call 3 with 1 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::GetChildCount at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -13564,7 +13564,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemData)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -13581,17 +13581,17 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemData)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -13638,7 +13638,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemData)
 					references->AddReference(return_value, "wxDataViewTreeStore::GetItemData at call 5 with 1 argument(s)");
 				}
 
-				references->AddReference(&item0, "wxDataViewTreeStore::GetItemData at call 3 with 1 argument(s)");
+				references->AddReference(item0, "wxDataViewTreeStore::GetItemData at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -13709,7 +13709,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemExpandedIcon)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -13726,17 +13726,17 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemExpandedIcon)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -13780,7 +13780,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemExpandedIcon)
 					references->AddReference(return_value, "wxDataViewTreeStore::GetItemExpandedIcon at call 6 with 1 argument(s)");
 				}
 
-				references->AddReference(&item0, "wxDataViewTreeStore::GetItemExpandedIcon at call 3 with 1 argument(s)");
+				references->AddReference(item0, "wxDataViewTreeStore::GetItemExpandedIcon at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -13851,7 +13851,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemIcon)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -13868,17 +13868,17 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemIcon)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -13922,7 +13922,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemIcon)
 					references->AddReference(return_value, "wxDataViewTreeStore::GetItemIcon at call 6 with 1 argument(s)");
 				}
 
-				references->AddReference(&item0, "wxDataViewTreeStore::GetItemIcon at call 3 with 1 argument(s)");
+				references->AddReference(item0, "wxDataViewTreeStore::GetItemIcon at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -13993,7 +13993,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemText)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -14010,17 +14010,17 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemText)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -14046,7 +14046,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemText)
 				value_to_return1 = ((wxDataViewTreeStore_php*)native_object)->GetItemText(*(wxDataViewItem*) object_pointer0_0);
 				ZVAL_STRING(return_value, value_to_return1.char_str());
 
-				references->AddReference(&item0, "wxDataViewTreeStore::GetItemText at call 3 with 1 argument(s)");
+				references->AddReference(item0, "wxDataViewTreeStore::GetItemText at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -14117,7 +14117,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetNthChild)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	long pos0;
 	bool overload0_called = false;
@@ -14135,17 +14135,17 @@ PHP_METHOD(php_wxDataViewTreeStore, GetNthChild)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, php_wxDataViewItem_entry, &pos0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
@@ -14176,7 +14176,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetNthChild)
 				zo_wxDataViewItem* zo2 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::GetNthChild at call 3 with 2 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::GetNthChild at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -14247,17 +14247,17 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxDataViewItem* object_pointer0_0 = 0;
-	zval previous0;
+	zval* previous0;
 	wxDataViewItem* object_pointer0_1 = 0;
 	char* text0;
 	long text_len0;
-	zval icon0;
+	zval* icon0;
 	wxIcon* object_pointer0_3 = 0;
-	zval expanded0;
+	zval* expanded0;
 	wxIcon* object_pointer0_4 = 0;
-	zval data0;
+	zval* data0;
 	wxClientData* object_pointer0_5 = 0;
 	bool overload0_called = false;
 		
@@ -14274,85 +14274,85 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, php_wxDataViewItem_entry, &previous0, php_wxDataViewItem_entry, &text0, &text_len0, &icon0, php_wxIcon_entry, &expanded0, php_wxIcon_entry, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(previous0) == IS_OBJECT)
+				if(Z_TYPE_P(previous0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&previous0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&previous0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(previous0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(previous0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'previous' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(previous0) != IS_NULL)
+				else if(Z_TYPE_P(previous0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'previous' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(icon0) == IS_OBJECT)
+				if(Z_TYPE_P(icon0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&icon0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&icon0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(icon0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(icon0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'icon' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(icon0) != IS_NULL)
+				else if(Z_TYPE_P(icon0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'icon' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(expanded0) == IS_OBJECT)
+				if(Z_TYPE_P(expanded0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&expanded0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&expanded0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(expanded0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(expanded0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'expanded' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(expanded0) != IS_NULL)
+				else if(Z_TYPE_P(expanded0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'expanded' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 6){
-				if(Z_TYPE(data0) == IS_OBJECT)
+				if(Z_TYPE_P(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxClientData_P(&data0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxClientData_P(&data0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxClientData_P(data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxClientData_P(data0 TSRMLS_CC)->native_object;
 					object_pointer0_5 = (wxClientData*) argument_native_object;
 					if (!object_pointer0_5 || (argument_type != PHP_WXCLIENTDATA_TYPE && argument_type != PHP_WXTREEITEMDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(data0) != IS_NULL)
+				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -14383,8 +14383,8 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				zo_wxDataViewItem* zo3 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::InsertContainer at call 3 with 3 argument(s)");
-				references->AddReference(&previous0, "wxDataViewTreeStore::InsertContainer at call 3 with 3 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call 3 with 3 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -14404,9 +14404,9 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				zo_wxDataViewItem* zo4 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::InsertContainer at call 3 with 4 argument(s)");
-				references->AddReference(&previous0, "wxDataViewTreeStore::InsertContainer at call 3 with 4 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::InsertContainer at call 3 with 4 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call 3 with 4 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call 3 with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::InsertContainer at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -14426,10 +14426,10 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				zo_wxDataViewItem* zo5 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::InsertContainer at call 3 with 5 argument(s)");
-				references->AddReference(&previous0, "wxDataViewTreeStore::InsertContainer at call 3 with 5 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::InsertContainer at call 3 with 5 argument(s)");
-				references->AddReference(&expanded0, "wxDataViewTreeStore::InsertContainer at call 3 with 5 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call 3 with 5 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call 3 with 5 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::InsertContainer at call 3 with 5 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::InsertContainer at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -14449,11 +14449,11 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				zo_wxDataViewItem* zo6 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo6->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::InsertContainer at call 3 with 6 argument(s)");
-				references->AddReference(&previous0, "wxDataViewTreeStore::InsertContainer at call 3 with 6 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::InsertContainer at call 3 with 6 argument(s)");
-				references->AddReference(&expanded0, "wxDataViewTreeStore::InsertContainer at call 3 with 6 argument(s)");
-				references->AddReference(&data0, "wxDataViewTreeStore::InsertContainer at call 1 with 6 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call 3 with 6 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call 3 with 6 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::InsertContainer at call 3 with 6 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::InsertContainer at call 3 with 6 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::InsertContainer at call 1 with 6 argument(s)");
 
 				return;
 				break;
@@ -14524,15 +14524,15 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxDataViewItem* object_pointer0_0 = 0;
-	zval previous0;
+	zval* previous0;
 	wxDataViewItem* object_pointer0_1 = 0;
 	char* text0;
 	long text_len0;
-	zval icon0;
+	zval* icon0;
 	wxIcon* object_pointer0_3 = 0;
-	zval data0;
+	zval* data0;
 	wxClientData* object_pointer0_4 = 0;
 	bool overload0_called = false;
 		
@@ -14549,68 +14549,68 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, php_wxDataViewItem_entry, &previous0, php_wxDataViewItem_entry, &text0, &text_len0, &icon0, php_wxIcon_entry, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(previous0) == IS_OBJECT)
+				if(Z_TYPE_P(previous0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&previous0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&previous0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(previous0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(previous0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'previous' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(previous0) != IS_NULL)
+				else if(Z_TYPE_P(previous0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'previous' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(icon0) == IS_OBJECT)
+				if(Z_TYPE_P(icon0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&icon0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&icon0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(icon0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(icon0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'icon' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(icon0) != IS_NULL)
+				else if(Z_TYPE_P(icon0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'icon' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(data0) == IS_OBJECT)
+				if(Z_TYPE_P(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxClientData_P(&data0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxClientData_P(&data0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxClientData_P(data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxClientData_P(data0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxClientData*) argument_native_object;
 					if (!object_pointer0_4 || (argument_type != PHP_WXCLIENTDATA_TYPE && argument_type != PHP_WXTREEITEMDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(data0) != IS_NULL)
+				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -14641,8 +14641,8 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				zo_wxDataViewItem* zo3 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::InsertItem at call 3 with 3 argument(s)");
-				references->AddReference(&previous0, "wxDataViewTreeStore::InsertItem at call 3 with 3 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call 3 with 3 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -14662,9 +14662,9 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				zo_wxDataViewItem* zo4 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::InsertItem at call 3 with 4 argument(s)");
-				references->AddReference(&previous0, "wxDataViewTreeStore::InsertItem at call 3 with 4 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::InsertItem at call 3 with 4 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call 3 with 4 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call 3 with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::InsertItem at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -14684,10 +14684,10 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				zo_wxDataViewItem* zo5 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::InsertItem at call 3 with 5 argument(s)");
-				references->AddReference(&previous0, "wxDataViewTreeStore::InsertItem at call 3 with 5 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::InsertItem at call 3 with 5 argument(s)");
-				references->AddReference(&data0, "wxDataViewTreeStore::InsertItem at call 1 with 5 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call 3 with 5 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call 3 with 5 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::InsertItem at call 3 with 5 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::InsertItem at call 1 with 5 argument(s)");
 
 				return;
 				break;
@@ -14758,15 +14758,15 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	char* text0;
 	long text_len0;
-	zval icon0;
+	zval* icon0;
 	wxIcon* object_pointer0_2 = 0;
-	zval expanded0;
+	zval* expanded0;
 	wxIcon* object_pointer0_3 = 0;
-	zval data0;
+	zval* data0;
 	wxClientData* object_pointer0_4 = 0;
 	bool overload0_called = false;
 		
@@ -14783,68 +14783,68 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, php_wxDataViewItem_entry, &text0, &text_len0, &icon0, php_wxIcon_entry, &expanded0, php_wxIcon_entry, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(icon0) == IS_OBJECT)
+				if(Z_TYPE_P(icon0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&icon0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&icon0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(icon0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(icon0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'icon' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(icon0) != IS_NULL)
+				else if(Z_TYPE_P(icon0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'icon' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(expanded0) == IS_OBJECT)
+				if(Z_TYPE_P(expanded0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&expanded0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&expanded0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(expanded0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(expanded0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'expanded' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(expanded0) != IS_NULL)
+				else if(Z_TYPE_P(expanded0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'expanded' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE(data0) == IS_OBJECT)
+				if(Z_TYPE_P(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxClientData_P(&data0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxClientData_P(&data0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxClientData_P(data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxClientData_P(data0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxClientData*) argument_native_object;
 					if (!object_pointer0_4 || (argument_type != PHP_WXCLIENTDATA_TYPE && argument_type != PHP_WXTREEITEMDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(data0) != IS_NULL)
+				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -14875,7 +14875,7 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				zo_wxDataViewItem* zo2 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::PrependContainer at call 3 with 2 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -14895,8 +14895,8 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				zo_wxDataViewItem* zo3 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::PrependContainer at call 3 with 3 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::PrependContainer at call 3 with 3 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call 3 with 3 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -14916,9 +14916,9 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				zo_wxDataViewItem* zo4 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::PrependContainer at call 3 with 4 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::PrependContainer at call 3 with 4 argument(s)");
-				references->AddReference(&expanded0, "wxDataViewTreeStore::PrependContainer at call 3 with 4 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call 3 with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call 3 with 4 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::PrependContainer at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -14938,10 +14938,10 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				zo_wxDataViewItem* zo5 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::PrependContainer at call 3 with 5 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::PrependContainer at call 3 with 5 argument(s)");
-				references->AddReference(&expanded0, "wxDataViewTreeStore::PrependContainer at call 3 with 5 argument(s)");
-				references->AddReference(&data0, "wxDataViewTreeStore::PrependContainer at call 1 with 5 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call 3 with 5 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call 3 with 5 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::PrependContainer at call 3 with 5 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::PrependContainer at call 1 with 5 argument(s)");
 
 				return;
 				break;
@@ -15012,13 +15012,13 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 	#endif
 	
 	//Parameters for overload 0
-	zval parent0;
+	zval* parent0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	char* text0;
 	long text_len0;
-	zval icon0;
+	zval* icon0;
 	wxIcon* object_pointer0_2 = 0;
-	zval data0;
+	zval* data0;
 	wxClientData* object_pointer0_3 = 0;
 	bool overload0_called = false;
 		
@@ -15035,51 +15035,51 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, php_wxDataViewItem_entry, &text0, &text_len0, &icon0, php_wxIcon_entry, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(parent0) == IS_OBJECT)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&parent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(parent0) != IS_NULL)
+				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE(icon0) == IS_OBJECT)
+				if(Z_TYPE_P(icon0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&icon0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&icon0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(icon0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(icon0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'icon' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(icon0) != IS_NULL)
+				else if(Z_TYPE_P(icon0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'icon' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE(data0) == IS_OBJECT)
+				if(Z_TYPE_P(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxClientData_P(&data0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxClientData_P(&data0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxClientData_P(data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxClientData_P(data0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxClientData*) argument_native_object;
 					if (!object_pointer0_3 || (argument_type != PHP_WXCLIENTDATA_TYPE && argument_type != PHP_WXTREEITEMDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(data0) != IS_NULL)
+				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -15110,7 +15110,7 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				zo_wxDataViewItem* zo2 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::PrependItem at call 3 with 2 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -15130,8 +15130,8 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				zo_wxDataViewItem* zo3 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::PrependItem at call 3 with 3 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::PrependItem at call 3 with 3 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call 3 with 3 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::PrependItem at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -15151,9 +15151,9 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				zo_wxDataViewItem* zo4 = Z_wxDataViewItem_P(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
-				references->AddReference(&parent0, "wxDataViewTreeStore::PrependItem at call 3 with 4 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::PrependItem at call 3 with 4 argument(s)");
-				references->AddReference(&data0, "wxDataViewTreeStore::PrependItem at call 1 with 4 argument(s)");
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call 3 with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::PrependItem at call 3 with 4 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::PrependItem at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -15224,9 +15224,9 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemData)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
-	zval data0;
+	zval* data0;
 	wxClientData* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -15243,34 +15243,34 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemData)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(data0) == IS_OBJECT)
+				if(Z_TYPE_P(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxClientData_P(&data0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxClientData_P(&data0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxClientData_P(data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxClientData_P(data0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxClientData*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXCLIENTDATA_TYPE && argument_type != PHP_WXTREEITEMDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(data0) != IS_NULL)
+				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -15294,8 +15294,8 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemData)
 
 				((wxDataViewTreeStore_php*)native_object)->SetItemData(*(wxDataViewItem*) object_pointer0_0, (wxClientData*) object_pointer0_1);
 
-				references->AddReference(&item0, "wxDataViewTreeStore::SetItemData at call 3 with 2 argument(s)");
-				references->AddReference(&data0, "wxDataViewTreeStore::SetItemData at call 1 with 2 argument(s)");
+				references->AddReference(item0, "wxDataViewTreeStore::SetItemData at call 3 with 2 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::SetItemData at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -15366,9 +15366,9 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemExpandedIcon)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
-	zval icon0;
+	zval* icon0;
 	wxIcon* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -15385,34 +15385,34 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemExpandedIcon)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry, &icon0, php_wxIcon_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(icon0) == IS_OBJECT)
+				if(Z_TYPE_P(icon0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&icon0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&icon0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(icon0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(icon0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'icon' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(icon0) != IS_NULL)
+				else if(Z_TYPE_P(icon0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'icon' not null, could not be retreived correctly.");
 				}
@@ -15436,8 +15436,8 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemExpandedIcon)
 
 				((wxDataViewTreeStore_php*)native_object)->SetItemExpandedIcon(*(wxDataViewItem*) object_pointer0_0, *(wxIcon*) object_pointer0_1);
 
-				references->AddReference(&item0, "wxDataViewTreeStore::SetItemExpandedIcon at call 3 with 2 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::SetItemExpandedIcon at call 3 with 2 argument(s)");
+				references->AddReference(item0, "wxDataViewTreeStore::SetItemExpandedIcon at call 3 with 2 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::SetItemExpandedIcon at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -15508,9 +15508,9 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemIcon)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
-	zval icon0;
+	zval* icon0;
 	wxIcon* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -15527,34 +15527,34 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemIcon)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry, &icon0, php_wxIcon_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE(icon0) == IS_OBJECT)
+				if(Z_TYPE_P(icon0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&icon0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&icon0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(icon0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(icon0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'icon' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(icon0) != IS_NULL)
+				else if(Z_TYPE_P(icon0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'icon' not null, could not be retreived correctly.");
 				}
@@ -15578,8 +15578,8 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemIcon)
 
 				((wxDataViewTreeStore_php*)native_object)->SetItemIcon(*(wxDataViewItem*) object_pointer0_0, *(wxIcon*) object_pointer0_1);
 
-				references->AddReference(&item0, "wxDataViewTreeStore::SetItemIcon at call 3 with 2 argument(s)");
-				references->AddReference(&icon0, "wxDataViewTreeStore::SetItemIcon at call 3 with 2 argument(s)");
+				references->AddReference(item0, "wxDataViewTreeStore::SetItemIcon at call 3 with 2 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::SetItemIcon at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -16018,7 +16018,7 @@ PHP_METHOD(php_wxDataViewIconText, SetIcon)
 	#endif
 	
 	//Parameters for overload 0
-	zval icon0;
+	zval* icon0;
 	wxIcon* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -16035,17 +16035,17 @@ PHP_METHOD(php_wxDataViewIconText, SetIcon)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &icon0, php_wxIcon_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(icon0) == IS_OBJECT)
+				if(Z_TYPE_P(icon0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&icon0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&icon0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(icon0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(icon0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'icon' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(icon0) != IS_NULL)
+				else if(Z_TYPE_P(icon0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'icon' not null, could not be retreived correctly.");
 				}
@@ -16069,7 +16069,7 @@ PHP_METHOD(php_wxDataViewIconText, SetIcon)
 
 				((wxDataViewIconText_php*)native_object)->SetIcon(*(wxIcon*) object_pointer0_0);
 
-				references->AddReference(&icon0, "wxDataViewIconText::SetIcon at call 3 with 1 argument(s)");
+				references->AddReference(icon0, "wxDataViewIconText::SetIcon at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -16213,11 +16213,11 @@ PHP_METHOD(php_wxDataViewIconText, __construct)
 	//Parameters for overload 0
 	char* text0;
 	long text_len0;
-	zval icon0;
+	zval* icon0;
 	wxIcon* object_pointer0_1 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval other1;
+	zval* other1;
 	wxDataViewIconText* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -16234,17 +16234,17 @@ PHP_METHOD(php_wxDataViewIconText, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0, &icon0, php_wxIcon_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE(icon0) == IS_OBJECT)
+				if(Z_TYPE_P(icon0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxIcon_P(&icon0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxIcon_P(&icon0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(icon0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(icon0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE(icon0) != IS_NULL)
+				else if(Z_TYPE_P(icon0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -16268,17 +16268,17 @@ PHP_METHOD(php_wxDataViewIconText, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &other1, php_wxDataViewIconText_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(other1) == IS_OBJECT)
+				if(Z_TYPE_P(other1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewIconText_P(&other1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewIconText_P(&other1 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewIconText_P(other1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewIconText_P(other1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxDataViewIconText*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'other' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(other1) != IS_NULL)
+				else if(Z_TYPE_P(other1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'other' not null, could not be retreived correctly.");
 				}
@@ -16325,7 +16325,7 @@ PHP_METHOD(php_wxDataViewIconText, __construct)
 				native_object = new wxDataViewIconText_php(wxString(text0, wxConvUTF8), *(wxIcon*) object_pointer0_1);
 
 				native_object->references.Initialize();
-				((wxDataViewIconText_php*) native_object)->references.AddReference(&icon0, "wxDataViewIconText::wxDataViewIconText at call 4 with 2 argument(s)");
+				((wxDataViewIconText_php*) native_object)->references.AddReference(icon0, "wxDataViewIconText::wxDataViewIconText at call 4 with 2 argument(s)");
 				break;
 			}
 		}
@@ -16344,7 +16344,7 @@ PHP_METHOD(php_wxDataViewIconText, __construct)
 				native_object = new wxDataViewIconText_php(*(wxDataViewIconText*) object_pointer1_0);
 
 				native_object->references.Initialize();
-				((wxDataViewIconText_php*) native_object)->references.AddReference(&other1, "wxDataViewIconText::wxDataViewIconText at call 4 with 1 argument(s)");
+				((wxDataViewIconText_php*) native_object)->references.AddReference(other1, "wxDataViewIconText::wxDataViewIconText at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -16602,7 +16602,7 @@ PHP_METHOD(php_wxDataViewEvent, SetItem)
 	#endif
 	
 	//Parameters for overload 0
-	zval item0;
+	zval* item0;
 	wxDataViewItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -16619,17 +16619,17 @@ PHP_METHOD(php_wxDataViewEvent, SetItem)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, php_wxDataViewItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(item0) == IS_OBJECT)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewItem_P(&item0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewItem_P(&item0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewItem_P(item0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewItem_P(item0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(item0) != IS_NULL)
+				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
@@ -16653,7 +16653,7 @@ PHP_METHOD(php_wxDataViewEvent, SetItem)
 
 				((wxDataViewEvent_php*)native_object)->SetItem(*(wxDataViewItem*) object_pointer0_0);
 
-				references->AddReference(&item0, "wxDataViewEvent::SetItem at call 3 with 1 argument(s)");
+				references->AddReference(item0, "wxDataViewEvent::SetItem at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -17986,7 +17986,7 @@ PHP_METHOD(php_wxDataViewEvent, SetDataObject)
 	#endif
 	
 	//Parameters for overload 0
-	zval obj0;
+	zval* obj0;
 	wxDataObject* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -18003,17 +18003,17 @@ PHP_METHOD(php_wxDataViewEvent, SetDataObject)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &obj0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(obj0) == IS_OBJECT)
+				if(Z_TYPE_P(obj0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataObject_P(&obj0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataObject_P(&obj0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataObject_P(obj0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataObject_P(obj0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataObject*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECT_TYPE && argument_type != PHP_WXDATAOBJECTCOMPOSITE_TYPE && argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'obj' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(obj0) != IS_NULL)
+				else if(Z_TYPE_P(obj0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'obj' not null, could not be retreived correctly.");
 				}
@@ -18037,7 +18037,7 @@ PHP_METHOD(php_wxDataViewEvent, SetDataObject)
 
 				((wxDataViewEvent_php*)native_object)->SetDataObject((wxDataObject*) object_pointer0_0);
 
-				references->AddReference(&obj0, "wxDataViewEvent::SetDataObject at call 1 with 1 argument(s)");
+				references->AddReference(obj0, "wxDataViewEvent::SetDataObject at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -18108,7 +18108,7 @@ PHP_METHOD(php_wxDataViewEvent, SetDataViewColumn)
 	#endif
 	
 	//Parameters for overload 0
-	zval col0;
+	zval* col0;
 	wxDataViewColumn* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -18125,17 +18125,17 @@ PHP_METHOD(php_wxDataViewEvent, SetDataViewColumn)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(col0) == IS_OBJECT)
+				if(Z_TYPE_P(col0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewColumn_P(&col0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewColumn_P(&col0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewColumn_P(col0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewColumn_P(col0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewColumn*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXDATAVIEWCOLUMN_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'col' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(col0) != IS_NULL)
+				else if(Z_TYPE_P(col0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'col' not null, could not be retreived correctly.");
 				}
@@ -18159,7 +18159,7 @@ PHP_METHOD(php_wxDataViewEvent, SetDataViewColumn)
 
 				((wxDataViewEvent_php*)native_object)->SetDataViewColumn((wxDataViewColumn*) object_pointer0_0);
 
-				references->AddReference(&col0, "wxDataViewEvent::SetDataViewColumn at call 1 with 1 argument(s)");
+				references->AddReference(col0, "wxDataViewEvent::SetDataViewColumn at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -18230,7 +18230,7 @@ PHP_METHOD(php_wxDataViewEvent, SetModel)
 	#endif
 	
 	//Parameters for overload 0
-	zval model0;
+	zval* model0;
 	wxDataViewModel* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -18247,17 +18247,17 @@ PHP_METHOD(php_wxDataViewEvent, SetModel)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &model0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(model0) == IS_OBJECT)
+				if(Z_TYPE_P(model0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxDataViewModel_P(&model0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxDataViewModel_P(&model0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxDataViewModel_P(model0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDataViewModel_P(model0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxDataViewModel*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXDATAVIEWMODEL_TYPE && argument_type != PHP_WXDATAVIEWLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWINDEXLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWLISTSTORE_TYPE && argument_type != PHP_WXDATAVIEWVIRTUALLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWTREESTORE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'model' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(model0) != IS_NULL)
+				else if(Z_TYPE_P(model0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'model' not null, could not be retreived correctly.");
 				}
@@ -18281,7 +18281,7 @@ PHP_METHOD(php_wxDataViewEvent, SetModel)
 
 				((wxDataViewEvent_php*)native_object)->SetModel((wxDataViewModel*) object_pointer0_0);
 
-				references->AddReference(&model0, "wxDataViewEvent::SetModel at call 1 with 1 argument(s)");
+				references->AddReference(model0, "wxDataViewEvent::SetModel at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -18352,7 +18352,7 @@ PHP_METHOD(php_wxDataViewEvent, SetValue)
 	#endif
 	
 	//Parameters for overload 0
-	zval value0;
+	zval* value0;
 	wxVariant* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -18369,17 +18369,17 @@ PHP_METHOD(php_wxDataViewEvent, SetValue)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, php_wxVariant_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(value0) == IS_OBJECT)
+				if(Z_TYPE_P(value0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxVariant_P(&value0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxVariant_P(&value0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxVariant_P(value0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxVariant_P(value0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxVariant*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'value' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(value0) != IS_NULL)
+				else if(Z_TYPE_P(value0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'value' not null, could not be retreived correctly.");
 				}
@@ -18403,7 +18403,7 @@ PHP_METHOD(php_wxDataViewEvent, SetValue)
 
 				((wxDataViewEvent_php*)native_object)->SetValue(*(wxVariant*) object_pointer0_0);
 
-				references->AddReference(&value0, "wxDataViewEvent::SetValue at call 3 with 1 argument(s)");
+				references->AddReference(value0, "wxDataViewEvent::SetValue at call 3 with 1 argument(s)");
 
 				return;
 				break;

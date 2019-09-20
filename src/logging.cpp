@@ -2657,7 +2657,7 @@ PHP_METHOD(php_wxLog, SetActiveTarget)
 	#endif
 	
 	//Parameters for overload 0
-	zval logtarget0;
+	zval* logtarget0;
 	wxLog* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -2674,17 +2674,17 @@ PHP_METHOD(php_wxLog, SetActiveTarget)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &logtarget0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(logtarget0) == IS_OBJECT)
+				if(Z_TYPE_P(logtarget0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxLog_P(&logtarget0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxLog_P(&logtarget0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxLog_P(logtarget0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxLog_P(logtarget0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxLog*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXLOG_TYPE && argument_type != PHP_WXLOGBUFFER_TYPE && argument_type != PHP_WXLOGCHAIN_TYPE && argument_type != PHP_WXLOGINTERPOSER_TYPE && argument_type != PHP_WXLOGWINDOW_TYPE && argument_type != PHP_WXLOGGUI_TYPE && argument_type != PHP_WXLOGTEXTCTRL_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'logtarget' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(logtarget0) != IS_NULL)
+				else if(Z_TYPE_P(logtarget0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'logtarget' not null, could not be retreived correctly.");
 				}
@@ -3221,7 +3221,7 @@ PHP_METHOD(php_wxLog, SetThreadActiveTarget)
 	#endif
 	
 	//Parameters for overload 0
-	zval logger0;
+	zval* logger0;
 	wxLog* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -3238,17 +3238,17 @@ PHP_METHOD(php_wxLog, SetThreadActiveTarget)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &logger0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(logger0) == IS_OBJECT)
+				if(Z_TYPE_P(logger0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxLog_P(&logger0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxLog_P(&logger0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxLog_P(logger0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxLog_P(logger0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxLog*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXLOG_TYPE && argument_type != PHP_WXLOGBUFFER_TYPE && argument_type != PHP_WXLOGCHAIN_TYPE && argument_type != PHP_WXLOGINTERPOSER_TYPE && argument_type != PHP_WXLOGWINDOW_TYPE && argument_type != PHP_WXLOGGUI_TYPE && argument_type != PHP_WXLOGTEXTCTRL_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'logger' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(logger0) != IS_NULL)
+				else if(Z_TYPE_P(logger0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'logger' not null, could not be retreived correctly.");
 				}
@@ -4283,7 +4283,7 @@ PHP_METHOD(php_wxLogChain, SetLog)
 	#endif
 	
 	//Parameters for overload 0
-	zval logger0;
+	zval* logger0;
 	wxLog* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -4300,17 +4300,17 @@ PHP_METHOD(php_wxLogChain, SetLog)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &logger0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(logger0) == IS_OBJECT)
+				if(Z_TYPE_P(logger0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxLog_P(&logger0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxLog_P(&logger0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxLog_P(logger0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxLog_P(logger0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxLog*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXLOG_TYPE && argument_type != PHP_WXLOGBUFFER_TYPE && argument_type != PHP_WXLOGCHAIN_TYPE && argument_type != PHP_WXLOGINTERPOSER_TYPE && argument_type != PHP_WXLOGWINDOW_TYPE && argument_type != PHP_WXLOGGUI_TYPE && argument_type != PHP_WXLOGTEXTCTRL_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'logger' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(logger0) != IS_NULL)
+				else if(Z_TYPE_P(logger0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'logger' not null, could not be retreived correctly.");
 				}
@@ -4334,7 +4334,7 @@ PHP_METHOD(php_wxLogChain, SetLog)
 
 				((wxLogChain_php*)native_object)->SetLog((wxLog*) object_pointer0_0);
 
-				references->AddReference(&logger0, "wxLogChain::SetLog at call 1 with 1 argument(s)");
+				references->AddReference(logger0, "wxLogChain::SetLog at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -4372,7 +4372,7 @@ PHP_METHOD(php_wxLogChain, __construct)
 	
 	
 	//Parameters for overload 0
-	zval logger0;
+	zval* logger0;
 	wxLog* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -4389,17 +4389,17 @@ PHP_METHOD(php_wxLogChain, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &logger0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(logger0) == IS_OBJECT)
+				if(Z_TYPE_P(logger0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxLog_P(&logger0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxLog_P(&logger0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxLog_P(logger0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxLog_P(logger0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxLog*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXLOG_TYPE && argument_type != PHP_WXLOGBUFFER_TYPE && argument_type != PHP_WXLOGCHAIN_TYPE && argument_type != PHP_WXLOGINTERPOSER_TYPE && argument_type != PHP_WXLOGWINDOW_TYPE && argument_type != PHP_WXLOGGUI_TYPE && argument_type != PHP_WXLOGTEXTCTRL_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'logger' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(logger0) != IS_NULL)
+				else if(Z_TYPE_P(logger0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'logger' not null, could not be retreived correctly.");
 				}
@@ -4424,7 +4424,7 @@ PHP_METHOD(php_wxLogChain, __construct)
 				native_object = new wxLogChain_php((wxLog*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxLogChain_php*) native_object)->references.AddReference(&logger0, "wxLogChain::wxLogChain at call 2 with 1 argument(s)");
+				((wxLogChain_php*) native_object)->references.AddReference(logger0, "wxLogChain::wxLogChain at call 2 with 1 argument(s)");
 				break;
 			}
 		}
@@ -5438,7 +5438,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 	
 	
 	//Parameters for overload 0
-	zval pParent0;
+	zval* pParent0;
 	wxWindow* object_pointer0_0 = 0;
 	char* szTitle0;
 	long szTitle_len0;
@@ -5459,17 +5459,17 @@ PHP_METHOD(php_wxLogWindow, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pParent0, &szTitle0, &szTitle_len0, &show0, &passToOld0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pParent0) == IS_OBJECT)
+				if(Z_TYPE_P(pParent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxWindow_P(&pParent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(&pParent0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(pParent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(pParent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'pParent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pParent0) != IS_NULL)
+				else if(Z_TYPE_P(pParent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pParent' not null, could not be retreived correctly.");
 				}
@@ -5494,7 +5494,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 				native_object = new wxLogWindow_php((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxLogWindow_php*) native_object)->references.AddReference(&pParent0, "wxLogWindow::wxLogWindow at call 2 with 2 argument(s)");
+				((wxLogWindow_php*) native_object)->references.AddReference(pParent0, "wxLogWindow::wxLogWindow at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -5506,7 +5506,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 				native_object = new wxLogWindow_php((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8), show0);
 
 				native_object->references.Initialize();
-				((wxLogWindow_php*) native_object)->references.AddReference(&pParent0, "wxLogWindow::wxLogWindow at call 2 with 3 argument(s)");
+				((wxLogWindow_php*) native_object)->references.AddReference(pParent0, "wxLogWindow::wxLogWindow at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -5518,7 +5518,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 				native_object = new wxLogWindow_php((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8), show0, passToOld0);
 
 				native_object->references.Initialize();
-				((wxLogWindow_php*) native_object)->references.AddReference(&pParent0, "wxLogWindow::wxLogWindow at call 2 with 4 argument(s)");
+				((wxLogWindow_php*) native_object)->references.AddReference(pParent0, "wxLogWindow::wxLogWindow at call 2 with 4 argument(s)");
 				break;
 			}
 		}
@@ -5964,7 +5964,7 @@ PHP_METHOD(php_wxLogTextCtrl, __construct)
 	
 	
 	//Parameters for overload 0
-	zval pTextCtrl0;
+	zval* pTextCtrl0;
 	wxTextCtrl* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -5981,17 +5981,17 @@ PHP_METHOD(php_wxLogTextCtrl, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pTextCtrl0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE(pTextCtrl0) == IS_OBJECT)
+				if(Z_TYPE_P(pTextCtrl0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = Z_wxTextCtrl_P(&pTextCtrl0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTextCtrl_P(&pTextCtrl0 TSRMLS_CC)->native_object;
+					wxphp_object_type argument_type = Z_wxTextCtrl_P(pTextCtrl0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextCtrl_P(pTextCtrl0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxTextCtrl*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'pTextCtrl' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE(pTextCtrl0) != IS_NULL)
+				else if(Z_TYPE_P(pTextCtrl0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pTextCtrl' not null, could not be retreived correctly.");
 				}
@@ -6016,7 +6016,7 @@ PHP_METHOD(php_wxLogTextCtrl, __construct)
 				native_object = new wxLogTextCtrl_php((wxTextCtrl*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxLogTextCtrl_php*) native_object)->references.AddReference(&pTextCtrl0, "wxLogTextCtrl::wxLogTextCtrl at call 2 with 1 argument(s)");
+				((wxLogTextCtrl_php*) native_object)->references.AddReference(pTextCtrl0, "wxLogTextCtrl::wxLogTextCtrl at call 2 with 1 argument(s)");
 				break;
 			}
 		}
