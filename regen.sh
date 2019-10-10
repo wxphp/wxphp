@@ -14,7 +14,7 @@ cp tools/source_maker/class_selector/classes.json json
 cd tools/source_maker/
 
 # Run the code generator
-php code_generator.php
+php -d "short_open_tag=1" code_generator.php
 
 # Copy non dynamic template files
 rm ./../../includes/app.h
