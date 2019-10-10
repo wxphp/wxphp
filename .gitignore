@@ -17,6 +17,7 @@ config.nice
 config.status
 config.sub
 configure
+configure.ac
 configure.in
 install-sh
 libtool
@@ -42,4 +43,5 @@ tools/wxwidgets.php
 # Ignore editors
 /tools/nbproject/private/
 /nbproject/
-
+/.idea/
+/cmake-build-*/
