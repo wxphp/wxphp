@@ -1,23 +1,28 @@
 <?php
 
-dl('wxwidgets.so');
-
 class MyDialog extends wxDialog
 {
     public function __construct()
     {
-        parent::__construct(null, -1, 'Foobar', wxDefaultPosition, new wxSize(100, 100), 0);
+        parent::__construct(null, -1, 'Foobar', wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE);
 
         $gridSizer = new wxGridSizer(0, 2, 0, 0);
 
-        $label = new wxStaticText($this, -1, 'label', new wxPoint(-1, -1), new wxSize(-1, -1), 0);
+        $label = new wxStaticText($this, -1, 'label', wxDefaultPosition, wxDefaultSize, 0);
         $gridSizer->Add($label, 0, 0, 1);
 
-        $textBox = new wxTextCtrl($this, -1, '', new wxPoint(-1, -1), new wxSize(-1, -1), 0);
-        $gridSizer->Add($textBox, 0, 0, 2);
+        $button = new wxButton($this, wxID_ANY, 'ok', wxDefaultPosition, wxDefaultSize, 0);
+        $gridSizer->Add($button, 0, 0, 2);
+
+        $button->Connect(wxEVT_COMMAND_BUTTON_CLICKED, array($this, '_onClick'));
 
         $this->SetSizer($gridSizer);
         $this->Layout();
+    }
+
+    public function _onClick($event)
+    {
+        echo 'Hallo Welt';
     }
 }
 

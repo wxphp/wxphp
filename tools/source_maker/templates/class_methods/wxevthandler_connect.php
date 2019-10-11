@@ -43,7 +43,6 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 		wxMessageBox(errorMsg, "Error", wxOK|wxICON_ERROR);
 	}
 
-	char* wxname;
 	zval dummy;
 	zval fc_name;
 	wxCommandEvent* ce;
@@ -52,7 +51,8 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 	ce = (wxCommandEvent*) evnt.m_callbackUserData;
 	co = (wxPhpClientData*) ce->GetClientObject();
 
-	ZVAL_STRING(&fc_name, ce->GetString().char_str());
+	wxString fname = ce->GetString();
+	ZVAL_STRING(&fc_name, fname);
 
 	if(call_user_function(NULL, co->phpObj, &fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE)
 	{
@@ -64,7 +64,6 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 	}
 	
 	zval_ptr_dtor(&arg[0]);
-	efree(wxname);
 	zval_ptr_dtor(&fc_name);
 }
 
