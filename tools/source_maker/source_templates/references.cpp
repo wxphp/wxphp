@@ -61,7 +61,7 @@ void wxPHPObjectReferences::RemoveReferences()
 			php_printf("Removing reference: %i\n", i);
 			#endif
 			
-			zval_ptr_dtor(m_references[i]);
+			Z_TRY_DELREF_P(m_references[i]);
 		}
 	}
 }
