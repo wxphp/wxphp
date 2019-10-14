@@ -8,7 +8,7 @@ php:
     - 7.3
 
 install:
-    - sudo apt-get install libwebkitgtk-3.0-dev libgconf2-dev libghc-gstreamer-dev libsdl1.2-dev libgtk-3-dev
+    - sudo apt-get install libwebkitgtk-3.0-dev libgconf2-dev libsdl1.2-dev libgtk-3-dev
 
 script: phpize && ./configure && make && make test
 
