@@ -40,8 +40,9 @@ add_compile_definitions(USE_WXPHP_DEBUG=1)
 # Add custom targets
 add_custom_target(regen
         COMMAND ./regen.sh
+        COMMAND sed -i 's/-O2/-O0 -g/g' config.m4
         WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
 
 add_custom_target(configure
-        COMMAND phpize && ./configure --enable-wxwidgets-debug --enable-wxwidgets-static
+        COMMAND phpize && ./configure --enable-wxwidgets-debug --enable-wxwidgets-static CFLAGS='-g -O0' CXXFLAGS='-g -O0'
         WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
