@@ -152,15 +152,21 @@ if test "$PHP_WXWIDGETS" != "no"; then
 
         WX_BUILD_DIR=`pwd | sed "s/wxWidgets-${PHP_WX_VERSION}\/mybuild//"`wxWidgets-build
 
+        WX_FLAGS="-fPIC -O2"
+        if test "$PHP_WXWIDGETS_DEBUG" != "no"; then
+            dnl Enable debugging on wxWidgets.
+            WX_FLAGS="-fPIC -O0 -g"
+        fi
+
         if test ! -e "Makefile"; then
             if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
-                CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2"  \
+                CFLAGS="$WX_FLAGS" CXXFLAGS="$WX_FLAGS"  \
                 ../configure --prefix=$WX_BUILD_DIR --disable-shared \
                 --enable-monolithic --with-{gtk=3,sdl}
             else
-                CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2" CPPFLAGS="-fPIC -O2 -Wall -W" \
-                ../configure --prefix=$WX_BUILD_DIR --disable-shared --enable-monolithic \
-                --with-osx_cocoa
+                CFLAGS="$WX_FLAGS" CXXFLAGS="$WX_FLAGS" \
+                ../configure --prefix=$WX_BUILD_DIR --disable-shared \
+                --enable-monolithic --with-osx_cocoa
             fi
         fi
 
