@@ -1,14 +1,11 @@
 language: php
+dist: bionic
 
 php:
     - 7.0
     - 7.1
     - 7.2
     - 7.3
-
-before_install:
-    - sudo apt-add-repository --yes ppa:zoogie/sdl2-snapshots
-    - sudo apt-get update
 
 install:
     - sudo apt-get install libwebkitgtk-3.0-dev libgconf2-dev libghc-gstreamer-dev libsdl1.2-dev libgtk-3-dev
