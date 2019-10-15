@@ -2,48 +2,47 @@
 
 class MyApp extends wxApp
 {
-    public function __construct()
+    private $someUnrelatedAttribute;
+
+    public function __construct(SomeUnrelatedClass $someUnrelatedClass)
     {
-        echo "__construct()\n";
+        echo "MyApp::__construct()\n";
+
+        /* A */ $this->someUnrelatedAttribute = $someUnrelatedClass->someUnrelatedValue();
+        /* B */ #$this->someUnrelatedAttribute = 'foofoo'; 
+        /* C */ #echo $someUnrelatedClass->someUnrelatedValue() . "\n"; 
+
         parent::__construct();
+    }
+
+    public function start()
+    {
+        echo "MyApp::start()\n";
+        wxApp::SetInstance($this);
+
+        echo "MyApp::start() - calling wxEntry\n";
+        wxEntry();
     }
 
     public function OnInit()
     {
-        echo "OnInit()\n";
+        echo "MyApp::OnInit()\n";
+        echo "Thank you for playing!\n\n";
 
-        $dialog = new MyDialog();
-        $dialog->Show();
-    }
-}
-
-class MyDialog extends wxDialog
-{
-    public function __construct()
-    {
-        parent::__construct(null, -1, 'Foobar', wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE);
-
-        $gridSizer = new wxGridSizer(0, 2, 0, 0);
-
-        $label = new wxStaticText($this, -1, 'label', wxDefaultPosition, wxDefaultSize, 0);
-        $gridSizer->Add($label, 0, 0, 1);
-
-        $button = new wxButton($this, wxID_ANY, 'ok', wxDefaultPosition, wxDefaultSize, 0);
-        $gridSizer->Add($button, 0, 0, 2);
-
-        $button->Connect(wxEVT_COMMAND_BUTTON_CLICKED, array($this, '_onClick'));
-
-        $this->SetSizer($gridSizer);
-        $this->Layout();
-    }
-
-    public function _onClick($event)
-    {
-        echo 'Hallo Welt';
+        echo "MyApp::OnInit() - calling wxExit\n";
         wxExit();
     }
 }
 
-$myApp = new MyApp();
-wxApp::SetInstance($myApp);
-wxEntry();
+class SomeUnrelatedClass
+{
+    public function someUnrelatedValue()
+    {
+        return 'barfoo';
+    }
+}
+
+$someUnrelatedClass = new SomeUnrelatedClass();
+$myApp = new MyApp($someUnrelatedClass);
+$myApp->start();
+
