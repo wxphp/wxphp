@@ -240,9 +240,14 @@ if test "$PHP_WXWIDGETS" != "no"; then
     if test "$PHP_WXWIDGETS_MONOLITHIC" != "no"; then
         PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs`
 
+        WEBKIT_LIB="-lwebkitgtk-3.0"
+        if find /usr/include -name "webkit2.h" ; then
+            WEBKIT_LIB="-lwebkit2gtk-4.0"
+        fi
+
         dnl Append wxscintilla and gstreamer if static build
         if test "$PHP_WXWIDGETS_STATIC" != "no"; then
-            PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.0 -lwebkitgtk-3.0 $PHP_WXWIDGETS_OTHER_LDFLAGS"
+            PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.0 $WEBKIT_LIB $PHP_WXWIDGETS_OTHER_LDFLAGS"
             LDFLAGS="$LDFLAGS $PHP_WXWIDGETS_LDFLAGS"
         fi
     else
