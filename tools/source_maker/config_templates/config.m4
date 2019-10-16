@@ -61,20 +61,12 @@ if test "$PHP_WXWIDGETS" != "no"; then
         dnl If not building for macosx check dependencies are met
         if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
             AC_MSG_CHECKING([for webkitgtk include files])
-            WEBKITGTK=`find /usr/include -name "webkit.h"`
+            WEBKITGTK=`find /usr/include -name "webkit.h" -or -name "webkit2.h"`
             if test "$WEBKITGTK" != ""; then
                 AC_MSG_RESULT([found])
             else
                 AC_MSG_RESULT([not found])
                 AC_MSG_ERROR([webkitgtk include files where not found])
-            fi
-
-            AC_MSG_CHECKING([for gconf2 include files])
-            if test -e "/usr/include/gconf/2/gconf/gconf.h"; then
-                AC_MSG_RESULT([found])
-            else
-                AC_MSG_RESULT([not found])
-                AC_MSG_ERROR([gconf include files where not found])
             fi
 
             AC_MSG_CHECKING([for gstreamer include files])
