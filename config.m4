@@ -240,8 +240,10 @@ if test "$PHP_WXWIDGETS" != "no"; then
     if test "$PHP_WXWIDGETS_MONOLITHIC" != "no"; then
         PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs`
 
-        WEBKIT_LIB="-lwebkitgtk-3.0"
-        if find /usr/include -name "webkit2.h" ; then
+        WEBKIT_LIB=""
+        if find /usr/include -name "webkit.h" ; then
+            WEBKIT_LIB="-lwebkitgtk-3.0"
+        elif find /usr/include -name "webkit2.h" ; then
             WEBKIT_LIB="-lwebkit2gtk-4.0"
         fi
 
