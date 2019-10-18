@@ -63,7 +63,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
     if(
         call_user_function(
             NULL,
-            co->phpObj,
+            &co->phpObj,
             &fc_name,
             &dummy,
             1,
@@ -205,7 +205,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 
     wxCommandEvent* ce = new wxCommandEvent();
     ce->SetString(wxString::Format(wxT("%s"), ct));
-    ce->SetClientObject(new wxPhpClientData(fc_obj));
+    ce->SetClientObject(new wxPhpClientData(*fc_obj));
 
     switch(args)
     {

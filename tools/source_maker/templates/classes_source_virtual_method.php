@@ -36,17 +36,17 @@
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "<?=$method_name?>");
     
-    if (this->phpObj->value.obj->ce == NULL) {
+    if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
-    php_printf(" on %s\n", ZSTR_VAL(this->phpObj->value.obj->ce->name));
+    php_printf(" on %s\n", ZSTR_VAL(this->phpObj.value.obj->ce->name));
     }
     #endif
 
     if(is_php_user_space_implemented)
     {
         function_called = wxphp_call_method(
-            this->phpObj,
+            (zval*)&this->phpObj,
             NULL,
             &cached_function,
             "<?=$method_name?>",

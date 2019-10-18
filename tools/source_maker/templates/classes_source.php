@@ -204,7 +204,7 @@ zend_object* php_<?=$class_name?>_new(zend_class_entry *class_type)
     Z_OBJ(temp) = &custom_object->zo;
 
     custom_object->native_object = new <?=$class_name?>_php();
-    custom_object->native_object->phpObj = &temp;
+    custom_object->native_object->phpObj = temp;
 <? } ?>
     custom_object->object_type = PHP_<?=strtoupper($class_name)?>_TYPE;
     custom_object->is_user_initialized = 0;

@@ -25,7 +25,7 @@ PHP_METHOD(php_<?=$class_name?>, __construct)
 
     if(already_called)
     {
-        native_object->phpObj = getThis();
+        native_object->phpObj = *getThis();
 
 <?if(class_has_properties($class_name)){?>
         native_object->InitProperties();

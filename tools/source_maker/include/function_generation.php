@@ -1640,9 +1640,9 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                                 $return_called_overload .= tabs(5) . "ZVAL_NULL(return_value);\n";
                                 $return_called_overload .= tabs(4) . "}\n";
                                 $return_called_overload .= tabs(4) . "else if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
-                                $return_called_overload .= tabs(5) . "if(value_to_return{$required_parameters}->phpObj != NULL){\n";
-                                $return_called_overload .= tabs(6) . "return_value = value_to_return{$required_parameters}->phpObj;\n";
-                                $return_called_overload .= tabs(6) . "zval_add_ref(value_to_return{$required_parameters}->phpObj);\n";
+                                $return_called_overload .= tabs(5) . "if(!Z_ISNULL(value_to_return{$required_parameters}->phpObj)){\n";
+                                $return_called_overload .= tabs(6) . "return_value = &value_to_return{$required_parameters}->phpObj;\n";
+                                $return_called_overload .= tabs(6) . "zval_add_ref(&value_to_return{$required_parameters}->phpObj);\n";
                                 $return_called_overload .= tabs(6) . "return_is_user_initialized = true;\n";
                                 $return_called_overload .= tabs(5) . "}\n";
                                 $return_called_overload .= tabs(5) . "else{\n";
@@ -1688,9 +1688,9 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                                     $return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = ({$return_type}_php*) &$class_name_ex::$method_name($parameters_string);\n";
                                 }
                                 $return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
-                                $return_called_overload .= tabs(5) . "if(value_to_return{$required_parameters}->phpObj != NULL){\n";
-                                $return_called_overload .= tabs(6) . "return_value = value_to_return{$required_parameters}->phpObj;\n";
-                                $return_called_overload .= tabs(6) . "zval_add_ref(value_to_return{$required_parameters}->phpObj);\n";
+                                $return_called_overload .= tabs(5) . "if(!Z_ISNULL(value_to_return{$required_parameters}->phpObj)){\n";
+                                $return_called_overload .= tabs(6) . "return_value = &value_to_return{$required_parameters}->phpObj;\n";
+                                $return_called_overload .= tabs(6) . "zval_add_ref(&value_to_return{$required_parameters}->phpObj);\n";
                                 $return_called_overload .= tabs(6) . "return_is_user_initialized = true;\n";
                                 $return_called_overload .= tabs(5) . "}\n";
                                 $return_called_overload .= tabs(5) . "else{\n";
@@ -1745,7 +1745,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                                     $return_called_overload .= tabs(4) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
                                     $return_called_overload .= tabs(4) . "memcpy(ptr, (void*) &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
                                     $return_called_overload .= tabs(4) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
-                                    $return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
+                                    $return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->phpObj = *return_value;\n";
                                     if(class_has_properties($return_type))
                                     {
                                         $return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->InitProperties();\n";
@@ -1976,7 +1976,7 @@ function function_return_call($method_name, $parameters_string, $required_parame
                     $call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
                     $call_code .= tabs($t) . "memcpy(ptr, (void*) &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
                     $call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
-                    $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
+                    $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->phpObj = *return_value;\n";
                     if(class_has_properties($return_type))
                     {
                         $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->InitProperties();\n";
@@ -2261,7 +2261,7 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
                         $call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
                         $call_code .= tabs($t) . "memcpy(ptr, (void*) &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
                         $call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
-                        $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
+                        $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->phpObj = *return_value;\n";
                         if(class_has_properties($return_type))
                         {
                             $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->InitProperties();\n";

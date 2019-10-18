@@ -105,11 +105,11 @@ END_EXTERN_C()
 class wxPhpClientData : public wxClientData
 {
     public:
-    wxPhpClientData(zval* phpObj)
+    wxPhpClientData(zval& phpObj)
     {
         this->phpObj = phpObj;
     }
-    zval* phpObj;
+    zval phpObj;
 };
 
 /**

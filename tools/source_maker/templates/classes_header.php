@@ -20,7 +20,7 @@ class <?=$class_name?>_php<?if($class_name == "wxScrolled"){?>: public <?=$class
 <?if($class_name == "wxEvtHandler"){?>
     void onEvent(wxEvent& evnt);
 <? } ?>
-    zval* phpObj;
+    zval phpObj;
     wxPHPObjectReferences references;
 };
 
