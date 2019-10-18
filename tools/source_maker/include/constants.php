@@ -2,16 +2,16 @@
 /**
  * @author Mário Soares
  * @contributors Jefferson González
- * 
- * @license 
+ *
+ * @license
  * This file is part of wxPHP check the LICENSE file for information.
- * 
+ *
  * @description
  * Some predefined constants to assit on the code generation.
- * 
+ *
  * The purpose is to assist the code generator manually in case
  * the json_generator didn't return some required constants.
- * 
+ *
 */
 
 //wxSplitterWindow
@@ -23,7 +23,7 @@ $defConsts["wxSP_NOBORDER"] = true;
 $defConsts["wxSP_NO_XP_THEME"] = true;
 $defConsts["wxSP_PERMIT_UNSPLIT"] = true;
 $defConsts["wxSP_LIVE_UPDATE"] = true;
-	
+
 //wxSizer, wxStaticText, etc...
 $defConsts["wxHORIZONTAL"] = true;
 $defConsts["wxVERTICAL"] = true;
@@ -46,12 +46,12 @@ $defConsts["wxALIGN_CENTRE_VERTICAL"] = true;
 $defConsts["wxALIGN_CENTER_HORIZONTAL"] = true;
 $defConsts["wxALIGN_CENTRE_HORIZONTAL"] = true;
 $defConsts["wxST_NO_AUTORESIZE"] = true;
-	
+
 //wxGauge
 $defConsts["wxGA_HORIZONTAL"] = true;
 $defConsts["wxGA_VERTICAL"] = true;
 $defConsts["wxGA_SMOOTH"] = true;
-	
+
 //wxButton
 $defConsts["wxBU_LEFT"] = true;
 $defConsts["wxBU_TOP"] = true;
@@ -59,7 +59,7 @@ $defConsts["wxBU_RIGHT"] = true;
 $defConsts["wxBU_BOTTOM"] = true;
 $defConsts["wxBU_EXACTFIT"] = true;
 $defConsts["wxNO_BORDER"] = true;
-	
+
 //Image types
 $defConsts["wxBITMAP_TYPE_BMP"] = true;
 $defConsts["wxBITMAP_TYPE_BMP_RESOURCE"] = true;
@@ -67,7 +67,7 @@ $defConsts["wxBITMAP_TYPE_PICT_RESOURCE"] = true;
 $defConsts["wxBITMAP_TYPE_GIF"] = true;
 $defConsts["wxBITMAP_TYPE_XBM"] = true;
 $defConsts["wxBITMAP_TYPE_XPM"] = true;
-	
+
 //wxCalendarCtrl
 $defConsts["wxCAL_SUNDAY_FIRST"] = true;
 $defConsts["wxCAL_MONDAY_FIRST"] = true;
@@ -76,12 +76,12 @@ $defConsts["wxCAL_NO_YEAR_CHANGE"] = true;
 $defConsts["wxCAL_NO_MONTH_CHANGE"] = true;
 $defConsts["wxCAL_SHOW_SURROUNDING_WEEKS"] = true;
 $defConsts["wxCAL_SEQUENTIAL_MONTH_SELECTION"] = true;
-	
+
 //wxCheckBox
 $defConsts["wxCHK_2STATE"] = true;
 $defConsts["wxCHK_3STATE"] = true;
 $defConsts["wxCHK_ALLOW_3RD_STATE_FOR_USER"] = true;
-	
+
 //wxToolBar
 $defConsts["wxTB_FLAT"] = true;
 $defConsts["wxTB_DOCKABLE"] = true;
@@ -96,7 +96,7 @@ $defConsts["wxTB_HORZ_TEXT"] = true;
 $defConsts["wxTB_NO_TOOLTIPS"] = true;
 $defConsts["wxTB_BOTTOM"] = true;
 $defConsts["wxTB_RIGHT"] = true;
-	
+
 //wxListCtrl
 $defConsts["wxLC_LIST"] = true;
 $defConsts["wxLC_REPORT"] = true;
@@ -113,7 +113,7 @@ $defConsts["wxLC_SORT_ASCENDING"] = true;
 $defConsts["wxLC_SORT_DESCENDING"] = true;
 $defConsts["wxLC_HRULES"] = true;
 $defConsts["wxLC_VRULES"] = true;
-	
+
 //wxNoteBook
 $defConsts["wxNB_TOP"] = true;
 $defConsts["wxNB_LEFT"] = true;
@@ -123,7 +123,7 @@ $defConsts["wxNB_FIXEDWIDTH"] = true;
 $defConsts["wxNB_MULTILINE"] = true;
 $defConsts["wxNB_NOPAGETHEME"] = true;
 $defConsts["wxNB_FLAT"] = true;
-	
+
 //Id's
 $defConsts["wxID_LOWEST"] = true;
 $defConsts["wxID_OPEN"] = true;
@@ -232,7 +232,7 @@ $defConsts["wxID_RESTORE_FRAME"] = true;
 // IDs used by generic file dialog (13 consecutive starting from this value)
 $defConsts["wxID_FILEDLGG"] = true;
 $defConsts["wxID_HIGHEST"] = true;
-    
+
 //Keycodes
 $defConsts["WXK_BACK"] = true;
 $defConsts["WXK_TAB"] = true;
@@ -365,7 +365,7 @@ $defConsts["WXK_SPECIAL17"] = true;
 $defConsts["WXK_SPECIAL18"] = true;
 $defConsts["WXK_SPECIAL19"] = true;
 $defConsts["WXK_SPECIAL20"] = true;
-	
+
 //wxTextCtrl, wxRichTexCtrl, wxSearchCtrl etc...
 $defConsts["wxTE_MULTILINE"] = true;
 $defConsts["wxTE_PASSWORD"] = true;
@@ -385,7 +385,7 @@ $defConsts["wxTE_CHARWRAP"] = true;
 $defConsts["wxTE_WORDWRAP"] = true;
 $defConsts["wxTE_BESTWRAP"] = true;
 $defConsts["wxTE_CAPITALIZE"] = true;
-	
+
 $defConsts["wxHSCROLL"] = true;
 $defConsts["wxOK"] = true;
 $defConsts["wxCANCEL"] = true;
@@ -414,7 +414,7 @@ $defConsts["wxHSCROLL"] = true;
 $defConsts["wxALWAYS_SHOW_SB"] = true;
 $defConsts["wxCLIP_CHILDREN"] = true;
 $defConsts["wxFULL_REPAINT_ON_RESIZE"] = true;
-	
+
 //wxListBox, wxCheckListBox, etc..
 $defConsts["wxLB_SINGLE"] = true;
 $defConsts["wxLB_MULTIPLE"] = true;
@@ -423,7 +423,7 @@ $defConsts["wxLB_HSCROLL"] = true;
 $defConsts["wxLB_ALWAYS_SB"] = true;
 $defConsts["wxLB_NEEDED_SB"] = true;
 $defConsts["wxLB_SORT"] = true;
-	
+
 //wxSocketBase
 $defConsts["wxSOCKET_NOERROR"] = true;
 $defConsts["wxSOCKET_INVOP"] = true;
@@ -439,7 +439,7 @@ $defConsts["wxSOCKET_INPUT"] = true;
 $defConsts["wxSOCKET_OUTPUT"] = true;
 $defConsts["wxSOCKET_CONNECTION"] = true;
 $defConsts["wxSOCKET_LOST"] = true;
-	
+
 //wxFileDialog
 $defConsts["wxFD_DEFAULT_STYLE"] = true;
 $defConsts["wxFD_OPEN"] = true;
@@ -449,13 +449,13 @@ $defConsts["wxFD_FILE_MUST_EXIST"] = true;
 $defConsts["wxFD_MULTIPLE"] = true;
 $defConsts["wxFD_CHANGE_DIR"] = true;
 $defConsts["wxFD_PREVIEW"] = true;
-	
+
 //wxComboBox
 $defConsts["wxCB_SIMPLE"] = true;
 $defConsts["wxCB_DROPDOWN"] = true;
 $defConsts["wxCB_READONLY"] = true;
 $defConsts["wxCB_SORT"] = true;
-	
+
 //wxTreeCtrl
 $defConsts["wxTR_DEFAULT_STYLE"] = true;
 $defConsts["wxTR_EDIT_LABELS"] = true;
@@ -471,25 +471,25 @@ $defConsts["wxTR_NO_LINES"] = true;
 $defConsts["wxTR_ROW_LINES"] = true;
 $defConsts["wxTR_SINGLE"] = true;
 $defConsts["wxTR_TWIST_BUTTONS"] = true;
-	
+
 //wxHyperlinkCtrl
 $defConsts["wxHL_CONTEXTMENU"] = true;
 $defConsts["wxHL_ALIGN_LEFT"] = true;
 $defConsts["wxHL_ALIGN_RIGHT"] = true;
 $defConsts["wxHL_ALIGN_CENTRE"] = true;
 $defConsts["wxHL_DEFAULT_STYLE"] = true;
-	
-	
+
+
 $defConsts["wxDEFAULT_DIALOG_STYLE"] = true;
 $defConsts["wxDEFAULT_FRAME_STYLE"] = true;
 $defConsts["wxST_SIZEGRIP"] = true;
-	
+
 //wxFontPickerCtrl
 $defConsts["wxFNTP_DEFAULT_STYLE"] = true;
 $defConsts["wxFNTP_FONTDESC_AS_LABEL"] = true;
 $defConsts["wxFNTP_USEFONT_FOR_LABEL"] = true;
 $defConsts["wxFNTP_USE_TEXTCTRL"] = true;
-	
+
 //wxFilePickerCtrl
 $defConsts["wxFLP_DEFAULT_STYLE"] = true;
 $defConsts["wxFLP_CHANGE_DIR"] = true;
@@ -498,113 +498,113 @@ $defConsts["wxFLP_OPEN"] = true;
 $defConsts["wxFLP_OVERWRITE_PROMPT"] = true;
 $defConsts["wxFLP_SAVE"] = true;
 $defConsts["wxFLP_USE_TEXTCTRL"] = true;
-	
+
 //wxDirPickerCtrl
 $defConsts["wxDIRP_DEFAULT_STYLE"] = true;
 $defConsts["wxDIRP_CHANGE_DIR"] = true;
 $defConsts["wxDIRP_DIR_MUST_EXIST"] = true;
 $defConsts["wxDIRP_USE_TEXTCTRL"] = true;
-	
+
 //wxDatepickerCtrl
 $defConsts["wxDP_DEFAULT"] = true;
 $defConsts["wxDP_ALLOWNONE"] = true;
 $defConsts["wxDP_DROPDOWN"] = true;
 $defConsts["wxDP_SHOWCENTURY"] = true;
 $defConsts["wxDP_SPIN"] = true;
-	
+
 //wxScrollBar
 $defConsts["wxSB_HORIZONTAL"] = true;
 $defConsts["wxSB_VERTICAL"] = true;
-	
+
 //wxSpinCtrl, wxSpinButton
 $defConsts["wxSP_ARROW_KEYS"] = true;
 $defConsts["wxSP_WRAP"] = true;
 $defConsts["wxSP_VERTICAL"] = true;
 $defConsts["wxSP_HORIZONTAL"] = true;
-	
+
 //wxGenericDirCtrl
 $defConsts["wxDIRCTRL_3D_INTERNAL"] = true;
 $defConsts["wxDIRCTRL_DIR_ONLY"] = true;
 $defConsts["wxDIRCTRL_EDIT_LABELS"] = true;
 $defConsts["wxDIRCTRL_SELECT_FIRST"] = true;
 $defConsts["wxDIRCTRL_SHOW_FILTERS"] = true;
-	
+
 $defConsts["wxSUNKEN_BORDER"] = true;
-	
+
 //wxHtmlWindow
 $defConsts["wxHW_SCROLLBAR_AUTO"] = true;
 $defConsts["wxHW_NO_SELECTION"] = true;
 $defConsts["wxHW_SCROLLBAR_NEVER"] = true;
 $defConsts["wxHW_DEFAULT_STYLE"] = true;
-	
+
 //wxBitmapButton
 $defConsts["wxBU_AUTODRAW"] = true;
 $defConsts["wxBU_BOTTOM"] = true;
 $defConsts["wxBU_LEFT"] = true;
 $defConsts["wxBU_RIGHT"] = true;
 $defConsts["wxBU_TOP"] = true;
-	
+
 //wxSlider
-$defConsts["wxSL_AUTOTICKS"] = true; 
-$defConsts["wxSL_BOTH"] = true; 
-$defConsts["wxSL_BOTTOM"] = true; 
-$defConsts["wxSL_HORIZONTAL"] = true; 
-$defConsts["wxSL_INVERSE"] = true; 
-$defConsts["wxSL_LABELS"] = true; 
-$defConsts["wxSL_LEFT"] = true; 
-$defConsts["wxSL_RIGHT"] = true; 
-$defConsts["wxSL_SELRANGE"] = true; 
-$defConsts["wxSL_TOP"] = true; 
+$defConsts["wxSL_AUTOTICKS"] = true;
+$defConsts["wxSL_BOTH"] = true;
+$defConsts["wxSL_BOTTOM"] = true;
+$defConsts["wxSL_HORIZONTAL"] = true;
+$defConsts["wxSL_INVERSE"] = true;
+$defConsts["wxSL_LABELS"] = true;
+$defConsts["wxSL_LEFT"] = true;
+$defConsts["wxSL_RIGHT"] = true;
+$defConsts["wxSL_SELRANGE"] = true;
+$defConsts["wxSL_TOP"] = true;
 $defConsts["wxSL_VERTICAL"] = true;
-	
+
 //wxRadioButton
 $defConsts["wxRB_GROUP"] = true;
 $defConsts["wxRB_SINGLE"] = true;
-	
+
 //wxRadionBox
 $defConsts["wxRA_SPECIFY_COLS"] = true;
 $defConsts["wxRA_SPECIFY_ROWS"] = true;
-	
+
 //wxStaticLine
 $defConsts["wxLI_HORIZONTAL"] = true;
 $defConsts["wxLI_VERTICAL"] = true;
-	
+
 //wxChoicebook
 $defConsts["wxCHB_BOTTOM"] = true;
 $defConsts["wxCHB_DEFAULT"] = true;
 $defConsts["wxCHB_LEFT"] = true;
 $defConsts["wxCHB_RIGHT"] = true;
 $defConsts["wxCHB_TOP"] = true;
-	
+
 //wxListbook
 $defConsts["wxLB_BOTTOM"] = true;
-$defConsts["wxLB_DEFAULT"] = true; 
+$defConsts["wxLB_DEFAULT"] = true;
 $defConsts["wxLB_LEFT"] = true;
 $defConsts["wxLB_RIGHT"] = true;
 $defConsts["wxLB_TOP"] = true;
-	
+
 //wxAuiNotebook
-$defConsts["wxAUI_NB_BOTTOM"] = true; 
-$defConsts["wxAUI_NB_CLOSE_BUTTON"] = true; 
-$defConsts["wxAUI_NB_CLOSE_ON_ACTIVE_TAB"] = true; 
-$defConsts["wxAUI_NB_CLOSE_ON_ALL_TABS"] = true; 
-$defConsts["wxAUI_NB_DEFAULT_STYLE"] = true; 
-$defConsts["wxAUI_NB_SCROLL_BUTTONS"] = true; 
-$defConsts["wxAUI_NB_TAB_EXTERNAL_MOVE"] = true; 
-$defConsts["wxAUI_NB_TAB_FIXED_WIDTH"] = true; 
-$defConsts["wxAUI_NB_TAB_MOVE"] = true; 
-$defConsts["wxAUI_NB_TAB_SPLIT"] = true; 
-$defConsts["wxAUI_NB_TOP"] = true; 
+$defConsts["wxAUI_NB_BOTTOM"] = true;
+$defConsts["wxAUI_NB_CLOSE_BUTTON"] = true;
+$defConsts["wxAUI_NB_CLOSE_ON_ACTIVE_TAB"] = true;
+$defConsts["wxAUI_NB_CLOSE_ON_ALL_TABS"] = true;
+$defConsts["wxAUI_NB_DEFAULT_STYLE"] = true;
+$defConsts["wxAUI_NB_SCROLL_BUTTONS"] = true;
+$defConsts["wxAUI_NB_TAB_EXTERNAL_MOVE"] = true;
+$defConsts["wxAUI_NB_TAB_FIXED_WIDTH"] = true;
+$defConsts["wxAUI_NB_TAB_MOVE"] = true;
+$defConsts["wxAUI_NB_TAB_SPLIT"] = true;
+$defConsts["wxAUI_NB_TOP"] = true;
 $defConsts["wxAUI_NB_WINDOWLIST_BUTTON"] = true;
-	
+
 //wxMenuBar
 $defConsts["wxMB_DOCKABLE"] = true;
-	
+
 //wxToolBar Item Kind
 $defConsts["wxITEM_CHECK"] = true;
 $defConsts["wxITEM_NORMAL"] = true;
 $defConsts["wxITEM_RADIO"] = true;
-	
+
 //Dialog buttons
 $defConsts["wxOK"] = true;
 $defConsts["wxCANCEL"] = true;
@@ -619,7 +619,7 @@ $defConsts["wxICON_ERROR"] = true;
 $defConsts["wxICON_QUESTION"] = true;
 $defConsts["wxICON_INFORMATION"] = true;
 $defConsts["wxSTAY_ON_TOP"] = true;
-	
+
 //Splash screen
 $defConsts["wxSPLASH_CENTRE_ON_PARENT"] = true;
 $defConsts["wxSPLASH_CENTRE_ON_SCREEN"] = true;

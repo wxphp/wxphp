@@ -2,20 +2,20 @@
 /**
  * @author Mário Soares
  * @contributors Jefferson González
- * 
- * @license 
+ *
+ * @license
  * This file is part of wxPHP check the LICENSE file for information.
- * 
+ *
  * @description
- * Script to generate the wxWidgets extension cpp source code using as 
- * input the json output produced by the wxWidgets doxygen 
+ * Script to generate the wxWidgets extension cpp source code using as
+ * input the json output produced by the wxWidgets doxygen
  * documentation parser tool json_generator.php.
- * 
- * 
+ *
+ *
 */
 
 if (!ini_get('short_open_tag'))
-	exit("Error: short_open_tag must be turned on in your php.ini\n");
+    exit("Error: short_open_tag must be turned on in your php.ini\n");
 
 include("include/functions.php");
 include("include/function_generation.php");
@@ -56,133 +56,153 @@ $defClassGroups = array();
 //Load includes parsed by the json_generator
 if(file_exists("./../../json/includes.json"))
 {
-	$defIncludes = unserialize_json(file_get_contents("./../../json/includes.json"));
-	
-	//for wxAbort()
-	$defIncludes["wx/debug.h"] = 1;
-	
-	// for wxGetNumberFromUser
-	$defIncludes["wx/numdlg.h"] = 1;
-	
-	//blacklist include files
-	unset($defIncludes["wx/msw/ole/activex.h"]);
-	unset($defIncludes["wx/aui/toolbar.h"]);
-	unset($defIncludes["wx/msw/ole/automtn.h"]);
-	unset($defIncludes["wx/dde.h"]);
-	unset($defIncludes["wx/msw/regconf.h"]);
-	unset($defIncludes["wx/msw/registry.h"]);
+    $defIncludes = unserialize_json(file_get_contents("./../../json/includes.json"));
+
+    //for wxAbort()
+    $defIncludes["wx/debug.h"] = 1;
+
+    // for wxGetNumberFromUser
+    $defIncludes["wx/numdlg.h"] = 1;
+
+    //blacklist include files
+    unset($defIncludes["wx/msw/ole/activex.h"]);
+    unset($defIncludes["wx/aui/toolbar.h"]);
+    unset($defIncludes["wx/msw/ole/automtn.h"]);
+    unset($defIncludes["wx/dde.h"]);
+    unset($defIncludes["wx/msw/regconf.h"]);
+    unset($defIncludes["wx/msw/registry.h"]);
 }
 
 //Load functions parsed by the json_generator
 if(file_exists("./../../json/functions.json"))
 {
-	$defFunctions = unserialize_json(file_get_contents("./../../json/functions.json"));
-	
-	//Manually defined as a template
-	$defFunctions["wxDynamicCast"] = array();
-	
-	//Blacklist functions
-	include("include/functions_blacklist.php");
+    $defFunctions = unserialize_json(file_get_contents("./../../json/functions.json"));
+
+    //Manually defined as a template
+    $defFunctions["wxDynamicCast"] = array();
+
+    //Blacklist functions
+    include("include/functions_blacklist.php");
 }
 
 //Load classes parsed by the json_generator
 if(file_exists("./../../json/classes.json"))
 {
-	$defIni = unserialize_json(file_get_contents("./../../json/classes.json"));
-	
-	//Unmark webview methods as pure virtual since they can be used
-	foreach($defIni["wxWebView"] as $method_name=>$method_definitions)
-	{
-		if($method_name{0} != "_")
-		{
-			foreach($defIni["wxWebView"][$method_name] as $method_index=>$method_data)
-			{
-				if($defIni["wxWebView"][$method_name][$method_index]["pure_virtual"])
-				{
-					$defIni["wxWebView"][$method_name][$method_index]["pure_virtual"] = false;
-					$defIni["wxWebView"][$method_name][$method_index]["virtual"] = true;
-				}
-			}
-		}
-	}
-	
-	//Blacklist classes
-	unset($defIni['wxArrayString']); //Dont implement this class since it is interpreted as php native array()
+    $defIni = unserialize_json(file_get_contents("./../../json/classes.json"));
+
+    //Unmark webview methods as pure virtual since they can be used
+    foreach($defIni["wxWebView"] as $method_name=>$method_definitions)
+    {
+        if($method_name{0} != "_")
+        {
+            foreach($defIni["wxWebView"][$method_name] as $method_index=>$method_data)
+            {
+                if($defIni["wxWebView"][$method_name][$method_index]["pure_virtual"])
+                {
+                    $defIni["wxWebView"][$method_name][$method_index]["pure_virtual"] = false;
+                    $defIni["wxWebView"][$method_name][$method_index]["virtual"] = true;
+                }
+            }
+        }
+    }
+
+    //Blacklist classes
+    unset($defIni['wxArrayString']); //Dont implement this class since it is interpreted as php native array()
 }
 
 //Load class properties parsed by the json_generator
 if(file_exists("./../../json/class_variables.json"))
 {
-	$defClassProperties = unserialize_json(file_get_contents("./../../json/class_variables.json"));
-	
-	//Blacklist class properties
-	unset($defClassProperties["wxTreeListCtrl"]);
+    $defClassProperties = unserialize_json(
+		file_get_contents("./../../json/class_variables.json")
+	);
+
+    //Blacklist class properties
+    unset($defClassProperties["wxTreeListCtrl"]);
 }
 
 //Load class properties parsed by the json_generator
 if(file_exists("./../../json/class_groups.json"))
 {
-	$defClassGroups = unserialize_json(file_get_contents("./../../json/class_groups.json"));
+    $defClassGroups = unserialize_json(
+		file_get_contents("./../../json/class_groups.json")
+	);
 }
 
 //Load class and global enums parsed by the json_generator
 if(file_exists("./../../json/enums.json"))
 {
-	$defEnums = unserialize_json(file_get_contents("./../../json/enums.json"));
-	
-	//Blacklist enumerations
-	unset($defEnums[1]["wxFSWFlags"][array_search("wxFSW_EVENT_UNMOUNT", $defEnums[1]["wxFSWFlags"])]);
+    $defEnums = unserialize_json(
+		file_get_contents("./../../json/enums.json")
+	);
+
+    //Blacklist enumerations
+    $position = array_search(
+		"wxFSW_EVENT_UNMOUNT", $defEnums[1]["wxFSWFlags"]
+	);
+    unset($defEnums[1]["wxFSWFlags"][$position]);
 }
 
 //Import all constants defined by hand
 include("include/constants.php");
 include("include/stc_constants.php");
-	
+
 //Load constants found by the xml parser
 if(file_exists("./../../json/consts.json"))
-{	
-	$temp = unserialize_json(file_get_contents("./../../json/consts.json"));
-	$defConsts = array_merge($temp, $defConsts);
-	
-	//Append global enumeration constants
-	foreach($defEnums[1] as $enumName=>$enumList)
-	{
-		foreach($enumList as $enumIndex=>$enumValue)
-		{	
-			//Temporary measure to skip some constants (we need to 
-			//compile wxWidgets with other features)
-			if( 
-				"".stripos($enumValue, "wxACC_")."" != "" || 
-				"".stripos($enumValue, "wxAutomationInstance_")."" != "" ||
-				"".stripos($enumValue, "wxCURSOR_")."" != "" ||
-				"".stripos($enumValue, "wxFS_VOL_")."" != "" ||
-				"".stripos($enumValue, "wxNAVDIR_")."" != "" ||
-				"".stripos($enumValue, "wxOBJID_")."" != "" ||
-				"".stripos($enumValue, "wxROLE_")."" != ""
-			)
-				continue;
-				
-			$defConsts[$enumValue] = true;
-		}
-	}
+{
+    $temp = unserialize_json(
+		file_get_contents("./../../json/consts.json")
+	);
 
-	//blacklist constants
-	include("include/constants_blacklist.php");
+    $defConsts = array_merge($temp, $defConsts);
+
+    //Append global enumeration constants
+    foreach($defEnums[1] as $enumName=>$enumList)
+    {
+        foreach($enumList as $enumIndex=>$enumValue)
+        {
+            //Temporary measure to skip some constants (we need to
+            //compile wxWidgets with other features)
+            if(
+                "".stripos($enumValue, "wxACC_")."" != ""
+                ||
+                "".stripos($enumValue, "wxAutomationInstance_")."" != ""
+                ||
+                "".stripos($enumValue, "wxCURSOR_")."" != ""
+                ||
+                "".stripos($enumValue, "wxFS_VOL_")."" != ""
+                ||
+                "".stripos($enumValue, "wxNAVDIR_")."" != ""
+                ||
+                "".stripos($enumValue, "wxOBJID_")."" != ""
+                ||
+                "".stripos($enumValue, "wxROLE_")."" != ""
+            )
+                continue;
+
+            $defConsts[$enumValue] = true;
+        }
+    }
+
+    //blacklist constants
+    include("include/constants_blacklist.php");
 }
 
 //Load global variables parsed by the json_generator
 if(file_exists("./../../json/global_variables.json"))
 {
-	$defGlobals = unserialize_json(file_get_contents("./../../json/global_variables.json"));
-	
-	//Temporary black list
-	unset($defGlobals['wxEVT_HOTKEY']);
-	unset($defGlobals['wxNullRegion']);
-	unset($defGlobals['wxEVT_POWER_SUSPENDING']);
-	unset($defGlobals['wxEVT_POWER_SUSPENDED']);
-	unset($defGlobals['wxEVT_POWER_SUSPEND_CANCEL']);
-	unset($defGlobals['wxEVT_POWER_RESUME']);
-    
+    $defGlobals = unserialize_json(
+		file_get_contents("./../../json/global_variables.json")
+	);
+
+    //Temporary black list
+    unset($defGlobals['wxEVT_HOTKEY']);
+    unset($defGlobals['wxNullRegion']);
+    unset($defGlobals['wxEVT_POWER_SUSPENDING']);
+    unset($defGlobals['wxEVT_POWER_SUSPENDED']);
+    unset($defGlobals['wxEVT_POWER_SUSPEND_CANCEL']);
+    unset($defGlobals['wxEVT_POWER_RESUME']);
+
     //Disable wxWebKitCtrl constants since it is only available for mac
     unset($defGlobals['wxEVT_WEBKIT_STATE_CHANGED']);
     unset($defGlobals['wxEVT_WEBKIT_BEFORE_LOAD']);
@@ -192,8 +212,10 @@ if(file_exists("./../../json/global_variables.json"))
 //Load typedef parsed by the json_generator
 if(file_exists("./../../json/typedef.json"))
 {
-	$defTypedef = unserialize_json(file_get_contents("./../../json/typedef.json"));
-    
+    $defTypedef = unserialize_json(
+		file_get_contents("./../../json/typedef.json")
+	);
+
     $defTypedef["WXWidget"] = "size_t";
 }
 
@@ -201,8 +223,15 @@ if(file_exists("./../../json/typedef.json"))
 prepair_groups($defClassGroups, $defIni);
 
 //Empty the discarded log
-file_put_contents("discarded.log", "All class methods removed by the cleaning functions\n");
-file_put_contents("discarded.log", "====================================================\n\n", FILE_APPEND);
+file_put_contents(
+	"discarded.log",
+	"All class methods removed by the cleaning functions\n"
+);
+file_put_contents(
+	"discarded.log",
+	"====================================================\n\n",
+	FILE_APPEND
+);
 
 //Remove protected methods since they aren't accessible outside the class scope
 remove_protected_methods($defIni);
@@ -239,7 +268,7 @@ remove_classes_and_methods_not_crossplatform($defIni);
 //Remove deprecated class methods.
 remove_deprecated_methods($defIni);
 
-//Remove methods implementing unhandled argument declaration like 
+//Remove methods implementing unhandled argument declaration like
 //wxRichTextCtrl::PrepareContent(wxRichTextParagraphLayoutBox &WXUNUSED(container))
 remove_methods_implementing_unhandled_arguments($defIni);
 
@@ -261,148 +290,175 @@ print "\n";
 $header_files = "";
 foreach($defClassGroups as $header_name => $v)
 {
-	$header_name = str_replace("group_class_", "", $header_name);
-	$header_files .= "#include \"$header_name.h\"\n";
+    $header_name = str_replace("group_class_", "", $header_name);
+    $header_files .= "#include \"$header_name.h\"\n";
 }
-	
+
 //Generate classes source and header files
 foreach($defClassGroups as $file_name => $class_list)
 {
-	//Strip group_class_
-	$file_name = str_replace("group_class_", "", $file_name);
-	
-	echo "Generating $file_name.cpp ...\n";
-	
-	//Add neccesary headers to classes implementation file
-	$classes_source_code = classes_author_header();
-	$classes_source_code .= "#include \"php_wxwidgets.h\"\n";
-	$classes_source_code .= "$header_files\n\n";
-	
-	foreach($class_list as $class_name)
-	{
-		if(!isset($defIni[$class_name]))
-			continue;
-			
-		$class_methods = $defIni[$class_name];
-			
-		ob_start();
-		include("templates/classes_source.php");
-		$classes_source_code .= ob_get_contents();
-		ob_end_clean();
-		
-		foreach($class_methods as $method_name=>$method_definitions)
-		{
-			//Skip _implements (inheritance) list
-			if($method_name{0} == "_")
-				continue;
-				
-			//On the documentation the width and height seems to be optional but not on gtk :S
-			//TODO: modify this directly on full_classes_set.json and classes.json
-			if($class_name == "wxIcon" && $method_name == "LoadFile")
-			{
-				//Create a new overload
-				$method_definitions[] = $method_definitions[0];
-				
-				//Modify original definition
-				unset($method_definitions[0]["parameters_type"][2]);
-				unset($method_definitions[0]["parameters_type"][3]);
-				unset($method_definitions[0]["parameters_name"][2]);
-				unset($method_definitions[0]["parameters_name"][3]);
-				unset($method_definitions[0]["parameters_default_value"][2]);
-				unset($method_definitions[0]["parameters_default_value"][3]);
-				
-				//Modify overload definition
-				$method_definitions[1]["parameters_required"][] = true;
-				$method_definitions[1]["parameters_required"][] = true;
-				$method_definitions[1]["parameters_required"][] = true;
-			}
-				
-			//First print virtual methods
-			foreach($method_definitions as $method_index=>$method_definition)
-			{
-				if(($method_definition["virtual"] && $method_definition["protected"]) || $method_definition["pure_virtual"] ||
-					"".strpos($method_name, "On")."" == "0"
-				)
-				{
-					ob_start();
-					include("templates/classes_source_virtual_method.php");
-					$classes_source_code .= ob_get_contents();
-					ob_end_clean();
-				}
-			}
-			
-			$custom_method_template = "templates/class_methods/" . strtolower($class_name) . "_" . strtolower($method_name) . ".php";
-			
-			if(file_exists($custom_method_template))
-			{
-				ob_start();
-				include($custom_method_template);
-				$classes_source_code .= ob_get_contents();
-				ob_end_clean();
-				continue;
-			}
-			elseif($class_name == $method_name)
-			{
-				ob_start();
-				include("templates/classes_source_constructor.php");
-				if(isset($defClassProperties[$class_name]))
-					include("templates/classes_get.php");
-				$classes_source_code .= ob_get_contents();
-				ob_end_clean();
-			}
-			elseif(!$method_definitions[0]["protected"] && !$method_definitions[0]["pure_virtual"] &&
-					"".strpos($method_name, "On")."" != "0"
+    //Strip group_class_
+    $file_name = str_replace("group_class_", "", $file_name);
+
+    echo "Generating $file_name.cpp ...\n";
+
+    //Add neccesary headers to classes implementation file
+    $classes_source_code = classes_author_header();
+    $classes_source_code .= "#include \"php_wxwidgets.h\"\n";
+    $classes_source_code .= "$header_files\n\n";
+
+    foreach($class_list as $class_name)
+    {
+        if(!isset($defIni[$class_name]))
+            continue;
+
+        $class_methods = $defIni[$class_name];
+
+        ob_start();
+        include("templates/classes_source.php");
+        $classes_source_code .= ob_get_contents();
+        ob_end_clean();
+
+        foreach($class_methods as $method_name=>$method_definitions)
+        {
+            //Skip _implements (inheritance) list
+            if($method_name{0} == "_")
+                continue;
+
+            //On the documentation the width and height seems to be optional but not on gtk :S
+            //TODO: modify this directly on full_classes_set.json and classes.json
+            if($class_name == "wxIcon" && $method_name == "LoadFile")
+            {
+                //Create a new overload
+                $method_definitions[] = $method_definitions[0];
+
+                //Modify original definition
+                unset($method_definitions[0]["parameters_type"][2]);
+                unset($method_definitions[0]["parameters_type"][3]);
+                unset($method_definitions[0]["parameters_name"][2]);
+                unset($method_definitions[0]["parameters_name"][3]);
+                unset($method_definitions[0]["parameters_default_value"][2]);
+                unset($method_definitions[0]["parameters_default_value"][3]);
+
+                //Modify overload definition
+                $method_definitions[1]["parameters_required"][] = true;
+                $method_definitions[1]["parameters_required"][] = true;
+                $method_definitions[1]["parameters_required"][] = true;
+            }
+
+            //First print virtual methods
+            foreach(
+				$method_definitions
+				as
+				$method_index=>$method_definition
 			)
-			{
+            {
+                if(
+					(
+						$method_definition["virtual"]
+						&&
+						$method_definition["protected"]
+					)
+					||
+					$method_definition["pure_virtual"]
+					||
+                    "".strpos($method_name, "On")."" == "0"
+                )
+                {
+                    ob_start();
+                    include("templates/classes_source_virtual_method.php");
+                    $classes_source_code .= ob_get_contents();
+                    ob_end_clean();
+                }
+            }
+
+            $custom_method_template = "templates/class_methods/"
+				. strtolower($class_name)
+				. "_"
+				. strtolower($method_name)
+				. ".php"
+			;
+
+            if(file_exists($custom_method_template))
+            {
+                ob_start();
+                include($custom_method_template);
+                $classes_source_code .= ob_get_contents();
+                ob_end_clean();
+                continue;
+            }
+            elseif($class_name == $method_name)
+            {
+                ob_start();
+                include("templates/classes_source_constructor.php");
+                if(isset($defClassProperties[$class_name]))
+                    include("templates/classes_get.php");
+                $classes_source_code .= ob_get_contents();
+                ob_end_clean();
+            }
+            elseif(
+				!$method_definitions[0]["protected"]
+				&&
+				!$method_definitions[0]["pure_virtual"]
+				&&
+				"".strpos($method_name, "On")."" != "0"
+            )
+            {
                 $method_definitions_ex = $method_definitions;
-                
+
                 class_method_append_overrides(
-                    $class_name, 
-                    $method_name, 
+                    $class_name,
+                    $method_name,
                     $method_definitions_ex
                 );
-                
-				ob_start();
-				include("templates/classes_source_method.php");
-				$classes_source_code .= ob_get_contents();
-				ob_end_clean();
-			}
-		}
-	}
 
-	file_put_contents_if_different("./../../src/".$file_name.".cpp", $classes_source_code);
-	
-	//Generate header file that holds class declarations
-	echo "Generating $file_name.h ...\n";
-	
-	$classes_header_code = classes_author_header();
-	
-	$classes_header_code .= "#ifndef WXPHP_".strtoupper($file_name)."_H_GUARD\n";
-	$classes_header_code .= "#define WXPHP_".strtoupper($file_name)."_H_GUARD\n\n";
-	
-	$classes_header_code .= "#include \"references.h\"\n";
-	$classes_header_code .= "#include \"object_types.h\"\n\n";
-	
-	$classes_header_code .= "ZEND_BEGIN_ARG_INFO_EX(wxphp_{$file_name}_get_args, 0, 0, 1)\n";
-	$classes_header_code .= tabs(1) . "ZEND_ARG_INFO(0, name)\n";
-    $classes_header_code .= "ZEND_END_ARG_INFO()\n\n";
-    
-	foreach($class_list as $class_name)
-	{
-		if(!isset($defIni[$class_name]))
-			continue;
-			
-		$class_methods = $defIni[$class_name];
-		
-		ob_start();
-		include("templates/classes_header.php");
-		$classes_header_code .= ob_get_contents();
-		ob_end_clean();
-	}
-	
-	$classes_header_code .= "#endif //WXPHP_".strtoupper($file_name)."_H_GUARD\n";
+                ob_start();
+                include("templates/classes_source_method.php");
+                $classes_source_code .= ob_get_contents();
+                ob_end_clean();
+            }
+        }
+    }
 
-	file_put_contents_if_different("./../../includes/".$file_name.".h", $classes_header_code);
+    file_put_contents_if_different(
+		"./../../src/".$file_name.".cpp",
+		$classes_source_code
+	);
+
+    //Generate header file that holds class declarations
+    echo "Generating $file_name.h ...\n";
+
+    $classes_header_code = classes_author_header()
+		. "#ifndef WXPHP_".strtoupper($file_name)."_H_GUARD\n"
+		. "#define WXPHP_".strtoupper($file_name)."_H_GUARD\n\n"
+		. "#include \"references.h\"\n"
+		. "#include \"object_types.h\"\n\n"
+		. "ZEND_BEGIN_ARG_INFO_EX(wxphp_{$file_name}_get_args, 0, 0, 1)\n"
+		. tabs(1) . "ZEND_ARG_INFO(0, name)\n"
+		. "ZEND_END_ARG_INFO()\n\n"
+	;
+
+    foreach($class_list as $class_name)
+    {
+        if(!isset($defIni[$class_name]))
+            continue;
+
+        $class_methods = $defIni[$class_name];
+
+        ob_start();
+        include("templates/classes_header.php");
+        $classes_header_code .= ob_get_contents();
+        ob_end_clean();
+    }
+
+    $classes_header_code .=
+		"#endif //WXPHP_".strtoupper($file_name)."_H_GUARD\n"
+	;
+
+    file_put_contents_if_different(
+		"./../../includes/".$file_name.".h",
+		$classes_header_code
+	);
 
 } //Ends foreach($defClassGroups as $file_name => $class_list)
 
@@ -412,60 +468,73 @@ $function_prototypes = "";
 $functions = "";
 foreach($defFunctions as $function_name=>$function_data)
 {
-	//Generate function protytpes code
-	$function_prototypes .= "PHP_FUNCTION(php_{$function_name});\n\n";
-	
-	//Generate functions code
-	$function_template = "templates/functions/".strtolower($function_name).".php";
-	
-	ob_start();
-	if(file_exists($function_template))
-	{
-		include($function_template);
-	}
-	else
-	{
-		include("templates/function.php");
-	}
-	$functions .= ob_get_contents();
-	ob_end_clean();
+    //Generate function protytpes code
+    $function_prototypes .= "PHP_FUNCTION(php_{$function_name});\n\n";
+
+    //Generate functions code
+    $function_template =
+		"templates/functions/".strtolower($function_name).".php"
+	;
+
+    ob_start();
+    if(file_exists($function_template))
+    {
+        include($function_template);
+    }
+    else
+    {
+        include("templates/function.php");
+    }
+    $functions .= ob_get_contents();
+    ob_end_clean();
 }
 
 echo "Generating functions.h\n";
 ob_start();
-	include("source_templates/functions.h");
-	$functions_h_source .= ob_get_contents();
+    include("source_templates/functions.h");
+    $functions_h_source .= ob_get_contents();
 ob_end_clean();
 
-file_put_contents_if_different("./../../includes/functions.h", $functions_h_source);
+file_put_contents_if_different(
+	"./../../includes/functions.h",
+	$functions_h_source
+);
 
 echo "Generating functions.cpp\n";
 ob_start();
-	include("source_templates/functions.cpp");
-	$functions_cpp_source .= ob_get_contents();
+    include("source_templates/functions.cpp");
+    $functions_cpp_source .= ob_get_contents();
 ob_end_clean();
 
-file_put_contents_if_different("./../../src/functions.cpp", $functions_cpp_source);
+file_put_contents_if_different(
+	"./../../src/functions.cpp",
+	$functions_cpp_source
+);
 
 
 //Generate list of object types for wxphp_object_type enum
 $object_types = "";
 foreach($defIni as $class_name=>$methods)
 {
-	$object_types .= tabs(1) . "PHP_".strtoupper($class_name)."_TYPE,\n";
+    $object_types .= tabs(1)
+		. "PHP_".strtoupper($class_name)."_TYPE,\n"
+	;
 }
 $object_types = rtrim($object_types, ",\n") . "\n";
 
 echo "Generating object_types.h\n";
 ob_start();
-	include("source_templates/object_types.h");
-	$object_types_h_source .= ob_get_contents();
+    include("source_templates/object_types.h");
+    $object_types_h_source .= ob_get_contents();
 ob_end_clean();
 
-file_put_contents_if_different("./../../includes/object_types.h", $object_types_h_source);
+file_put_contents_if_different(
+	"./../../includes/object_types.h",
+	$object_types_h_source
+);
 
 
-//Update wxwidgets.cpp by just upgrading the code betewen 
+//Update wxwidgets.cpp by just upgrading the code betewen
 //entries ---> code <--- entries and classes ---> code <--- classes
 echo "Generating wxwidgets.cpp...\n";
 
@@ -475,7 +544,7 @@ $entries .= "\n";
 
 foreach($defIni as $class_name => $class_methods)
 {
-	$entries .= "zend_class_entry* php_{$class_name}_entry;\n";
+    $entries .= "zend_class_entry* php_{$class_name}_entry;\n";
 }
 
 $entries .= "\n";
@@ -485,359 +554,428 @@ $classes = "";
 $sorted_classes = sort_classes_by_inheritance();
 foreach($sorted_classes as $class_name => $class_methods)
 {
-	$classes .= "\tchar PHP_{$class_name}_name[] = \"$class_name\";\n";
-	$classes .= "\tINIT_CLASS_ENTRY(ce, PHP_{$class_name}_name, php_{$class_name}_functions);\n";
-    
+    $classes .= tabs(1)
+		. "char PHP_{$class_name}_name[] = \"$class_name\";\n"
+		. tabs(1)
+		. "INIT_CLASS_ENTRY("
+		. "ce, PHP_{$class_name}_name, php_{$class_name}_functions"
+		. ");"
+		. "\n"
+	;
+
     if(
-        isset($class_methods["_implements"]) && 
-        count($class_methods["_implements"]) < 2 && 
+        isset($class_methods["_implements"]) &&
+        count($class_methods["_implements"]) < 2 &&
         isset($defIni[$class_methods["_implements"][0]])
     )
-    {   
-        $classes .= "\tphp_{$class_name}_entry = zend_register_internal_class_ex(&ce, php_{$class_methods['_implements'][0]}_entry);\n";
+    {
+        $classes .= tabs(1)
+			. "php_{$class_name}_entry = "
+			. "zend_register_internal_class_ex("
+			. "&ce, php_{$class_methods['_implements'][0]}_entry"
+			. ");"
+			. "\n"
+		;
     }
     else
     {
-        $classes .= "\tphp_{$class_name}_entry = zend_register_internal_class(&ce TSRMLS_CC);\n";
+        $classes .= tabs(1)
+			. "php_{$class_name}_entry = "
+			. "zend_register_internal_class(&ce);"
+			. "\n"
+		;
     }
-    
-    $classes .= "\tphp_{$class_name}_entry->create_object = php_{$class_name}_new;\n";
-    
-	$classes .= "\n";
+
+    $classes .= tabs(1)
+		. "php_{$class_name}_entry->create_object = "
+		. "php_{$class_name}_new;"
+		. "\n"
+	;
+
+    $classes .= "\n";
 }
 
 $classes .= "\n";
 
 ksort($defConsts);
 
-$classes .= "\t//Variables found on consts.json\n";
-$classes .= "\n";
+$classes .= tabs(1) . "//Variables found on consts.json\n\n";
 
 file_put_contents("discarded.log", "Constants\n\n", FILE_APPEND);
 
 foreach($defConsts as $constant_name => $constant_value)
 {
-	// Check if string
-	
-	if (preg_match('/^(wxString\()?(?P<str>".*")\)?$/', $constant_value, $match))
-	{
-		$classes .= "\tchar _wxchar_{$constant_name}[] = {$match['str']};\n";
-		$classes .= "\tREGISTER_STRING_CONSTANT(\"$constant_name\", _wxchar_$constant_name, CONST_CS | CONST_PERSISTENT);\n";
-		continue;
-	}
-	
-	// Skip empty constants and function calls
-	
-	if (!strlen($constant_value) || preg_match('/[a-z]\(/i', $constant_value))
-	{
-		file_put_contents("discarded.log", "$constant_name = \"$constant_value\"\n", FILE_APPEND);
-		continue;
-	}
-	
-	//Use the name as constant value for manually defined constants
-	if($constant_value == 1)
-	{
-		$classes .= "\tREGISTER_LONG_CONSTANT(\"$constant_name\", $constant_name, CONST_CS | CONST_PERSISTENT);\n";
-	}
-	else
-	{
-		$classes .= "\tREGISTER_LONG_CONSTANT(\"$constant_name\", $constant_value, CONST_CS | CONST_PERSISTENT);\n";
-	}
+    // Check if string
+
+    if (preg_match('/^(wxString\()?(?P<str>".*")\)?$/', $constant_value, $match))
+    {
+        $classes .= tabs(1)
+			. "char _wxchar_{$constant_name}[] = {$match['str']};"
+			. "\n"
+			. "REGISTER_STRING_CONSTANT("
+			. "\"$constant_name\", "
+			. "_wxchar_$constant_name, "
+			. "CONST_CS | CONST_PERSISTENT"
+			. ");"
+			. "\n"
+		;
+        continue;
+    }
+
+    // Skip empty constants and function calls
+
+    if(
+		!strlen($constant_value)
+		||
+		preg_match('/[a-z]\(/i', $constant_value)
+	)
+    {
+        file_put_contents(
+			"discarded.log",
+			"$constant_name = \"$constant_value\"\n",
+			FILE_APPEND
+		);
+        continue;
+    }
+
+    //Use the name as constant value for manually defined constants
+    if($constant_value == 1)
+    {
+        $classes .= tabs(1)
+			. "REGISTER_LONG_CONSTANT("
+			. "\"$constant_name\", "
+			. "$constant_name, "
+			. "CONST_CS | CONST_PERSISTENT"
+			. ");"
+			. "\n"
+		;
+    }
+    else
+    {
+        $classes .= tabs(1)
+			. "REGISTER_LONG_CONSTANT("
+			. "\"$constant_name\", "
+			. "$constant_value, "
+			. "CONST_CS | CONST_PERSISTENT"
+			. ");"
+			. "\n"
+		;
+    }
 }
 
-//Register wxWidgets global variables as php constants
-$classes .= "\n";
-$classes .= "\t//Variables found on global_variables.json\n";
-$classes .= "\n";
-$object_constants = ""; //To store constants of type object since they need to be initialized on the RINIT
+// Register wxWidgets global variables as php constants
+$classes .= "\n"
+	. tabs(1)
+	. "//Variables found on global_variables.json\n\n"
+;
+
+// To store constants of type object since they need
+// to be initialized on the RINIT
+$object_constants = "";
 foreach($defGlobals as $variable_name => $variable_type)
 {
-	//Skip already defined (repeated) constants
-	if(isset($defConsts[$variable_name]))
-		continue;
-	
-	//Manually define wxEmptyString
-	if($variable_name == "wxEmptyString")
-	{
-		$classes .= "\tchar wxphp_empty_string[] = \"\";\n";
-		$classes .= "\tREGISTER_STRING_CONSTANT(\"$variable_name\", wxphp_empty_string, CONST_CS | CONST_PERSISTENT);\n";
-		continue;
-	}
-	
-	//Manually define wxTransparentColour since it causes a "taking address of temporary" error because it is a macro
-	//defined as #define wxTransparentColour wxColour(0, 0, 0, wxALPHA_TRANSPARENT) on wx/colour.h
-	if($variable_name == "wxTransparentColour")
-	{
-		$object_constants .= tabs(2) . "zval z_wx_transparent_color;\n";
-		$object_constants .= tabs(2) . "wxColour* _wx_transparent_color = new wxColour(0, 0, 0, wxALPHA_TRANSPARENT);\n";
-		$object_constants .= tabs(2) . "object_init_ex(&z_wx_transparent_color, php_wxColour_entry);\n";
-		$object_constants .= tabs(2) . "Z_wxColour_P(&z_wx_transparent_color TSRMLS_CC)->native_object = (wxColour_php*) _wx_transparent_color;\n";
-		$object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"wxTransparentColour\", z_wx_transparent_color, CONST_CS | CONST_PERSISTENT);\n";
-		continue;
-	}
-	
-	//Since wxART_ global variables are defined as wxString but what they are really is a char[]
-	if("".strpos($variable_name,"wxART_")."" != "")
-	{
-		$classes .= "\tchar _wxchar_{$variable_name}[] = $variable_name;\n";
-		$classes .= "\tREGISTER_STRING_CONSTANT(\"$variable_name\", _wxchar_$variable_name, CONST_CS | CONST_PERSISTENT);\n";
-		continue;
-	}
-	
-	//To prevent wx/datetime.h(1810): assert "IsValid()" failed in GetTicks(): invalid wxDateTime
-	if($variable_name == "wxDefaultDateTime")
-	{
-		$classes .= "\tREGISTER_LONG_CONSTANT(\"$variable_name\", time(NULL), CONST_CS | CONST_PERSISTENT);\n";
-		continue;
-	}
-		
-		
-	$type_modifier = "";
-	$standard_type = parameter_type($variable_type, false, "Global Variables", null, $type_modifier, true);
-	$plain_type = str_replace(array("const ", "&", "*"), "", $variable_type);
-	
-	switch($standard_type)
-	{
-		case "bool":
-			switch($type_modifier)
-			{
-				case "pointer":
-				case "const_pointer":
-					$classes .= "\tREGISTER_LONG_CONSTANT(\"$variable_name\", *$variable_name, CONST_CS | CONST_PERSISTENT);\n";
-					break;
-					
-				case "reference":
-				case "const_reference":
-				case "none":
-				case "const_none":
-					$classes .= "\tREGISTER_LONG_CONSTANT(\"$variable_name\", $variable_name, CONST_CS | CONST_PERSISTENT);\n";
-					break;
-			}
-			break;
-			
-		case "integer":
-		case "class_enum":
-		case "global_enum":
-			switch($type_modifier)
-			{
-				case "pointer":
-				case "const_pointer":
-					$classes .= "\tREGISTER_LONG_CONSTANT(\"$variable_name\", *$variable_name, CONST_CS | CONST_PERSISTENT);\n";
-					break;
-					
-				case "reference":
-				case "const_reference":
-				case "none":
-				case "const_none":
-					$classes .= "\tREGISTER_LONG_CONSTANT(\"$variable_name\", $variable_name, CONST_CS | CONST_PERSISTENT);\n";
-					break;
-			}
-			break;
-		
-		case "float":
-			switch($type_modifier)
-			{
-				case "pointer":
-				case "const_pointer":
-					$classes .= "\tREGISTER_DOUBLE_CONSTANT(\"$variable_name\", *$variable_name, CONST_CS | CONST_PERSISTENT);\n";
-					break;
-					
-				case "reference":
-				case "const_reference":
-				case "none":
-				case "const_none":
-					$classes .= "\tREGISTER_DOUBLE_CONSTANT(\"$variable_name\", $variable_name, CONST_CS | CONST_PERSISTENT);\n";
-					break;
-			}
-			break;
-			
-		case "characters":
-			switch($type_modifier)
-			{
-				case "pointer":
-				case "const_pointer":
-					$classes .= "\tREGISTER_STRING_CONSTANT(\"$variable_name\", $variable_name, CONST_CS | CONST_PERSISTENT);\n";
-					break;
-					
-				case "reference":
-				case "const_reference":
-				case "none":
-				case "const_none":
-					$classes .= "\tREGISTER_STRING_CONSTANT(\"$variable_name\", (char*) $variable_name, CONST_CS | CONST_PERSISTENT);\n";
-					break;
-			}
-			break;
-			
-		case "date":
-			switch($type_modifier)
-			{
-				case "pointer":
-				case "const_pointer":
-					$classes .= "\tREGISTER_LONG_CONSTANT(\"$variable_name\", *$variable_name->GetTicks(), CONST_CS | CONST_PERSISTENT);\n";
-					break;
-					
-				case "reference":
-				case "const_reference":
-				case "none":
-				case "const_none":
-					$classes .= "\tREGISTER_LONG_CONSTANT(\"$variable_name\", $variable_name.GetTicks(), CONST_CS | CONST_PERSISTENT);\n";
-					break;
-			}
-			break;
-			
-		case "string":
-			switch($type_modifier)
-			{
-				case "pointer":
-				case "const_pointer":
-					$classes .= "\tREGISTER_STRINGL_CONSTANT(\"$variable_name\", reinterpret_cast<const char*>($variable_name->char_str()), $variable_name->Len(), CONST_CS | CONST_PERSISTENT);\n";
-					break;
-					
-				case "reference":
-				case "const_reference":
-				case "none":
-				case "const_none":
-					$classes .= "\tREGISTER_STRINGL_CONSTANT(\"$variable_name\", reinterpret_cast<const char*>($variable_name.char_str()), $variable_name.Len(), CONST_CS | CONST_PERSISTENT);\n";
-					break;
-			}
-			break;
-			
-		case "object":
-			switch($type_modifier)
-			{
-				case "pointer":
-				case "const_pointer":
-					$object_constants .= tabs(2) . "zval z_{$variable_name};\n";
-					$object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
-					$object_constants .= tabs(2) . "Z_{$plain_type}_P(&z_{$variable_name} TSRMLS_CC)->native_object = ({$plain_type}_php*) {$variable_name};\n";
-					$object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
-					break;
-					
-				case "reference":
-				case "const_reference":
-				case "none":
-				case "const_none":
-					$object_constants .= tabs(2) . "zval z_{$variable_name};\n";
-					$object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
-					$object_constants .= tabs(2) . "Z_{$plain_type}_P(&z_{$variable_name} TSRMLS_CC)->native_object = ({$plain_type}_php*) &{$variable_name};\n";
-					$object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
-					break;
-			}
-			break;
-			
-		default:
-			//Just skip unknown types
-	}
+    //Skip already defined (repeated) constants
+    if(isset($defConsts[$variable_name]))
+        continue;
+
+    //Manually define wxEmptyString
+    if($variable_name == "wxEmptyString")
+    {
+        $classes .= tabs(1)
+			. "char wxphp_empty_string[] = \"\";\n"
+			. tabs(1)
+			. "REGISTER_STRING_CONSTANT("
+			. "\"$variable_name\", "
+			. "wxphp_empty_string, "
+			. "CONST_CS | CONST_PERSISTENT"
+			. ");"
+			. "\n"
+		;
+        continue;
+    }
+
+    //Manually define wxTransparentColour since it causes a
+    //"taking address of temporary" error because it is a macro
+    //defined as #define wxTransparentColour wxColour(0, 0, 0, wxALPHA_TRANSPARENT)
+    //on wx/colour.h
+    if($variable_name == "wxTransparentColour")
+    {
+        $object_constants . tabs(2)
+			. "zval z_wx_transparent_color;\n"
+			. tabs(2)
+			. "wxColour* _wx_transparent_color = new wxColour(0, 0, 0, wxALPHA_TRANSPARENT);\n"
+			. tabs(2)
+			. "object_init_ex(&z_wx_transparent_color, php_wxColour_entry);\n"
+			. tabs(2)
+			. "Z_wxColour_P(&z_wx_transparent_color)->native_object = (wxColour_php*) _wx_transparent_color;\n"
+			. tabs(2)
+			. "wxPHP_REGISTER_OBJECT_CONSTANT(\"wxTransparentColour\", z_wx_transparent_color, CONST_CS | CONST_PERSISTENT);\n"
+		;
+        continue;
+    }
+
+    //Since wxART_ global variables are defined as wxString but what they are really is a char[]
+    if("".strpos($variable_name,"wxART_")."" != "")
+    {
+        $classes .= "    char _wxchar_{$variable_name}[] = $variable_name;\n";
+        $classes .= "    REGISTER_STRING_CONSTANT(\"$variable_name\", _wxchar_$variable_name, CONST_CS | CONST_PERSISTENT);\n";
+        continue;
+    }
+
+    //To prevent wx/datetime.h(1810): assert "IsValid()" failed in GetTicks(): invalid wxDateTime
+    if($variable_name == "wxDefaultDateTime")
+    {
+        $classes .= "    REGISTER_LONG_CONSTANT(\"$variable_name\", time(NULL), CONST_CS | CONST_PERSISTENT);\n";
+        continue;
+    }
+
+
+    $type_modifier = "";
+    $standard_type = parameter_type($variable_type, false, "Global Variables", null, $type_modifier, true);
+    $plain_type = str_replace(array("const ", "&", "*"), "", $variable_type);
+
+    switch($standard_type)
+    {
+        case "bool":
+            switch($type_modifier)
+            {
+                case "pointer":
+                case "const_pointer":
+                    $classes .= "    REGISTER_LONG_CONSTANT(\"$variable_name\", *$variable_name, CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+
+                case "reference":
+                case "const_reference":
+                case "none":
+                case "const_none":
+                    $classes .= "    REGISTER_LONG_CONSTANT(\"$variable_name\", $variable_name, CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+            }
+            break;
+
+        case "integer":
+        case "class_enum":
+        case "global_enum":
+            switch($type_modifier)
+            {
+                case "pointer":
+                case "const_pointer":
+                    $classes .= "    REGISTER_LONG_CONSTANT(\"$variable_name\", *$variable_name, CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+
+                case "reference":
+                case "const_reference":
+                case "none":
+                case "const_none":
+                    $classes .= "    REGISTER_LONG_CONSTANT(\"$variable_name\", $variable_name, CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+            }
+            break;
+
+        case "float":
+            switch($type_modifier)
+            {
+                case "pointer":
+                case "const_pointer":
+                    $classes .= "    REGISTER_DOUBLE_CONSTANT(\"$variable_name\", *$variable_name, CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+
+                case "reference":
+                case "const_reference":
+                case "none":
+                case "const_none":
+                    $classes .= "    REGISTER_DOUBLE_CONSTANT(\"$variable_name\", $variable_name, CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+            }
+            break;
+
+        case "characters":
+            switch($type_modifier)
+            {
+                case "pointer":
+                case "const_pointer":
+                    $classes .= "    REGISTER_STRING_CONSTANT(\"$variable_name\", $variable_name, CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+
+                case "reference":
+                case "const_reference":
+                case "none":
+                case "const_none":
+                    $classes .= "    REGISTER_STRING_CONSTANT(\"$variable_name\", (char*) $variable_name, CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+            }
+            break;
+
+        case "date":
+            switch($type_modifier)
+            {
+                case "pointer":
+                case "const_pointer":
+                    $classes .= "    REGISTER_LONG_CONSTANT(\"$variable_name\", *$variable_name->GetTicks(), CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+
+                case "reference":
+                case "const_reference":
+                case "none":
+                case "const_none":
+                    $classes .= "    REGISTER_LONG_CONSTANT(\"$variable_name\", $variable_name.GetTicks(), CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+            }
+            break;
+
+        case "string":
+            switch($type_modifier)
+            {
+                case "pointer":
+                case "const_pointer":
+                    $classes .= "    REGISTER_STRINGL_CONSTANT(\"$variable_name\", reinterpret_cast<const char*>($variable_name->char_str()), $variable_name->Len(), CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+
+                case "reference":
+                case "const_reference":
+                case "none":
+                case "const_none":
+                    $classes .= "    REGISTER_STRINGL_CONSTANT(\"$variable_name\", reinterpret_cast<const char*>($variable_name.char_str()), $variable_name.Len(), CONST_CS | CONST_PERSISTENT);\n";
+                    break;
+            }
+            break;
+
+        case "object":
+            switch($type_modifier)
+            {
+                case "pointer":
+                case "const_pointer":
+                    $object_constants .= tabs(2) . "zval z_{$variable_name};\n";
+                    $object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
+                    $object_constants .= tabs(2) . "Z_{$plain_type}_P(&z_{$variable_name})->native_object = ({$plain_type}_php*) {$variable_name};\n";
+                    $object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
+                    break;
+
+                case "reference":
+                case "const_reference":
+                case "none":
+                case "const_none":
+                    $object_constants .= tabs(2) . "zval z_{$variable_name};\n";
+                    $object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
+                    $object_constants .= tabs(2) . "Z_{$plain_type}_P(&z_{$variable_name})->native_object = ({$plain_type}_php*) &{$variable_name};\n";
+                    $object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
+                    break;
+            }
+            break;
+
+        default:
+            //Just skip unknown types
+    }
 }
 
 $classes .= "\n";
-$classes .= "\t//Class enumerations\n";
+$classes .= "    //Class enumerations\n";
 $classes .= "\n";
 
 foreach($defEnums[0] as $enumClassName=>$classEnums)
 {
-	//Only add enums of enabled classes
-	if(isset($defIni[$enumClassName]))
-	{
-		foreach($classEnums as $enumName=>$enumList)
-		{
-			foreach($enumList as $enumOption=>$enumValue)
-			{
-				//To produce constant with class property syntax class::constant
-				//Gives a type 'void' unexpected error when compiling on windows
-				$classes .= "\tzend_declare_class_constant_long(php_{$enumClassName}_entry, \"$enumValue\", " . strlen($enumValue) . ",  $enumClassName::$enumValue TSRMLS_CC);\n";
-				
-				//Constant in global scope
-				//$classes .= "REGISTER_LONG_CONSTANT(\"$enumOption\", $enumClassName::$enumOption, CONST_CS | CONST_PERSISTENT);\n";
-			}
-		}
-	}
+    //Only add enums of enabled classes
+    if(isset($defIni[$enumClassName]))
+    {
+        foreach($classEnums as $enumName=>$enumList)
+        {
+            foreach($enumList as $enumOption=>$enumValue)
+            {
+                //To produce constant with class property syntax class::constant
+                //Gives a type 'void' unexpected error when compiling on windows
+                $classes .= "    zend_declare_class_constant_long(php_{$enumClassName}_entry, \"$enumValue\", " . strlen($enumValue) . ",  $enumClassName::$enumValue);\n";
+
+                //Constant in global scope
+                //$classes .= "REGISTER_LONG_CONSTANT(\"$enumOption\", $enumClassName::$enumOption, CONST_CS | CONST_PERSISTENT);\n";
+            }
+        }
+    }
 }
 
 //Generating wxwidgets.cpp function table entries
 $functions_table = "";
 foreach($defFunctions as $function_name=>$function_data)
 {
-	//Write to functions table entry
-	$functions_table .= "\tPHP_FALIAS($function_name, php_$function_name, NULL)\n";
+    //Write to functions table entry
+    $functions_table .= "    PHP_FALIAS($function_name, php_$function_name, NULL)\n";
 }
 
 //Generate wxwidgets.cpp
 ob_start();
-	include("source_templates/wxwidgets.cpp");
-	$wxwidgets_source .= ob_get_contents();
+    include("source_templates/wxwidgets.cpp");
+    $wxwidgets_source .= ob_get_contents();
 ob_end_clean();
 
 file_put_contents("./../../wxwidgets.cpp", $wxwidgets_source);
 
 
-//Update php_wxwidgets.h by just upgrading the code betewen 
+//Update php_wxwidgets.h by just upgrading the code betewen
 //entries ---> code <--- entries
 echo "Generating php_wxwidgets.h...\n";
 $output = "";
 foreach($defIni as $className => $classDef)
 {
-	foreach($classDef as $fcName => $fc)
-	{
-		//Skip specification attributes like _pure_virtual, _implements, etc...
-		if($fcName{0}=="_")
-		{
-			continue;
-		}
-		
-		if($fcName==$className)
-		{
-			$fcName = "__construct";
-			
-			if(isset($defClassProperties[$className]))
-			{
-				$output .= "PHP_METHOD(php_$className, __get);\n";
-			}
-		}
-			
-		$fcName = php_method_name($fcName);
-			
-		$output .= "PHP_METHOD(php_$className, $fcName);\n";
-	}
-	
-	if(isset($evnHandlers[$className]))
-	{
-		$output .= "PHP_METHOD(php_$className, Connect);\n";
-	}
-		
+    foreach($classDef as $fcName => $fc)
+    {
+        //Skip specification attributes like _pure_virtual, _implements, etc...
+        if($fcName{0}=="_")
+        {
+            continue;
+        }
+
+        if($fcName==$className)
+        {
+            $fcName = "__construct";
+
+            if(isset($defClassProperties[$className]))
+            {
+                $output .= "PHP_METHOD(php_$className, __get);\n";
+            }
+        }
+
+        $fcName = php_method_name($fcName);
+
+        $output .= "PHP_METHOD(php_$className, $fcName);\n";
+    }
+
+    if(isset($evnHandlers[$className]))
+    {
+        $output .= "PHP_METHOD(php_$className, Connect);\n";
+    }
+
 }
 
 $old = file_get_contents("source_templates/php_wxwidgets.h");
 
 if(preg_match("/(.*?\/\/ entries --->)[^<]+(\/\/ <--- entries[^§]+)/sm", $old, $matches))
 {
-	$output = $matches[1] . "\n" . $output . $matches[2];
-	
-	$hd = fopen("./../../php_wxwidgets.h", "w");
-	fwrite($hd, $output);
-	fclose($hd);
+    $output = $matches[1] . "\n" . $output . $matches[2];
+
+    $hd = fopen("./../../php_wxwidgets.h", "w");
+    fwrite($hd, $output);
+    fclose($hd);
 }
 
 
 
-//Update common.h by just upgrading the code betewen 
+//Update common.h by just upgrading the code betewen
 //entries ---> code <--- entries
 echo "Generating list of include files for common.h...\n";
 $output = "";
 foreach($defIncludes as $file_name => $value)
 {
-	$output .= "#include <$file_name>\n";
+    $output .= "#include <$file_name>\n";
 }
 
 $old = file_get_contents("source_templates/common.h");
 
 if(preg_match("/(.*?\/\/ entries --->)[^<]+(\/\/ <--- entries[^§]+)/sm", $old, $matches))
 {
-	$output = $matches[1] . "\n" . $output . $matches[2];
-	
-	$hd = fopen("./../../includes/common.h", "w");
-	fwrite($hd, $output);
-	fclose($hd);
+    $output = $matches[1] . "\n" . $output . $matches[2];
+
+    $hd = fopen("./../../includes/common.h", "w");
+    fwrite($hd, $output);
+    fclose($hd);
 }
 
 
@@ -847,7 +985,7 @@ $source_files = "";
 
 foreach($defClassGroups as $group_name=>$class_list)
 {
-	$source_files .= "src/" . str_replace("group_class_", "", $group_name) . ".cpp ";
+    $source_files .= "src/" . str_replace("group_class_", "", $group_name) . ".cpp ";
 }
 
 $source_files = trim($source_files);
@@ -856,8 +994,8 @@ echo "Generating config.m4...\n";
 
 $unix_config = "";
 ob_start();
-	include("config_templates/config.m4");
-	$unix_config .= ob_get_contents();
+    include("config_templates/config.m4");
+    $unix_config .= ob_get_contents();
 ob_end_clean();
 
 file_put_contents_if_different("./../../config.m4", $unix_config);
@@ -866,8 +1004,8 @@ echo "Generating config.w32...\n";
 
 $win_config = "";
 ob_start();
-	include("config_templates/config.w32");
-	$win_config .= ob_get_contents();
+    include("config_templates/config.w32");
+    $win_config .= ob_get_contents();
 ob_end_clean();
 
 file_put_contents_if_different("./../../config.w32", $win_config);

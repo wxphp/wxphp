@@ -26,6 +26,7 @@ function classes_get_property_code($class_name)
             $standard_type = parameter_type($property_attributes["type"], false, "MINIT", $class_name, $type_modifier, true);
             $property_type = str_replace(array("const ", "&", "*"), "", $property_attributes["type"]);
 
+            $is_constant = false;
             switch($type_modifier)
             {
                 //If constant skip
@@ -33,10 +34,16 @@ function classes_get_property_code($class_name)
                 case "const_pointer_pointer":
                 case "const_reference":
                 case "const_none":
-                    continue;
+                    $is_constant = true;
+                    break;
 
                 default: //If not constant continue
                     break;
+            }
+
+            if($is_constant)
+            {
+                continue;
             }
 
             if(!$property_attributes["static"])
@@ -150,14 +157,14 @@ function classes_get_property_code($class_name)
                         case "pointer":
                         case "pointer_pointer":
                             $code .= tabs(2) . "object_init_ex(return_value, php_{$property_type}_entry);\n";
-                            $code .= tabs(2) . "Z_{$class_name}_P(&return_value TSRMLS_CC)->native_object = (({$property_type}_php*) *((void**) native_object->properties[$property_index]));\n";
+                            $code .= tabs(2) . "Z_{$class_name}_P(&return_value)->native_object = (({$property_type}_php*) *((void**) native_object->properties[$property_index]));\n";
                             $code .= tabs(2) . "return;\n";
                             break;
 
                         case "reference":
                         case "none":
                             $code .= tabs(2) . "object_init_ex(return_value, php_{$property_type}_entry);\n";
-                            $code .= tabs(2) . "Z_{$class_name}_P(&return_value TSRMLS_CC)->native_object = (({$property_type}_php*) native_object->properties[$property_index]);\n";
+                            $code .= tabs(2) . "Z_{$class_name}_P(&return_value)->native_object = (({$property_type}_php*) native_object->properties[$property_index]);\n";
                             $code .= tabs(2) . "return;\n";
                             break;
                     }
@@ -174,7 +181,7 @@ function classes_get_property_code($class_name)
         }
     }
 
-    $code = rtrim($code, "\t");
+    $code = rtrim($code, tabs(1));
 
     return $code;
 }

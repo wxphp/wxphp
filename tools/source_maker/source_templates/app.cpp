@@ -70,7 +70,7 @@ bool wxAppWrapper::OnInit()
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual OnInit\n");
+    php_printf("Invoking virtual wxApp::OnInit\n");
     php_printf("===========================================\n");
     #endif
 
@@ -115,7 +115,7 @@ int wxAppWrapper::OnExit()
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual OnExit\n");
+    php_printf("Invoking virtual wxApp::OnExit\n");
     php_printf("===========================================\n");
     #endif
 
@@ -159,7 +159,7 @@ void wxAppWrapper::MacNewFile()
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacNewFile\n");
+    php_printf("Invoking virtual wxApp::MacNewFile\n");
     php_printf("===========================================\n");
     #endif
 
@@ -200,7 +200,7 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacOpenFiles\n");
+    php_printf("Invoking virtual wxApp::MacOpenFiles\n");
     php_printf("===========================================\n");
     #endif
 
@@ -258,7 +258,7 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacOpenFile\n");
+    php_printf("Invoking virtual wxApp::MacOpenFile\n");
     php_printf("===========================================\n");
     #endif
 
@@ -312,7 +312,7 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacOpenURL\n");
+    php_printf("Invoking virtual wxApp::MacOpenURL\n");
     php_printf("===========================================\n");
     #endif
 
@@ -366,7 +366,7 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacPrintFile\n");
+    php_printf("Invoking virtual wxApp::MacPrintFile\n");
     php_printf("===========================================\n");
     #endif
 
@@ -420,7 +420,7 @@ void wxAppWrapper::MacReopenApp()
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacReopenApp\n");
+    php_printf("Invoking virtual wxApp::MacReopenApp\n");
     php_printf("===========================================\n");
     #endif
 
@@ -461,7 +461,7 @@ bool wxAppWrapper::OSXIsGUIApplication()
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual OSXIsGUIApplication\n");
+    php_printf("Invoking virtual wxApp::OSXIsGUIApplication\n");
     php_printf("===========================================\n");
     #endif
 
