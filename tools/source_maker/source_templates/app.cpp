@@ -16,7 +16,7 @@
 /**
  * Set the wxWidgets application handler.
  */
-IMPLEMENT_APP_NO_MAIN(wxAppWrapper);
+wxIMPLEMENT_APP_NO_MAIN(wxAppWrapper);
 
 BEGIN_EXTERN_C()
 zend_object* php_wxApp_new(zend_class_entry *class_type)
@@ -502,7 +502,7 @@ bool wxAppWrapper::OSXIsGUIApplication()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO_P(&return_value) == IS_TRUE;
+    return Z_TYPE_INFO(return_value) == IS_TRUE;
 }
 #endif
 
@@ -555,8 +555,8 @@ PHP_METHOD(php_wxApp, GetInstance)
     }
     else if(instance->phpObj != NULL)
     {
-        return_value = instance->phpObj;
-        zval_add_ref(instance->phpObj);
+        return_value = &instance->phpObj;
+        zval_add_ref(&instance->phpObj);
     }
     else
     {

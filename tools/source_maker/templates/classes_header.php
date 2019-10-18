@@ -54,7 +54,7 @@ static zend_function_entry php_<?=$class_name?>_functions[] = {
 
 static inline zo_<?=$class_name?> * php_<?=$class_name?>_fetch_object(zend_object *obj) {
     return (zo_<?=$class_name?> *)(
-        (char *)obj - XtOffsetOf(zo_<?=$class_name?>, zo)
+        (char *)(obj) - XtOffsetOf(zo_<?=$class_name?>, zo)
     );
 }
 

@@ -266,7 +266,7 @@ function class_virtual_method_parameters_set_references($method_definition, $met
                 switch($argument_type_modifier)
                 {
                     case "pointer":
-                        $reference_code .= tabs(2) . "memcpy ((void*) $parameter_name, (void*) Z_STRVAL_P(&arguments[$parameter_index]), Z_STRLEN_P(&arguments[$parameter_index]));\n";
+                        $reference_code .= tabs(2) . "memcpy ((void*) $parameter_name, (void*) Z_STRVAL(arguments[$parameter_index]), Z_STRLEN(arguments[$parameter_index]));\n";
                 }
                 break;
             }
@@ -345,24 +345,24 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
     {
         case    "bool":
         {
-            $output = "return Z_TYPE_INFO_P(&return_value) == IS_TRUE;\n";
+            $output = "return Z_TYPE_INFO(return_value) == IS_TRUE;\n";
             break;
         }
         case    "integer":
         case    "class_enum":
         case    "global_enum":
         {
-            $output .= "return ($return_type) Z_LVAL_P(&return_value);\n";
+            $output .= "return ($return_type) Z_LVAL(return_value);\n";
             break;
         }
         case    "float":
         {
-            $output .= "return Z_DVAL_P(&return_value);\n";
+            $output .= "return Z_DVAL(return_value);\n";
             break;
         }
         case    "characters":
         {
-            $output .= "return Z_STRVAL_P(&return_value);\n";
+            $output .= "return Z_STRVAL(return_value);\n";
             break;
         }
         case "void":
@@ -371,7 +371,7 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
             {
                 case "const_pointer":
                 case "pointer":
-                    $output .= "return (void*) Z_STRVAL_P(&return_value);\n";
+                    $output .= "return (void*) Z_STRVAL(return_value);\n";
                     break;
 
                 default:
@@ -382,12 +382,12 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
         }
         case    "date":
         {
-            $output .= "return wxDateTime(Z_LVAL_P(&return_value));\n";
+            $output .= "return wxDateTime(Z_LVAL(return_value));\n";
             break;
         }
         case    "string":
         {
-            $output .= "return wxString(Z_STRVAL_P(&return_value), wxConvUTF8);\n";
+            $output .= "return wxString(Z_STRVAL(return_value), wxConvUTF8);\n";
             break;
         }
         /*case "strings_array":
@@ -396,7 +396,7 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 
         case "object":
         {
-            $output .= "if(Z_TYPE_P(&return_value) == IS_OBJECT)\n";
+            $output .= "if(Z_TYPE(return_value) == IS_OBJECT)\n";
             $output .= tabs(1) . "{\n";
             $output .= tabs(2) . "return_object = (void*) Z_{$return_type}_P(&return_value)->native_object;\n";
             $output .= tabs(1) . "}\n\n";

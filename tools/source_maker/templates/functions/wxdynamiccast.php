@@ -19,7 +19,7 @@ PHP_FUNCTION(php_wxDynamicCast)
         ) == SUCCESS
     )
     {
-        if(Z_TYPE_P(&object) == IS_OBJECT)
+        if(Z_TYPE(object) == IS_OBJECT)
         {
             native_object = (void*)
                 Z_wxObject_P(&object)->native_object

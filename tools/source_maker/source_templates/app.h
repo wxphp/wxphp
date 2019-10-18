@@ -68,7 +68,7 @@ static zend_function_entry php_wxApp_functions[] = {
 };
 
 static inline zo_wxApp * php_wxApp_fetch_object(zend_object *obj) {
-      return (zo_wxApp *)((char *)obj - XtOffsetOf(zo_wxApp, zo));
+      return (zo_wxApp *)((char *)(obj) - XtOffsetOf(zo_wxApp, zo));
 }
 
 #define Z_wxApp_P(zv) php_wxApp_fetch_object(Z_OBJ_P(zv))
