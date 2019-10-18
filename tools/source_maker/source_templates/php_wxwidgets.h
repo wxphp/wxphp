@@ -51,6 +51,17 @@
 #include "php.h"
 
 /**
+ * Thread safety extern declaration.
+ */
+#ifdef ZTS
+    #include "TSRM.h"
+#endif
+
+#if defined(ZTS) && defined(COMPILE_DL_WXWIDGETS)
+ZEND_TSRMLS_CACHE_EXTERN()
+#endif
+
+/**
  * Define the entry point symbol
  * Zend will use when loading this module
  */
