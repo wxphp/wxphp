@@ -60,3 +60,14 @@ GitHub.com project page where development occurs:
 SourceForge.net project page which hosts the binary builds.
 
 * [https://sourceforge.net/projects/wxphp](https://sourceforge.net/projects/wxphp)
+
+## Contributors
+
+This project is possible thanks to the following people and all of
+those that report issues on the issue tracker. Thanks to Everyone!
+
+<a href="https://github.com/wxphp/wxphp/graphs/contributors">
+  <img src="https://contributors-img.firebaseapp.com/image?repo=wxphp/wxphp" />
+</a>
+
+Made with [contributors-img](https://contributors-img.firebaseapp.com).
