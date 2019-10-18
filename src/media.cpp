@@ -53,38 +53,53 @@
 
 
 BEGIN_EXTERN_C()
-void php_wxMediaCtrl_free(void *object TSRMLS_DC) 
+void php_wxMediaCtrl_free(void *object)
 {
     zo_wxMediaCtrl* custom_object = (zo_wxMediaCtrl*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Obviate delete call for wxMediaCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n\n");
-	#endif
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Obviate delete call for wxMediaCtrl on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n\n");
+    #endif
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxMediaCtrl_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxMediaCtrl_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxMediaCtrl_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* custom_object;
-	custom_object = (zo_wxMediaCtrl*) ecalloc(1, sizeof(zo_wxMediaCtrl) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxMediaCtrl_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxMediaCtrl* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxMediaCtrl*) ecalloc(
+        1,
+        sizeof(zo_wxMediaCtrl)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXMEDIACTRL_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXMEDIACTRL_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -93,239 +108,250 @@ END_EXTERN_C()
    Loads the file that fileName refers to. */
 PHP_METHOD(php_wxMediaCtrl, Load)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::Load\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::Load call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::Load\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	char* fileName0;
-	long fileName_len0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* uri1;
-	wxURI* object_pointer1_0 = 0;
-	bool overload1_called = false;
-	//Parameters for overload 2
-	zval* uri2;
-	wxURI* object_pointer2_0 = 0;
-	zval* proxy2;
-	wxURI* object_pointer2_1 = 0;
-	bool overload2_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&fileName0, &fileName_len0)\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fileName0, &fileName_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&uri1, php_wxURI_entry)\n");
-		#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &uri1, php_wxURI_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(uri1) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxURI_P(uri1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxURI_P(uri1 TSRMLS_CC)->native_object;
-					object_pointer1_0 = (wxURI*) argument_native_object;
-					if (!object_pointer1_0 )
-					{
-						goto overload2;
-					}
-				}
-				else if(Z_TYPE_P(uri1) != IS_NULL)
-				{
-					goto overload2;
-				}
-			}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::Load call\n"
+            );
 
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OO' (&uri2, php_wxURI_entry, &proxy2, php_wxURI_entry)\n");
-		#endif
+            bool reference_type_found = false;
 
-		char parse_parameters_string[] = "OO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &uri2, php_wxURI_entry, &proxy2, php_wxURI_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(uri2) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxURI_P(uri2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxURI_P(uri2 TSRMLS_CC)->native_object;
-					object_pointer2_0 = (wxURI*) argument_native_object;
-					if (!object_pointer2_0 )
-					{
-						zend_error(E_ERROR, "Parameter 'uri' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(uri2) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'uri' not null, could not be retreived correctly.");
-				}
-			}
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(proxy2) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxURI_P(proxy2 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxURI_P(proxy2 TSRMLS_CC)->native_object;
-					object_pointer2_1 = (wxURI*) argument_native_object;
-					if (!object_pointer2_1 )
-					{
-						zend_error(E_ERROR, "Parameter 'proxy' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(proxy2) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'proxy' not null, could not be retreived correctly.");
-				}
-			}
+    //Parameters for overload 0
+    char* fileName0;
+    long fileName_len0;
+    bool overload0_called = false;
 
-			overload2_called = true;
-			already_called = true;
-		}
-	}
+    //Parameters for overload 1
+    zval* uri1;
+    wxURI* object_pointer1_0 = 0;
+    bool overload1_called = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Load(wxString(fileName0, wxConvUTF8)))\n\n");
-				#endif
+    //Parameters for overload 2
+    zval* uri2;
+    wxURI* object_pointer2_0 = 0;
+    zval* proxy2;
+    wxURI* object_pointer2_1 = 0;
+    bool overload2_called = false;
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Load(wxString(fileName0, wxConvUTF8)));
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's' (&fileName0, &fileName_len0)\n");
+        #endif
+
+        char parse_parameters_string[] = "s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &fileName0, &fileName_len0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'O' (&uri1, php_wxURI_entry)\n");
+        #endif
+
+        char parse_parameters_string[] = "O";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &uri1, php_wxURI_entry ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(uri1) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxURI_P(uri1)->object_type;
+                    argument_native_object = (void*) Z_wxURI_P(uri1)->native_object;
+                    object_pointer1_0 = (wxURI*) argument_native_object;
+                    if (!object_pointer1_0 )
+                    {
+                        goto overload2;
+                    }
+                }
+                else if(Z_TYPE_P(uri1) != IS_NULL)
+                {
+                    goto overload2;
+                }
+            }
+
+            overload1_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 2
+    overload2:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'OO' (&uri2, php_wxURI_entry, &proxy2, php_wxURI_entry)\n");
+        #endif
+
+        char parse_parameters_string[] = "OO";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &uri2, php_wxURI_entry, &proxy2, php_wxURI_entry ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(uri2) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxURI_P(uri2)->object_type;
+                    argument_native_object = (void*) Z_wxURI_P(uri2)->native_object;
+                    object_pointer2_0 = (wxURI*) argument_native_object;
+                    if (!object_pointer2_0 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'uri' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(uri2) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'uri' not null, could not be retreived correctly.");
+                }
+            }
+
+            if(arguments_received >= 2){
+                if(Z_TYPE_P(proxy2) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxURI_P(proxy2)->object_type;
+                    argument_native_object = (void*) Z_wxURI_P(proxy2)->native_object;
+                    object_pointer2_1 = (wxURI*) argument_native_object;
+                    if (!object_pointer2_1 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'proxy' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(proxy2) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'proxy' not null, could not be retreived correctly.");
+                }
+            }
+
+            overload2_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Load(wxString(fileName0, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Load(wxString(fileName0, wxConvUTF8)));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Load(*(wxURI*) object_pointer1_0))\n\n");
-				#endif
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Load(*(wxURI*) object_pointer1_0))\n\n");
+                #endif
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Load(*(wxURI*) object_pointer1_0));
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Load(*(wxURI*) object_pointer1_0));
 
-				references->AddReference(uri1, "wxMediaCtrl::Load at call 3 with 1 argument(s)");
+                references->AddReference(uri1, "wxMediaCtrl::Load at call 3 with 1 argument(s)");
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-	if(overload2_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Load(*(wxURI*) object_pointer2_0, *(wxURI*) object_pointer2_1))\n\n");
-				#endif
+    if(overload2_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Load(*(wxURI*) object_pointer2_0, *(wxURI*) object_pointer2_1))\n\n");
+                #endif
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Load(*(wxURI*) object_pointer2_0, *(wxURI*) object_pointer2_1));
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Load(*(wxURI*) object_pointer2_0, *(wxURI*) object_pointer2_1));
 
-				references->AddReference(uri2, "wxMediaCtrl::Load at call 3 with 2 argument(s)");
-				references->AddReference(proxy2, "wxMediaCtrl::Load at call 3 with 2 argument(s)");
+                references->AddReference(uri2, "wxMediaCtrl::Load at call 3 with 2 argument(s)");
+                references->AddReference(proxy2, "wxMediaCtrl::Load at call 3 with 2 argument(s)");
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::Load\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::Load\n"
+        );
+    }
 }
 /* }}} */
 
@@ -333,290 +359,299 @@ PHP_METHOD(php_wxMediaCtrl, Load)
    Creates this control. */
 PHP_METHOD(php_wxMediaCtrl, Create)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::Create\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::Create call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::Create\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	char* fileName0;
-	long fileName_len0;
-	zval* pos0;
-	wxPoint* object_pointer0_3 = 0;
-	zval* size0;
-	wxSize* object_pointer0_4 = 0;
-	long style0;
-	char* szBackend0;
-	long szBackend_len0;
-	zval* validator0;
-	wxValidator* object_pointer0_7 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 9)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|sOOlsos' (&parent0, &id0, &fileName0, &fileName_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &szBackend0, &szBackend_len0, &validator0, &name0, &name_len0)\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "zl|sOOlsos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &fileName0, &fileName_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &szBackend0, &szBackend_len0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_3 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_3 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_4 = (wxSize*) argument_native_object;
-					if (!object_pointer0_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::Create call\n"
+            );
 
-			if(arguments_received >= 8){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_7 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+            bool reference_type_found = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
-				#endif
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    char* fileName0;
+    long fileName_len0;
+    zval* pos0;
+    wxPoint* object_pointer0_3 = 0;
+    zval* size0;
+    wxSize* object_pointer0_4 = 0;
+    long style0;
+    char* szBackend0;
+    long szBackend_len0;
+    zval* validator0;
+    wxValidator* object_pointer0_7 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 2 argument(s)");
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 9)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|sOOlsos' (&parent0, &id0, &fileName0, &fileName_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &szBackend0, &szBackend_len0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8)))\n\n");
-				#endif
+        char parse_parameters_string[] = "zl|sOOlsos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &fileName0, &fileName_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &szBackend0, &szBackend_len0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8)));
+            if(arguments_received >= 4){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_3 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_3 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 3 argument(s)");
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_4 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3))\n\n");
-				#endif
+            if(arguments_received >= 8){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_7 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 4 argument(s)");
-				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 4 argument(s)");
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+                references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 2 argument(s)");
 
-				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 5 argument(s)");
+                return;
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8)))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8)));
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+                references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 3 argument(s)");
 
-				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 6 argument(s)");
+                return;
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8)))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8)));
+                references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 4 argument(s)");
+                references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 4 argument(s)");
 
-				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 7 argument(s)");
+                return;
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7));
+                references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 5 argument(s)");
+                references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 5 argument(s)");
+                references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 5 argument(s)");
 
-				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(validator0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
+                return;
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 9:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
+                references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 6 argument(s)");
+                references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 6 argument(s)");
+                references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 6 argument(s)");
 
-				references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 9 argument(s)");
-				references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(validator0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
+                return;
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8)))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-		}
-	}
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8)));
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::Create\n");
-	}
+                references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 7 argument(s)");
+                references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 7 argument(s)");
+
+                return;
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7));
+
+                references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 8 argument(s)");
+                references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(validator0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
+
+                return;
+                break;
+            }
+            case 9:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
+
+                references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 9 argument(s)");
+                references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
+                references->AddReference(size0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
+                references->AddReference(validator0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::Create\n"
+        );
+    }
 }
 /* }}} */
 
@@ -624,104 +659,113 @@ PHP_METHOD(php_wxMediaCtrl, Create)
    Obtains the best size relative to the original/natural size of the video, if there is any. */
 PHP_METHOD(php_wxMediaCtrl, GetBestSize)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::GetBestSize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::GetBestSize call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::GetBestSize\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxMediaCtrl::GetBestSize() to return new object\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				wxSize value_to_return0;
-				value_to_return0 = ((wxMediaCtrl_php*)native_object)->GetBestSize();
-				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
-				object_init_ex(return_value, php_wxSize_entry);
-				((wxSize_php*)ptr)->phpObj = return_value;
-				zo_wxSize* zo0 = Z_wxSize_P(return_value TSRMLS_CC);
-				zo0->native_object = (wxSize_php*) ptr;
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::GetBestSize call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxMediaCtrl::GetBestSize() to return new object\n\n");
+                #endif
+
+                wxSize value_to_return0;
+                value_to_return0 = ((wxMediaCtrl_php*)native_object)->GetBestSize();
+                void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
+                memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
+                object_init_ex(return_value, php_wxSize_entry);
+                ((wxSize_php*)ptr)->phpObj = *return_value;
+                zo_wxSize* zo0 = Z_wxSize_P(return_value);
+                zo0->native_object = (wxSize_php*) ptr;
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::GetBestSize\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::GetBestSize\n"
+        );
+    }
 }
 /* }}} */
 
@@ -729,97 +773,106 @@ PHP_METHOD(php_wxMediaCtrl, GetBestSize)
    Obtains the playback rate, or speed of the media. */
 PHP_METHOD(php_wxMediaCtrl, GetPlaybackRate)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::GetPlaybackRate\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::GetPlaybackRate call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::GetPlaybackRate\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxMediaCtrl::GetPlaybackRate())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_DOUBLE(return_value, ((wxMediaCtrl_php*)native_object)->GetPlaybackRate());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::GetPlaybackRate call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxMediaCtrl::GetPlaybackRate())\n\n");
+                #endif
+
+                ZVAL_DOUBLE(return_value, ((wxMediaCtrl_php*)native_object)->GetPlaybackRate());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::GetPlaybackRate\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::GetPlaybackRate\n"
+        );
+    }
 }
 /* }}} */
 
@@ -827,97 +880,106 @@ PHP_METHOD(php_wxMediaCtrl, GetPlaybackRate)
    Gets the volume of the media from a 0.0 to 1.0 range. */
 PHP_METHOD(php_wxMediaCtrl, GetVolume)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::GetVolume\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::GetVolume call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::GetVolume\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxMediaCtrl::GetVolume())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_DOUBLE(return_value, ((wxMediaCtrl_php*)native_object)->GetVolume());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::GetVolume call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxMediaCtrl::GetVolume())\n\n");
+                #endif
+
+                ZVAL_DOUBLE(return_value, ((wxMediaCtrl_php*)native_object)->GetVolume());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::GetVolume\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::GetVolume\n"
+        );
+    }
 }
 /* }}} */
 
@@ -925,97 +987,106 @@ PHP_METHOD(php_wxMediaCtrl, GetVolume)
    Obtains the length - the total amount of time the movie has in milliseconds. */
 PHP_METHOD(php_wxMediaCtrl, Length)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::Length\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::Length call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::Length\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxMediaCtrl::Length())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Length());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::Length call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxMediaCtrl::Length())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Length());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::Length\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::Length\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1023,103 +1094,112 @@ PHP_METHOD(php_wxMediaCtrl, Length)
    Same as Load(const wxURI& uri). */
 PHP_METHOD(php_wxMediaCtrl, LoadURI)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::LoadURI\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::LoadURI call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::LoadURI\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	char* fileName0;
-	long fileName_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&fileName0, &fileName_len0)\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fileName0, &fileName_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::LoadURI(wxString(fileName0, wxConvUTF8)))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->LoadURI(wxString(fileName0, wxConvUTF8)));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::LoadURI call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    char* fileName0;
+    long fileName_len0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's' (&fileName0, &fileName_len0)\n");
+        #endif
+
+        char parse_parameters_string[] = "s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &fileName0, &fileName_len0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::LoadURI(wxString(fileName0, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->LoadURI(wxString(fileName0, wxConvUTF8)));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::LoadURI\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::LoadURI\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1127,105 +1207,114 @@ PHP_METHOD(php_wxMediaCtrl, LoadURI)
    Same as Load(const wxURI& uri, const wxURI& proxy). */
 PHP_METHOD(php_wxMediaCtrl, LoadURIWithProxy)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::LoadURIWithProxy\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::LoadURIWithProxy call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::LoadURIWithProxy\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	char* fileName0;
-	long fileName_len0;
-	char* proxy0;
-	long proxy_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&fileName0, &fileName_len0, &proxy0, &proxy_len0)\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fileName0, &fileName_len0, &proxy0, &proxy_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::LoadURIWithProxy(wxString(fileName0, wxConvUTF8), wxString(proxy0, wxConvUTF8)))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->LoadURIWithProxy(wxString(fileName0, wxConvUTF8), wxString(proxy0, wxConvUTF8)));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::LoadURIWithProxy call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    char* fileName0;
+    long fileName_len0;
+    char* proxy0;
+    long proxy_len0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'ss' (&fileName0, &fileName_len0, &proxy0, &proxy_len0)\n");
+        #endif
+
+        char parse_parameters_string[] = "ss";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &fileName0, &fileName_len0, &proxy0, &proxy_len0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::LoadURIWithProxy(wxString(fileName0, wxConvUTF8), wxString(proxy0, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->LoadURIWithProxy(wxString(fileName0, wxConvUTF8), wxString(proxy0, wxConvUTF8)));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::LoadURIWithProxy\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::LoadURIWithProxy\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1233,97 +1322,106 @@ PHP_METHOD(php_wxMediaCtrl, LoadURIWithProxy)
    Pauses playback of the movie. */
 PHP_METHOD(php_wxMediaCtrl, Pause)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::Pause\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::Pause call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::Pause\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Pause())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Pause());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::Pause call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Pause())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Pause());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::Pause\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::Pause\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1331,97 +1429,106 @@ PHP_METHOD(php_wxMediaCtrl, Pause)
    Resumes playback of the movie. */
 PHP_METHOD(php_wxMediaCtrl, Play)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::Play\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::Play call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::Play\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Play())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Play());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::Play call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Play())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Play());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::Play\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::Play\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1429,115 +1536,124 @@ PHP_METHOD(php_wxMediaCtrl, Play)
    Seeks to a position within the movie. */
 PHP_METHOD(php_wxMediaCtrl, Seek)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::Seek\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::Seek call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::Seek\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long where0;
-	long mode0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l|l' (&where0, &mode0)\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &where0, &mode0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxMediaCtrl::Seek((wxFileOffset) where0))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Seek((wxFileOffset) where0));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::Seek call\n"
+            );
 
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxMediaCtrl::Seek((wxFileOffset) where0, (wxSeekMode) mode0))\n\n");
-				#endif
+            bool reference_type_found = false;
 
-				ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Seek((wxFileOffset) where0, (wxSeekMode) mode0));
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    long where0;
+    long mode0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l|l' (&where0, &mode0)\n");
+        #endif
+
+        char parse_parameters_string[] = "l|l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &where0, &mode0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxMediaCtrl::Seek((wxFileOffset) where0))\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Seek((wxFileOffset) where0));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxMediaCtrl::Seek((wxFileOffset) where0, (wxSeekMode) mode0))\n\n");
+                #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::Seek\n");
-	}
+                ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Seek((wxFileOffset) where0, (wxSeekMode) mode0));
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::Seek\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1545,102 +1661,111 @@ PHP_METHOD(php_wxMediaCtrl, Seek)
    Sets the playback rate, or speed of the media, to that referred by dRate. */
 PHP_METHOD(php_wxMediaCtrl, SetPlaybackRate)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::SetPlaybackRate\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::SetPlaybackRate call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::SetPlaybackRate\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	double dRate0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'd' (&dRate0)\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "d";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dRate0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::SetPlaybackRate(dRate0))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->SetPlaybackRate(dRate0));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::SetPlaybackRate call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    double dRate0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'd' (&dRate0)\n");
+        #endif
+
+        char parse_parameters_string[] = "d";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &dRate0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::SetPlaybackRate(dRate0))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->SetPlaybackRate(dRate0));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::SetPlaybackRate\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::SetPlaybackRate\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1648,102 +1773,111 @@ PHP_METHOD(php_wxMediaCtrl, SetPlaybackRate)
    Sets the volume of the media from a 0.0 to 1.0 range to that referred by dVolume. */
 PHP_METHOD(php_wxMediaCtrl, SetVolume)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::SetVolume\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::SetVolume call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::SetVolume\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	double dVolume0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'd' (&dVolume0)\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "d";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dVolume0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::SetVolume(dVolume0))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->SetVolume(dVolume0));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::SetVolume call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    double dVolume0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'd' (&dVolume0)\n");
+        #endif
+
+        char parse_parameters_string[] = "d";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &dVolume0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::SetVolume(dVolume0))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->SetVolume(dVolume0));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::SetVolume\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::SetVolume\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1751,114 +1885,123 @@ PHP_METHOD(php_wxMediaCtrl, SetVolume)
    A special feature to wxMediaCtrl. */
 PHP_METHOD(php_wxMediaCtrl, ShowPlayerControls)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::ShowPlayerControls\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::ShowPlayerControls call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::ShowPlayerControls\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long flags0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|l' (&flags0)\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::ShowPlayerControls())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->ShowPlayerControls());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::ShowPlayerControls call\n"
+            );
 
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::ShowPlayerControls((wxMediaCtrlPlayerControls) flags0))\n\n");
-				#endif
+            bool reference_type_found = false;
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->ShowPlayerControls((wxMediaCtrlPlayerControls) flags0));
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    long flags0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 0  && arguments_received <= 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '|l' (&flags0)\n");
+        #endif
+
+        char parse_parameters_string[] = "|l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &flags0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::ShowPlayerControls())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->ShowPlayerControls());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::ShowPlayerControls((wxMediaCtrlPlayerControls) flags0))\n\n");
+                #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::ShowPlayerControls\n");
-	}
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->ShowPlayerControls((wxMediaCtrlPlayerControls) flags0));
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::ShowPlayerControls\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1866,97 +2009,106 @@ PHP_METHOD(php_wxMediaCtrl, ShowPlayerControls)
    Stops the media. */
 PHP_METHOD(php_wxMediaCtrl, Stop)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::Stop\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::Stop call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::Stop\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxMediaCtrl::Stop())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Stop());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::Stop call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxMediaCtrl::Stop())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Stop());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::Stop\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::Stop\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1964,300 +2116,302 @@ PHP_METHOD(php_wxMediaCtrl, Stop)
    Default constructor - you MUST call Create() before calling any other methods of wxMediaCtrl. */
 PHP_METHOD(php_wxMediaCtrl, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* parent1;
-	wxWindow* object_pointer1_0 = 0;
-	long id1;
-	char* fileName1;
-	long fileName_len1;
-	zval* pos1;
-	wxPoint* object_pointer1_3 = 0;
-	zval* size1;
-	wxSize* object_pointer1_4 = 0;
-	long style1;
-	char* szBackend1;
-	long szBackend_len1;
-	zval* validator1;
-	wxValidator* object_pointer1_7 = 0;
-	char* name1;
-	long name_len1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		overload0_called = true;
-		already_called = true;
-	}
+    zo_wxMediaCtrl* current_object;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 9)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|sOOlsos' (&parent1, &id1, &fileName1, &fileName_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &szBackend1, &szBackend_len1, &validator1, &name1, &name_len1)\n");
-		#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-		char parse_parameters_string[] = "zl|sOOlsos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &fileName1, &fileName_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &szBackend1, &szBackend_len1, &validator1, &name1, &name_len1 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent1) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent1 TSRMLS_CC)->native_object;
-					object_pointer1_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer1_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent1) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
 
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos1) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos1 TSRMLS_CC)->native_object;
-					object_pointer1_3 = (wxPoint*) argument_native_object;
-					if (!object_pointer1_3 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos1) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+    //Parameters for overload 0
+    bool overload0_called = false;
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(size1) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size1 TSRMLS_CC)->native_object;
-					object_pointer1_4 = (wxSize*) argument_native_object;
-					if (!object_pointer1_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size1) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
+    //Parameters for overload 1
+    zval* parent1;
+    wxWindow* object_pointer1_0 = 0;
+    long id1;
+    char* fileName1;
+    long fileName_len1;
+    zval* pos1;
+    wxPoint* object_pointer1_3 = 0;
+    zval* size1;
+    wxSize* object_pointer1_4 = 0;
+    long style1;
+    char* szBackend1;
+    long szBackend_len1;
+    zval* validator1;
+    wxValidator* object_pointer1_7 = 0;
+    char* name1;
+    long name_len1;
+    bool overload1_called = false;
 
-			if(arguments_received >= 8){
-				if(Z_TYPE_P(validator1) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator1 TSRMLS_CC)->native_object;
-					object_pointer1_7 = (wxValidator*) argument_native_object;
-					if (!object_pointer1_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator1) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
 
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+        overload0_called = true;
+        already_called = true;
+    }
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 9)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|sOOlsos' (&parent1, &id1, &fileName1, &fileName_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &szBackend1, &szBackend_len1, &validator1, &name1, &name_len1)\n");
+        #endif
 
-				native_object = new wxMediaCtrl_php();
+        char parse_parameters_string[] = "zl|sOOlsos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent1, &id1, &fileName1, &fileName_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &szBackend1, &szBackend_len1, &validator1, &name1, &name_len1 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent1) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent1)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent1)->native_object;
+                    object_pointer1_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer1_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent1) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+            if(arguments_received >= 4){
+                if(Z_TYPE_P(pos1) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos1)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos1)->native_object;
+                    object_pointer1_3 = (wxPoint*) argument_native_object;
+                    if (!object_pointer1_3 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos1) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
-				#endif
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(size1) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size1)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size1)->native_object;
+                    object_pointer1_4 = (wxSize*) argument_native_object;
+                    if (!object_pointer1_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size1) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
+            if(arguments_received >= 8){
+                if(Z_TYPE_P(validator1) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator1)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator1)->native_object;
+                    object_pointer1_7 = (wxValidator*) argument_native_object;
+                    if (!object_pointer1_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator1) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 2 argument(s)");
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8))\n");
-				#endif
+            overload1_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8));
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct()\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 3 argument(s)");
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3)\n");
-				#endif
+                native_object = new wxMediaCtrl_php();
 
-				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3);
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
 
-				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 4 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 4 argument(s)");
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4)\n");
-				#endif
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
+                #endif
 
-				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4);
+                native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
-				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 5 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 5 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 5 argument(s)");
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1)\n");
-				#endif
+                native_object->references.Initialize();
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 2 argument(s)");
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8))\n");
+                #endif
 
-				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1);
+                native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8));
 
-				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 6 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 6 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 6 argument(s)");
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8))\n");
-				#endif
+                native_object->references.Initialize();
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 3 argument(s)");
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3)\n");
+                #endif
 
-				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8));
+                native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3);
 
-				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 7 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 7 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 7 argument(s)");
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8), *(wxValidator*) object_pointer1_7)\n");
-				#endif
+                native_object->references.Initialize();
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 4 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 4 argument(s)");
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4)\n");
+                #endif
 
-				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8), *(wxValidator*) object_pointer1_7);
+                native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4);
 
-				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 8 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(validator1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
-				break;
-			}
-			case 9:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8), *(wxValidator*) object_pointer1_7, wxString(name1, wxConvUTF8))\n");
-				#endif
+                native_object->references.Initialize();
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 5 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 5 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 5 argument(s)");
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1)\n");
+                #endif
 
-				native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8), *(wxValidator*) object_pointer1_7, wxString(name1, wxConvUTF8));
+                native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1);
 
-				native_object->references.Initialize();
-				((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 9 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
-				((wxMediaCtrl_php*) native_object)->references.AddReference(validator1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
-				break;
-			}
-		}
-	}
+                native_object->references.Initialize();
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 6 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 6 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 6 argument(s)");
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8))\n");
+                #endif
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8));
 
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxMediaCtrl::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+                native_object->references.Initialize();
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 7 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 7 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 7 argument(s)");
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8), *(wxValidator*) object_pointer1_7)\n");
+                #endif
+
+                native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8), *(wxValidator*) object_pointer1_7);
+
+                native_object->references.Initialize();
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 8 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(validator1, "wxMediaCtrl::wxMediaCtrl at call 4 with 8 argument(s)");
+                break;
+            }
+            case 9:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8), *(wxValidator*) object_pointer1_7, wxString(name1, wxConvUTF8))\n");
+                #endif
+
+                native_object = new wxMediaCtrl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(fileName1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(szBackend1, wxConvUTF8), *(wxValidator*) object_pointer1_7, wxString(name1, wxConvUTF8));
+
+                native_object->references.Initialize();
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(parent1, "wxMediaCtrl::wxMediaCtrl at call 2 with 9 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(pos1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(size1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
+                ((wxMediaCtrl_php*) native_object)->references.AddReference(validator1, "wxMediaCtrl::wxMediaCtrl at call 4 with 9 argument(s)");
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxMediaCtrl_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxMediaCtrl::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
@@ -2265,97 +2419,106 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
    Obtains the state the playback of the media is in -. */
 PHP_METHOD(php_wxMediaCtrl, GetState)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::GetState\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::GetState call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::GetState\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxMediaCtrl::GetState())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->GetState());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::GetState call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxMediaCtrl::GetState())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->GetState());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::GetState\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::GetState\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2363,164 +2526,186 @@ PHP_METHOD(php_wxMediaCtrl, GetState)
    Obtains the current position in time within the movie in milliseconds. */
 PHP_METHOD(php_wxMediaCtrl, Tell)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMediaCtrl::Tell\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxMediaCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxMediaCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxMediaCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxMediaCtrl::Tell call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxMediaCtrl::Tell\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXMEDIACTRL_TYPE){
-				references = &((wxMediaCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxMediaCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxMediaCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxMediaCtrl::Tell())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxMediaCtrl_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Tell());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxMediaCtrl::Tell call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXMEDIACTRL_TYPE){
+                references = &((wxMediaCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxMediaCtrl::Tell())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Tell());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMediaCtrl::Tell\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxMediaCtrl::Tell\n"
+        );
+    }
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxSound_free(void *object TSRMLS_DC) 
+void php_wxSound_free(void *object)
 {
     zo_wxSound* custom_object = (zo_wxSound*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxSound_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxSound done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxSound_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxSound done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxSound_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxSound_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxSound_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxSound* custom_object;
-	custom_object = (zo_wxSound*) ecalloc(1, sizeof(zo_wxSound) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxSound_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxSound* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxSound*) ecalloc(
+        1,
+        sizeof(zo_wxSound)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXSOUND_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXSOUND_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -2529,116 +2714,125 @@ END_EXTERN_C()
    Constructs a wave object from a file or resource. */
 PHP_METHOD(php_wxSound, Create)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxSound::Create\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxSound* current_object;
-	wxphp_object_type current_object_type;
-	wxSound_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxSound_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxSound::Create call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxSound::Create\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXSOUND_TYPE){
-				references = &((wxSound_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	char* fileName0;
-	long fileName_len0;
-	bool isResource0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|b' (&fileName0, &fileName_len0, &isResource0)\n");
-		#endif
+    zo_wxSound* current_object;
+    wxphp_object_type current_object_type;
+    wxSound_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "s|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fileName0, &fileName_len0, &isResource0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxSound::Create(wxString(fileName0, wxConvUTF8)))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxSound_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Create(wxString(fileName0, wxConvUTF8)));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxSound::Create call\n"
+            );
 
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxSound::Create(wxString(fileName0, wxConvUTF8), isResource0))\n\n");
-				#endif
+            bool reference_type_found = false;
 
-				ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Create(wxString(fileName0, wxConvUTF8), isResource0));
+            if(current_object_type == PHP_WXSOUND_TYPE){
+                references = &((wxSound_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    char* fileName0;
+    long fileName_len0;
+    bool isResource0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's|b' (&fileName0, &fileName_len0, &isResource0)\n");
+        #endif
+
+        char parse_parameters_string[] = "s|b";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &fileName0, &fileName_len0, &isResource0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxSound::Create(wxString(fileName0, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Create(wxString(fileName0, wxConvUTF8)));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxSound::Create(wxString(fileName0, wxConvUTF8), isResource0))\n\n");
+                #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSound::Create\n");
-	}
+                ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Create(wxString(fileName0, wxConvUTF8), isResource0));
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxSound::Create\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2646,97 +2840,106 @@ PHP_METHOD(php_wxSound, Create)
    Returns true if the object contains a successfully loaded file or resource, false otherwise. */
 PHP_METHOD(php_wxSound, IsOk)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxSound::IsOk\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxSound* current_object;
-	wxphp_object_type current_object_type;
-	wxSound_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxSound_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxSound::IsOk call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxSound::IsOk\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXSOUND_TYPE){
-				references = &((wxSound_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxSound* current_object;
+    wxphp_object_type current_object_type;
+    wxSound_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxSound::IsOk())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxSound_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->IsOk());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxSound::IsOk call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXSOUND_TYPE){
+                references = &((wxSound_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxSound::IsOk())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->IsOk());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSound::IsOk\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxSound::IsOk\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2744,169 +2947,179 @@ PHP_METHOD(php_wxSound, IsOk)
    Plays the sound file. */
 PHP_METHOD(php_wxSound, Play)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxSound::Play\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxSound* current_object;
-	wxphp_object_type current_object_type;
-	wxSound_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxSound_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxSound::Play call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxSound::Play\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXSOUND_TYPE){
-				references = &((wxSound_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long flags0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* filename1;
-	long filename_len1;
-	long flags1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|l' (&flags0)\n");
-		#endif
+    zo_wxSound* current_object;
+    wxphp_object_type current_object_type;
+    wxSound_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|l' (&filename1, &filename_len1, &flags1)\n");
-		#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxSound_P(getThis());
 
-		char parse_parameters_string[] = "s|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename1, &filename_len1, &flags1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxSound::Play call\n"
+            );
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxSound::Play())\n\n");
-				#endif
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Play());
+            bool reference_type_found = false;
 
+            if(current_object_type == PHP_WXSOUND_TYPE){
+                references = &((wxSound_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxSound::Play((unsigned) flags0))\n\n");
-				#endif
+    //Parameters for overload 0
+    long flags0;
+    bool overload0_called = false;
 
-				ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Play((unsigned) flags0));
+    //Parameters for overload 1
+    char* filename1;
+    long filename_len1;
+    long flags1;
+    bool overload1_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 0  && arguments_received <= 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '|l' (&flags0)\n");
+        #endif
+
+        char parse_parameters_string[] = "|l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &flags0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's|l' (&filename1, &filename_len1, &flags1)\n");
+        #endif
+
+        char parse_parameters_string[] = "s|l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &filename1, &filename_len1, &flags1 ) == SUCCESS)
+        {
+            overload1_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxSound::Play())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Play());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxSound::Play((unsigned) flags0))\n\n");
+                #endif
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Static ");
-				php_printf("Executing RETURN_BOOL(wxSound::Play(wxString(filename1, wxConvUTF8)))\n\n");
-				#endif
-
-				ZVAL_BOOL(return_value, wxSound::Play(wxString(filename1, wxConvUTF8)));
+                ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Play((unsigned) flags0));
 
 
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Static ");
-				php_printf("Executing RETURN_BOOL(wxSound::Play(wxString(filename1, wxConvUTF8), (unsigned) flags1))\n\n");
-				#endif
+                return;
+                break;
+            }
+        }
+    }
 
-				ZVAL_BOOL(return_value, wxSound::Play(wxString(filename1, wxConvUTF8), (unsigned) flags1));
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Static ");
+                php_printf("Executing RETURN_BOOL(wxSound::Play(wxString(filename1, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, wxSound::Play(wxString(filename1, wxConvUTF8)));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Static ");
+                php_printf("Executing RETURN_BOOL(wxSound::Play(wxString(filename1, wxConvUTF8), (unsigned) flags1))\n\n");
+                #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSound::Play\n");
-	}
+                ZVAL_BOOL(return_value, wxSound::Play(wxString(filename1, wxConvUTF8), (unsigned) flags1));
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxSound::Play\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2914,98 +3127,107 @@ PHP_METHOD(php_wxSound, Play)
    If a sound is played, this function stops it. */
 PHP_METHOD(php_wxSound, Stop)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxSound::Stop\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxSound* current_object;
-	wxphp_object_type current_object_type;
-	wxSound_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxSound_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxSound::Stop call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxSound::Stop\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXSOUND_TYPE){
-				references = &((wxSound_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxSound* current_object;
+    wxphp_object_type current_object_type;
+    wxSound_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Static ");
-				php_printf("Executing wxSound::Stop()\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxSound_P(getThis());
 
-				wxSound::Stop();
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxSound::Stop call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXSOUND_TYPE){
+                references = &((wxSound_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Static ");
+                php_printf("Executing wxSound::Stop()\n\n");
+                #endif
+
+                wxSound::Stop();
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSound::Stop\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxSound::Stop\n"
+        );
+    }
 }
 /* }}} */
 
@@ -3013,172 +3235,175 @@ PHP_METHOD(php_wxSound, Stop)
    Default ctor. */
 PHP_METHOD(php_wxSound, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxSound::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxSound* current_object;
-	wxSound_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* fileName1;
-	long fileName_len1;
-	bool isResource1;
-	bool overload1_called = false;
-	//Parameters for overload 2
-	long size2;
-	char* data2;
-	long data_len2;
-	bool overload2_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxSound::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		overload0_called = true;
-		already_called = true;
-	}
+    zo_wxSound* current_object;
+    wxSound_php* native_object;
+    void* argument_native_object = NULL;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|b' (&fileName1, &fileName_len1, &isResource1)\n");
-		#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-		char parse_parameters_string[] = "s|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fileName1, &fileName_len1, &isResource1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
 
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ls' (&size2, &data2, &data_len2)\n");
-		#endif
+    //Parameters for overload 0
+    bool overload0_called = false;
 
-		char parse_parameters_string[] = "ls";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size2, &data2, &data_len2 ) == SUCCESS)
-		{
-			overload2_called = true;
-			already_called = true;
-		}
-	}
+    //Parameters for overload 1
+    char* fileName1;
+    long fileName_len1;
+    bool isResource1;
+    bool overload1_called = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
+    //Parameters for overload 2
+    long size2;
+    char* data2;
+    long data_len2;
+    bool overload2_called = false;
 
-				native_object = new wxSound_php();
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+        overload0_called = true;
+        already_called = true;
+    }
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(wxString(fileName1, wxConvUTF8))\n");
-				#endif
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's|b' (&fileName1, &fileName_len1, &isResource1)\n");
+        #endif
 
-				native_object = new wxSound_php(wxString(fileName1, wxConvUTF8));
+        char parse_parameters_string[] = "s|b";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &fileName1, &fileName_len1, &isResource1 ) == SUCCESS)
+        {
+            overload1_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(wxString(fileName1, wxConvUTF8), isResource1)\n");
-				#endif
+    //Overload 2
+    overload2:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'ls' (&size2, &data2, &data_len2)\n");
+        #endif
 
-				native_object = new wxSound_php(wxString(fileName1, wxConvUTF8), isResource1);
+        char parse_parameters_string[] = "ls";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &size2, &data2, &data_len2 ) == SUCCESS)
+        {
+            overload2_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct()\n");
+                #endif
 
-	if(overload2_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((size_t) size2, (const void*) data2)\n");
-				#endif
+                native_object = new wxSound_php();
 
-				native_object = new wxSound_php((size_t) size2, (const void*) data2);
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(wxString(fileName1, wxConvUTF8))\n");
+                #endif
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object = new wxSound_php(wxString(fileName1, wxConvUTF8));
 
-		current_object = Z_wxSound_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxSound::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+                native_object->references.Initialize();
+                break;
+            }
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(wxString(fileName1, wxConvUTF8), isResource1)\n");
+                #endif
+
+                native_object = new wxSound_php(wxString(fileName1, wxConvUTF8), isResource1);
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    if(overload2_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((size_t) size2, (const void*) data2)\n");
+                #endif
+
+                native_object = new wxSound_php((size_t) size2, (const void*) data2);
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxSound_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxSound::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 

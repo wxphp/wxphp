@@ -53,69 +53,82 @@
 
 
 BEGIN_EXTERN_C()
-void php_wxClientData_free(void *object TSRMLS_DC) 
+void php_wxClientData_free(void *object)
 {
     zo_wxClientData* custom_object = (zo_wxClientData*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxClientData_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxClientData done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxClientData_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxClientData done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxClientData_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxClientData_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxClientData_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxClientData* custom_object;
-	custom_object = (zo_wxClientData*) ecalloc(1, sizeof(zo_wxClientData) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxClientData_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxClientData* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxClientData*) ecalloc(
+        1,
+        sizeof(zo_wxClientData)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXCLIENTDATA_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXCLIENTDATA_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -124,118 +137,134 @@ END_EXTERN_C()
    Constructor. */
 PHP_METHOD(php_wxClientData, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxClientData::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxClientData* current_object;
-	wxClientData_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxClientData::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		overload0_called = true;
-		already_called = true;
-	}
+    zo_wxClientData* current_object;
+    wxClientData_php* native_object;
+    void* argument_native_object = NULL;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-				native_object = new wxClientData_php();
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    bool overload0_called = false;
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
 
-		current_object = Z_wxClientData_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxClientData::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct()\n");
+                #endif
+
+                native_object = new wxClientData_php();
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxClientData_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxClientData::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxTreeItemData_free(void *object TSRMLS_DC) 
+void php_wxTreeItemData_free(void *object)
 {
     zo_wxTreeItemData* custom_object = (zo_wxTreeItemData*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxTreeItemData_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxTreeItemData_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxTreeItemData_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxTreeItemData_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxTreeItemData_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxTreeItemData* custom_object;
-	custom_object = (zo_wxTreeItemData*) ecalloc(1, sizeof(zo_wxTreeItemData) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxTreeItemData_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxTreeItemData* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxTreeItemData*) ecalloc(
+        1,
+        sizeof(zo_wxTreeItemData)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXTREEITEMDATA_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXTREEITEMDATA_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -244,117 +273,126 @@ END_EXTERN_C()
    Returns the item associated with this node. */
 PHP_METHOD(php_wxTreeItemData, GetId)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxTreeItemData::GetId\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxTreeItemData* current_object;
-	wxphp_object_type current_object_type;
-	wxTreeItemData_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxTreeItemData_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxTreeItemData::GetId call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxTreeItemData::GetId\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXTREEITEMDATA_TYPE){
-				references = &((wxTreeItemData_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxTreeItemData* current_object;
+    wxphp_object_type current_object_type;
+    wxTreeItemData_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxTreeItemData::GetId() to return object reference\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxTreeItemData_P(getThis());
 
-				wxTreeItemId_php* value_to_return0;
-				value_to_return0 = (wxTreeItemId_php*) &((wxTreeItemData_php*)native_object)->GetId();
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxTreeItemData::GetId call\n"
+            );
 
-				if(value_to_return0->references.IsUserInitialized()){
-					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
-						zval_add_ref(value_to_return0->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxTreeItemId_entry);
-					Z_wxTreeItemId_P(return_value TSRMLS_CC)->native_object = (wxTreeItemId_php*) value_to_return0;
-				}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxTreeItemData::GetId at call 6 with 0 argument(s)");
-				}
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXTREEITEMDATA_TYPE){
+                references = &((wxTreeItemData_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxTreeItemData::GetId() to return object reference\n\n");
+                #endif
+
+                wxTreeItemId_php* value_to_return0;
+                value_to_return0 = (wxTreeItemId_php*) &((wxTreeItemData_php*)native_object)->GetId();
+
+                if(value_to_return0->references.IsUserInitialized()){
+                    if(!Z_ISNULL(value_to_return0->phpObj)){
+                        return_value = &value_to_return0->phpObj;
+                        zval_add_ref(&value_to_return0->phpObj);
+                        return_is_user_initialized = true;
+                    }
+                    else{
+                        zend_error(E_ERROR, "Could not retreive original zval.");
+                    }
+                }
+                else{
+                    object_init_ex(return_value,php_wxTreeItemId_entry);
+                    Z_wxTreeItemId_P(return_value)->native_object = (wxTreeItemId_php*) value_to_return0;
+                }
+
+                if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
+                    references->AddReference(return_value, "wxTreeItemData::GetId at call 6 with 0 argument(s)");
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeItemData::GetId\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxTreeItemData::GetId\n"
+        );
+    }
 }
 /* }}} */
 
@@ -362,121 +400,130 @@ PHP_METHOD(php_wxTreeItemData, GetId)
    Sets the item associated with this node. */
 PHP_METHOD(php_wxTreeItemData, SetId)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxTreeItemData::SetId\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxTreeItemData* current_object;
-	wxphp_object_type current_object_type;
-	wxTreeItemData_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxTreeItemData_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxTreeItemData::SetId call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxTreeItemData::SetId\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXTREEITEMDATA_TYPE){
-				references = &((wxTreeItemData_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* id0;
-	wxTreeItemId* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&id0, php_wxTreeItemId_entry)\n");
-		#endif
+    zo_wxTreeItemData* current_object;
+    wxphp_object_type current_object_type;
+    wxTreeItemData_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, php_wxTreeItemId_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(id0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxTreeItemId_P(id0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxTreeItemId_P(id0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxTreeItemId*) argument_native_object;
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter 'id' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(id0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'id' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxTreeItemData_P(getThis());
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxTreeItemData::SetId(*(wxTreeItemId*) object_pointer0_0)\n\n");
-				#endif
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxTreeItemData::SetId call\n"
+            );
 
-				((wxTreeItemData_php*)native_object)->SetId(*(wxTreeItemId*) object_pointer0_0);
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				references->AddReference(id0, "wxTreeItemData::SetId at call 3 with 1 argument(s)");
+            bool reference_type_found = false;
 
-				return;
-				break;
-			}
-		}
-	}
+            if(current_object_type == PHP_WXTREEITEMDATA_TYPE){
+                references = &((wxTreeItemData_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeItemData::SetId\n");
-	}
+    //Parameters for overload 0
+    zval* id0;
+    wxTreeItemId* object_pointer0_0 = 0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'O' (&id0, php_wxTreeItemId_entry)\n");
+        #endif
+
+        char parse_parameters_string[] = "O";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &id0, php_wxTreeItemId_entry ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(id0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxTreeItemId_P(id0)->object_type;
+                    argument_native_object = (void*) Z_wxTreeItemId_P(id0)->native_object;
+                    object_pointer0_0 = (wxTreeItemId*) argument_native_object;
+                    if (!object_pointer0_0 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'id' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(id0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'id' not null, could not be retreived correctly.");
+                }
+            }
+
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxTreeItemData::SetId(*(wxTreeItemId*) object_pointer0_0)\n\n");
+                #endif
+
+                ((wxTreeItemData_php*)native_object)->SetId(*(wxTreeItemId*) object_pointer0_0);
+
+                references->AddReference(id0, "wxTreeItemData::SetId at call 3 with 1 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxTreeItemData::SetId\n"
+        );
+    }
 }
 /* }}} */
 
@@ -484,81 +531,82 @@ PHP_METHOD(php_wxTreeItemData, SetId)
    Default constructor. */
 PHP_METHOD(php_wxTreeItemData, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxTreeItemData::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxTreeItemData* current_object;
-	wxTreeItemData_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxTreeItemData::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		overload0_called = true;
-		already_called = true;
-	}
+    zo_wxTreeItemData* current_object;
+    wxTreeItemData_php* native_object;
+    void* argument_native_object = NULL;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-				native_object = new wxTreeItemData_php();
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    bool overload0_called = false;
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
 
-		current_object = Z_wxTreeItemData_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTreeItemData::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct()\n");
+                #endif
+
+                native_object = new wxTreeItemData_php();
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxTreeItemData_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxTreeItemData::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 

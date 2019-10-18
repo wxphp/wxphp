@@ -16,22 +16,21 @@
 #include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_docview_get_args, 0, 0, 1)
-	ZEND_ARG_INFO(0, name)
+    ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxFileHistory_entry;
-void php_wxFileHistory_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxFileHistory_destruction_handler(zend_resource*);
 
 class wxFileHistory_php: public wxFileHistory{
-	public:
-	
-	wxFileHistory_php(size_t maxFiles=9, wxWindowID idBase=wxID_FILE1):wxFileHistory(maxFiles, idBase){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxFileHistory_php(size_t maxFiles=9, wxWindowID idBase=wxID_FILE1):wxFileHistory(maxFiles, idBase){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -42,33 +41,36 @@ typedef struct _zo_wxFileHistory{
     zend_object zo;
 } zo_wxFileHistory;
 
-void php_wxFileHistory_free(void *object TSRMLS_DC);
-zend_object* php_wxFileHistory_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxFileHistory_free(void *object);
+zend_object* php_wxFileHistory_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileHistory_functions[] = {
-	PHP_ME(php_wxFileHistory, AddFileToHistory, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, AddFilesToMenu, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, GetBaseId, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, GetCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, GetHistoryFile, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, GetMaxFiles, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, Load, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, RemoveFileFromHistory, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, RemoveMenu, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, Save, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, SetBaseId, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, UseMenu, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileHistory, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxFileHistory, AddFileToHistory, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, AddFilesToMenu, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, GetBaseId, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, GetCount, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, GetHistoryFile, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, GetMaxFiles, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, Load, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, RemoveFileFromHistory, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, RemoveMenu, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, Save, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, SetBaseId, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, UseMenu, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxFileHistory * php_wxFileHistory_fetch_object(zend_object *obj) {
-      return (zo_wxFileHistory *)((char *)obj - XtOffsetOf(zo_wxFileHistory, zo));
+    return (zo_wxFileHistory *)(
+        (char *)(obj) - XtOffsetOf(zo_wxFileHistory, zo)
+    );
 }
 
-#define Z_wxFileHistory_P(zv) php_wxFileHistory_fetch_object(Z_OBJ_P(zv))
+#define Z_wxFileHistory_P(zv) \
+    php_wxFileHistory_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_DOCVIEW_H_GUARD

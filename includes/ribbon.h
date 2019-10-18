@@ -16,54 +16,53 @@
 #include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_ribbon_get_args, 0, 0, 1)
-	ZEND_ARG_INFO(0, name)
+    ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxRibbonArtProvider_entry;
-void php_wxRibbonArtProvider_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxRibbonArtProvider_destruction_handler(zend_resource*);
 
 class wxRibbonArtProvider_php: public wxRibbonArtProvider{
-	public:
-	
-		
-	wxRibbonArtProvider* Clone() const;
-	void DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect);
-	void DrawGalleryBackground(wxDC& dc, wxRibbonGallery* wnd, const wxRect& rect);
-	void DrawGalleryItemBackground(wxDC& dc, wxRibbonGallery* wnd, const wxRect& rect, wxRibbonGalleryItem* item);
-	void DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, const wxRect& rect, wxBitmap& bitmap);
-	void DrawPageBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect);
-	void DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, const wxRect& rect);
-	void DrawScrollButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, long style);
-	void DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect);
-	void DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wxRect& rect, double visibility);
-	void DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& rect, const wxBitmap& bitmap, wxRibbonButtonKind kind, long state);
-	void DrawToolBarBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect);
-	void DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect);
-	void GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxString& label, const wxBitmap& bitmap, int* ideal, int* small_begin_need_separator, int* small_must_have_separator, int* minimum);
-	wxColour GetColour(int id) const;
-	void GetColourScheme(wxColour* primary, wxColour* secondary, wxColour* tertiary) const;
-	long GetFlags() const;
-	wxFont GetFont(int id) const;
-	wxSize GetGalleryClientSize(wxDC& dc, const wxRibbonGallery* wnd, wxSize size, wxPoint* client_offset, wxRect* scroll_up_button, wxRect* scroll_down_button, wxRect* extension_button);
-	wxSize GetGallerySize(wxDC& dc, const wxRibbonGallery* wnd, wxSize client_size);
-	int GetMetric(int id) const;
-	wxSize GetMinimisedPanelMinimumSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize* desired_bitmap_size, wxDirection* expanded_panel_direction);
-	wxRect GetPageBackgroundRedrawArea(wxDC& dc, const wxRibbonPage* wnd, wxSize page_old_size, wxSize page_new_size);
-	wxSize GetPanelClientSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize size, wxPoint* client_offset);
-	wxSize GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize client_size, wxPoint* client_offset);
-	wxSize GetScrollButtonMinimumSize(wxDC& dc, wxWindow* wnd, long style);
-	wxSize GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitmap_size, wxRibbonButtonKind kind, bool is_first, bool is_last, wxRect* dropdown_region);
-	void SetColourScheme(const wxColour& primary, const wxColour& secondary, const wxColour& tertiary);
-	void SetFlags(long flags);
-	void SetFont(int id, const wxFont& font);
-	void SetMetric(int id, int new_val);
-	void DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, wxRibbonButtonKind kind, long state, const wxString& label, const wxBitmap& bitmap_large, const wxBitmap& bitmap_small);
-	bool GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wxRibbonButtonKind kind, wxRibbonButtonBarButtonState size, const wxString& label, wxSize bitmap_size_large, wxSize bitmap_size_small, wxSize* button_size, wxRect* normal_region, wxRect* dropdown_region);
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    
+    wxRibbonArtProvider* Clone() const;
+    void DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect);
+    void DrawGalleryBackground(wxDC& dc, wxRibbonGallery* wnd, const wxRect& rect);
+    void DrawGalleryItemBackground(wxDC& dc, wxRibbonGallery* wnd, const wxRect& rect, wxRibbonGalleryItem* item);
+    void DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, const wxRect& rect, wxBitmap& bitmap);
+    void DrawPageBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect);
+    void DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, const wxRect& rect);
+    void DrawScrollButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, long style);
+    void DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect);
+    void DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wxRect& rect, double visibility);
+    void DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& rect, const wxBitmap& bitmap, wxRibbonButtonKind kind, long state);
+    void DrawToolBarBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect);
+    void DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect);
+    void GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxString& label, const wxBitmap& bitmap, int* ideal, int* small_begin_need_separator, int* small_must_have_separator, int* minimum);
+    wxColour GetColour(int id) const;
+    void GetColourScheme(wxColour* primary, wxColour* secondary, wxColour* tertiary) const;
+    long GetFlags() const;
+    wxFont GetFont(int id) const;
+    wxSize GetGalleryClientSize(wxDC& dc, const wxRibbonGallery* wnd, wxSize size, wxPoint* client_offset, wxRect* scroll_up_button, wxRect* scroll_down_button, wxRect* extension_button);
+    wxSize GetGallerySize(wxDC& dc, const wxRibbonGallery* wnd, wxSize client_size);
+    int GetMetric(int id) const;
+    wxSize GetMinimisedPanelMinimumSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize* desired_bitmap_size, wxDirection* expanded_panel_direction);
+    wxRect GetPageBackgroundRedrawArea(wxDC& dc, const wxRibbonPage* wnd, wxSize page_old_size, wxSize page_new_size);
+    wxSize GetPanelClientSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize size, wxPoint* client_offset);
+    wxSize GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize client_size, wxPoint* client_offset);
+    wxSize GetScrollButtonMinimumSize(wxDC& dc, wxWindow* wnd, long style);
+    wxSize GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitmap_size, wxRibbonButtonKind kind, bool is_first, bool is_last, wxRect* dropdown_region);
+    void SetColourScheme(const wxColour& primary, const wxColour& secondary, const wxColour& tertiary);
+    void SetFlags(long flags);
+    void SetFont(int id, const wxFont& font);
+    void SetMetric(int id, int new_val);
+    void DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, wxRibbonButtonKind kind, long state, const wxString& label, const wxBitmap& bitmap_large, const wxBitmap& bitmap_small);
+    bool GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wxRibbonButtonKind kind, wxRibbonButtonBarButtonState size, const wxString& label, wxSize bitmap_size_large, wxSize bitmap_size_small, wxSize* button_size, wxRect* normal_region, wxRect* dropdown_region);
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -74,38 +73,40 @@ typedef struct _zo_wxRibbonArtProvider{
     zend_object zo;
 } zo_wxRibbonArtProvider;
 
-void php_wxRibbonArtProvider_free(void *object TSRMLS_DC);
-zend_object* php_wxRibbonArtProvider_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxRibbonArtProvider_free(void *object);
+zend_object* php_wxRibbonArtProvider_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonArtProvider_functions[] = {
-	PHP_ME(php_wxRibbonArtProvider, GetColor, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonArtProvider, SetColor, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxRibbonArtProvider, GetColor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonArtProvider, SetColor, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxRibbonArtProvider * php_wxRibbonArtProvider_fetch_object(zend_object *obj) {
-      return (zo_wxRibbonArtProvider *)((char *)obj - XtOffsetOf(zo_wxRibbonArtProvider, zo));
+    return (zo_wxRibbonArtProvider *)(
+        (char *)(obj) - XtOffsetOf(zo_wxRibbonArtProvider, zo)
+    );
 }
 
-#define Z_wxRibbonArtProvider_P(zv) php_wxRibbonArtProvider_fetch_object(Z_OBJ_P(zv))
+#define Z_wxRibbonArtProvider_P(zv) \
+    php_wxRibbonArtProvider_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonBar_entry;
-void php_wxRibbonBar_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxRibbonBar_destruction_handler(zend_resource*);
 
 class wxRibbonBar_php: public wxRibbonBar{
-	public:
-	
-	wxRibbonBar_php():wxRibbonBar(){}
-	wxRibbonBar_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxRIBBON_BAR_DEFAULT_STYLE):wxRibbonBar(parent, id, pos, size, style){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxRibbonBar_php():wxRibbonBar(){}
+    wxRibbonBar_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxRIBBON_BAR_DEFAULT_STYLE):wxRibbonBar(parent, id, pos, size, style){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -116,48 +117,50 @@ typedef struct _zo_wxRibbonBar{
     zend_object zo;
 } zo_wxRibbonBar;
 
-void php_wxRibbonBar_free(void *object TSRMLS_DC);
-zend_object* php_wxRibbonBar_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxRibbonBar_free(void *object);
+zend_object* php_wxRibbonBar_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonBar_functions[] = {
-	PHP_ME(php_wxRibbonBar, ArePanelsShown, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonBar, Create, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonBar, DismissExpandedPanel, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonBar, GetActivePage, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonBar, GetPage, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonBar, HidePanels, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonBar, Realize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonBar, SetActivePage, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonBar, SetArtProvider, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonBar, SetTabCtrlMargins, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonBar, ShowPanels, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonBar, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxRibbonBar, ArePanelsShown, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonBar, Create, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonBar, DismissExpandedPanel, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonBar, GetActivePage, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonBar, GetPage, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonBar, HidePanels, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonBar, Realize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonBar, SetActivePage, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonBar, SetArtProvider, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonBar, SetTabCtrlMargins, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonBar, ShowPanels, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonBar, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxRibbonBar * php_wxRibbonBar_fetch_object(zend_object *obj) {
-      return (zo_wxRibbonBar *)((char *)obj - XtOffsetOf(zo_wxRibbonBar, zo));
+    return (zo_wxRibbonBar *)(
+        (char *)(obj) - XtOffsetOf(zo_wxRibbonBar, zo)
+    );
 }
 
-#define Z_wxRibbonBar_P(zv) php_wxRibbonBar_fetch_object(Z_OBJ_P(zv))
+#define Z_wxRibbonBar_P(zv) \
+    php_wxRibbonBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonButtonBar_entry;
-void php_wxRibbonButtonBar_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxRibbonButtonBar_destruction_handler(zend_resource*);
 
 class wxRibbonButtonBar_php: public wxRibbonButtonBar{
-	public:
-	
-	wxRibbonButtonBar_php():wxRibbonButtonBar(){}
-	wxRibbonButtonBar_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0):wxRibbonButtonBar(parent, id, pos, size, style){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxRibbonButtonBar_php():wxRibbonButtonBar(){}
+    wxRibbonButtonBar_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0):wxRibbonButtonBar(parent, id, pos, size, style){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -168,49 +171,51 @@ typedef struct _zo_wxRibbonButtonBar{
     zend_object zo;
 } zo_wxRibbonButtonBar;
 
-void php_wxRibbonButtonBar_free(void *object TSRMLS_DC);
-zend_object* php_wxRibbonButtonBar_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxRibbonButtonBar_free(void *object);
+zend_object* php_wxRibbonButtonBar_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonButtonBar_functions[] = {
-	PHP_ME(php_wxRibbonButtonBar, AddDropdownButton, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonButtonBar, AddHybridButton, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonButtonBar, AddToggleButton, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonButtonBar, ClearButtons, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonButtonBar, Create, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonButtonBar, DeleteButton, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonButtonBar, EnableButton, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonButtonBar, Realize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonButtonBar, ToggleButton, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonButtonBar, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxRibbonButtonBar, AddButton, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxRibbonButtonBar, AddDropdownButton, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonButtonBar, AddHybridButton, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonButtonBar, AddToggleButton, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonButtonBar, ClearButtons, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonButtonBar, Create, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonButtonBar, DeleteButton, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonButtonBar, EnableButton, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonButtonBar, Realize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonButtonBar, ToggleButton, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonButtonBar, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxRibbonButtonBar, AddButton, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxRibbonButtonBar * php_wxRibbonButtonBar_fetch_object(zend_object *obj) {
-      return (zo_wxRibbonButtonBar *)((char *)obj - XtOffsetOf(zo_wxRibbonButtonBar, zo));
+    return (zo_wxRibbonButtonBar *)(
+        (char *)(obj) - XtOffsetOf(zo_wxRibbonButtonBar, zo)
+    );
 }
 
-#define Z_wxRibbonButtonBar_P(zv) php_wxRibbonButtonBar_fetch_object(Z_OBJ_P(zv))
+#define Z_wxRibbonButtonBar_P(zv) \
+    php_wxRibbonButtonBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonControl_entry;
-void php_wxRibbonControl_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxRibbonControl_destruction_handler(zend_resource*);
 
 class wxRibbonControl_php: public wxRibbonControl{
-	public:
-	
-	wxRibbonControl_php():wxRibbonControl(){}
-	wxRibbonControl_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxControlNameStr):wxRibbonControl(parent, id, pos, size, style, validator, name){}
-		
-	wxSize DoGetNextLargerSize(wxOrientation direction, wxSize relative_to) const;
-	wxSize DoGetNextSmallerSize(wxOrientation direction, wxSize relative_to) const;
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxRibbonControl_php():wxRibbonControl(){}
+    wxRibbonControl_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxControlNameStr):wxRibbonControl(parent, id, pos, size, style, validator, name){}
+    
+    wxSize DoGetNextLargerSize(wxOrientation direction, wxSize relative_to) const;
+    wxSize DoGetNextSmallerSize(wxOrientation direction, wxSize relative_to) const;
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -221,44 +226,46 @@ typedef struct _zo_wxRibbonControl{
     zend_object zo;
 } zo_wxRibbonControl;
 
-void php_wxRibbonControl_free(void *object TSRMLS_DC);
-zend_object* php_wxRibbonControl_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxRibbonControl_free(void *object);
+zend_object* php_wxRibbonControl_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonControl_functions[] = {
-	PHP_ME(php_wxRibbonControl, GetArtProvider, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonControl, GetNextLargerSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonControl, GetNextSmallerSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonControl, IsSizingContinuous, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonControl, Realise, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonControl, Realize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonControl, SetArtProvider, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonControl, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxRibbonControl, GetArtProvider, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonControl, GetNextLargerSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonControl, GetNextSmallerSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonControl, IsSizingContinuous, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonControl, Realise, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonControl, Realize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonControl, SetArtProvider, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonControl, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxRibbonControl * php_wxRibbonControl_fetch_object(zend_object *obj) {
-      return (zo_wxRibbonControl *)((char *)obj - XtOffsetOf(zo_wxRibbonControl, zo));
+    return (zo_wxRibbonControl *)(
+        (char *)(obj) - XtOffsetOf(zo_wxRibbonControl, zo)
+    );
 }
 
-#define Z_wxRibbonControl_P(zv) php_wxRibbonControl_fetch_object(Z_OBJ_P(zv))
+#define Z_wxRibbonControl_P(zv) \
+    php_wxRibbonControl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonGallery_entry;
-void php_wxRibbonGallery_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxRibbonGallery_destruction_handler(zend_resource*);
 
 class wxRibbonGallery_php: public wxRibbonGallery{
-	public:
-	
-	wxRibbonGallery_php():wxRibbonGallery(){}
-	wxRibbonGallery_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0):wxRibbonGallery(parent, id, pos, size, style){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxRibbonGallery_php():wxRibbonGallery(){}
+    wxRibbonGallery_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0):wxRibbonGallery(parent, id, pos, size, style){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -269,58 +276,60 @@ typedef struct _zo_wxRibbonGallery{
     zend_object zo;
 } zo_wxRibbonGallery;
 
-void php_wxRibbonGallery_free(void *object TSRMLS_DC);
-zend_object* php_wxRibbonGallery_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxRibbonGallery_free(void *object);
+zend_object* php_wxRibbonGallery_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonGallery_functions[] = {
-	PHP_ME(php_wxRibbonGallery, Append, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, Clear, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, Create, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, EnsureVisible, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, GetActiveItem, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, GetCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, GetDownButtonState, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, GetExtensionButtonState, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, GetHoveredItem, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, GetItem, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, GetItemClientData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, GetItemClientObject, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, GetSelection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, GetUpButtonState, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, IsEmpty, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, IsHovered, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, ScrollLines, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, ScrollPixels, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, SetItemClientData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, SetItemClientObject, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, SetSelection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonGallery, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxRibbonGallery, Append, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, Clear, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, Create, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, EnsureVisible, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, GetActiveItem, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, GetCount, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, GetDownButtonState, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, GetExtensionButtonState, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, GetHoveredItem, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, GetItem, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, GetItemClientData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, GetItemClientObject, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, GetSelection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, GetUpButtonState, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, IsEmpty, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, IsHovered, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, ScrollLines, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, ScrollPixels, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, SetItemClientData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, SetItemClientObject, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, SetSelection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonGallery, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxRibbonGallery * php_wxRibbonGallery_fetch_object(zend_object *obj) {
-      return (zo_wxRibbonGallery *)((char *)obj - XtOffsetOf(zo_wxRibbonGallery, zo));
+    return (zo_wxRibbonGallery *)(
+        (char *)(obj) - XtOffsetOf(zo_wxRibbonGallery, zo)
+    );
 }
 
-#define Z_wxRibbonGallery_P(zv) php_wxRibbonGallery_fetch_object(Z_OBJ_P(zv))
+#define Z_wxRibbonGallery_P(zv) \
+    php_wxRibbonGallery_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonPage_entry;
-void php_wxRibbonPage_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxRibbonPage_destruction_handler(zend_resource*);
 
 class wxRibbonPage_php: public wxRibbonPage{
-	public:
-	
-	wxRibbonPage_php():wxRibbonPage(){}
-	wxRibbonPage_php(wxRibbonBar* parent, wxWindowID id=wxID_ANY, const wxString& label=wxEmptyString, const wxBitmap& icon=wxNullBitmap, long style=0):wxRibbonPage(parent, id, label, icon, style){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxRibbonPage_php():wxRibbonPage(){}
+    wxRibbonPage_php(wxRibbonBar* parent, wxWindowID id=wxID_ANY, const wxString& label=wxEmptyString, const wxBitmap& icon=wxNullBitmap, long style=0):wxRibbonPage(parent, id, label, icon, style){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -331,47 +340,49 @@ typedef struct _zo_wxRibbonPage{
     zend_object zo;
 } zo_wxRibbonPage;
 
-void php_wxRibbonPage_free(void *object TSRMLS_DC);
-zend_object* php_wxRibbonPage_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxRibbonPage_free(void *object);
+zend_object* php_wxRibbonPage_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonPage_functions[] = {
-	PHP_ME(php_wxRibbonPage, AdjustRectToIncludeScrollButtons, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPage, Create, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPage, DismissExpandedPanel, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPage, GetIcon, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPage, GetMajorAxis, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPage, Realize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPage, ScrollLines, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPage, ScrollPixels, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPage, SetArtProvider, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPage, SetSizeWithScrollButtonAdjustment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPage, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxRibbonPage, AdjustRectToIncludeScrollButtons, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPage, Create, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPage, DismissExpandedPanel, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPage, GetIcon, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPage, GetMajorAxis, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPage, Realize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPage, ScrollLines, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPage, ScrollPixels, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPage, SetArtProvider, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPage, SetSizeWithScrollButtonAdjustment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPage, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxRibbonPage * php_wxRibbonPage_fetch_object(zend_object *obj) {
-      return (zo_wxRibbonPage *)((char *)obj - XtOffsetOf(zo_wxRibbonPage, zo));
+    return (zo_wxRibbonPage *)(
+        (char *)(obj) - XtOffsetOf(zo_wxRibbonPage, zo)
+    );
 }
 
-#define Z_wxRibbonPage_P(zv) php_wxRibbonPage_fetch_object(Z_OBJ_P(zv))
+#define Z_wxRibbonPage_P(zv) \
+    php_wxRibbonPage_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonPanel_entry;
-void php_wxRibbonPanel_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxRibbonPanel_destruction_handler(zend_resource*);
 
 class wxRibbonPanel_php: public wxRibbonPanel{
-	public:
-	
-	wxRibbonPanel_php():wxRibbonPanel(){}
-	wxRibbonPanel_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxString& label=wxEmptyString, const wxBitmap& minimised_icon=wxNullBitmap, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxRIBBON_PANEL_DEFAULT_STYLE):wxRibbonPanel(parent, id, label, minimised_icon, pos, size, style){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxRibbonPanel_php():wxRibbonPanel(){}
+    wxRibbonPanel_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxString& label=wxEmptyString, const wxBitmap& minimised_icon=wxNullBitmap, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxRIBBON_PANEL_DEFAULT_STYLE):wxRibbonPanel(parent, id, label, minimised_icon, pos, size, style){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -382,48 +393,50 @@ typedef struct _zo_wxRibbonPanel{
     zend_object zo;
 } zo_wxRibbonPanel;
 
-void php_wxRibbonPanel_free(void *object TSRMLS_DC);
-zend_object* php_wxRibbonPanel_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxRibbonPanel_free(void *object);
+zend_object* php_wxRibbonPanel_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonPanel_functions[] = {
-	PHP_ME(php_wxRibbonPanel, CanAutoMinimise, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPanel, Create, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPanel, GetExpandedDummy, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPanel, GetExpandedPanel, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPanel, GetMinimisedIcon, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPanel, HideExpanded, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPanel, IsHovered, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPanel, IsMinimised, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPanel, Realize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPanel, SetArtProvider, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPanel, ShowExpanded, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonPanel, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxRibbonPanel, CanAutoMinimise, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPanel, Create, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPanel, GetExpandedDummy, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPanel, GetExpandedPanel, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPanel, GetMinimisedIcon, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPanel, HideExpanded, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPanel, IsHovered, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPanel, IsMinimised, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPanel, Realize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPanel, SetArtProvider, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPanel, ShowExpanded, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonPanel, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxRibbonPanel * php_wxRibbonPanel_fetch_object(zend_object *obj) {
-      return (zo_wxRibbonPanel *)((char *)obj - XtOffsetOf(zo_wxRibbonPanel, zo));
+    return (zo_wxRibbonPanel *)(
+        (char *)(obj) - XtOffsetOf(zo_wxRibbonPanel, zo)
+    );
 }
 
-#define Z_wxRibbonPanel_P(zv) php_wxRibbonPanel_fetch_object(Z_OBJ_P(zv))
+#define Z_wxRibbonPanel_P(zv) \
+    php_wxRibbonPanel_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonToolBar_entry;
-void php_wxRibbonToolBar_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxRibbonToolBar_destruction_handler(zend_resource*);
 
 class wxRibbonToolBar_php: public wxRibbonToolBar{
-	public:
-	
-	wxRibbonToolBar_php():wxRibbonToolBar(){}
-	wxRibbonToolBar_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0):wxRibbonToolBar(parent, id, pos, size, style){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxRibbonToolBar_php():wxRibbonToolBar(){}
+    wxRibbonToolBar_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0):wxRibbonToolBar(parent, id, pos, size, style){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -434,27 +447,30 @@ typedef struct _zo_wxRibbonToolBar{
     zend_object zo;
 } zo_wxRibbonToolBar;
 
-void php_wxRibbonToolBar_free(void *object TSRMLS_DC);
-zend_object* php_wxRibbonToolBar_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxRibbonToolBar_free(void *object);
+zend_object* php_wxRibbonToolBar_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonToolBar_functions[] = {
-	PHP_ME(php_wxRibbonToolBar, AddDropdownTool, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonToolBar, AddHybridTool, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonToolBar, AddSeparator, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonToolBar, AddTool, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonToolBar, Create, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonToolBar, SetRows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRibbonToolBar, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxRibbonToolBar, AddDropdownTool, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonToolBar, AddHybridTool, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonToolBar, AddSeparator, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonToolBar, AddTool, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonToolBar, Create, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonToolBar, SetRows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRibbonToolBar, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxRibbonToolBar * php_wxRibbonToolBar_fetch_object(zend_object *obj) {
-      return (zo_wxRibbonToolBar *)((char *)obj - XtOffsetOf(zo_wxRibbonToolBar, zo));
+    return (zo_wxRibbonToolBar *)(
+        (char *)(obj) - XtOffsetOf(zo_wxRibbonToolBar, zo)
+    );
 }
 
-#define Z_wxRibbonToolBar_P(zv) php_wxRibbonToolBar_fetch_object(Z_OBJ_P(zv))
+#define Z_wxRibbonToolBar_P(zv) \
+    php_wxRibbonToolBar_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_RIBBON_H_GUARD

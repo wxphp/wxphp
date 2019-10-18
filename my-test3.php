@@ -7,12 +7,12 @@ class MyApp extends wxApp
     public function __construct(SomeUnrelatedClass $someUnrelatedClass)
     {
         echo "MyApp::__construct()\n";
+        parent::__construct();
 
         /* A */ $this->someUnrelatedAttribute = $someUnrelatedClass->someUnrelatedValue();
         /* B */ #$this->someUnrelatedAttribute = 'foofoo'; 
         /* C */ #echo $someUnrelatedClass->someUnrelatedValue() . "\n"; 
 
-        parent::__construct();
     }
 
     public function start()

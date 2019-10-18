@@ -53,69 +53,82 @@
 
 
 BEGIN_EXTERN_C()
-void php_wxDataOutputStream_free(void *object TSRMLS_DC) 
+void php_wxDataOutputStream_free(void *object)
 {
     zo_wxDataOutputStream* custom_object = (zo_wxDataOutputStream*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxDataOutputStream_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxDataOutputStream done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxDataOutputStream_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxDataOutputStream done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxDataOutputStream_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxDataOutputStream_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxDataOutputStream_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataOutputStream* custom_object;
-	custom_object = (zo_wxDataOutputStream*) ecalloc(1, sizeof(zo_wxDataOutputStream) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxDataOutputStream_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxDataOutputStream* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxDataOutputStream*) ecalloc(
+        1,
+        sizeof(zo_wxDataOutputStream)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXDATAOUTPUTSTREAM_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXDATAOUTPUTSTREAM_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -124,105 +137,114 @@ END_EXTERN_C()
    If be_order is true, all data will be written in big-endian order, e.g. */
 PHP_METHOD(php_wxDataOutputStream, BigEndianOrdered)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataOutputStream::BigEndianOrdered\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataOutputStream::BigEndianOrdered call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataOutputStream::BigEndianOrdered\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
-				references = &((wxDataOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool be_order0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'b' (&be_order0)\n");
-		#endif
+    zo_wxDataOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &be_order0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataOutputStream::BigEndianOrdered(be_order0)\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataOutputStream_P(getThis());
 
-				if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
-				{
-					((wxDataOutputStream_php*)native_object)->BigEndianOrdered(be_order0);
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataOutputStream::BigEndianOrdered call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
+                references = &((wxDataOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool be_order0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'b' (&be_order0)\n");
+        #endif
+
+        char parse_parameters_string[] = "b";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &be_order0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataOutputStream::BigEndianOrdered(be_order0)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
+                {
+                    ((wxDataOutputStream_php*)native_object)->BigEndianOrdered(be_order0);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::BigEndianOrdered\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataOutputStream::BigEndianOrdered\n"
+        );
+    }
 }
 /* }}} */
 
@@ -230,148 +252,158 @@ PHP_METHOD(php_wxDataOutputStream, BigEndianOrdered)
    Writes the 16 bit unsigned integer i16 to the stream. */
 PHP_METHOD(php_wxDataOutputStream, Write16)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataOutputStream::Write16\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataOutputStream::Write16 call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataOutputStream::Write16\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
-				references = &((wxDataOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long i160;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	long buffer1;
-	long size1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&i160)\n");
-		#endif
+    zo_wxDataOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &i160 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (&buffer1, &size1)\n");
-		#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataOutputStream_P(getThis());
 
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffer1, &size1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataOutputStream::Write16 call\n"
+            );
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataOutputStream::Write16((wxUint16) i160)\n\n");
-				#endif
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
-				{
-					((wxDataOutputStream_php*)native_object)->Write16((wxUint16) i160);
-				}
+            bool reference_type_found = false;
 
+            if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
+                references = &((wxDataOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				return;
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    long i160;
+    bool overload0_called = false;
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataOutputStream::Write16((const wxUint16*) buffer1, (size_t) size1)\n\n");
-				#endif
+    //Parameters for overload 1
+    long buffer1;
+    long size1;
+    bool overload1_called = false;
 
-				if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
-				{
-					((wxDataOutputStream_php*)native_object)->Write16((const wxUint16*) buffer1, (size_t) size1);
-				}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&i160)\n");
+        #endif
+
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &i160 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'll' (&buffer1, &size1)\n");
+        #endif
+
+        char parse_parameters_string[] = "ll";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &buffer1, &size1 ) == SUCCESS)
+        {
+            overload1_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataOutputStream::Write16((wxUint16) i160)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
+                {
+                    ((wxDataOutputStream_php*)native_object)->Write16((wxUint16) i160);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::Write16\n");
-	}
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataOutputStream::Write16((const wxUint16*) buffer1, (size_t) size1)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
+                {
+                    ((wxDataOutputStream_php*)native_object)->Write16((const wxUint16*) buffer1, (size_t) size1);
+                }
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataOutputStream::Write16\n"
+        );
+    }
 }
 /* }}} */
 
@@ -379,148 +411,158 @@ PHP_METHOD(php_wxDataOutputStream, Write16)
    Writes the 32 bit unsigned integer i32 to the stream. */
 PHP_METHOD(php_wxDataOutputStream, Write32)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataOutputStream::Write32\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataOutputStream::Write32 call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataOutputStream::Write32\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
-				references = &((wxDataOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long i320;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	long buffer1;
-	long size1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&i320)\n");
-		#endif
+    zo_wxDataOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &i320 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (&buffer1, &size1)\n");
-		#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataOutputStream_P(getThis());
 
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffer1, &size1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataOutputStream::Write32 call\n"
+            );
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataOutputStream::Write32((wxUint32) i320)\n\n");
-				#endif
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
-				{
-					((wxDataOutputStream_php*)native_object)->Write32((wxUint32) i320);
-				}
+            bool reference_type_found = false;
 
+            if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
+                references = &((wxDataOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				return;
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    long i320;
+    bool overload0_called = false;
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataOutputStream::Write32((const wxUint32*) buffer1, (size_t) size1)\n\n");
-				#endif
+    //Parameters for overload 1
+    long buffer1;
+    long size1;
+    bool overload1_called = false;
 
-				if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
-				{
-					((wxDataOutputStream_php*)native_object)->Write32((const wxUint32*) buffer1, (size_t) size1);
-				}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&i320)\n");
+        #endif
+
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &i320 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'll' (&buffer1, &size1)\n");
+        #endif
+
+        char parse_parameters_string[] = "ll";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &buffer1, &size1 ) == SUCCESS)
+        {
+            overload1_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataOutputStream::Write32((wxUint32) i320)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
+                {
+                    ((wxDataOutputStream_php*)native_object)->Write32((wxUint32) i320);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::Write32\n");
-	}
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataOutputStream::Write32((const wxUint32*) buffer1, (size_t) size1)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
+                {
+                    ((wxDataOutputStream_php*)native_object)->Write32((const wxUint32*) buffer1, (size_t) size1);
+                }
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataOutputStream::Write32\n"
+        );
+    }
 }
 /* }}} */
 
@@ -528,148 +570,158 @@ PHP_METHOD(php_wxDataOutputStream, Write32)
    Writes the single byte i8 to the stream. */
 PHP_METHOD(php_wxDataOutputStream, Write8)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataOutputStream::Write8\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataOutputStream::Write8 call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataOutputStream::Write8\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
-				references = &((wxDataOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long i80;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	long buffer1;
-	long size1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&i80)\n");
-		#endif
+    zo_wxDataOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &i80 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (&buffer1, &size1)\n");
-		#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataOutputStream_P(getThis());
 
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffer1, &size1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataOutputStream::Write8 call\n"
+            );
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataOutputStream::Write8((wxUint8) i80)\n\n");
-				#endif
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
-				{
-					((wxDataOutputStream_php*)native_object)->Write8((wxUint8) i80);
-				}
+            bool reference_type_found = false;
 
+            if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
+                references = &((wxDataOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				return;
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    long i80;
+    bool overload0_called = false;
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataOutputStream::Write8((const wxUint8*) buffer1, (size_t) size1)\n\n");
-				#endif
+    //Parameters for overload 1
+    long buffer1;
+    long size1;
+    bool overload1_called = false;
 
-				if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
-				{
-					((wxDataOutputStream_php*)native_object)->Write8((const wxUint8*) buffer1, (size_t) size1);
-				}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&i80)\n");
+        #endif
+
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &i80 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'll' (&buffer1, &size1)\n");
+        #endif
+
+        char parse_parameters_string[] = "ll";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &buffer1, &size1 ) == SUCCESS)
+        {
+            overload1_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataOutputStream::Write8((wxUint8) i80)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
+                {
+                    ((wxDataOutputStream_php*)native_object)->Write8((wxUint8) i80);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::Write8\n");
-	}
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataOutputStream::Write8((const wxUint8*) buffer1, (size_t) size1)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
+                {
+                    ((wxDataOutputStream_php*)native_object)->Write8((const wxUint8*) buffer1, (size_t) size1);
+                }
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataOutputStream::Write8\n"
+        );
+    }
 }
 /* }}} */
 
@@ -677,174 +729,184 @@ PHP_METHOD(php_wxDataOutputStream, Write8)
    Writes the double d to the stream. */
 PHP_METHOD(php_wxDataOutputStream, WriteDouble)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataOutputStream::WriteDouble\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataOutputStream::WriteDouble call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataOutputStream::WriteDouble\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
-				references = &((wxDataOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	double d0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	zval buffer1;
-	long size1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'd' (&d0)\n");
-		#endif
+    zo_wxDataOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "d";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &d0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'al' (buffer1, &size1)\n");
-		#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataOutputStream_P(getThis());
 
-		char parse_parameters_string[] = "al";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, buffer1, &size1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataOutputStream::WriteDouble call\n"
+            );
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataOutputStream::WriteDouble(d0)\n\n");
-				#endif
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
-				{
-					((wxDataOutputStream_php*)native_object)->WriteDouble(d0);
-				}
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
+                references = &((wxDataOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    double d0;
+    bool overload0_called = false;
+
+    //Parameters for overload 1
+    zval buffer1;
+    long size1;
+    bool overload1_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'd' (&d0)\n");
+        #endif
+
+        char parse_parameters_string[] = "d";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &d0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'al' (buffer1, &size1)\n");
+        #endif
+
+        char parse_parameters_string[] = "al";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, buffer1, &size1 ) == SUCCESS)
+        {
+            overload1_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataOutputStream::WriteDouble(d0)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
+                {
+                    ((wxDataOutputStream_php*)native_object)->WriteDouble(d0);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-	if(overload1_called)
-	{
-		int array_count1_0 = 1;
-		HashTable* arr_hash1_0;
-		if(arguments_received > 0)
-		{
-			arr_hash1_0 = Z_ARRVAL(buffer1);
-			array_count1_0 = zend_hash_num_elements(arr_hash1_0);
-		}
-		double* floats_array1_0 = new double[array_count1_0];
-		bool floats_continue1_0 = true;
+    if(overload1_called)
+    {
+        int array_count1_0 = 1;
+        HashTable* arr_hash1_0;
+        if(arguments_received > 0)
+        {
+            arr_hash1_0 = Z_ARRVAL(buffer1);
+            array_count1_0 = zend_hash_num_elements(arr_hash1_0);
+        }
+        double* floats_array1_0 = new double[array_count1_0];
+        bool floats_continue1_0 = true;
 
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				int array_index1_0 = 0;
-				zval* temp_array_value1_0 = 0;
-				while(floats_continue1_0)
-				{
-					if((temp_array_value1_0 = zend_hash_index_find(HASH_OF(&buffer1), array_index1_0)) != NULL)
-					{
-						convert_to_double_ex(temp_array_value1_0);
-						floats_array1_0[array_index1_0] = (double) Z_DVAL_P(temp_array_value1_0);
-						array_index1_0++;
-					}
-					else
-					{
-						floats_continue1_0 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataOutputStream::WriteDouble((const double*) floats_array1_0, (size_t) size1)\n\n");
-				#endif
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                int array_index1_0 = 0;
+                zval* temp_array_value1_0 = 0;
+                while(floats_continue1_0)
+                {
+                    if((temp_array_value1_0 = zend_hash_index_find(HASH_OF(&buffer1), array_index1_0)) != NULL)
+                    {
+                        convert_to_double_ex(temp_array_value1_0);
+                        floats_array1_0[array_index1_0] = (double) Z_DVAL_P(temp_array_value1_0);
+                        array_index1_0++;
+                    }
+                    else
+                    {
+                        floats_continue1_0 = false;
+                    }
+                }
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataOutputStream::WriteDouble((const double*) floats_array1_0, (size_t) size1)\n\n");
+                #endif
 
-				if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
-				{
-					((wxDataOutputStream_php*)native_object)->WriteDouble((const double*) floats_array1_0, (size_t) size1);
-				}
+                if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
+                {
+                    ((wxDataOutputStream_php*)native_object)->WriteDouble((const double*) floats_array1_0, (size_t) size1);
+                }
 
-				delete[] floats_array1_0;
+                delete[] floats_array1_0;
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::WriteDouble\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataOutputStream::WriteDouble\n"
+        );
+    }
 }
 /* }}} */
 
@@ -852,173 +914,195 @@ PHP_METHOD(php_wxDataOutputStream, WriteDouble)
    Writes string to the stream. */
 PHP_METHOD(php_wxDataOutputStream, WriteString)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataOutputStream::WriteString\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataOutputStream::WriteString call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataOutputStream::WriteString\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
-				references = &((wxDataOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	char* string0;
-	long string_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&string0, &string_len0)\n");
-		#endif
+    zo_wxDataOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string0, &string_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataOutputStream::WriteString(wxString(string0, wxConvUTF8))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataOutputStream_P(getThis());
 
-				if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
-				{
-					((wxDataOutputStream_php*)native_object)->WriteString(wxString(string0, wxConvUTF8));
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataOutputStream::WriteString call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE){
+                references = &((wxDataOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    char* string0;
+    long string_len0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's' (&string0, &string_len0)\n");
+        #endif
+
+        char parse_parameters_string[] = "s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &string0, &string_len0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataOutputStream::WriteString(wxString(string0, wxConvUTF8))\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
+                {
+                    ((wxDataOutputStream_php*)native_object)->WriteString(wxString(string0, wxConvUTF8));
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::WriteString\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataOutputStream::WriteString\n"
+        );
+    }
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxDataInputStream_free(void *object TSRMLS_DC) 
+void php_wxDataInputStream_free(void *object)
 {
     zo_wxDataInputStream* custom_object = (zo_wxDataInputStream*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxDataInputStream_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxDataInputStream done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxDataInputStream_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxDataInputStream done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxDataInputStream_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxDataInputStream_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxDataInputStream_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataInputStream* custom_object;
-	custom_object = (zo_wxDataInputStream*) ecalloc(1, sizeof(zo_wxDataInputStream) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxDataInputStream_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxDataInputStream* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxDataInputStream*) ecalloc(
+        1,
+        sizeof(zo_wxDataInputStream)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXDATAINPUTSTREAM_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXDATAINPUTSTREAM_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -1027,102 +1111,111 @@ END_EXTERN_C()
    Reads a string from a stream. */
 PHP_METHOD(php_wxDataInputStream, ReadString)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataInputStream::ReadString\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataInputStream::ReadString call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataInputStream::ReadString\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
-				references = &((wxDataInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxDataInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(wxDataInputStream::ReadString().fn_str(), 1)\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataInputStream_P(getThis());
 
-				wxString value_to_return0;
-				if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
-				{
-					value_to_return0 = ((wxDataInputStream_php*)native_object)->ReadString();
-				}
-				ZVAL_STRING(return_value, value_to_return0.char_str());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataInputStream::ReadString call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
+                references = &((wxDataInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_STRING(wxDataInputStream::ReadString().fn_str(), 1)\n\n");
+                #endif
+
+                wxString value_to_return0;
+                if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
+                {
+                    value_to_return0 = ((wxDataInputStream_php*)native_object)->ReadString();
+                }
+                ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::ReadString\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataInputStream::ReadString\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1130,153 +1223,163 @@ PHP_METHOD(php_wxDataInputStream, ReadString)
    Reads double data from the stream in a specified buffer. */
 PHP_METHOD(php_wxDataInputStream, ReadDouble)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataInputStream::ReadDouble\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataInputStream::ReadDouble call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataInputStream::ReadDouble\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
-				references = &((wxDataInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	double* buffer0;
-	zval buffer0_ref;
-	long size0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'dl' (buffer0, &size0)\n");
-		#endif
+    zo_wxDataInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "dl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, buffer0, &size0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, buffer0_ref, dummy );
-		}
-	}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataInputStream_P(getThis());
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataInputStream::ReadDouble call\n"
+            );
 
-		overload1_called = true;
-		already_called = true;
-	}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataInputStream::ReadDouble(buffer0, (size_t) size0)\n\n");
-				#endif
+            bool reference_type_found = false;
 
-				if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
-				{
-					((wxDataInputStream_php*)native_object)->ReadDouble(buffer0, (size_t) size0);
-				}
+            if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
+                references = &((wxDataInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				size_t elements_returned0_0 = sizeof(buffer0)/sizeof(*buffer0);
-				array_init(&buffer0_ref);
-				for(size_t i=0; i<elements_returned0_0; i++)
-				{
-					add_next_index_long(&buffer0_ref, buffer0[i]);
-				}
+    //Parameters for overload 0
+    double* buffer0;
+    zval buffer0_ref;
+    long size0;
+    bool overload0_called = false;
 
-				return;
-				break;
-			}
-		}
-	}
+    //Parameters for overload 1
+    bool overload1_called = false;
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxDataInputStream::ReadDouble())\n\n");
-				#endif
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'dl' (buffer0, &size0)\n");
+        #endif
 
-				if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
-				{
-					ZVAL_DOUBLE(return_value, ((wxDataInputStream_php*)native_object)->ReadDouble());
-				}
+        char parse_parameters_string[] = "dl";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, buffer0, &size0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+
+            char parse_references_string[] = "zz";
+            zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_references_string, buffer0_ref, dummy );
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload1_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataInputStream::ReadDouble(buffer0, (size_t) size0)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
+                {
+                    ((wxDataInputStream_php*)native_object)->ReadDouble(buffer0, (size_t) size0);
+                }
+
+                size_t elements_returned0_0 = sizeof(buffer0)/sizeof(*buffer0);
+                array_init(&buffer0_ref);
+                for(size_t i=0; i<elements_returned0_0; i++)
+                {
+                    add_next_index_long(&buffer0_ref, buffer0[i]);
+                }
+
+                return;
+                break;
+            }
+        }
+    }
+
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxDataInputStream::ReadDouble())\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
+                {
+                    ZVAL_DOUBLE(return_value, ((wxDataInputStream_php*)native_object)->ReadDouble());
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::ReadDouble\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataInputStream::ReadDouble\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1284,143 +1387,153 @@ PHP_METHOD(php_wxDataInputStream, ReadDouble)
    Reads bytes from the stream in a specified buffer. */
 PHP_METHOD(php_wxDataInputStream, Read8)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataInputStream::Read8\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataInputStream::Read8 call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataInputStream::Read8\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
-				references = &((wxDataInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long buffer0;
-	long size0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (&buffer0, &size0)\n");
-		#endif
+    zo_wxDataInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffer0, &size0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataInputStream_P(getThis());
 
-		overload1_called = true;
-		already_called = true;
-	}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataInputStream::Read8 call\n"
+            );
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataInputStream::Read8((wxUint8*) buffer0, (size_t) size0)\n\n");
-				#endif
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
-				{
-					((wxDataInputStream_php*)native_object)->Read8((wxUint8*) buffer0, (size_t) size0);
-				}
+            bool reference_type_found = false;
 
+            if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
+                references = &((wxDataInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				return;
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    long buffer0;
+    long size0;
+    bool overload0_called = false;
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxDataInputStream::Read8())\n\n");
-				#endif
+    //Parameters for overload 1
+    bool overload1_called = false;
 
-				if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxDataInputStream_php*)native_object)->Read8());
-				}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'll' (&buffer0, &size0)\n");
+        #endif
+
+        char parse_parameters_string[] = "ll";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &buffer0, &size0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload1_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataInputStream::Read8((wxUint8*) buffer0, (size_t) size0)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
+                {
+                    ((wxDataInputStream_php*)native_object)->Read8((wxUint8*) buffer0, (size_t) size0);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::Read8\n");
-	}
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxDataInputStream::Read8())\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxDataInputStream_php*)native_object)->Read8());
+                }
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataInputStream::Read8\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1428,143 +1541,153 @@ PHP_METHOD(php_wxDataInputStream, Read8)
    Reads 32 bit unsigned integers from the stream in a specified buffer. */
 PHP_METHOD(php_wxDataInputStream, Read32)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataInputStream::Read32\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataInputStream::Read32 call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataInputStream::Read32\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
-				references = &((wxDataInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long buffer0;
-	long size0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (&buffer0, &size0)\n");
-		#endif
+    zo_wxDataInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffer0, &size0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataInputStream_P(getThis());
 
-		overload1_called = true;
-		already_called = true;
-	}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataInputStream::Read32 call\n"
+            );
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataInputStream::Read32((wxUint32*) buffer0, (size_t) size0)\n\n");
-				#endif
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
-				{
-					((wxDataInputStream_php*)native_object)->Read32((wxUint32*) buffer0, (size_t) size0);
-				}
+            bool reference_type_found = false;
 
+            if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
+                references = &((wxDataInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				return;
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    long buffer0;
+    long size0;
+    bool overload0_called = false;
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxDataInputStream::Read32())\n\n");
-				#endif
+    //Parameters for overload 1
+    bool overload1_called = false;
 
-				if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxDataInputStream_php*)native_object)->Read32());
-				}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'll' (&buffer0, &size0)\n");
+        #endif
+
+        char parse_parameters_string[] = "ll";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &buffer0, &size0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload1_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataInputStream::Read32((wxUint32*) buffer0, (size_t) size0)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
+                {
+                    ((wxDataInputStream_php*)native_object)->Read32((wxUint32*) buffer0, (size_t) size0);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::Read32\n");
-	}
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxDataInputStream::Read32())\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxDataInputStream_php*)native_object)->Read32());
+                }
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataInputStream::Read32\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1572,143 +1695,153 @@ PHP_METHOD(php_wxDataInputStream, Read32)
    Reads 16 bit unsigned integers from the stream in a specified buffer. */
 PHP_METHOD(php_wxDataInputStream, Read16)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataInputStream::Read16\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataInputStream::Read16 call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataInputStream::Read16\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
-				references = &((wxDataInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long buffer0;
-	long size0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (&buffer0, &size0)\n");
-		#endif
+    zo_wxDataInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffer0, &size0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataInputStream_P(getThis());
 
-		overload1_called = true;
-		already_called = true;
-	}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataInputStream::Read16 call\n"
+            );
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataInputStream::Read16((wxUint16*) buffer0, (size_t) size0)\n\n");
-				#endif
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
-				{
-					((wxDataInputStream_php*)native_object)->Read16((wxUint16*) buffer0, (size_t) size0);
-				}
+            bool reference_type_found = false;
 
+            if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
+                references = &((wxDataInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				return;
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    long buffer0;
+    long size0;
+    bool overload0_called = false;
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxDataInputStream::Read16())\n\n");
-				#endif
+    //Parameters for overload 1
+    bool overload1_called = false;
 
-				if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxDataInputStream_php*)native_object)->Read16());
-				}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'll' (&buffer0, &size0)\n");
+        #endif
+
+        char parse_parameters_string[] = "ll";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &buffer0, &size0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload1_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataInputStream::Read16((wxUint16*) buffer0, (size_t) size0)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
+                {
+                    ((wxDataInputStream_php*)native_object)->Read16((wxUint16*) buffer0, (size_t) size0);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::Read16\n");
-	}
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxDataInputStream::Read16())\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxDataInputStream_php*)native_object)->Read16());
+                }
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataInputStream::Read16\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1716,172 +1849,194 @@ PHP_METHOD(php_wxDataInputStream, Read16)
    If be_order is true, all data will be read in big-endian order, such as written by programs on a big endian architecture (e.g. */
 PHP_METHOD(php_wxDataInputStream, BigEndianOrdered)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataInputStream::BigEndianOrdered\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxDataInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDataInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataInputStream::BigEndianOrdered call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDataInputStream::BigEndianOrdered\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
-				references = &((wxDataInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool be_order0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'b' (&be_order0)\n");
-		#endif
+    zo_wxDataInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxDataInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &be_order0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataInputStream::BigEndianOrdered(be_order0)\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDataInputStream_P(getThis());
 
-				if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
-				{
-					((wxDataInputStream_php*)native_object)->BigEndianOrdered(be_order0);
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDataInputStream::BigEndianOrdered call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE){
+                references = &((wxDataInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool be_order0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'b' (&be_order0)\n");
+        #endif
+
+        char parse_parameters_string[] = "b";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &be_order0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDataInputStream::BigEndianOrdered(be_order0)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
+                {
+                    ((wxDataInputStream_php*)native_object)->BigEndianOrdered(be_order0);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::BigEndianOrdered\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDataInputStream::BigEndianOrdered\n"
+        );
+    }
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxStreamBase_free(void *object TSRMLS_DC) 
+void php_wxStreamBase_free(void *object)
 {
     zo_wxStreamBase* custom_object = (zo_wxStreamBase*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxStreamBase_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxStreamBase done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxStreamBase_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxStreamBase done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxStreamBase_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxStreamBase_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxStreamBase_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxStreamBase* custom_object;
-	custom_object = (zo_wxStreamBase*) ecalloc(1, sizeof(zo_wxStreamBase) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxStreamBase_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxStreamBase* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxStreamBase*) ecalloc(
+        1,
+        sizeof(zo_wxStreamBase)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXSTREAMBASE_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXSTREAMBASE_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -1890,81 +2045,82 @@ END_EXTERN_C()
    Creates a dummy stream object. */
 PHP_METHOD(php_wxStreamBase, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStreamBase::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxStreamBase* current_object;
-	wxStreamBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxStreamBase::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		overload0_called = true;
-		already_called = true;
-	}
+    zo_wxStreamBase* current_object;
+    wxStreamBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-				native_object = new wxStreamBase_php();
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    bool overload0_called = false;
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
 
-		current_object = Z_wxStreamBase_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxStreamBase::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct()\n");
+                #endif
+
+                native_object = new wxStreamBase_php();
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxStreamBase_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxStreamBase::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
@@ -1972,146 +2128,155 @@ PHP_METHOD(php_wxStreamBase, __construct)
    Resets the stream state. */
 PHP_METHOD(php_wxStreamBase, Reset)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStreamBase::Reset\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxStreamBase* current_object;
-	wxphp_object_type current_object_type;
-	wxStreamBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxStreamBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxStreamBase::Reset call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxStreamBase::Reset\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXSTREAMBASE_TYPE){
-				references = &((wxStreamBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long error0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|l' (&error0)\n");
-		#endif
+    zo_wxStreamBase* current_object;
+    wxphp_object_type current_object_type;
+    wxStreamBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &error0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxStreamBase::Reset()\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxStreamBase_P(getThis());
 
-				((wxStreamBase_php*)native_object)->Reset();
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxStreamBase::Reset call\n"
+            );
 
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxStreamBase::Reset((wxStreamError) error0)\n\n");
-				#endif
+            bool reference_type_found = false;
 
-				((wxStreamBase_php*)native_object)->Reset((wxStreamError) error0);
+            if(current_object_type == PHP_WXSTREAMBASE_TYPE){
+                references = &((wxStreamBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    long error0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 0  && arguments_received <= 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '|l' (&error0)\n");
+        #endif
+
+        char parse_parameters_string[] = "|l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &error0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxStreamBase::Reset()\n\n");
+                #endif
+
+                ((wxStreamBase_php*)native_object)->Reset();
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxStreamBase::Reset((wxStreamError) error0)\n\n");
+                #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::Reset\n");
-	}
+                ((wxStreamBase_php*)native_object)->Reset((wxStreamError) error0);
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxStreamBase::Reset\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2119,129 +2284,138 @@ PHP_METHOD(php_wxStreamBase, Reset)
    Returns true if the stream supports seeking to arbitrary offsets. */
 PHP_METHOD(php_wxStreamBase, IsSeekable)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStreamBase::IsSeekable\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxStreamBase* current_object;
-	wxphp_object_type current_object_type;
-	wxStreamBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxStreamBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxStreamBase::IsSeekable call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxStreamBase::IsSeekable\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXSTREAMBASE_TYPE){
-				references = &((wxStreamBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxStreamBase* current_object;
+    wxphp_object_type current_object_type;
+    wxStreamBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxStreamBase::IsSeekable())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxStreamBase_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxStreamBase_php*)native_object)->IsSeekable());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxStreamBase::IsSeekable call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXSTREAMBASE_TYPE){
+                references = &((wxStreamBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxStreamBase::IsSeekable())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxStreamBase_php*)native_object)->IsSeekable());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::IsSeekable\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxStreamBase::IsSeekable\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2249,129 +2423,138 @@ PHP_METHOD(php_wxStreamBase, IsSeekable)
    Returns true if no error occurred on the stream. */
 PHP_METHOD(php_wxStreamBase, IsOk)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStreamBase::IsOk\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxStreamBase* current_object;
-	wxphp_object_type current_object_type;
-	wxStreamBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxStreamBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxStreamBase::IsOk call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxStreamBase::IsOk\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXSTREAMBASE_TYPE){
-				references = &((wxStreamBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxStreamBase* current_object;
+    wxphp_object_type current_object_type;
+    wxStreamBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxStreamBase::IsOk())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxStreamBase_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxStreamBase_php*)native_object)->IsOk());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxStreamBase::IsOk call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXSTREAMBASE_TYPE){
+                references = &((wxStreamBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxStreamBase::IsOk())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxStreamBase_php*)native_object)->IsOk());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::IsOk\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxStreamBase::IsOk\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2379,129 +2562,138 @@ PHP_METHOD(php_wxStreamBase, IsOk)
    This function returns the size of the stream. */
 PHP_METHOD(php_wxStreamBase, GetSize)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStreamBase::GetSize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxStreamBase* current_object;
-	wxphp_object_type current_object_type;
-	wxStreamBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxStreamBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxStreamBase::GetSize call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxStreamBase::GetSize\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXSTREAMBASE_TYPE){
-				references = &((wxStreamBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxStreamBase* current_object;
+    wxphp_object_type current_object_type;
+    wxStreamBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxStreamBase::GetSize())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxStreamBase_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxStreamBase_php*)native_object)->GetSize());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxStreamBase::GetSize call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXSTREAMBASE_TYPE){
+                references = &((wxStreamBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxStreamBase::GetSize())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxStreamBase_php*)native_object)->GetSize());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::GetSize\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxStreamBase::GetSize\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2509,129 +2701,138 @@ PHP_METHOD(php_wxStreamBase, GetSize)
    Returns the length of the stream in bytes. */
 PHP_METHOD(php_wxStreamBase, GetLength)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStreamBase::GetLength\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxStreamBase* current_object;
-	wxphp_object_type current_object_type;
-	wxStreamBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxStreamBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxStreamBase::GetLength call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxStreamBase::GetLength\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXSTREAMBASE_TYPE){
-				references = &((wxStreamBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxStreamBase* current_object;
+    wxphp_object_type current_object_type;
+    wxStreamBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxStreamBase::GetLength())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxStreamBase_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxStreamBase_php*)native_object)->GetLength());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxStreamBase::GetLength call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXSTREAMBASE_TYPE){
+                references = &((wxStreamBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxStreamBase::GetLength())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxStreamBase_php*)native_object)->GetLength());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::GetLength\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxStreamBase::GetLength\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2639,129 +2840,138 @@ PHP_METHOD(php_wxStreamBase, GetLength)
    This function returns the last error. */
 PHP_METHOD(php_wxStreamBase, GetLastError)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStreamBase::GetLastError\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxStreamBase* current_object;
-	wxphp_object_type current_object_type;
-	wxStreamBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxStreamBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxStreamBase::GetLastError call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxStreamBase::GetLastError\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXSTREAMBASE_TYPE){
-				references = &((wxStreamBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxStreamBase* current_object;
+    wxphp_object_type current_object_type;
+    wxStreamBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxStreamBase::GetLastError())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxStreamBase_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxStreamBase_php*)native_object)->GetLastError());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxStreamBase::GetLastError call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXSTREAMBASE_TYPE){
+                references = &((wxStreamBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxStreamBase::GetLastError())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxStreamBase_php*)native_object)->GetLastError());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::GetLastError\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxStreamBase::GetLastError\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2769,78 +2979,94 @@ PHP_METHOD(php_wxStreamBase, GetLastError)
    Internal function. */
 wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
 {
-	static zend_function* cached_function = NULL;
-	static bool is_php_user_space_implemented = true;
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxStreamBase::OnSysSeek\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval* params[2];
-	zval arguments[2];
+    static zend_function* cached_function = NULL;
+    static bool is_php_user_space_implemented = true;
 
-	zval return_value;
-	zval function_name;
-	ZVAL_STRING(&function_name, "OnSysSeek");
-	char* temp_string;
-	void* return_object;
-	int function_called;
-	
-	//Parameters for conversion
-	ZVAL_LONG(&arguments[0], pos);
-	ZVAL_LONG(&arguments[1], mode);
-		
-	for(int i=0; i<2; i++)
-	{
-		params[i] = &arguments[i];
-	}
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual wxStreamBase::OnSysSeek\n");
+    php_printf("===========================================\n");
+    #endif
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(is_php_user_space_implemented)
-	{
-		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnSysSeek", 9, &return_value, 2, params TSRMLS_CC);
-	}
-	else
-	{
-		function_called = FAILURE;
-	}
+    zval* params[2];
+    zval arguments[2];
+
+    zval return_value;
+    zval function_name;
+    ZVAL_STRING(&function_name, "OnSysSeek");
+    char* temp_string;
+    void* return_object;
+    int function_called;
+
+    //Parameters for conversion
+    ZVAL_LONG(&arguments[0], pos);
+    ZVAL_LONG(&arguments[1], mode);
     
-    	
-	//Delete already used parameters from memory
-	for(int i=0; i<2; i++)
-	{
-		zval_ptr_dtor(&arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
-	{
-		is_php_user_space_implemented = false;
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
-		
-		return (wxFileOffset) Z_LVAL_P(&return_value);
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxStreamBase::OnSysSeek(pos, mode);
+    for(int i=0; i<2; i++)
+    {
+        params[i] = &arguments[i];
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method '%s'", "OnSysSeek");
+    
+    if (this->phpObj.value.obj->ce == NULL) {
+    php_printf(" on NULL!\n");
+    } else {
+    php_printf(" on %s\n", ZSTR_VAL(this->phpObj.value.obj->ce->name));
+    }
+    #endif
+
+    if(is_php_user_space_implemented)
+    {
+        function_called = wxphp_call_method(
+            (zval*)&this->phpObj,
+            NULL,
+            &cached_function,
+            "OnSysSeek",
+            9,
+            &return_value,
+            2,
+            params
+        );
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    
+    //Delete already used parameters from memory
+    for(int i=0; i<2; i++)
+    {
+        zval_ptr_dtor(&arguments[i]);
+    }
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Returning userspace value.\n");
+        #endif
+
+        return (wxFileOffset) Z_LVAL(return_value);
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Calling original method\n");
+    php_printf("===========================================\n\n");
+    #endif
+
+    //Call original method
+    return wxStreamBase::OnSysSeek(
+        pos, mode    );
 }
 /* }}} */
 
@@ -2848,134 +3074,163 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
    Internal function. */
 wxFileOffset wxStreamBase_php::OnSysTell()const
 {
-	static zend_function* cached_function = NULL;
-	static bool is_php_user_space_implemented = true;
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxStreamBase::OnSysTell\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval* params[1];
-	zval arguments[1];
+    static zend_function* cached_function = NULL;
+    static bool is_php_user_space_implemented = true;
 
-	zval return_value;
-	zval function_name;
-	ZVAL_STRING(&function_name, "OnSysTell");
-	char* temp_string;
-	void* return_object;
-	int function_called;
-	
-	//Parameters for conversion
-		
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual wxStreamBase::OnSysTell\n");
+    php_printf("===========================================\n");
+    #endif
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(is_php_user_space_implemented)
-	{
-		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnSysTell", 9, &return_value, 0, params TSRMLS_CC);
-	}
-	else
-	{
-		function_called = FAILURE;
-	}
+    zval* params[1];
+    zval arguments[1];
+
+    zval return_value;
+    zval function_name;
+    ZVAL_STRING(&function_name, "OnSysTell");
+    char* temp_string;
+    void* return_object;
+    int function_called;
+
+    //Parameters for conversion
     
-    	
-	
-	if(function_called == FAILURE)
-	{
-		is_php_user_space_implemented = false;
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
-		
-		return (wxFileOffset) Z_LVAL_P(&return_value);
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxStreamBase::OnSysTell();
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method '%s'", "OnSysTell");
+    
+    if (this->phpObj.value.obj->ce == NULL) {
+    php_printf(" on NULL!\n");
+    } else {
+    php_printf(" on %s\n", ZSTR_VAL(this->phpObj.value.obj->ce->name));
+    }
+    #endif
+
+    if(is_php_user_space_implemented)
+    {
+        function_called = wxphp_call_method(
+            (zval*)&this->phpObj,
+            NULL,
+            &cached_function,
+            "OnSysTell",
+            9,
+            &return_value,
+            0,
+            params
+        );
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Returning userspace value.\n");
+        #endif
+
+        return (wxFileOffset) Z_LVAL(return_value);
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Calling original method\n");
+    php_printf("===========================================\n\n");
+    #endif
+
+    //Call original method
+    return wxStreamBase::OnSysTell(
+            );
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxOutputStream_free(void *object TSRMLS_DC) 
+void php_wxOutputStream_free(void *object)
 {
     zo_wxOutputStream* custom_object = (zo_wxOutputStream*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxOutputStream_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxOutputStream done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxOutputStream_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxOutputStream done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxOutputStream_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxOutputStream_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxOutputStream_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxOutputStream* custom_object;
-	custom_object = (zo_wxOutputStream*) ecalloc(1, sizeof(zo_wxOutputStream) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxOutputStream_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxOutputStream* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxOutputStream*) ecalloc(
+        1,
+        sizeof(zo_wxOutputStream)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXOUTPUTSTREAM_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXOUTPUTSTREAM_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -2984,81 +3239,82 @@ END_EXTERN_C()
    Creates a dummy wxOutputStream object. */
 PHP_METHOD(php_wxOutputStream, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxOutputStream::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxOutputStream* current_object;
-	wxOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxOutputStream::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		overload0_called = true;
-		already_called = true;
-	}
+    zo_wxOutputStream* current_object;
+    wxOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-				native_object = new wxOutputStream_php();
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    bool overload0_called = false;
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
 
-		current_object = Z_wxOutputStream_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxOutputStream::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct()\n");
+                #endif
+
+                native_object = new wxOutputStream_php();
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxOutputStream_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxOutputStream::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
@@ -3066,218 +3322,228 @@ PHP_METHOD(php_wxOutputStream, __construct)
    Reads data from the specified input stream and stores them in the current stream. */
 PHP_METHOD(php_wxOutputStream, Write)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxOutputStream::Write\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxOutputStream::Write call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxOutputStream::Write\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* stream_in0;
-	wxInputStream* object_pointer0_0 = 0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* buffer1;
-	long buffer_len1;
-	long size1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'o' (&stream_in0)\n");
-		#endif
+    zo_wxOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "o";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream_in0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(stream_in0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxInputStream_P(stream_in0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxInputStream_P(stream_in0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
-					{
-						goto overload1;
-					}
-				}
-				else if(Z_TYPE_P(stream_in0) != IS_NULL)
-				{
-					goto overload1;
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxOutputStream_P(getThis());
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&buffer1, &buffer_len1, &size1)\n");
-		#endif
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxOutputStream::Write call\n"
+            );
 
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffer1, &buffer_len1, &size1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxOutputStream::Write(*(wxInputStream*) object_pointer0_0) to return object reference\n\n");
-				#endif
+            bool reference_type_found = false;
 
-				wxOutputStream_php* value_to_return1;
-				value_to_return1 = (wxOutputStream_php*) &((wxOutputStream_php*)native_object)->Write(*(wxInputStream*) object_pointer0_0);
+            if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				if(value_to_return1->references.IsUserInitialized()){
-					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
-						zval_add_ref(value_to_return1->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxOutputStream_entry);
-					Z_wxOutputStream_P(return_value TSRMLS_CC)->native_object = (wxOutputStream_php*) value_to_return1;
-				}
+    //Parameters for overload 0
+    zval* stream_in0;
+    wxInputStream* object_pointer0_0 = 0;
+    bool overload0_called = false;
 
-				if((void*)value_to_return1 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxOutputStream::Write at call 6 with 1 argument(s)");
-				}
+    //Parameters for overload 1
+    char* buffer1;
+    long buffer_len1;
+    long size1;
+    bool overload1_called = false;
 
-				references->AddReference(stream_in0, "wxOutputStream::Write at call 3 with 1 argument(s)");
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'o' (&stream_in0)\n");
+        #endif
 
-				return;
-				break;
-			}
-		}
-	}
+        char parse_parameters_string[] = "o";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &stream_in0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(stream_in0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxInputStream_P(stream_in0)->object_type;
+                    argument_native_object = (void*) Z_wxInputStream_P(stream_in0)->native_object;
+                    object_pointer0_0 = (wxInputStream*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
+                    {
+                        goto overload1;
+                    }
+                }
+                else if(Z_TYPE_P(stream_in0) != IS_NULL)
+                {
+                    goto overload1;
+                }
+            }
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxOutputStream::Write((const void*) buffer1, (size_t) size1) to return object reference\n\n");
-				#endif
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				wxOutputStream_php* value_to_return2;
-				value_to_return2 = (wxOutputStream_php*) &((wxOutputStream_php*)native_object)->Write((const void*) buffer1, (size_t) size1);
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'sl' (&buffer1, &buffer_len1, &size1)\n");
+        #endif
 
-				if(value_to_return2->references.IsUserInitialized()){
-					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
-						zval_add_ref(value_to_return2->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxOutputStream_entry);
-					Z_wxOutputStream_P(return_value TSRMLS_CC)->native_object = (wxOutputStream_php*) value_to_return2;
-				}
+        char parse_parameters_string[] = "sl";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &buffer1, &buffer_len1, &size1 ) == SUCCESS)
+        {
+            overload1_called = true;
+            already_called = true;
+        }
+    }
 
-				if((void*)value_to_return2 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxOutputStream::Write at call 6 with 2 argument(s)");
-				}
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxOutputStream::Write(*(wxInputStream*) object_pointer0_0) to return object reference\n\n");
+                #endif
+
+                wxOutputStream_php* value_to_return1;
+                value_to_return1 = (wxOutputStream_php*) &((wxOutputStream_php*)native_object)->Write(*(wxInputStream*) object_pointer0_0);
+
+                if(value_to_return1->references.IsUserInitialized()){
+                    if(!Z_ISNULL(value_to_return1->phpObj)){
+                        return_value = &value_to_return1->phpObj;
+                        zval_add_ref(&value_to_return1->phpObj);
+                        return_is_user_initialized = true;
+                    }
+                    else{
+                        zend_error(E_ERROR, "Could not retreive original zval.");
+                    }
+                }
+                else{
+                    object_init_ex(return_value,php_wxOutputStream_entry);
+                    Z_wxOutputStream_P(return_value)->native_object = (wxOutputStream_php*) value_to_return1;
+                }
+
+                if((void*)value_to_return1 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
+                    references->AddReference(return_value, "wxOutputStream::Write at call 6 with 1 argument(s)");
+                }
+
+                references->AddReference(stream_in0, "wxOutputStream::Write at call 3 with 1 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxOutputStream::Write((const void*) buffer1, (size_t) size1) to return object reference\n\n");
+                #endif
+
+                wxOutputStream_php* value_to_return2;
+                value_to_return2 = (wxOutputStream_php*) &((wxOutputStream_php*)native_object)->Write((const void*) buffer1, (size_t) size1);
+
+                if(value_to_return2->references.IsUserInitialized()){
+                    if(!Z_ISNULL(value_to_return2->phpObj)){
+                        return_value = &value_to_return2->phpObj;
+                        zval_add_ref(&value_to_return2->phpObj);
+                        return_is_user_initialized = true;
+                    }
+                    else{
+                        zend_error(E_ERROR, "Could not retreive original zval.");
+                    }
+                }
+                else{
+                    object_init_ex(return_value,php_wxOutputStream_entry);
+                    Z_wxOutputStream_P(return_value)->native_object = (wxOutputStream_php*) value_to_return2;
+                }
+
+                if((void*)value_to_return2 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
+                    references->AddReference(return_value, "wxOutputStream::Write at call 6 with 2 argument(s)");
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::Write\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxOutputStream::Write\n"
+        );
+    }
 }
 /* }}} */
 
@@ -3285,113 +3551,122 @@ PHP_METHOD(php_wxOutputStream, Write)
    Returns the current stream position. */
 PHP_METHOD(php_wxOutputStream, TellO)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxOutputStream::TellO\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxOutputStream::TellO call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxOutputStream::TellO\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxOutputStream::TellO())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxOutputStream_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->TellO());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxOutputStream::TellO call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxOutputStream::TellO())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->TellO());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::TellO\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxOutputStream::TellO\n"
+        );
+    }
 }
 /* }}} */
 
@@ -3399,131 +3674,140 @@ PHP_METHOD(php_wxOutputStream, TellO)
    Changes the stream current position. */
 PHP_METHOD(php_wxOutputStream, SeekO)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxOutputStream::SeekO\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxOutputStream::SeekO call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxOutputStream::SeekO\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long pos0;
-	long mode0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l|l' (&pos0, &mode0)\n");
-		#endif
+    zo_wxOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &mode0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxOutputStream::SeekO((wxFileOffset) pos0))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxOutputStream_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->SeekO((wxFileOffset) pos0));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxOutputStream::SeekO call\n"
+            );
 
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxOutputStream::SeekO((wxFileOffset) pos0, (wxSeekMode) mode0))\n\n");
-				#endif
+            bool reference_type_found = false;
 
-				ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->SeekO((wxFileOffset) pos0, (wxSeekMode) mode0));
+            if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    long pos0;
+    long mode0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l|l' (&pos0, &mode0)\n");
+        #endif
+
+        char parse_parameters_string[] = "l|l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &pos0, &mode0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxOutputStream::SeekO((wxFileOffset) pos0))\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->SeekO((wxFileOffset) pos0));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxOutputStream::SeekO((wxFileOffset) pos0, (wxSeekMode) mode0))\n\n");
+                #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::SeekO\n");
-	}
+                ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->SeekO((wxFileOffset) pos0, (wxSeekMode) mode0));
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxOutputStream::SeekO\n"
+        );
+    }
 }
 /* }}} */
 
@@ -3531,118 +3815,127 @@ PHP_METHOD(php_wxOutputStream, SeekO)
    Puts the specified character in the output queue and increments the stream position. */
 PHP_METHOD(php_wxOutputStream, PutC)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxOutputStream::PutC\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxOutputStream::PutC call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxOutputStream::PutC\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long c0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&c0)\n");
-		#endif
+    zo_wxOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxOutputStream::PutC((char) c0)\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxOutputStream_P(getThis());
 
-				((wxOutputStream_php*)native_object)->PutC((char) c0);
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxOutputStream::PutC call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    long c0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&c0)\n");
+        #endif
+
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &c0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxOutputStream::PutC((char) c0)\n\n");
+                #endif
+
+                ((wxOutputStream_php*)native_object)->PutC((char) c0);
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::PutC\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxOutputStream::PutC\n"
+        );
+    }
 }
 /* }}} */
 
@@ -3650,113 +3943,122 @@ PHP_METHOD(php_wxOutputStream, PutC)
    Closes the stream, returning false if an error occurs. */
 PHP_METHOD(php_wxOutputStream, Close)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxOutputStream::Close\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxOutputStream::Close call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxOutputStream::Close\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxOutputStream::Close())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxOutputStream_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxOutputStream_php*)native_object)->Close());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxOutputStream::Close call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxOutputStream::Close())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxOutputStream_php*)native_object)->Close());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::Close\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxOutputStream::Close\n"
+        );
+    }
 }
 /* }}} */
 
@@ -3764,180 +4066,202 @@ PHP_METHOD(php_wxOutputStream, Close)
    Returns the number of bytes written during the last Write(). */
 PHP_METHOD(php_wxOutputStream, LastWrite)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxOutputStream::LastWrite\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxOutputStream::LastWrite call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxOutputStream::LastWrite\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
-				references = &((wxOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxOutputStream::LastWrite())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxOutputStream_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->LastWrite());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxOutputStream::LastWrite call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXOUTPUTSTREAM_TYPE){
+                references = &((wxOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxOutputStream::LastWrite())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->LastWrite());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::LastWrite\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxOutputStream::LastWrite\n"
+        );
+    }
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxInputStream_free(void *object TSRMLS_DC) 
+void php_wxInputStream_free(void *object)
 {
     zo_wxInputStream* custom_object = (zo_wxInputStream*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxInputStream_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxInputStream done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxInputStream_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxInputStream done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxInputStream_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxInputStream_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxInputStream_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxInputStream* custom_object;
-	custom_object = (zo_wxInputStream*) ecalloc(1, sizeof(zo_wxInputStream) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxInputStream_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxInputStream* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxInputStream*) ecalloc(
+        1,
+        sizeof(zo_wxInputStream)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXINPUTSTREAM_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXINPUTSTREAM_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -3946,81 +4270,82 @@ END_EXTERN_C()
    Creates a dummy input stream. */
 PHP_METHOD(php_wxInputStream, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxInputStream::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxInputStream* current_object;
-	wxInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxInputStream::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		overload0_called = true;
-		already_called = true;
-	}
+    zo_wxInputStream* current_object;
+    wxInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-				native_object = new wxInputStream_php();
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    bool overload0_called = false;
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
 
-		current_object = Z_wxInputStream_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxInputStream::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct()\n");
+                #endif
+
+                native_object = new wxInputStream_php();
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxInputStream_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxInputStream::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
@@ -4028,159 +4353,169 @@ PHP_METHOD(php_wxInputStream, __construct)
    This function acts like the previous one except that it takes only one character: it is sometimes shorter to use than the generic function. */
 PHP_METHOD(php_wxInputStream, Ungetch)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxInputStream::Ungetch\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxInputStream::Ungetch call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxInputStream::Ungetch\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long c0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* buffer1;
-	long buffer_len1;
-	long size1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&c0)\n");
-		#endif
+    zo_wxInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&buffer1, &buffer_len1, &size1)\n");
-		#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxInputStream_P(getThis());
 
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffer1, &buffer_len1, &size1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxInputStream::Ungetch call\n"
+            );
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxInputStream::Ungetch((char) c0))\n\n");
-				#endif
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				ZVAL_BOOL(return_value, ((wxInputStream_php*)native_object)->Ungetch((char) c0));
+            bool reference_type_found = false;
 
+            if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				return;
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    long c0;
+    bool overload0_called = false;
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxInputStream::Ungetch((const void*) buffer1, (size_t) size1))\n\n");
-				#endif
+    //Parameters for overload 1
+    char* buffer1;
+    long buffer_len1;
+    long size1;
+    bool overload1_called = false;
 
-				ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->Ungetch((const void*) buffer1, (size_t) size1));
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&c0)\n");
+        #endif
+
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &c0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'sl' (&buffer1, &buffer_len1, &size1)\n");
+        #endif
+
+        char parse_parameters_string[] = "sl";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &buffer1, &buffer_len1, &size1 ) == SUCCESS)
+        {
+            overload1_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxInputStream::Ungetch((char) c0))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxInputStream_php*)native_object)->Ungetch((char) c0));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::Ungetch\n");
-	}
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxInputStream::Ungetch((const void*) buffer1, (size_t) size1))\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->Ungetch((const void*) buffer1, (size_t) size1));
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxInputStream::Ungetch\n"
+        );
+    }
 }
 /* }}} */
 
@@ -4188,113 +4523,122 @@ PHP_METHOD(php_wxInputStream, Ungetch)
    Returns the current stream position or wxInvalidOffset if it's not available (e.g. */
 PHP_METHOD(php_wxInputStream, TellI)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxInputStream::TellI\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxInputStream::TellI call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxInputStream::TellI\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxInputStream::TellI())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxInputStream_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->TellI());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxInputStream::TellI call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxInputStream::TellI())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->TellI());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::TellI\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxInputStream::TellI\n"
+        );
+    }
 }
 /* }}} */
 
@@ -4302,131 +4646,140 @@ PHP_METHOD(php_wxInputStream, TellI)
    Changes the stream current position. */
 PHP_METHOD(php_wxInputStream, SeekI)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxInputStream::SeekI\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxInputStream::SeekI call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxInputStream::SeekI\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long pos0;
-	long mode0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l|l' (&pos0, &mode0)\n");
-		#endif
+    zo_wxInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &mode0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxInputStream::SeekI((wxFileOffset) pos0))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxInputStream_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->SeekI((wxFileOffset) pos0));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxInputStream::SeekI call\n"
+            );
 
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxInputStream::SeekI((wxFileOffset) pos0, (wxSeekMode) mode0))\n\n");
-				#endif
+            bool reference_type_found = false;
 
-				ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->SeekI((wxFileOffset) pos0, (wxSeekMode) mode0));
+            if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    long pos0;
+    long mode0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l|l' (&pos0, &mode0)\n");
+        #endif
+
+        char parse_parameters_string[] = "l|l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &pos0, &mode0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxInputStream::SeekI((wxFileOffset) pos0))\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->SeekI((wxFileOffset) pos0));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxInputStream::SeekI((wxFileOffset) pos0, (wxSeekMode) mode0))\n\n");
+                #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::SeekI\n");
-	}
+                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->SeekI((wxFileOffset) pos0, (wxSeekMode) mode0));
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxInputStream::SeekI\n"
+        );
+    }
 }
 /* }}} */
 
@@ -4434,223 +4787,233 @@ PHP_METHOD(php_wxInputStream, SeekI)
    Reads data from the input queue and stores it in the specified output stream. */
 PHP_METHOD(php_wxInputStream, Read)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxInputStream::Read\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxInputStream::Read call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxInputStream::Read\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* stream_out0;
-	wxOutputStream* object_pointer0_0 = 0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* buffer1;
-	long buffer_len1;
-	zval buffer1_ref;
-	long size1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'o' (&stream_out0)\n");
-		#endif
+    zo_wxInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "o";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream_out0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(stream_out0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxOutputStream_P(stream_out0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxOutputStream_P(stream_out0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxOutputStream*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
-					{
-						goto overload1;
-					}
-				}
-				else if(Z_TYPE_P(stream_out0) != IS_NULL)
-				{
-					goto overload1;
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxInputStream_P(getThis());
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&buffer1, &buffer_len1, &size1)\n");
-		#endif
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxInputStream::Read call\n"
+            );
 
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffer1, &buffer_len1, &size1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, buffer1_ref, dummy );
-		}
-	}
+            bool reference_type_found = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxInputStream::Read(*(wxOutputStream*) object_pointer0_0) to return object reference\n\n");
-				#endif
+            if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				wxInputStream_php* value_to_return1;
-				value_to_return1 = (wxInputStream_php*) &((wxInputStream_php*)native_object)->Read(*(wxOutputStream*) object_pointer0_0);
+    //Parameters for overload 0
+    zval* stream_out0;
+    wxOutputStream* object_pointer0_0 = 0;
+    bool overload0_called = false;
 
-				if(value_to_return1->references.IsUserInitialized()){
-					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
-						zval_add_ref(value_to_return1->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxInputStream_entry);
-					Z_wxInputStream_P(return_value TSRMLS_CC)->native_object = (wxInputStream_php*) value_to_return1;
-				}
+    //Parameters for overload 1
+    char* buffer1;
+    long buffer_len1;
+    zval buffer1_ref;
+    long size1;
+    bool overload1_called = false;
 
-				if((void*)value_to_return1 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxInputStream::Read at call 6 with 1 argument(s)");
-				}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'o' (&stream_out0)\n");
+        #endif
 
-				references->AddReference(stream_out0, "wxInputStream::Read at call 3 with 1 argument(s)");
+        char parse_parameters_string[] = "o";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &stream_out0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(stream_out0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxOutputStream_P(stream_out0)->object_type;
+                    argument_native_object = (void*) Z_wxOutputStream_P(stream_out0)->native_object;
+                    object_pointer0_0 = (wxOutputStream*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
+                    {
+                        goto overload1;
+                    }
+                }
+                else if(Z_TYPE_P(stream_out0) != IS_NULL)
+                {
+                    goto overload1;
+                }
+            }
 
-				return;
-				break;
-			}
-		}
-	}
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxInputStream::Read((void*) buffer1, (size_t) size1) to return object reference\n\n");
-				#endif
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'sl' (&buffer1, &buffer_len1, &size1)\n");
+        #endif
 
-				wxInputStream_php* value_to_return2;
-				value_to_return2 = (wxInputStream_php*) &((wxInputStream_php*)native_object)->Read((void*) buffer1, (size_t) size1);
+        char parse_parameters_string[] = "sl";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &buffer1, &buffer_len1, &size1 ) == SUCCESS)
+        {
+            overload1_called = true;
+            already_called = true;
 
-				if(value_to_return2->references.IsUserInitialized()){
-					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
-						zval_add_ref(value_to_return2->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxInputStream_entry);
-					Z_wxInputStream_P(return_value TSRMLS_CC)->native_object = (wxInputStream_php*) value_to_return2;
-				}
+            char parse_references_string[] = "zz";
+            zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_references_string, buffer1_ref, dummy );
+        }
+    }
 
-				if((void*)value_to_return2 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxInputStream::Read at call 6 with 2 argument(s)");
-				}
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxInputStream::Read(*(wxOutputStream*) object_pointer0_0) to return object reference\n\n");
+                #endif
 
-				ZVAL_STRING(&buffer1_ref, (char*) buffer1);
+                wxInputStream_php* value_to_return1;
+                value_to_return1 = (wxInputStream_php*) &((wxInputStream_php*)native_object)->Read(*(wxOutputStream*) object_pointer0_0);
 
-				return;
-				break;
-			}
-		}
-	}
+                if(value_to_return1->references.IsUserInitialized()){
+                    if(!Z_ISNULL(value_to_return1->phpObj)){
+                        return_value = &value_to_return1->phpObj;
+                        zval_add_ref(&value_to_return1->phpObj);
+                        return_is_user_initialized = true;
+                    }
+                    else{
+                        zend_error(E_ERROR, "Could not retreive original zval.");
+                    }
+                }
+                else{
+                    object_init_ex(return_value,php_wxInputStream_entry);
+                    Z_wxInputStream_P(return_value)->native_object = (wxInputStream_php*) value_to_return1;
+                }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::Read\n");
-	}
+                if((void*)value_to_return1 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
+                    references->AddReference(return_value, "wxInputStream::Read at call 6 with 1 argument(s)");
+                }
+
+                references->AddReference(stream_out0, "wxInputStream::Read at call 3 with 1 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxInputStream::Read((void*) buffer1, (size_t) size1) to return object reference\n\n");
+                #endif
+
+                wxInputStream_php* value_to_return2;
+                value_to_return2 = (wxInputStream_php*) &((wxInputStream_php*)native_object)->Read((void*) buffer1, (size_t) size1);
+
+                if(value_to_return2->references.IsUserInitialized()){
+                    if(!Z_ISNULL(value_to_return2->phpObj)){
+                        return_value = &value_to_return2->phpObj;
+                        zval_add_ref(&value_to_return2->phpObj);
+                        return_is_user_initialized = true;
+                    }
+                    else{
+                        zend_error(E_ERROR, "Could not retreive original zval.");
+                    }
+                }
+                else{
+                    object_init_ex(return_value,php_wxInputStream_entry);
+                    Z_wxInputStream_P(return_value)->native_object = (wxInputStream_php*) value_to_return2;
+                }
+
+                if((void*)value_to_return2 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
+                    references->AddReference(return_value, "wxInputStream::Read at call 6 with 2 argument(s)");
+                }
+
+                ZVAL_STRING(&buffer1_ref, (char*) buffer1);
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxInputStream::Read\n"
+        );
+    }
 }
 /* }}} */
 
@@ -4658,116 +5021,125 @@ PHP_METHOD(php_wxInputStream, Read)
    Returns the first character in the input queue without removing it. */
 PHP_METHOD(php_wxInputStream, Peek)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxInputStream::Peek\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxInputStream::Peek call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxInputStream::Peek\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(wxInputStream::Peek().fn_str(), 1)\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxInputStream_P(getThis());
 
-				char* value_to_return0;
-				char value_to_return_temp0 = ((wxInputStream_php*)native_object)->Peek();
-				value_to_return0 = &value_to_return_temp0;
-				ZVAL_STRING(return_value, value_to_return0);
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxInputStream::Peek call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_STRING(wxInputStream::Peek().fn_str(), 1)\n\n");
+                #endif
+
+                char* value_to_return0;
+                char value_to_return_temp0 = ((wxInputStream_php*)native_object)->Peek();
+                value_to_return0 = &value_to_return_temp0;
+                ZVAL_STRING(return_value, value_to_return0);
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::Peek\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxInputStream::Peek\n"
+        );
+    }
 }
 /* }}} */
 
@@ -4775,73 +5147,93 @@ PHP_METHOD(php_wxInputStream, Peek)
    Internal function. */
 size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 {
-	static zend_function* cached_function = NULL;
-	static bool is_php_user_space_implemented = true;
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxInputStream::OnSysRead\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval* params[2];
-	zval arguments[2];
+    static zend_function* cached_function = NULL;
+    static bool is_php_user_space_implemented = true;
 
-	zval return_value;
-	zval function_name;
-	ZVAL_STRING(&function_name, "OnSysRead");
-	char* temp_string;
-	void* return_object;
-	int function_called;
-	
-	//Parameters for conversion
-		ZVAL_LONG(&arguments[1], bufsize);
-		
-	for(int i=0; i<2; i++)
-	{
-		params[i] = &arguments[i];
-	}
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual wxInputStream::OnSysRead\n");
+    php_printf("===========================================\n");
+    #endif
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(is_php_user_space_implemented)
-	{
-		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnSysRead", 9, &return_value, 2, params TSRMLS_CC);
-	}
-	else
-	{
-		function_called = FAILURE;
-	}
+    zval* params[2];
+    zval arguments[2];
+
+    zval return_value;
+    zval function_name;
+    ZVAL_STRING(&function_name, "OnSysRead");
+    char* temp_string;
+    void* return_object;
+    int function_called;
+
+    //Parameters for conversion
+        ZVAL_LONG(&arguments[1], bufsize);
     
-    if(function_called != FAILURE)
-	{
-		memcpy ((void*) buffer, (void*) Z_STRVAL_P(&arguments[0]), Z_STRLEN_P(&arguments[0]));
-	}
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<2; i++)
-	{
-		zval_ptr_dtor(&arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
-	{
-		is_php_user_space_implemented = false;
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxInputStream::OnSysRead'!", "Error", wxOK|wxICON_ERROR);
-	}
+    for(int i=0; i<2; i++)
+    {
+        params[i] = &arguments[i];
+    }
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
-		
-	return (size_t) Z_LVAL_P(&return_value);
-	
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method '%s'", "OnSysRead");
+    
+    if (this->phpObj.value.obj->ce == NULL) {
+    php_printf(" on NULL!\n");
+    } else {
+    php_printf(" on %s\n", ZSTR_VAL(this->phpObj.value.obj->ce->name));
+    }
+    #endif
+
+    if(is_php_user_space_implemented)
+    {
+        function_called = wxphp_call_method(
+            (zval*)&this->phpObj,
+            NULL,
+            &cached_function,
+            "OnSysRead",
+            9,
+            &return_value,
+            2,
+            params
+        );
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    if(function_called != FAILURE)
+    {
+        memcpy ((void*) buffer, (void*) Z_STRVAL(arguments[0]), Z_STRLEN(arguments[0]));
+    }
+
+    //Delete already used parameters from memory
+    for(int i=0; i<2; i++)
+    {
+        zval_ptr_dtor(&arguments[i]);
+    }
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+
+        wxMessageBox(
+            "Failed to call virtual method "
+                "'wxInputStream::OnSysRead'!",
+            "Error",
+            wxOK|wxICON_ERROR
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Returning userspace value.\n");
+    #endif
+
+    return (size_t) Z_LVAL(return_value);
+
 }
 /* }}} */
 
@@ -4849,113 +5241,122 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
    Returns the last number of bytes read. */
 PHP_METHOD(php_wxInputStream, LastRead)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxInputStream::LastRead\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxInputStream::LastRead call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxInputStream::LastRead\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxInputStream::LastRead())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxInputStream_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->LastRead());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxInputStream::LastRead call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxInputStream::LastRead())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->LastRead());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::LastRead\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxInputStream::LastRead\n"
+        );
+    }
 }
 /* }}} */
 
@@ -4963,113 +5364,122 @@ PHP_METHOD(php_wxInputStream, LastRead)
    Returns the first character in the input queue and removes it, blocking until it appears if necessary. */
 PHP_METHOD(php_wxInputStream, GetC)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxInputStream::GetC\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxInputStream::GetC call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxInputStream::GetC\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxInputStream::GetC())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxInputStream_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->GetC());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxInputStream::GetC call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxInputStream::GetC())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->GetC());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::GetC\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxInputStream::GetC\n"
+        );
+    }
 }
 /* }}} */
 
@@ -5077,113 +5487,122 @@ PHP_METHOD(php_wxInputStream, GetC)
    Returns true after an attempt has been made to read past the end of the stream. */
 PHP_METHOD(php_wxInputStream, Eof)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxInputStream::Eof\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxInputStream::Eof call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxInputStream::Eof\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxInputStream::Eof())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxInputStream_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxInputStream_php*)native_object)->Eof());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxInputStream::Eof call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxInputStream::Eof())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxInputStream_php*)native_object)->Eof());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::Eof\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxInputStream::Eof\n"
+        );
+    }
 }
 /* }}} */
 
@@ -5191,180 +5610,202 @@ PHP_METHOD(php_wxInputStream, Eof)
    Returns true if some data is available in the stream right now, so that calling Read() wouldn't block. */
 PHP_METHOD(php_wxInputStream, CanRead)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxInputStream::CanRead\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxInputStream::CanRead call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxInputStream::CanRead\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
-				references = &((wxInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxInputStream::CanRead())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxInputStream_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxInputStream_php*)native_object)->CanRead());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxInputStream::CanRead call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXINPUTSTREAM_TYPE){
+                references = &((wxInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEINPUTSTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxInputStream::CanRead())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxInputStream_php*)native_object)->CanRead());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::CanRead\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxInputStream::CanRead\n"
+        );
+    }
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxFFileOutputStream_free(void *object TSRMLS_DC) 
+void php_wxFFileOutputStream_free(void *object)
 {
     zo_wxFFileOutputStream* custom_object = (zo_wxFFileOutputStream*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFFileOutputStream_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxFFileOutputStream done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFFileOutputStream_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxFFileOutputStream done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxFFileOutputStream_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFFileOutputStream_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFFileOutputStream_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFFileOutputStream* custom_object;
-	custom_object = (zo_wxFFileOutputStream*) ecalloc(1, sizeof(zo_wxFFileOutputStream) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFFileOutputStream_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxFFileOutputStream* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxFFileOutputStream*) ecalloc(
+        1,
+        sizeof(zo_wxFFileOutputStream)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXFFILEOUTPUTSTREAM_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXFFILEOUTPUTSTREAM_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -5373,101 +5814,110 @@ END_EXTERN_C()
    Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFFileOutputStream, IsOk)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFFileOutputStream::IsOk\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFFileOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxFFileOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFFileOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFFileOutputStream::IsOk call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFFileOutputStream::IsOk\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE){
-				references = &((wxFFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxFFileOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxFFileOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFFileOutputStream::IsOk())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFFileOutputStream_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxFFileOutputStream_php*)native_object)->IsOk());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFFileOutputStream::IsOk call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFFILEOUTPUTSTREAM_TYPE){
+                references = &((wxFFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFFileOutputStream::IsOk())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxFFileOutputStream_php*)native_object)->IsOk());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFileOutputStream::IsOk\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFFileOutputStream::IsOk\n"
+        );
+    }
 }
 /* }}} */
 
@@ -5475,224 +5925,239 @@ PHP_METHOD(php_wxFFileOutputStream, IsOk)
    Open the given file filename with mode mode. */
 PHP_METHOD(php_wxFFileOutputStream, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFFileOutputStream::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFFileOutputStream* current_object;
-	wxFFileOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	char* filename0;
-	long filename_len0;
-	char* mode0;
-	long mode_len0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* file1;
-	wxFFile* object_pointer1_0 = 0;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|s' (&filename0, &filename_len0, &mode0, &mode_len0)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFFileOutputStream::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "s|s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0, &mode0, &mode_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    zo_wxFFileOutputStream* current_object;
+    wxFFileOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&file1, php_wxFFile_entry)\n");
-		#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file1, php_wxFFile_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(file1) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxFFile_P(file1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFFile_P(file1 TSRMLS_CC)->native_object;
-					object_pointer1_0 = (wxFFile*) argument_native_object;
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter 'file' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(file1) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'file' not null, could not be retreived correctly.");
-				}
-			}
 
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+    //Parameters for overload 0
+    char* filename0;
+    long filename_len0;
+    char* mode0;
+    long mode_len0;
+    bool overload0_called = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(wxString(filename0, wxConvUTF8))\n");
-				#endif
+    //Parameters for overload 1
+    zval* file1;
+    wxFFile* object_pointer1_0 = 0;
+    bool overload1_called = false;
 
-				native_object = new wxFFileOutputStream_php(wxString(filename0, wxConvUTF8));
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's|s' (&filename0, &filename_len0, &mode0, &mode_len0)\n");
+        #endif
 
-				native_object->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(wxString(filename0, wxConvUTF8), wxString(mode0, wxConvUTF8))\n");
-				#endif
+        char parse_parameters_string[] = "s|s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &filename0, &filename_len0, &mode0, &mode_len0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxFFileOutputStream_php(wxString(filename0, wxConvUTF8), wxString(mode0, wxConvUTF8));
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'O' (&file1, php_wxFFile_entry)\n");
+        #endif
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+        char parse_parameters_string[] = "O";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &file1, php_wxFFile_entry ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(file1) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxFFile_P(file1)->object_type;
+                    argument_native_object = (void*) Z_wxFFile_P(file1)->native_object;
+                    object_pointer1_0 = (wxFFile*) argument_native_object;
+                    if (!object_pointer1_0 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'file' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(file1) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'file' not null, could not be retreived correctly.");
+                }
+            }
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(*(wxFFile*) object_pointer1_0)\n");
-				#endif
+            overload1_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxFFileOutputStream_php(*(wxFFile*) object_pointer1_0);
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(wxString(filename0, wxConvUTF8))\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFFileOutputStream_php*) native_object)->references.AddReference(file1, "wxFFileOutputStream::wxFFileOutputStream at call 4 with 1 argument(s)");
-				break;
-			}
-		}
-	}
+                native_object = new wxFFileOutputStream_php(wxString(filename0, wxConvUTF8));
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object->references.Initialize();
+                break;
+            }
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(wxString(filename0, wxConvUTF8), wxString(mode0, wxConvUTF8))\n");
+                #endif
 
-		current_object = Z_wxFFileOutputStream_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFFileOutputStream::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+                native_object = new wxFFileOutputStream_php(wxString(filename0, wxConvUTF8), wxString(mode0, wxConvUTF8));
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(*(wxFFile*) object_pointer1_0)\n");
+                #endif
+
+                native_object = new wxFFileOutputStream_php(*(wxFFile*) object_pointer1_0);
+
+                native_object->references.Initialize();
+                ((wxFFileOutputStream_php*) native_object)->references.AddReference(file1, "wxFFileOutputStream::wxFFileOutputStream at call 4 with 1 argument(s)");
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxFFileOutputStream_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxFFileOutputStream::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxFileOutputStream_free(void *object TSRMLS_DC) 
+void php_wxFileOutputStream_free(void *object)
 {
     zo_wxFileOutputStream* custom_object = (zo_wxFileOutputStream*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFileOutputStream_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxFileOutputStream done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFileOutputStream_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxFileOutputStream done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxFileOutputStream_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFileOutputStream_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFileOutputStream_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFileOutputStream* custom_object;
-	custom_object = (zo_wxFileOutputStream*) ecalloc(1, sizeof(zo_wxFileOutputStream) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFileOutputStream_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxFileOutputStream* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxFileOutputStream*) ecalloc(
+        1,
+        sizeof(zo_wxFileOutputStream)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXFILEOUTPUTSTREAM_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXFILEOUTPUTSTREAM_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -5701,101 +6166,110 @@ END_EXTERN_C()
    Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFileOutputStream, IsOk)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFileOutputStream::IsOk\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFileOutputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxFileOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFileOutputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFileOutputStream::IsOk call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFileOutputStream::IsOk\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE){
-				references = &((wxFileOutputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxFileOutputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxFileOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFileOutputStream::IsOk())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFileOutputStream_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxFileOutputStream_php*)native_object)->IsOk());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFileOutputStream::IsOk call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFILEOUTPUTSTREAM_TYPE){
+                references = &((wxFileOutputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFileOutputStream::IsOk())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxFileOutputStream_php*)native_object)->IsOk());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileOutputStream::IsOk\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFileOutputStream::IsOk\n"
+        );
+    }
 }
 /* }}} */
 
@@ -5803,249 +6277,265 @@ PHP_METHOD(php_wxFileOutputStream, IsOk)
    Creates a new file with ofileName name and initializes the stream in write-only mode. */
 PHP_METHOD(php_wxFileOutputStream, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFileOutputStream::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFileOutputStream* current_object;
-	wxFileOutputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	char* ofileName0;
-	long ofileName_len0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* file1;
-	wxFile* object_pointer1_0 = 0;
-	bool overload1_called = false;
-	//Parameters for overload 2
-	long fd2;
-	bool overload2_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&ofileName0, &ofileName_len0)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFileOutputStream::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &ofileName0, &ofileName_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    zo_wxFileOutputStream* current_object;
+    wxFileOutputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&file1, php_wxFile_entry)\n");
-		#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file1, php_wxFile_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(file1) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxFile_P(file1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFile_P(file1 TSRMLS_CC)->native_object;
-					object_pointer1_0 = (wxFile*) argument_native_object;
-					if (!object_pointer1_0 )
-					{
-						goto overload2;
-					}
-				}
-				else if(Z_TYPE_P(file1) != IS_NULL)
-				{
-					goto overload2;
-				}
-			}
 
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+    //Parameters for overload 0
+    char* ofileName0;
+    long ofileName_len0;
+    bool overload0_called = false;
 
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&fd2)\n");
-		#endif
+    //Parameters for overload 1
+    zval* file1;
+    wxFile* object_pointer1_0 = 0;
+    bool overload1_called = false;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fd2 ) == SUCCESS)
-		{
-			overload2_called = true;
-			already_called = true;
-		}
-	}
+    //Parameters for overload 2
+    long fd2;
+    bool overload2_called = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(wxString(ofileName0, wxConvUTF8))\n");
-				#endif
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's' (&ofileName0, &ofileName_len0)\n");
+        #endif
 
-				native_object = new wxFileOutputStream_php(wxString(ofileName0, wxConvUTF8));
+        char parse_parameters_string[] = "s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &ofileName0, &ofileName_len0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'O' (&file1, php_wxFile_entry)\n");
+        #endif
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(*(wxFile*) object_pointer1_0)\n");
-				#endif
+        char parse_parameters_string[] = "O";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &file1, php_wxFile_entry ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(file1) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxFile_P(file1)->object_type;
+                    argument_native_object = (void*) Z_wxFile_P(file1)->native_object;
+                    object_pointer1_0 = (wxFile*) argument_native_object;
+                    if (!object_pointer1_0 )
+                    {
+                        goto overload2;
+                    }
+                }
+                else if(Z_TYPE_P(file1) != IS_NULL)
+                {
+                    goto overload2;
+                }
+            }
 
-				native_object = new wxFileOutputStream_php(*(wxFile*) object_pointer1_0);
+            overload1_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object->references.Initialize();
-				((wxFileOutputStream_php*) native_object)->references.AddReference(file1, "wxFileOutputStream::wxFileOutputStream at call 4 with 1 argument(s)");
-				break;
-			}
-		}
-	}
+    //Overload 2
+    overload2:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&fd2)\n");
+        #endif
 
-	if(overload2_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((int) fd2)\n");
-				#endif
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &fd2 ) == SUCCESS)
+        {
+            overload2_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxFileOutputStream_php((int) fd2);
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(wxString(ofileName0, wxConvUTF8))\n");
+                #endif
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+                native_object = new wxFileOutputStream_php(wxString(ofileName0, wxConvUTF8));
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
 
-		current_object = Z_wxFileOutputStream_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFileOutputStream::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(*(wxFile*) object_pointer1_0)\n");
+                #endif
+
+                native_object = new wxFileOutputStream_php(*(wxFile*) object_pointer1_0);
+
+                native_object->references.Initialize();
+                ((wxFileOutputStream_php*) native_object)->references.AddReference(file1, "wxFileOutputStream::wxFileOutputStream at call 4 with 1 argument(s)");
+                break;
+            }
+        }
+    }
+
+    if(overload2_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((int) fd2)\n");
+                #endif
+
+                native_object = new wxFileOutputStream_php((int) fd2);
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxFileOutputStream_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxFileOutputStream::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxFileInputStream_free(void *object TSRMLS_DC) 
+void php_wxFileInputStream_free(void *object)
 {
     zo_wxFileInputStream* custom_object = (zo_wxFileInputStream*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFileInputStream_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxFileInputStream done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFileInputStream_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxFileInputStream done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxFileInputStream_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFileInputStream_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFileInputStream_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFileInputStream* custom_object;
-	custom_object = (zo_wxFileInputStream*) ecalloc(1, sizeof(zo_wxFileInputStream) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFileInputStream_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxFileInputStream* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxFileInputStream*) ecalloc(
+        1,
+        sizeof(zo_wxFileInputStream)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXFILEINPUTSTREAM_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXFILEINPUTSTREAM_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -6054,101 +6544,110 @@ END_EXTERN_C()
    Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFileInputStream, IsOk)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFileInputStream::IsOk\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFileInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxFileInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFileInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFileInputStream::IsOk call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFileInputStream::IsOk\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFILEINPUTSTREAM_TYPE){
-				references = &((wxFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxFileInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxFileInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFileInputStream::IsOk())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFileInputStream_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxFileInputStream_php*)native_object)->IsOk());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFileInputStream::IsOk call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFILEINPUTSTREAM_TYPE){
+                references = &((wxFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFileInputStream::IsOk())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxFileInputStream_php*)native_object)->IsOk());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileInputStream::IsOk\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFileInputStream::IsOk\n"
+        );
+    }
 }
 /* }}} */
 
@@ -6156,249 +6655,265 @@ PHP_METHOD(php_wxFileInputStream, IsOk)
    Opens the specified file using its ifileName name in read-only mode. */
 PHP_METHOD(php_wxFileInputStream, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFileInputStream::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFileInputStream* current_object;
-	wxFileInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	char* ifileName0;
-	long ifileName_len0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* file1;
-	wxFile* object_pointer1_0 = 0;
-	bool overload1_called = false;
-	//Parameters for overload 2
-	long fd2;
-	bool overload2_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&ifileName0, &ifileName_len0)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFileInputStream::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &ifileName0, &ifileName_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    zo_wxFileInputStream* current_object;
+    wxFileInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&file1, php_wxFile_entry)\n");
-		#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file1, php_wxFile_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(file1) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxFile_P(file1 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFile_P(file1 TSRMLS_CC)->native_object;
-					object_pointer1_0 = (wxFile*) argument_native_object;
-					if (!object_pointer1_0 )
-					{
-						goto overload2;
-					}
-				}
-				else if(Z_TYPE_P(file1) != IS_NULL)
-				{
-					goto overload2;
-				}
-			}
 
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+    //Parameters for overload 0
+    char* ifileName0;
+    long ifileName_len0;
+    bool overload0_called = false;
 
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&fd2)\n");
-		#endif
+    //Parameters for overload 1
+    zval* file1;
+    wxFile* object_pointer1_0 = 0;
+    bool overload1_called = false;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fd2 ) == SUCCESS)
-		{
-			overload2_called = true;
-			already_called = true;
-		}
-	}
+    //Parameters for overload 2
+    long fd2;
+    bool overload2_called = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(wxString(ifileName0, wxConvUTF8))\n");
-				#endif
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's' (&ifileName0, &ifileName_len0)\n");
+        #endif
 
-				native_object = new wxFileInputStream_php(wxString(ifileName0, wxConvUTF8));
+        char parse_parameters_string[] = "s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &ifileName0, &ifileName_len0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'O' (&file1, php_wxFile_entry)\n");
+        #endif
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(*(wxFile*) object_pointer1_0)\n");
-				#endif
+        char parse_parameters_string[] = "O";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &file1, php_wxFile_entry ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(file1) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxFile_P(file1)->object_type;
+                    argument_native_object = (void*) Z_wxFile_P(file1)->native_object;
+                    object_pointer1_0 = (wxFile*) argument_native_object;
+                    if (!object_pointer1_0 )
+                    {
+                        goto overload2;
+                    }
+                }
+                else if(Z_TYPE_P(file1) != IS_NULL)
+                {
+                    goto overload2;
+                }
+            }
 
-				native_object = new wxFileInputStream_php(*(wxFile*) object_pointer1_0);
+            overload1_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object->references.Initialize();
-				((wxFileInputStream_php*) native_object)->references.AddReference(file1, "wxFileInputStream::wxFileInputStream at call 4 with 1 argument(s)");
-				break;
-			}
-		}
-	}
+    //Overload 2
+    overload2:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&fd2)\n");
+        #endif
 
-	if(overload2_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((int) fd2)\n");
-				#endif
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &fd2 ) == SUCCESS)
+        {
+            overload2_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxFileInputStream_php((int) fd2);
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(wxString(ifileName0, wxConvUTF8))\n");
+                #endif
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+                native_object = new wxFileInputStream_php(wxString(ifileName0, wxConvUTF8));
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
 
-		current_object = Z_wxFileInputStream_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFileInputStream::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(*(wxFile*) object_pointer1_0)\n");
+                #endif
+
+                native_object = new wxFileInputStream_php(*(wxFile*) object_pointer1_0);
+
+                native_object->references.Initialize();
+                ((wxFileInputStream_php*) native_object)->references.AddReference(file1, "wxFileInputStream::wxFileInputStream at call 4 with 1 argument(s)");
+                break;
+            }
+        }
+    }
+
+    if(overload2_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((int) fd2)\n");
+                #endif
+
+                native_object = new wxFileInputStream_php((int) fd2);
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxFileInputStream_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxFileInputStream::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxFFileInputStream_free(void *object TSRMLS_DC) 
+void php_wxFFileInputStream_free(void *object)
 {
     zo_wxFFileInputStream* custom_object = (zo_wxFFileInputStream*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFFileInputStream_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxFFileInputStream done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFFileInputStream_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxFFileInputStream done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxFFileInputStream_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFFileInputStream_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFFileInputStream_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFFileInputStream* custom_object;
-	custom_object = (zo_wxFFileInputStream*) ecalloc(1, sizeof(zo_wxFFileInputStream) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFFileInputStream_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxFFileInputStream* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxFFileInputStream*) ecalloc(
+        1,
+        sizeof(zo_wxFFileInputStream)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXFFILEINPUTSTREAM_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXFFILEINPUTSTREAM_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -6407,157 +6922,159 @@ END_EXTERN_C()
    Initializes a file stream in read-only mode using the file I/O object file. */
 PHP_METHOD(php_wxFFileInputStream, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFFileInputStream::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFFileInputStream* current_object;
-	wxFFileInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	zval* file0;
-	wxFFile* object_pointer0_0 = 0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* filename1;
-	long filename_len1;
-	char* mode1;
-	long mode_len1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&file0, php_wxFFile_entry)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFFileInputStream::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file0, php_wxFFile_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(file0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxFFile_P(file0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFFile_P(file0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxFFile*) argument_native_object;
-					if (!object_pointer0_0 )
-					{
-						goto overload1;
-					}
-				}
-				else if(Z_TYPE_P(file0) != IS_NULL)
-				{
-					goto overload1;
-				}
-			}
+    zo_wxFFileInputStream* current_object;
+    wxFFileInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|s' (&filename1, &filename_len1, &mode1, &mode_len1)\n");
-		#endif
 
-		char parse_parameters_string[] = "s|s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename1, &filename_len1, &mode1, &mode_len1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+    //Parameters for overload 0
+    zval* file0;
+    wxFFile* object_pointer0_0 = 0;
+    bool overload0_called = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(*(wxFFile*) object_pointer0_0)\n");
-				#endif
+    //Parameters for overload 1
+    char* filename1;
+    long filename_len1;
+    char* mode1;
+    long mode_len1;
+    bool overload1_called = false;
 
-				native_object = new wxFFileInputStream_php(*(wxFFile*) object_pointer0_0);
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'O' (&file0, php_wxFFile_entry)\n");
+        #endif
 
-				native_object->references.Initialize();
-				((wxFFileInputStream_php*) native_object)->references.AddReference(file0, "wxFFileInputStream::wxFFileInputStream at call 4 with 1 argument(s)");
-				break;
-			}
-		}
-	}
+        char parse_parameters_string[] = "O";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &file0, php_wxFFile_entry ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(file0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxFFile_P(file0)->object_type;
+                    argument_native_object = (void*) Z_wxFFile_P(file0)->native_object;
+                    object_pointer0_0 = (wxFFile*) argument_native_object;
+                    if (!object_pointer0_0 )
+                    {
+                        goto overload1;
+                    }
+                }
+                else if(Z_TYPE_P(file0) != IS_NULL)
+                {
+                    goto overload1;
+                }
+            }
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(wxString(filename1, wxConvUTF8))\n");
-				#endif
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxFFileInputStream_php(wxString(filename1, wxConvUTF8));
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's|s' (&filename1, &filename_len1, &mode1, &mode_len1)\n");
+        #endif
 
-				native_object->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(wxString(filename1, wxConvUTF8), wxString(mode1, wxConvUTF8))\n");
-				#endif
+        char parse_parameters_string[] = "s|s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &filename1, &filename_len1, &mode1, &mode_len1 ) == SUCCESS)
+        {
+            overload1_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxFFileInputStream_php(wxString(filename1, wxConvUTF8), wxString(mode1, wxConvUTF8));
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(*(wxFFile*) object_pointer0_0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+                native_object = new wxFFileInputStream_php(*(wxFFile*) object_pointer0_0);
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object->references.Initialize();
+                ((wxFFileInputStream_php*) native_object)->references.AddReference(file0, "wxFFileInputStream::wxFFileInputStream at call 4 with 1 argument(s)");
+                break;
+            }
+        }
+    }
 
-		current_object = Z_wxFFileInputStream_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFFileInputStream::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(wxString(filename1, wxConvUTF8))\n");
+                #endif
+
+                native_object = new wxFFileInputStream_php(wxString(filename1, wxConvUTF8));
+
+                native_object->references.Initialize();
+                break;
+            }
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(wxString(filename1, wxConvUTF8), wxString(mode1, wxConvUTF8))\n");
+                #endif
+
+                native_object = new wxFFileInputStream_php(wxString(filename1, wxConvUTF8), wxString(mode1, wxConvUTF8));
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxFFileInputStream_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxFFileInputStream::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
@@ -6565,168 +7082,190 @@ PHP_METHOD(php_wxFFileInputStream, __construct)
    Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFFileInputStream, IsOk)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFFileInputStream::IsOk\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFFileInputStream* current_object;
-	wxphp_object_type current_object_type;
-	wxFFileInputStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFFileInputStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFFileInputStream::IsOk call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFFileInputStream::IsOk\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE){
-				references = &((wxFFileInputStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxFFileInputStream* current_object;
+    wxphp_object_type current_object_type;
+    wxFFileInputStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFFileInputStream::IsOk())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFFileInputStream_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxFFileInputStream_php*)native_object)->IsOk());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFFileInputStream::IsOk call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFFILEINPUTSTREAM_TYPE){
+                references = &((wxFFileInputStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFFILESTREAM_TYPE) && (!reference_type_found)){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFFileInputStream::IsOk())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxFFileInputStream_php*)native_object)->IsOk());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFileInputStream::IsOk\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFFileInputStream::IsOk\n"
+        );
+    }
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxFFileStream_free(void *object TSRMLS_DC) 
+void php_wxFFileStream_free(void *object)
 {
     zo_wxFFileStream* custom_object = (zo_wxFFileStream*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFFileStream_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxFFileStream done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFFileStream_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxFFileStream done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxFFileStream_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFFileStream_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFFileStream_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFFileStream* custom_object;
-	custom_object = (zo_wxFFileStream*) ecalloc(1, sizeof(zo_wxFFileStream) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFFileStream_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxFFileStream* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxFFileStream*) ecalloc(
+        1,
+        sizeof(zo_wxFFileStream)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXFFILESTREAM_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXFFILESTREAM_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -6735,97 +7274,106 @@ END_EXTERN_C()
    Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFFileStream, IsOk)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFFileStream::IsOk\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFFileStream* current_object;
-	wxphp_object_type current_object_type;
-	wxFFileStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFFileStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFFileStream::IsOk call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFFileStream::IsOk\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFFILESTREAM_TYPE){
-				references = &((wxFFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxFFileStream* current_object;
+    wxphp_object_type current_object_type;
+    wxFFileStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFFileStream::IsOk())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFFileStream_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxFFileStream_php*)native_object)->IsOk());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFFileStream::IsOk call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFFILESTREAM_TYPE){
+                references = &((wxFFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFFileStream::IsOk())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxFFileStream_php*)native_object)->IsOk());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFileStream::IsOk\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFFileStream::IsOk\n"
+        );
+    }
 }
 /* }}} */
 
@@ -6833,167 +7381,181 @@ PHP_METHOD(php_wxFFileStream, IsOk)
    Initializes a new file stream in the given mode using the specified iofileName name. */
 PHP_METHOD(php_wxFFileStream, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFFileStream::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFFileStream* current_object;
-	wxFFileStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	char* iofileName0;
-	long iofileName_len0;
-	char* mode0;
-	long mode_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|s' (&iofileName0, &iofileName_len0, &mode0, &mode_len0)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFFileStream::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "s|s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &iofileName0, &iofileName_len0, &mode0, &mode_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    zo_wxFFileStream* current_object;
+    wxFFileStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(wxString(iofileName0, wxConvUTF8))\n");
-				#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-				native_object = new wxFFileStream_php(wxString(iofileName0, wxConvUTF8));
 
-				native_object->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(wxString(iofileName0, wxConvUTF8), wxString(mode0, wxConvUTF8))\n");
-				#endif
+    //Parameters for overload 0
+    char* iofileName0;
+    long iofileName_len0;
+    char* mode0;
+    long mode_len0;
+    bool overload0_called = false;
 
-				native_object = new wxFFileStream_php(wxString(iofileName0, wxConvUTF8), wxString(mode0, wxConvUTF8));
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's|s' (&iofileName0, &iofileName_len0, &mode0, &mode_len0)\n");
+        #endif
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+        char parse_parameters_string[] = "s|s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &iofileName0, &iofileName_len0, &mode0, &mode_len0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(wxString(iofileName0, wxConvUTF8))\n");
+                #endif
 
-		current_object = Z_wxFFileStream_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFFileStream::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+                native_object = new wxFFileStream_php(wxString(iofileName0, wxConvUTF8));
+
+                native_object->references.Initialize();
+                break;
+            }
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(wxString(iofileName0, wxConvUTF8), wxString(mode0, wxConvUTF8))\n");
+                #endif
+
+                native_object = new wxFFileStream_php(wxString(iofileName0, wxConvUTF8), wxString(mode0, wxConvUTF8));
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxFFileStream_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxFFileStream::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxFileStream_free(void *object TSRMLS_DC) 
+void php_wxFileStream_free(void *object)
 {
     zo_wxFileStream* custom_object = (zo_wxFileStream*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFileStream_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-       
-            delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxFileStream done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFileStream_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
+
+    if(custom_object->native_object != NULL)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Pointer not null\n");
+        php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+        #endif
+
+        if(custom_object->is_user_initialized)
+        {
+            #ifdef USE_WXPHP_DEBUG
+            php_printf("Deleting pointer with delete\n");
+            #endif
+
+            delete custom_object->native_object;
+            custom_object->native_object = NULL;
+        }
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Deletion of wxFileStream done\n");
+        php_printf("===========================================\n\n");
+        #endif
+    }
+    else
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Not user space initialized\n");
+        #endif
+    }
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxFileStream_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFileStream_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFileStream_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFileStream* custom_object;
-	custom_object = (zo_wxFileStream*) ecalloc(1, sizeof(zo_wxFileStream) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFileStream_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxFileStream* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxFileStream*) ecalloc(
+        1,
+        sizeof(zo_wxFileStream)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXFILESTREAM_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXFILESTREAM_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -7002,97 +7564,106 @@ END_EXTERN_C()
    Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFileStream, IsOk)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFileStream::IsOk\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFileStream* current_object;
-	wxphp_object_type current_object_type;
-	wxFileStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFileStream_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFileStream::IsOk call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFileStream::IsOk\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFILESTREAM_TYPE){
-				references = &((wxFileStream_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxFileStream* current_object;
+    wxphp_object_type current_object_type;
+    wxFileStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFileStream::IsOk())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFileStream_P(getThis());
 
-				ZVAL_BOOL(return_value, ((wxFileStream_php*)native_object)->IsOk());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFileStream::IsOk call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFILESTREAM_TYPE){
+                references = &((wxFileStream_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFileStream::IsOk())\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxFileStream_php*)native_object)->IsOk());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileStream::IsOk\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFileStream::IsOk\n"
+        );
+    }
 }
 /* }}} */
 
@@ -7100,87 +7671,88 @@ PHP_METHOD(php_wxFileStream, IsOk)
    Initializes a new file stream in read-write mode using the specified iofileName name. */
 PHP_METHOD(php_wxFileStream, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFileStream::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFileStream* current_object;
-	wxFileStream_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	char* iofileName0;
-	long iofileName_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&iofileName0, &iofileName_len0)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFileStream::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &iofileName0, &iofileName_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    zo_wxFileStream* current_object;
+    wxFileStream_php* native_object;
+    void* argument_native_object = NULL;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(wxString(iofileName0, wxConvUTF8))\n");
-				#endif
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-				native_object = new wxFileStream_php(wxString(iofileName0, wxConvUTF8));
 
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
+    //Parameters for overload 0
+    char* iofileName0;
+    long iofileName_len0;
+    bool overload0_called = false;
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's' (&iofileName0, &iofileName_len0)\n");
+        #endif
 
-		current_object = Z_wxFileStream_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFileStream::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+        char parse_parameters_string[] = "s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &iofileName0, &iofileName_len0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct(wxString(iofileName0, wxConvUTF8))\n");
+                #endif
+
+                native_object = new wxFileStream_php(wxString(iofileName0, wxConvUTF8));
+
+                native_object->references.Initialize();
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxFileStream_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxFileStream::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 

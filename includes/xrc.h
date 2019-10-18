@@ -16,24 +16,23 @@
 #include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_xrc_get_args, 0, 0, 1)
-	ZEND_ARG_INFO(0, name)
+    ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxXmlResourceHandler_entry;
-void php_wxXmlResourceHandler_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxXmlResourceHandler_destruction_handler(zend_resource*);
 
 class wxXmlResourceHandler_php: public wxXmlResourceHandler{
-	public:
-	
-	wxXmlResourceHandler_php():wxXmlResourceHandler(){}
-		
-	bool CanHandle(wxXmlNode* node);
-	wxObject* DoCreateResource();
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxXmlResourceHandler_php():wxXmlResourceHandler(){}
+    
+    bool CanHandle(wxXmlNode* node);
+    wxObject* DoCreateResource();
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -44,40 +43,42 @@ typedef struct _zo_wxXmlResourceHandler{
     zend_object zo;
 } zo_wxXmlResourceHandler;
 
-void php_wxXmlResourceHandler_free(void *object TSRMLS_DC);
-zend_object* php_wxXmlResourceHandler_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxXmlResourceHandler_free(void *object);
+zend_object* php_wxXmlResourceHandler_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlResourceHandler_functions[] = {
-	PHP_ME(php_wxXmlResourceHandler, CreateResource, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResourceHandler, SetParentResource, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResourceHandler, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxXmlResourceHandler, CreateResource, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResourceHandler, SetParentResource, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResourceHandler, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxXmlResourceHandler * php_wxXmlResourceHandler_fetch_object(zend_object *obj) {
-      return (zo_wxXmlResourceHandler *)((char *)obj - XtOffsetOf(zo_wxXmlResourceHandler, zo));
+    return (zo_wxXmlResourceHandler *)(
+        (char *)(obj) - XtOffsetOf(zo_wxXmlResourceHandler, zo)
+    );
 }
 
-#define Z_wxXmlResourceHandler_P(zv) php_wxXmlResourceHandler_fetch_object(Z_OBJ_P(zv))
+#define Z_wxXmlResourceHandler_P(zv) \
+    php_wxXmlResourceHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxXmlResource_entry;
-void php_wxXmlResource_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxXmlResource_destruction_handler(zend_resource*);
 
 class wxXmlResource_php: public wxXmlResource{
-	public:
-	
-	wxXmlResource_php(const wxString& filemask, int flags=wxXRC_USE_LOCALE, const wxString& domain=wxEmptyString):wxXmlResource(filemask, flags, domain){}
-	wxXmlResource_php(int flags=wxXRC_USE_LOCALE, const wxString& domain=wxEmptyString):wxXmlResource(flags, domain){}
-		
-	void DoReportError(const wxString& xrcFile, const wxXmlNode* position, const wxString& message);
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxXmlResource_php(const wxString& filemask, int flags=wxXRC_USE_LOCALE, const wxString& domain=wxEmptyString):wxXmlResource(filemask, flags, domain){}
+    wxXmlResource_php(int flags=wxXRC_USE_LOCALE, const wxString& domain=wxEmptyString):wxXmlResource(flags, domain){}
+    
+    void DoReportError(const wxString& xrcFile, const wxXmlNode* position, const wxString& message);
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -88,50 +89,53 @@ typedef struct _zo_wxXmlResource{
     zend_object zo;
 } zo_wxXmlResource;
 
-void php_wxXmlResource_free(void *object TSRMLS_DC);
-zend_object* php_wxXmlResource_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxXmlResource_free(void *object);
+zend_object* php_wxXmlResource_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlResource_functions[] = {
-	PHP_ME(php_wxXmlResource, AddHandler, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, AttachUnknownControl, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, ClearHandlers, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, CompareVersion, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, FindXRCIDById, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, Get, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, GetDomain, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, GetFlags, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, GetResourceNode, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, GetVersion, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, GetXRCID, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, InitAllHandlers, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, Load, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadAllFiles, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadBitmap, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadDialog, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadFile, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadFrame, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadIcon, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadMenu, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadMenuBar, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadObject, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadObjectRecursively, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadPanel, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, LoadToolBar, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, Set, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, SetDomain, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, SetFlags, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, Unload, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxXmlResource, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxXmlResource, AddHandler, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, AttachUnknownControl, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, ClearHandlers, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, CompareVersion, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, FindXRCIDById, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, Get, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, GetDomain, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, GetFlags, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, GetResourceNode, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, GetVersion, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, GetXRCID, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, InitAllHandlers, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, Load, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadAllFiles, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadBitmap, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadDialog, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadFile, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadFrame, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadIcon, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadMenu, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadMenuBar, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadObject, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadObjectRecursively, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadPanel, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadToolBar, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, Set, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, SetDomain, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, SetFlags, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, Unload, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxXmlResource * php_wxXmlResource_fetch_object(zend_object *obj) {
-      return (zo_wxXmlResource *)((char *)obj - XtOffsetOf(zo_wxXmlResource, zo));
+    return (zo_wxXmlResource *)(
+        (char *)(obj) - XtOffsetOf(zo_wxXmlResource, zo)
+    );
 }
 
-#define Z_wxXmlResource_P(zv) php_wxXmlResource_fetch_object(Z_OBJ_P(zv))
+#define Z_wxXmlResource_P(zv) \
+    php_wxXmlResource_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_XRC_H_GUARD

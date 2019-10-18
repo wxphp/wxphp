@@ -53,38 +53,53 @@
 
 
 BEGIN_EXTERN_C()
-void php_wxColourPickerCtrl_free(void *object TSRMLS_DC) 
+void php_wxColourPickerCtrl_free(void *object)
 {
     zo_wxColourPickerCtrl* custom_object = (zo_wxColourPickerCtrl*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Obviate delete call for wxColourPickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n\n");
-	#endif
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Obviate delete call for wxColourPickerCtrl on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n\n");
+    #endif
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxColourPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxColourPickerCtrl_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxColourPickerCtrl_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxColourPickerCtrl* custom_object;
-	custom_object = (zo_wxColourPickerCtrl*) ecalloc(1, sizeof(zo_wxColourPickerCtrl) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxColourPickerCtrl_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxColourPickerCtrl* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxColourPickerCtrl*) ecalloc(
+        1,
+        sizeof(zo_wxColourPickerCtrl)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXCOLOURPICKERCTRL_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXCOLOURPICKERCTRL_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -93,296 +108,305 @@ END_EXTERN_C()
    Creates a colour picker with the given arguments. */
 PHP_METHOD(php_wxColourPickerCtrl, Create)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxColourPickerCtrl::Create\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxColourPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxColourPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxColourPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxColourPickerCtrl::Create call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxColourPickerCtrl::Create\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	zval* colour0;
-	wxColour* object_pointer0_2 = 0;
-	zval* pos0;
-	wxPoint* object_pointer0_3 = 0;
-	zval* size0;
-	wxSize* object_pointer0_4 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_6 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 8)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    zo_wxColourPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxColourPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "zl|OOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			if(arguments_received >= 3){
-				if(Z_TYPE_P(colour0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
-					object_pointer0_2 = (wxColour*) argument_native_object;
-					if (!object_pointer0_2 )
-					{
-						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(colour0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
-				}
-			}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxColourPickerCtrl_P(getThis());
 
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_3 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_3 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxColourPickerCtrl::Create call\n"
+            );
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_4 = (wxSize*) argument_native_object;
-					if (!object_pointer0_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+            bool reference_type_found = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+            if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
-				#endif
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    zval* colour0;
+    wxColour* object_pointer0_2 = 0;
+    zval* pos0;
+    wxPoint* object_pointer0_3 = 0;
+    zval* size0;
+    wxSize* object_pointer0_4 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_6 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 8)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 2 argument(s)");
+        char parse_parameters_string[] = "zl|OOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2))\n\n");
-				#endif
+            if(arguments_received >= 3){
+                if(Z_TYPE_P(colour0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxColour_P(colour0)->object_type;
+                    argument_native_object = (void*) Z_wxColour_P(colour0)->native_object;
+                    object_pointer0_2 = (wxColour*) argument_native_object;
+                    if (!object_pointer0_2 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(colour0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2));
+            if(arguments_received >= 4){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_3 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_3 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 3 argument(s)");
-				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 3 argument(s)");
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_4 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3))\n\n");
-				#endif
+            if(arguments_received >= 7){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_6 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 4 argument(s)");
-				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 4 argument(s)");
-				references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 4 argument(s)");
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+                references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 2 argument(s)");
 
-				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
+                return;
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2));
 
-				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+                references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 3 argument(s)");
+                references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 3 argument(s)");
 
-				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
+                return;
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
 
-				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+                references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 4 argument(s)");
+                references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 4 argument(s)");
+                references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 4 argument(s)");
 
-				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(validator0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
+                return;
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+                references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 5 argument(s)");
+                references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
+                references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
+                references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
 
-				references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(validator0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
+                return;
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-		}
-	}
+                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourPickerCtrl::Create\n");
-	}
+                references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 6 argument(s)");
+                references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
+                references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
+                references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
+
+                return;
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+
+                references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 7 argument(s)");
+                references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(validator0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
+
+                return;
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+
+                references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 8 argument(s)");
+                references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(pos0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(size0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(validator0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxColourPickerCtrl::Create\n"
+        );
+    }
 }
 /* }}} */
 
@@ -390,105 +414,114 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
    Returns the currently selected colour. */
 PHP_METHOD(php_wxColourPickerCtrl, GetColour)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxColourPickerCtrl::GetColour\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxColourPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxColourPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxColourPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxColourPickerCtrl::GetColour call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxColourPickerCtrl::GetColour\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxColourPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxColourPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxColourPickerCtrl::GetColour() to return new object\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxColourPickerCtrl_P(getThis());
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxColourPickerCtrl_php*)native_object)->GetColour();
-				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
-				object_init_ex(return_value, php_wxColour_entry);
-				((wxColour_php*)ptr)->phpObj = return_value;
-				zo_wxColour* zo0 = Z_wxColour_P(return_value TSRMLS_CC);
-				zo0->native_object = (wxColour_php*) ptr;
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxColourPickerCtrl::GetColour call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxColourPickerCtrl::GetColour() to return new object\n\n");
+                #endif
+
+                wxColour value_to_return0;
+                value_to_return0 = ((wxColourPickerCtrl_php*)native_object)->GetColour();
+                ((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
+                void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
+                memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
+                object_init_ex(return_value, php_wxColour_entry);
+                ((wxColour_php*)ptr)->phpObj = *return_value;
+                zo_wxColour* zo0 = Z_wxColour_P(return_value);
+                zo0->native_object = (wxColour_php*) ptr;
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourPickerCtrl::GetColour\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxColourPickerCtrl::GetColour\n"
+        );
+    }
 }
 /* }}} */
 
@@ -496,161 +529,171 @@ PHP_METHOD(php_wxColourPickerCtrl, GetColour)
    Sets the currently selected colour. */
 PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxColourPickerCtrl::SetColour\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxColourPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxColourPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxColourPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxColourPickerCtrl::SetColour call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxColourPickerCtrl::SetColour\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* col0;
-	wxColour* object_pointer0_0 = 0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* colname1;
-	long colname_len1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&col0, php_wxColour_entry)\n");
-		#endif
+    zo_wxColourPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxColourPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, php_wxColour_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(col0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxColour_P(col0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(col0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxColour*) argument_native_object;
-					if (!object_pointer0_0 )
-					{
-						goto overload1;
-					}
-				}
-				else if(Z_TYPE_P(col0) != IS_NULL)
-				{
-					goto overload1;
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxColourPickerCtrl_P(getThis());
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&colname1, &colname_len1)\n");
-		#endif
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxColourPickerCtrl::SetColour call\n"
+            );
 
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colname1, &colname_len1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxColourPickerCtrl::SetColour(*(wxColour*) object_pointer0_0)\n\n");
-				#endif
+            bool reference_type_found = false;
 
-				((wxColourPickerCtrl_php*)native_object)->SetColour(*(wxColour*) object_pointer0_0);
+            if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				references->AddReference(col0, "wxColourPickerCtrl::SetColour at call 3 with 1 argument(s)");
+    //Parameters for overload 0
+    zval* col0;
+    wxColour* object_pointer0_0 = 0;
+    bool overload0_called = false;
 
-				return;
-				break;
-			}
-		}
-	}
+    //Parameters for overload 1
+    char* colname1;
+    long colname_len1;
+    bool overload1_called = false;
 
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxColourPickerCtrl::SetColour(wxString(colname1, wxConvUTF8))\n\n");
-				#endif
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'O' (&col0, php_wxColour_entry)\n");
+        #endif
 
-				((wxColourPickerCtrl_php*)native_object)->SetColour(wxString(colname1, wxConvUTF8));
+        char parse_parameters_string[] = "O";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &col0, php_wxColour_entry ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(col0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxColour_P(col0)->object_type;
+                    argument_native_object = (void*) Z_wxColour_P(col0)->native_object;
+                    object_pointer0_0 = (wxColour*) argument_native_object;
+                    if (!object_pointer0_0 )
+                    {
+                        goto overload1;
+                    }
+                }
+                else if(Z_TYPE_P(col0) != IS_NULL)
+                {
+                    goto overload1;
+                }
+            }
+
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    //Overload 1
+    overload1:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's' (&colname1, &colname_len1)\n");
+        #endif
+
+        char parse_parameters_string[] = "s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &colname1, &colname_len1 ) == SUCCESS)
+        {
+            overload1_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxColourPickerCtrl::SetColour(*(wxColour*) object_pointer0_0)\n\n");
+                #endif
+
+                ((wxColourPickerCtrl_php*)native_object)->SetColour(*(wxColour*) object_pointer0_0);
+
+                references->AddReference(col0, "wxColourPickerCtrl::SetColour at call 3 with 1 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    if(overload1_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxColourPickerCtrl::SetColour(wxString(colname1, wxConvUTF8))\n\n");
+                #endif
+
+                ((wxColourPickerCtrl_php*)native_object)->SetColour(wxString(colname1, wxConvUTF8));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourPickerCtrl::SetColour\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxColourPickerCtrl::SetColour\n"
+        );
+    }
 }
 /* }}} */
 
@@ -658,310 +701,326 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
    Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxColourPickerCtrl, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxColourPickerCtrl::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxColourPickerCtrl* current_object;
-	wxColourPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	zval* colour0;
-	wxColour* object_pointer0_2 = 0;
-	zval* pos0;
-	wxPoint* object_pointer0_3 = 0;
-	zval* size0;
-	wxSize* object_pointer0_4 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_6 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 8)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxColourPickerCtrl::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "zl|OOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    zo_wxColourPickerCtrl* current_object;
+    wxColourPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-			if(arguments_received >= 3){
-				if(Z_TYPE_P(colour0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxColour_P(colour0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxColour_P(colour0 TSRMLS_CC)->native_object;
-					object_pointer0_2 = (wxColour*) argument_native_object;
-					if (!object_pointer0_2 )
-					{
-						zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(colour0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_3 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_3 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_4 = (wxSize*) argument_native_object;
-					if (!object_pointer0_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    zval* colour0;
+    wxColour* object_pointer0_2 = 0;
+    zval* pos0;
+    wxPoint* object_pointer0_3 = 0;
+    zval* size0;
+    wxSize* object_pointer0_4 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_6 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 8)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+        char parse_parameters_string[] = "zl|OOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
-				#endif
+            if(arguments_received >= 3){
+                if(Z_TYPE_P(colour0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxColour_P(colour0)->object_type;
+                    argument_native_object = (void*) Z_wxColour_P(colour0)->native_object;
+                    object_pointer0_2 = (wxColour*) argument_native_object;
+                    if (!object_pointer0_2 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'colour' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(colour0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'colour' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
+            if(arguments_received >= 4){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_3 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_3 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 2 argument(s)");
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2)\n");
-				#endif
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_4 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2);
+            if(arguments_received >= 7){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_6 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 3 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 3 argument(s)");
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3)\n");
-				#endif
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 4 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 4 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 4 argument(s)");
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
-				#endif
+                native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
-				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
+                native_object->references.Initialize();
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 2 argument(s)");
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 5 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
-				#endif
+                native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2);
 
-				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
+                native_object->references.Initialize();
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 3 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 3 argument(s)");
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 6 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
-				#endif
+                native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
 
-				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
+                native_object->references.Initialize();
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 4 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 4 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 4 argument(s)");
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 7 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
-				#endif
+                native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
-				native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
+                native_object->references.Initialize();
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 5 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 5 argument(s)");
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 8 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
-				((wxColourPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
-				break;
-			}
-		}
-	}
+                native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object->references.Initialize();
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 6 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 6 argument(s)");
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
+                #endif
 
-		current_object = Z_wxColourPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxColourPickerCtrl::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+                native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
+
+                native_object->references.Initialize();
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 7 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 7 argument(s)");
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
+                #endif
+
+                native_object = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
+
+                native_object->references.Initialize();
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call 2 with 8 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
+                ((wxColourPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxColourPickerCtrl::wxColourPickerCtrl at call 4 with 8 argument(s)");
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxColourPickerCtrl_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxColourPickerCtrl::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxDatePickerCtrl_free(void *object TSRMLS_DC) 
+void php_wxDatePickerCtrl_free(void *object)
 {
     zo_wxDatePickerCtrl* custom_object = (zo_wxDatePickerCtrl*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Obviate delete call for wxDatePickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n\n");
-	#endif
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Obviate delete call for wxDatePickerCtrl on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n\n");
+    #endif
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxDatePickerCtrl_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxDatePickerCtrl_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxDatePickerCtrl_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDatePickerCtrl* custom_object;
-	custom_object = (zo_wxDatePickerCtrl*) ecalloc(1, sizeof(zo_wxDatePickerCtrl) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxDatePickerCtrl_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxDatePickerCtrl* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxDatePickerCtrl*) ecalloc(
+        1,
+        sizeof(zo_wxDatePickerCtrl)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXDATEPICKERCTRL_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXDATEPICKERCTRL_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -970,250 +1029,251 @@ END_EXTERN_C()
    Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxDatePickerCtrl, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDatePickerCtrl::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDatePickerCtrl* current_object;
-	wxDatePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	time_t dt0;
-	zval* pos0;
-	wxPoint* object_pointer0_3 = 0;
-	zval* size0;
-	wxSize* object_pointer0_4 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_6 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 8)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDatePickerCtrl::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "zl|lOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    zo_wxDatePickerCtrl* current_object;
+    wxDatePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_3 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_3 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_4 = (wxSize*) argument_native_object;
-					if (!object_pointer0_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
 
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    time_t dt0;
+    zval* pos0;
+    wxPoint* object_pointer0_3 = 0;
+    zval* size0;
+    wxSize* object_pointer0_4 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_6 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 8)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
-				#endif
+        char parse_parameters_string[] = "zl|lOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
+            if(arguments_received >= 4){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_3 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_3 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 2 argument(s)");
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0))\n");
-				#endif
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_4 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0));
+            if(arguments_received >= 7){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_6 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 3 argument(s)");
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3)\n");
-				#endif
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3);
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 4 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 4 argument(s)");
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
-				#endif
+                native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
-				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
+                native_object->references.Initialize();
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 2 argument(s)");
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0))\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 5 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 5 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 5 argument(s)");
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
-				#endif
+                native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0));
 
-				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
+                native_object->references.Initialize();
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 3 argument(s)");
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 6 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 6 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 6 argument(s)");
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
-				#endif
+                native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3);
 
-				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
+                native_object->references.Initialize();
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 4 argument(s)");
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 4 argument(s)");
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 7 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
-				#endif
+                native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
-				native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
+                native_object->references.Initialize();
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 5 argument(s)");
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 5 argument(s)");
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 5 argument(s)");
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 8 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
-				((wxDatePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
-				break;
-			}
-		}
-	}
+                native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object->references.Initialize();
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 6 argument(s)");
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 6 argument(s)");
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 6 argument(s)");
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
+                #endif
 
-		current_object = Z_wxDatePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxDatePickerCtrl::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+                native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
+
+                native_object->references.Initialize();
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 7 argument(s)");
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 7 argument(s)");
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
+                #endif
+
+                native_object = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
+
+                native_object->references.Initialize();
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call 2 with 8 argument(s)");
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
+                ((wxDatePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDatePickerCtrl::wxDatePickerCtrl at call 4 with 8 argument(s)");
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxDatePickerCtrl_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxDatePickerCtrl::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
@@ -1221,272 +1281,281 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
    Create the control window. */
 PHP_METHOD(php_wxDatePickerCtrl, Create)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDatePickerCtrl::Create\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDatePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxDatePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDatePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDatePickerCtrl::Create call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDatePickerCtrl::Create\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATEPICKERCTRL_TYPE){
-				references = &((wxDatePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	time_t dt0;
-	zval* pos0;
-	wxPoint* object_pointer0_3 = 0;
-	zval* size0;
-	wxSize* object_pointer0_4 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_6 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 8)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    zo_wxDatePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxDatePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "zl|lOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_3 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_3 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDatePickerCtrl_P(getThis());
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_4 = (wxSize*) argument_native_object;
-					if (!object_pointer0_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDatePickerCtrl::Create call\n"
+            );
 
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+            bool reference_type_found = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
-				#endif
+            if(current_object_type == PHP_WXDATEPICKERCTRL_TYPE){
+                references = &((wxDatePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    time_t dt0;
+    zval* pos0;
+    wxPoint* object_pointer0_3 = 0;
+    zval* size0;
+    wxSize* object_pointer0_4 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_6 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 2 argument(s)");
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 8)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)))\n\n");
-				#endif
+        char parse_parameters_string[] = "zl|lOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
+            if(arguments_received >= 4){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_3 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_3 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 3 argument(s)");
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_4 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3))\n\n");
-				#endif
+            if(arguments_received >= 7){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_6 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 4 argument(s)");
-				references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 4 argument(s)");
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+                references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 2 argument(s)");
 
-				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 5 argument(s)");
+                return;
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
 
-				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+                references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 3 argument(s)");
 
-				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 6 argument(s)");
+                return;
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
 
-				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+                references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 4 argument(s)");
+                references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 4 argument(s)");
 
-				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(validator0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
+                return;
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+                references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 5 argument(s)");
+                references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 5 argument(s)");
+                references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 5 argument(s)");
 
-				references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(validator0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
+                return;
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-		}
-	}
+                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDatePickerCtrl::Create\n");
-	}
+                references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 6 argument(s)");
+                references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 6 argument(s)");
+                references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 6 argument(s)");
+
+                return;
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+
+                references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 7 argument(s)");
+                references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(validator0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
+
+                return;
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+
+                references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 8 argument(s)");
+                references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(size0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(validator0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDatePickerCtrl::Create\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1494,102 +1563,111 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
    Changes the current value of the control. */
 PHP_METHOD(php_wxDatePickerCtrl, SetValue)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDatePickerCtrl::SetValue\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDatePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxDatePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDatePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDatePickerCtrl::SetValue call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDatePickerCtrl::SetValue\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATEPICKERCTRL_TYPE){
-				references = &((wxDatePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	time_t dt0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&dt0)\n");
-		#endif
+    zo_wxDatePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxDatePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dt0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDatePickerCtrl::SetValue(wxDateTime(dt0))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDatePickerCtrl_P(getThis());
 
-				((wxDatePickerCtrl_php*)native_object)->SetValue(wxDateTime(dt0));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDatePickerCtrl::SetValue call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXDATEPICKERCTRL_TYPE){
+                references = &((wxDatePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    time_t dt0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&dt0)\n");
+        #endif
+
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &dt0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDatePickerCtrl::SetValue(wxDateTime(dt0))\n\n");
+                #endif
+
+                ((wxDatePickerCtrl_php*)native_object)->SetValue(wxDateTime(dt0));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDatePickerCtrl::SetValue\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDatePickerCtrl::SetValue\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1597,103 +1675,112 @@ PHP_METHOD(php_wxDatePickerCtrl, SetValue)
    Sets the valid range for the date selection. */
 PHP_METHOD(php_wxDatePickerCtrl, SetRange)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDatePickerCtrl::SetRange\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDatePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxDatePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDatePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDatePickerCtrl::SetRange call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDatePickerCtrl::SetRange\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATEPICKERCTRL_TYPE){
-				references = &((wxDatePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	time_t dt10;
-	time_t dt20;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (&dt10, &dt20)\n");
-		#endif
+    zo_wxDatePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxDatePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dt10, &dt20 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDatePickerCtrl::SetRange(wxDateTime(dt10), wxDateTime(dt20))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDatePickerCtrl_P(getThis());
 
-				((wxDatePickerCtrl_php*)native_object)->SetRange(wxDateTime(dt10), wxDateTime(dt20));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDatePickerCtrl::SetRange call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXDATEPICKERCTRL_TYPE){
+                references = &((wxDatePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    time_t dt10;
+    time_t dt20;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'll' (&dt10, &dt20)\n");
+        #endif
+
+        char parse_parameters_string[] = "ll";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &dt10, &dt20 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDatePickerCtrl::SetRange(wxDateTime(dt10), wxDateTime(dt20))\n\n");
+                #endif
+
+                ((wxDatePickerCtrl_php*)native_object)->SetRange(wxDateTime(dt10), wxDateTime(dt20));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDatePickerCtrl::SetRange\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDatePickerCtrl::SetRange\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1701,99 +1788,108 @@ PHP_METHOD(php_wxDatePickerCtrl, SetRange)
    Returns the currently entered date. */
 PHP_METHOD(php_wxDatePickerCtrl, GetValue)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDatePickerCtrl::GetValue\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDatePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxDatePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDatePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDatePickerCtrl::GetValue call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDatePickerCtrl::GetValue\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATEPICKERCTRL_TYPE){
-				references = &((wxDatePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxDatePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxDatePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDatePickerCtrl::GetValue() to return timestamp\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDatePickerCtrl_P(getThis());
 
-				time_t value_to_return0;
-				value_to_return0 = ((wxDatePickerCtrl_php*)native_object)->GetValue().GetTicks();
-				ZVAL_LONG(return_value, value_to_return0);
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDatePickerCtrl::GetValue call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXDATEPICKERCTRL_TYPE){
+                references = &((wxDatePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDatePickerCtrl::GetValue() to return timestamp\n\n");
+                #endif
+
+                time_t value_to_return0;
+                value_to_return0 = ((wxDatePickerCtrl_php*)native_object)->GetValue().GetTicks();
+                ZVAL_LONG(return_value, value_to_return0);
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDatePickerCtrl::GetValue\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDatePickerCtrl::GetValue\n"
+        );
+    }
 }
 /* }}} */
 
@@ -1801,148 +1897,172 @@ PHP_METHOD(php_wxDatePickerCtrl, GetValue)
    If the control had been previously limited to a range of dates using SetRange(), returns the lower and upper bounds of this range. */
 PHP_METHOD(php_wxDatePickerCtrl, GetRange)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDatePickerCtrl::GetRange\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDatePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxDatePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDatePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDatePickerCtrl::GetRange call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDatePickerCtrl::GetRange\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDATEPICKERCTRL_TYPE){
-				references = &((wxDatePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	time_t dt10;
-	zval dt10_ref;
-	time_t dt20;
-	zval dt20_ref;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (&dt10, &dt20)\n");
-		#endif
+    zo_wxDatePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxDatePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dt10, &dt20 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, dt10_ref, dt20_ref );
-		}
-	}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDatePickerCtrl_P(getThis());
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				wxDateTime date_time0_0 = wxDateTime(dt10);
-				wxDateTime date_time0_1 = wxDateTime(dt20);
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::GetRange(&date_time0_0, &date_time0_1))\n\n");
-				#endif
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDatePickerCtrl::GetRange call\n"
+            );
 
-				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->GetRange(&date_time0_0, &date_time0_1));
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				ZVAL_LONG(&dt10_ref, date_time0_0.GetTicks());
-				ZVAL_LONG(&dt20_ref, date_time0_1.GetTicks());
+            bool reference_type_found = false;
 
-				return;
-				break;
-			}
-		}
-	}
+            if(current_object_type == PHP_WXDATEPICKERCTRL_TYPE){
+                references = &((wxDatePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDatePickerCtrl::GetRange\n");
-	}
+    //Parameters for overload 0
+    time_t dt10;
+    zval dt10_ref;
+    time_t dt20;
+    zval dt20_ref;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 2)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'll' (&dt10, &dt20)\n");
+        #endif
+
+        char parse_parameters_string[] = "ll";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &dt10, &dt20 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+
+            char parse_references_string[] = "zz";
+            zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_references_string, dt10_ref, dt20_ref );
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                wxDateTime date_time0_0 = wxDateTime(dt10);
+                wxDateTime date_time0_1 = wxDateTime(dt20);
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::GetRange(&date_time0_0, &date_time0_1))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->GetRange(&date_time0_0, &date_time0_1));
+
+                ZVAL_LONG(&dt10_ref, date_time0_0.GetTicks());
+                ZVAL_LONG(&dt20_ref, date_time0_1.GetTicks());
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDatePickerCtrl::GetRange\n"
+        );
+    }
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxFilePickerCtrl_free(void *object TSRMLS_DC) 
+void php_wxFilePickerCtrl_free(void *object)
 {
     zo_wxFilePickerCtrl* custom_object = (zo_wxFilePickerCtrl*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Obviate delete call for wxFilePickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n\n");
-	#endif
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Obviate delete call for wxFilePickerCtrl on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n\n");
+    #endif
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxFilePickerCtrl_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFilePickerCtrl_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFilePickerCtrl_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFilePickerCtrl* custom_object;
-	custom_object = (zo_wxFilePickerCtrl*) ecalloc(1, sizeof(zo_wxFilePickerCtrl) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFilePickerCtrl_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxFilePickerCtrl* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxFilePickerCtrl*) ecalloc(
+        1,
+        sizeof(zo_wxFilePickerCtrl)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXFILEPICKERCTRL_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXFILEPICKERCTRL_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -1951,303 +2071,312 @@ END_EXTERN_C()
    Creates this widget with the given parameters. */
 PHP_METHOD(php_wxFilePickerCtrl, Create)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFilePickerCtrl::Create\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFilePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxFilePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFilePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFilePickerCtrl::Create call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFilePickerCtrl::Create\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	char* path0;
-	long path_len0;
-	char* message0;
-	long message_len0;
-	char* wildcard0;
-	long wildcard_len0;
-	zval* pos0;
-	wxPoint* object_pointer0_5 = 0;
-	zval* size0;
-	wxSize* object_pointer0_6 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_8 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 10)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|sssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    zo_wxFilePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxFilePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "zl|sssOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			if(arguments_received >= 6){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_5 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_5 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFilePickerCtrl_P(getThis());
 
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_6 = (wxSize*) argument_native_object;
-					if (!object_pointer0_6 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFilePickerCtrl::Create call\n"
+            );
 
-			if(arguments_received >= 9){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_8 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_8 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+            bool reference_type_found = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
-				#endif
+            if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    char* path0;
+    long path_len0;
+    char* message0;
+    long message_len0;
+    char* wildcard0;
+    long wildcard_len0;
+    zval* pos0;
+    wxPoint* object_pointer0_5 = 0;
+    zval* size0;
+    wxSize* object_pointer0_6 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_8 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 2 argument(s)");
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 10)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|sssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)))\n\n");
-				#endif
+        char parse_parameters_string[] = "zl|sssOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
+            if(arguments_received >= 6){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_5 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_5 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 3 argument(s)");
+            if(arguments_received >= 7){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_6 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_6 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)))\n\n");
-				#endif
+            if(arguments_received >= 9){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_8 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_8 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 4 argument(s)");
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)));
+                references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 2 argument(s)");
 
-				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 5 argument(s)");
+                return;
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
 
-				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5));
+                references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 3 argument(s)");
 
-				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 6 argument(s)");
+                return;
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
 
-				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6));
+                references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 4 argument(s)");
 
-				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 7 argument(s)");
+                return;
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)));
 
-				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0));
+                references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 5 argument(s)");
 
-				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 8 argument(s)");
+                return;
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 9:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5));
 
-				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8));
+                references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 6 argument(s)");
+                references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 6 argument(s)");
 
-				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 9 argument(s)");
-				references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(validator0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
+                return;
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 10:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8)))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6));
 
-				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8)));
+                references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 7 argument(s)");
+                references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 7 argument(s)");
 
-				references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 10 argument(s)");
-				references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
-				references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
-				references->AddReference(validator0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
+                return;
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-		}
-	}
+                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0));
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFilePickerCtrl::Create\n");
-	}
+                references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 8 argument(s)");
+                references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 8 argument(s)");
+
+                return;
+                break;
+            }
+            case 9:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8));
+
+                references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 9 argument(s)");
+                references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
+                references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
+                references->AddReference(validator0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
+
+                return;
+                break;
+            }
+            case 10:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8)));
+
+                references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 10 argument(s)");
+                references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
+                references->AddReference(size0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
+                references->AddReference(validator0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFilePickerCtrl::Create\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2255,99 +2384,108 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
    Returns the absolute path of the currently selected file. */
 PHP_METHOD(php_wxFilePickerCtrl, GetPath)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFilePickerCtrl::GetPath\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFilePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxFilePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFilePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFilePickerCtrl::GetPath call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFilePickerCtrl::GetPath\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxFilePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxFilePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(wxFilePickerCtrl::GetPath().fn_str(), 1)\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFilePickerCtrl_P(getThis());
 
-				wxString value_to_return0;
-				value_to_return0 = ((wxFilePickerCtrl_php*)native_object)->GetPath();
-				ZVAL_STRING(return_value, value_to_return0.char_str());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFilePickerCtrl::GetPath call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_STRING(wxFilePickerCtrl::GetPath().fn_str(), 1)\n\n");
+                #endif
+
+                wxString value_to_return0;
+                value_to_return0 = ((wxFilePickerCtrl_php*)native_object)->GetPath();
+                ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFilePickerCtrl::GetPath\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFilePickerCtrl::GetPath\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2355,121 +2493,130 @@ PHP_METHOD(php_wxFilePickerCtrl, GetPath)
    This method does the same thing as SetPath() but takes a wxFileName object instead of a string. */
 PHP_METHOD(php_wxFilePickerCtrl, SetFileName)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFilePickerCtrl::SetFileName\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFilePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxFilePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFilePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFilePickerCtrl::SetFileName call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFilePickerCtrl::SetFileName\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* filename0;
-	wxFileName* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&filename0, php_wxFileName_entry)\n");
-		#endif
+    zo_wxFilePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxFilePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, php_wxFileName_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(filename0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxFileName_P(filename0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(filename0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxFileName*) argument_native_object;
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter 'filename' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(filename0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'filename' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFilePickerCtrl_P(getThis());
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxFilePickerCtrl::SetFileName(*(wxFileName*) object_pointer0_0)\n\n");
-				#endif
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFilePickerCtrl::SetFileName call\n"
+            );
 
-				((wxFilePickerCtrl_php*)native_object)->SetFileName(*(wxFileName*) object_pointer0_0);
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				references->AddReference(filename0, "wxFilePickerCtrl::SetFileName at call 3 with 1 argument(s)");
+            bool reference_type_found = false;
 
-				return;
-				break;
-			}
-		}
-	}
+            if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFilePickerCtrl::SetFileName\n");
-	}
+    //Parameters for overload 0
+    zval* filename0;
+    wxFileName* object_pointer0_0 = 0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'O' (&filename0, php_wxFileName_entry)\n");
+        #endif
+
+        char parse_parameters_string[] = "O";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &filename0, php_wxFileName_entry ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(filename0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxFileName_P(filename0)->object_type;
+                    argument_native_object = (void*) Z_wxFileName_P(filename0)->native_object;
+                    object_pointer0_0 = (wxFileName*) argument_native_object;
+                    if (!object_pointer0_0 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'filename' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(filename0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'filename' not null, could not be retreived correctly.");
+                }
+            }
+
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxFilePickerCtrl::SetFileName(*(wxFileName*) object_pointer0_0)\n\n");
+                #endif
+
+                ((wxFilePickerCtrl_php*)native_object)->SetFileName(*(wxFileName*) object_pointer0_0);
+
+                references->AddReference(filename0, "wxFilePickerCtrl::SetFileName at call 3 with 1 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFilePickerCtrl::SetFileName\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2477,103 +2624,112 @@ PHP_METHOD(php_wxFilePickerCtrl, SetFileName)
    Sets the absolute path of the currently selected file. */
 PHP_METHOD(php_wxFilePickerCtrl, SetPath)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFilePickerCtrl::SetPath\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFilePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxFilePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFilePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFilePickerCtrl::SetPath call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFilePickerCtrl::SetPath\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	char* filename0;
-	long filename_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&filename0, &filename_len0)\n");
-		#endif
+    zo_wxFilePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxFilePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxFilePickerCtrl::SetPath(wxString(filename0, wxConvUTF8))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFilePickerCtrl_P(getThis());
 
-				((wxFilePickerCtrl_php*)native_object)->SetPath(wxString(filename0, wxConvUTF8));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFilePickerCtrl::SetPath call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    char* filename0;
+    long filename_len0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's' (&filename0, &filename_len0)\n");
+        #endif
+
+        char parse_parameters_string[] = "s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &filename0, &filename_len0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxFilePickerCtrl::SetPath(wxString(filename0, wxConvUTF8))\n\n");
+                #endif
+
+                ((wxFilePickerCtrl_php*)native_object)->SetPath(wxString(filename0, wxConvUTF8));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFilePickerCtrl::SetPath\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFilePickerCtrl::SetPath\n"
+        );
+    }
 }
 /* }}} */
 
@@ -2581,279 +2737,280 @@ PHP_METHOD(php_wxFilePickerCtrl, SetPath)
    Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxFilePickerCtrl, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFilePickerCtrl::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFilePickerCtrl* current_object;
-	wxFilePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	char* path0;
-	long path_len0;
-	char* message0;
-	long message_len0;
-	char* wildcard0;
-	long wildcard_len0;
-	zval* pos0;
-	wxPoint* object_pointer0_5 = 0;
-	zval* size0;
-	wxSize* object_pointer0_6 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_8 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 10)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|sssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFilePickerCtrl::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "zl|sssOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    zo_wxFilePickerCtrl* current_object;
+    wxFilePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-			if(arguments_received >= 6){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_5 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_5 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_6 = (wxSize*) argument_native_object;
-					if (!object_pointer0_6 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
 
-			if(arguments_received >= 9){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_8 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_8 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    char* path0;
+    long path_len0;
+    char* message0;
+    long message_len0;
+    char* wildcard0;
+    long wildcard_len0;
+    zval* pos0;
+    wxPoint* object_pointer0_5 = 0;
+    zval* size0;
+    wxSize* object_pointer0_6 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_8 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 10)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|sssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
-				#endif
+        char parse_parameters_string[] = "zl|sssOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
+            if(arguments_received >= 6){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_5 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_5 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 2 argument(s)");
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8))\n");
-				#endif
+            if(arguments_received >= 7){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_6 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_6 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8));
+            if(arguments_received >= 9){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_8 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_8 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 3 argument(s)");
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8))\n");
-				#endif
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8));
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 4 argument(s)");
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8))\n");
-				#endif
+                native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
-				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8));
+                native_object->references.Initialize();
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 2 argument(s)");
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8))\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 5 argument(s)");
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5)\n");
-				#endif
+                native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8));
 
-				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5);
+                native_object->references.Initialize();
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 3 argument(s)");
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8))\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 6 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 6 argument(s)");
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6)\n");
-				#endif
+                native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8));
 
-				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6);
+                native_object->references.Initialize();
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 4 argument(s)");
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8))\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 7 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 7 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 7 argument(s)");
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0)\n");
-				#endif
+                native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8));
 
-				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0);
+                native_object->references.Initialize();
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 5 argument(s)");
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 8 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 8 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 8 argument(s)");
-				break;
-			}
-			case 9:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8)\n");
-				#endif
+                native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5);
 
-				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8);
+                native_object->references.Initialize();
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 6 argument(s)");
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 6 argument(s)");
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 9 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
-				break;
-			}
-			case 10:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8))\n");
-				#endif
+                native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6);
 
-				native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8));
+                native_object->references.Initialize();
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 7 argument(s)");
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 7 argument(s)");
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 7 argument(s)");
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 10 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
-				((wxFilePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
-				break;
-			}
-		}
-	}
+                native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0);
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object->references.Initialize();
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 8 argument(s)");
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 8 argument(s)");
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 8 argument(s)");
+                break;
+            }
+            case 9:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8)\n");
+                #endif
 
-		current_object = Z_wxFilePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFilePickerCtrl::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+                native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8);
+
+                native_object->references.Initialize();
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 9 argument(s)");
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 9 argument(s)");
+                break;
+            }
+            case 10:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8))\n");
+                #endif
+
+                native_object = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8));
+
+                native_object->references.Initialize();
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call 2 with 10 argument(s)");
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
+                ((wxFilePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFilePickerCtrl::wxFilePickerCtrl at call 4 with 10 argument(s)");
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxFilePickerCtrl_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxFilePickerCtrl::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
@@ -2861,140 +3018,164 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
    Similar to GetPath() but returns the path of the currently selected file as a wxFileName object. */
 PHP_METHOD(php_wxFilePickerCtrl, GetFileName)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFilePickerCtrl::GetFileName\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFilePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxFilePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFilePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFilePickerCtrl::GetFileName call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFilePickerCtrl::GetFileName\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxFilePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxFilePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxFilePickerCtrl::GetFileName() to return new object\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFilePickerCtrl_P(getThis());
 
-				wxFileName value_to_return0;
-				value_to_return0 = ((wxFilePickerCtrl_php*)native_object)->GetFileName();
-				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
-				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFileName));
-				object_init_ex(return_value, php_wxFileName_entry);
-				((wxFileName_php*)ptr)->phpObj = return_value;
-				zo_wxFileName* zo0 = Z_wxFileName_P(return_value TSRMLS_CC);
-				zo0->native_object = (wxFileName_php*) ptr;
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFilePickerCtrl::GetFileName call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxFilePickerCtrl::GetFileName() to return new object\n\n");
+                #endif
+
+                wxFileName value_to_return0;
+                value_to_return0 = ((wxFilePickerCtrl_php*)native_object)->GetFileName();
+                void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
+                memcpy(ptr, (void*) &value_to_return0, sizeof(wxFileName));
+                object_init_ex(return_value, php_wxFileName_entry);
+                ((wxFileName_php*)ptr)->phpObj = *return_value;
+                zo_wxFileName* zo0 = Z_wxFileName_P(return_value);
+                zo0->native_object = (wxFileName_php*) ptr;
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFilePickerCtrl::GetFileName\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFilePickerCtrl::GetFileName\n"
+        );
+    }
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxDirPickerCtrl_free(void *object TSRMLS_DC) 
+void php_wxDirPickerCtrl_free(void *object)
 {
     zo_wxDirPickerCtrl* custom_object = (zo_wxDirPickerCtrl*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Obviate delete call for wxDirPickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n\n");
-	#endif
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Obviate delete call for wxDirPickerCtrl on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n\n");
+    #endif
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxDirPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxDirPickerCtrl_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxDirPickerCtrl_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDirPickerCtrl* custom_object;
-	custom_object = (zo_wxDirPickerCtrl*) ecalloc(1, sizeof(zo_wxDirPickerCtrl) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxDirPickerCtrl_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxDirPickerCtrl* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxDirPickerCtrl*) ecalloc(
+        1,
+        sizeof(zo_wxDirPickerCtrl)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXDIRPICKERCTRL_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXDIRPICKERCTRL_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -3003,288 +3184,297 @@ END_EXTERN_C()
    Creates the widgets with the given parameters. */
 PHP_METHOD(php_wxDirPickerCtrl, Create)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDirPickerCtrl::Create\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDirPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxDirPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDirPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDirPickerCtrl::Create call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDirPickerCtrl::Create\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	char* path0;
-	long path_len0;
-	char* message0;
-	long message_len0;
-	zval* pos0;
-	wxPoint* object_pointer0_4 = 0;
-	zval* size0;
-	wxSize* object_pointer0_5 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_7 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 9)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|ssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    zo_wxDirPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxDirPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "zl|ssOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_4 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDirPickerCtrl_P(getThis());
 
-			if(arguments_received >= 6){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_5 = (wxSize*) argument_native_object;
-					if (!object_pointer0_5 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDirPickerCtrl::Create call\n"
+            );
 
-			if(arguments_received >= 8){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_7 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+            bool reference_type_found = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
-				#endif
+            if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    char* path0;
+    long path_len0;
+    char* message0;
+    long message_len0;
+    zval* pos0;
+    wxPoint* object_pointer0_4 = 0;
+    zval* size0;
+    wxSize* object_pointer0_5 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_7 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 2 argument(s)");
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 9)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|ssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)))\n\n");
-				#endif
+        char parse_parameters_string[] = "zl|ssOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_4 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 3 argument(s)");
+            if(arguments_received >= 6){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_5 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_5 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)))\n\n");
-				#endif
+            if(arguments_received >= 8){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_7 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 4 argument(s)");
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4));
+                references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 2 argument(s)");
 
-				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 5 argument(s)");
+                return;
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
 
-				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5));
+                references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 3 argument(s)");
 
-				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 6 argument(s)");
+                return;
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
 
-				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0));
+                references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 4 argument(s)");
 
-				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 7 argument(s)");
+                return;
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4));
 
-				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7));
+                references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 5 argument(s)");
+                references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 5 argument(s)");
 
-				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(validator0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
+                return;
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 9:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5));
 
-				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
+                references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 6 argument(s)");
+                references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 6 argument(s)");
+                references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 6 argument(s)");
 
-				references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 9 argument(s)");
-				references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
-				references->AddReference(validator0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
+                return;
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-		}
-	}
+                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0));
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirPickerCtrl::Create\n");
-	}
+                references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 7 argument(s)");
+                references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 7 argument(s)");
+
+                return;
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7));
+
+                references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 8 argument(s)");
+                references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(validator0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
+
+                return;
+                break;
+            }
+            case 9:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
+
+                references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 9 argument(s)");
+                references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
+                references->AddReference(size0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
+                references->AddReference(validator0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDirPickerCtrl::Create\n"
+        );
+    }
 }
 /* }}} */
 
@@ -3292,104 +3482,113 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
    Returns the absolute path of the currently selected directory as a wxFileName object. */
 PHP_METHOD(php_wxDirPickerCtrl, GetDirName)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDirPickerCtrl::GetDirName\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDirPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxDirPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDirPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDirPickerCtrl::GetDirName call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDirPickerCtrl::GetDirName\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxDirPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxDirPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDirPickerCtrl::GetDirName() to return new object\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDirPickerCtrl_P(getThis());
 
-				wxFileName value_to_return0;
-				value_to_return0 = ((wxDirPickerCtrl_php*)native_object)->GetDirName();
-				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
-				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFileName));
-				object_init_ex(return_value, php_wxFileName_entry);
-				((wxFileName_php*)ptr)->phpObj = return_value;
-				zo_wxFileName* zo0 = Z_wxFileName_P(return_value TSRMLS_CC);
-				zo0->native_object = (wxFileName_php*) ptr;
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDirPickerCtrl::GetDirName call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDirPickerCtrl::GetDirName() to return new object\n\n");
+                #endif
+
+                wxFileName value_to_return0;
+                value_to_return0 = ((wxDirPickerCtrl_php*)native_object)->GetDirName();
+                void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
+                memcpy(ptr, (void*) &value_to_return0, sizeof(wxFileName));
+                object_init_ex(return_value, php_wxFileName_entry);
+                ((wxFileName_php*)ptr)->phpObj = *return_value;
+                zo_wxFileName* zo0 = Z_wxFileName_P(return_value);
+                zo0->native_object = (wxFileName_php*) ptr;
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirPickerCtrl::GetDirName\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDirPickerCtrl::GetDirName\n"
+        );
+    }
 }
 /* }}} */
 
@@ -3397,99 +3596,108 @@ PHP_METHOD(php_wxDirPickerCtrl, GetDirName)
    Returns the absolute path of the currently selected directory. */
 PHP_METHOD(php_wxDirPickerCtrl, GetPath)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDirPickerCtrl::GetPath\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDirPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxDirPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDirPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDirPickerCtrl::GetPath call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDirPickerCtrl::GetPath\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxDirPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxDirPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(wxDirPickerCtrl::GetPath().fn_str(), 1)\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDirPickerCtrl_P(getThis());
 
-				wxString value_to_return0;
-				value_to_return0 = ((wxDirPickerCtrl_php*)native_object)->GetPath();
-				ZVAL_STRING(return_value, value_to_return0.char_str());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDirPickerCtrl::GetPath call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_STRING(wxDirPickerCtrl::GetPath().fn_str(), 1)\n\n");
+                #endif
+
+                wxString value_to_return0;
+                value_to_return0 = ((wxDirPickerCtrl_php*)native_object)->GetPath();
+                ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirPickerCtrl::GetPath\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDirPickerCtrl::GetPath\n"
+        );
+    }
 }
 /* }}} */
 
@@ -3497,121 +3705,130 @@ PHP_METHOD(php_wxDirPickerCtrl, GetPath)
    Just like SetPath() but this function takes a wxFileName object. */
 PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDirPickerCtrl::SetDirName\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDirPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxDirPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDirPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDirPickerCtrl::SetDirName call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDirPickerCtrl::SetDirName\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* dirname0;
-	wxFileName* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&dirname0, php_wxFileName_entry)\n");
-		#endif
+    zo_wxDirPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxDirPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dirname0, php_wxFileName_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(dirname0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxFileName_P(dirname0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFileName_P(dirname0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxFileName*) argument_native_object;
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter 'dirname' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(dirname0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'dirname' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDirPickerCtrl_P(getThis());
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDirPickerCtrl::SetDirName(*(wxFileName*) object_pointer0_0)\n\n");
-				#endif
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDirPickerCtrl::SetDirName call\n"
+            );
 
-				((wxDirPickerCtrl_php*)native_object)->SetDirName(*(wxFileName*) object_pointer0_0);
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				references->AddReference(dirname0, "wxDirPickerCtrl::SetDirName at call 3 with 1 argument(s)");
+            bool reference_type_found = false;
 
-				return;
-				break;
-			}
-		}
-	}
+            if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirPickerCtrl::SetDirName\n");
-	}
+    //Parameters for overload 0
+    zval* dirname0;
+    wxFileName* object_pointer0_0 = 0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'O' (&dirname0, php_wxFileName_entry)\n");
+        #endif
+
+        char parse_parameters_string[] = "O";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &dirname0, php_wxFileName_entry ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(dirname0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxFileName_P(dirname0)->object_type;
+                    argument_native_object = (void*) Z_wxFileName_P(dirname0)->native_object;
+                    object_pointer0_0 = (wxFileName*) argument_native_object;
+                    if (!object_pointer0_0 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'dirname' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(dirname0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'dirname' not null, could not be retreived correctly.");
+                }
+            }
+
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDirPickerCtrl::SetDirName(*(wxFileName*) object_pointer0_0)\n\n");
+                #endif
+
+                ((wxDirPickerCtrl_php*)native_object)->SetDirName(*(wxFileName*) object_pointer0_0);
+
+                references->AddReference(dirname0, "wxDirPickerCtrl::SetDirName at call 3 with 1 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDirPickerCtrl::SetDirName\n"
+        );
+    }
 }
 /* }}} */
 
@@ -3619,103 +3836,112 @@ PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
    Sets the absolute path of the currently selected directory (the default converter uses current locale's charset). */
 PHP_METHOD(php_wxDirPickerCtrl, SetPath)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDirPickerCtrl::SetPath\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDirPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxDirPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxDirPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDirPickerCtrl::SetPath call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDirPickerCtrl::SetPath\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	char* dirname0;
-	long dirname_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&dirname0, &dirname_len0)\n");
-		#endif
+    zo_wxDirPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxDirPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dirname0, &dirname_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDirPickerCtrl::SetPath(wxString(dirname0, wxConvUTF8))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxDirPickerCtrl_P(getThis());
 
-				((wxDirPickerCtrl_php*)native_object)->SetPath(wxString(dirname0, wxConvUTF8));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxDirPickerCtrl::SetPath call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    char* dirname0;
+    long dirname_len0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 's' (&dirname0, &dirname_len0)\n");
+        #endif
+
+        char parse_parameters_string[] = "s";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &dirname0, &dirname_len0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxDirPickerCtrl::SetPath(wxString(dirname0, wxConvUTF8))\n\n");
+                #endif
+
+                ((wxDirPickerCtrl_php*)native_object)->SetPath(wxString(dirname0, wxConvUTF8));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirPickerCtrl::SetPath\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxDirPickerCtrl::SetPath\n"
+        );
+    }
 }
 /* }}} */
 
@@ -3723,301 +3949,317 @@ PHP_METHOD(php_wxDirPickerCtrl, SetPath)
    Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxDirPickerCtrl, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDirPickerCtrl::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDirPickerCtrl* current_object;
-	wxDirPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	char* path0;
-	long path_len0;
-	char* message0;
-	long message_len0;
-	zval* pos0;
-	wxPoint* object_pointer0_4 = 0;
-	zval* size0;
-	wxSize* object_pointer0_5 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_7 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 9)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|ssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxDirPickerCtrl::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "zl|ssOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    zo_wxDirPickerCtrl* current_object;
+    wxDirPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_4 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-			if(arguments_received >= 6){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_5 = (wxSize*) argument_native_object;
-					if (!object_pointer0_5 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
 
-			if(arguments_received >= 8){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_7 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    char* path0;
+    long path_len0;
+    char* message0;
+    long message_len0;
+    zval* pos0;
+    wxPoint* object_pointer0_4 = 0;
+    zval* size0;
+    wxSize* object_pointer0_5 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_7 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 9)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|ssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
-				#endif
+        char parse_parameters_string[] = "zl|ssOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_4 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 2 argument(s)");
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8))\n");
-				#endif
+            if(arguments_received >= 6){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_5 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_5 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8));
+            if(arguments_received >= 8){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_7 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 3 argument(s)");
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8))\n");
-				#endif
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8));
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 4 argument(s)");
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4)\n");
-				#endif
+                native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
-				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4);
+                native_object->references.Initialize();
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 2 argument(s)");
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8))\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 5 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 5 argument(s)");
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5)\n");
-				#endif
+                native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8));
 
-				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5);
+                native_object->references.Initialize();
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 3 argument(s)");
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8))\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 6 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 6 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 6 argument(s)");
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0)\n");
-				#endif
+                native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8));
 
-				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0);
+                native_object->references.Initialize();
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 4 argument(s)");
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 7 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 7 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 7 argument(s)");
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7)\n");
-				#endif
+                native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4);
 
-				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7);
+                native_object->references.Initialize();
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 5 argument(s)");
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 5 argument(s)");
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 8 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
-				break;
-			}
-			case 9:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8))\n");
-				#endif
+                native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5);
 
-				native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8));
+                native_object->references.Initialize();
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 6 argument(s)");
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 6 argument(s)");
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 6 argument(s)");
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 9 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
-				((wxDirPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
-				break;
-			}
-		}
-	}
+                native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0);
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object->references.Initialize();
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 7 argument(s)");
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 7 argument(s)");
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 7 argument(s)");
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7)\n");
+                #endif
 
-		current_object = Z_wxDirPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxDirPickerCtrl::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+                native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7);
+
+                native_object->references.Initialize();
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 8 argument(s)");
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 8 argument(s)");
+                break;
+            }
+            case 9:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8))\n");
+                #endif
+
+                native_object = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8));
+
+                native_object->references.Initialize();
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call 2 with 9 argument(s)");
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
+                ((wxDirPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxDirPickerCtrl::wxDirPickerCtrl at call 4 with 9 argument(s)");
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxDirPickerCtrl_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxDirPickerCtrl::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxFontPickerCtrl_free(void *object TSRMLS_DC) 
+void php_wxFontPickerCtrl_free(void *object)
 {
     zo_wxFontPickerCtrl* custom_object = (zo_wxFontPickerCtrl*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Obviate delete call for wxFontPickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n\n");
-	#endif
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Obviate delete call for wxFontPickerCtrl on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n\n");
+    #endif
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxFontPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFontPickerCtrl_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFontPickerCtrl_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFontPickerCtrl* custom_object;
-	custom_object = (zo_wxFontPickerCtrl*) ecalloc(1, sizeof(zo_wxFontPickerCtrl) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxFontPickerCtrl_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxFontPickerCtrl* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxFontPickerCtrl*) ecalloc(
+        1,
+        sizeof(zo_wxFontPickerCtrl)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXFONTPICKERCTRL_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXFONTPICKERCTRL_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -4026,296 +4268,305 @@ END_EXTERN_C()
    Creates this widget with given parameters. */
 PHP_METHOD(php_wxFontPickerCtrl, Create)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFontPickerCtrl::Create\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFontPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxFontPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFontPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFontPickerCtrl::Create call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFontPickerCtrl::Create\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	zval* font0;
-	wxFont* object_pointer0_2 = 0;
-	zval* pos0;
-	wxPoint* object_pointer0_3 = 0;
-	zval* size0;
-	wxSize* object_pointer0_4 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_6 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 8)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    zo_wxFontPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxFontPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "zl|OOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			if(arguments_received >= 3){
-				if(Z_TYPE_P(font0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
-					object_pointer0_2 = (wxFont*) argument_native_object;
-					if (!object_pointer0_2 )
-					{
-						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(font0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
-				}
-			}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFontPickerCtrl_P(getThis());
 
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_3 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_3 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFontPickerCtrl::Create call\n"
+            );
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_4 = (wxSize*) argument_native_object;
-					if (!object_pointer0_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+            bool reference_type_found = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+            if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
-				#endif
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    zval* font0;
+    wxFont* object_pointer0_2 = 0;
+    zval* pos0;
+    wxPoint* object_pointer0_3 = 0;
+    zval* size0;
+    wxSize* object_pointer0_4 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_6 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 8)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 2 argument(s)");
+        char parse_parameters_string[] = "zl|OOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2))\n\n");
-				#endif
+            if(arguments_received >= 3){
+                if(Z_TYPE_P(font0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxFont_P(font0)->object_type;
+                    argument_native_object = (void*) Z_wxFont_P(font0)->native_object;
+                    object_pointer0_2 = (wxFont*) argument_native_object;
+                    if (!object_pointer0_2 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(font0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2));
+            if(arguments_received >= 4){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_3 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_3 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 3 argument(s)");
-				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 3 argument(s)");
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_4 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3))\n\n");
-				#endif
+            if(arguments_received >= 7){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_6 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 4 argument(s)");
-				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 4 argument(s)");
-				references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 4 argument(s)");
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+                references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 2 argument(s)");
 
-				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
+                return;
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2));
 
-				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+                references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 3 argument(s)");
+                references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 3 argument(s)");
 
-				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
+                return;
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
 
-				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+                references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 4 argument(s)");
+                references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 4 argument(s)");
+                references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 4 argument(s)");
 
-				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(validator0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
+                return;
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+                references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 5 argument(s)");
+                references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
+                references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
+                references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
 
-				references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(validator0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
+                return;
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-		}
-	}
+                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerCtrl::Create\n");
-	}
+                references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 6 argument(s)");
+                references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
+                references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
+                references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
+
+                return;
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+
+                references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 7 argument(s)");
+                references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(validator0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
+
+                return;
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+
+                references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 8 argument(s)");
+                references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(pos0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(size0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(validator0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFontPickerCtrl::Create\n"
+        );
+    }
 }
 /* }}} */
 
@@ -4323,97 +4574,106 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
    Returns the maximum point size value allowed for the user-chosen font. */
 PHP_METHOD(php_wxFontPickerCtrl, GetMaxPointSize)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFontPickerCtrl::GetMaxPointSize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFontPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxFontPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFontPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFontPickerCtrl::GetMaxPointSize call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFontPickerCtrl::GetMaxPointSize\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxFontPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxFontPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxFontPickerCtrl::GetMaxPointSize())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFontPickerCtrl_P(getThis());
 
-				ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetMaxPointSize());
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFontPickerCtrl::GetMaxPointSize call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxFontPickerCtrl::GetMaxPointSize())\n\n");
+                #endif
+
+                ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetMaxPointSize());
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerCtrl::GetMaxPointSize\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFontPickerCtrl::GetMaxPointSize\n"
+        );
+    }
 }
 /* }}} */
 
@@ -4421,105 +4681,114 @@ PHP_METHOD(php_wxFontPickerCtrl, GetMaxPointSize)
    Returns the currently selected font. */
 PHP_METHOD(php_wxFontPickerCtrl, GetSelectedFont)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFontPickerCtrl::GetSelectedFont\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFontPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxFontPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFontPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFontPickerCtrl::GetSelectedFont call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFontPickerCtrl::GetSelectedFont\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxFontPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxFontPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxFontPickerCtrl::GetSelectedFont() to return new object\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFontPickerCtrl_P(getThis());
 
-				wxFont value_to_return0;
-				value_to_return0 = ((wxFontPickerCtrl_php*)native_object)->GetSelectedFont();
-				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
-				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
-				object_init_ex(return_value, php_wxFont_entry);
-				((wxFont_php*)ptr)->phpObj = return_value;
-				zo_wxFont* zo0 = Z_wxFont_P(return_value TSRMLS_CC);
-				zo0->native_object = (wxFont_php*) ptr;
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFontPickerCtrl::GetSelectedFont call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxFontPickerCtrl::GetSelectedFont() to return new object\n\n");
+                #endif
+
+                wxFont value_to_return0;
+                value_to_return0 = ((wxFontPickerCtrl_php*)native_object)->GetSelectedFont();
+                ((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
+                void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
+                memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
+                object_init_ex(return_value, php_wxFont_entry);
+                ((wxFont_php*)ptr)->phpObj = *return_value;
+                zo_wxFont* zo0 = Z_wxFont_P(return_value);
+                zo0->native_object = (wxFont_php*) ptr;
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerCtrl::GetSelectedFont\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFontPickerCtrl::GetSelectedFont\n"
+        );
+    }
 }
 /* }}} */
 
@@ -4527,102 +4796,111 @@ PHP_METHOD(php_wxFontPickerCtrl, GetSelectedFont)
    Sets the maximum point size value allowed for the user-chosen font. */
 PHP_METHOD(php_wxFontPickerCtrl, SetMaxPointSize)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFontPickerCtrl::SetMaxPointSize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFontPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxFontPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFontPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFontPickerCtrl::SetMaxPointSize call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFontPickerCtrl::SetMaxPointSize\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long max0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&max0)\n");
-		#endif
+    zo_wxFontPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxFontPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &max0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxFontPickerCtrl::SetMaxPointSize((unsigned int) max0)\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFontPickerCtrl_P(getThis());
 
-				((wxFontPickerCtrl_php*)native_object)->SetMaxPointSize((unsigned int) max0);
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFontPickerCtrl::SetMaxPointSize call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    long max0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&max0)\n");
+        #endif
+
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &max0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxFontPickerCtrl::SetMaxPointSize((unsigned int) max0)\n\n");
+                #endif
+
+                ((wxFontPickerCtrl_php*)native_object)->SetMaxPointSize((unsigned int) max0);
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerCtrl::SetMaxPointSize\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFontPickerCtrl::SetMaxPointSize\n"
+        );
+    }
 }
 /* }}} */
 
@@ -4630,121 +4908,130 @@ PHP_METHOD(php_wxFontPickerCtrl, SetMaxPointSize)
    Sets the currently selected font. */
 PHP_METHOD(php_wxFontPickerCtrl, SetSelectedFont)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFontPickerCtrl::SetSelectedFont\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFontPickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxFontPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxFontPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFontPickerCtrl::SetSelectedFont call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFontPickerCtrl::SetSelectedFont\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* font0;
-	wxFont* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
-		#endif
+    zo_wxFontPickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxFontPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(font0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxFont*) argument_native_object;
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(font0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxFontPickerCtrl_P(getThis());
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxFontPickerCtrl::SetSelectedFont(*(wxFont*) object_pointer0_0)\n\n");
-				#endif
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxFontPickerCtrl::SetSelectedFont call\n"
+            );
 
-				((wxFontPickerCtrl_php*)native_object)->SetSelectedFont(*(wxFont*) object_pointer0_0);
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				references->AddReference(font0, "wxFontPickerCtrl::SetSelectedFont at call 3 with 1 argument(s)");
+            bool reference_type_found = false;
 
-				return;
-				break;
-			}
-		}
-	}
+            if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerCtrl::SetSelectedFont\n");
-	}
+    //Parameters for overload 0
+    zval* font0;
+    wxFont* object_pointer0_0 = 0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
+        #endif
+
+        char parse_parameters_string[] = "O";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(font0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxFont_P(font0)->object_type;
+                    argument_native_object = (void*) Z_wxFont_P(font0)->native_object;
+                    object_pointer0_0 = (wxFont*) argument_native_object;
+                    if (!object_pointer0_0 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(font0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
+                }
+            }
+
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxFontPickerCtrl::SetSelectedFont(*(wxFont*) object_pointer0_0)\n\n");
+                #endif
+
+                ((wxFontPickerCtrl_php*)native_object)->SetSelectedFont(*(wxFont*) object_pointer0_0);
+
+                references->AddReference(font0, "wxFontPickerCtrl::SetSelectedFont at call 3 with 1 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxFontPickerCtrl::SetSelectedFont\n"
+        );
+    }
 }
 /* }}} */
 
@@ -4752,310 +5039,326 @@ PHP_METHOD(php_wxFontPickerCtrl, SetSelectedFont)
    Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxFontPickerCtrl, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFontPickerCtrl::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFontPickerCtrl* current_object;
-	wxFontPickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	zval* font0;
-	wxFont* object_pointer0_2 = 0;
-	zval* pos0;
-	wxPoint* object_pointer0_3 = 0;
-	zval* size0;
-	wxSize* object_pointer0_4 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_6 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 8)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxFontPickerCtrl::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "zl|OOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    zo_wxFontPickerCtrl* current_object;
+    wxFontPickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-			if(arguments_received >= 3){
-				if(Z_TYPE_P(font0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxFont_P(font0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxFont_P(font0 TSRMLS_CC)->native_object;
-					object_pointer0_2 = (wxFont*) argument_native_object;
-					if (!object_pointer0_2 )
-					{
-						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(font0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_3 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_3 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_4 = (wxSize*) argument_native_object;
-					if (!object_pointer0_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    zval* font0;
+    wxFont* object_pointer0_2 = 0;
+    zval* pos0;
+    wxPoint* object_pointer0_3 = 0;
+    zval* size0;
+    wxSize* object_pointer0_4 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_6 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 8)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+        char parse_parameters_string[] = "zl|OOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
-				#endif
+            if(arguments_received >= 3){
+                if(Z_TYPE_P(font0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxFont_P(font0)->object_type;
+                    argument_native_object = (void*) Z_wxFont_P(font0)->native_object;
+                    object_pointer0_2 = (wxFont*) argument_native_object;
+                    if (!object_pointer0_2 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(font0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
+            if(arguments_received >= 4){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_3 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_3 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 2 argument(s)");
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2)\n");
-				#endif
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_4 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2);
+            if(arguments_received >= 7){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_6 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 3 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 3 argument(s)");
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3)\n");
-				#endif
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 4 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 4 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 4 argument(s)");
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
-				#endif
+                native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
-				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
+                native_object->references.Initialize();
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 2 argument(s)");
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 5 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
-				#endif
+                native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2);
 
-				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
+                native_object->references.Initialize();
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 3 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 3 argument(s)");
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 6 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
-				#endif
+                native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
 
-				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
+                native_object->references.Initialize();
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 4 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 4 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 4 argument(s)");
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 7 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
-				#endif
+                native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
-				native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
+                native_object->references.Initialize();
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 5 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 5 argument(s)");
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 8 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
-				((wxFontPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
-				break;
-			}
-		}
-	}
+                native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object->references.Initialize();
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 6 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 6 argument(s)");
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
+                #endif
 
-		current_object = Z_wxFontPickerCtrl_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFontPickerCtrl::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+                native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
+
+                native_object->references.Initialize();
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 7 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 7 argument(s)");
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
+                #endif
+
+                native_object = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
+
+                native_object->references.Initialize();
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call 2 with 8 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
+                ((wxFontPickerCtrl_php*) native_object)->references.AddReference(validator0, "wxFontPickerCtrl::wxFontPickerCtrl at call 4 with 8 argument(s)");
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxFontPickerCtrl_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxFontPickerCtrl::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxPickerBase_free(void *object TSRMLS_DC) 
+void php_wxPickerBase_free(void *object)
 {
     zo_wxPickerBase* custom_object = (zo_wxPickerBase*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Obviate delete call for wxPickerBase on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n\n");
-	#endif
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Obviate delete call for wxPickerBase on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n\n");
+    #endif
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxPickerBase_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPickerBase_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxPickerBase_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* custom_object;
-	custom_object = (zo_wxPickerBase*) ecalloc(1, sizeof(zo_wxPickerBase) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxPickerBase_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxPickerBase* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxPickerBase*) ecalloc(
+        1,
+        sizeof(zo_wxPickerBase)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXPICKERBASE_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXPICKERBASE_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -5064,132 +5367,141 @@ END_EXTERN_C()
    Returns the margin (in pixel) between the picker and the text control. */
 PHP_METHOD(php_wxPickerBase, GetInternalMargin)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::GetInternalMargin\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::GetInternalMargin call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::GetInternalMargin\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxPickerBase::GetInternalMargin())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)native_object)->GetInternalMargin());
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetInternalMargin());
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxFilePickerCtrl_php*)native_object)->GetInternalMargin());
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxDirPickerCtrl_php*)native_object)->GetInternalMargin());
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxPickerBase_php*)native_object)->GetInternalMargin());
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::GetInternalMargin call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxPickerBase::GetInternalMargin())\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)native_object)->GetInternalMargin());
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetInternalMargin());
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxFilePickerCtrl_php*)native_object)->GetInternalMargin());
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxDirPickerCtrl_php*)native_object)->GetInternalMargin());
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxPickerBase_php*)native_object)->GetInternalMargin());
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::GetInternalMargin\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::GetInternalMargin\n"
+        );
+    }
 }
 /* }}} */
 
@@ -5197,159 +5509,168 @@ PHP_METHOD(php_wxPickerBase, GetInternalMargin)
    Returns the native implementation of the real picker control. */
 PHP_METHOD(php_wxPickerBase, GetPickerCtrl)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::GetPickerCtrl\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::GetPickerCtrl call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::GetPickerCtrl\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxPickerBase::GetPickerCtrl() to return object pointer\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				wxControl_php* value_to_return0;
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					value_to_return0 = (wxControl_php*) ((wxColourPickerCtrl_php*)native_object)->GetPickerCtrl();
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::GetPickerCtrl call\n"
+            );
 
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					value_to_return0 = (wxControl_php*) ((wxFontPickerCtrl_php*)native_object)->GetPickerCtrl();
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					value_to_return0 = (wxControl_php*) ((wxFilePickerCtrl_php*)native_object)->GetPickerCtrl();
+            bool reference_type_found = false;
 
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					value_to_return0 = (wxControl_php*) ((wxDirPickerCtrl_php*)native_object)->GetPickerCtrl();
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					value_to_return0 = (wxControl_php*) ((wxPickerBase_php*)native_object)->GetPickerCtrl();
+    //Parameters for overload 0
+    bool overload0_called = false;
 
-				}
-				if(value_to_return0 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return0->references.IsUserInitialized()){
-					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
-						zval_add_ref(value_to_return0->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value, php_wxControl_entry);
-					Z_wxControl_P(return_value TSRMLS_CC)->native_object = (wxControl_php*) value_to_return0;
-				}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
 
-				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPickerBase::GetPickerCtrl at call 5 with 0 argument(s)");
-				}
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxPickerBase::GetPickerCtrl() to return object pointer\n\n");
+                #endif
+
+                wxControl_php* value_to_return0;
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    value_to_return0 = (wxControl_php*) ((wxColourPickerCtrl_php*)native_object)->GetPickerCtrl();
+
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    value_to_return0 = (wxControl_php*) ((wxFontPickerCtrl_php*)native_object)->GetPickerCtrl();
+
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    value_to_return0 = (wxControl_php*) ((wxFilePickerCtrl_php*)native_object)->GetPickerCtrl();
+
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    value_to_return0 = (wxControl_php*) ((wxDirPickerCtrl_php*)native_object)->GetPickerCtrl();
+
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    value_to_return0 = (wxControl_php*) ((wxPickerBase_php*)native_object)->GetPickerCtrl();
+
+                }
+                if(value_to_return0 == NULL){
+                    ZVAL_NULL(return_value);
+                }
+                else if(value_to_return0->references.IsUserInitialized()){
+                    if(!Z_ISNULL(value_to_return0->phpObj)){
+                        return_value = &value_to_return0->phpObj;
+                        zval_add_ref(&value_to_return0->phpObj);
+                        return_is_user_initialized = true;
+                    }
+                    else{
+                        zend_error(E_ERROR, "Could not retreive original zval.");
+                    }
+                }
+                else{
+                    object_init_ex(return_value, php_wxControl_entry);
+                    Z_wxControl_P(return_value)->native_object = (wxControl_php*) value_to_return0;
+                }
+
+                if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
+                    references->AddReference(return_value, "wxPickerBase::GetPickerCtrl at call 5 with 0 argument(s)");
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::GetPickerCtrl\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::GetPickerCtrl\n"
+        );
+    }
 }
 /* }}} */
 
@@ -5357,132 +5678,141 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrl)
    Returns the proportion value of the picker. */
 PHP_METHOD(php_wxPickerBase, GetPickerCtrlProportion)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::GetPickerCtrlProportion\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::GetPickerCtrlProportion call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::GetPickerCtrlProportion\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxPickerBase::GetPickerCtrlProportion())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxFilePickerCtrl_php*)native_object)->GetPickerCtrlProportion());
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxDirPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxPickerBase_php*)native_object)->GetPickerCtrlProportion());
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::GetPickerCtrlProportion call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxPickerBase::GetPickerCtrlProportion())\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxFilePickerCtrl_php*)native_object)->GetPickerCtrlProportion());
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxDirPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxPickerBase_php*)native_object)->GetPickerCtrlProportion());
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::GetPickerCtrlProportion\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::GetPickerCtrlProportion\n"
+        );
+    }
 }
 /* }}} */
 
@@ -5490,159 +5820,168 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrlProportion)
    Returns a pointer to the text control handled by this window or NULL if the wxPB_USE_TEXTCTRL style was not specified when this control was created. */
 PHP_METHOD(php_wxPickerBase, GetTextCtrl)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::GetTextCtrl\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::GetTextCtrl call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::GetTextCtrl\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxPickerBase::GetTextCtrl() to return object pointer\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				wxTextCtrl_php* value_to_return0;
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					value_to_return0 = (wxTextCtrl_php*) ((wxColourPickerCtrl_php*)native_object)->GetTextCtrl();
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::GetTextCtrl call\n"
+            );
 
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					value_to_return0 = (wxTextCtrl_php*) ((wxFontPickerCtrl_php*)native_object)->GetTextCtrl();
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					value_to_return0 = (wxTextCtrl_php*) ((wxFilePickerCtrl_php*)native_object)->GetTextCtrl();
+            bool reference_type_found = false;
 
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					value_to_return0 = (wxTextCtrl_php*) ((wxDirPickerCtrl_php*)native_object)->GetTextCtrl();
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					value_to_return0 = (wxTextCtrl_php*) ((wxPickerBase_php*)native_object)->GetTextCtrl();
+    //Parameters for overload 0
+    bool overload0_called = false;
 
-				}
-				if(value_to_return0 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return0->references.IsUserInitialized()){
-					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
-						zval_add_ref(value_to_return0->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value, php_wxTextCtrl_entry);
-					Z_wxTextCtrl_P(return_value TSRMLS_CC)->native_object = (wxTextCtrl_php*) value_to_return0;
-				}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
 
-				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPickerBase::GetTextCtrl at call 5 with 0 argument(s)");
-				}
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxPickerBase::GetTextCtrl() to return object pointer\n\n");
+                #endif
+
+                wxTextCtrl_php* value_to_return0;
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    value_to_return0 = (wxTextCtrl_php*) ((wxColourPickerCtrl_php*)native_object)->GetTextCtrl();
+
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    value_to_return0 = (wxTextCtrl_php*) ((wxFontPickerCtrl_php*)native_object)->GetTextCtrl();
+
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    value_to_return0 = (wxTextCtrl_php*) ((wxFilePickerCtrl_php*)native_object)->GetTextCtrl();
+
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    value_to_return0 = (wxTextCtrl_php*) ((wxDirPickerCtrl_php*)native_object)->GetTextCtrl();
+
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    value_to_return0 = (wxTextCtrl_php*) ((wxPickerBase_php*)native_object)->GetTextCtrl();
+
+                }
+                if(value_to_return0 == NULL){
+                    ZVAL_NULL(return_value);
+                }
+                else if(value_to_return0->references.IsUserInitialized()){
+                    if(!Z_ISNULL(value_to_return0->phpObj)){
+                        return_value = &value_to_return0->phpObj;
+                        zval_add_ref(&value_to_return0->phpObj);
+                        return_is_user_initialized = true;
+                    }
+                    else{
+                        zend_error(E_ERROR, "Could not retreive original zval.");
+                    }
+                }
+                else{
+                    object_init_ex(return_value, php_wxTextCtrl_entry);
+                    Z_wxTextCtrl_P(return_value)->native_object = (wxTextCtrl_php*) value_to_return0;
+                }
+
+                if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
+                    references->AddReference(return_value, "wxPickerBase::GetTextCtrl at call 5 with 0 argument(s)");
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::GetTextCtrl\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::GetTextCtrl\n"
+        );
+    }
 }
 /* }}} */
 
@@ -5650,132 +5989,141 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrl)
    Returns the proportion value of the text control. */
 PHP_METHOD(php_wxPickerBase, GetTextCtrlProportion)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::GetTextCtrlProportion\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::GetTextCtrlProportion call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::GetTextCtrlProportion\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxPickerBase::GetTextCtrlProportion())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)native_object)->GetTextCtrlProportion());
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetTextCtrlProportion());
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxFilePickerCtrl_php*)native_object)->GetTextCtrlProportion());
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxDirPickerCtrl_php*)native_object)->GetTextCtrlProportion());
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					ZVAL_LONG(return_value, ((wxPickerBase_php*)native_object)->GetTextCtrlProportion());
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::GetTextCtrlProportion call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_LONG(wxPickerBase::GetTextCtrlProportion())\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)native_object)->GetTextCtrlProportion());
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetTextCtrlProportion());
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxFilePickerCtrl_php*)native_object)->GetTextCtrlProportion());
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxDirPickerCtrl_php*)native_object)->GetTextCtrlProportion());
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ZVAL_LONG(return_value, ((wxPickerBase_php*)native_object)->GetTextCtrlProportion());
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::GetTextCtrlProportion\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::GetTextCtrlProportion\n"
+        );
+    }
 }
 /* }}} */
 
@@ -5783,132 +6131,141 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrlProportion)
    Returns true if this window has a valid text control (i.e. if the wxPB_USE_TEXTCTRL style was given when creating this control). */
 PHP_METHOD(php_wxPickerBase, HasTextCtrl)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::HasTextCtrl\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::HasTextCtrl call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::HasTextCtrl\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxPickerBase::HasTextCtrl())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->HasTextCtrl());
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->HasTextCtrl());
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->HasTextCtrl());
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->HasTextCtrl());
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxPickerBase_php*)native_object)->HasTextCtrl());
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::HasTextCtrl call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxPickerBase::HasTextCtrl())\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->HasTextCtrl());
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->HasTextCtrl());
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->HasTextCtrl());
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->HasTextCtrl());
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxPickerBase_php*)native_object)->HasTextCtrl());
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::HasTextCtrl\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::HasTextCtrl\n"
+        );
+    }
 }
 /* }}} */
 
@@ -5916,132 +6273,141 @@ PHP_METHOD(php_wxPickerBase, HasTextCtrl)
    Returns true if the picker control is growable. */
 PHP_METHOD(php_wxPickerBase, IsPickerCtrlGrowable)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::IsPickerCtrlGrowable\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::IsPickerCtrlGrowable call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::IsPickerCtrlGrowable\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxPickerBase::IsPickerCtrlGrowable())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxPickerBase_php*)native_object)->IsPickerCtrlGrowable());
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::IsPickerCtrlGrowable call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxPickerBase::IsPickerCtrlGrowable())\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxPickerBase_php*)native_object)->IsPickerCtrlGrowable());
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::IsPickerCtrlGrowable\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::IsPickerCtrlGrowable\n"
+        );
+    }
 }
 /* }}} */
 
@@ -6049,132 +6415,141 @@ PHP_METHOD(php_wxPickerBase, IsPickerCtrlGrowable)
    Returns true if the text control is growable. */
 PHP_METHOD(php_wxPickerBase, IsTextCtrlGrowable)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::IsTextCtrlGrowable\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::IsTextCtrlGrowable call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::IsTextCtrlGrowable\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxPickerBase::IsTextCtrlGrowable())\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->IsTextCtrlGrowable());
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					ZVAL_BOOL(return_value, ((wxPickerBase_php*)native_object)->IsTextCtrlGrowable());
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::IsTextCtrlGrowable call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxPickerBase::IsTextCtrlGrowable())\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->IsTextCtrlGrowable());
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ZVAL_BOOL(return_value, ((wxPickerBase_php*)native_object)->IsTextCtrlGrowable());
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::IsTextCtrlGrowable\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::IsTextCtrlGrowable\n"
+        );
+    }
 }
 /* }}} */
 
@@ -6182,137 +6557,146 @@ PHP_METHOD(php_wxPickerBase, IsTextCtrlGrowable)
    Sets the margin (in pixel) between the picker and the text control. */
 PHP_METHOD(php_wxPickerBase, SetInternalMargin)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::SetInternalMargin\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::SetInternalMargin call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::SetInternalMargin\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long margin0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&margin0)\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxPickerBase::SetInternalMargin((int) margin0)\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					((wxColourPickerCtrl_php*)native_object)->SetInternalMargin((int) margin0);
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					((wxFontPickerCtrl_php*)native_object)->SetInternalMargin((int) margin0);
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					((wxFilePickerCtrl_php*)native_object)->SetInternalMargin((int) margin0);
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					((wxDirPickerCtrl_php*)native_object)->SetInternalMargin((int) margin0);
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					((wxPickerBase_php*)native_object)->SetInternalMargin((int) margin0);
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::SetInternalMargin call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    long margin0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&margin0)\n");
+        #endif
+
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &margin0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxPickerBase::SetInternalMargin((int) margin0)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ((wxColourPickerCtrl_php*)native_object)->SetInternalMargin((int) margin0);
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ((wxFontPickerCtrl_php*)native_object)->SetInternalMargin((int) margin0);
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ((wxFilePickerCtrl_php*)native_object)->SetInternalMargin((int) margin0);
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ((wxDirPickerCtrl_php*)native_object)->SetInternalMargin((int) margin0);
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ((wxPickerBase_php*)native_object)->SetInternalMargin((int) margin0);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::SetInternalMargin\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::SetInternalMargin\n"
+        );
+    }
 }
 /* }}} */
 
@@ -6320,168 +6704,177 @@ PHP_METHOD(php_wxPickerBase, SetInternalMargin)
    Sets the picker control as growable when grow is true. */
 PHP_METHOD(php_wxPickerBase, SetPickerCtrlGrowable)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::SetPickerCtrlGrowable\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::SetPickerCtrlGrowable call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::SetPickerCtrlGrowable\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool grow0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|b' (&grow0)\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grow0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxPickerBase::SetPickerCtrlGrowable()\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					((wxColourPickerCtrl_php*)native_object)->SetPickerCtrlGrowable();
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					((wxFontPickerCtrl_php*)native_object)->SetPickerCtrlGrowable();
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					((wxFilePickerCtrl_php*)native_object)->SetPickerCtrlGrowable();
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					((wxDirPickerCtrl_php*)native_object)->SetPickerCtrlGrowable();
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					((wxPickerBase_php*)native_object)->SetPickerCtrlGrowable();
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::SetPickerCtrlGrowable call\n"
+            );
 
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxPickerBase::SetPickerCtrlGrowable(grow0)\n\n");
-				#endif
+            bool reference_type_found = false;
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					((wxColourPickerCtrl_php*)native_object)->SetPickerCtrlGrowable(grow0);
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					((wxFontPickerCtrl_php*)native_object)->SetPickerCtrlGrowable(grow0);
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					((wxFilePickerCtrl_php*)native_object)->SetPickerCtrlGrowable(grow0);
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					((wxDirPickerCtrl_php*)native_object)->SetPickerCtrlGrowable(grow0);
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					((wxPickerBase_php*)native_object)->SetPickerCtrlGrowable(grow0);
-				}
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool grow0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 0  && arguments_received <= 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '|b' (&grow0)\n");
+        #endif
+
+        char parse_parameters_string[] = "|b";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &grow0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxPickerBase::SetPickerCtrlGrowable()\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ((wxColourPickerCtrl_php*)native_object)->SetPickerCtrlGrowable();
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ((wxFontPickerCtrl_php*)native_object)->SetPickerCtrlGrowable();
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ((wxFilePickerCtrl_php*)native_object)->SetPickerCtrlGrowable();
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ((wxDirPickerCtrl_php*)native_object)->SetPickerCtrlGrowable();
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ((wxPickerBase_php*)native_object)->SetPickerCtrlGrowable();
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxPickerBase::SetPickerCtrlGrowable(grow0)\n\n");
+                #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::SetPickerCtrlGrowable\n");
-	}
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ((wxColourPickerCtrl_php*)native_object)->SetPickerCtrlGrowable(grow0);
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ((wxFontPickerCtrl_php*)native_object)->SetPickerCtrlGrowable(grow0);
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ((wxFilePickerCtrl_php*)native_object)->SetPickerCtrlGrowable(grow0);
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ((wxDirPickerCtrl_php*)native_object)->SetPickerCtrlGrowable(grow0);
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ((wxPickerBase_php*)native_object)->SetPickerCtrlGrowable(grow0);
+                }
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::SetPickerCtrlGrowable\n"
+        );
+    }
 }
 /* }}} */
 
@@ -6489,137 +6882,146 @@ PHP_METHOD(php_wxPickerBase, SetPickerCtrlGrowable)
    Sets the proportion value of the picker. */
 PHP_METHOD(php_wxPickerBase, SetPickerCtrlProportion)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::SetPickerCtrlProportion\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::SetPickerCtrlProportion call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::SetPickerCtrlProportion\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long prop0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&prop0)\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &prop0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxPickerBase::SetPickerCtrlProportion((int) prop0)\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					((wxColourPickerCtrl_php*)native_object)->SetPickerCtrlProportion((int) prop0);
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					((wxFontPickerCtrl_php*)native_object)->SetPickerCtrlProportion((int) prop0);
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					((wxFilePickerCtrl_php*)native_object)->SetPickerCtrlProportion((int) prop0);
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					((wxDirPickerCtrl_php*)native_object)->SetPickerCtrlProportion((int) prop0);
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					((wxPickerBase_php*)native_object)->SetPickerCtrlProportion((int) prop0);
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::SetPickerCtrlProportion call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    long prop0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&prop0)\n");
+        #endif
+
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &prop0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxPickerBase::SetPickerCtrlProportion((int) prop0)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ((wxColourPickerCtrl_php*)native_object)->SetPickerCtrlProportion((int) prop0);
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ((wxFontPickerCtrl_php*)native_object)->SetPickerCtrlProportion((int) prop0);
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ((wxFilePickerCtrl_php*)native_object)->SetPickerCtrlProportion((int) prop0);
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ((wxDirPickerCtrl_php*)native_object)->SetPickerCtrlProportion((int) prop0);
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ((wxPickerBase_php*)native_object)->SetPickerCtrlProportion((int) prop0);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::SetPickerCtrlProportion\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::SetPickerCtrlProportion\n"
+        );
+    }
 }
 /* }}} */
 
@@ -6627,168 +7029,177 @@ PHP_METHOD(php_wxPickerBase, SetPickerCtrlProportion)
    Sets the text control as growable when grow is true. */
 PHP_METHOD(php_wxPickerBase, SetTextCtrlGrowable)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::SetTextCtrlGrowable\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::SetTextCtrlGrowable call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::SetTextCtrlGrowable\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool grow0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|b' (&grow0)\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grow0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxPickerBase::SetTextCtrlGrowable()\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					((wxColourPickerCtrl_php*)native_object)->SetTextCtrlGrowable();
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					((wxFontPickerCtrl_php*)native_object)->SetTextCtrlGrowable();
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					((wxFilePickerCtrl_php*)native_object)->SetTextCtrlGrowable();
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					((wxDirPickerCtrl_php*)native_object)->SetTextCtrlGrowable();
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					((wxPickerBase_php*)native_object)->SetTextCtrlGrowable();
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::SetTextCtrlGrowable call\n"
+            );
 
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxPickerBase::SetTextCtrlGrowable(grow0)\n\n");
-				#endif
+            bool reference_type_found = false;
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					((wxColourPickerCtrl_php*)native_object)->SetTextCtrlGrowable(grow0);
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					((wxFontPickerCtrl_php*)native_object)->SetTextCtrlGrowable(grow0);
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					((wxFilePickerCtrl_php*)native_object)->SetTextCtrlGrowable(grow0);
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					((wxDirPickerCtrl_php*)native_object)->SetTextCtrlGrowable(grow0);
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					((wxPickerBase_php*)native_object)->SetTextCtrlGrowable(grow0);
-				}
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool grow0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 0  && arguments_received <= 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '|b' (&grow0)\n");
+        #endif
+
+        char parse_parameters_string[] = "|b";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &grow0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxPickerBase::SetTextCtrlGrowable()\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ((wxColourPickerCtrl_php*)native_object)->SetTextCtrlGrowable();
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ((wxFontPickerCtrl_php*)native_object)->SetTextCtrlGrowable();
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ((wxFilePickerCtrl_php*)native_object)->SetTextCtrlGrowable();
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ((wxDirPickerCtrl_php*)native_object)->SetTextCtrlGrowable();
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ((wxPickerBase_php*)native_object)->SetTextCtrlGrowable();
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxPickerBase::SetTextCtrlGrowable(grow0)\n\n");
+                #endif
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::SetTextCtrlGrowable\n");
-	}
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ((wxColourPickerCtrl_php*)native_object)->SetTextCtrlGrowable(grow0);
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ((wxFontPickerCtrl_php*)native_object)->SetTextCtrlGrowable(grow0);
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ((wxFilePickerCtrl_php*)native_object)->SetTextCtrlGrowable(grow0);
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ((wxDirPickerCtrl_php*)native_object)->SetTextCtrlGrowable(grow0);
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ((wxPickerBase_php*)native_object)->SetTextCtrlGrowable(grow0);
+                }
+
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::SetTextCtrlGrowable\n"
+        );
+    }
 }
 /* }}} */
 
@@ -6796,173 +7207,197 @@ PHP_METHOD(php_wxPickerBase, SetTextCtrlGrowable)
    Sets the proportion value of the text control. */
 PHP_METHOD(php_wxPickerBase, SetTextCtrlProportion)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPickerBase::SetTextCtrlProportion\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxPickerBase* current_object;
-	wxphp_object_type current_object_type;
-	wxPickerBase_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxPickerBase_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxPickerBase::SetTextCtrlProportion call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxPickerBase::SetTextCtrlProportion\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXPICKERBASE_TYPE){
-				references = &((wxPickerBase_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxFilePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
-				references = &((wxDirPickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long prop0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&prop0)\n");
-		#endif
+    zo_wxPickerBase* current_object;
+    wxphp_object_type current_object_type;
+    wxPickerBase_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &prop0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxPickerBase::SetTextCtrlProportion((int) prop0)\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxPickerBase_P(getThis());
 
-				if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
-				{
-					((wxColourPickerCtrl_php*)native_object)->SetTextCtrlProportion((int) prop0);
-				}
-				else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
-				{
-					((wxFontPickerCtrl_php*)native_object)->SetTextCtrlProportion((int) prop0);
-				}
-				else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
-				{
-					((wxFilePickerCtrl_php*)native_object)->SetTextCtrlProportion((int) prop0);
-				}
-				else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
-				{
-					((wxDirPickerCtrl_php*)native_object)->SetTextCtrlProportion((int) prop0);
-				}
-				else if(current_object_type == PHP_WXPICKERBASE_TYPE)
-				{
-					((wxPickerBase_php*)native_object)->SetTextCtrlProportion((int) prop0);
-				}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxPickerBase::SetTextCtrlProportion call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXPICKERBASE_TYPE){
+                references = &((wxPickerBase_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxColourPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFONTPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFontPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXFILEPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxFilePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+            if((current_object_type == PHP_WXDIRPICKERCTRL_TYPE) && (!reference_type_found)){
+                references = &((wxDirPickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    long prop0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&prop0)\n");
+        #endif
+
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &prop0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxPickerBase::SetTextCtrlProportion((int) prop0)\n\n");
+                #endif
+
+                if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
+                {
+                    ((wxColourPickerCtrl_php*)native_object)->SetTextCtrlProportion((int) prop0);
+                }
+                else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
+                {
+                    ((wxFontPickerCtrl_php*)native_object)->SetTextCtrlProportion((int) prop0);
+                }
+                else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
+                {
+                    ((wxFilePickerCtrl_php*)native_object)->SetTextCtrlProportion((int) prop0);
+                }
+                else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
+                {
+                    ((wxDirPickerCtrl_php*)native_object)->SetTextCtrlProportion((int) prop0);
+                }
+                else if(current_object_type == PHP_WXPICKERBASE_TYPE)
+                {
+                    ((wxPickerBase_php*)native_object)->SetTextCtrlProportion((int) prop0);
+                }
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::SetTextCtrlProportion\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxPickerBase::SetTextCtrlProportion\n"
+        );
+    }
 }
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxTimePickerCtrl_free(void *object TSRMLS_DC) 
+void php_wxTimePickerCtrl_free(void *object)
 {
     zo_wxTimePickerCtrl* custom_object = (zo_wxTimePickerCtrl*) object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Obviate delete call for wxTimePickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n\n");
-	#endif
 
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Obviate delete call for wxTimePickerCtrl on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n\n");
+    #endif
+
+    zend_object_std_dtor(&custom_object->zo);
     efree(custom_object);
 }
 
-zend_object* php_wxTimePickerCtrl_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxTimePickerCtrl_new(zend_class_entry *class_type)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxTimePickerCtrl_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxTimePickerCtrl* custom_object;
-	custom_object = (zo_wxTimePickerCtrl*) ecalloc(1, sizeof(zo_wxTimePickerCtrl) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxTimePickerCtrl_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zo_wxTimePickerCtrl* custom_object;
 
-	custom_object->zo.handlers = zend_get_std_object_handlers();
+    // For some reason zend_object_properties_size()
+    // can go negative which leads to segfaults so we use abs().
+    custom_object = (zo_wxTimePickerCtrl*) ecalloc(
+        1,
+        sizeof(zo_wxTimePickerCtrl)
+        + abs((int)zend_object_properties_size(class_type))
+    );
 
-	custom_object->native_object = NULL;
-	custom_object->object_type = PHP_WXTIMEPICKERCTRL_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXTIMEPICKERCTRL_TYPE;
+    custom_object->is_user_initialized = 0;
+
     return &custom_object->zo;
 }
 END_EXTERN_C()
@@ -6971,250 +7406,251 @@ END_EXTERN_C()
    Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxTimePickerCtrl, __construct)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxTimePickerCtrl::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxTimePickerCtrl* current_object;
-	wxTimePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	time_t dt0;
-	zval* pos0;
-	wxPoint* object_pointer0_3 = 0;
-	zval* size0;
-	wxSize* object_pointer0_4 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_6 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 8)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxTimePickerCtrl::__construct\n");
+    php_printf("===========================================\n");
+    #endif
 
-		char parse_parameters_string[] = "zl|lOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    zo_wxTimePickerCtrl* current_object;
+    wxTimePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_3 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_3 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    int arguments_received = ZEND_NUM_ARGS();
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_4 = (wxSize*) argument_native_object;
-					if (!object_pointer0_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
 
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    time_t dt0;
+    zval* pos0;
+    wxPoint* object_pointer0_3 = 0;
+    zval* size0;
+    wxSize* object_pointer0_4 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_6 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 8)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
-				#endif
+        char parse_parameters_string[] = "zl|lOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
+            if(arguments_received >= 4){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_3 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_3 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 2 argument(s)");
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0))\n");
-				#endif
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_4 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0));
+            if(arguments_received >= 7){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_6 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 3 argument(s)");
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3)\n");
-				#endif
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3);
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 4 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 4 argument(s)");
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
-				#endif
+                native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
-				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
+                native_object->references.Initialize();
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 2 argument(s)");
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0))\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 5 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 5 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 5 argument(s)");
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
-				#endif
+                native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0));
 
-				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
+                native_object->references.Initialize();
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 3 argument(s)");
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 6 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 6 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 6 argument(s)");
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
-				#endif
+                native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3);
 
-				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
+                native_object->references.Initialize();
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 4 argument(s)");
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 4 argument(s)");
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 7 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
-				#endif
+                native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
-				native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
+                native_object->references.Initialize();
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 5 argument(s)");
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 5 argument(s)");
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 5 argument(s)");
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
+                #endif
 
-				native_object->references.Initialize();
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 8 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
-				((wxTimePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
-				break;
-			}
-		}
-	}
+                native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
+                native_object->references.Initialize();
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 6 argument(s)");
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 6 argument(s)");
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 6 argument(s)");
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
+                #endif
 
-		current_object = Z_wxTimePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTimePickerCtrl::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
+                native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
+
+                native_object->references.Initialize();
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 7 argument(s)");
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 7 argument(s)");
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
+                #endif
+
+                native_object = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
+
+                native_object->references.Initialize();
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call 2 with 8 argument(s)");
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
+                ((wxTimePickerCtrl_php*) native_object)->references.AddReference(validator0, "wxTimePickerCtrl::wxTimePickerCtrl at call 4 with 8 argument(s)");
+                break;
+            }
+        }
+    }
+
+    
+    if(already_called)
+    {
+        native_object->phpObj = *getThis();
+
+
+        current_object = Z_wxTimePickerCtrl_P(getThis());
+
+        current_object->native_object = native_object;
+
+        current_object->is_user_initialized = 1;
+    }
+    else
+    {
+        zend_error(
+            E_ERROR,
+            "Abstract class or wrong type/count of parameters "
+            "passed to: wxTimePickerCtrl::__construct\n"
+        );
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+        php_printf("===========================================\n\n");
+    #endif
 }
 /* }}} */
 
@@ -7222,272 +7658,281 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
    Create the control window. */
 PHP_METHOD(php_wxTimePickerCtrl, Create)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxTimePickerCtrl::Create\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxTimePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxTimePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxTimePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxTimePickerCtrl::Create call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxTimePickerCtrl::Create\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXTIMEPICKERCTRL_TYPE){
-				references = &((wxTimePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* parent0;
-	wxWindow* object_pointer0_0 = 0;
-	long id0;
-	time_t dt0;
-	zval* pos0;
-	wxPoint* object_pointer0_3 = 0;
-	zval* size0;
-	wxSize* object_pointer0_4 = 0;
-	long style0;
-	zval* validator0;
-	wxValidator* object_pointer0_6 = 0;
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 8)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
-		#endif
+    zo_wxTimePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxTimePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "zl|lOOlos";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxWindow_P(parent0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxWindow_P(parent0 TSRMLS_CC)->native_object;
-					object_pointer0_0 = (wxWindow*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
-				}
-			}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxPoint_P(pos0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxPoint_P(pos0 TSRMLS_CC)->native_object;
-					object_pointer0_3 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_3 )
-					{
-						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
-				}
-			}
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxTimePickerCtrl_P(getThis());
 
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxSize_P(size0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxSize_P(size0 TSRMLS_CC)->native_object;
-					object_pointer0_4 = (wxSize*) argument_native_object;
-					if (!object_pointer0_4 )
-					{
-						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
-				}
-			}
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxTimePickerCtrl::Create call\n"
+            );
 
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(validator0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = Z_wxValidator_P(validator0 TSRMLS_CC)->object_type;
-					argument_native_object = (void*) Z_wxValidator_P(validator0 TSRMLS_CC)->native_object;
-					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(validator0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
-				}
-			}
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
 
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+            bool reference_type_found = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
-				#endif
+            if(current_object_type == PHP_WXTIMEPICKERCTRL_TYPE){
+                references = &((wxTimePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
 
-				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+    //Parameters for overload 0
+    zval* parent0;
+    wxWindow* object_pointer0_0 = 0;
+    long id0;
+    time_t dt0;
+    zval* pos0;
+    wxPoint* object_pointer0_3 = 0;
+    zval* size0;
+    wxSize* object_pointer0_4 = 0;
+    long style0;
+    zval* validator0;
+    wxValidator* object_pointer0_6 = 0;
+    char* name0;
+    long name_len0;
+    bool overload0_called = false;
 
-				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 2 argument(s)");
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received >= 2  && arguments_received <= 8)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
+        #endif
 
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)))\n\n");
-				#endif
+        char parse_parameters_string[] = "zl|lOOlos";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
+        {
+            if(arguments_received >= 1){
+                if(Z_TYPE_P(parent0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxWindow_P(parent0)->object_type;
+                    argument_native_object = (void*) Z_wxWindow_P(parent0)->native_object;
+                    object_pointer0_0 = (wxWindow*) argument_native_object;
+                    if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(parent0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
+            if(arguments_received >= 4){
+                if(Z_TYPE_P(pos0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxPoint_P(pos0)->object_type;
+                    argument_native_object = (void*) Z_wxPoint_P(pos0)->native_object;
+                    object_pointer0_3 = (wxPoint*) argument_native_object;
+                    if (!object_pointer0_3 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(pos0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
+                }
+            }
 
-				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 3 argument(s)");
+            if(arguments_received >= 5){
+                if(Z_TYPE_P(size0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxSize_P(size0)->object_type;
+                    argument_native_object = (void*) Z_wxSize_P(size0)->native_object;
+                    object_pointer0_4 = (wxSize*) argument_native_object;
+                    if (!object_pointer0_4 )
+                    {
+                        zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(size0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
+                }
+            }
 
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3))\n\n");
-				#endif
+            if(arguments_received >= 7){
+                if(Z_TYPE_P(validator0) == IS_OBJECT)
+                {
+                    wxphp_object_type argument_type = Z_wxValidator_P(validator0)->object_type;
+                    argument_native_object = (void*) Z_wxValidator_P(validator0)->native_object;
+                    object_pointer0_6 = (wxValidator*) argument_native_object;
+                    if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
+                    {
+                        zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
+                    }
+                }
+                else if(Z_TYPE_P(validator0) != IS_NULL)
+                {
+                    zend_error(E_ERROR, "Parameter 'validator' not null, could not be retreived correctly.");
+                }
+            }
 
-				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
+            overload0_called = true;
+            already_called = true;
+        }
+    }
 
-				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 4 argument(s)");
-				references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 4 argument(s)");
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 2:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+                references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 2 argument(s)");
 
-				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 5 argument(s)");
-				references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 5 argument(s)");
-				references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 5 argument(s)");
+                return;
+                break;
+            }
+            case 3:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
 
-				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+                references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 3 argument(s)");
 
-				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 6 argument(s)");
-				references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 6 argument(s)");
-				references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 6 argument(s)");
+                return;
+                break;
+            }
+            case 4:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
 
-				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+                references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 4 argument(s)");
+                references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 4 argument(s)");
 
-				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 7 argument(s)");
-				references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
-				references->AddReference(validator0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
+                return;
+                break;
+            }
+            case 5:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
-				#endif
+                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+                references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 5 argument(s)");
+                references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 5 argument(s)");
+                references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 5 argument(s)");
 
-				references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 8 argument(s)");
-				references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
-				references->AddReference(validator0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
+                return;
+                break;
+            }
+            case 6:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
+                #endif
 
-				return;
-				break;
-			}
-		}
-	}
+                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimePickerCtrl::Create\n");
-	}
+                references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 6 argument(s)");
+                references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 6 argument(s)");
+                references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 6 argument(s)");
+
+                return;
+                break;
+            }
+            case 7:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+
+                references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 7 argument(s)");
+                references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
+                references->AddReference(validator0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
+
+                return;
+                break;
+            }
+            case 8:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
+                #endif
+
+                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+
+                references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 8 argument(s)");
+                references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(size0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
+                references->AddReference(validator0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
+
+                return;
+                break;
+            }
+        }
+    }
+
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxTimePickerCtrl::Create\n"
+        );
+    }
 }
 /* }}} */
 
@@ -7495,99 +7940,108 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
    Returns the currently entered time. */
 PHP_METHOD(php_wxTimePickerCtrl, GetValue)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxTimePickerCtrl::GetValue\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxTimePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxTimePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxTimePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxTimePickerCtrl::GetValue call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxTimePickerCtrl::GetValue\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXTIMEPICKERCTRL_TYPE){
-				references = &((wxTimePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
+    zo_wxTimePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxTimePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		overload0_called = true;
-		already_called = true;
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxTimePickerCtrl::GetValue() to return timestamp\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxTimePickerCtrl_P(getThis());
 
-				time_t value_to_return0;
-				value_to_return0 = ((wxTimePickerCtrl_php*)native_object)->GetValue().GetTicks();
-				ZVAL_LONG(return_value, value_to_return0);
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxTimePickerCtrl::GetValue call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXTIMEPICKERCTRL_TYPE){
+                references = &((wxTimePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 0)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with '' ()\n");
+        #endif
+
+        overload0_called = true;
+        already_called = true;
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 0:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxTimePickerCtrl::GetValue() to return timestamp\n\n");
+                #endif
+
+                time_t value_to_return0;
+                value_to_return0 = ((wxTimePickerCtrl_php*)native_object)->GetValue().GetTicks();
+                ZVAL_LONG(return_value, value_to_return0);
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimePickerCtrl::GetValue\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxTimePickerCtrl::GetValue\n"
+        );
+    }
 }
 /* }}} */
 
@@ -7595,102 +8049,111 @@ PHP_METHOD(php_wxTimePickerCtrl, GetValue)
    Changes the current value of the control. */
 PHP_METHOD(php_wxTimePickerCtrl, SetValue)
 {
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxTimePickerCtrl::SetValue\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxTimePickerCtrl* current_object;
-	wxphp_object_type current_object_type;
-	wxTimePickerCtrl_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval dummy;
-	ZVAL_NULL(&dummy);
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = Z_wxTimePickerCtrl_P(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxTimePickerCtrl::SetValue call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking wxTimePickerCtrl::SetValue\n");
+    php_printf("===========================================\n");
+    #endif
 
-			if(current_object_type == PHP_WXTIMEPICKERCTRL_TYPE){
-				references = &((wxTimePickerCtrl_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	time_t dt0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&dt0)\n");
-		#endif
+    zo_wxTimePickerCtrl* current_object;
+    wxphp_object_type current_object_type;
+    wxTimePickerCtrl_php* native_object;
+    void* argument_native_object = NULL;
 
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dt0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
+    //Other variables used thru the code
+    zval dummy;
+    ZVAL_NULL(&dummy);
+    bool already_called = false;
+    wxPHPObjectReferences* references;
+    int arguments_received = ZEND_NUM_ARGS();
+    bool return_is_user_initialized = false;
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxTimePickerCtrl::SetValue(wxDateTime(dt0))\n\n");
-				#endif
+    //Get native object of the php object that called the method
+    if(getThis() != NULL)
+    {
+        current_object = Z_wxTimePickerCtrl_P(getThis());
 
-				((wxTimePickerCtrl_php*)native_object)->SetValue(wxDateTime(dt0));
+        if(current_object->native_object == NULL)
+        {
+            zend_error(
+                E_ERROR,
+                "Failed to get the native object for "
+                "wxTimePickerCtrl::SetValue call\n"
+            );
+
+            return;
+        }
+        else
+        {
+            native_object = current_object->native_object;
+            current_object_type = current_object->object_type;
+
+            bool reference_type_found = false;
+
+            if(current_object_type == PHP_WXTIMEPICKERCTRL_TYPE){
+                references = &((wxTimePickerCtrl_php*)native_object)->references;
+                reference_type_found = true;
+            }
+        }
+    }
+    #ifdef USE_WXPHP_DEBUG
+    else
+    {
+        php_printf("Processing the method call as static\n");
+    }
+    #endif
+
+    //Parameters for overload 0
+    time_t dt0;
+    bool overload0_called = false;
+
+    
+    //Overload 0
+    overload0:
+    if(!already_called && arguments_received == 1)
+    {
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Parameters received %d\n", arguments_received);
+        php_printf("Parsing parameters with 'l' (&dt0)\n");
+        #endif
+
+        char parse_parameters_string[] = "l";
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &dt0 ) == SUCCESS)
+        {
+            overload0_called = true;
+            already_called = true;
+        }
+    }
+
+    
+    if(overload0_called)
+    {
+        switch(arguments_received)
+        {
+            case 1:
+            {
+                #ifdef USE_WXPHP_DEBUG
+                php_printf("Executing wxTimePickerCtrl::SetValue(wxDateTime(dt0))\n\n");
+                #endif
+
+                ((wxTimePickerCtrl_php*)native_object)->SetValue(wxDateTime(dt0));
 
 
-				return;
-				break;
-			}
-		}
-	}
+                return;
+                break;
+            }
+        }
+    }
 
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimePickerCtrl::SetValue\n");
-	}
+    
+    //In case wrong type/count of parameters was passed
+    if(!already_called)
+    {
+        zend_error(
+            E_ERROR,
+            "Wrong type or count of parameters passed to: "
+            "wxTimePickerCtrl::SetValue\n"
+        );
+    }
 }
 /* }}} */
 

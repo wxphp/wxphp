@@ -16,22 +16,21 @@
 #include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_dnd_get_args, 0, 0, 1)
-	ZEND_ARG_INFO(0, name)
+    ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxClipboard_entry;
-void php_wxClipboard_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxClipboard_destruction_handler(zend_resource*);
 
 class wxClipboard_php: public wxClipboard{
-	public:
-	
-	wxClipboard_php():wxClipboard(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxClipboard_php():wxClipboard(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -42,49 +41,51 @@ typedef struct _zo_wxClipboard{
     zend_object zo;
 } zo_wxClipboard;
 
-void php_wxClipboard_free(void *object TSRMLS_DC);
-zend_object* php_wxClipboard_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxClipboard_free(void *object);
+zend_object* php_wxClipboard_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxClipboard_functions[] = {
-	PHP_ME(php_wxClipboard, AddData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClipboard, Clear, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClipboard, Close, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClipboard, Flush, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClipboard, GetData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClipboard, IsOpened, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClipboard, IsSupported, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClipboard, IsUsingPrimarySelection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClipboard, Open, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClipboard, SetData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClipboard, UsePrimarySelection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClipboard, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxClipboard, Get, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxClipboard, AddData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, Clear, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, Close, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, Flush, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, GetData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, IsOpened, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, IsSupported, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, IsUsingPrimarySelection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, Open, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, SetData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, UsePrimarySelection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxClipboard, Get, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxClipboard * php_wxClipboard_fetch_object(zend_object *obj) {
-      return (zo_wxClipboard *)((char *)obj - XtOffsetOf(zo_wxClipboard, zo));
+    return (zo_wxClipboard *)(
+        (char *)(obj) - XtOffsetOf(zo_wxClipboard, zo)
+    );
 }
 
-#define Z_wxClipboard_P(zv) php_wxClipboard_fetch_object(Z_OBJ_P(zv))
+#define Z_wxClipboard_P(zv) \
+    php_wxClipboard_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataFormat_entry;
-void php_wxDataFormat_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxDataFormat_destruction_handler(zend_resource*);
 
 class wxDataFormat_php: public wxDataFormat{
-	public:
-	
-	wxDataFormat_php(wxDataFormatId format=wxDF_INVALID):wxDataFormat(format){}
-	wxDataFormat_php(const wxString& format):wxDataFormat(format){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxDataFormat_php(wxDataFormatId format=wxDF_INVALID):wxDataFormat(format){}
+    wxDataFormat_php(const wxString& format):wxDataFormat(format){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -95,45 +96,47 @@ typedef struct _zo_wxDataFormat{
     zend_object zo;
 } zo_wxDataFormat;
 
-void php_wxDataFormat_free(void *object TSRMLS_DC);
-zend_object* php_wxDataFormat_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxDataFormat_free(void *object);
+zend_object* php_wxDataFormat_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataFormat_functions[] = {
-	PHP_ME(php_wxDataFormat, GetId, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataFormat, GetType, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataFormat, SetId, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataFormat, SetType, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataFormat, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxDataFormat, GetId, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataFormat, GetType, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataFormat, SetId, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataFormat, SetType, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataFormat, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxDataFormat * php_wxDataFormat_fetch_object(zend_object *obj) {
-      return (zo_wxDataFormat *)((char *)obj - XtOffsetOf(zo_wxDataFormat, zo));
+    return (zo_wxDataFormat *)(
+        (char *)(obj) - XtOffsetOf(zo_wxDataFormat, zo)
+    );
 }
 
-#define Z_wxDataFormat_P(zv) php_wxDataFormat_fetch_object(Z_OBJ_P(zv))
+#define Z_wxDataFormat_P(zv) \
+    php_wxDataFormat_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataObject_entry;
-void php_wxDataObject_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxDataObject_destruction_handler(zend_resource*);
 
 class wxDataObject_php: public wxDataObject{
-	public:
-	
-	wxDataObject_php():wxDataObject(){}
-		
-	void GetAllFormats(wxDataFormat* formats, Direction dir=Get) const;
-	bool GetDataHere(const wxDataFormat& format, void* buf) const;
-	size_t GetDataSize(const wxDataFormat& format) const;
-	size_t GetFormatCount(Direction dir=Get) const;
-	wxDataFormat GetPreferredFormat(Direction dir=Get) const;
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxDataObject_php():wxDataObject(){}
+    
+    void GetAllFormats(wxDataFormat* formats, Direction dir=Get) const;
+    bool GetDataHere(const wxDataFormat& format, void* buf) const;
+    size_t GetDataSize(const wxDataFormat& format) const;
+    size_t GetFormatCount(Direction dir=Get) const;
+    wxDataFormat GetPreferredFormat(Direction dir=Get) const;
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -144,38 +147,40 @@ typedef struct _zo_wxDataObject{
     zend_object zo;
 } zo_wxDataObject;
 
-void php_wxDataObject_free(void *object TSRMLS_DC);
-zend_object* php_wxDataObject_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxDataObject_free(void *object);
+zend_object* php_wxDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataObject_functions[] = {
-	PHP_ME(php_wxDataObject, IsSupported, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataObject, SetData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxDataObject, IsSupported, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObject, SetData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxDataObject * php_wxDataObject_fetch_object(zend_object *obj) {
-      return (zo_wxDataObject *)((char *)obj - XtOffsetOf(zo_wxDataObject, zo));
+    return (zo_wxDataObject *)(
+        (char *)(obj) - XtOffsetOf(zo_wxDataObject, zo)
+    );
 }
 
-#define Z_wxDataObject_P(zv) php_wxDataObject_fetch_object(Z_OBJ_P(zv))
+#define Z_wxDataObject_P(zv) \
+    php_wxDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCustomDataObject_entry;
-void php_wxCustomDataObject_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxCustomDataObject_destruction_handler(zend_resource*);
 
 class wxCustomDataObject_php: public wxCustomDataObject{
-	public:
-	
-	wxCustomDataObject_php(const wxDataFormat& format=wxFormatInvalid):wxCustomDataObject(format){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxCustomDataObject_php(const wxDataFormat& format=wxFormatInvalid):wxCustomDataObject(format){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -186,42 +191,44 @@ typedef struct _zo_wxCustomDataObject{
     zend_object zo;
 } zo_wxCustomDataObject;
 
-void php_wxCustomDataObject_free(void *object TSRMLS_DC);
-zend_object* php_wxCustomDataObject_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxCustomDataObject_free(void *object);
+zend_object* php_wxCustomDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxCustomDataObject_functions[] = {
-	PHP_ME(php_wxCustomDataObject, Alloc, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxCustomDataObject, Free, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxCustomDataObject, GetData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxCustomDataObject, GetSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxCustomDataObject, SetData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxCustomDataObject, TakeData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxCustomDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxCustomDataObject, Alloc, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, Free, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, GetData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, GetSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, SetData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, TakeData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxCustomDataObject * php_wxCustomDataObject_fetch_object(zend_object *obj) {
-      return (zo_wxCustomDataObject *)((char *)obj - XtOffsetOf(zo_wxCustomDataObject, zo));
+    return (zo_wxCustomDataObject *)(
+        (char *)(obj) - XtOffsetOf(zo_wxCustomDataObject, zo)
+    );
 }
 
-#define Z_wxCustomDataObject_P(zv) php_wxCustomDataObject_fetch_object(Z_OBJ_P(zv))
+#define Z_wxCustomDataObject_P(zv) \
+    php_wxCustomDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataObjectComposite_entry;
-void php_wxDataObjectComposite_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxDataObjectComposite_destruction_handler(zend_resource*);
 
 class wxDataObjectComposite_php: public wxDataObjectComposite{
-	public:
-	
-	wxDataObjectComposite_php():wxDataObjectComposite(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxDataObjectComposite_php():wxDataObjectComposite(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -232,39 +239,41 @@ typedef struct _zo_wxDataObjectComposite{
     zend_object zo;
 } zo_wxDataObjectComposite;
 
-void php_wxDataObjectComposite_free(void *object TSRMLS_DC);
-zend_object* php_wxDataObjectComposite_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxDataObjectComposite_free(void *object);
+zend_object* php_wxDataObjectComposite_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataObjectComposite_functions[] = {
-	PHP_ME(php_wxDataObjectComposite, Add, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataObjectComposite, GetReceivedFormat, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataObjectComposite, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxDataObjectComposite, GetObject, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxDataObjectComposite, Add, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectComposite, GetReceivedFormat, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectComposite, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataObjectComposite, GetObject, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxDataObjectComposite * php_wxDataObjectComposite_fetch_object(zend_object *obj) {
-      return (zo_wxDataObjectComposite *)((char *)obj - XtOffsetOf(zo_wxDataObjectComposite, zo));
+    return (zo_wxDataObjectComposite *)(
+        (char *)(obj) - XtOffsetOf(zo_wxDataObjectComposite, zo)
+    );
 }
 
-#define Z_wxDataObjectComposite_P(zv) php_wxDataObjectComposite_fetch_object(Z_OBJ_P(zv))
+#define Z_wxDataObjectComposite_P(zv) \
+    php_wxDataObjectComposite_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataObjectSimple_entry;
-void php_wxDataObjectSimple_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxDataObjectSimple_destruction_handler(zend_resource*);
 
 class wxDataObjectSimple_php: public wxDataObjectSimple{
-	public:
-	
-	wxDataObjectSimple_php(const wxDataFormat& format=wxFormatInvalid):wxDataObjectSimple(format){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxDataObjectSimple_php(const wxDataFormat& format=wxFormatInvalid):wxDataObjectSimple(format){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -275,41 +284,43 @@ typedef struct _zo_wxDataObjectSimple{
     zend_object zo;
 } zo_wxDataObjectSimple;
 
-void php_wxDataObjectSimple_free(void *object TSRMLS_DC);
-zend_object* php_wxDataObjectSimple_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxDataObjectSimple_free(void *object);
+zend_object* php_wxDataObjectSimple_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataObjectSimple_functions[] = {
-	PHP_ME(php_wxDataObjectSimple, GetDataHere, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataObjectSimple, GetDataSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataObjectSimple, GetFormat, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataObjectSimple, SetData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataObjectSimple, SetFormat, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataObjectSimple, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxDataObjectSimple, GetDataHere, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectSimple, GetDataSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectSimple, GetFormat, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectSimple, SetData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectSimple, SetFormat, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectSimple, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxDataObjectSimple * php_wxDataObjectSimple_fetch_object(zend_object *obj) {
-      return (zo_wxDataObjectSimple *)((char *)obj - XtOffsetOf(zo_wxDataObjectSimple, zo));
+    return (zo_wxDataObjectSimple *)(
+        (char *)(obj) - XtOffsetOf(zo_wxDataObjectSimple, zo)
+    );
 }
 
-#define Z_wxDataObjectSimple_P(zv) php_wxDataObjectSimple_fetch_object(Z_OBJ_P(zv))
+#define Z_wxDataObjectSimple_P(zv) \
+    php_wxDataObjectSimple_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBitmapDataObject_entry;
-void php_wxBitmapDataObject_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxBitmapDataObject_destruction_handler(zend_resource*);
 
 class wxBitmapDataObject_php: public wxBitmapDataObject{
-	public:
-	
-	wxBitmapDataObject_php(const wxBitmap& bitmap=wxNullBitmap):wxBitmapDataObject(bitmap){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxBitmapDataObject_php(const wxBitmap& bitmap=wxNullBitmap):wxBitmapDataObject(bitmap){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -320,38 +331,40 @@ typedef struct _zo_wxBitmapDataObject{
     zend_object zo;
 } zo_wxBitmapDataObject;
 
-void php_wxBitmapDataObject_free(void *object TSRMLS_DC);
-zend_object* php_wxBitmapDataObject_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxBitmapDataObject_free(void *object);
+zend_object* php_wxBitmapDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBitmapDataObject_functions[] = {
-	PHP_ME(php_wxBitmapDataObject, GetBitmap, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxBitmapDataObject, SetBitmap, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxBitmapDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxBitmapDataObject, GetBitmap, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxBitmapDataObject, SetBitmap, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxBitmapDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxBitmapDataObject * php_wxBitmapDataObject_fetch_object(zend_object *obj) {
-      return (zo_wxBitmapDataObject *)((char *)obj - XtOffsetOf(zo_wxBitmapDataObject, zo));
+    return (zo_wxBitmapDataObject *)(
+        (char *)(obj) - XtOffsetOf(zo_wxBitmapDataObject, zo)
+    );
 }
 
-#define Z_wxBitmapDataObject_P(zv) php_wxBitmapDataObject_fetch_object(Z_OBJ_P(zv))
+#define Z_wxBitmapDataObject_P(zv) \
+    php_wxBitmapDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxURLDataObject_entry;
-void php_wxURLDataObject_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxURLDataObject_destruction_handler(zend_resource*);
 
 class wxURLDataObject_php: public wxURLDataObject{
-	public:
-	
-	wxURLDataObject_php(const wxString& url=wxEmptyString):wxURLDataObject(url){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxURLDataObject_php(const wxString& url=wxEmptyString):wxURLDataObject(url){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -362,38 +375,40 @@ typedef struct _zo_wxURLDataObject{
     zend_object zo;
 } zo_wxURLDataObject;
 
-void php_wxURLDataObject_free(void *object TSRMLS_DC);
-zend_object* php_wxURLDataObject_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxURLDataObject_free(void *object);
+zend_object* php_wxURLDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxURLDataObject_functions[] = {
-	PHP_ME(php_wxURLDataObject, GetURL, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxURLDataObject, SetURL, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxURLDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxURLDataObject, GetURL, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURLDataObject, SetURL, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURLDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxURLDataObject * php_wxURLDataObject_fetch_object(zend_object *obj) {
-      return (zo_wxURLDataObject *)((char *)obj - XtOffsetOf(zo_wxURLDataObject, zo));
+    return (zo_wxURLDataObject *)(
+        (char *)(obj) - XtOffsetOf(zo_wxURLDataObject, zo)
+    );
 }
 
-#define Z_wxURLDataObject_P(zv) php_wxURLDataObject_fetch_object(Z_OBJ_P(zv))
+#define Z_wxURLDataObject_P(zv) \
+    php_wxURLDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextDataObject_entry;
-void php_wxTextDataObject_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxTextDataObject_destruction_handler(zend_resource*);
 
 class wxTextDataObject_php: public wxTextDataObject{
-	public:
-	
-	wxTextDataObject_php(const wxString& text=wxEmptyString):wxTextDataObject(text){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxTextDataObject_php(const wxString& text=wxEmptyString):wxTextDataObject(text){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -404,42 +419,44 @@ typedef struct _zo_wxTextDataObject{
     zend_object zo;
 } zo_wxTextDataObject;
 
-void php_wxTextDataObject_free(void *object TSRMLS_DC);
-zend_object* php_wxTextDataObject_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxTextDataObject_free(void *object);
+zend_object* php_wxTextDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextDataObject_functions[] = {
-	PHP_ME(php_wxTextDataObject, GetFormat, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextDataObject, GetText, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextDataObject, GetTextLength, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextDataObject, GetFormatCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextDataObject, GetAllFormats, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextDataObject, SetText, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxTextDataObject, GetFormat, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, GetText, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, GetTextLength, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, GetFormatCount, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, GetAllFormats, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, SetText, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxTextDataObject * php_wxTextDataObject_fetch_object(zend_object *obj) {
-      return (zo_wxTextDataObject *)((char *)obj - XtOffsetOf(zo_wxTextDataObject, zo));
+    return (zo_wxTextDataObject *)(
+        (char *)(obj) - XtOffsetOf(zo_wxTextDataObject, zo)
+    );
 }
 
-#define Z_wxTextDataObject_P(zv) php_wxTextDataObject_fetch_object(Z_OBJ_P(zv))
+#define Z_wxTextDataObject_P(zv) \
+    php_wxTextDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileDataObject_entry;
-void php_wxFileDataObject_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxFileDataObject_destruction_handler(zend_resource*);
 
 class wxFileDataObject_php: public wxFileDataObject{
-	public:
-	
-	wxFileDataObject_php():wxFileDataObject(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxFileDataObject_php():wxFileDataObject(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -450,43 +467,45 @@ typedef struct _zo_wxFileDataObject{
     zend_object zo;
 } zo_wxFileDataObject;
 
-void php_wxFileDataObject_free(void *object TSRMLS_DC);
-zend_object* php_wxFileDataObject_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxFileDataObject_free(void *object);
+zend_object* php_wxFileDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileDataObject_functions[] = {
-	PHP_ME(php_wxFileDataObject, AddFile, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileDataObject, GetFilenames, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxFileDataObject, AddFile, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileDataObject, GetFilenames, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxFileDataObject * php_wxFileDataObject_fetch_object(zend_object *obj) {
-      return (zo_wxFileDataObject *)((char *)obj - XtOffsetOf(zo_wxFileDataObject, zo));
+    return (zo_wxFileDataObject *)(
+        (char *)(obj) - XtOffsetOf(zo_wxFileDataObject, zo)
+    );
 }
 
-#define Z_wxFileDataObject_P(zv) php_wxFileDataObject_fetch_object(Z_OBJ_P(zv))
+#define Z_wxFileDataObject_P(zv) \
+    php_wxFileDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDropTarget_entry;
-void php_wxDropTarget_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxDropTarget_destruction_handler(zend_resource*);
 
 class wxDropTarget_php: public wxDropTarget{
-	public:
-	
-	wxDropTarget_php(wxDataObject* data=NULL):wxDropTarget(data){}
-		
-	void OnLeave();
-	wxDragResult OnDragOver(wxCoord x, wxCoord y, wxDragResult defResult);
-	wxDragResult OnEnter(wxCoord x, wxCoord y, wxDragResult defResult);
-	wxDragResult OnData(wxCoord x, wxCoord y, wxDragResult defResult);
-	bool OnDrop(wxCoord x, wxCoord y);
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxDropTarget_php(wxDataObject* data=NULL):wxDropTarget(data){}
+    
+    void OnLeave();
+    wxDragResult OnDragOver(wxCoord x, wxCoord y, wxDragResult defResult);
+    wxDragResult OnEnter(wxCoord x, wxCoord y, wxDragResult defResult);
+    wxDragResult OnData(wxCoord x, wxCoord y, wxDragResult defResult);
+    bool OnDrop(wxCoord x, wxCoord y);
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -497,40 +516,42 @@ typedef struct _zo_wxDropTarget{
     zend_object zo;
 } zo_wxDropTarget;
 
-void php_wxDropTarget_free(void *object TSRMLS_DC);
-zend_object* php_wxDropTarget_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxDropTarget_free(void *object);
+zend_object* php_wxDropTarget_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDropTarget_functions[] = {
-	PHP_ME(php_wxDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxDropTarget, SetDataObject, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDropTarget, GetData, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDropTarget, SetDataObject, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDropTarget, GetData, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxDropTarget * php_wxDropTarget_fetch_object(zend_object *obj) {
-      return (zo_wxDropTarget *)((char *)obj - XtOffsetOf(zo_wxDropTarget, zo));
+    return (zo_wxDropTarget *)(
+        (char *)(obj) - XtOffsetOf(zo_wxDropTarget, zo)
+    );
 }
 
-#define Z_wxDropTarget_P(zv) php_wxDropTarget_fetch_object(Z_OBJ_P(zv))
+#define Z_wxDropTarget_P(zv) \
+    php_wxDropTarget_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextDropTarget_entry;
-void php_wxTextDropTarget_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxTextDropTarget_destruction_handler(zend_resource*);
 
 class wxTextDropTarget_php: public wxTextDropTarget{
-	public:
-	
-	wxTextDropTarget_php():wxTextDropTarget(){}
-		
-	bool OnDropText(wxCoord x, wxCoord y, const wxString& data);
-	bool OnDrop(wxCoord x, wxCoord y);
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxTextDropTarget_php():wxTextDropTarget(){}
+    
+    bool OnDropText(wxCoord x, wxCoord y, const wxString& data);
+    bool OnDrop(wxCoord x, wxCoord y);
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -541,38 +562,40 @@ typedef struct _zo_wxTextDropTarget{
     zend_object zo;
 } zo_wxTextDropTarget;
 
-void php_wxTextDropTarget_free(void *object TSRMLS_DC);
-zend_object* php_wxTextDropTarget_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxTextDropTarget_free(void *object);
+zend_object* php_wxTextDropTarget_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextDropTarget_functions[] = {
-	PHP_ME(php_wxTextDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxTextDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxTextDropTarget * php_wxTextDropTarget_fetch_object(zend_object *obj) {
-      return (zo_wxTextDropTarget *)((char *)obj - XtOffsetOf(zo_wxTextDropTarget, zo));
+    return (zo_wxTextDropTarget *)(
+        (char *)(obj) - XtOffsetOf(zo_wxTextDropTarget, zo)
+    );
 }
 
-#define Z_wxTextDropTarget_P(zv) php_wxTextDropTarget_fetch_object(Z_OBJ_P(zv))
+#define Z_wxTextDropTarget_P(zv) \
+    php_wxTextDropTarget_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileDropTarget_entry;
-void php_wxFileDropTarget_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxFileDropTarget_destruction_handler(zend_resource*);
 
 class wxFileDropTarget_php: public wxFileDropTarget{
-	public:
-	
-	wxFileDropTarget_php():wxFileDropTarget(){}
-		
-	bool OnDropFiles(wxCoord x, wxCoord y, const wxArrayString& filenames);
-	bool OnDrop(wxCoord x, wxCoord y);
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxFileDropTarget_php():wxFileDropTarget(){}
+    
+    bool OnDropFiles(wxCoord x, wxCoord y, const wxArrayString& filenames);
+    bool OnDrop(wxCoord x, wxCoord y);
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -583,21 +606,24 @@ typedef struct _zo_wxFileDropTarget{
     zend_object zo;
 } zo_wxFileDropTarget;
 
-void php_wxFileDropTarget_free(void *object TSRMLS_DC);
-zend_object* php_wxFileDropTarget_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxFileDropTarget_free(void *object);
+zend_object* php_wxFileDropTarget_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileDropTarget_functions[] = {
-	PHP_ME(php_wxFileDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxFileDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxFileDropTarget * php_wxFileDropTarget_fetch_object(zend_object *obj) {
-      return (zo_wxFileDropTarget *)((char *)obj - XtOffsetOf(zo_wxFileDropTarget, zo));
+    return (zo_wxFileDropTarget *)(
+        (char *)(obj) - XtOffsetOf(zo_wxFileDropTarget, zo)
+    );
 }
 
-#define Z_wxFileDropTarget_P(zv) php_wxFileDropTarget_fetch_object(Z_OBJ_P(zv))
+#define Z_wxFileDropTarget_P(zv) \
+    php_wxFileDropTarget_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_DND_H_GUARD

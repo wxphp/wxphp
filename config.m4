@@ -61,20 +61,12 @@ if test "$PHP_WXWIDGETS" != "no"; then
         dnl If not building for macosx check dependencies are met
         if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
             AC_MSG_CHECKING([for webkitgtk include files])
-            WEBKITGTK=`find /usr/include -name "webkit.h"`
+            WEBKITGTK=`find /usr/include -name "webkit.h" -or -name "webkit2.h"`
             if test "$WEBKITGTK" != ""; then
                 AC_MSG_RESULT([found])
             else
                 AC_MSG_RESULT([not found])
                 AC_MSG_ERROR([webkitgtk include files where not found])
-            fi
-
-            AC_MSG_CHECKING([for gconf2 include files])
-            if test -e "/usr/include/gconf/2/gconf/gconf.h"; then
-                AC_MSG_RESULT([found])
-            else
-                AC_MSG_RESULT([not found])
-                AC_MSG_ERROR([gconf include files where not found])
             fi
 
             AC_MSG_CHECKING([for gstreamer include files])
@@ -152,15 +144,21 @@ if test "$PHP_WXWIDGETS" != "no"; then
 
         WX_BUILD_DIR=`pwd | sed "s/wxWidgets-${PHP_WX_VERSION}\/mybuild//"`wxWidgets-build
 
+        WX_FLAGS="-fPIC -O2"
+        if test "$PHP_WXWIDGETS_DEBUG" != "no"; then
+            dnl Enable debugging on wxWidgets.
+            WX_FLAGS="-fPIC -O0 -g"
+        fi
+
         if test ! -e "Makefile"; then
             if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
-                CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2"  \
+                CFLAGS="$WX_FLAGS" CXXFLAGS="$WX_FLAGS"  \
                 ../configure --prefix=$WX_BUILD_DIR --disable-shared \
                 --enable-monolithic --with-{gtk=3,sdl}
             else
-                CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2" CPPFLAGS="-fPIC -O2 -Wall -W" \
-                ../configure --prefix=$WX_BUILD_DIR --disable-shared --enable-monolithic \
-                --with-osx_cocoa
+                CFLAGS="$WX_FLAGS" CXXFLAGS="$WX_FLAGS" \
+                ../configure --prefix=$WX_BUILD_DIR --disable-shared \
+                --enable-monolithic --with-osx_cocoa
             fi
         fi
 
@@ -190,8 +188,8 @@ if test "$PHP_WXWIDGETS" != "no"; then
         dnl Yes, so set the C macro
         AC_DEFINE(USE_WXPHP_DEBUG,1,[Include debugging support in wxPHP])
 
-        CFLAGS="$CFLAGS -g"
-        CXXFLAGS="$CXXFLAGS -g"
+        CFLAGS="$CFLAGS -O0 -g"
+        CXXFLAGS="$CXXFLAGS -O0 -g"
     fi
 
     dnl Add additional includes directory
@@ -242,9 +240,14 @@ if test "$PHP_WXWIDGETS" != "no"; then
     if test "$PHP_WXWIDGETS_MONOLITHIC" != "no"; then
         PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs`
 
+        WEBKIT_LIB="-lwebkitgtk-3.0"
+        if find /usr/include -name "webkit2.h" ; then
+            WEBKIT_LIB="-lwebkit2gtk-4.0"
+        fi
+
         dnl Append wxscintilla and gstreamer if static build
         if test "$PHP_WXWIDGETS_STATIC" != "no"; then
-            PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.0 -lwebkitgtk-3.0 $PHP_WXWIDGETS_OTHER_LDFLAGS"
+            PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.0 $WEBKIT_LIB $PHP_WXWIDGETS_OTHER_LDFLAGS"
             LDFLAGS="$LDFLAGS $PHP_WXWIDGETS_LDFLAGS"
         fi
     else

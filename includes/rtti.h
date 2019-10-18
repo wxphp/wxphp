@@ -16,22 +16,21 @@
 #include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_rtti_get_args, 0, 0, 1)
-	ZEND_ARG_INFO(0, name)
+    ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxRefCounter_entry;
-void php_wxRefCounter_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxRefCounter_destruction_handler(zend_resource*);
 
 class wxRefCounter_php: public wxRefCounter{
-	public:
-	
-	wxRefCounter_php():wxRefCounter(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxRefCounter_php():wxRefCounter(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -42,52 +41,54 @@ typedef struct _zo_wxRefCounter{
     zend_object zo;
 } zo_wxRefCounter;
 
-void php_wxRefCounter_free(void *object TSRMLS_DC);
-zend_object* php_wxRefCounter_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxRefCounter_free(void *object);
+zend_object* php_wxRefCounter_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRefCounter_functions[] = {
-	PHP_ME(php_wxRefCounter, DecRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRefCounter, GetRefCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRefCounter, IncRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRefCounter, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxRefCounter, DecRef, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRefCounter, GetRefCount, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRefCounter, IncRef, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRefCounter, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxRefCounter * php_wxRefCounter_fetch_object(zend_object *obj) {
-      return (zo_wxRefCounter *)((char *)obj - XtOffsetOf(zo_wxRefCounter, zo));
+    return (zo_wxRefCounter *)(
+        (char *)(obj) - XtOffsetOf(zo_wxRefCounter, zo)
+    );
 }
 
-#define Z_wxRefCounter_P(zv) php_wxRefCounter_fetch_object(Z_OBJ_P(zv))
+#define Z_wxRefCounter_P(zv) \
+    php_wxRefCounter_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxObject_entry;
-void php_wxObject_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxObject_destruction_handler(zend_resource*);
 
 class wxObject_php: public wxObject{
-	public:
-	
-	wxObject_php(const wxObject& other):wxObject(other){}
-	wxObject_php():wxObject(){}
-		
-	
-    void InitProperties(){
-		properties = new void*[1];
+    public:
 
-		properties[0] = &m_refData;
-		
-	}
+    wxObject_php(const wxObject& other):wxObject(other){}
+    wxObject_php():wxObject(){}
+    
+    
+    void InitProperties(){
+        properties = new void*[1];
+
+        properties[0] = &m_refData;
+        
+    }
 
     void UninitProperties(){
-		delete[] properties;
-	}
+        delete[] properties;
+    }
 
     void** properties;
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -98,42 +99,44 @@ typedef struct _zo_wxObject{
     zend_object zo;
 } zo_wxObject;
 
-void php_wxObject_free(void *object TSRMLS_DC);
-zend_object* php_wxObject_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxObject_free(void *object);
+zend_object* php_wxObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxObject_functions[] = {
-	PHP_ME(php_wxObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, __get, wxphp_rtti_get_args, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, __get, wxphp_rtti_get_args, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxObject * php_wxObject_fetch_object(zend_object *obj) {
-      return (zo_wxObject *)((char *)obj - XtOffsetOf(zo_wxObject, zo));
+    return (zo_wxObject *)(
+        (char *)(obj) - XtOffsetOf(zo_wxObject, zo)
+    );
 }
 
-#define Z_wxObject_P(zv) php_wxObject_fetch_object(Z_OBJ_P(zv))
+#define Z_wxObject_P(zv) \
+    php_wxObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxClassInfo_entry;
-void php_wxClassInfo_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxClassInfo_destruction_handler(zend_resource*);
 
 class wxClassInfo_php: public wxClassInfo{
-	public:
-	
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -144,25 +147,28 @@ typedef struct _zo_wxClassInfo{
     zend_object zo;
 } zo_wxClassInfo;
 
-void php_wxClassInfo_free(void *object TSRMLS_DC);
-zend_object* php_wxClassInfo_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxClassInfo_free(void *object);
+zend_object* php_wxClassInfo_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxClassInfo_functions[] = {
-	PHP_ME(php_wxClassInfo, CreateObject, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClassInfo, FindClass, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClassInfo, GetSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClassInfo, IsDynamic, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxClassInfo, IsKindOf, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxClassInfo, CreateObject, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClassInfo, FindClass, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClassInfo, GetSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClassInfo, IsDynamic, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClassInfo, IsKindOf, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxClassInfo * php_wxClassInfo_fetch_object(zend_object *obj) {
-      return (zo_wxClassInfo *)((char *)obj - XtOffsetOf(zo_wxClassInfo, zo));
+    return (zo_wxClassInfo *)(
+        (char *)(obj) - XtOffsetOf(zo_wxClassInfo, zo)
+    );
 }
 
-#define Z_wxClassInfo_P(zv) php_wxClassInfo_fetch_object(Z_OBJ_P(zv))
+#define Z_wxClassInfo_P(zv) \
+    php_wxClassInfo_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_RTTI_H_GUARD

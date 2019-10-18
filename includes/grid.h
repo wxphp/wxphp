@@ -16,24 +16,23 @@
 #include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_grid_get_args, 0, 0, 1)
-	ZEND_ARG_INFO(0, name)
+    ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxGridCellRenderer_entry;
-void php_wxGridCellRenderer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellRenderer_php: public wxGridCellRenderer{
-	public:
-	
-		
-	wxSize GetBestSize(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, int row, int col);
-	void Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, const wxRect& rect, int row, int col, bool isSelected);
-	wxGridCellRenderer* Clone() const;
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    
+    wxSize GetBestSize(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, int row, int col);
+    void Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, const wxRect& rect, int row, int col, bool isSelected);
+    wxGridCellRenderer* Clone() const;
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -44,35 +43,37 @@ typedef struct _zo_wxGridCellRenderer{
     zend_object zo;
 } zo_wxGridCellRenderer;
 
-void php_wxGridCellRenderer_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellRenderer_free(void *object);
+zend_object* php_wxGridCellRenderer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellRenderer_functions[] = {
-	PHP_FE_END
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellRenderer * php_wxGridCellRenderer_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellRenderer, zo));
+    return (zo_wxGridCellRenderer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellRenderer, zo)
+    );
 }
 
-#define Z_wxGridCellRenderer_P(zv) php_wxGridCellRenderer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellRenderer_P(zv) \
+    php_wxGridCellRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellAutoWrapStringRenderer_entry;
-void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellAutoWrapStringRenderer_php: public wxGridCellAutoWrapStringRenderer{
-	public:
-	
-	wxGridCellAutoWrapStringRenderer_php():wxGridCellAutoWrapStringRenderer(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellAutoWrapStringRenderer_php():wxGridCellAutoWrapStringRenderer(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -83,36 +84,38 @@ typedef struct _zo_wxGridCellAutoWrapStringRenderer{
     zend_object zo;
 } zo_wxGridCellAutoWrapStringRenderer;
 
-void php_wxGridCellAutoWrapStringRenderer_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellAutoWrapStringRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellAutoWrapStringRenderer_free(void *object);
+zend_object* php_wxGridCellAutoWrapStringRenderer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellAutoWrapStringRenderer_functions[] = {
-	PHP_ME(php_wxGridCellAutoWrapStringRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellAutoWrapStringRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellAutoWrapStringRenderer * php_wxGridCellAutoWrapStringRenderer_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellAutoWrapStringRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellAutoWrapStringRenderer, zo));
+    return (zo_wxGridCellAutoWrapStringRenderer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellAutoWrapStringRenderer, zo)
+    );
 }
 
-#define Z_wxGridCellAutoWrapStringRenderer_P(zv) php_wxGridCellAutoWrapStringRenderer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellAutoWrapStringRenderer_P(zv) \
+    php_wxGridCellAutoWrapStringRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellBoolRenderer_entry;
-void php_wxGridCellBoolRenderer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellBoolRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellBoolRenderer_php: public wxGridCellBoolRenderer{
-	public:
-	
-	wxGridCellBoolRenderer_php():wxGridCellBoolRenderer(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellBoolRenderer_php():wxGridCellBoolRenderer(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -123,36 +126,38 @@ typedef struct _zo_wxGridCellBoolRenderer{
     zend_object zo;
 } zo_wxGridCellBoolRenderer;
 
-void php_wxGridCellBoolRenderer_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellBoolRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellBoolRenderer_free(void *object);
+zend_object* php_wxGridCellBoolRenderer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellBoolRenderer_functions[] = {
-	PHP_ME(php_wxGridCellBoolRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellBoolRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellBoolRenderer * php_wxGridCellBoolRenderer_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellBoolRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellBoolRenderer, zo));
+    return (zo_wxGridCellBoolRenderer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellBoolRenderer, zo)
+    );
 }
 
-#define Z_wxGridCellBoolRenderer_P(zv) php_wxGridCellBoolRenderer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellBoolRenderer_P(zv) \
+    php_wxGridCellBoolRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellDateTimeRenderer_entry;
-void php_wxGridCellDateTimeRenderer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellDateTimeRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellDateTimeRenderer_php: public wxGridCellDateTimeRenderer{
-	public:
-	
-	wxGridCellDateTimeRenderer_php(const wxString& outformat=wxDefaultDateTimeFormat, const wxString& informat=wxDefaultDateTimeFormat):wxGridCellDateTimeRenderer(outformat, informat){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellDateTimeRenderer_php(const wxString& outformat=wxDefaultDateTimeFormat, const wxString& informat=wxDefaultDateTimeFormat):wxGridCellDateTimeRenderer(outformat, informat){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -163,37 +168,39 @@ typedef struct _zo_wxGridCellDateTimeRenderer{
     zend_object zo;
 } zo_wxGridCellDateTimeRenderer;
 
-void php_wxGridCellDateTimeRenderer_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellDateTimeRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellDateTimeRenderer_free(void *object);
+zend_object* php_wxGridCellDateTimeRenderer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellDateTimeRenderer_functions[] = {
-	PHP_ME(php_wxGridCellDateTimeRenderer, SetParameters, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellDateTimeRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellDateTimeRenderer, SetParameters, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellDateTimeRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellDateTimeRenderer * php_wxGridCellDateTimeRenderer_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellDateTimeRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellDateTimeRenderer, zo));
+    return (zo_wxGridCellDateTimeRenderer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellDateTimeRenderer, zo)
+    );
 }
 
-#define Z_wxGridCellDateTimeRenderer_P(zv) php_wxGridCellDateTimeRenderer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellDateTimeRenderer_P(zv) \
+    php_wxGridCellDateTimeRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellEnumRenderer_entry;
-void php_wxGridCellEnumRenderer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellEnumRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellEnumRenderer_php: public wxGridCellEnumRenderer{
-	public:
-	
-	wxGridCellEnumRenderer_php(const wxString& choices=wxEmptyString):wxGridCellEnumRenderer(choices){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellEnumRenderer_php(const wxString& choices=wxEmptyString):wxGridCellEnumRenderer(choices){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -204,37 +211,39 @@ typedef struct _zo_wxGridCellEnumRenderer{
     zend_object zo;
 } zo_wxGridCellEnumRenderer;
 
-void php_wxGridCellEnumRenderer_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellEnumRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellEnumRenderer_free(void *object);
+zend_object* php_wxGridCellEnumRenderer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellEnumRenderer_functions[] = {
-	PHP_ME(php_wxGridCellEnumRenderer, SetParameters, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEnumRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellEnumRenderer, SetParameters, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellEnumRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellEnumRenderer * php_wxGridCellEnumRenderer_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellEnumRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellEnumRenderer, zo));
+    return (zo_wxGridCellEnumRenderer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellEnumRenderer, zo)
+    );
 }
 
-#define Z_wxGridCellEnumRenderer_P(zv) php_wxGridCellEnumRenderer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellEnumRenderer_P(zv) \
+    php_wxGridCellEnumRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellFloatRenderer_entry;
-void php_wxGridCellFloatRenderer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellFloatRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellFloatRenderer_php: public wxGridCellFloatRenderer{
-	public:
-	
-	wxGridCellFloatRenderer_php(int width=-1, int precision=-1, int format=wxGRID_FLOAT_FORMAT_DEFAULT):wxGridCellFloatRenderer(width, precision, format){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellFloatRenderer_php(int width=-1, int precision=-1, int format=wxGRID_FLOAT_FORMAT_DEFAULT):wxGridCellFloatRenderer(width, precision, format){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -245,43 +254,45 @@ typedef struct _zo_wxGridCellFloatRenderer{
     zend_object zo;
 } zo_wxGridCellFloatRenderer;
 
-void php_wxGridCellFloatRenderer_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellFloatRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellFloatRenderer_free(void *object);
+zend_object* php_wxGridCellFloatRenderer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellFloatRenderer_functions[] = {
-	PHP_ME(php_wxGridCellFloatRenderer, GetFormat, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellFloatRenderer, GetPrecision, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellFloatRenderer, GetWidth, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellFloatRenderer, SetFormat, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellFloatRenderer, SetParameters, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellFloatRenderer, SetPrecision, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellFloatRenderer, SetWidth, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellFloatRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellFloatRenderer, GetFormat, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellFloatRenderer, GetPrecision, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellFloatRenderer, GetWidth, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellFloatRenderer, SetFormat, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellFloatRenderer, SetParameters, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellFloatRenderer, SetPrecision, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellFloatRenderer, SetWidth, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellFloatRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellFloatRenderer * php_wxGridCellFloatRenderer_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellFloatRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellFloatRenderer, zo));
+    return (zo_wxGridCellFloatRenderer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellFloatRenderer, zo)
+    );
 }
 
-#define Z_wxGridCellFloatRenderer_P(zv) php_wxGridCellFloatRenderer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellFloatRenderer_P(zv) \
+    php_wxGridCellFloatRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellNumberRenderer_entry;
-void php_wxGridCellNumberRenderer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellNumberRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellNumberRenderer_php: public wxGridCellNumberRenderer{
-	public:
-	
-	wxGridCellNumberRenderer_php():wxGridCellNumberRenderer(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellNumberRenderer_php():wxGridCellNumberRenderer(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -292,36 +303,38 @@ typedef struct _zo_wxGridCellNumberRenderer{
     zend_object zo;
 } zo_wxGridCellNumberRenderer;
 
-void php_wxGridCellNumberRenderer_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellNumberRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellNumberRenderer_free(void *object);
+zend_object* php_wxGridCellNumberRenderer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellNumberRenderer_functions[] = {
-	PHP_ME(php_wxGridCellNumberRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellNumberRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellNumberRenderer * php_wxGridCellNumberRenderer_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellNumberRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellNumberRenderer, zo));
+    return (zo_wxGridCellNumberRenderer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellNumberRenderer, zo)
+    );
 }
 
-#define Z_wxGridCellNumberRenderer_P(zv) php_wxGridCellNumberRenderer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellNumberRenderer_P(zv) \
+    php_wxGridCellNumberRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellStringRenderer_entry;
-void php_wxGridCellStringRenderer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellStringRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellStringRenderer_php: public wxGridCellStringRenderer{
-	public:
-	
-	wxGridCellStringRenderer_php():wxGridCellStringRenderer(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellStringRenderer_php():wxGridCellStringRenderer(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -332,41 +345,43 @@ typedef struct _zo_wxGridCellStringRenderer{
     zend_object zo;
 } zo_wxGridCellStringRenderer;
 
-void php_wxGridCellStringRenderer_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellStringRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellStringRenderer_free(void *object);
+zend_object* php_wxGridCellStringRenderer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellStringRenderer_functions[] = {
-	PHP_ME(php_wxGridCellStringRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellStringRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellStringRenderer * php_wxGridCellStringRenderer_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellStringRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellStringRenderer, zo));
+    return (zo_wxGridCellStringRenderer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellStringRenderer, zo)
+    );
 }
 
-#define Z_wxGridCellStringRenderer_P(zv) php_wxGridCellStringRenderer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellStringRenderer_P(zv) \
+    php_wxGridCellStringRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellEditor_entry;
-void php_wxGridCellEditor_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellEditor_destruction_handler(zend_resource*);
 
 class wxGridCellEditor_php: public wxGridCellEditor{
-	public:
-	
-		
-	void ApplyEdit(int row, int col, wxGrid* grid);
-	void BeginEdit(int row, int col, wxGrid* grid);
-	wxGridCellEditor* Clone() const;
-	void Create(wxWindow* parent, wxWindowID id, wxEvtHandler* evtHandler);
-	bool EndEdit(int row, int col, const wxGrid* grid, const wxString& oldval, wxString* newval);
-	void Reset();
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    
+    void ApplyEdit(int row, int col, wxGrid* grid);
+    void BeginEdit(int row, int col, wxGrid* grid);
+    wxGridCellEditor* Clone() const;
+    void Create(wxWindow* parent, wxWindowID id, wxEvtHandler* evtHandler);
+    bool EndEdit(int row, int col, const wxGrid* grid, const wxString& oldval, wxString* newval);
+    void Reset();
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -377,43 +392,45 @@ typedef struct _zo_wxGridCellEditor{
     zend_object zo;
 } zo_wxGridCellEditor;
 
-void php_wxGridCellEditor_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellEditor_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellEditor_free(void *object);
+zend_object* php_wxGridCellEditor_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellEditor_functions[] = {
-	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, IsCreated, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, SetSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, Show, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, StartingClick, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, StartingKey, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellEditor, IsCreated, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellEditor, SetSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellEditor, Show, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellEditor, StartingClick, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellEditor, StartingKey, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellEditor * php_wxGridCellEditor_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellEditor, zo));
+    return (zo_wxGridCellEditor *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellEditor, zo)
+    );
 }
 
-#define Z_wxGridCellEditor_P(zv) php_wxGridCellEditor_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellEditor_P(zv) \
+    php_wxGridCellEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellAutoWrapStringEditor_entry;
-void php_wxGridCellAutoWrapStringEditor_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellAutoWrapStringEditor_destruction_handler(zend_resource*);
 
 class wxGridCellAutoWrapStringEditor_php: public wxGridCellAutoWrapStringEditor{
-	public:
-	
-	wxGridCellAutoWrapStringEditor_php():wxGridCellAutoWrapStringEditor(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellAutoWrapStringEditor_php():wxGridCellAutoWrapStringEditor(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -424,36 +441,38 @@ typedef struct _zo_wxGridCellAutoWrapStringEditor{
     zend_object zo;
 } zo_wxGridCellAutoWrapStringEditor;
 
-void php_wxGridCellAutoWrapStringEditor_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellAutoWrapStringEditor_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellAutoWrapStringEditor_free(void *object);
+zend_object* php_wxGridCellAutoWrapStringEditor_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellAutoWrapStringEditor_functions[] = {
-	PHP_ME(php_wxGridCellAutoWrapStringEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellAutoWrapStringEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellAutoWrapStringEditor * php_wxGridCellAutoWrapStringEditor_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellAutoWrapStringEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellAutoWrapStringEditor, zo));
+    return (zo_wxGridCellAutoWrapStringEditor *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellAutoWrapStringEditor, zo)
+    );
 }
 
-#define Z_wxGridCellAutoWrapStringEditor_P(zv) php_wxGridCellAutoWrapStringEditor_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellAutoWrapStringEditor_P(zv) \
+    php_wxGridCellAutoWrapStringEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellBoolEditor_entry;
-void php_wxGridCellBoolEditor_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellBoolEditor_destruction_handler(zend_resource*);
 
 class wxGridCellBoolEditor_php: public wxGridCellBoolEditor{
-	public:
-	
-	wxGridCellBoolEditor_php():wxGridCellBoolEditor(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellBoolEditor_php():wxGridCellBoolEditor(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -464,38 +483,40 @@ typedef struct _zo_wxGridCellBoolEditor{
     zend_object zo;
 } zo_wxGridCellBoolEditor;
 
-void php_wxGridCellBoolEditor_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellBoolEditor_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellBoolEditor_free(void *object);
+zend_object* php_wxGridCellBoolEditor_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellBoolEditor_functions[] = {
-	PHP_ME(php_wxGridCellBoolEditor, IsTrueValue, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellBoolEditor, UseStringValues, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellBoolEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellBoolEditor, IsTrueValue, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellBoolEditor, UseStringValues, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellBoolEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellBoolEditor * php_wxGridCellBoolEditor_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellBoolEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellBoolEditor, zo));
+    return (zo_wxGridCellBoolEditor *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellBoolEditor, zo)
+    );
 }
 
-#define Z_wxGridCellBoolEditor_P(zv) php_wxGridCellBoolEditor_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellBoolEditor_P(zv) \
+    php_wxGridCellBoolEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellChoiceEditor_entry;
-void php_wxGridCellChoiceEditor_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellChoiceEditor_destruction_handler(zend_resource*);
 
 class wxGridCellChoiceEditor_php: public wxGridCellChoiceEditor{
-	public:
-	
-	wxGridCellChoiceEditor_php(const wxArrayString& choices, bool allowOthers=false):wxGridCellChoiceEditor(choices, allowOthers){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellChoiceEditor_php(const wxArrayString& choices, bool allowOthers=false):wxGridCellChoiceEditor(choices, allowOthers){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -506,37 +527,39 @@ typedef struct _zo_wxGridCellChoiceEditor{
     zend_object zo;
 } zo_wxGridCellChoiceEditor;
 
-void php_wxGridCellChoiceEditor_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellChoiceEditor_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellChoiceEditor_free(void *object);
+zend_object* php_wxGridCellChoiceEditor_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellChoiceEditor_functions[] = {
-	PHP_ME(php_wxGridCellChoiceEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellChoiceEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellChoiceEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellChoiceEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellChoiceEditor * php_wxGridCellChoiceEditor_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellChoiceEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellChoiceEditor, zo));
+    return (zo_wxGridCellChoiceEditor *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellChoiceEditor, zo)
+    );
 }
 
-#define Z_wxGridCellChoiceEditor_P(zv) php_wxGridCellChoiceEditor_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellChoiceEditor_P(zv) \
+    php_wxGridCellChoiceEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellEnumEditor_entry;
-void php_wxGridCellEnumEditor_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellEnumEditor_destruction_handler(zend_resource*);
 
 class wxGridCellEnumEditor_php: public wxGridCellEnumEditor{
-	public:
-	
-	wxGridCellEnumEditor_php(const wxString& choices=wxEmptyString):wxGridCellEnumEditor(choices){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellEnumEditor_php(const wxString& choices=wxEmptyString):wxGridCellEnumEditor(choices){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -547,36 +570,38 @@ typedef struct _zo_wxGridCellEnumEditor{
     zend_object zo;
 } zo_wxGridCellEnumEditor;
 
-void php_wxGridCellEnumEditor_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellEnumEditor_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellEnumEditor_free(void *object);
+zend_object* php_wxGridCellEnumEditor_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellEnumEditor_functions[] = {
-	PHP_ME(php_wxGridCellEnumEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellEnumEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellEnumEditor * php_wxGridCellEnumEditor_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellEnumEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellEnumEditor, zo));
+    return (zo_wxGridCellEnumEditor *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellEnumEditor, zo)
+    );
 }
 
-#define Z_wxGridCellEnumEditor_P(zv) php_wxGridCellEnumEditor_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellEnumEditor_P(zv) \
+    php_wxGridCellEnumEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellTextEditor_entry;
-void php_wxGridCellTextEditor_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellTextEditor_destruction_handler(zend_resource*);
 
 class wxGridCellTextEditor_php: public wxGridCellTextEditor{
-	public:
-	
-	wxGridCellTextEditor_php(size_t maxChars=0):wxGridCellTextEditor(maxChars){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellTextEditor_php(size_t maxChars=0):wxGridCellTextEditor(maxChars){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -587,37 +612,39 @@ typedef struct _zo_wxGridCellTextEditor{
     zend_object zo;
 } zo_wxGridCellTextEditor;
 
-void php_wxGridCellTextEditor_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellTextEditor_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellTextEditor_free(void *object);
+zend_object* php_wxGridCellTextEditor_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellTextEditor_functions[] = {
-	PHP_ME(php_wxGridCellTextEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxGridCellTextEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellTextEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxGridCellTextEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellTextEditor * php_wxGridCellTextEditor_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellTextEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellTextEditor, zo));
+    return (zo_wxGridCellTextEditor *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellTextEditor, zo)
+    );
 }
 
-#define Z_wxGridCellTextEditor_P(zv) php_wxGridCellTextEditor_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellTextEditor_P(zv) \
+    php_wxGridCellTextEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellFloatEditor_entry;
-void php_wxGridCellFloatEditor_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellFloatEditor_destruction_handler(zend_resource*);
 
 class wxGridCellFloatEditor_php: public wxGridCellFloatEditor{
-	public:
-	
-	wxGridCellFloatEditor_php(int width=-1, int precision=-1, int format=wxGRID_FLOAT_FORMAT_DEFAULT):wxGridCellFloatEditor(width, precision, format){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellFloatEditor_php(int width=-1, int precision=-1, int format=wxGRID_FLOAT_FORMAT_DEFAULT):wxGridCellFloatEditor(width, precision, format){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -628,37 +655,39 @@ typedef struct _zo_wxGridCellFloatEditor{
     zend_object zo;
 } zo_wxGridCellFloatEditor;
 
-void php_wxGridCellFloatEditor_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellFloatEditor_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellFloatEditor_free(void *object);
+zend_object* php_wxGridCellFloatEditor_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellFloatEditor_functions[] = {
-	PHP_ME(php_wxGridCellFloatEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxGridCellFloatEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellFloatEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxGridCellFloatEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellFloatEditor * php_wxGridCellFloatEditor_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellFloatEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellFloatEditor, zo));
+    return (zo_wxGridCellFloatEditor *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellFloatEditor, zo)
+    );
 }
 
-#define Z_wxGridCellFloatEditor_P(zv) php_wxGridCellFloatEditor_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellFloatEditor_P(zv) \
+    php_wxGridCellFloatEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellNumberEditor_entry;
-void php_wxGridCellNumberEditor_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellNumberEditor_destruction_handler(zend_resource*);
 
 class wxGridCellNumberEditor_php: public wxGridCellNumberEditor{
-	public:
-	
-	wxGridCellNumberEditor_php(int min=-1, int max=-1):wxGridCellNumberEditor(min, max){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellNumberEditor_php(int min=-1, int max=-1):wxGridCellNumberEditor(min, max){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -669,38 +698,40 @@ typedef struct _zo_wxGridCellNumberEditor{
     zend_object zo;
 } zo_wxGridCellNumberEditor;
 
-void php_wxGridCellNumberEditor_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellNumberEditor_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellNumberEditor_free(void *object);
+zend_object* php_wxGridCellNumberEditor_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellNumberEditor_functions[] = {
-	PHP_ME(php_wxGridCellNumberEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxGridCellNumberEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellNumberEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxGridCellNumberEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellNumberEditor * php_wxGridCellNumberEditor_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellNumberEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellNumberEditor, zo));
+    return (zo_wxGridCellNumberEditor *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellNumberEditor, zo)
+    );
 }
 
-#define Z_wxGridCellNumberEditor_P(zv) php_wxGridCellNumberEditor_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellNumberEditor_P(zv) \
+    php_wxGridCellNumberEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellAttr_entry;
-void php_wxGridCellAttr_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridCellAttr_destruction_handler(zend_resource*);
 
 class wxGridCellAttr_php: public wxGridCellAttr{
-	public:
-	
-	wxGridCellAttr_php(wxGridCellAttr* attrDefault=NULL):wxGridCellAttr(attrDefault){}
-	wxGridCellAttr_php(const wxColour& colText, const wxColour& colBack, const wxFont& font, int hAlign, int vAlign):wxGridCellAttr(colText, colBack, font, hAlign, vAlign){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridCellAttr_php(wxGridCellAttr* attrDefault=NULL):wxGridCellAttr(attrDefault){}
+    wxGridCellAttr_php(const wxColour& colText, const wxColour& colBack, const wxFont& font, int hAlign, int vAlign):wxGridCellAttr(colText, colBack, font, hAlign, vAlign){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -711,65 +742,67 @@ typedef struct _zo_wxGridCellAttr{
     zend_object zo;
 } zo_wxGridCellAttr;
 
-void php_wxGridCellAttr_free(void *object TSRMLS_DC);
-zend_object* php_wxGridCellAttr_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridCellAttr_free(void *object);
+zend_object* php_wxGridCellAttr_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellAttr_functions[] = {
-	PHP_ME(php_wxGridCellAttr, CloneMethod, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, DecRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, GetAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, GetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, GetEditor, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, GetFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, GetNonDefaultAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, GetRenderer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, GetTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, HasAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, HasBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, HasEditor, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, HasFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, HasRenderer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, HasTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, IncRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, IsReadOnly, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, SetAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, SetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, SetDefAttr, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, SetEditor, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, SetFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, SetReadOnly, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, SetRenderer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, SetTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellAttr, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridCellAttr, CloneMethod, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, DecRef, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, GetAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, GetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, GetEditor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, GetFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, GetNonDefaultAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, GetRenderer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, GetTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, HasAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, HasBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, HasEditor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, HasFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, HasRenderer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, HasTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, IncRef, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, IsReadOnly, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, SetAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, SetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, SetDefAttr, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, SetEditor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, SetFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, SetReadOnly, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, SetRenderer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, SetTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridCellAttr, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridCellAttr * php_wxGridCellAttr_fetch_object(zend_object *obj) {
-      return (zo_wxGridCellAttr *)((char *)obj - XtOffsetOf(zo_wxGridCellAttr, zo));
+    return (zo_wxGridCellAttr *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridCellAttr, zo)
+    );
 }
 
-#define Z_wxGridCellAttr_P(zv) php_wxGridCellAttr_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridCellAttr_P(zv) \
+    php_wxGridCellAttr_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridTableBase_entry;
-void php_wxGridTableBase_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridTableBase_destruction_handler(zend_resource*);
 
 class wxGridTableBase_php: public wxGridTableBase{
-	public:
-	
-	wxGridTableBase_php():wxGridTableBase(){}
-		
-	int GetNumberCols();
-	int GetNumberRows();
-	wxString GetValue(int row, int col);
-	void SetValue(int row, int col, const wxString& value);
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridTableBase_php():wxGridTableBase(){}
+    
+    int GetNumberCols();
+    int GetNumberRows();
+    wxString GetValue(int row, int col);
+    void SetValue(int row, int col, const wxString& value);
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -780,84 +813,86 @@ typedef struct _zo_wxGridTableBase{
     zend_object zo;
 } zo_wxGridTableBase;
 
-void php_wxGridTableBase_free(void *object TSRMLS_DC);
-zend_object* php_wxGridTableBase_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridTableBase_free(void *object);
+zend_object* php_wxGridTableBase_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridTableBase_functions[] = {
-	PHP_ME(php_wxGridTableBase, AppendCols, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, AppendRows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, CanGetValueAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, CanHaveAttributes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, CanSetValueAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, Clear, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, DeleteCols, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, DeleteRows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetAttr, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetAttrProvider, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetColLabelValue, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetColsCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetRowLabelValue, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetRowsCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetTypeName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetValueAsBool, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetValueAsCustom, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetValueAsDouble, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetValueAsLong, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, GetView, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, InsertCols, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, InsertRows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, IsEmpty, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, IsEmptyCell, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, SetAttr, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, SetAttrProvider, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, SetColAttr, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, SetColLabelValue, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, SetRowAttr, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, SetRowLabelValue, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, SetValueAsBool, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, SetValueAsCustom, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, SetValueAsDouble, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, SetValueAsLong, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, SetView, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridTableBase, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridTableBase, AppendCols, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, AppendRows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, CanGetValueAs, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, CanHaveAttributes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, CanSetValueAs, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, Clear, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, DeleteCols, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, DeleteRows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetAttr, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetAttrProvider, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetColLabelValue, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetColsCount, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetRowLabelValue, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetRowsCount, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetTypeName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetValueAsBool, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetValueAsCustom, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetValueAsDouble, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetValueAsLong, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, GetView, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, InsertCols, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, InsertRows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, IsEmpty, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, IsEmptyCell, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, SetAttr, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, SetAttrProvider, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, SetColAttr, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, SetColLabelValue, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, SetRowAttr, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, SetRowLabelValue, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, SetValueAsBool, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, SetValueAsCustom, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, SetValueAsDouble, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, SetValueAsLong, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, SetView, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridTableBase, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridTableBase * php_wxGridTableBase_fetch_object(zend_object *obj) {
-      return (zo_wxGridTableBase *)((char *)obj - XtOffsetOf(zo_wxGridTableBase, zo));
+    return (zo_wxGridTableBase *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridTableBase, zo)
+    );
 }
 
-#define Z_wxGridTableBase_P(zv) php_wxGridTableBase_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridTableBase_P(zv) \
+    php_wxGridTableBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridSizesInfo_entry;
-void php_wxGridSizesInfo_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridSizesInfo_destruction_handler(zend_resource*);
 
 class wxGridSizesInfo_php: public wxGridSizesInfo{
-	public:
-	
-	wxGridSizesInfo_php():wxGridSizesInfo(){}
-		
-	
-    void InitProperties(){
-		properties = new void*[2];
+    public:
 
-		properties[0] = &m_sizeDefault;
-		properties[1] = &m_customSizes;
-		
-	}
+    wxGridSizesInfo_php():wxGridSizesInfo(){}
+    
+    
+    void InitProperties(){
+        properties = new void*[2];
+
+        properties[0] = &m_sizeDefault;
+        properties[1] = &m_customSizes;
+        
+    }
 
     void UninitProperties(){
-		delete[] properties;
-	}
+        delete[] properties;
+    }
 
     void** properties;
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -868,39 +903,41 @@ typedef struct _zo_wxGridSizesInfo{
     zend_object zo;
 } zo_wxGridSizesInfo;
 
-void php_wxGridSizesInfo_free(void *object TSRMLS_DC);
-zend_object* php_wxGridSizesInfo_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridSizesInfo_free(void *object);
+zend_object* php_wxGridSizesInfo_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridSizesInfo_functions[] = {
-	PHP_ME(php_wxGridSizesInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxGridSizesInfo, GetSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizesInfo, __get, wxphp_grid_get_args, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxGridSizesInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxGridSizesInfo, GetSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizesInfo, __get, wxphp_grid_get_args, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridSizesInfo * php_wxGridSizesInfo_fetch_object(zend_object *obj) {
-      return (zo_wxGridSizesInfo *)((char *)obj - XtOffsetOf(zo_wxGridSizesInfo, zo));
+    return (zo_wxGridSizesInfo *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridSizesInfo, zo)
+    );
 }
 
-#define Z_wxGridSizesInfo_P(zv) php_wxGridSizesInfo_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridSizesInfo_P(zv) \
+    php_wxGridSizesInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGrid_entry;
-void php_wxGrid_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGrid_destruction_handler(zend_resource*);
 
 class wxGrid_php: public wxGrid{
-	public:
-	
-	wxGrid_php():wxGrid(){}
-	wxGrid_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxWANTS_CHARS, const wxString& name=wxGridNameStr):wxGrid(parent, id, pos, size, style, name){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGrid_php():wxGrid(){}
+    wxGrid_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxWANTS_CHARS, const wxString& name=wxGridNameStr):wxGrid(parent, id, pos, size, style, name){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -911,246 +948,248 @@ typedef struct _zo_wxGrid{
     zend_object zo;
 } zo_wxGrid;
 
-void php_wxGrid_free(void *object TSRMLS_DC);
-zend_object* php_wxGrid_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGrid_free(void *object);
+zend_object* php_wxGrid_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGrid_functions[] = {
-	PHP_ME(php_wxGrid, AppendCols, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, AppendRows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, AreHorzGridLinesClipped, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, AreVertGridLinesClipped, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, AutoSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, AutoSizeColLabelSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, AutoSizeColumn, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, AutoSizeColumns, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, AutoSizeRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, AutoSizeRowLabelSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, AutoSizeRows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, BeginBatch, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, BlockToDeviceRect, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, CanDragCell, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, CanDragColMove, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, CanDragColSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, CanDragGridSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, CanDragRowSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, CanEnableCellControl, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, CellToRect, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, ClearGrid, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, ClearSelection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, ClipHorzGridLines, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, ClipVertGridLines, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, Create, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, CreateGrid, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, DeleteCols, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, DeleteRows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, DisableCellEditControl, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, DisableColResize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, DisableDragColMove, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, DisableDragColSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, DisableDragGridSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, DisableDragRowSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, DisableRowResize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, EnableCellEditControl, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, EnableDragCell, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, EnableDragColMove, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, EnableDragColSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, EnableDragGridSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, EnableDragRowSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, EnableEditing, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, EnableGridLines, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, EndBatch, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, Fit, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, ForceRefresh, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetBatchCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetCellAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetCellBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetCellEditor, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetCellFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetCellRenderer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetCellSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetCellTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetCellValue, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetColAt, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetColGridLinePen, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetColLabelAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetColLabelSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetColLabelTextOrientation, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetColLabelValue, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetColMinimalAcceptableWidth, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetColPos, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetColSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetColSizes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultCellAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultCellBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultCellFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultCellTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultColLabelSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultColSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultEditor, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultEditorForCell, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultEditorForType, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultGridLinePen, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultRenderer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultRendererForCell, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultRendererForType, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultRowLabelSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetDefaultRowSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetGridColHeader, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetGridColLabelWindow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetGridCornerLabelWindow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetGridCursorCol, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetGridCursorRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetGridLineColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetGridRowLabelWindow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetGridWindow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetLabelBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetLabelFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetLabelTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetNumberCols, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetNumberRows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetOrCreateCellAttr, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetRowGridLinePen, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetRowLabelAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetRowLabelSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetRowLabelValue, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetRowMinimalAcceptableHeight, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetRowSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetRowSizes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetScrollLineX, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetScrollLineY, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetSelectionBackground, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetSelectionForeground, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetSelectionMode, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetSortingColumn, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GetTable, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GoToCell, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, GridLinesEnabled, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, HideCellEditControl, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, HideCol, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, HideColLabels, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, HideRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, HideRowLabels, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, InsertCols, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, InsertRows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, IsCellEditControlEnabled, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, IsCurrentCellReadOnly, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, IsEditable, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, IsColShown, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, IsInSelection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, IsReadOnly, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, IsRowShown, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, IsSelection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, IsSortOrderAscending, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, IsSortingBy, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, IsVisible, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, MakeCellVisible, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, MoveCursorDown, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, MoveCursorDownBlock, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, MoveCursorLeft, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, MoveCursorLeftBlock, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, MoveCursorRight, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, MoveCursorRightBlock, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, MoveCursorUp, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, MoveCursorUpBlock, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, MovePageDown, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, MovePageUp, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, RefreshAttr, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, RegisterDataType, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, ResetColPos, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SaveEditControlValue, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SelectAll, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SelectBlock, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SelectCol, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SelectRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetCellAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetCellBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetCellEditor, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetCellFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetCellRenderer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetCellSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetCellTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetCellValue, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColAttr, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColFormatBool, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColFormatCustom, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColFormatFloat, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColFormatNumber, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColLabelAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColLabelSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColLabelTextOrientation, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColLabelValue, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColMinimalAcceptableWidth, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColMinimalWidth, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColPos, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetColSizes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetDefaultCellAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetDefaultCellBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetDefaultCellFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetDefaultCellTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetDefaultColSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetDefaultEditor, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetDefaultRenderer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetDefaultRowSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetGridCursor, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetGridLineColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetLabelBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetLabelFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetLabelTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetMargins, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetReadOnly, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetRowAttr, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetRowLabelAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetRowLabelSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetRowLabelValue, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetRowMinimalAcceptableHeight, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetRowMinimalHeight, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetRowSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetRowSizes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetScrollLineX, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetScrollLineY, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetSelectionBackground, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetSelectionForeground, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetSelectionMode, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetSortingColumn, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetTable, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, SetUseNativeColLabels, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, ShowCellEditControl, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, ShowCol, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, ShowRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, UnsetSortingColumn, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, UseNativeColHeader, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, XToCol, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, XToEdgeOfCol, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, XYToCell, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, YToEdgeOfRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, YToRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGrid, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGrid, AppendCols, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, AppendRows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, AreHorzGridLinesClipped, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, AreVertGridLinesClipped, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, AutoSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, AutoSizeColLabelSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, AutoSizeColumn, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, AutoSizeColumns, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, AutoSizeRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, AutoSizeRowLabelSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, AutoSizeRows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, BeginBatch, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, BlockToDeviceRect, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, CanDragCell, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, CanDragColMove, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, CanDragColSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, CanDragGridSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, CanDragRowSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, CanEnableCellControl, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, CellToRect, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, ClearGrid, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, ClearSelection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, ClipHorzGridLines, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, ClipVertGridLines, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, Create, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, CreateGrid, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, DeleteCols, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, DeleteRows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, DisableCellEditControl, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, DisableColResize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, DisableDragColMove, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, DisableDragColSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, DisableDragGridSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, DisableDragRowSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, DisableRowResize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, EnableCellEditControl, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, EnableDragCell, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, EnableDragColMove, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, EnableDragColSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, EnableDragGridSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, EnableDragRowSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, EnableEditing, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, EnableGridLines, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, EndBatch, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, Fit, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, ForceRefresh, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetBatchCount, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetCellAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetCellBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetCellEditor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetCellFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetCellRenderer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetCellSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetCellTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetCellValue, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetColAt, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetColGridLinePen, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetColLabelAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetColLabelSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetColLabelTextOrientation, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetColLabelValue, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetColMinimalAcceptableWidth, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetColPos, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetColSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetColSizes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultCellAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultCellBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultCellFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultCellTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultColLabelSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultColSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultEditor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultEditorForCell, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultEditorForType, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultGridLinePen, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultRenderer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultRendererForCell, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultRendererForType, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultRowLabelSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetDefaultRowSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetGridColHeader, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetGridColLabelWindow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetGridCornerLabelWindow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetGridCursorCol, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetGridCursorRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetGridLineColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetGridRowLabelWindow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetGridWindow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetLabelBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetLabelFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetLabelTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetNumberCols, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetNumberRows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetOrCreateCellAttr, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetRowGridLinePen, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetRowLabelAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetRowLabelSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetRowLabelValue, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetRowMinimalAcceptableHeight, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetRowSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetRowSizes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetScrollLineX, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetScrollLineY, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetSelectionBackground, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetSelectionForeground, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetSelectionMode, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetSortingColumn, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GetTable, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GoToCell, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, GridLinesEnabled, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, HideCellEditControl, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, HideCol, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, HideColLabels, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, HideRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, HideRowLabels, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, InsertCols, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, InsertRows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, IsCellEditControlEnabled, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, IsCurrentCellReadOnly, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, IsEditable, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, IsColShown, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, IsInSelection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, IsReadOnly, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, IsRowShown, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, IsSelection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, IsSortOrderAscending, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, IsSortingBy, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, IsVisible, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, MakeCellVisible, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, MoveCursorDown, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, MoveCursorDownBlock, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, MoveCursorLeft, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, MoveCursorLeftBlock, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, MoveCursorRight, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, MoveCursorRightBlock, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, MoveCursorUp, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, MoveCursorUpBlock, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, MovePageDown, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, MovePageUp, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, RefreshAttr, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, RegisterDataType, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, ResetColPos, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SaveEditControlValue, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SelectAll, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SelectBlock, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SelectCol, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SelectRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetCellAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetCellBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetCellEditor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetCellFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetCellRenderer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetCellSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetCellTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetCellValue, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColAttr, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColFormatBool, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColFormatCustom, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColFormatFloat, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColFormatNumber, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColLabelAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColLabelSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColLabelTextOrientation, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColLabelValue, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColMinimalAcceptableWidth, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColMinimalWidth, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColPos, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetColSizes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetDefaultCellAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetDefaultCellBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetDefaultCellFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetDefaultCellTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetDefaultColSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetDefaultEditor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetDefaultRenderer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetDefaultRowSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetGridCursor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetGridLineColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetLabelBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetLabelFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetLabelTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetMargins, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetReadOnly, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetRowAttr, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetRowLabelAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetRowLabelSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetRowLabelValue, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetRowMinimalAcceptableHeight, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetRowMinimalHeight, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetRowSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetRowSizes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetScrollLineX, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetScrollLineY, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetSelectionBackground, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetSelectionForeground, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetSelectionMode, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetSortingColumn, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetTable, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, SetUseNativeColLabels, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, ShowCellEditControl, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, ShowCol, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, ShowRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, UnsetSortingColumn, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, UseNativeColHeader, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, XToCol, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, XToEdgeOfCol, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, XYToCell, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, YToEdgeOfRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, YToRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGrid, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGrid * php_wxGrid_fetch_object(zend_object *obj) {
-      return (zo_wxGrid *)((char *)obj - XtOffsetOf(zo_wxGrid, zo));
+    return (zo_wxGrid *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGrid, zo)
+    );
 }
 
-#define Z_wxGrid_P(zv) php_wxGrid_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGrid_P(zv) \
+    php_wxGrid_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridUpdateLocker_entry;
-void php_wxGridUpdateLocker_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridUpdateLocker_destruction_handler(zend_resource*);
 
 class wxGridUpdateLocker_php: public wxGridUpdateLocker{
-	public:
-	
-	wxGridUpdateLocker_php(wxGrid* grid=NULL):wxGridUpdateLocker(grid){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridUpdateLocker_php(wxGrid* grid=NULL):wxGridUpdateLocker(grid){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -1161,22 +1200,25 @@ typedef struct _zo_wxGridUpdateLocker{
     zend_object zo;
 } zo_wxGridUpdateLocker;
 
-void php_wxGridUpdateLocker_free(void *object TSRMLS_DC);
-zend_object* php_wxGridUpdateLocker_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridUpdateLocker_free(void *object);
+zend_object* php_wxGridUpdateLocker_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridUpdateLocker_functions[] = {
-	PHP_ME(php_wxGridUpdateLocker, Create, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridUpdateLocker, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridUpdateLocker, Create, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridUpdateLocker, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridUpdateLocker * php_wxGridUpdateLocker_fetch_object(zend_object *obj) {
-      return (zo_wxGridUpdateLocker *)((char *)obj - XtOffsetOf(zo_wxGridUpdateLocker, zo));
+    return (zo_wxGridUpdateLocker *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridUpdateLocker, zo)
+    );
 }
 
-#define Z_wxGridUpdateLocker_P(zv) php_wxGridUpdateLocker_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridUpdateLocker_P(zv) \
+    php_wxGridUpdateLocker_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_GRID_H_GUARD

@@ -20,10 +20,6 @@ extern zend_class_entry *php_wxApp_entry;
 class wxAppWrapper : public wxApp
 {
     public:
-        #ifdef ZTS
-        wxAppWrapper():wxApp(),phpObj(0),tsrm_ls((void ***) ts_resource_ex(0, NULL)){}
-        #endif
-
         bool OnInit();
         int OnExit();
 
@@ -37,8 +33,7 @@ class wxAppWrapper : public wxApp
         bool OSXIsGUIApplication();
         #endif
 
-        zval* phpObj;
-        void ***tsrm_ls;
+        zval phpObj;
 };
 
 BEGIN_EXTERN_C()
@@ -50,8 +45,8 @@ typedef struct _zo_wxApp
     zend_object zo;
 } zo_wxApp;
 
-void php_wxApp_free(void *object TSRMLS_DC);
-zend_object* php_wxApp_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxApp_free(void *object);
+zend_object* php_wxApp_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 static zend_function_entry php_wxApp_functions[] = {
@@ -73,7 +68,7 @@ static zend_function_entry php_wxApp_functions[] = {
 };
 
 static inline zo_wxApp * php_wxApp_fetch_object(zend_object *obj) {
-      return (zo_wxApp *)((char *)obj - XtOffsetOf(zo_wxApp, zo));
+      return (zo_wxApp *)((char *)(obj) - XtOffsetOf(zo_wxApp, zo));
 }
 
 #define Z_wxApp_P(zv) php_wxApp_fetch_object(Z_OBJ_P(zv))

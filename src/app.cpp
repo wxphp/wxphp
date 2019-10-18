@@ -16,34 +16,27 @@
 /**
  * Set the wxWidgets application handler.
  */
-IMPLEMENT_APP_NO_MAIN(wxAppWrapper);
+wxIMPLEMENT_APP_NO_MAIN(wxAppWrapper);
 
 BEGIN_EXTERN_C()
-void php_wxApp_free(void *object TSRMLS_DC)
+zend_object* php_wxApp_new(zend_class_entry *class_type)
 {
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Calling php_wxApp_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+    php_printf(
+        "Calling php_wxApp_new on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
     php_printf("===========================================\n");
     #endif
 
-    zo_wxApp* custom_object = (zo_wxApp*) object;
-    //delete custom_object->native_object;
-    zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
-    efree(custom_object);
-}
+    zo_wxApp* custom_object = (zo_wxApp*) ecalloc(
+        1,
+        sizeof(zo_wxApp) + zend_object_properties_size(class_type)
+    );
 
-zend_object* php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
-{
-    #ifdef USE_WXPHP_DEBUG
-    php_printf("Calling php_wxApp_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-    php_printf("===========================================\n");
-    #endif
-
-    zo_wxApp* custom_object;
-    custom_object = (zo_wxApp*) emalloc(sizeof(zo_wxApp) + abs((int)zend_object_properties_size(class_type)));
-
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-    object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+    zend_object_std_init(&custom_object->zo, class_type);
+    object_properties_init(&custom_object->zo, class_type);
 
     custom_object->zo.handlers = zend_get_std_object_handlers();
 
@@ -53,39 +46,123 @@ zend_object* php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
 
     return &custom_object->zo;
 }
-END_EXTERN_C()
 
-int wxAppWrapper::OnExit()
+void php_wxApp_free(void *object)
 {
-    zval retval;
-    zval func_name;
-    
-    ZVAL_STRINGL(&func_name, (char *)"OnExit", sizeof("OnExit")-1);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf(
+        "Calling php_wxApp_free on %s at line %i\n",
+        zend_get_executed_filename(),
+        zend_get_executed_lineno()
+    );
+    php_printf("===========================================\n");
+    #endif
 
-    call_user_function_ex(NULL, phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC);
-
-    return 0;
+    zo_wxApp* custom_object = (zo_wxApp*) object;
+    //delete custom_object->native_object;
+    zend_object_std_dtor(&custom_object->zo);
+    efree(custom_object);
 }
+END_EXTERN_C()
 
 bool wxAppWrapper::OnInit()
 {
-    zval retval;
-    zval func_name;
+    static bool is_php_user_space_implemented = true;
 
-    ZVAL_STRINGL(&func_name, (char *)"OnInit", sizeof("OnInit")-1);
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual wxApp::OnInit\n");
+    php_printf("===========================================\n");
+    #endif
 
-    wxFileSystem::AddHandler(new wxZipFSHandler);
+    zval function_name;
+    ZVAL_STRINGL(&function_name, "OnInit", 6);
 
-    #ifdef ZTS
-    if(!phpObj)
-    {
-        tsrm_ls = (void ***) ts_resource_ex(0, NULL);
+    zval return_value;
+
+    int function_called;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+
+    if (phpObj.value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj.value.obj->ce->name));
     }
     #endif
 
-    call_user_function_ex(NULL, phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC);
+    if(is_php_user_space_implemented)
+    {
+        function_called = call_user_function_ex(
+            NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+        );
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+
+        return false;
+    }
 
     return true;
+}
+
+int wxAppWrapper::OnExit()
+{
+    static bool is_php_user_space_implemented = true;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual wxApp::OnExit\n");
+    php_printf("===========================================\n");
+    #endif
+
+    zval function_name;
+    ZVAL_STRINGL(&function_name, "OnExit", 6);
+
+    zval return_value;
+
+    int function_called;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+
+    if (phpObj.value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj.value.obj->ce->name));
+    }
+    #endif
+
+    if(is_php_user_space_implemented)
+    {
+        function_called = call_user_function_ex(
+            NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+        );
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+    }
+
+    return 0;
 }
 
 #ifdef __WXMAC__
@@ -94,24 +171,32 @@ void wxAppWrapper::MacNewFile()
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacNewFile\n");
+    php_printf("Invoking virtual wxApp::MacNewFile\n");
     php_printf("===========================================\n");
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacNewFile", sizeof("MacNewFile")-1);
+    ZVAL_STRINGL(&function_name, "MacNewFile", 10);
 
     zval return_value;
 
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(
+            NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+        );
     }
     else
     {
@@ -133,12 +218,12 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacOpenFiles\n");
+    php_printf("Invoking virtual wxApp::MacOpenFiles\n");
     php_printf("===========================================\n");
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacOpenFiles", sizeof("MacOpenFiles")-1);
+    ZVAL_STRINGL(&function_name, "MacOpenFiles", 12);
 
     zval* params[1];
     zval arguments[1];
@@ -152,19 +237,27 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
     array_init(&arguments[0]);
     for(int i=0; i<fileNames.GetCount(); i++)
     {
-        add_next_index_string(&arguments[0], fileNames[i].char_str());
+        add_next_index_string(&arguments[0], fileNames[i].ToUTF8().data());
     }
 
     //Set parameters that are sent to function
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(
+            NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL
+        );
     }
     else
     {
@@ -189,12 +282,12 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacOpenFile\n");
+    php_printf("Invoking virtual wxApp::MacOpenFile\n");
     php_printf("===========================================\n");
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacOpenFile", sizeof("MacOpenFile")-1);
+    ZVAL_STRINGL(&function_name, "MacOpenFile", 11);
 
     zval* params[1];
     zval arguments[1];
@@ -205,18 +298,26 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], fileName.char_str());
+    ZVAL_STRING(&arguments[0], fileName.ToUTF8().data());
 
     //Set parameters that are sent to function
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(
+            NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL
+        );
     }
     else
     {
@@ -241,12 +342,12 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacOpenURL\n");
+    php_printf("Invoking virtual wxApp::MacOpenURL\n");
     php_printf("===========================================\n");
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacOpenURL", sizeof("MacOpenURL")-1);
+    ZVAL_STRINGL(&function_name, "MacOpenURL", 10);
 
     zval* params[1];
     zval arguments[1];
@@ -257,18 +358,26 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], url.char_str());
+    ZVAL_STRING(&arguments[0], url.ToUTF8().data());
 
     //Set parameters that are sent to function
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(
+            NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL
+        );
     }
     else
     {
@@ -293,12 +402,12 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacPrintFile\n");
+    php_printf("Invoking virtual wxApp::MacPrintFile\n");
     php_printf("===========================================\n");
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacPrintFile", sizeof("MacPrintFile")-1);
+    ZVAL_STRINGL(&function_name, "MacPrintFile", 12);
 
     zval* params[1];
     zval arguments[1];
@@ -309,18 +418,26 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], fileName.char_str());
+    ZVAL_STRING(&arguments[0], fileName.ToUTF8().data());
 
     //Set parameters that are sent to function
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(
+            NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL
+        );
     }
     else
     {
@@ -345,24 +462,32 @@ void wxAppWrapper::MacReopenApp()
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual MacReopenApp\n");
+    php_printf("Invoking virtual wxApp::MacReopenApp\n");
     php_printf("===========================================\n");
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacReopenApp", sizeof("MacReopenApp")-1);
+    ZVAL_STRINGL(&function_name, "MacReopenApp", 12);
 
     zval return_value;
 
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(
+            NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+        );
     }
     else
     {
@@ -384,24 +509,32 @@ bool wxAppWrapper::OSXIsGUIApplication()
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Invoking virtual OSXIsGUIApplication\n");
+    php_printf("Invoking virtual wxApp::OSXIsGUIApplication\n");
     php_printf("===========================================\n");
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"OSXIsGUIApplication", sizeof("OSXIsGUIApplication")-1);
+    ZVAL_STRINGL(&function_name, "OSXIsGUIApplication", 19);
 
     zval return_value;
 
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(
+            NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+        );
     }
     else
     {
@@ -423,7 +556,7 @@ bool wxAppWrapper::OSXIsGUIApplication()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO_P(&return_value) == IS_TRUE;
+    return Z_TYPE_INFO(return_value) == IS_TRUE;
 }
 #endif
 
@@ -434,11 +567,7 @@ PHP_METHOD(php_wxApp, __construct)
     zo_wxApp* current_object;
 
     wxAppWrapper* native_object = new wxAppWrapper();
-    native_object->phpObj = getThis();
-
-    #ifdef ZTS
-    native_object->tsrm_ls = tsrm_ls;
-    #endif
+    native_object->phpObj = *getThis();
 
     current_object = Z_wxApp_P(getThis());
 
@@ -454,12 +583,18 @@ PHP_METHOD(php_wxApp, SetInstance)
 {
     zval *objvar;
 
-    if(zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, (char *)"O", &objvar, php_wxApp_entry) == FAILURE)
+    if(
+        zend_parse_parameters(
+            ZEND_NUM_ARGS(), (char *)"O", &objvar, php_wxApp_entry
+        )
+        ==
+        FAILURE
+    )
     {
         RETURN_NULL();
     }
 
-    wxApp::SetInstance((wxAppWrapper*) Z_wxApp_P(objvar TSRMLS_CC)->native_object);
+    wxApp::SetInstance(Z_wxApp_P(objvar)->native_object);
 }
 /* }}} */
 
@@ -472,16 +607,16 @@ PHP_METHOD(php_wxApp, GetInstance)
     {
         ZVAL_NULL(return_value);
     }
-    else if(instance->phpObj != NULL)
+    else if(!Z_ISNULL(instance->phpObj)) // Todo: Does this work?
     {
-        return_value = instance->phpObj;
-        zval_add_ref(instance->phpObj);
+        return_value = &instance->phpObj;
+        zval_add_ref(&instance->phpObj);
     }
     else
     {
         object_init_ex(return_value, php_wxApp_entry);
-    
-        Z_wxApp_P(return_value TSRMLS_CC)->native_object = (wxAppWrapper*) instance;
+
+        Z_wxApp_P(return_value)->native_object = instance;
     }
 }
 /* }}} */
@@ -489,72 +624,67 @@ PHP_METHOD(php_wxApp, GetInstance)
 /* {{{ proto bool wxApp::Yield() */
 PHP_METHOD(php_wxApp, Yield)
 {
-    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
 
     if (zend_parse_parameters_none() == FAILURE)
         return;
 
-    RETURN_BOOL(((wxApp*)native_object)->Yield())
+    RETURN_BOOL(native_object->Yield())
 }
 /* }}} */
 
-/* {{{ proto bool wxApp::GetAppDisplayName(string name) */
+/* {{{ proto bool wxApp::GetAppDisplayName() */
 PHP_METHOD(php_wxApp, GetAppDisplayName)
 {
-    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
-    
-    wxString value_to_return;
-    value_to_return = ((wxApp*)native_object)->GetAppDisplayName();
-    
-    ZVAL_STRING(return_value, value_to_return.char_str());
+    wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
+
+    wxString value_to_return = native_object->GetAppDisplayName();
+
+    ZVAL_STRING(return_value, value_to_return.ToUTF8().data());
 }
 /* }}} */
 
-/* {{{ proto bool wxApp::GetAppName(string name) */
+/* {{{ proto bool wxApp::GetAppName() */
 PHP_METHOD(php_wxApp, GetAppName)
 {
-    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
-    
-    wxString value_to_return;
-    value_to_return = ((wxApp*)native_object)->GetAppName();
-    
-    ZVAL_STRING(return_value, value_to_return.char_str());
+    wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
+
+    wxString value_to_return = native_object->GetAppName();
+
+    ZVAL_STRING(return_value, value_to_return.ToUTF8().data());
 }
 /* }}} */
 
-/* {{{ proto bool wxApp::GetClassName(string name) */
+/* {{{ proto bool wxApp::GetClassName() */
 PHP_METHOD(php_wxApp, GetClassName)
 {
-    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
-    
-    wxString value_to_return;
-    value_to_return = ((wxApp*)native_object)->GetClassName();
-    
-    ZVAL_STRING(return_value, value_to_return.char_str());
-}
-/* }}} */
- 
-/* {{{ proto bool wxApp::GetVendorDisplayName(string name) */
-PHP_METHOD(php_wxApp, GetVendorDisplayName)
-{
-    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
-    
-    wxString value_to_return;
-    value_to_return = ((wxApp*)native_object)->GetVendorDisplayName();
-    
-    ZVAL_STRING(return_value, value_to_return.char_str());
+    wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
+
+    wxString value_to_return = native_object->GetClassName();
+
+    ZVAL_STRING(return_value, value_to_return.ToUTF8().data());
 }
 /* }}} */
 
-/* {{{ proto bool wxApp::GetVendorName(string name) */
+/* {{{ proto bool wxApp::GetVendorDisplayName() */
+PHP_METHOD(php_wxApp, GetVendorDisplayName)
+{
+    wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
+
+    wxString value_to_return = native_object->GetVendorDisplayName();
+
+    ZVAL_STRING(return_value, value_to_return.ToUTF8().data());
+}
+/* }}} */
+
+/* {{{ proto bool wxApp::GetVendorName() */
 PHP_METHOD(php_wxApp, GetVendorName)
 {
-    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
-    
-    wxString value_to_return;
-    value_to_return = ((wxApp*)native_object)->GetVendorName();
-    
-    ZVAL_STRING(return_value, value_to_return.char_str());
+    wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
+
+    wxString value_to_return = native_object->GetVendorName();
+
+    ZVAL_STRING(return_value, value_to_return.ToUTF8().data());
 }
 /* }}} */
 
@@ -562,30 +692,29 @@ PHP_METHOD(php_wxApp, GetVendorName)
 /* {{{ proto bool wxApp::SetAppDisplayName(string name) */
 PHP_METHOD(php_wxApp, SetAppDisplayName)
 {
-    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
-    
+    wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
+
     char* name;
-	long name_len;
+    long name_len;
 
     if(ZEND_NUM_ARGS() > 0)
     {
         char parse_parameters_string[] = "s";
-        
-		if(
+
+        if(
             zend_parse_parameters_ex(
-                ZEND_PARSE_PARAMS_QUIET, 
-                ZEND_NUM_ARGS() 
-                TSRMLS_CC, 
-                parse_parameters_string, 
-                &name, 
-                &name_len 
+                ZEND_PARSE_PARAMS_QUIET,
+                ZEND_NUM_ARGS(),
+                parse_parameters_string,
+                &name,
+                &name_len
             ) == SUCCESS
         )
-		{
-			((wxApp*)native_object)->SetAppDisplayName(
+        {
+            native_object->SetAppDisplayName(
                 wxString(name, wxConvUTF8)
             );
-		}
+        }
     }
 }
 /* }}} */
@@ -593,30 +722,29 @@ PHP_METHOD(php_wxApp, SetAppDisplayName)
 /* {{{ proto bool wxApp::SetAppName(string name) */
 PHP_METHOD(php_wxApp, SetAppName)
 {
-    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
-    
+    wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
+
     char* name;
-	long name_len;
+    long name_len;
 
     if(ZEND_NUM_ARGS() > 0)
     {
         char parse_parameters_string[] = "s";
-        
-		if(
+
+        if(
             zend_parse_parameters_ex(
-                ZEND_PARSE_PARAMS_QUIET, 
-                ZEND_NUM_ARGS() 
-                TSRMLS_CC, 
-                parse_parameters_string, 
-                &name, 
-                &name_len 
+                ZEND_PARSE_PARAMS_QUIET,
+                ZEND_NUM_ARGS(),
+                parse_parameters_string,
+                &name,
+                &name_len
             ) == SUCCESS
         )
-		{
-			((wxApp*)native_object)->SetAppName(
+        {
+            native_object->SetAppName(
                 wxString(name, wxConvUTF8)
             );
-		}
+        }
     }
 }
 /* }}} */
@@ -624,61 +752,59 @@ PHP_METHOD(php_wxApp, SetAppName)
 /* {{{ proto bool wxApp::SetClassName(string name) */
 PHP_METHOD(php_wxApp, SetClassName)
 {
-    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
-    
+    wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
+
     char* name;
-	long name_len;
+    long name_len;
 
     if(ZEND_NUM_ARGS() > 0)
     {
         char parse_parameters_string[] = "s";
-        
-		if(
+
+        if(
             zend_parse_parameters_ex(
-                ZEND_PARSE_PARAMS_QUIET, 
-                ZEND_NUM_ARGS() 
-                TSRMLS_CC, 
-                parse_parameters_string, 
-                &name, 
-                &name_len 
+                ZEND_PARSE_PARAMS_QUIET,
+                ZEND_NUM_ARGS(),
+                parse_parameters_string,
+                &name,
+                &name_len
             ) == SUCCESS
         )
-		{
-			((wxApp*)native_object)->SetClassName(
+        {
+            native_object->SetClassName(
                 wxString(name, wxConvUTF8)
             );
-		}
+        }
     }
 }
 /* }}} */
- 
+
 /* {{{ proto bool wxApp::SetVendorDisplayName(string name) */
 PHP_METHOD(php_wxApp, SetVendorDisplayName)
 {
-    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
-    
+    wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
+
     char* name;
-	long name_len;
+    long name_len;
 
     if(ZEND_NUM_ARGS() > 0)
     {
         char parse_parameters_string[] = "s";
-        
-		if(
+
+        if(
             zend_parse_parameters_ex(
-                ZEND_PARSE_PARAMS_QUIET, 
-                ZEND_NUM_ARGS() 
-                TSRMLS_CC, 
-                parse_parameters_string, 
-                &name, 
-                &name_len 
+                ZEND_PARSE_PARAMS_QUIET,
+                ZEND_NUM_ARGS(),
+                parse_parameters_string,
+                &name,
+                &name_len
             ) == SUCCESS
         )
-		{
-			((wxApp*)native_object)->SetVendorDisplayName(
+        {
+            native_object->SetVendorDisplayName(
                 wxString(name, wxConvUTF8)
             );
-		}
+        }
     }
 }
 /* }}} */
@@ -686,30 +812,29 @@ PHP_METHOD(php_wxApp, SetVendorDisplayName)
 /* {{{ proto bool wxApp::SetVendorName(string name) */
 PHP_METHOD(php_wxApp, SetVendorName)
 {
-    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
-    
+    wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
+
     char* name;
-	long name_len;
+    long name_len;
 
     if(ZEND_NUM_ARGS() > 0)
     {
         char parse_parameters_string[] = "s";
-        
-		if(
+
+        if(
             zend_parse_parameters_ex(
-                ZEND_PARSE_PARAMS_QUIET, 
-                ZEND_NUM_ARGS() 
-                TSRMLS_CC, 
-                parse_parameters_string, 
-                &name, 
-                &name_len 
+                ZEND_PARSE_PARAMS_QUIET,
+                ZEND_NUM_ARGS(),
+                parse_parameters_string,
+                &name,
+                &name_len
             ) == SUCCESS
         )
-		{
-			((wxApp*)native_object)->SetVendorName(
+        {
+            native_object->SetVendorName(
                 wxString(name, wxConvUTF8)
             );
-		}
+        }
     }
 }
 /* }}} */

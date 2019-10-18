@@ -16,23 +16,22 @@
 #include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_winlayout_get_args, 0, 0, 1)
-	ZEND_ARG_INFO(0, name)
+    ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxGBPosition_entry;
-void php_wxGBPosition_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGBPosition_destruction_handler(zend_resource*);
 
 class wxGBPosition_php: public wxGBPosition{
-	public:
-	
-	wxGBPosition_php():wxGBPosition(){}
-	wxGBPosition_php(int row, int col):wxGBPosition(row, col){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGBPosition_php():wxGBPosition(){}
+    wxGBPosition_php(int row, int col):wxGBPosition(row, col){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -43,40 +42,42 @@ typedef struct _zo_wxGBPosition{
     zend_object zo;
 } zo_wxGBPosition;
 
-void php_wxGBPosition_free(void *object TSRMLS_DC);
-zend_object* php_wxGBPosition_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGBPosition_free(void *object);
+zend_object* php_wxGBPosition_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGBPosition_functions[] = {
-	PHP_ME(php_wxGBPosition, GetCol, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBPosition, GetRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBPosition, SetCol, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBPosition, SetRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBPosition, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGBPosition, GetCol, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBPosition, GetRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBPosition, SetCol, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBPosition, SetRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBPosition, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGBPosition * php_wxGBPosition_fetch_object(zend_object *obj) {
-      return (zo_wxGBPosition *)((char *)obj - XtOffsetOf(zo_wxGBPosition, zo));
+    return (zo_wxGBPosition *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGBPosition, zo)
+    );
 }
 
-#define Z_wxGBPosition_P(zv) php_wxGBPosition_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGBPosition_P(zv) \
+    php_wxGBPosition_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridBagSizer_entry;
-void php_wxGridBagSizer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridBagSizer_destruction_handler(zend_resource*);
 
 class wxGridBagSizer_php: public wxGridBagSizer{
-	public:
-	
-	wxGridBagSizer_php(int vgap=0, int hgap=0):wxGridBagSizer(vgap, hgap){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridBagSizer_php(int vgap=0, int hgap=0):wxGridBagSizer(vgap, hgap){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -87,53 +88,55 @@ typedef struct _zo_wxGridBagSizer{
     zend_object zo;
 } zo_wxGridBagSizer;
 
-void php_wxGridBagSizer_free(void *object TSRMLS_DC);
-zend_object* php_wxGridBagSizer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridBagSizer_free(void *object);
+zend_object* php_wxGridBagSizer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridBagSizer_functions[] = {
-	PHP_ME(php_wxGridBagSizer, Add, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, CheckForIntersection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, FindItem, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, FindItemAtPoint, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, FindItemAtPosition, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, FindItemWithData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, GetCellSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, GetEmptyCellSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, GetItemPosition, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, GetItemSpan, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, SetEmptyCellSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, SetItemPosition, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, SetItemSpan, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridBagSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridBagSizer, Add, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, CheckForIntersection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, FindItem, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, FindItemAtPoint, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, FindItemAtPosition, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, FindItemWithData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, GetCellSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, GetEmptyCellSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, GetItemPosition, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, GetItemSpan, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, SetEmptyCellSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, SetItemPosition, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, SetItemSpan, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridBagSizer * php_wxGridBagSizer_fetch_object(zend_object *obj) {
-      return (zo_wxGridBagSizer *)((char *)obj - XtOffsetOf(zo_wxGridBagSizer, zo));
+    return (zo_wxGridBagSizer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridBagSizer, zo)
+    );
 }
 
-#define Z_wxGridBagSizer_P(zv) php_wxGridBagSizer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridBagSizer_P(zv) \
+    php_wxGridBagSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGBSizerItem_entry;
-void php_wxGBSizerItem_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGBSizerItem_destruction_handler(zend_resource*);
 
 class wxGBSizerItem_php: public wxGBSizerItem{
-	public:
-	
-	wxGBSizerItem_php(int width, int height, const wxGBPosition& pos, const wxGBSpan& span=wxDefaultSpan, int flag=0, int border=0, wxObject* userData=NULL):wxGBSizerItem(width, height, pos, span, flag, border, userData){}
-	wxGBSizerItem_php(wxWindow* window, const wxGBPosition& pos, const wxGBSpan& span=wxDefaultSpan, int flag=0, int border=0, wxObject* userData=NULL):wxGBSizerItem(window, pos, span, flag, border, userData){}
-	wxGBSizerItem_php(wxSizer* sizer, const wxGBPosition& pos, const wxGBSpan& span=wxDefaultSpan, int flag=0, int border=0, wxObject* userData=NULL):wxGBSizerItem(sizer, pos, span, flag, border, userData){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGBSizerItem_php(int width, int height, const wxGBPosition& pos, const wxGBSpan& span=wxDefaultSpan, int flag=0, int border=0, wxObject* userData=NULL):wxGBSizerItem(width, height, pos, span, flag, border, userData){}
+    wxGBSizerItem_php(wxWindow* window, const wxGBPosition& pos, const wxGBSpan& span=wxDefaultSpan, int flag=0, int border=0, wxObject* userData=NULL):wxGBSizerItem(window, pos, span, flag, border, userData){}
+    wxGBSizerItem_php(wxSizer* sizer, const wxGBPosition& pos, const wxGBSpan& span=wxDefaultSpan, int flag=0, int border=0, wxObject* userData=NULL):wxGBSizerItem(sizer, pos, span, flag, border, userData){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -144,45 +147,47 @@ typedef struct _zo_wxGBSizerItem{
     zend_object zo;
 } zo_wxGBSizerItem;
 
-void php_wxGBSizerItem_free(void *object TSRMLS_DC);
-zend_object* php_wxGBSizerItem_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGBSizerItem_free(void *object);
+zend_object* php_wxGBSizerItem_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGBSizerItem_functions[] = {
-	PHP_ME(php_wxGBSizerItem, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxGBSizerItem, SetSpan, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBSizerItem, SetPos, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBSizerItem, SetGBSizer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBSizerItem, Intersects, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBSizerItem, GetSpan, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBSizerItem, GetPos, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBSizerItem, GetGBSizer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBSizerItem, GetEndPos, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxGBSizerItem, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxGBSizerItem, SetSpan, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, SetPos, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, SetGBSizer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, Intersects, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, GetSpan, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, GetPos, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, GetGBSizer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, GetEndPos, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGBSizerItem * php_wxGBSizerItem_fetch_object(zend_object *obj) {
-      return (zo_wxGBSizerItem *)((char *)obj - XtOffsetOf(zo_wxGBSizerItem, zo));
+    return (zo_wxGBSizerItem *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGBSizerItem, zo)
+    );
 }
 
-#define Z_wxGBSizerItem_P(zv) php_wxGBSizerItem_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGBSizerItem_P(zv) \
+    php_wxGBSizerItem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGBSpan_entry;
-void php_wxGBSpan_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGBSpan_destruction_handler(zend_resource*);
 
 class wxGBSpan_php: public wxGBSpan{
-	public:
-	
-	wxGBSpan_php():wxGBSpan(){}
-	wxGBSpan_php(int rowspan, int colspan):wxGBSpan(rowspan, colspan){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGBSpan_php():wxGBSpan(){}
+    wxGBSpan_php(int rowspan, int colspan):wxGBSpan(rowspan, colspan){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -193,40 +198,42 @@ typedef struct _zo_wxGBSpan{
     zend_object zo;
 } zo_wxGBSpan;
 
-void php_wxGBSpan_free(void *object TSRMLS_DC);
-zend_object* php_wxGBSpan_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGBSpan_free(void *object);
+zend_object* php_wxGBSpan_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGBSpan_functions[] = {
-	PHP_ME(php_wxGBSpan, GetColspan, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBSpan, GetRowspan, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBSpan, SetColspan, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBSpan, SetRowspan, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGBSpan, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGBSpan, GetColspan, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSpan, GetRowspan, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSpan, SetColspan, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSpan, SetRowspan, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSpan, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGBSpan * php_wxGBSpan_fetch_object(zend_object *obj) {
-      return (zo_wxGBSpan *)((char *)obj - XtOffsetOf(zo_wxGBSpan, zo));
+    return (zo_wxGBSpan *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGBSpan, zo)
+    );
 }
 
-#define Z_wxGBSpan_P(zv) php_wxGBSpan_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGBSpan_P(zv) \
+    php_wxGBSpan_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLayoutAlgorithm_entry;
-void php_wxLayoutAlgorithm_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxLayoutAlgorithm_destruction_handler(zend_resource*);
 
 class wxLayoutAlgorithm_php: public wxLayoutAlgorithm{
-	public:
-	
-	wxLayoutAlgorithm_php():wxLayoutAlgorithm(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxLayoutAlgorithm_php():wxLayoutAlgorithm(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -237,41 +244,43 @@ typedef struct _zo_wxLayoutAlgorithm{
     zend_object zo;
 } zo_wxLayoutAlgorithm;
 
-void php_wxLayoutAlgorithm_free(void *object TSRMLS_DC);
-zend_object* php_wxLayoutAlgorithm_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxLayoutAlgorithm_free(void *object);
+zend_object* php_wxLayoutAlgorithm_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLayoutAlgorithm_functions[] = {
-	PHP_ME(php_wxLayoutAlgorithm, LayoutFrame, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxLayoutAlgorithm, LayoutMDIFrame, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxLayoutAlgorithm, LayoutWindow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxLayoutAlgorithm, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxLayoutAlgorithm, LayoutFrame, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxLayoutAlgorithm, LayoutMDIFrame, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxLayoutAlgorithm, LayoutWindow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxLayoutAlgorithm, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxLayoutAlgorithm * php_wxLayoutAlgorithm_fetch_object(zend_object *obj) {
-      return (zo_wxLayoutAlgorithm *)((char *)obj - XtOffsetOf(zo_wxLayoutAlgorithm, zo));
+    return (zo_wxLayoutAlgorithm *)(
+        (char *)(obj) - XtOffsetOf(zo_wxLayoutAlgorithm, zo)
+    );
 }
 
-#define Z_wxLayoutAlgorithm_P(zv) php_wxLayoutAlgorithm_fetch_object(Z_OBJ_P(zv))
+#define Z_wxLayoutAlgorithm_P(zv) \
+    php_wxLayoutAlgorithm_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSizer_entry;
-void php_wxSizer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxSizer_destruction_handler(zend_resource*);
 
 class wxSizer_php: public wxSizer{
-	public:
-	
-	wxSizer_php():wxSizer(){}
-		
-	void RecalcSizes();
-	wxSize CalcMin();
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxSizer_php():wxSizer(){}
+    
+    void RecalcSizes();
+    wxSize CalcMin();
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -282,70 +291,72 @@ typedef struct _zo_wxSizer{
     zend_object zo;
 } zo_wxSizer;
 
-void php_wxSizer_free(void *object TSRMLS_DC);
-zend_object* php_wxSizer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxSizer_free(void *object);
+zend_object* php_wxSizer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSizer_functions[] = {
-	PHP_ME(php_wxSizer, Show, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxSizer, SetSizeHints, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, SetMinSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, SetItemMinSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, SetDimension, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Replace, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Remove, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, PrependStretchSpacer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, PrependSpacer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Prepend, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Layout, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, IsShown, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, IsEmpty, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, InsertStretchSpacer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, InsertSpacer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Insert, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, InformFirstDirection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Hide, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, GetSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, GetPosition, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, GetMinSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, GetItemCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, FitInside, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Fit, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Detach, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, ComputeFittingWindowSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, ComputeFittingClientSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Add, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, AddSpacer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, AddStretchSpacer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Clear, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, GetContainingWindow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, GetItem, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, GetItemById, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxSizer, Show, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxSizer, SetSizeHints, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, SetMinSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, SetItemMinSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, SetDimension, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Replace, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Remove, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, PrependStretchSpacer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, PrependSpacer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Prepend, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Layout, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, IsShown, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, IsEmpty, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, InsertStretchSpacer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, InsertSpacer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Insert, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, InformFirstDirection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Hide, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetPosition, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetMinSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetItemCount, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, FitInside, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Fit, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Detach, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, ComputeFittingWindowSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, ComputeFittingClientSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Add, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, AddSpacer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, AddStretchSpacer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Clear, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetContainingWindow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetItem, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetItemById, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxSizer * php_wxSizer_fetch_object(zend_object *obj) {
-      return (zo_wxSizer *)((char *)obj - XtOffsetOf(zo_wxSizer, zo));
+    return (zo_wxSizer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxSizer, zo)
+    );
 }
 
-#define Z_wxSizer_P(zv) php_wxSizer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxSizer_P(zv) \
+    php_wxSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStdDialogButtonSizer_entry;
-void php_wxStdDialogButtonSizer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxStdDialogButtonSizer_destruction_handler(zend_resource*);
 
 class wxStdDialogButtonSizer_php: public wxStdDialogButtonSizer{
-	public:
-	
-	wxStdDialogButtonSizer_php():wxStdDialogButtonSizer(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxStdDialogButtonSizer_php():wxStdDialogButtonSizer(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -356,47 +367,49 @@ typedef struct _zo_wxStdDialogButtonSizer{
     zend_object zo;
 } zo_wxStdDialogButtonSizer;
 
-void php_wxStdDialogButtonSizer_free(void *object TSRMLS_DC);
-zend_object* php_wxStdDialogButtonSizer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxStdDialogButtonSizer_free(void *object);
+zend_object* php_wxStdDialogButtonSizer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStdDialogButtonSizer_functions[] = {
-	PHP_ME(php_wxStdDialogButtonSizer, AddButton, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxStdDialogButtonSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxStdDialogButtonSizer, Realize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxStdDialogButtonSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxStdDialogButtonSizer, SetAffirmativeButton, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxStdDialogButtonSizer, SetCancelButton, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxStdDialogButtonSizer, SetNegativeButton, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxStdDialogButtonSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxStdDialogButtonSizer, AddButton, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, Realize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, SetAffirmativeButton, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, SetCancelButton, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, SetNegativeButton, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxStdDialogButtonSizer * php_wxStdDialogButtonSizer_fetch_object(zend_object *obj) {
-      return (zo_wxStdDialogButtonSizer *)((char *)obj - XtOffsetOf(zo_wxStdDialogButtonSizer, zo));
+    return (zo_wxStdDialogButtonSizer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxStdDialogButtonSizer, zo)
+    );
 }
 
-#define Z_wxStdDialogButtonSizer_P(zv) php_wxStdDialogButtonSizer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxStdDialogButtonSizer_P(zv) \
+    php_wxStdDialogButtonSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSizerItem_entry;
-void php_wxSizerItem_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxSizerItem_destruction_handler(zend_resource*);
 
 class wxSizerItem_php: public wxSizerItem{
-	public:
-	
-	wxSizerItem_php(wxWindow* window, const wxSizerFlags& flags):wxSizerItem(window, flags){}
-	wxSizerItem_php(wxWindow* window, int proportion=0, int flag=0, int border=0, wxObject* userData=NULL):wxSizerItem(window, proportion, flag, border, userData){}
-	wxSizerItem_php(wxSizer* sizer, const wxSizerFlags& flags):wxSizerItem(sizer, flags){}
-	wxSizerItem_php(wxSizer* sizer, int proportion=0, int flag=0, int border=0, wxObject* userData=NULL):wxSizerItem(sizer, proportion, flag, border, userData){}
-	wxSizerItem_php(int width, int height, int proportion=0, int flag=0, int border=0, wxObject* userData=NULL):wxSizerItem(width, height, proportion, flag, border, userData){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxSizerItem_php(wxWindow* window, const wxSizerFlags& flags):wxSizerItem(window, flags){}
+    wxSizerItem_php(wxWindow* window, int proportion=0, int flag=0, int border=0, wxObject* userData=NULL):wxSizerItem(window, proportion, flag, border, userData){}
+    wxSizerItem_php(wxSizer* sizer, const wxSizerFlags& flags):wxSizerItem(sizer, flags){}
+    wxSizerItem_php(wxSizer* sizer, int proportion=0, int flag=0, int border=0, wxObject* userData=NULL):wxSizerItem(sizer, proportion, flag, border, userData){}
+    wxSizerItem_php(int width, int height, int proportion=0, int flag=0, int border=0, wxObject* userData=NULL):wxSizerItem(width, height, proportion, flag, border, userData){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -407,69 +420,71 @@ typedef struct _zo_wxSizerItem{
     zend_object zo;
 } zo_wxSizerItem;
 
-void php_wxSizerItem_free(void *object TSRMLS_DC);
-zend_object* php_wxSizerItem_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxSizerItem_free(void *object);
+zend_object* php_wxSizerItem_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSizerItem_functions[] = {
-	PHP_ME(php_wxSizerItem, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxSizerItem, Show, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, SetUserData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, SetRatio, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, SetProportion, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, SetMinSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, SetInitSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, SetId, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, SetFlag, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, SetDimension, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, SetBorder, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, IsWindow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, IsSpacer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, IsSizer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, IsShown, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, AssignSizer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, AssignSpacer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, AssignWindow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, CalcMin, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, DeleteWindows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, DetachSizer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetBorder, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetFlag, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetId, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetMinSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetPosition, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetProportion, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetRatio, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetRect, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetSizer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetSpacer, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetUserData, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerItem, GetWindow, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxSizerItem, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxSizerItem, Show, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetUserData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetRatio, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetProportion, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetMinSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetInitSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetId, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetFlag, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetDimension, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetBorder, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, IsWindow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, IsSpacer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, IsSizer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, IsShown, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, AssignSizer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, AssignSpacer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, AssignWindow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, CalcMin, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, DeleteWindows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, DetachSizer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetBorder, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetFlag, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetId, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetMinSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetPosition, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetProportion, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetRatio, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetRect, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetSizer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetSpacer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetUserData, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetWindow, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxSizerItem * php_wxSizerItem_fetch_object(zend_object *obj) {
-      return (zo_wxSizerItem *)((char *)obj - XtOffsetOf(zo_wxSizerItem, zo));
+    return (zo_wxSizerItem *)(
+        (char *)(obj) - XtOffsetOf(zo_wxSizerItem, zo)
+    );
 }
 
-#define Z_wxSizerItem_P(zv) php_wxSizerItem_fetch_object(Z_OBJ_P(zv))
+#define Z_wxSizerItem_P(zv) \
+    php_wxSizerItem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSizerFlags_entry;
-void php_wxSizerFlags_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxSizerFlags_destruction_handler(zend_resource*);
 
 class wxSizerFlags_php: public wxSizerFlags{
-	public:
-	
-	wxSizerFlags_php(int proportion=0):wxSizerFlags(proportion){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxSizerFlags_php(int proportion=0):wxSizerFlags(proportion){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -480,56 +495,58 @@ typedef struct _zo_wxSizerFlags{
     zend_object zo;
 } zo_wxSizerFlags;
 
-void php_wxSizerFlags_free(void *object TSRMLS_DC);
-zend_object* php_wxSizerFlags_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxSizerFlags_free(void *object);
+zend_object* php_wxSizerFlags_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSizerFlags_functions[] = {
-	PHP_ME(php_wxSizerFlags, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxSizerFlags, TripleBorder, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, Top, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, Shaped, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, Right, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, ReserveSpaceEvenIfHidden, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, Proportion, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, Left, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, GetDefaultBorder, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, FixedMinSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, Expand, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, DoubleHorzBorder, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, DoubleBorder, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, Centre, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, Center, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, Bottom, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, Border, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizerFlags, Align, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxSizerFlags, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxSizerFlags, TripleBorder, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Top, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Shaped, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Right, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, ReserveSpaceEvenIfHidden, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Proportion, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Left, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, GetDefaultBorder, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, FixedMinSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Expand, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, DoubleHorzBorder, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, DoubleBorder, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Centre, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Center, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Bottom, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Border, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Align, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxSizerFlags * php_wxSizerFlags_fetch_object(zend_object *obj) {
-      return (zo_wxSizerFlags *)((char *)obj - XtOffsetOf(zo_wxSizerFlags, zo));
+    return (zo_wxSizerFlags *)(
+        (char *)(obj) - XtOffsetOf(zo_wxSizerFlags, zo)
+    );
 }
 
-#define Z_wxSizerFlags_P(zv) php_wxSizerFlags_fetch_object(Z_OBJ_P(zv))
+#define Z_wxSizerFlags_P(zv) \
+    php_wxSizerFlags_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFlexGridSizer_entry;
-void php_wxFlexGridSizer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxFlexGridSizer_destruction_handler(zend_resource*);
 
 class wxFlexGridSizer_php: public wxFlexGridSizer{
-	public:
-	
-	wxFlexGridSizer_php(int cols, int vgap, int hgap):wxFlexGridSizer(cols, vgap, hgap){}
-	wxFlexGridSizer_php(int cols, const wxSize& gap=wxSize(0, 0)):wxFlexGridSizer(cols, gap){}
-	wxFlexGridSizer_php(int rows, int cols, int vgap, int hgap):wxFlexGridSizer(rows, cols, vgap, hgap){}
-	wxFlexGridSizer_php(int rows, int cols, const wxSize& gap):wxFlexGridSizer(rows, cols, gap){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxFlexGridSizer_php(int cols, int vgap, int hgap):wxFlexGridSizer(cols, vgap, hgap){}
+    wxFlexGridSizer_php(int cols, const wxSize& gap=wxSize(0, 0)):wxFlexGridSizer(cols, gap){}
+    wxFlexGridSizer_php(int rows, int cols, int vgap, int hgap):wxFlexGridSizer(rows, cols, vgap, hgap){}
+    wxFlexGridSizer_php(int rows, int cols, const wxSize& gap):wxFlexGridSizer(rows, cols, gap){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -540,51 +557,53 @@ typedef struct _zo_wxFlexGridSizer{
     zend_object zo;
 } zo_wxFlexGridSizer;
 
-void php_wxFlexGridSizer_free(void *object TSRMLS_DC);
-zend_object* php_wxFlexGridSizer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxFlexGridSizer_free(void *object);
+zend_object* php_wxFlexGridSizer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFlexGridSizer_functions[] = {
-	PHP_ME(php_wxFlexGridSizer, AddGrowableCol, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, AddGrowableRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, GetFlexibleDirection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, GetNonFlexibleGrowMode, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, IsColGrowable, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, IsRowGrowable, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, RemoveGrowableCol, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, RemoveGrowableRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, SetFlexibleDirection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, SetNonFlexibleGrowMode, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFlexGridSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxFlexGridSizer, AddGrowableCol, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, AddGrowableRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, GetFlexibleDirection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, GetNonFlexibleGrowMode, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, IsColGrowable, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, IsRowGrowable, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, RemoveGrowableCol, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, RemoveGrowableRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, SetFlexibleDirection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, SetNonFlexibleGrowMode, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxFlexGridSizer * php_wxFlexGridSizer_fetch_object(zend_object *obj) {
-      return (zo_wxFlexGridSizer *)((char *)obj - XtOffsetOf(zo_wxFlexGridSizer, zo));
+    return (zo_wxFlexGridSizer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxFlexGridSizer, zo)
+    );
 }
 
-#define Z_wxFlexGridSizer_P(zv) php_wxFlexGridSizer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxFlexGridSizer_P(zv) \
+    php_wxFlexGridSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridSizer_entry;
-void php_wxGridSizer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxGridSizer_destruction_handler(zend_resource*);
 
 class wxGridSizer_php: public wxGridSizer{
-	public:
-	
-	wxGridSizer_php(int cols, int vgap, int hgap):wxGridSizer(cols, vgap, hgap){}
-	wxGridSizer_php(int cols, const wxSize& gap=wxSize(0, 0)):wxGridSizer(cols, gap){}
-	wxGridSizer_php(int rows, int cols, int vgap, int hgap):wxGridSizer(rows, cols, vgap, hgap){}
-	wxGridSizer_php(int rows, int cols, const wxSize& gap):wxGridSizer(rows, cols, gap){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxGridSizer_php(int cols, int vgap, int hgap):wxGridSizer(cols, vgap, hgap){}
+    wxGridSizer_php(int cols, const wxSize& gap=wxSize(0, 0)):wxGridSizer(cols, gap){}
+    wxGridSizer_php(int rows, int cols, int vgap, int hgap):wxGridSizer(rows, cols, vgap, hgap){}
+    wxGridSizer_php(int rows, int cols, const wxSize& gap):wxGridSizer(rows, cols, gap){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -595,49 +614,51 @@ typedef struct _zo_wxGridSizer{
     zend_object zo;
 } zo_wxGridSizer;
 
-void php_wxGridSizer_free(void *object TSRMLS_DC);
-zend_object* php_wxGridSizer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxGridSizer_free(void *object);
+zend_object* php_wxGridSizer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridSizer_functions[] = {
-	PHP_ME(php_wxGridSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, GetCols, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, GetEffectiveColsCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, GetEffectiveRowsCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, GetHGap, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, GetRows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, GetVGap, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, SetCols, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, SetHGap, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, SetRows, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, SetVGap, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxGridSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetCols, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetEffectiveColsCount, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetEffectiveRowsCount, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetHGap, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetRows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetVGap, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, SetCols, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, SetHGap, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, SetRows, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, SetVGap, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxGridSizer * php_wxGridSizer_fetch_object(zend_object *obj) {
-      return (zo_wxGridSizer *)((char *)obj - XtOffsetOf(zo_wxGridSizer, zo));
+    return (zo_wxGridSizer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxGridSizer, zo)
+    );
 }
 
-#define Z_wxGridSizer_P(zv) php_wxGridSizer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxGridSizer_P(zv) \
+    php_wxGridSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStaticBoxSizer_entry;
-void php_wxStaticBoxSizer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxStaticBoxSizer_destruction_handler(zend_resource*);
 
 class wxStaticBoxSizer_php: public wxStaticBoxSizer{
-	public:
-	
-	wxStaticBoxSizer_php(wxStaticBox* box, int orient):wxStaticBoxSizer(box, orient){}
-	wxStaticBoxSizer_php(int orient, wxWindow* parent, const wxString& label=wxEmptyString):wxStaticBoxSizer(orient, parent, label){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxStaticBoxSizer_php(wxStaticBox* box, int orient):wxStaticBoxSizer(box, orient){}
+    wxStaticBoxSizer_php(int orient, wxWindow* parent, const wxString& label=wxEmptyString):wxStaticBoxSizer(orient, parent, label){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -648,39 +669,41 @@ typedef struct _zo_wxStaticBoxSizer{
     zend_object zo;
 } zo_wxStaticBoxSizer;
 
-void php_wxStaticBoxSizer_free(void *object TSRMLS_DC);
-zend_object* php_wxStaticBoxSizer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxStaticBoxSizer_free(void *object);
+zend_object* php_wxStaticBoxSizer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStaticBoxSizer_functions[] = {
-	PHP_ME(php_wxStaticBoxSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxStaticBoxSizer, GetStaticBox, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxStaticBoxSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxStaticBoxSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxStaticBoxSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStaticBoxSizer, GetStaticBox, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStaticBoxSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStaticBoxSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxStaticBoxSizer * php_wxStaticBoxSizer_fetch_object(zend_object *obj) {
-      return (zo_wxStaticBoxSizer *)((char *)obj - XtOffsetOf(zo_wxStaticBoxSizer, zo));
+    return (zo_wxStaticBoxSizer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxStaticBoxSizer, zo)
+    );
 }
 
-#define Z_wxStaticBoxSizer_P(zv) php_wxStaticBoxSizer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxStaticBoxSizer_P(zv) \
+    php_wxStaticBoxSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBoxSizer_entry;
-void php_wxBoxSizer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxBoxSizer_destruction_handler(zend_resource*);
 
 class wxBoxSizer_php: public wxBoxSizer{
-	public:
-	
-	wxBoxSizer_php(int orient):wxBoxSizer(orient){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxBoxSizer_php(int orient):wxBoxSizer(orient){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -691,41 +714,43 @@ typedef struct _zo_wxBoxSizer{
     zend_object zo;
 } zo_wxBoxSizer;
 
-void php_wxBoxSizer_free(void *object TSRMLS_DC);
-zend_object* php_wxBoxSizer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxBoxSizer_free(void *object);
+zend_object* php_wxBoxSizer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBoxSizer_functions[] = {
-	PHP_ME(php_wxBoxSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxBoxSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxBoxSizer, GetOrientation, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxBoxSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxBoxSizer, AddSpacer, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxBoxSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxBoxSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxBoxSizer, GetOrientation, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxBoxSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxBoxSizer, AddSpacer, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxBoxSizer * php_wxBoxSizer_fetch_object(zend_object *obj) {
-      return (zo_wxBoxSizer *)((char *)obj - XtOffsetOf(zo_wxBoxSizer, zo));
+    return (zo_wxBoxSizer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxBoxSizer, zo)
+    );
 }
 
-#define Z_wxBoxSizer_P(zv) php_wxBoxSizer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxBoxSizer_P(zv) \
+    php_wxBoxSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWrapSizer_entry;
-void php_wxWrapSizer_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxWrapSizer_destruction_handler(zend_resource*);
 
 class wxWrapSizer_php: public wxWrapSizer{
-	public:
-	
-	wxWrapSizer_php(int orient=wxHORIZONTAL, int flags=wxWRAPSIZER_DEFAULT_FLAGS):wxWrapSizer(orient, flags){}
-		
-	bool IsSpaceItem(wxSizerItem* item) const;
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxWrapSizer_php(int orient=wxHORIZONTAL, int flags=wxWRAPSIZER_DEFAULT_FLAGS):wxWrapSizer(orient, flags){}
+    
+    bool IsSpaceItem(wxSizerItem* item) const;
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -736,24 +761,27 @@ typedef struct _zo_wxWrapSizer{
     zend_object zo;
 } zo_wxWrapSizer;
 
-void php_wxWrapSizer_free(void *object TSRMLS_DC);
-zend_object* php_wxWrapSizer_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxWrapSizer_free(void *object);
+zend_object* php_wxWrapSizer_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWrapSizer_functions[] = {
-	PHP_ME(php_wxWrapSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxWrapSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWrapSizer, InformFirstDirection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWrapSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxWrapSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxWrapSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxWrapSizer, InformFirstDirection, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxWrapSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxWrapSizer * php_wxWrapSizer_fetch_object(zend_object *obj) {
-      return (zo_wxWrapSizer *)((char *)obj - XtOffsetOf(zo_wxWrapSizer, zo));
+    return (zo_wxWrapSizer *)(
+        (char *)(obj) - XtOffsetOf(zo_wxWrapSizer, zo)
+    );
 }
 
-#define Z_wxWrapSizer_P(zv) php_wxWrapSizer_fetch_object(Z_OBJ_P(zv))
+#define Z_wxWrapSizer_P(zv) \
+    php_wxWrapSizer_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_WINLAYOUT_H_GUARD

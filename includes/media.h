@@ -16,23 +16,22 @@
 #include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_media_get_args, 0, 0, 1)
-	ZEND_ARG_INFO(0, name)
+    ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxMediaCtrl_entry;
-void php_wxMediaCtrl_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxMediaCtrl_destruction_handler(zend_resource*);
 
 class wxMediaCtrl_php: public wxMediaCtrl{
-	public:
-	
-	wxMediaCtrl_php():wxMediaCtrl(){}
-	wxMediaCtrl_php(wxWindow* parent, wxWindowID id, const wxString& fileName=wxEmptyString, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& szBackend=wxEmptyString, const wxValidator& validator=wxDefaultValidator, const wxString& name="mediaCtrl"):wxMediaCtrl(parent, id, fileName, pos, size, style, szBackend, validator, name){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxMediaCtrl_php():wxMediaCtrl(){}
+    wxMediaCtrl_php(wxWindow* parent, wxWindowID id, const wxString& fileName=wxEmptyString, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& szBackend=wxEmptyString, const wxValidator& validator=wxDefaultValidator, const wxString& name="mediaCtrl"):wxMediaCtrl(parent, id, fileName, pos, size, style, szBackend, validator, name){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -43,55 +42,57 @@ typedef struct _zo_wxMediaCtrl{
     zend_object zo;
 } zo_wxMediaCtrl;
 
-void php_wxMediaCtrl_free(void *object TSRMLS_DC);
-zend_object* php_wxMediaCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxMediaCtrl_free(void *object);
+zend_object* php_wxMediaCtrl_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMediaCtrl_functions[] = {
-	PHP_ME(php_wxMediaCtrl, Load, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, Create, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, GetBestSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, GetPlaybackRate, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, GetVolume, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, Length, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, LoadURI, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, LoadURIWithProxy, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, Pause, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, Play, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, Seek, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, SetPlaybackRate, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, SetVolume, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, ShowPlayerControls, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, Stop, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxMediaCtrl, GetState, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMediaCtrl, Tell, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxMediaCtrl, Load, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, Create, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, GetBestSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, GetPlaybackRate, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, GetVolume, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, Length, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, LoadURI, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, LoadURIWithProxy, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, Pause, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, Play, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, Seek, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, SetPlaybackRate, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, SetVolume, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, ShowPlayerControls, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, Stop, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxMediaCtrl, GetState, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMediaCtrl, Tell, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxMediaCtrl * php_wxMediaCtrl_fetch_object(zend_object *obj) {
-      return (zo_wxMediaCtrl *)((char *)obj - XtOffsetOf(zo_wxMediaCtrl, zo));
+    return (zo_wxMediaCtrl *)(
+        (char *)(obj) - XtOffsetOf(zo_wxMediaCtrl, zo)
+    );
 }
 
-#define Z_wxMediaCtrl_P(zv) php_wxMediaCtrl_fetch_object(Z_OBJ_P(zv))
+#define Z_wxMediaCtrl_P(zv) \
+    php_wxMediaCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSound_entry;
-void php_wxSound_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxSound_destruction_handler(zend_resource*);
 
 class wxSound_php: public wxSound{
-	public:
-	
-	wxSound_php():wxSound(){}
-	wxSound_php(const wxString& fileName, bool isResource=false):wxSound(fileName, isResource){}
-	wxSound_php(size_t size, const void* data):wxSound(size, data){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxSound_php():wxSound(){}
+    wxSound_php(const wxString& fileName, bool isResource=false):wxSound(fileName, isResource){}
+    wxSound_php(size_t size, const void* data):wxSound(size, data){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -102,25 +103,28 @@ typedef struct _zo_wxSound{
     zend_object zo;
 } zo_wxSound;
 
-void php_wxSound_free(void *object TSRMLS_DC);
-zend_object* php_wxSound_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxSound_free(void *object);
+zend_object* php_wxSound_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSound_functions[] = {
-	PHP_ME(php_wxSound, Create, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSound, IsOk, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSound, Play, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSound, Stop, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSound, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
+    PHP_ME(php_wxSound, Create, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSound, IsOk, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSound, Play, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSound, Stop, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSound, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxSound * php_wxSound_fetch_object(zend_object *obj) {
-      return (zo_wxSound *)((char *)obj - XtOffsetOf(zo_wxSound, zo));
+    return (zo_wxSound *)(
+        (char *)(obj) - XtOffsetOf(zo_wxSound, zo)
+    );
 }
 
-#define Z_wxSound_P(zv) php_wxSound_fetch_object(Z_OBJ_P(zv))
+#define Z_wxSound_P(zv) \
+    php_wxSound_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_MEDIA_H_GUARD

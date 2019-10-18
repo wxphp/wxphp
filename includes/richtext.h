@@ -16,24 +16,23 @@
 #include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_richtext_get_args, 0, 0, 1)
-	ZEND_ARG_INFO(0, name)
+    ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxTextAttr_entry;
-void php_wxTextAttr_destruction_handler(zend_resource * TSRMLS_DC);
+void php_wxTextAttr_destruction_handler(zend_resource*);
 
 class wxTextAttr_php: public wxTextAttr{
-	public:
-	
-	wxTextAttr_php(const wxTextAttr& attr):wxTextAttr(attr){}
-	wxTextAttr_php(const wxColour& colText, const wxColour& colBack=wxNullColour, const wxFont& font=wxNullFont, wxTextAttrAlignment alignment=wxTEXT_ALIGNMENT_DEFAULT):wxTextAttr(colText, colBack, font, alignment){}
-	wxTextAttr_php():wxTextAttr(){}
-		
-	
-	
-	void ***tsrm_ls;
-	zval* phpObj;
-	wxPHPObjectReferences references;
+    public:
+
+    wxTextAttr_php(const wxTextAttr& attr):wxTextAttr(attr){}
+    wxTextAttr_php(const wxColour& colText, const wxColour& colBack=wxNullColour, const wxFont& font=wxNullFont, wxTextAttrAlignment alignment=wxTEXT_ALIGNMENT_DEFAULT):wxTextAttr(colText, colBack, font, alignment){}
+    wxTextAttr_php():wxTextAttr(){}
+    
+    
+
+    zval phpObj;
+    wxPHPObjectReferences references;
 };
 
 BEGIN_EXTERN_C()
@@ -44,116 +43,119 @@ typedef struct _zo_wxTextAttr{
     zend_object zo;
 } zo_wxTextAttr;
 
-void php_wxTextAttr_free(void *object TSRMLS_DC);
-zend_object* php_wxTextAttr_new(zend_class_entry *class_type TSRMLS_DC);
+void php_wxTextAttr_free(void *object);
+zend_object* php_wxTextAttr_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextAttr_functions[] = {
-	PHP_ME(php_wxTextAttr, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxTextAttr, SetFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetURL, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetTextEffects, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetTextEffectFlags, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetRightIndent, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetParagraphStyleName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetParagraphSpacingBefore, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetParagraphSpacingAfter, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetOutlineLevel, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetListStyleName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetLineSpacing, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetLeftIndent, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetFontWeight, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetFontUnderlined, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetFontStyle, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetFontSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, Apply, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetBulletFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetBulletName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetBulletNumber, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetBulletStyle, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetBulletText, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetCharacterStyleName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetFlags, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetFontAttributes, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetFontEncoding, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetFontFaceName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetFontFamily, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetFontSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetFontStyle, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetFontUnderlined, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetFontWeight, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetLeftIndent, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetLeftSubIndent, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetLineSpacing, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetListStyleName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetOutlineLevel, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetParagraphSpacingAfter, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetParagraphSpacingBefore, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetParagraphStyleName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetRightIndent, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetTextEffectFlags, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetTextEffects, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, GetURL, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasBulletName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasBulletNumber, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasBulletStyle, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasBulletText, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasCharacterStyleName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasFlag, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasFontEncoding, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasFontFaceName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasFontFamily, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasFontItalic, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasFontSize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasFontUnderlined, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasFontWeight, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasLeftIndent, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasLineSpacing, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasListStyleName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasOutlineLevel, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasPageBreak, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasParagraphSpacingAfter, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasParagraphSpacingBefore, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasParagraphStyleName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasRightIndent, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasTabs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasTextColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasTextEffects, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, HasURL, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, IsCharacterStyle, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, IsDefault, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, IsParagraphStyle, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, Merge, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetBulletFont, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetBulletName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetBulletNumber, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetBulletStyle, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetBulletText, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetCharacterStyleName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetFlags, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetFontEncoding, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetFontFaceName, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetFontFamily, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetPageBreak, NULL, ZEND_ACC_PUBLIC)
-	PHP_FE_END
+    PHP_ME(php_wxTextAttr, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxTextAttr, SetFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetURL, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetTextEffects, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetTextEffectFlags, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetRightIndent, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetParagraphStyleName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetParagraphSpacingBefore, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetParagraphSpacingAfter, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetOutlineLevel, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetListStyleName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetLineSpacing, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetLeftIndent, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetFontWeight, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetFontUnderlined, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetFontStyle, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetFontSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, Apply, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetBulletFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetBulletName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetBulletNumber, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetBulletStyle, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetBulletText, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetCharacterStyleName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetFlags, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetFontAttributes, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetFontEncoding, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetFontFaceName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetFontFamily, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetFontSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetFontStyle, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetFontUnderlined, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetFontWeight, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetLeftIndent, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetLeftSubIndent, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetLineSpacing, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetListStyleName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetOutlineLevel, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetParagraphSpacingAfter, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetParagraphSpacingBefore, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetParagraphStyleName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetRightIndent, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetTextEffectFlags, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetTextEffects, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, GetURL, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasBulletName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasBulletNumber, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasBulletStyle, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasBulletText, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasCharacterStyleName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasFlag, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasFontEncoding, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasFontFaceName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasFontFamily, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasFontItalic, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasFontSize, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasFontUnderlined, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasFontWeight, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasLeftIndent, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasLineSpacing, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasListStyleName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasOutlineLevel, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasPageBreak, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasParagraphSpacingAfter, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasParagraphSpacingBefore, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasParagraphStyleName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasRightIndent, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasTabs, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasTextColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasTextEffects, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, HasURL, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, IsCharacterStyle, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, IsDefault, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, IsParagraphStyle, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, Merge, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetAlignment, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetBulletFont, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetBulletName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetBulletNumber, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetBulletStyle, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetBulletText, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetCharacterStyleName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetFlags, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetFontEncoding, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetFontFaceName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetFontFamily, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextAttr, SetPageBreak, NULL, ZEND_ACC_PUBLIC)
+    PHP_FE_END
 };
 #endif
 
 
 static inline zo_wxTextAttr * php_wxTextAttr_fetch_object(zend_object *obj) {
-      return (zo_wxTextAttr *)((char *)obj - XtOffsetOf(zo_wxTextAttr, zo));
+    return (zo_wxTextAttr *)(
+        (char *)(obj) - XtOffsetOf(zo_wxTextAttr, zo)
+    );
 }
 
-#define Z_wxTextAttr_P(zv) php_wxTextAttr_fetch_object(Z_OBJ_P(zv))
+#define Z_wxTextAttr_P(zv) \
+    php_wxTextAttr_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_RICHTEXT_H_GUARD
