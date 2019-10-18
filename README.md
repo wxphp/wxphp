@@ -1,6 +1,6 @@
 [![Build Status](https://img.shields.io/travis/wxphp/wxphp/master.svg?style=flat-square)](https://travis-ci.org/wxphp/wxphp)
 [![Download wxPHP](https://img.shields.io/sourceforge/dw/wxphp.svg)](https://sourceforge.net/projects/wxphp/files/latest/download)
-[![Project Stats](https://www.openhub.net/p/wxphp/widgets/project_thin_badge?format=gif&ref=Thin+badge)](https://www.openhub.net/p/wxphp)
+[![Project Stats](https://www.openhub.net/p/wxphp/widgets/project_thin_badge?format=gif)](https://www.openhub.net/p/wxphp)
 
 **[Homepage](http://wxphp.org/)**
 |
