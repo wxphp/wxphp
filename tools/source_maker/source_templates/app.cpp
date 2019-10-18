@@ -82,13 +82,19 @@ bool wxAppWrapper::OnInit()
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+
+    if (phpObj.value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj.value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+            NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL
         );
     }
     else
@@ -127,13 +133,19 @@ int wxAppWrapper::OnExit()
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+
+    if (phpObj.value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj.value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+            NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL
         );
     }
     else
@@ -171,7 +183,13 @@ void wxAppWrapper::MacNewFile()
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
@@ -226,7 +244,13 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
@@ -280,7 +304,13 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
@@ -334,7 +364,13 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
@@ -388,7 +424,13 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
@@ -432,7 +474,13 @@ void wxAppWrapper::MacReopenApp()
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
@@ -473,7 +521,13 @@ bool wxAppWrapper::OSXIsGUIApplication()
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    
+    if (phpObj->value.obj->ce == NULL) {
+        php_printf(" on NULL!\n");
+    } else {
+        php_printf(" on '%s'\n", ZSTR_VAL(phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
@@ -513,7 +567,7 @@ PHP_METHOD(php_wxApp, __construct)
     zo_wxApp* current_object;
 
     wxAppWrapper* native_object = new wxAppWrapper();
-    native_object->phpObj = getThis();
+    native_object->phpObj = *getThis();
 
     current_object = Z_wxApp_P(getThis());
 
@@ -553,7 +607,7 @@ PHP_METHOD(php_wxApp, GetInstance)
     {
         ZVAL_NULL(return_value);
     }
-    else if(instance->phpObj != NULL)
+    else if(!Z_ISNULL(instance->phpObj)) // Todo: Does this work?
     {
         return_value = &instance->phpObj;
         zval_add_ref(&instance->phpObj);

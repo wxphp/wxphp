@@ -33,7 +33,7 @@ class wxAppWrapper : public wxApp
         bool OSXIsGUIApplication();
         #endif
 
-        zval* phpObj;
+        zval phpObj;
 };
 
 BEGIN_EXTERN_C()

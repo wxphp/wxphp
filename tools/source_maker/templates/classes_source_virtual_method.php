@@ -34,7 +34,13 @@
 <? } ?>
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method\n");
+    php_printf("Trying to call user defined method '%s'", "<?=$method_name?>");
+    
+    if (this->phpObj->value.obj->ce == NULL) {
+    php_printf(" on NULL!\n");
+    } else {
+    php_printf(" on %s\n", ZSTR_VAL(this->phpObj->value.obj->ce->name));
+    }
     #endif
 
     if(is_php_user_space_implemented)
