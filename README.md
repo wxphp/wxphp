@@ -1,6 +1,6 @@
 [![Build Status](https://img.shields.io/travis/wxphp/wxphp/master.svg?style=flat-square)](https://travis-ci.org/wxphp/wxphp)
 [![Download wxPHP](https://img.shields.io/sourceforge/dw/wxphp.svg)](https://sourceforge.net/projects/wxphp/files/latest/download)
-[![Project Stats](https://www.openhub.net/p/wxphp/widgets/project_thin_badge?format=gif&ref=Thin+badge)](https://www.openhub.net/p/wxphp)
+[![Project Stats](https://www.openhub.net/p/wxphp/widgets/project_thin_badge?format=gif)](https://www.openhub.net/p/wxphp)
 
 **[Homepage](http://wxphp.org/)**
 |
@@ -60,3 +60,14 @@ GitHub.com project page where development occurs:
 SourceForge.net project page which hosts the binary builds.
 
 * [https://sourceforge.net/projects/wxphp](https://sourceforge.net/projects/wxphp)
+
+## Contributors
+
+This project is possible thanks to the following people and all of
+those that report issues on the issue tracker. Thanks to Everyone!
+
+<a href="https://github.com/wxphp/wxphp/graphs/contributors">
+  <img src="https://contributors-img.firebaseapp.com/image?repo=wxphp/wxphp" />
+</a>
+
+Made with [contributors-img](https://contributors-img.firebaseapp.com).
