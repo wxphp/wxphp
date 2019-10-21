@@ -607,7 +607,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
                 {
                     //wxArrayString
                     $zend_parse_parameters_string .= "a";
-                    $zend_parse_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
+                    $zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
                     $references_parameters .= "dummy, ";
                     break;
                 }
