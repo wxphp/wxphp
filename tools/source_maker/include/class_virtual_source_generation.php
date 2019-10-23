@@ -136,11 +136,11 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
                 {
                     case "pointer":
                     case "const_pointer":
-                        $output .= "ZVAL_STRING(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index]."->char_str());\n";
+                        $output .= "ZVAL_STRING(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index]."->ToUTF8().data());\n";
                         break;
 
                     default:
-                            $output .= "ZVAL_STRING(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index].".char_str());\n";
+                        $output .= "ZVAL_STRING(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index].".ToUTF8().data());\n";
                 }
                 break;
             }
@@ -157,7 +157,7 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
                         $output .= "array_init(&arguments[$parameter_index]);\n";
                         $output .= tabs(1) . "for(int i=0; i<".$method_definition[$parameter_names][$parameter_index].".GetCount(); i++)\n";
                         $output .= tabs(1) . "{\n";
-                        $output .= tabs(2) . "add_next_index_string(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index]."[i].char_str());\n";
+                        $output .= tabs(2) . "add_next_index_string(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index]."[i].ToUTF8().data());\n";
                         $output .= tabs(1) . "}\n";
                 }
                 break;

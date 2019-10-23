@@ -59,14 +59,14 @@ PHP_METHOD(php_wxImage, SetData)
 
     //Parameters for overload 0
     char* data0;
-    long data0_len;
+    size_t data0_len;
     long new_width0;
     long new_height0;
     bool static_data0;
     bool overload0_called = false;
     //Parameters for overload 1
     char* data1;
-    long data1_len;
+    size_t data1_len;
     bool static_data1;
     bool overload1_called = false;
 

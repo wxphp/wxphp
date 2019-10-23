@@ -76,7 +76,7 @@ zval * wxphp_sprintf(INTERNAL_FUNCTION_PARAMETERS, int offset = 0)
 PHP_FUNCTION(php_wxExecute)
 {
     char* _argStr0;
-    int _argStr0_len;
+    size_t _argStr0_len;
 
     long flags = 0;
     zval z_process;

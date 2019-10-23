@@ -1260,7 +1260,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                         {
                             case "pointer":
                             case "reference":
-                                $after_return_called_overload .= tabs(4) . "ZVAL_STRING(&{$reference_name}, string_arg{$declaration_index}_{$parameter_index}.char_str());\n";
+                                $after_return_called_overload .= tabs(4) . "ZVAL_STRING(&{$reference_name}, string_arg{$declaration_index}_{$parameter_index}.ToUTF8().data());\n";
                                 break;
                         }
                         break;
@@ -1307,7 +1307,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                                 $after_return_called_overload .= tabs(4) . "array_init({$variable_name});\n";
                                 $after_return_called_overload .= tabs(4) . "for(size_t i=0; i<strings_array{$declaration_index}_{$parameter_index}.GetCount(); i++)\n";
                                 $after_return_called_overload .= tabs(4) . "{\n";
-                                $after_return_called_overload .= tabs(5) . "add_next_index_string({$variable_name}, strings_array{$declaration_index}_{$parameter_index}[i].char_str());\n";
+                                $after_return_called_overload .= tabs(5) . "add_next_index_string({$variable_name}, strings_array{$declaration_index}_{$parameter_index}[i].ToUTF8().data());\n";
                                 $after_return_called_overload .= tabs(4) . "}\n";
                                 break;
                         }
@@ -1473,7 +1473,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                         {
                             $return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
                         }
-                        $return_called_overload .= tabs(4) . "php_printf(\"Executing RETURN_STRING($class_name_ex::$method_name($parameters_string).fn_str(), 1)\\n\\n\");\n";
+                        $return_called_overload .= tabs(4) . "php_printf(\"Executing RETURN_STRING($class_name_ex::$method_name($parameters_string).ToUTF8().data(), 1)\\n\\n\");\n";
                         $return_called_overload .= tabs(4) . "#endif\n\n";
 
                         $return_called_overload .= tabs(4) . $return_type . "* value_to_return{$required_parameters};\n";
@@ -1570,7 +1570,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                         {
                             $return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name_ex::$method_name($parameters_string);\n";
                         }
-                        $return_called_overload .= tabs(4) . "ZVAL_STRING(return_value, value_to_return{$required_parameters}.char_str());\n";
+                        $return_called_overload .= tabs(4) . "ZVAL_STRING(return_value, value_to_return{$required_parameters}.ToUTF8().data());\n";
                         break;
                     }
                     case "strings_array":
@@ -1604,7 +1604,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                         $return_called_overload .= tabs(4) . "array_init(return_value);\n";
                         $return_called_overload .= tabs(4) . "for(size_t i=0; i<value_to_return{$required_parameters}.GetCount(); i++)\n";
                         $return_called_overload .= tabs(4) . "{\n";
-                        $return_called_overload .= tabs(5) . "add_next_index_string(return_value, value_to_return{$required_parameters}[i].char_str());\n";
+                        $return_called_overload .= tabs(5) . "add_next_index_string(return_value, value_to_return{$required_parameters}[i].ToUTF8().data());\n";
                         $return_called_overload .= tabs(4) . "}\n";
                         break;
                     }

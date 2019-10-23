@@ -82,7 +82,7 @@ PHP_METHOD(php_wxImage, GetData)
                 );
                 #endif
 
-                long bytes_count = ((wxImage_php*)native_object)->GetWidth()
+                size_t bytes_count = ((wxImage_php*)native_object)->GetWidth()
                     * ((wxImage_php*)native_object)->GetHeight()
                     * 3
                 ;

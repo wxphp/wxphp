@@ -828,14 +828,14 @@ foreach($defGlobals as $variable_name => $variable_type)
             {
                 case "pointer":
                 case "const_pointer":
-                    $classes .= "    REGISTER_STRINGL_CONSTANT(\"$variable_name\", reinterpret_cast<const char*>($variable_name->char_str()), $variable_name->Len(), CONST_CS | CONST_PERSISTENT);\n";
+                    $classes .= "    REGISTER_STRINGL_CONSTANT(\"$variable_name\", reinterpret_cast<const char*>($variable_name->ToUTF8().data()), $variable_name->Len(), CONST_CS | CONST_PERSISTENT);\n";
                     break;
 
                 case "reference":
                 case "const_reference":
                 case "none":
                 case "const_none":
-                    $classes .= "    REGISTER_STRINGL_CONSTANT(\"$variable_name\", reinterpret_cast<const char*>($variable_name.char_str()), $variable_name.Len(), CONST_CS | CONST_PERSISTENT);\n";
+                    $classes .= "    REGISTER_STRINGL_CONSTANT(\"$variable_name\", reinterpret_cast<const char*>($variable_name.ToUTF8().data()), $variable_name.Len(), CONST_CS | CONST_PERSISTENT);\n";
                     break;
             }
             break;

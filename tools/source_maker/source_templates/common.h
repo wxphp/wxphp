@@ -1,10 +1,10 @@
 /*
  * @author Mário Soares
  * @contributors Jefferson González
- * 
- * @license 
+ *
+ * @license
  * This file is part of wxPHP check the LICENSE file for information.
- * 
+ *
  * @note
  * Some parts of this file are auto-generated.
 */
@@ -13,28 +13,28 @@
 #define WXPHP_COMMON_H_GUARD
 
 #ifdef __BORLANDC__
-	#pragma hdrstop
+    #pragma hdrstop
 #endif
 
 #ifdef PHP_WIN32
-	//To prevent some character strings to 
-	//wide characters string compilation errors
-	#define _WINSOCKAPI_
-	
-	//For disabling warnings about 
-	//unreferenced local variable
-	#pragma warning (disable : 4101)
-	#pragma warning (disable : 4102)
-	#pragma warning (disable : 4700)
-	
-	//Disable forcing zend_bool to bool warnings
-	#pragma warning (disable : 4800)
+    //To prevent some character strings to
+    //wide characters string compilation errors
+    #define _WINSOCKAPI_
+
+    //For disabling warnings about
+    //unreferenced local variable
+    #pragma warning (disable : 4101)
+    #pragma warning (disable : 4102)
+    #pragma warning (disable : 4700)
+
+    //Disable forcing zend_bool to bool warnings
+    #pragma warning (disable : 4800)
 #endif
 
 #ifndef WX_PRECOMP
-	#include <wx/wx.h>
+    #include <wx/wx.h>
 #else
-	#include <wx/wxprec.h>
+    #include <wx/wxprec.h>
 #endif
 
 #if !wxUSE_THREADS
@@ -42,9 +42,9 @@
 #endif
 
 #if !wxUSE_UNICODE
-	#define tcscmp strcmp
+    #define tcscmp strcmp
 #else
-	#define tcscmp wcscmp
+    #define tcscmp wcscmp
 #endif
 
 #include <wx/thread.h>
@@ -59,30 +59,30 @@
 
 
 /**
- * Import configure options when building outside 
+ * Import configure options when building outside
  * of the PHP source tree
  */
 #ifdef HAVE_CONFIG_H
-	#include "config.h"
+    #include "config.h"
 #endif
 
 #ifdef WORDS_BIGENDIAN
-	#undef WORDS_BIGENDIAN
+    #undef WORDS_BIGENDIAN
 #endif
 
 #ifdef M_PI
-	#undef M_PI
+    #undef M_PI
 #endif
 
 #ifdef _WIN32_WINNT
-	#undef _WIN32_WINNT
+    #undef _WIN32_WINNT
 #endif
 
 /**
  * Conflicting macro redifined on PHP, previously defined on wxWidgets
  */
 #ifdef PHP_WIN32
-	#undef HAVE_STRNLEN
+    #undef HAVE_STRNLEN
 #endif
 
 #if defined(PHP_WIN32) && defined(mode_t)
@@ -101,7 +101,7 @@ extern "C" {
 //For backward compatibility with older versions of php that didnt
 //implemented this macro
 #ifndef PHP_FE_END
-	#define PHP_FE_END {NULL, NULL, NULL}
+    #define PHP_FE_END {NULL, NULL, NULL}
 #endif
 }
 

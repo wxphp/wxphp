@@ -290,12 +290,12 @@ function register_class_const_properties($class_name)
                     {
                         case "const_pointer":
                         case "const_pointer_pointer":
-                            $code .= tabs(1) . "zend_declare_class_constant_stringl(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name->char_str(), $property_name->size());\n";
+                            $code .= tabs(1) . "zend_declare_class_constant_stringl(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name->ToUTF8().data(), $property_name->size());\n";
                             break;
 
                         case "const_reference":
                         case "const_none":
-                            $code .= tabs(1) . "zend_declare_class_constant_stringl(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name.char_str(), $property_name.size());\n";
+                            $code .= tabs(1) . "zend_declare_class_constant_stringl(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name.ToUTF8().data(), $property_name.size());\n";
                             break;
                     }
                     break;

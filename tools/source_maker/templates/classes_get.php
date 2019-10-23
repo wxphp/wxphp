@@ -10,7 +10,7 @@ PHP_METHOD(php_<?=$class_name?>, __get)
     <?=$class_name?>_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)
