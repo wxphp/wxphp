@@ -1,13 +1,12 @@
 <?php
-
 /**
  * @author https://github.com/halfer
- * 
- * @license 
+ *
+ * @license
  * This file is part of wxPHP, check the LICENSE file for information.
- * 
+ *
  * @description This is a simple demonstration of file system watcher events.
- * 
+ *
  * Run this using:
  *
  *     /usr/bin/php -d extension=wxwidgets.so filesystemwatcher.php
@@ -25,9 +24,9 @@ wxEntry();
 
 class MainFrame extends wxFrame
 {
-    // This is the folder to monitor. To successfully get information on FS events that occur
-    // inside a folder, such as creates and deletes, the watched folder must end with a
-    // trailing slash.
+    // This is the folder to monitor. To successfully get information
+    // on FS events that occur inside a folder, such as creates and
+    // deletes, the watched folder must end with a trailing slash.
     const RELATIVE_PATH = './watch/';
 
     protected $watcher;
@@ -44,8 +43,9 @@ class MainFrame extends wxFrame
         // Create the folder if it does not exist
         $this->checkFolderExists();
 
-        // Use a timer to start the file watcher after the event loop starts. This seems to be
-        // necessary to avoid the fatal error "File system watcher needs an event loop".
+        // Use a timer to start the file watcher after the event
+        // loop starts. This seems to be necessary to avoid the
+        // fatal error "File system watcher needs an event loop".
         $this->timer = new wxTimer($this);
         $this->Connect(wxEVT_TIMER, array($this, "onTimer"));
         $this->timer->Start(100);
@@ -53,7 +53,14 @@ class MainFrame extends wxFrame
 
     protected function createTextBox()
     {
-        $this->textCtrl = new wxTextCtrl($this, wxID_ANY, "", wxDefaultPosition, new wxSize(600, 200), wxTE_MULTILINE );
+        $this->textCtrl = new wxTextCtrl(
+            $this,
+            wxID_ANY,
+            "",
+            wxDefaultPosition,
+            new wxSize(600, 200),
+            wxTE_MULTILINE
+        );
     }
 
     protected function logger($message)
@@ -74,7 +81,9 @@ class MainFrame extends wxFrame
             $ok = mkdir($path);
             if (!$ok)
             {
-                wxMessageBox("Unable to create folder to watch:" . $path);
+                wxMessageBox(
+                    "Unable to create folder to watch:" . $path
+                );
             }
         }
 
@@ -86,30 +95,36 @@ class MainFrame extends wxFrame
 
     /**
      * This is called when the timer is triggered
-     * 
-     * This is necessary since the FSW won't initialise until the wx event loop is started,
-     * but normally once the event loop is started we don't get back any control to set up
-     * new events. Using a quickly expiring timer, which we stop immediately, resolves this
-     * issue.
+     *
+     * This is necessary since the FSW won't initialise until the
+     * wx event loop is started, but normally once the event loop
+     * is started we don't get back any control to set up new events.
+     * Using a quickly expiring timer, which we stop immediately,
+     * resolves this issue.
      *
      * @param wxTimerEvent $event
      */
     public function onTimer(wxTimerEvent $event)
     {
         $this->timer->Stop();
-        $this->logger("Using timer to create watcher inside wx event loop");
+
+        $this->logger(
+            "Using timer to create watcher inside wx event loop"
+        );
+
         $this->createWatcher();
     }
 
     /**
      * Creates a FS watcher
      *
-     * The add() method is sufficient to watch file operations directly inside that folder,
-     * but for that the watched path must have a trailing slash. addTree() is suitable if
-     * all operations within the folder recursively should be watched.
-     * 
+     * The add() method is sufficient to watch file operations
+     * directly inside that folder, but for that the watched path
+     * must have a trailing slash. addTree() is suitable if all
+     * operations within the folder recursively should be watched.
+     *
      * Here are the wxFSWFlags we can filter by:
-     * 
+     *
      * wxFSW_EVENT_CREATE
      * wxFSW_EVENT_DELETE
      * wxFSW_EVENT_RENAME
@@ -139,7 +154,12 @@ class MainFrame extends wxFrame
         $filename = $event->GetPath()->getFullName();
         $newFilename = $event->GetNewPath()->getFullName();
         $description = $event->ToString();
-        $this->logger("File event: $description, path: $filename, new path: $newFilename");
+
+        $this->logger(
+            "File event: $description, "
+            . "path: $filename, "
+            . "new path: $newFilename"
+        );
     }
 }
 
