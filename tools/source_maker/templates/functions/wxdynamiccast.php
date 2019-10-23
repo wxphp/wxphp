@@ -3,7 +3,7 @@ PHP_FUNCTION(php_wxDynamicCast)
 {
     zval* object;
     char* object_type;
-    int object_type_len = 0;
+    size_t object_type_len = 0;
     void* native_object = 0;
 
     char parse_parameters[] = "z!s!";
