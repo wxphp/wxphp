@@ -1801,7 +1801,7 @@ PHP_METHOD(php_wxDataFormat, GetId)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxDataFormat_php*)native_object)->GetId();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -6165,7 +6165,7 @@ PHP_METHOD(php_wxURLDataObject, GetURL)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURLDataObject_php*)native_object)->GetURL();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -6675,7 +6675,7 @@ PHP_METHOD(php_wxTextDataObject, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextDataObject_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -7558,7 +7558,7 @@ PHP_METHOD(php_wxFileDataObject, GetFilenames)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return0.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return0[i].char_str());
+                    add_next_index_string(return_value, value_to_return0[i].ToUTF8().data());
                 }
 
 
@@ -8713,7 +8713,7 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
     //Parameters for conversion
     ZVAL_LONG(&arguments[0], x);
     ZVAL_LONG(&arguments[1], y);
-    ZVAL_STRING(&arguments[2], data.char_str());
+    ZVAL_STRING(&arguments[2], data.ToUTF8().data());
     
     for(int i=0; i<3; i++)
     {
@@ -9039,7 +9039,7 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
     array_init(&arguments[2]);
     for(int i=0; i<filenames.GetCount(); i++)
     {
-        add_next_index_string(&arguments[2], filenames[i].char_str());
+        add_next_index_string(&arguments[2], filenames[i].ToUTF8().data());
     }
     
     for(int i=0; i<3; i++)

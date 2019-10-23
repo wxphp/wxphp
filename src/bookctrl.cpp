@@ -2547,7 +2547,7 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
     ZVAL_LONG(&arguments[0], index);
     object_init_ex(&arguments[1], php_wxWindow_entry);
     Z_wxWindow_P(&arguments[1])->native_object = (wxWindow_php*) &page;
-    ZVAL_STRING(&arguments[2], text.char_str());
+    ZVAL_STRING(&arguments[2], text.ToUTF8().data());
     ZVAL_BOOL(&arguments[3], select);
     ZVAL_LONG(&arguments[4], imageId);
     
@@ -3072,7 +3072,7 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 
     //Parameters for conversion
     ZVAL_LONG(&arguments[0], page);
-    ZVAL_STRING(&arguments[1], text.char_str());
+    ZVAL_STRING(&arguments[1], text.ToUTF8().data());
     
     for(int i=0; i<2; i++)
     {
@@ -5689,7 +5689,7 @@ PHP_METHOD(php_wxNotebook, GetPageText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxNotebook_php*)native_object)->GetPageText((size_t) nPage0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;

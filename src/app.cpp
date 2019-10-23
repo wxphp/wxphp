@@ -82,7 +82,10 @@ bool wxAppWrapper::OnInit()
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    php_printf(
+        "Trying to call user defined method '%s'",
+        Z_STRVAL(function_name)
+    );
 
     if (phpObj.value.obj->ce == NULL) {
         php_printf(" on NULL!\n");
@@ -94,7 +97,8 @@ bool wxAppWrapper::OnInit()
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+            NULL, &phpObj, &function_name, &return_value,
+            0, NULL, 0, NULL
         );
     }
     else
@@ -133,7 +137,10 @@ int wxAppWrapper::OnExit()
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
+    php_printf(
+        "Trying to call user defined method '%s'",
+        Z_STRVAL(function_name)
+    );
 
     if (phpObj.value.obj->ce == NULL) {
         php_printf(" on NULL!\n");
@@ -145,7 +152,8 @@ int wxAppWrapper::OnExit()
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+            NULL, &phpObj, &function_name, &return_value,
+            0, NULL, 0, NULL
         );
     }
     else
@@ -183,8 +191,11 @@ void wxAppWrapper::MacNewFile()
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
-    
+    php_printf(
+        "Trying to call user defined method '%s'",
+        Z_STRVAL(function_name)
+    );
+
     if (phpObj->value.obj->ce == NULL) {
         php_printf(" on NULL!\n");
     } else {
@@ -195,7 +206,8 @@ void wxAppWrapper::MacNewFile()
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+            NULL, phpObj, &function_name, &return_value,
+            0, NULL, 0, NULL
         );
     }
     else
@@ -230,22 +242,27 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
 
     zval return_value;
 
-    char* temp_string;
     int function_called;
 
     //Parameters for conversion
     array_init(&arguments[0]);
     for(int i=0; i<fileNames.GetCount(); i++)
     {
-        add_next_index_string(&arguments[0], fileNames[i].ToUTF8().data());
+        add_next_index_string(
+            &arguments[0],
+            fileNames[i].ToUTF8().data()
+        );
     }
 
     //Set parameters that are sent to function
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
-    
+    php_printf(
+        "Trying to call user defined method '%s'",
+        Z_STRVAL(function_name)
+    );
+
     if (phpObj->value.obj->ce == NULL) {
         php_printf(" on NULL!\n");
     } else {
@@ -256,7 +273,8 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL
+            NULL, phpObj, &function_name, &return_value,
+            1, params, 0, NULL
         );
     }
     else
@@ -294,7 +312,6 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
 
     zval return_value;
 
-    char* temp_string;
     int function_called;
 
     //Parameters for conversion
@@ -304,8 +321,11 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
-    
+    php_printf(
+        "Trying to call user defined method '%s'",
+        Z_STRVAL(function_name)
+    );
+
     if (phpObj->value.obj->ce == NULL) {
         php_printf(" on NULL!\n");
     } else {
@@ -316,7 +336,8 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL
+            NULL, phpObj, &function_name, &return_value,
+            1, params, 0, NULL
         );
     }
     else
@@ -354,7 +375,6 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
 
     zval return_value;
 
-    char* temp_string;
     int function_called;
 
     //Parameters for conversion
@@ -364,8 +384,11 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
-    
+    php_printf(
+        "Trying to call user defined method '%s'",
+        Z_STRVAL(function_name)
+    );
+
     if (phpObj->value.obj->ce == NULL) {
         php_printf(" on NULL!\n");
     } else {
@@ -376,7 +399,8 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL
+            NULL, phpObj, &function_name, &return_value,
+            1, params, 0, NULL
         );
     }
     else
@@ -414,7 +438,6 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
 
     zval return_value;
 
-    char* temp_string;
     int function_called;
 
     //Parameters for conversion
@@ -424,8 +447,11 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     params[0] = &arguments[0];
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
-    
+    php_printf(
+        "Trying to call user defined method '%s'",
+        Z_STRVAL(function_name)
+    );
+
     if (phpObj->value.obj->ce == NULL) {
         php_printf(" on NULL!\n");
     } else {
@@ -436,7 +462,8 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL
+            NULL, phpObj, &function_name, &return_value,
+            1, params, 0, NULL
         );
     }
     else
@@ -474,8 +501,11 @@ void wxAppWrapper::MacReopenApp()
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
-    
+    php_printf(
+        "Trying to call user defined method '%s'",
+        Z_STRVAL(function_name)
+    );
+
     if (phpObj->value.obj->ce == NULL) {
         php_printf(" on NULL!\n");
     } else {
@@ -486,7 +516,8 @@ void wxAppWrapper::MacReopenApp()
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+            NULL, phpObj, &function_name, &return_value,
+            0, NULL, 0, NULL
         );
     }
     else
@@ -521,8 +552,11 @@ bool wxAppWrapper::OSXIsGUIApplication()
     int function_called;
 
     #ifdef USE_WXPHP_DEBUG
-    php_printf("Trying to call user defined method '%s'", Z_STRVAL(function_name));
-    
+    php_printf(
+        "Trying to call user defined method '%s'",
+        Z_STRVAL(function_name)
+    );
+
     if (phpObj->value.obj->ce == NULL) {
         php_printf(" on NULL!\n");
     } else {
@@ -533,7 +567,8 @@ bool wxAppWrapper::OSXIsGUIApplication()
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL
+            NULL, phpObj, &function_name, &return_value,
+            0, NULL, 0, NULL
         );
     }
     else
@@ -578,7 +613,8 @@ PHP_METHOD(php_wxApp, __construct)
 /* }}} */
 
 /* {{{ proto void wxApp::SetInstance(wxApp app)
-   Allows external code to modify global wxTheApp, but you should really know what you're doing if you call it.*/
+   Allows external code to modify global wxTheApp, but you should
+   really know what you're doing if you call it.*/
 PHP_METHOD(php_wxApp, SetInstance)
 {
     zval *objvar;
@@ -695,7 +731,7 @@ PHP_METHOD(php_wxApp, SetAppDisplayName)
     wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
 
     char* name;
-    long name_len;
+    size_t name_len;
 
     if(ZEND_NUM_ARGS() > 0)
     {
@@ -725,7 +761,7 @@ PHP_METHOD(php_wxApp, SetAppName)
     wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
 
     char* name;
-    long name_len;
+    size_t name_len;
 
     if(ZEND_NUM_ARGS() > 0)
     {
@@ -755,7 +791,7 @@ PHP_METHOD(php_wxApp, SetClassName)
     wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
 
     char* name;
-    long name_len;
+    size_t name_len;
 
     if(ZEND_NUM_ARGS() > 0)
     {
@@ -785,7 +821,7 @@ PHP_METHOD(php_wxApp, SetVendorDisplayName)
     wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
 
     char* name;
-    long name_len;
+    size_t name_len;
 
     if(ZEND_NUM_ARGS() > 0)
     {
@@ -815,7 +851,7 @@ PHP_METHOD(php_wxApp, SetVendorName)
     wxAppWrapper* native_object = Z_wxApp_P(getThis())->native_object;
 
     char* name;
-    long name_len;
+    size_t name_len;
 
     if(ZEND_NUM_ARGS() > 0)
     {

@@ -4862,7 +4862,7 @@ bool wxTextCompleter_php::Start(const wxString& prefix)
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], prefix.char_str());
+    ZVAL_STRING(&arguments[0], prefix.ToUTF8().data());
     
     for(int i=0; i<1; i++)
     {
@@ -5879,7 +5879,7 @@ PHP_METHOD(php_wxPoint2DDouble, __get)
     wxPoint2DDouble_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)
@@ -8617,7 +8617,7 @@ PHP_METHOD(php_wxPoint2DInt, __get)
     wxPoint2DInt_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)
@@ -9380,7 +9380,7 @@ PHP_METHOD(php_wxLayoutConstraints, __get)
     wxLayoutConstraints_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)
@@ -15209,7 +15209,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetLabel)
                 {
                     value_to_return0 = ((wxToolBarToolBase_php*)native_object)->GetLabel();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -15320,7 +15320,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetLongHelp)
                 {
                     value_to_return0 = ((wxToolBarToolBase_php*)native_object)->GetLongHelp();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -15560,7 +15560,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetShortHelp)
                 {
                     value_to_return0 = ((wxToolBarToolBase_php*)native_object)->GetShortHelp();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -17767,11 +17767,11 @@ void wxTextCompleterSimple_php::GetCompletions(const wxString& prefix, wxArraySt
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], prefix.char_str());
+    ZVAL_STRING(&arguments[0], prefix.ToUTF8().data());
     array_init(&arguments[1]);
     for(int i=0; i<res.GetCount(); i++)
     {
-        add_next_index_string(&arguments[1], res[i].char_str());
+        add_next_index_string(&arguments[1], res[i].ToUTF8().data());
     }
     
     for(int i=0; i<2; i++)

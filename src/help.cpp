@@ -2444,7 +2444,7 @@ PHP_METHOD(php_wxHtmlHelpData, FindPageById)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxHtmlHelpData_php*)native_object)->FindPageById((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -2559,7 +2559,7 @@ PHP_METHOD(php_wxHtmlHelpData, FindPageByName)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxHtmlHelpData_php*)native_object)->FindPageByName(wxString(page0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7500,7 +7500,7 @@ PHP_METHOD(php_wxToolTip, GetTip)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxToolTip_php*)native_object)->GetTip();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

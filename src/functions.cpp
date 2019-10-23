@@ -115,7 +115,7 @@ zval * wxphp_sprintf(INTERNAL_FUNCTION_PARAMETERS, int offset = 0)
 PHP_FUNCTION(php_wxExecute)
 {
     char* _argStr0;
-    int _argStr0_len;
+    size_t _argStr0_len;
 
     long flags = 0;
     zval z_process;
@@ -1177,7 +1177,7 @@ PHP_FUNCTION(php_wxToString)
 
                 wxString value_to_return1;
                 value_to_return1 = wxToString(*(wxFont*) object_pointer0_0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1198,7 +1198,7 @@ PHP_FUNCTION(php_wxToString)
 
                 wxString value_to_return1;
                 value_to_return1 = wxToString(*(wxColour*) object_pointer1_0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1703,7 +1703,7 @@ PHP_FUNCTION(php_wxBase64Encode)
 
                 wxString value_to_return2;
                 value_to_return2 = wxBase64Encode((const void*) src1, (size_t) srcLen1);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -2167,11 +2167,11 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'ssa|zllblll' (&message0, &message_len0, &caption0, &caption_len0, aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0)\n");
+        php_printf("Parsing parameters with 'ssa|zllblll' (&message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0)\n");
         #endif
 
         char parse_parameters_string[] = "ssa|zllblll";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0 ) == SUCCESS)
         {
             if(arguments_received >= 4){
                 if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -2235,11 +2235,11 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'ssal|z' (&message2, &message_len2, &caption2, &caption_len2, choices2, &initialSelection2, &parent2)\n");
+        php_printf("Parsing parameters with 'ssal|z' (&message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2)\n");
         #endif
 
         char parse_parameters_string[] = "ssal|z";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &message2, &message_len2, &caption2, &caption_len2, choices2, &initialSelection2, &parent2 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2 ) == SUCCESS)
         {
             if(arguments_received >= 5){
                 if(Z_TYPE_P(parent2) == IS_OBJECT)
@@ -2996,11 +2996,11 @@ PHP_FUNCTION(php_wxGetSingleChoice)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'ssa|zllblll' (&message0, &message_len0, &caption0, &caption_len0, aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0)\n");
+        php_printf("Parsing parameters with 'ssa|zllblll' (&message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0)\n");
         #endif
 
         char parse_parameters_string[] = "ssa|zllblll";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0 ) == SUCCESS)
         {
             if(arguments_received >= 4){
                 if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -3064,11 +3064,11 @@ PHP_FUNCTION(php_wxGetSingleChoice)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'ssal|z' (&message2, &message_len2, &caption2, &caption_len2, choices2, &initialSelection2, &parent2)\n");
+        php_printf("Parsing parameters with 'ssal|z' (&message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2)\n");
         #endif
 
         char parse_parameters_string[] = "ssal|z";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &message2, &message_len2, &caption2, &caption_len2, choices2, &initialSelection2, &parent2 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2 ) == SUCCESS)
         {
             if(arguments_received >= 5){
                 if(Z_TYPE_P(parent2) == IS_OBJECT)
@@ -3157,7 +3157,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return3;
                 value_to_return3 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2);
-                ZVAL_STRING(return_value, value_to_return3.char_str());
+                ZVAL_STRING(return_value, value_to_return3.ToUTF8().data());
 
 
                 return;
@@ -3186,7 +3186,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return4;
                 value_to_return4 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3);
-                ZVAL_STRING(return_value, value_to_return4.char_str());
+                ZVAL_STRING(return_value, value_to_return4.ToUTF8().data());
 
 
                 return;
@@ -3215,7 +3215,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return5;
                 value_to_return5 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0);
-                ZVAL_STRING(return_value, value_to_return5.char_str());
+                ZVAL_STRING(return_value, value_to_return5.ToUTF8().data());
 
 
                 return;
@@ -3244,7 +3244,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return6;
                 value_to_return6 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0);
-                ZVAL_STRING(return_value, value_to_return6.char_str());
+                ZVAL_STRING(return_value, value_to_return6.ToUTF8().data());
 
 
                 return;
@@ -3273,7 +3273,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return7;
                 value_to_return7 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0);
-                ZVAL_STRING(return_value, value_to_return7.char_str());
+                ZVAL_STRING(return_value, value_to_return7.ToUTF8().data());
 
 
                 return;
@@ -3302,7 +3302,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return8;
                 value_to_return8 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0);
-                ZVAL_STRING(return_value, value_to_return8.char_str());
+                ZVAL_STRING(return_value, value_to_return8.ToUTF8().data());
 
 
                 return;
@@ -3331,7 +3331,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return9;
                 value_to_return9 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0);
-                ZVAL_STRING(return_value, value_to_return9.char_str());
+                ZVAL_STRING(return_value, value_to_return9.ToUTF8().data());
 
 
                 return;
@@ -3360,7 +3360,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return10;
                 value_to_return10 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0, (int) initialSelection0);
-                ZVAL_STRING(return_value, value_to_return10.char_str());
+                ZVAL_STRING(return_value, value_to_return10.ToUTF8().data());
 
 
                 return;
@@ -3406,7 +3406,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return4;
                 value_to_return4 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3);
-                ZVAL_STRING(return_value, value_to_return4.char_str());
+                ZVAL_STRING(return_value, value_to_return4.ToUTF8().data());
 
                 delete[] strings_array1_3;
 
@@ -3436,7 +3436,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return5;
                 value_to_return5 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4);
-                ZVAL_STRING(return_value, value_to_return5.char_str());
+                ZVAL_STRING(return_value, value_to_return5.ToUTF8().data());
 
                 delete[] strings_array1_3;
 
@@ -3466,7 +3466,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return6;
                 value_to_return6 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1);
-                ZVAL_STRING(return_value, value_to_return6.char_str());
+                ZVAL_STRING(return_value, value_to_return6.ToUTF8().data());
 
                 delete[] strings_array1_3;
 
@@ -3496,7 +3496,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return7;
                 value_to_return7 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1);
-                ZVAL_STRING(return_value, value_to_return7.char_str());
+                ZVAL_STRING(return_value, value_to_return7.ToUTF8().data());
 
                 delete[] strings_array1_3;
 
@@ -3526,7 +3526,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return8;
                 value_to_return8 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1);
-                ZVAL_STRING(return_value, value_to_return8.char_str());
+                ZVAL_STRING(return_value, value_to_return8.ToUTF8().data());
 
                 delete[] strings_array1_3;
 
@@ -3556,7 +3556,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return9;
                 value_to_return9 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1);
-                ZVAL_STRING(return_value, value_to_return9.char_str());
+                ZVAL_STRING(return_value, value_to_return9.ToUTF8().data());
 
                 delete[] strings_array1_3;
 
@@ -3586,7 +3586,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return10;
                 value_to_return10 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1);
-                ZVAL_STRING(return_value, value_to_return10.char_str());
+                ZVAL_STRING(return_value, value_to_return10.ToUTF8().data());
 
                 delete[] strings_array1_3;
 
@@ -3616,7 +3616,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return11;
                 value_to_return11 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1, (int) initialSelection1);
-                ZVAL_STRING(return_value, value_to_return11.char_str());
+                ZVAL_STRING(return_value, value_to_return11.ToUTF8().data());
 
                 delete[] strings_array1_3;
 
@@ -3656,7 +3656,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return4;
                 value_to_return4 = wxGetSingleChoice(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2);
-                ZVAL_STRING(return_value, value_to_return4.char_str());
+                ZVAL_STRING(return_value, value_to_return4.ToUTF8().data());
 
 
                 return;
@@ -3685,7 +3685,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return5;
                 value_to_return5 = wxGetSingleChoice(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2, (wxWindow*) object_pointer2_4);
-                ZVAL_STRING(return_value, value_to_return5.char_str());
+                ZVAL_STRING(return_value, value_to_return5.ToUTF8().data());
 
 
                 return;
@@ -3731,7 +3731,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return5;
                 value_to_return5 = wxGetSingleChoice(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3);
-                ZVAL_STRING(return_value, value_to_return5.char_str());
+                ZVAL_STRING(return_value, value_to_return5.ToUTF8().data());
 
                 delete[] strings_array3_3;
 
@@ -3761,7 +3761,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
                 wxString value_to_return6;
                 value_to_return6 = wxGetSingleChoice(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3, (wxWindow*) object_pointer3_5);
-                ZVAL_STRING(return_value, value_to_return6.char_str());
+                ZVAL_STRING(return_value, value_to_return6.ToUTF8().data());
 
                 delete[] strings_array3_3;
 
@@ -4508,7 +4508,7 @@ PHP_FUNCTION(php_wxDirSelector)
 
                 wxString value_to_return0;
                 value_to_return0 = wxDirSelector();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4522,7 +4522,7 @@ PHP_FUNCTION(php_wxDirSelector)
 
                 wxString value_to_return1;
                 value_to_return1 = wxDirSelector(wxString(message0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -4536,7 +4536,7 @@ PHP_FUNCTION(php_wxDirSelector)
 
                 wxString value_to_return2;
                 value_to_return2 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -4550,7 +4550,7 @@ PHP_FUNCTION(php_wxDirSelector)
 
                 wxString value_to_return3;
                 value_to_return3 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0);
-                ZVAL_STRING(return_value, value_to_return3.char_str());
+                ZVAL_STRING(return_value, value_to_return3.ToUTF8().data());
 
 
                 return;
@@ -4564,7 +4564,7 @@ PHP_FUNCTION(php_wxDirSelector)
 
                 wxString value_to_return4;
                 value_to_return4 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_3);
-                ZVAL_STRING(return_value, value_to_return4.char_str());
+                ZVAL_STRING(return_value, value_to_return4.ToUTF8().data());
 
 
                 return;
@@ -4578,7 +4578,7 @@ PHP_FUNCTION(php_wxDirSelector)
 
                 wxString value_to_return5;
                 value_to_return5 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_3, (wxWindow*) object_pointer0_4);
-                ZVAL_STRING(return_value, value_to_return5.char_str());
+                ZVAL_STRING(return_value, value_to_return5.ToUTF8().data());
 
 
                 return;
@@ -4972,7 +4972,7 @@ PHP_FUNCTION(php_wxFileSelector)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileSelector(wxString(message0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -4986,7 +4986,7 @@ PHP_FUNCTION(php_wxFileSelector)
 
                 wxString value_to_return2;
                 value_to_return2 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -5000,7 +5000,7 @@ PHP_FUNCTION(php_wxFileSelector)
 
                 wxString value_to_return3;
                 value_to_return3 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return3.char_str());
+                ZVAL_STRING(return_value, value_to_return3.ToUTF8().data());
 
 
                 return;
@@ -5014,7 +5014,7 @@ PHP_FUNCTION(php_wxFileSelector)
 
                 wxString value_to_return4;
                 value_to_return4 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return4.char_str());
+                ZVAL_STRING(return_value, value_to_return4.ToUTF8().data());
 
 
                 return;
@@ -5028,7 +5028,7 @@ PHP_FUNCTION(php_wxFileSelector)
 
                 wxString value_to_return5;
                 value_to_return5 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return5.char_str());
+                ZVAL_STRING(return_value, value_to_return5.ToUTF8().data());
 
 
                 return;
@@ -5042,7 +5042,7 @@ PHP_FUNCTION(php_wxFileSelector)
 
                 wxString value_to_return6;
                 value_to_return6 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0);
-                ZVAL_STRING(return_value, value_to_return6.char_str());
+                ZVAL_STRING(return_value, value_to_return6.ToUTF8().data());
 
 
                 return;
@@ -5056,7 +5056,7 @@ PHP_FUNCTION(php_wxFileSelector)
 
                 wxString value_to_return7;
                 value_to_return7 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6);
-                ZVAL_STRING(return_value, value_to_return7.char_str());
+                ZVAL_STRING(return_value, value_to_return7.ToUTF8().data());
 
 
                 return;
@@ -5070,7 +5070,7 @@ PHP_FUNCTION(php_wxFileSelector)
 
                 wxString value_to_return8;
                 value_to_return8 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0);
-                ZVAL_STRING(return_value, value_to_return8.char_str());
+                ZVAL_STRING(return_value, value_to_return8.ToUTF8().data());
 
 
                 return;
@@ -5084,7 +5084,7 @@ PHP_FUNCTION(php_wxFileSelector)
 
                 wxString value_to_return9;
                 value_to_return9 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0, (int) y0);
-                ZVAL_STRING(return_value, value_to_return9.char_str());
+                ZVAL_STRING(return_value, value_to_return9.ToUTF8().data());
 
 
                 return;
@@ -5193,7 +5193,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 
                 wxString value_to_return0;
                 value_to_return0 = wxFileSelectorEx();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5207,7 +5207,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileSelectorEx(wxString(message0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -5221,7 +5221,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 
                 wxString value_to_return2;
                 value_to_return2 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -5235,7 +5235,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 
                 wxString value_to_return3;
                 value_to_return3 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return3.char_str());
+                ZVAL_STRING(return_value, value_to_return3.ToUTF8().data());
 
 
                 return;
@@ -5249,7 +5249,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 
                 wxString value_to_return4;
                 value_to_return4 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0);
-                ZVAL_STRING(return_value, value_to_return4.char_str());
+                ZVAL_STRING(return_value, value_to_return4.ToUTF8().data());
 
                 size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
                 array_init(&indexDefaultExtension0_ref);
@@ -5269,7 +5269,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 
                 wxString value_to_return5;
                 value_to_return5 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return5.char_str());
+                ZVAL_STRING(return_value, value_to_return5.ToUTF8().data());
 
                 size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
                 array_init(&indexDefaultExtension0_ref);
@@ -5289,7 +5289,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 
                 wxString value_to_return6;
                 value_to_return6 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0);
-                ZVAL_STRING(return_value, value_to_return6.char_str());
+                ZVAL_STRING(return_value, value_to_return6.ToUTF8().data());
 
                 size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
                 array_init(&indexDefaultExtension0_ref);
@@ -5309,7 +5309,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 
                 wxString value_to_return7;
                 value_to_return7 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6);
-                ZVAL_STRING(return_value, value_to_return7.char_str());
+                ZVAL_STRING(return_value, value_to_return7.ToUTF8().data());
 
                 size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
                 array_init(&indexDefaultExtension0_ref);
@@ -5329,7 +5329,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 
                 wxString value_to_return8;
                 value_to_return8 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0);
-                ZVAL_STRING(return_value, value_to_return8.char_str());
+                ZVAL_STRING(return_value, value_to_return8.ToUTF8().data());
 
                 size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
                 array_init(&indexDefaultExtension0_ref);
@@ -5349,7 +5349,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 
                 wxString value_to_return9;
                 value_to_return9 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0, (int) y0);
-                ZVAL_STRING(return_value, value_to_return9.char_str());
+                ZVAL_STRING(return_value, value_to_return9.ToUTF8().data());
 
                 size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
                 array_init(&indexDefaultExtension0_ref);
@@ -5454,7 +5454,7 @@ PHP_FUNCTION(php_wxLoadFileSelector)
 
                 wxString value_to_return2;
                 value_to_return2 = wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -5468,7 +5468,7 @@ PHP_FUNCTION(php_wxLoadFileSelector)
 
                 wxString value_to_return3;
                 value_to_return3 = wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return3.char_str());
+                ZVAL_STRING(return_value, value_to_return3.ToUTF8().data());
 
 
                 return;
@@ -5482,7 +5482,7 @@ PHP_FUNCTION(php_wxLoadFileSelector)
 
                 wxString value_to_return4;
                 value_to_return4 = wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8), (wxWindow*) object_pointer0_3);
-                ZVAL_STRING(return_value, value_to_return4.char_str());
+                ZVAL_STRING(return_value, value_to_return4.ToUTF8().data());
 
 
                 return;
@@ -5581,7 +5581,7 @@ PHP_FUNCTION(php_wxSaveFileSelector)
 
                 wxString value_to_return2;
                 value_to_return2 = wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -5595,7 +5595,7 @@ PHP_FUNCTION(php_wxSaveFileSelector)
 
                 wxString value_to_return3;
                 value_to_return3 = wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return3.char_str());
+                ZVAL_STRING(return_value, value_to_return3.ToUTF8().data());
 
 
                 return;
@@ -5609,7 +5609,7 @@ PHP_FUNCTION(php_wxSaveFileSelector)
 
                 wxString value_to_return4;
                 value_to_return4 = wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8), (wxWindow*) object_pointer0_3);
-                ZVAL_STRING(return_value, value_to_return4.char_str());
+                ZVAL_STRING(return_value, value_to_return4.ToUTF8().data());
 
 
                 return;
@@ -5679,7 +5679,7 @@ PHP_FUNCTION(php_wxGetOSDirectory)
 
                 wxString value_to_return0;
                 value_to_return0 = wxGetOSDirectory();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5735,11 +5735,11 @@ PHP_FUNCTION(php_wxParseCommonDialogsFilter)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'saa' (&wildCard0, &wildCard_len0, descriptions0, filters0)\n");
+        php_printf("Parsing parameters with 'saa' (&wildCard0, &wildCard_len0, &descriptions0, &filters0)\n");
         #endif
 
         char parse_parameters_string[] = "saa";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &wildCard0, &wildCard_len0, descriptions0, filters0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &wildCard0, &wildCard_len0, &descriptions0, &filters0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -5798,12 +5798,12 @@ PHP_FUNCTION(php_wxParseCommonDialogsFilter)
                 array_init(descriptions0);
                 for(size_t i=0; i<strings_array0_1.GetCount(); i++)
                 {
-                    add_next_index_string(descriptions0, strings_array0_1[i].char_str());
+                    add_next_index_string(descriptions0, strings_array0_1[i].ToUTF8().data());
                 }
                 array_init(filters0);
                 for(size_t i=0; i<strings_array0_2.GetCount(); i++)
                 {
-                    add_next_index_string(filters0, strings_array0_2[i].char_str());
+                    add_next_index_string(filters0, strings_array0_2[i].ToUTF8().data());
                 }
 
                 return;
@@ -6282,7 +6282,7 @@ PHP_FUNCTION(php_wxPathOnly)
 
                 wxString value_to_return1;
                 value_to_return1 = wxPathOnly(wxString(path0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -6500,7 +6500,7 @@ PHP_FUNCTION(php_wxGetCwd)
 
                 wxString value_to_return0;
                 value_to_return0 = wxGetCwd();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -6970,7 +6970,7 @@ PHP_FUNCTION(php_wxFindNextFile)
 
                 wxString value_to_return0;
                 value_to_return0 = wxFindNextFile();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -7047,7 +7047,7 @@ PHP_FUNCTION(php_wxFindFirstFile)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFindFirstFile(wxString(spec0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7061,7 +7061,7 @@ PHP_FUNCTION(php_wxFindFirstFile)
 
                 wxString value_to_return2;
                 value_to_return2 = wxFindFirstFile(wxString(spec0, wxConvUTF8), (int) flags0);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -9565,7 +9565,7 @@ PHP_FUNCTION(php_wxRichTextDecimalToRoman)
 
                 wxString value_to_return1;
                 value_to_return1 = wxRichTextDecimalToRoman((long) n0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -9855,7 +9855,7 @@ PHP_FUNCTION(php_wxGetStockLabel)
 
                 wxString value_to_return1;
                 value_to_return1 = wxGetStockLabel((wxWindowID) id0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -9869,7 +9869,7 @@ PHP_FUNCTION(php_wxGetStockLabel)
 
                 wxString value_to_return2;
                 value_to_return2 = wxGetStockLabel((wxWindowID) id0, (long) flags0);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -9971,7 +9971,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 
                 wxString value_to_return1;
                 value_to_return1 = wxGetTextFromUser(wxString(message0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -9985,7 +9985,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 
                 wxString value_to_return2;
                 value_to_return2 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -9999,7 +9999,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 
                 wxString value_to_return3;
                 value_to_return3 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return3.char_str());
+                ZVAL_STRING(return_value, value_to_return3.ToUTF8().data());
 
 
                 return;
@@ -10013,7 +10013,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 
                 wxString value_to_return4;
                 value_to_return4 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3);
-                ZVAL_STRING(return_value, value_to_return4.char_str());
+                ZVAL_STRING(return_value, value_to_return4.ToUTF8().data());
 
 
                 return;
@@ -10027,7 +10027,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 
                 wxString value_to_return5;
                 value_to_return5 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0);
-                ZVAL_STRING(return_value, value_to_return5.char_str());
+                ZVAL_STRING(return_value, value_to_return5.ToUTF8().data());
 
 
                 return;
@@ -10041,7 +10041,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 
                 wxString value_to_return6;
                 value_to_return6 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0);
-                ZVAL_STRING(return_value, value_to_return6.char_str());
+                ZVAL_STRING(return_value, value_to_return6.ToUTF8().data());
 
 
                 return;
@@ -10055,7 +10055,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 
                 wxString value_to_return7;
                 value_to_return7 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0);
-                ZVAL_STRING(return_value, value_to_return7.char_str());
+                ZVAL_STRING(return_value, value_to_return7.ToUTF8().data());
 
 
                 return;
@@ -10157,7 +10157,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 
                 wxString value_to_return1;
                 value_to_return1 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -10171,7 +10171,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 
                 wxString value_to_return2;
                 value_to_return2 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -10185,7 +10185,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 
                 wxString value_to_return3;
                 value_to_return3 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return3.char_str());
+                ZVAL_STRING(return_value, value_to_return3.ToUTF8().data());
 
 
                 return;
@@ -10199,7 +10199,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 
                 wxString value_to_return4;
                 value_to_return4 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3);
-                ZVAL_STRING(return_value, value_to_return4.char_str());
+                ZVAL_STRING(return_value, value_to_return4.ToUTF8().data());
 
 
                 return;
@@ -10213,7 +10213,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 
                 wxString value_to_return5;
                 value_to_return5 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0);
-                ZVAL_STRING(return_value, value_to_return5.char_str());
+                ZVAL_STRING(return_value, value_to_return5.ToUTF8().data());
 
 
                 return;
@@ -10227,7 +10227,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 
                 wxString value_to_return6;
                 value_to_return6 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0);
-                ZVAL_STRING(return_value, value_to_return6.char_str());
+                ZVAL_STRING(return_value, value_to_return6.ToUTF8().data());
 
 
                 return;
@@ -10241,7 +10241,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 
                 wxString value_to_return7;
                 value_to_return7 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0);
-                ZVAL_STRING(return_value, value_to_return7.char_str());
+                ZVAL_STRING(return_value, value_to_return7.ToUTF8().data());
 
 
                 return;
@@ -10527,7 +10527,7 @@ PHP_FUNCTION(php_wxStringTokenize)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return1.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return1[i].char_str());
+                    add_next_index_string(return_value, value_to_return1[i].ToUTF8().data());
                 }
 
 
@@ -10545,7 +10545,7 @@ PHP_FUNCTION(php_wxStringTokenize)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return2.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return2[i].char_str());
+                    add_next_index_string(return_value, value_to_return2[i].ToUTF8().data());
                 }
 
 
@@ -10563,7 +10563,7 @@ PHP_FUNCTION(php_wxStringTokenize)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return3.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return3[i].char_str());
+                    add_next_index_string(return_value, value_to_return3[i].ToUTF8().data());
                 }
 
 
@@ -10669,7 +10669,7 @@ PHP_FUNCTION(php_wxGetTranslation)
 
                 wxString value_to_return1;
                 value_to_return1 = wxGetTranslation(wxString(string0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -10683,7 +10683,7 @@ PHP_FUNCTION(php_wxGetTranslation)
 
                 wxString value_to_return2;
                 value_to_return2 = wxGetTranslation(wxString(string0, wxConvUTF8), wxString(domain0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -10704,7 +10704,7 @@ PHP_FUNCTION(php_wxGetTranslation)
 
                 wxString value_to_return3;
                 value_to_return3 = wxGetTranslation(wxString(string1, wxConvUTF8), wxString(plural1, wxConvUTF8), (unsigned) n1);
-                ZVAL_STRING(return_value, value_to_return3.char_str());
+                ZVAL_STRING(return_value, value_to_return3.ToUTF8().data());
 
 
                 return;
@@ -10718,7 +10718,7 @@ PHP_FUNCTION(php_wxGetTranslation)
 
                 wxString value_to_return4;
                 value_to_return4 = wxGetTranslation(wxString(string1, wxConvUTF8), wxString(plural1, wxConvUTF8), (unsigned) n1, wxString(domain1, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return4.char_str());
+                ZVAL_STRING(return_value, value_to_return4.ToUTF8().data());
 
 
                 return;
@@ -11283,7 +11283,7 @@ PHP_FUNCTION(php_wxGetenv)
             case 1:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxGetenv(name0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxGetenv(name0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return1;
@@ -11304,7 +11304,7 @@ PHP_FUNCTION(php_wxGetenv)
             case 1:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxGetenv(wxString(name1, wxConvUTF8)).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxGetenv(wxString(name1, wxConvUTF8)).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return1;
@@ -12433,7 +12433,7 @@ PHP_FUNCTION(php_wxStripMenuCodes)
 
                 wxString value_to_return1;
                 value_to_return1 = wxStripMenuCodes(wxString(str0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -12447,7 +12447,7 @@ PHP_FUNCTION(php_wxStripMenuCodes)
 
                 wxString value_to_return2;
                 value_to_return2 = wxStripMenuCodes(wxString(str0, wxConvUTF8), (int) flags0);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -12517,7 +12517,7 @@ PHP_FUNCTION(php_wxGetHomeDir)
 
                 wxString value_to_return0;
                 value_to_return0 = wxGetHomeDir();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12587,7 +12587,7 @@ PHP_FUNCTION(php_wxGetFullHostName)
 
                 wxString value_to_return0;
                 value_to_return0 = wxGetFullHostName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12663,7 +12663,7 @@ PHP_FUNCTION(php_wxGetUserHome)
 
                 wxString value_to_return0;
                 value_to_return0 = wxGetUserHome();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12677,7 +12677,7 @@ PHP_FUNCTION(php_wxGetUserHome)
 
                 wxString value_to_return1;
                 value_to_return1 = wxGetUserHome(wxString(user0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -12747,7 +12747,7 @@ PHP_FUNCTION(php_wxGetOsDescription)
 
                 wxString value_to_return0;
                 value_to_return0 = wxGetOsDescription();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -13587,7 +13587,7 @@ PHP_FUNCTION(php_wxNow)
 
                 wxString value_to_return0;
                 value_to_return0 = wxNow();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -13846,7 +13846,7 @@ PHP_FUNCTION(php_wxTmemchr)
             case 3:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxTmemchr(s0, (char) c0, (size_t) len0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxTmemchr(s0, (char) c0, (size_t) len0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return3;
@@ -14004,7 +14004,7 @@ PHP_FUNCTION(php_wxTmemcpy)
             case 3:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxTmemcpy(szOut0, szIn0, (size_t) len0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxTmemcpy(szOut0, szIn0, (size_t) len0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return3;
@@ -14087,7 +14087,7 @@ PHP_FUNCTION(php_wxTmemmove)
             case 3:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxTmemmove(szOut0, szIn0, (size_t) len0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxTmemmove(szOut0, szIn0, (size_t) len0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return3;
@@ -14169,7 +14169,7 @@ PHP_FUNCTION(php_wxTmemset)
             case 3:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxTmemset(szOut0, (const char) cIn0, (size_t) len0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxTmemset(szOut0, (const char) cIn0, (size_t) len0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return3;
@@ -14246,7 +14246,7 @@ PHP_FUNCTION(php_wxSetlocale)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxSetlocale((int) category0, wxString(locale0, wxConvUTF8)).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxSetlocale((int) category0, wxString(locale0, wxConvUTF8)).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -14468,7 +14468,7 @@ PHP_FUNCTION(php_wxStrdup)
             case 1:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrdup(wxString(s0, wxConvUTF8)).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrdup(wxString(s0, wxConvUTF8)).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return1;
@@ -14577,7 +14577,7 @@ PHP_FUNCTION(php_wxStrcpy)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrcpy(dest0, src0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrcpy(dest0, src0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -14599,7 +14599,7 @@ PHP_FUNCTION(php_wxStrcpy)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrcpy(dest1, wxString(src1, wxConvUTF8)).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrcpy(dest1, wxString(src1, wxConvUTF8)).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -14711,7 +14711,7 @@ PHP_FUNCTION(php_wxStrncpy)
             case 3:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrncpy(dest0, src0, (size_t) n0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrncpy(dest0, src0, (size_t) n0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return3;
@@ -14733,7 +14733,7 @@ PHP_FUNCTION(php_wxStrncpy)
             case 3:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrncpy(dest1, wxString(src1, wxConvUTF8), (size_t) n1).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrncpy(dest1, wxString(src1, wxConvUTF8), (size_t) n1).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return3;
@@ -14924,7 +14924,7 @@ PHP_FUNCTION(php_wxStrcat)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrcat(dest0, src0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrcat(dest0, src0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -14946,7 +14946,7 @@ PHP_FUNCTION(php_wxStrcat)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrcat(dest1, wxString(src1, wxConvUTF8)).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrcat(dest1, wxString(src1, wxConvUTF8)).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15058,7 +15058,7 @@ PHP_FUNCTION(php_wxStrncat)
             case 3:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrncat(dest0, src0, (size_t) n0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrncat(dest0, src0, (size_t) n0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return3;
@@ -15080,7 +15080,7 @@ PHP_FUNCTION(php_wxStrncat)
             case 3:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrncat(dest1, wxString(src1, wxConvUTF8), (size_t) n1).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrncat(dest1, wxString(src1, wxConvUTF8), (size_t) n1).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return3;
@@ -15416,7 +15416,7 @@ PHP_FUNCTION(php_wxStrstr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrstr(haystack0, needle0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrstr(haystack0, needle0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15437,7 +15437,7 @@ PHP_FUNCTION(php_wxStrstr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrstr(haystack1, wxString(needle1, wxConvUTF8)).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrstr(haystack1, wxString(needle1, wxConvUTF8)).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15458,7 +15458,7 @@ PHP_FUNCTION(php_wxStrstr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrstr(wxString(haystack2, wxConvUTF8), wxString(needle2, wxConvUTF8)).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrstr(wxString(haystack2, wxConvUTF8), wxString(needle2, wxConvUTF8)).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15479,7 +15479,7 @@ PHP_FUNCTION(php_wxStrstr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrstr(wxString(haystack3, wxConvUTF8), needle3).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrstr(wxString(haystack3, wxConvUTF8), needle3).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15500,7 +15500,7 @@ PHP_FUNCTION(php_wxStrstr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrstr(haystack4, needle4).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrstr(haystack4, needle4).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15522,7 +15522,7 @@ PHP_FUNCTION(php_wxStrstr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrstr(haystack5, wxString(needle5, wxConvUTF8)).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrstr(haystack5, wxString(needle5, wxConvUTF8)).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15672,7 +15672,7 @@ PHP_FUNCTION(php_wxStrchr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrchr(s0, (char) c0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrchr(s0, (char) c0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15693,7 +15693,7 @@ PHP_FUNCTION(php_wxStrchr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrchr(wxString(s1, wxConvUTF8), (char) c1).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrchr(wxString(s1, wxConvUTF8), (char) c1).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15714,7 +15714,7 @@ PHP_FUNCTION(php_wxStrchr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrchr(wxString(s2, wxConvUTF8), (int) c2).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrchr(wxString(s2, wxConvUTF8), (int) c2).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15735,7 +15735,7 @@ PHP_FUNCTION(php_wxStrchr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrchr(s3, (char) c3).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrchr(s3, (char) c3).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15885,7 +15885,7 @@ PHP_FUNCTION(php_wxStrrchr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrrchr(s0, (char) c0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrrchr(s0, (char) c0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15906,7 +15906,7 @@ PHP_FUNCTION(php_wxStrrchr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrrchr(wxString(s1, wxConvUTF8), (char) c1).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrrchr(wxString(s1, wxConvUTF8), (char) c1).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15927,7 +15927,7 @@ PHP_FUNCTION(php_wxStrrchr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrrchr(wxString(s2, wxConvUTF8), (int) c2).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrrchr(wxString(s2, wxConvUTF8), (int) c2).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -15948,7 +15948,7 @@ PHP_FUNCTION(php_wxStrrchr)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrrchr(s3, (char) c3).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrrchr(s3, (char) c3).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -16154,7 +16154,7 @@ PHP_FUNCTION(php_wxStrpbrk)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrpbrk(s0, accept0).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrpbrk(s0, accept0).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -16175,7 +16175,7 @@ PHP_FUNCTION(php_wxStrpbrk)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrpbrk(s1, wxString(accept1, wxConvUTF8)).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrpbrk(s1, wxString(accept1, wxConvUTF8)).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -16196,7 +16196,7 @@ PHP_FUNCTION(php_wxStrpbrk)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrpbrk(wxString(s2, wxConvUTF8), wxString(accept2, wxConvUTF8)).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrpbrk(wxString(s2, wxConvUTF8), wxString(accept2, wxConvUTF8)).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -16217,7 +16217,7 @@ PHP_FUNCTION(php_wxStrpbrk)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrpbrk(wxString(s3, wxConvUTF8), accept3).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrpbrk(wxString(s3, wxConvUTF8), accept3).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -16238,7 +16238,7 @@ PHP_FUNCTION(php_wxStrpbrk)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrpbrk(s4, accept4).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrpbrk(s4, accept4).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -16260,7 +16260,7 @@ PHP_FUNCTION(php_wxStrpbrk)
             case 2:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(::wxStrpbrk(s5, wxString(accept5, wxConvUTF8)).fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(::wxStrpbrk(s5, wxString(accept5, wxConvUTF8)).ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return2;
@@ -16731,12 +16731,13 @@ PHP_FUNCTION(php_wxSystem)
 /* {{{ proto  wxDynamicCast() */
 PHP_FUNCTION(php_wxDynamicCast)
 {
-    zval object;
+    zval* object;
     char* object_type;
-    int object_type_len = 0;
+    size_t object_type_len = 0;
     void* native_object = 0;
 
     char parse_parameters[] = "z!s!";
+    //char parse_parameters[] = "z!|s!";
 
     if (
         zend_parse_parameters_ex(
@@ -16749,10 +16750,10 @@ PHP_FUNCTION(php_wxDynamicCast)
         ) == SUCCESS
     )
     {
-        if(Z_TYPE(object) == IS_OBJECT)
+        if(Z_TYPE_P(object) == IS_OBJECT)
         {
             native_object = (void*)
-                Z_wxObject_P(&object)->native_object
+                Z_wxObject_P(object)->native_object
             ;
 
             if(!native_object)

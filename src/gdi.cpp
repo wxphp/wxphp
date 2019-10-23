@@ -3776,7 +3776,7 @@ PHP_METHOD(php_wxBitmapHandler, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxBitmapHandler_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3885,7 +3885,7 @@ PHP_METHOD(php_wxBitmapHandler, GetExtension)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxBitmapHandler_php*)native_object)->GetExtension();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -13208,7 +13208,7 @@ PHP_METHOD(php_wxFont, GetFaceName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFont_php*)native_object)->GetFaceName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -13424,7 +13424,7 @@ PHP_METHOD(php_wxFont, GetNativeFontInfoDesc)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFont_php*)native_object)->GetNativeFontInfoDesc();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -13533,7 +13533,7 @@ PHP_METHOD(php_wxFont, GetNativeFontInfoUserDesc)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFont_php*)native_object)->GetNativeFontInfoUserDesc();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18737,8 +18737,8 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], font.char_str());
-    ZVAL_STRING(&arguments[1], encoding.char_str());
+    ZVAL_STRING(&arguments[0], font.ToUTF8().data());
+    ZVAL_STRING(&arguments[1], encoding.ToUTF8().data());
     
     for(int i=0; i<2; i++)
     {
@@ -18832,7 +18832,7 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], font.char_str());
+    ZVAL_STRING(&arguments[0], font.ToUTF8().data());
     
     for(int i=0; i<1; i++)
     {
@@ -19114,7 +19114,7 @@ PHP_METHOD(php_wxFontEnumerator, GetFacenames)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return0.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return0[i].char_str());
+                    add_next_index_string(return_value, value_to_return0[i].ToUTF8().data());
                 }
 
 
@@ -19133,7 +19133,7 @@ PHP_METHOD(php_wxFontEnumerator, GetFacenames)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return1.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return1[i].char_str());
+                    add_next_index_string(return_value, value_to_return1[i].ToUTF8().data());
                 }
 
 
@@ -19152,7 +19152,7 @@ PHP_METHOD(php_wxFontEnumerator, GetFacenames)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return2.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return2[i].char_str());
+                    add_next_index_string(return_value, value_to_return2[i].ToUTF8().data());
                 }
 
 
@@ -19272,7 +19272,7 @@ PHP_METHOD(php_wxFontEnumerator, GetEncodings)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return0.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return0[i].char_str());
+                    add_next_index_string(return_value, value_to_return0[i].ToUTF8().data());
                 }
 
 
@@ -19291,7 +19291,7 @@ PHP_METHOD(php_wxFontEnumerator, GetEncodings)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return1.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return1[i].char_str());
+                    add_next_index_string(return_value, value_to_return1[i].ToUTF8().data());
                 }
 
 
@@ -20228,7 +20228,7 @@ PHP_METHOD(php_wxNativeFontInfo, GetFaceName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxNativeFontInfo_php*)native_object)->GetFaceName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -21216,11 +21216,11 @@ PHP_METHOD(php_wxNativeFontInfo, SetFaceName)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (facenames1)\n");
+        php_printf("Parsing parameters with 'a' (&facenames1)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, facenames1 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &facenames1 ) == SUCCESS)
         {
             overload1_called = true;
             already_called = true;
@@ -21938,7 +21938,7 @@ PHP_METHOD(php_wxNativeFontInfo, ToString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxNativeFontInfo_php*)native_object)->ToString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22046,7 +22046,7 @@ PHP_METHOD(php_wxNativeFontInfo, ToUserString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxNativeFontInfo_php*)native_object)->ToUserString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22513,7 +22513,7 @@ PHP_METHOD(php_wxColourDatabase, FindName)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxColourDatabase_php*)native_object)->FindName(*(wxColour*) object_pointer0_0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
                 references->AddReference(colour0, "wxColourDatabase::FindName at call 3 with 1 argument(s)");
 
@@ -25961,7 +25961,7 @@ PHP_METHOD(php_wxImageHandler, GetAltExtensions)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return0.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return0[i].char_str());
+                    add_next_index_string(return_value, value_to_return0[i].ToUTF8().data());
                 }
 
 
@@ -26074,7 +26074,7 @@ PHP_METHOD(php_wxImageHandler, GetExtension)
                 {
                     value_to_return0 = ((wxImageHandler_php*)native_object)->GetExtension();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26320,7 +26320,7 @@ PHP_METHOD(php_wxImageHandler, GetMimeType)
                 {
                     value_to_return0 = ((wxImageHandler_php*)native_object)->GetMimeType();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26432,7 +26432,7 @@ PHP_METHOD(php_wxImageHandler, GetName)
                 {
                     value_to_return0 = ((wxImageHandler_php*)native_object)->GetName();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26994,11 +26994,11 @@ PHP_METHOD(php_wxImageHandler, SetAltExtensions)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (extensions0)\n");
+        php_printf("Parsing parameters with 'a' (&extensions0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, extensions0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &extensions0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -29206,14 +29206,14 @@ PHP_METHOD(php_wxImage, SetData)
 
     //Parameters for overload 0
     char* data0;
-    long data0_len;
+    size_t data0_len;
     long new_width0;
     long new_height0;
     bool static_data0;
     bool overload0_called = false;
     //Parameters for overload 1
     char* data1;
-    long data1_len;
+    size_t data1_len;
     bool static_data1;
     bool overload1_called = false;
 
@@ -33872,7 +33872,7 @@ PHP_METHOD(php_wxImage, GetOption)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxImage_php*)native_object)->GetOption(wxString(name0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -34303,7 +34303,7 @@ PHP_METHOD(php_wxImage, GetImageExtWildcard)
 
                 wxString value_to_return0;
                 value_to_return0 = wxImage::GetImageExtWildcard();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -34830,7 +34830,7 @@ PHP_METHOD(php_wxImage, GetData)
                 );
                 #endif
 
-                long bytes_count = ((wxImage_php*)native_object)->GetWidth()
+                size_t bytes_count = ((wxImage_php*)native_object)->GetWidth()
                     * ((wxImage_php*)native_object)->GetHeight()
                     * 3
                 ;

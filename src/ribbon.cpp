@@ -1400,7 +1400,7 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
     Z_wxDC_P(&arguments[0])->native_object = (wxDC_php*) &dc;
     object_init_ex(&arguments[1], php_wxWindow_entry);
     Z_wxWindow_P(&arguments[1])->native_object = (wxWindow_php*) &wnd;
-    ZVAL_STRING(&arguments[2], label.char_str());
+    ZVAL_STRING(&arguments[2], label.ToUTF8().data());
     object_init_ex(&arguments[3], php_wxBitmap_entry);
     Z_wxBitmap_P(&arguments[3])->native_object = (wxBitmap_php*) &bitmap;
     ZVAL_LONG(&arguments[4], *ideal);
@@ -3452,7 +3452,7 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
     Z_wxRect_P(&arguments[2])->native_object = (wxRect_php*) &rect;
     ZVAL_LONG(&arguments[3], kind);
     ZVAL_LONG(&arguments[4], state);
-    ZVAL_STRING(&arguments[5], label.char_str());
+    ZVAL_STRING(&arguments[5], label.ToUTF8().data());
     object_init_ex(&arguments[6], php_wxBitmap_entry);
     Z_wxBitmap_P(&arguments[6])->native_object = (wxBitmap_php*) &bitmap_large;
     object_init_ex(&arguments[7], php_wxBitmap_entry);
@@ -3552,7 +3552,7 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
     Z_wxWindow_P(&arguments[1])->native_object = (wxWindow_php*) &wnd;
     ZVAL_LONG(&arguments[2], kind);
     ZVAL_LONG(&arguments[3], size);
-    ZVAL_STRING(&arguments[4], label.char_str());
+    ZVAL_STRING(&arguments[4], label.ToUTF8().data());
     object_init_ex(&arguments[5], php_wxSize_entry);
     Z_wxSize_P(&arguments[5])->native_object = (wxSize_php*) &bitmap_size_large;
     object_init_ex(&arguments[6], php_wxSize_entry);

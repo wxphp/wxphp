@@ -2467,7 +2467,7 @@ PHP_METHOD(php_wxFilePickerCtrl, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFilePickerCtrl_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3679,7 +3679,7 @@ PHP_METHOD(php_wxDirPickerCtrl, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxDirPickerCtrl_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

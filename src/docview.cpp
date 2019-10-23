@@ -718,7 +718,7 @@ PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxFileHistory_php*)native_object)->GetHistoryFile((size_t) index0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;

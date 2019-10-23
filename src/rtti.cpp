@@ -817,7 +817,7 @@ PHP_METHOD(php_wxObject, __get)
     wxObject_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)

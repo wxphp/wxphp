@@ -2869,7 +2869,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletFont)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletFont();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -2978,7 +2978,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3301,7 +3301,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3410,7 +3410,7 @@ PHP_METHOD(php_wxTextAttr, GetCharacterStyleName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetCharacterStyleName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3993,7 +3993,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFaceName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetFontFaceName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4958,7 +4958,7 @@ PHP_METHOD(php_wxTextAttr, GetListStyleName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetListStyleName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5388,7 +5388,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphStyleName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetParagraphStyleName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5945,7 +5945,7 @@ PHP_METHOD(php_wxTextAttr, GetURL)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetURL();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

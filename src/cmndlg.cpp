@@ -896,7 +896,7 @@ PHP_METHOD(php_wxAboutDialogInfo, GetCopyright)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAboutDialogInfo_php*)native_object)->GetCopyright();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1005,7 +1005,7 @@ PHP_METHOD(php_wxAboutDialogInfo, GetDescription)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAboutDialogInfo_php*)native_object)->GetDescription();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1309,11 +1309,11 @@ PHP_METHOD(php_wxAboutDialogInfo, SetArtists)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (artists0)\n");
+        php_printf("Parsing parameters with 'a' (&artists0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, artists0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &artists0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -1665,11 +1665,11 @@ PHP_METHOD(php_wxAboutDialogInfo, SetDevelopers)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (developers0)\n");
+        php_printf("Parsing parameters with 'a' (&developers0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, developers0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &developers0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -1795,11 +1795,11 @@ PHP_METHOD(php_wxAboutDialogInfo, SetDocWriters)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (docwriters0)\n");
+        php_printf("Parsing parameters with 'a' (&docwriters0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, docwriters0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &docwriters0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -2395,11 +2395,11 @@ PHP_METHOD(php_wxAboutDialogInfo, SetTranslators)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (translators0)\n");
+        php_printf("Parsing parameters with 'a' (&translators0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, translators0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &translators0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -2657,7 +2657,7 @@ PHP_METHOD(php_wxAboutDialogInfo, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAboutDialogInfo_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3123,7 +3123,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, GetStringSelection)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxSingleChoiceDialog_php*)native_object)->GetStringSelection();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3478,11 +3478,11 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'zssa|slO' (&parent1, &message1, &message_len1, &caption1, &caption_len1, choices1, &clientData1, &clientData_len1, &style1, &pos1, php_wxPoint_entry)\n");
+        php_printf("Parsing parameters with 'zssa|slO' (&parent1, &message1, &message_len1, &caption1, &caption_len1, &choices1, &clientData1, &clientData_len1, &style1, &pos1, php_wxPoint_entry)\n");
         #endif
 
         char parse_parameters_string[] = "zssa|slO";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent1, &message1, &message_len1, &caption1, &caption_len1, choices1, &clientData1, &clientData_len1, &style1, &pos1, php_wxPoint_entry ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent1, &message1, &message_len1, &caption1, &caption_len1, &choices1, &clientData1, &clientData_len1, &style1, &pos1, php_wxPoint_entry ) == SUCCESS)
         {
             if(arguments_received >= 1){
                 if(Z_TYPE_P(parent1) == IS_OBJECT)
@@ -7637,7 +7637,7 @@ PHP_METHOD(php_wxColourData, ToString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxColourData_php*)native_object)->ToString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -15243,7 +15243,7 @@ PHP_METHOD(php_wxDirDialog, GetMessage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxDirDialog_php*)native_object)->GetMessage();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -15352,7 +15352,7 @@ PHP_METHOD(php_wxDirDialog, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxDirDialog_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -16104,7 +16104,7 @@ PHP_METHOD(php_wxFindReplaceData, GetFindString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFindReplaceData_php*)native_object)->GetFindString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -16213,7 +16213,7 @@ PHP_METHOD(php_wxFindReplaceData, GetReplaceString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFindReplaceData_php*)native_object)->GetReplaceString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18480,7 +18480,7 @@ PHP_METHOD(php_wxFileDialog, GetWildcard)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDialog_php*)native_object)->GetWildcard();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18571,11 +18571,11 @@ PHP_METHOD(php_wxFileDialog, GetPaths)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (paths0)\n");
+        php_printf("Parsing parameters with 'a' (&paths0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, paths0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &paths0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -18616,7 +18616,7 @@ PHP_METHOD(php_wxFileDialog, GetPaths)
                 array_init(paths0);
                 for(size_t i=0; i<strings_array0_0.GetCount(); i++)
                 {
-                    add_next_index_string(paths0, strings_array0_0[i].char_str());
+                    add_next_index_string(paths0, strings_array0_0[i].ToUTF8().data());
                 }
 
                 return;
@@ -18725,7 +18725,7 @@ PHP_METHOD(php_wxFileDialog, GetMessage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDialog_php*)native_object)->GetMessage();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18834,7 +18834,7 @@ PHP_METHOD(php_wxFileDialog, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDialog_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -19032,11 +19032,11 @@ PHP_METHOD(php_wxFileDialog, GetFilenames)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (filenames0)\n");
+        php_printf("Parsing parameters with 'a' (&filenames0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, filenames0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &filenames0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -19077,7 +19077,7 @@ PHP_METHOD(php_wxFileDialog, GetFilenames)
                 array_init(filenames0);
                 for(size_t i=0; i<strings_array0_0.GetCount(); i++)
                 {
-                    add_next_index_string(filenames0, strings_array0_0[i].char_str());
+                    add_next_index_string(filenames0, strings_array0_0[i].ToUTF8().data());
                 }
 
                 return;
@@ -19186,7 +19186,7 @@ PHP_METHOD(php_wxFileDialog, GetFilename)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDialog_php*)native_object)->GetFilename();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -19425,7 +19425,7 @@ PHP_METHOD(php_wxFileDialog, GetDirectory)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDialog_php*)native_object)->GetDirectory();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22033,7 +22033,7 @@ PHP_METHOD(php_wxMessageDialog, GetCancelLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetCancelLabel();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22141,7 +22141,7 @@ PHP_METHOD(php_wxMessageDialog, GetCaption)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetCaption();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22355,7 +22355,7 @@ PHP_METHOD(php_wxMessageDialog, GetExtendedMessage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetExtendedMessage();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22463,7 +22463,7 @@ PHP_METHOD(php_wxMessageDialog, GetHelpLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetHelpLabel();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22571,7 +22571,7 @@ PHP_METHOD(php_wxMessageDialog, GetMessage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetMessage();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22785,7 +22785,7 @@ PHP_METHOD(php_wxMessageDialog, GetNoLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetNoLabel();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22893,7 +22893,7 @@ PHP_METHOD(php_wxMessageDialog, GetOKLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetOKLabel();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -23001,7 +23001,7 @@ PHP_METHOD(php_wxMessageDialog, GetYesLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetYesLabel();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -24343,7 +24343,7 @@ PHP_METHOD(php_wxGenericProgressDialog, GetMessage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxGenericProgressDialog_php*)native_object)->GetMessage();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26298,7 +26298,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetFontName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxSymbolPickerDialog_php*)native_object)->GetFontName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26514,7 +26514,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetNormalTextFontName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxSymbolPickerDialog_php*)native_object)->GetNormalTextFontName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26623,7 +26623,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetSymbol)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxSymbolPickerDialog_php*)native_object)->GetSymbol();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -28154,7 +28154,7 @@ PHP_METHOD(php_wxTextEntryDialog, GetValue)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextEntryDialog_php*)native_object)->GetValue();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

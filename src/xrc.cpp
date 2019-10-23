@@ -1345,10 +1345,10 @@ void wxXmlResource_php::DoReportError(const wxString& xrcFile, const wxXmlNode* 
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], xrcFile.char_str());
+    ZVAL_STRING(&arguments[0], xrcFile.ToUTF8().data());
     object_init_ex(&arguments[1], php_wxXmlNode_entry);
     Z_wxXmlNode_P(&arguments[1])->native_object = (wxXmlNode_php*) &position;
-    ZVAL_STRING(&arguments[2], message.char_str());
+    ZVAL_STRING(&arguments[2], message.ToUTF8().data());
     
     for(int i=0; i<3; i++)
     {
@@ -1512,7 +1512,7 @@ PHP_METHOD(php_wxXmlResource, FindXRCIDById)
 
                 wxString value_to_return1;
                 value_to_return1 = wxXmlResource::FindXRCIDById((int) numId0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1748,7 +1748,7 @@ PHP_METHOD(php_wxXmlResource, GetDomain)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxXmlResource_php*)native_object)->GetDomain();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

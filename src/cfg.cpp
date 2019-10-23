@@ -367,7 +367,7 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], key.char_str());
+    ZVAL_STRING(&arguments[0], key.ToUTF8().data());
     ZVAL_BOOL(&arguments[1], bDeleteGroupIfEmpty);
     
     for(int i=0; i<2; i++)
@@ -458,7 +458,7 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], key.char_str());
+    ZVAL_STRING(&arguments[0], key.ToUTF8().data());
     
     for(int i=0; i<1; i++)
     {
@@ -1116,7 +1116,7 @@ PHP_METHOD(php_wxConfigBase, GetAppName)
                 {
                     value_to_return0 = ((wxConfigBase_php*)native_object)->GetAppName();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1285,7 +1285,7 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], str.char_str());
+    ZVAL_STRING(&arguments[0], str.ToUTF8().data());
     ZVAL_LONG(&arguments[1], index);
     
     for(int i=0; i<2; i++)
@@ -1376,7 +1376,7 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], str.char_str());
+    ZVAL_STRING(&arguments[0], str.ToUTF8().data());
     ZVAL_LONG(&arguments[1], index);
     
     for(int i=0; i<2; i++)
@@ -1467,7 +1467,7 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], str.char_str());
+    ZVAL_STRING(&arguments[0], str.ToUTF8().data());
     ZVAL_LONG(&arguments[1], index);
     
     for(int i=0; i<2; i++)
@@ -1558,7 +1558,7 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], str.char_str());
+    ZVAL_STRING(&arguments[0], str.ToUTF8().data());
     ZVAL_LONG(&arguments[1], index);
     
     for(int i=0; i<2; i++)
@@ -1984,7 +1984,7 @@ PHP_METHOD(php_wxConfigBase, GetVendorName)
                 {
                     value_to_return0 = ((wxConfigBase_php*)native_object)->GetVendorName();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -2028,7 +2028,7 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], strName.char_str());
+    ZVAL_STRING(&arguments[0], strName.ToUTF8().data());
     
     for(int i=0; i<1; i++)
     {
@@ -2117,7 +2117,7 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], strName.char_str());
+    ZVAL_STRING(&arguments[0], strName.ToUTF8().data());
     
     for(int i=0; i<1; i++)
     {
@@ -2805,7 +2805,7 @@ PHP_METHOD(php_wxConfigBase, Read)
                     ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key0, wxConvUTF8), &string_arg0_1));
                 }
 
-                ZVAL_STRING(&str0_ref, string_arg0_1.char_str());
+                ZVAL_STRING(&str0_ref, string_arg0_1.ToUTF8().data());
 
                 return;
                 break;
@@ -2833,7 +2833,7 @@ PHP_METHOD(php_wxConfigBase, Read)
                     ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key1, wxConvUTF8), &string_arg1_1, wxString(defaultVal1, wxConvUTF8)));
                 }
 
-                ZVAL_STRING(&str1_ref, string_arg1_1.char_str());
+                ZVAL_STRING(&str1_ref, string_arg1_1.ToUTF8().data());
 
                 return;
                 break;
@@ -2860,7 +2860,7 @@ PHP_METHOD(php_wxConfigBase, Read)
                 {
                     value_to_return2 = ((wxConfigBase_php*)native_object)->Read(wxString(key2, wxConvUTF8), wxString(defaultVal2, wxConvUTF8));
                 }
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -3536,8 +3536,8 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], oldName.char_str());
-    ZVAL_STRING(&arguments[1], newName.char_str());
+    ZVAL_STRING(&arguments[0], oldName.ToUTF8().data());
+    ZVAL_STRING(&arguments[1], newName.ToUTF8().data());
     
     for(int i=0; i<2; i++)
     {
@@ -3627,8 +3627,8 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], oldName.char_str());
-    ZVAL_STRING(&arguments[1], newName.char_str());
+    ZVAL_STRING(&arguments[0], oldName.ToUTF8().data());
+    ZVAL_STRING(&arguments[1], newName.ToUTF8().data());
     
     for(int i=0; i<2; i++)
     {
@@ -4014,7 +4014,7 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], strPath.char_str());
+    ZVAL_STRING(&arguments[0], strPath.ToUTF8().data());
     
     for(int i=0; i<1; i++)
     {
@@ -5522,7 +5522,7 @@ PHP_METHOD(php_wxDisplay, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxDisplay_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -6422,7 +6422,7 @@ PHP_METHOD(php_wxFileConfig, GetFirstEntry)
                     ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->GetFirstEntry(string_arg0_0, (long&) index0));
                 }
 
-                ZVAL_STRING(&str0_ref, string_arg0_0.char_str());
+                ZVAL_STRING(&str0_ref, string_arg0_0.ToUTF8().data());
                 ZVAL_LONG(&index0_ref, index0);
 
                 return;
@@ -6547,7 +6547,7 @@ PHP_METHOD(php_wxFileConfig, GetFirstGroup)
                     ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->GetFirstGroup(string_arg0_0, (long&) index0));
                 }
 
-                ZVAL_STRING(&str0_ref, string_arg0_0.char_str());
+                ZVAL_STRING(&str0_ref, string_arg0_0.ToUTF8().data());
                 ZVAL_LONG(&index0_ref, index0);
 
                 return;
@@ -6783,7 +6783,7 @@ PHP_METHOD(php_wxFileConfig, GetGlobalFileName)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileConfig::GetGlobalFileName(wxString(szFile0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7041,7 +7041,7 @@ PHP_METHOD(php_wxFileConfig, GetLocalFileName)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileConfig::GetLocalFileName(wxString(szFile0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7056,7 +7056,7 @@ PHP_METHOD(php_wxFileConfig, GetLocalFileName)
 
                 wxString value_to_return2;
                 value_to_return2 = wxFileConfig::GetLocalFileName(wxString(szFile0, wxConvUTF8), (int) style0);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -7181,7 +7181,7 @@ PHP_METHOD(php_wxFileConfig, GetNextEntry)
                     ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->GetNextEntry(string_arg0_0, (long&) index0));
                 }
 
-                ZVAL_STRING(&str0_ref, string_arg0_0.char_str());
+                ZVAL_STRING(&str0_ref, string_arg0_0.ToUTF8().data());
                 ZVAL_LONG(&index0_ref, index0);
 
                 return;
@@ -7306,7 +7306,7 @@ PHP_METHOD(php_wxFileConfig, GetNextGroup)
                     ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->GetNextGroup(string_arg0_0, (long&) index0));
                 }
 
-                ZVAL_STRING(&str0_ref, string_arg0_0.char_str());
+                ZVAL_STRING(&str0_ref, string_arg0_0.ToUTF8().data());
                 ZVAL_LONG(&index0_ref, index0);
 
                 return;
@@ -7678,7 +7678,7 @@ PHP_METHOD(php_wxFileConfig, GetPath)
                 {
                     value_to_return0 = ((wxFileConfig_php*)native_object)->GetPath();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -9099,7 +9099,7 @@ PHP_METHOD(php_wxFontMapper, GetEncodingDescription)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFontMapper::GetEncodingDescription((wxFontEncoding) encoding0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -9328,7 +9328,7 @@ PHP_METHOD(php_wxFontMapper, GetEncodingName)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFontMapper::GetEncodingName((wxFontEncoding) encoding0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -11033,7 +11033,7 @@ PHP_METHOD(php_wxPlatformInfo, GetArchName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetArchName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11055,7 +11055,7 @@ PHP_METHOD(php_wxPlatformInfo, GetArchName)
 
                 wxString value_to_return1;
                 value_to_return1 = wxPlatformInfo::GetArchName((wxArchitecture) arch1);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -11271,7 +11271,7 @@ PHP_METHOD(php_wxPlatformInfo, GetDesktopEnvironment)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetDesktopEnvironment();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11550,7 +11550,7 @@ PHP_METHOD(php_wxPlatformInfo, GetEndiannessName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetEndiannessName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11572,7 +11572,7 @@ PHP_METHOD(php_wxPlatformInfo, GetEndiannessName)
 
                 wxString value_to_return1;
                 value_to_return1 = wxPlatformInfo::GetEndiannessName((wxEndianness) end1);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -11895,7 +11895,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemDescription)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetOperatingSystemDescription();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12005,7 +12005,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemDirectory)
 
                 wxString value_to_return0;
                 value_to_return0 = wxPlatformInfo::GetOperatingSystemDirectory();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12135,7 +12135,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemFamilyName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetOperatingSystemFamilyName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12157,7 +12157,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemFamilyName)
 
                 wxString value_to_return1;
                 value_to_return1 = wxPlatformInfo::GetOperatingSystemFamilyName((wxOperatingSystemId) os1);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -12436,7 +12436,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemIdName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetOperatingSystemIdName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12458,7 +12458,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemIdName)
 
                 wxString value_to_return1;
                 value_to_return1 = wxPlatformInfo::GetOperatingSystemIdName((wxOperatingSystemId) os1);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -12738,7 +12738,7 @@ PHP_METHOD(php_wxPlatformInfo, GetPortIdName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetPortIdName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12760,7 +12760,7 @@ PHP_METHOD(php_wxPlatformInfo, GetPortIdName)
 
                 wxString value_to_return2;
                 value_to_return2 = wxPlatformInfo::GetPortIdName((wxPortId) port1, usingUniversal1);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -12891,7 +12891,7 @@ PHP_METHOD(php_wxPlatformInfo, GetPortIdShortName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetPortIdShortName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12913,7 +12913,7 @@ PHP_METHOD(php_wxPlatformInfo, GetPortIdShortName)
 
                 wxString value_to_return2;
                 value_to_return2 = wxPlatformInfo::GetPortIdShortName((wxPortId) port1, usingUniversal1);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -15131,7 +15131,7 @@ PHP_METHOD(php_wxSystemOptions, GetOption)
 
                 wxString value_to_return1;
                 value_to_return1 = wxSystemOptions::GetOption(wxString(name0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -15884,7 +15884,7 @@ PHP_METHOD(php_wxVideoMode, __get)
     wxVideoMode_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)

@@ -310,7 +310,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetUrl)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxWebViewHistoryItem_php*)native_object)->GetUrl();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -418,7 +418,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetTitle)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxWebViewHistoryItem_php*)native_object)->GetTitle();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -700,7 +700,7 @@ PHP_METHOD(php_wxWebViewHandler, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxWebViewHandler_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -744,7 +744,7 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], uri.char_str());
+    ZVAL_STRING(&arguments[0], uri.ToUTF8().data());
     
     for(int i=0; i<1; i++)
     {

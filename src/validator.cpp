@@ -2228,7 +2228,7 @@ PHP_METHOD(php_wxTextValidator, GetExcludes)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return0.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return0[i].char_str());
+                    add_next_index_string(return_value, value_to_return0[i].ToUTF8().data());
                 }
 
 
@@ -2341,7 +2341,7 @@ PHP_METHOD(php_wxTextValidator, GetIncludes)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return0.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return0[i].char_str());
+                    add_next_index_string(return_value, value_to_return0[i].ToUTF8().data());
                 }
 
 
@@ -2606,7 +2606,7 @@ wxString wxTextValidator_php::IsValid(const wxString& val)const
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], val.char_str());
+    ZVAL_STRING(&arguments[0], val.ToUTF8().data());
     
     for(int i=0; i<1; i++)
     {
@@ -2971,11 +2971,11 @@ PHP_METHOD(php_wxTextValidator, SetExcludes)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (stringList0)\n");
+        php_printf("Parsing parameters with 'a' (&stringList0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, stringList0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &stringList0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -3101,11 +3101,11 @@ PHP_METHOD(php_wxTextValidator, SetIncludes)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (stringList0)\n");
+        php_printf("Parsing parameters with 'a' (&stringList0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, stringList0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &stringList0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;

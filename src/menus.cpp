@@ -1360,7 +1360,7 @@ PHP_METHOD(php_wxMenuBar, GetHelpString)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenuBar_php*)native_object)->GetHelpString((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1474,7 +1474,7 @@ PHP_METHOD(php_wxMenuBar, GetLabel)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenuBar_php*)native_object)->GetLabel((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1830,7 +1830,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabel)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenuBar_php*)native_object)->GetMenuLabel((size_t) pos0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1944,7 +1944,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabelText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenuBar_php*)native_object)->GetMenuLabelText((size_t) pos0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7442,7 +7442,7 @@ PHP_METHOD(php_wxMenu, GetHelpString)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenu_php*)native_object)->GetHelpString((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7685,7 +7685,7 @@ PHP_METHOD(php_wxMenu, GetLabel)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenu_php*)native_object)->GetLabel((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7799,7 +7799,7 @@ PHP_METHOD(php_wxMenu, GetLabelText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenu_php*)native_object)->GetLabelText((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -8250,7 +8250,7 @@ PHP_METHOD(php_wxMenu, GetTitle)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMenu_php*)native_object)->GetTitle();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11019,7 +11019,7 @@ PHP_METHOD(php_wxMenuItem, GetHelp)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMenuItem_php*)native_object)->GetHelp();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11235,7 +11235,7 @@ PHP_METHOD(php_wxMenuItem, GetItemLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMenuItem_php*)native_object)->GetItemLabel();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11344,7 +11344,7 @@ PHP_METHOD(php_wxMenuItem, GetItemLabelText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMenuItem_php*)native_object)->GetItemLabelText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11567,7 +11567,7 @@ PHP_METHOD(php_wxMenuItem, GetLabelText)
 
                 wxString value_to_return1;
                 value_to_return1 = wxMenuItem::GetLabelText(wxString(text0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;

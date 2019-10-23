@@ -9748,7 +9748,7 @@ PHP_METHOD(php_wxEvent, __get)
     wxEvent_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)
@@ -26364,7 +26364,7 @@ PHP_METHOD(php_wxCommandEvent, GetString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxCommandEvent_php*)native_object)->GetString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -29280,7 +29280,7 @@ PHP_METHOD(php_wxUpdateUIEvent, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxUpdateUIEvent_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -37321,7 +37321,7 @@ PHP_METHOD(php_wxThreadEvent, GetString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxThreadEvent_php*)native_object)->GetString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -45111,7 +45111,7 @@ PHP_METHOD(php_wxFileCtrlEvent, GetDirectory)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileCtrlEvent_php*)native_object)->GetDirectory();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -45220,7 +45220,7 @@ PHP_METHOD(php_wxFileCtrlEvent, GetFile)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileCtrlEvent_php*)native_object)->GetFile();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -45332,7 +45332,7 @@ PHP_METHOD(php_wxFileCtrlEvent, GetFiles)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return0.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return0[i].char_str());
+                    add_next_index_string(return_value, value_to_return0[i].ToUTF8().data());
                 }
 
 
@@ -45643,11 +45643,11 @@ PHP_METHOD(php_wxFileCtrlEvent, SetFiles)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (files0)\n");
+        php_printf("Parsing parameters with 'a' (&files0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, files0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &files0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -46094,7 +46094,7 @@ PHP_METHOD(php_wxFileDirPickerEvent, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDirPickerEvent_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -47076,7 +47076,7 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetErrorDescription)
                 {
                     value_to_return0 = ((wxFileSystemWatcherEvent_php*)native_object)->GetErrorDescription();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -47558,7 +47558,7 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, ToString)
                 {
                     value_to_return0 = ((wxFileSystemWatcherEvent_php*)native_object)->ToString();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -52738,7 +52738,7 @@ PHP_METHOD(php_wxHyperlinkEvent, GetURL)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHyperlinkEvent_php*)native_object)->GetURL();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -55866,7 +55866,7 @@ PHP_METHOD(php_wxListEvent, GetLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxListEvent_php*)native_object)->GetLabel();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -56197,7 +56197,7 @@ PHP_METHOD(php_wxListEvent, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxListEvent_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -66368,7 +66368,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetDragText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextEvent_php*)native_object)->GetDragText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -67960,7 +67960,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextEvent_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -70217,7 +70217,7 @@ PHP_METHOD(php_wxTreeEvent, GetLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTreeEvent_php*)native_object)->GetLabel();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -70996,7 +70996,7 @@ PHP_METHOD(php_wxWebViewEvent, GetTarget)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxWebViewEvent_php*)native_object)->GetTarget();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -71105,7 +71105,7 @@ PHP_METHOD(php_wxWebViewEvent, GetURL)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxWebViewEvent_php*)native_object)->GetURL();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

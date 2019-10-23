@@ -4023,7 +4023,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetShortHelp)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAuiToolBarItem_php*)native_object)->GetShortHelp();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4363,7 +4363,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetLongHelp)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAuiToolBarItem_php*)native_object)->GetLongHelp();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4471,7 +4471,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAuiToolBarItem_php*)native_object)->GetLabel();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -14739,7 +14739,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolShortHelp)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxAuiToolBar_php*)native_object)->GetToolShortHelp((int) tool_id0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -17061,7 +17061,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolLabel)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxAuiToolBar_php*)native_object)->GetToolLabel((int) tool_id0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -17174,7 +17174,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolLongHelp)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxAuiToolBar_php*)native_object)->GetToolLongHelp((int) tool_id0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -20463,7 +20463,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxAuiNotebook_php*)native_object)->GetPageText((size_t) page0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -23070,7 +23070,7 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
     Z_wxDC_P(&arguments[0])->native_object = (wxDC_php*) &dc;
     object_init_ex(&arguments[1], php_wxWindow_entry);
     Z_wxWindow_P(&arguments[1])->native_object = (wxWindow_php*) &wnd;
-    ZVAL_STRING(&arguments[2], caption.char_str());
+    ZVAL_STRING(&arguments[2], caption.ToUTF8().data());
     object_init_ex(&arguments[3], php_wxBitmap_entry);
     Z_wxBitmap_P(&arguments[3])->native_object = (wxBitmap_php*) &bitmap;
     ZVAL_BOOL(&arguments[4], active);
@@ -24565,7 +24565,7 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
     Z_wxDC_P(&arguments[0])->native_object = (wxDC_php*) &dc;
     object_init_ex(&arguments[1], php_wxWindow_entry);
     Z_wxWindow_P(&arguments[1])->native_object = (wxWindow_php*) &window;
-    ZVAL_STRING(&arguments[2], text.char_str());
+    ZVAL_STRING(&arguments[2], text.ToUTF8().data());
     object_init_ex(&arguments[3], php_wxRect_entry);
     Z_wxRect_P(&arguments[3])->native_object = (wxRect_php*) &rect;
     object_init_ex(&arguments[4], php_wxAuiPaneInfo_entry);
@@ -25931,7 +25931,7 @@ PHP_METHOD(php_wxAuiManager, SavePerspective)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAuiManager_php*)native_object)->SavePerspective();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26063,7 +26063,7 @@ PHP_METHOD(php_wxAuiManager, SavePaneInfo)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxAuiManager_php*)native_object)->SavePaneInfo(*(wxAuiPaneInfo*) object_pointer0_0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
                 references->AddReference(pane0, "wxAuiManager::SavePaneInfo at call 3 with 1 argument(s)");
 
@@ -28279,7 +28279,7 @@ PHP_METHOD(php_wxAuiPaneInfo, __get)
     wxAuiPaneInfo_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)

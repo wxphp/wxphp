@@ -558,7 +558,7 @@ void wxLog_php::DoLogText(const wxString& msg)
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], msg.char_str());
+    ZVAL_STRING(&arguments[0], msg.ToUTF8().data());
     
     for(int i=0; i<1; i++)
     {
@@ -653,7 +653,7 @@ void wxLog_php::DoLogTextAtLevel(wxLogLevel level, const wxString& msg)
 
     //Parameters for conversion
     ZVAL_LONG(&arguments[0], level);
-    ZVAL_STRING(&arguments[1], msg.char_str());
+    ZVAL_STRING(&arguments[1], msg.ToUTF8().data());
     
     for(int i=0; i<2; i++)
     {
@@ -1815,7 +1815,7 @@ PHP_METHOD(php_wxLog, GetTimestamp)
 
                 wxString value_to_return0;
                 value_to_return0 = wxLog::GetTimestamp();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1952,7 +1952,7 @@ PHP_METHOD(php_wxLog, GetTraceMasks)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return0.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return0[i].char_str());
+                    add_next_index_string(return_value, value_to_return0[i].ToUTF8().data());
                 }
 
 
@@ -5234,7 +5234,7 @@ PHP_METHOD(php_wxLogBuffer, GetBuffer)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxLogBuffer_php*)native_object)->GetBuffer();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -6284,7 +6284,7 @@ PHP_METHOD(php_wxLogGui, __get)
     wxLogGui_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)

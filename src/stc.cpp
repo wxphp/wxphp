@@ -730,7 +730,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharacterPointer)
             case 0:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetCharacterPointer().fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetCharacterPointer().ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return0;
@@ -2622,7 +2622,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyles)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->AnnotationGetStyles((int) line0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -2736,7 +2736,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->AnnotationGetText((int) line0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -18653,7 +18653,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLine)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetLine((int) line0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -21717,7 +21717,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetProperty)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetProperty(wxString(key0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -21832,7 +21832,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyExpanded)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetPropertyExpanded(wxString(key0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -23227,7 +23227,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectedText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetSelectedText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -25293,7 +25293,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -25515,7 +25515,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextRange)
 
                 wxString value_to_return2;
                 value_to_return2 = ((wxStyledTextCtrl_php*)native_object)->GetTextRange((int) startPos0, (int) endPos0);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -32593,7 +32593,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyles)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->MarginGetStyles((int) line0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -32707,7 +32707,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->MarginGetText((int) line0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -61216,7 +61216,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DescribeKeyWordSets)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->DescribeKeyWordSets();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -61331,7 +61331,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DescribeProperty)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->DescribeProperty(wxString(name0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -61769,7 +61769,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurLine)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetCurLine();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -61783,7 +61783,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurLine)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetCurLine((int*) linePos0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
                 size_t elements_returned0_0 = sizeof(linePos0)/sizeof(*linePos0);
                 array_init(&linePos0_ref);
@@ -62992,7 +62992,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetLineText((long) n0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -63640,7 +63640,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPunctuationChars)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetPunctuationChars();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -64098,7 +64098,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTag)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetTag((int) tagNumber0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -64314,7 +64314,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWhitespaceChars)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetWhitespaceChars();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -64423,7 +64423,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWordChars)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetWordChars();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -66325,7 +66325,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PropertyNames)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->PropertyNames();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -68600,7 +68600,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetFaceName)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->StyleGetFaceName((int) style0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;

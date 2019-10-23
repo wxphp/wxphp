@@ -7123,7 +7123,7 @@ PHP_METHOD(php_wxPrintout, GetTitle)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPrintout_php*)native_object)->GetTitle();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

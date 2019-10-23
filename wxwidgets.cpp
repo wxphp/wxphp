@@ -595,8 +595,6 @@ int wxphp_call_method(zval *object_p, zend_class_entry *obj_ce, zend_function **
             is_callable = FAILURE;
         }
 
-        efree(&method_to_call);
-
         if(is_callable == FAILURE)
             return FAILURE;
     }

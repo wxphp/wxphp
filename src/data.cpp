@@ -432,7 +432,7 @@ PHP_METHOD(php_wxAcceleratorEntry, ToString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAcceleratorEntry_php*)native_object)->ToString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -8404,7 +8404,7 @@ PHP_METHOD(php_wxPrintData, GetFilename)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPrintData_php*)native_object)->GetFilename();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -8940,7 +8940,7 @@ PHP_METHOD(php_wxPrintData, GetPrinterName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPrintData_php*)native_object)->GetPrinterName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -10767,7 +10767,7 @@ PHP_METHOD(php_wxRealPoint, __get)
     wxRealPoint_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)
@@ -11262,7 +11262,7 @@ PHP_METHOD(php_wxRect, __get)
     wxRect_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)
@@ -15705,7 +15705,7 @@ PHP_METHOD(php_wxPoint, __get)
     wxPoint_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)
@@ -20712,7 +20712,7 @@ PHP_METHOD(php_wxListItem, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxListItem_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -21785,7 +21785,7 @@ PHP_METHOD(php_wxFileType, GetDescription)
 
                 ZVAL_BOOL(return_value, ((wxFileType_php*)native_object)->GetDescription(&string_arg0_0));
 
-                ZVAL_STRING(&desc0_ref, string_arg0_0.char_str());
+                ZVAL_STRING(&desc0_ref, string_arg0_0.ToUTF8().data());
 
                 return;
                 break;
@@ -21875,11 +21875,11 @@ PHP_METHOD(php_wxFileType, GetExtensions)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (extensions0)\n");
+        php_printf("Parsing parameters with 'a' (&extensions0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, extensions0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &extensions0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -21920,7 +21920,7 @@ PHP_METHOD(php_wxFileType, GetExtensions)
                 array_init(extensions0);
                 for(size_t i=0; i<strings_array0_0.GetCount(); i++)
                 {
-                    add_next_index_string(extensions0, strings_array0_0[i].char_str());
+                    add_next_index_string(extensions0, strings_array0_0[i].ToUTF8().data());
                 }
 
                 return;
@@ -22040,7 +22040,7 @@ PHP_METHOD(php_wxFileType, GetMimeType)
 
                 ZVAL_BOOL(return_value, ((wxFileType_php*)native_object)->GetMimeType(&string_arg0_0));
 
-                ZVAL_STRING(&mimeType0_ref, string_arg0_0.char_str());
+                ZVAL_STRING(&mimeType0_ref, string_arg0_0.ToUTF8().data());
 
                 return;
                 break;
@@ -22130,11 +22130,11 @@ PHP_METHOD(php_wxFileType, GetMimeTypes)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (mimeTypes0)\n");
+        php_printf("Parsing parameters with 'a' (&mimeTypes0)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, mimeTypes0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &mimeTypes0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -22175,7 +22175,7 @@ PHP_METHOD(php_wxFileType, GetMimeTypes)
                 array_init(mimeTypes0);
                 for(size_t i=0; i<strings_array0_0.GetCount(); i++)
                 {
-                    add_next_index_string(mimeTypes0, strings_array0_0[i].char_str());
+                    add_next_index_string(mimeTypes0, strings_array0_0[i].ToUTF8().data());
                 }
 
                 return;
@@ -22290,7 +22290,7 @@ PHP_METHOD(php_wxFileType, GetOpenCommand)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxFileType_php*)native_object)->GetOpenCommand(wxString(filename0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -26287,7 +26287,7 @@ PHP_METHOD(php_wxStatusBarPane, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStatusBarPane_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -27514,7 +27514,7 @@ PHP_METHOD(php_wxVariant, Convert)
 
                 ZVAL_BOOL(return_value, ((wxVariant_php*)native_object)->Convert(&string_arg4_0));
 
-                ZVAL_STRING(&value4_ref, string_arg4_0.char_str());
+                ZVAL_STRING(&value4_ref, string_arg4_0.ToUTF8().data());
 
                 return;
                 break;
@@ -27737,7 +27737,7 @@ PHP_METHOD(php_wxVariant, GetArrayString)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return0.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return0[i].char_str());
+                    add_next_index_string(return_value, value_to_return0[i].ToUTF8().data());
                 }
 
 
@@ -28407,7 +28407,7 @@ PHP_METHOD(php_wxVariant, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxVariant_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -28516,7 +28516,7 @@ PHP_METHOD(php_wxVariant, GetType)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxVariant_php*)native_object)->GetType();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -29338,7 +29338,7 @@ PHP_METHOD(php_wxVariant, MakeString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxVariant_php*)native_object)->MakeString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -29691,7 +29691,7 @@ PHP_METHOD(php_wxVariant, GetString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxVariant_php*)native_object)->GetString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -30281,11 +30281,11 @@ PHP_METHOD(php_wxVariant, __construct)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a|s' (val7, &name7, &name_len7)\n");
+        php_printf("Parsing parameters with 'a|s' (&val7, &name7, &name_len7)\n");
         #endif
 
         char parse_parameters_string[] = "a|s";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, val7, &name7, &name_len7 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &val7, &name7, &name_len7 ) == SUCCESS)
         {
             overload7_called = true;
             already_called = true;
@@ -31436,7 +31436,7 @@ PHP_METHOD(php_wxVariantData, Read)
 
                 ZVAL_BOOL(return_value, ((wxVariantData_php*)native_object)->Read(string_arg0_0));
 
-                ZVAL_STRING(&string0_ref, string_arg0_0.char_str());
+                ZVAL_STRING(&string0_ref, string_arg0_0.ToUTF8().data());
 
                 return;
                 break;
@@ -31555,7 +31555,7 @@ PHP_METHOD(php_wxVariantData, Write)
 
                 ZVAL_BOOL(return_value, ((wxVariantData_php*)native_object)->Write(string_arg0_0));
 
-                ZVAL_STRING(&string0_ref, string_arg0_0.char_str());
+                ZVAL_STRING(&string0_ref, string_arg0_0.ToUTF8().data());
 
                 return;
                 break;
@@ -31827,7 +31827,7 @@ PHP_METHOD(php_wxVersionInfo, ToString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxVersionInfo_php*)native_object)->ToString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -32043,7 +32043,7 @@ PHP_METHOD(php_wxVersionInfo, GetVersionString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxVersionInfo_php*)native_object)->GetVersionString();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -32152,7 +32152,7 @@ PHP_METHOD(php_wxVersionInfo, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxVersionInfo_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -32582,7 +32582,7 @@ PHP_METHOD(php_wxVersionInfo, GetDescription)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxVersionInfo_php*)native_object)->GetDescription();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -32691,7 +32691,7 @@ PHP_METHOD(php_wxVersionInfo, GetCopyright)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxVersionInfo_php*)native_object)->GetCopyright();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

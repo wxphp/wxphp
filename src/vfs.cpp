@@ -710,7 +710,7 @@ PHP_METHOD(php_wxFileSystem, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileSystem_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -819,7 +819,7 @@ PHP_METHOD(php_wxFileSystem, FindNext)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileSystem_php*)native_object)->FindNext();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -935,7 +935,7 @@ PHP_METHOD(php_wxFileSystem, FindFirst)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxFileSystem_php*)native_object)->FindFirst(wxString(wildcard0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -949,7 +949,7 @@ PHP_METHOD(php_wxFileSystem, FindFirst)
 
                 wxString value_to_return2;
                 value_to_return2 = ((wxFileSystem_php*)native_object)->FindFirst(wxString(wildcard0, wxConvUTF8), (int) flags0);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -1073,7 +1073,7 @@ PHP_METHOD(php_wxFileSystem, FindFileInPath)
 
                 ZVAL_BOOL(return_value, ((wxFileSystem_php*)native_object)->FindFileInPath(&string_arg0_0, wxString(path0, wxConvUTF8), wxString(file0, wxConvUTF8)));
 
-                ZVAL_STRING(&pStr0_ref, string_arg0_0.char_str());
+                ZVAL_STRING(&pStr0_ref, string_arg0_0.ToUTF8().data());
 
                 return;
                 break;
@@ -1205,7 +1205,7 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileSystem::FileNameToURL(*(wxFileName*) object_pointer0_0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1588,7 +1588,7 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], location.char_str());
+    ZVAL_STRING(&arguments[0], location.ToUTF8().data());
     
     for(int i=0; i<1; i++)
     {
@@ -1749,7 +1749,7 @@ PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxFileSystemHandler_php*)native_object)->FindFirst(wxString(wildcard0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1763,7 +1763,7 @@ PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 
                 wxString value_to_return2;
                 value_to_return2 = ((wxFileSystemHandler_php*)native_object)->FindFirst(wxString(wildcard0, wxConvUTF8), (int) flags0);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -1872,7 +1872,7 @@ PHP_METHOD(php_wxFileSystemHandler, FindNext)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileSystemHandler_php*)native_object)->FindNext();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1988,7 +1988,7 @@ PHP_METHOD(php_wxFileSystemHandler, GetMimeTypeFromExt)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileSystemHandler::GetMimeTypeFromExt(wxString(location0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -2035,7 +2035,7 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
     //Parameters for conversion
     object_init_ex(&arguments[0], php_wxFileSystem_entry);
     Z_wxFileSystem_P(&arguments[0])->native_object = (wxFileSystem_php*) &fs;
-    ZVAL_STRING(&arguments[1], location.char_str());
+    ZVAL_STRING(&arguments[1], location.ToUTF8().data());
     
     for(int i=0; i<2; i++)
     {

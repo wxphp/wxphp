@@ -225,7 +225,7 @@ PHP_METHOD(php_wxDataViewChoiceRenderer, GetChoice)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxDataViewChoiceRenderer_php*)native_object)->GetChoice((size_t) index0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -337,7 +337,7 @@ PHP_METHOD(php_wxDataViewChoiceRenderer, GetChoices)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return0.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return0[i].char_str());
+                    add_next_index_string(return_value, value_to_return0[i].ToUTF8().data());
                 }
 
 
@@ -393,11 +393,11 @@ PHP_METHOD(php_wxDataViewChoiceRenderer, __construct)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a|ll' (choices0, &mode0, &alignment0)\n");
+        php_printf("Parsing parameters with 'a|ll' (&choices0, &mode0, &alignment0)\n");
         #endif
 
         char parse_parameters_string[] = "a|ll";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, choices0, &mode0, &alignment0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &choices0, &mode0, &alignment0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -8135,7 +8135,7 @@ PHP_METHOD(php_wxDataViewRenderer, GetVariantType)
                 {
                     value_to_return0 = ((wxDataViewRenderer_php*)native_object)->GetVariantType();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -13074,7 +13074,7 @@ PHP_METHOD(php_wxDataViewListStore, GetColumnType)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxDataViewListStore_php*)native_object)->GetColumnType((unsigned int) col0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -15303,7 +15303,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxDataViewTreeStore_php*)native_object)->GetItemText(*(wxDataViewItem*) object_pointer0_0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
                 references->AddReference(item0, "wxDataViewTreeStore::GetItemText at call 3 with 1 argument(s)");
 
@@ -17309,7 +17309,7 @@ PHP_METHOD(php_wxDataViewIconText, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxDataViewIconText_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

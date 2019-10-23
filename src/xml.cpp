@@ -675,7 +675,7 @@ PHP_METHOD(php_wxXmlNode, GetAttribute)
 
                 ZVAL_BOOL(return_value, ((wxXmlNode_php*)native_object)->GetAttribute(wxString(attrName0, wxConvUTF8), &string_arg0_1));
 
-                ZVAL_STRING(&value0_ref, string_arg0_1.char_str());
+                ZVAL_STRING(&value0_ref, string_arg0_1.ToUTF8().data());
 
                 return;
                 break;
@@ -695,7 +695,7 @@ PHP_METHOD(php_wxXmlNode, GetAttribute)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxXmlNode_php*)native_object)->GetAttribute(wxString(attrName1, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -709,7 +709,7 @@ PHP_METHOD(php_wxXmlNode, GetAttribute)
 
                 wxString value_to_return2;
                 value_to_return2 = ((wxXmlNode_php*)native_object)->GetAttribute(wxString(attrName1, wxConvUTF8), wxString(defaultVal1, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -1078,7 +1078,7 @@ PHP_METHOD(php_wxXmlNode, GetContent)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxXmlNode_php*)native_object)->GetContent();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1437,7 +1437,7 @@ PHP_METHOD(php_wxXmlNode, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxXmlNode_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1783,7 +1783,7 @@ PHP_METHOD(php_wxXmlNode, GetNodeContent)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxXmlNode_php*)native_object)->GetNodeContent();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4165,7 +4165,7 @@ PHP_METHOD(php_wxXmlAttribute, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxXmlAttribute_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4404,7 +4404,7 @@ PHP_METHOD(php_wxXmlAttribute, GetValue)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxXmlAttribute_php*)native_object)->GetValue();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5628,7 +5628,7 @@ PHP_METHOD(php_wxXmlDocument, GetFileEncoding)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxXmlDocument_php*)native_object)->GetFileEncoding();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5982,7 +5982,7 @@ PHP_METHOD(php_wxXmlDocument, GetVersion)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxXmlDocument_php*)native_object)->GetVersion();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

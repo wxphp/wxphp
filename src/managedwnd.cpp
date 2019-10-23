@@ -1940,7 +1940,7 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
     ZVAL_LONG(&arguments[0], number);
     ZVAL_LONG(&arguments[1], style);
     ZVAL_LONG(&arguments[2], id);
-    ZVAL_STRING(&arguments[3], name.char_str());
+    ZVAL_STRING(&arguments[3], name.ToUTF8().data());
     
     for(int i=0; i<4; i++)
     {
@@ -3251,7 +3251,7 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
     //Parameters for conversion
     ZVAL_LONG(&arguments[0], style);
     ZVAL_LONG(&arguments[1], id);
-    ZVAL_STRING(&arguments[2], name.char_str());
+    ZVAL_STRING(&arguments[2], name.ToUTF8().data());
     
     for(int i=0; i<3; i++)
     {
@@ -11771,7 +11771,7 @@ PHP_METHOD(php_wxTopLevelWindow, GetTitle)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTopLevelWindow_php*)native_object)->GetTitle();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

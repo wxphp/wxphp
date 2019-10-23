@@ -220,7 +220,7 @@ PHP_METHOD(php_wxURI, BuildURI)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURI_php*)native_object)->BuildURI();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -329,7 +329,7 @@ PHP_METHOD(php_wxURI, BuildUnescapedURI)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURI_php*)native_object)->BuildUnescapedURI();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -551,7 +551,7 @@ PHP_METHOD(php_wxURI, GetFragment)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURI_php*)native_object)->GetFragment();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -767,7 +767,7 @@ PHP_METHOD(php_wxURI, GetPassword)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURI_php*)native_object)->GetPassword();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -876,7 +876,7 @@ PHP_METHOD(php_wxURI, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURI_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -985,7 +985,7 @@ PHP_METHOD(php_wxURI, GetPort)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURI_php*)native_object)->GetPort();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1282,7 +1282,7 @@ PHP_METHOD(php_wxURI, Unescape)
 
                 wxString value_to_return1;
                 value_to_return1 = wxURI::Unescape(wxString(uri0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -2392,7 +2392,7 @@ PHP_METHOD(php_wxURI, GetUserInfo)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURI_php*)native_object)->GetUserInfo();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -2501,7 +2501,7 @@ PHP_METHOD(php_wxURI, GetUser)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURI_php*)native_object)->GetUser();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -2610,7 +2610,7 @@ PHP_METHOD(php_wxURI, GetServer)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURI_php*)native_object)->GetServer();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -2719,7 +2719,7 @@ PHP_METHOD(php_wxURI, GetScheme)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURI_php*)native_object)->GetScheme();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -2828,7 +2828,7 @@ PHP_METHOD(php_wxURI, GetQuery)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURI_php*)native_object)->GetQuery();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

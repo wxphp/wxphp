@@ -4319,11 +4319,11 @@ PHP_METHOD(php_wxPathList, Add)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (arr1)\n");
+        php_printf("Parsing parameters with 'a' (&arr1)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, arr1 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &arr1 ) == SUCCESS)
         {
             overload1_called = true;
             already_called = true;
@@ -4719,7 +4719,7 @@ PHP_METHOD(php_wxPathList, FindAbsoluteValidPath)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxPathList_php*)native_object)->FindAbsoluteValidPath(wxString(file0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -4834,7 +4834,7 @@ PHP_METHOD(php_wxPathList, FindValidPath)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxPathList_php*)native_object)->FindValidPath(wxString(file0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -4903,11 +4903,11 @@ PHP_METHOD(php_wxPathList, __construct)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a' (arr1)\n");
+        php_printf("Parsing parameters with 'a' (&arr1)\n");
         #endif
 
         char parse_parameters_string[] = "a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, arr1 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &arr1 ) == SUCCESS)
         {
             overload1_called = true;
             already_called = true;
@@ -6286,7 +6286,7 @@ PHP_METHOD(php_wxFileName, StripExtension)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileName::StripExtension(wxString(fullname0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -6414,8 +6414,8 @@ PHP_METHOD(php_wxFileName, SplitVolume)
 
                 wxFileName::SplitVolume(wxString(fullpath0, wxConvUTF8), &string_arg0_1, &string_arg0_2);
 
-                ZVAL_STRING(&volume0_ref, string_arg0_1.char_str());
-                ZVAL_STRING(&path0_ref, string_arg0_2.char_str());
+                ZVAL_STRING(&volume0_ref, string_arg0_1.ToUTF8().data());
+                ZVAL_STRING(&path0_ref, string_arg0_2.ToUTF8().data());
 
                 return;
                 break;
@@ -6431,8 +6431,8 @@ PHP_METHOD(php_wxFileName, SplitVolume)
 
                 wxFileName::SplitVolume(wxString(fullpath0, wxConvUTF8), &string_arg0_1, &string_arg0_2, (wxPathFormat) format0);
 
-                ZVAL_STRING(&volume0_ref, string_arg0_1.char_str());
-                ZVAL_STRING(&path0_ref, string_arg0_2.char_str());
+                ZVAL_STRING(&volume0_ref, string_arg0_1.ToUTF8().data());
+                ZVAL_STRING(&path0_ref, string_arg0_2.ToUTF8().data());
 
                 return;
                 break;
@@ -6641,9 +6641,9 @@ PHP_METHOD(php_wxFileName, SplitPath)
 
                 wxFileName::SplitPath(wxString(fullpath0, wxConvUTF8), &string_arg0_1, &string_arg0_2, &string_arg0_3);
 
-                ZVAL_STRING(&path0_ref, string_arg0_1.char_str());
-                ZVAL_STRING(&name0_ref, string_arg0_2.char_str());
-                ZVAL_STRING(&ext0_ref, string_arg0_3.char_str());
+                ZVAL_STRING(&path0_ref, string_arg0_1.ToUTF8().data());
+                ZVAL_STRING(&name0_ref, string_arg0_2.ToUTF8().data());
+                ZVAL_STRING(&ext0_ref, string_arg0_3.ToUTF8().data());
 
                 return;
                 break;
@@ -6660,9 +6660,9 @@ PHP_METHOD(php_wxFileName, SplitPath)
 
                 wxFileName::SplitPath(wxString(fullpath0, wxConvUTF8), &string_arg0_1, &string_arg0_2, &string_arg0_3, (wxPathFormat) format0);
 
-                ZVAL_STRING(&path0_ref, string_arg0_1.char_str());
-                ZVAL_STRING(&name0_ref, string_arg0_2.char_str());
-                ZVAL_STRING(&ext0_ref, string_arg0_3.char_str());
+                ZVAL_STRING(&path0_ref, string_arg0_1.ToUTF8().data());
+                ZVAL_STRING(&name0_ref, string_arg0_2.ToUTF8().data());
+                ZVAL_STRING(&ext0_ref, string_arg0_3.ToUTF8().data());
 
                 return;
                 break;
@@ -6687,10 +6687,10 @@ PHP_METHOD(php_wxFileName, SplitPath)
 
                 wxFileName::SplitPath(wxString(fullpath1, wxConvUTF8), &string_arg1_1, &string_arg1_2, &string_arg1_3, &string_arg1_4, (wxPathFormat) format1);
 
-                ZVAL_STRING(&volume1_ref, string_arg1_1.char_str());
-                ZVAL_STRING(&path1_ref, string_arg1_2.char_str());
-                ZVAL_STRING(&name1_ref, string_arg1_3.char_str());
-                ZVAL_STRING(&ext1_ref, string_arg1_4.char_str());
+                ZVAL_STRING(&volume1_ref, string_arg1_1.ToUTF8().data());
+                ZVAL_STRING(&path1_ref, string_arg1_2.ToUTF8().data());
+                ZVAL_STRING(&name1_ref, string_arg1_3.ToUTF8().data());
+                ZVAL_STRING(&ext1_ref, string_arg1_4.ToUTF8().data());
 
                 return;
                 break;
@@ -6715,10 +6715,10 @@ PHP_METHOD(php_wxFileName, SplitPath)
 
                 wxFileName::SplitPath(wxString(fullpath2, wxConvUTF8), &string_arg2_1, &string_arg2_2, &string_arg2_3, &string_arg2_4);
 
-                ZVAL_STRING(&volume2_ref, string_arg2_1.char_str());
-                ZVAL_STRING(&path2_ref, string_arg2_2.char_str());
-                ZVAL_STRING(&name2_ref, string_arg2_3.char_str());
-                ZVAL_STRING(&ext2_ref, string_arg2_4.char_str());
+                ZVAL_STRING(&volume2_ref, string_arg2_1.ToUTF8().data());
+                ZVAL_STRING(&path2_ref, string_arg2_2.ToUTF8().data());
+                ZVAL_STRING(&name2_ref, string_arg2_3.ToUTF8().data());
+                ZVAL_STRING(&ext2_ref, string_arg2_4.ToUTF8().data());
 
                 return;
                 break;
@@ -6736,10 +6736,10 @@ PHP_METHOD(php_wxFileName, SplitPath)
 
                 wxFileName::SplitPath(wxString(fullpath2, wxConvUTF8), &string_arg2_1, &string_arg2_2, &string_arg2_3, &string_arg2_4, hasExt2);
 
-                ZVAL_STRING(&volume2_ref, string_arg2_1.char_str());
-                ZVAL_STRING(&path2_ref, string_arg2_2.char_str());
-                ZVAL_STRING(&name2_ref, string_arg2_3.char_str());
-                ZVAL_STRING(&ext2_ref, string_arg2_4.char_str());
+                ZVAL_STRING(&volume2_ref, string_arg2_1.ToUTF8().data());
+                ZVAL_STRING(&path2_ref, string_arg2_2.ToUTF8().data());
+                ZVAL_STRING(&name2_ref, string_arg2_3.ToUTF8().data());
+                ZVAL_STRING(&ext2_ref, string_arg2_4.ToUTF8().data());
                 size_t elements_returned2_5 = sizeof(hasExt2)/sizeof(*hasExt2);
                 array_init(&hasExt2_ref);
                 for(size_t i=0; i<elements_returned2_5; i++)
@@ -6763,10 +6763,10 @@ PHP_METHOD(php_wxFileName, SplitPath)
 
                 wxFileName::SplitPath(wxString(fullpath2, wxConvUTF8), &string_arg2_1, &string_arg2_2, &string_arg2_3, &string_arg2_4, hasExt2, (wxPathFormat) format2);
 
-                ZVAL_STRING(&volume2_ref, string_arg2_1.char_str());
-                ZVAL_STRING(&path2_ref, string_arg2_2.char_str());
-                ZVAL_STRING(&name2_ref, string_arg2_3.char_str());
-                ZVAL_STRING(&ext2_ref, string_arg2_4.char_str());
+                ZVAL_STRING(&volume2_ref, string_arg2_1.ToUTF8().data());
+                ZVAL_STRING(&path2_ref, string_arg2_2.ToUTF8().data());
+                ZVAL_STRING(&name2_ref, string_arg2_3.ToUTF8().data());
+                ZVAL_STRING(&ext2_ref, string_arg2_4.ToUTF8().data());
                 size_t elements_returned2_5 = sizeof(hasExt2)/sizeof(*hasExt2);
                 array_init(&hasExt2_ref);
                 for(size_t i=0; i<elements_returned2_5; i++)
@@ -9701,7 +9701,7 @@ PHP_METHOD(php_wxFileName, CreateTempFileName)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileName::CreateTempFileName(wxString(prefix0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -9716,7 +9716,7 @@ PHP_METHOD(php_wxFileName, CreateTempFileName)
 
                 wxString value_to_return2;
                 value_to_return2 = wxFileName::CreateTempFileName(wxString(prefix0, wxConvUTF8), (wxFile*) object_pointer0_1);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -9738,7 +9738,7 @@ PHP_METHOD(php_wxFileName, CreateTempFileName)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileName::CreateTempFileName(wxString(prefix1, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -9753,7 +9753,7 @@ PHP_METHOD(php_wxFileName, CreateTempFileName)
 
                 wxString value_to_return2;
                 value_to_return2 = wxFileName::CreateTempFileName(wxString(prefix1, wxConvUTF8), (wxFFile*) object_pointer1_1);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -10451,7 +10451,7 @@ PHP_METHOD(php_wxFileName, GetCwd)
 
                 wxString value_to_return0;
                 value_to_return0 = wxFileName::GetCwd();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -10466,7 +10466,7 @@ PHP_METHOD(php_wxFileName, GetCwd)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileName::GetCwd(wxString(volume0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -10685,7 +10685,7 @@ PHP_METHOD(php_wxFileName, GetDirs)
                 array_init(return_value);
                 for(size_t i=0; i<value_to_return0.GetCount(); i++)
                 {
-                    add_next_index_string(return_value, value_to_return0[i].char_str());
+                    add_next_index_string(return_value, value_to_return0[i].ToUTF8().data());
                 }
 
 
@@ -10795,7 +10795,7 @@ PHP_METHOD(php_wxFileName, GetExt)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileName_php*)native_object)->GetExt();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -10910,7 +10910,7 @@ PHP_METHOD(php_wxFileName, GetForbiddenChars)
 
                 wxString value_to_return0;
                 value_to_return0 = wxFileName::GetForbiddenChars();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -10925,7 +10925,7 @@ PHP_METHOD(php_wxFileName, GetForbiddenChars)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileName::GetForbiddenChars((wxPathFormat) format0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -11160,7 +11160,7 @@ PHP_METHOD(php_wxFileName, GetFullName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileName_php*)native_object)->GetFullName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11274,7 +11274,7 @@ PHP_METHOD(php_wxFileName, GetFullPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileName_php*)native_object)->GetFullPath();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11288,7 +11288,7 @@ PHP_METHOD(php_wxFileName, GetFullPath)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxFileName_php*)native_object)->GetFullPath((wxPathFormat) format0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -11398,7 +11398,7 @@ PHP_METHOD(php_wxFileName, GetHomeDir)
 
                 wxString value_to_return0;
                 value_to_return0 = wxFileName::GetHomeDir();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11515,7 +11515,7 @@ PHP_METHOD(php_wxFileName, GetHumanReadableSize)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileName_php*)native_object)->GetHumanReadableSize();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11529,7 +11529,7 @@ PHP_METHOD(php_wxFileName, GetHumanReadableSize)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxFileName_php*)native_object)->GetHumanReadableSize(wxString(failmsg0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -11543,7 +11543,7 @@ PHP_METHOD(php_wxFileName, GetHumanReadableSize)
 
                 wxString value_to_return2;
                 value_to_return2 = ((wxFileName_php*)native_object)->GetHumanReadableSize(wxString(failmsg0, wxConvUTF8), (int) precision0);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -11557,7 +11557,7 @@ PHP_METHOD(php_wxFileName, GetHumanReadableSize)
 
                 wxString value_to_return3;
                 value_to_return3 = ((wxFileName_php*)native_object)->GetHumanReadableSize(wxString(failmsg0, wxConvUTF8), (int) precision0, (wxSizeConvention) conv0);
-                ZVAL_STRING(return_value, value_to_return3.char_str());
+                ZVAL_STRING(return_value, value_to_return3.ToUTF8().data());
 
 
                 return;
@@ -11666,7 +11666,7 @@ PHP_METHOD(php_wxFileName, GetLongPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileName_php*)native_object)->GetLongPath();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11775,7 +11775,7 @@ PHP_METHOD(php_wxFileName, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileName_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11999,7 +11999,7 @@ PHP_METHOD(php_wxFileName, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileName_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12013,7 +12013,7 @@ PHP_METHOD(php_wxFileName, GetPath)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxFileName_php*)native_object)->GetPath((int) flags0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -12027,7 +12027,7 @@ PHP_METHOD(php_wxFileName, GetPath)
 
                 wxString value_to_return2;
                 value_to_return2 = ((wxFileName_php*)native_object)->GetPath((int) flags0, (wxPathFormat) format0);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -12142,7 +12142,7 @@ PHP_METHOD(php_wxFileName, GetPathSeparators)
 
                 wxString value_to_return0;
                 value_to_return0 = wxFileName::GetPathSeparators();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12157,7 +12157,7 @@ PHP_METHOD(php_wxFileName, GetPathSeparators)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileName::GetPathSeparators((wxPathFormat) format0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -12272,7 +12272,7 @@ PHP_METHOD(php_wxFileName, GetPathTerminators)
 
                 wxString value_to_return0;
                 value_to_return0 = wxFileName::GetPathTerminators();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12287,7 +12287,7 @@ PHP_METHOD(php_wxFileName, GetPathTerminators)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileName::GetPathTerminators((wxPathFormat) format0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -12401,7 +12401,7 @@ PHP_METHOD(php_wxFileName, GetPathWithSep)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileName_php*)native_object)->GetPathWithSep();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12415,7 +12415,7 @@ PHP_METHOD(php_wxFileName, GetPathWithSep)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxFileName_php*)native_object)->GetPathWithSep((wxPathFormat) format0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -12524,7 +12524,7 @@ PHP_METHOD(php_wxFileName, GetShortPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileName_php*)native_object)->GetShortPath();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12634,7 +12634,7 @@ PHP_METHOD(php_wxFileName, GetTempDir)
 
                 wxString value_to_return0;
                 value_to_return0 = wxFileName::GetTempDir();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12749,7 +12749,7 @@ PHP_METHOD(php_wxFileName, GetVolumeSeparator)
 
                 wxString value_to_return0;
                 value_to_return0 = wxFileName::GetVolumeSeparator();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -12764,7 +12764,7 @@ PHP_METHOD(php_wxFileName, GetVolumeSeparator)
 
                 wxString value_to_return1;
                 value_to_return1 = wxFileName::GetVolumeSeparator((wxPathFormat) format0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -12873,7 +12873,7 @@ PHP_METHOD(php_wxFileName, GetVolume)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileName_php*)native_object)->GetVolume();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -15832,7 +15832,7 @@ PHP_METHOD(php_wxFSFile, GetMimeType)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFSFile_php*)native_object)->GetMimeType();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -15941,7 +15941,7 @@ PHP_METHOD(php_wxFSFile, GetLocation)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFSFile_php*)native_object)->GetLocation();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -16050,7 +16050,7 @@ PHP_METHOD(php_wxFSFile, GetAnchor)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFSFile_php*)native_object)->GetAnchor();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -17573,7 +17573,7 @@ PHP_METHOD(php_wxStandardPaths, GetAppDocumentsDir)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetAppDocumentsDir();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -17685,7 +17685,7 @@ PHP_METHOD(php_wxStandardPaths, GetConfigDir)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetConfigDir();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -17797,7 +17797,7 @@ PHP_METHOD(php_wxStandardPaths, GetDataDir)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetDataDir();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -17909,7 +17909,7 @@ PHP_METHOD(php_wxStandardPaths, GetDocumentsDir)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetDocumentsDir();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18021,7 +18021,7 @@ PHP_METHOD(php_wxStandardPaths, GetExecutablePath)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetExecutablePath();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18133,7 +18133,7 @@ PHP_METHOD(php_wxStandardPaths, GetLocalDataDir)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetLocalDataDir();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18245,7 +18245,7 @@ PHP_METHOD(php_wxStandardPaths, GetPluginsDir)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetPluginsDir();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18357,7 +18357,7 @@ PHP_METHOD(php_wxStandardPaths, GetResourcesDir)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetResourcesDir();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18469,7 +18469,7 @@ PHP_METHOD(php_wxStandardPaths, GetTempDir)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetTempDir();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18581,7 +18581,7 @@ PHP_METHOD(php_wxStandardPaths, GetUserConfigDir)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetUserConfigDir();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18693,7 +18693,7 @@ PHP_METHOD(php_wxStandardPaths, GetUserDataDir)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetUserDataDir();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18805,7 +18805,7 @@ PHP_METHOD(php_wxStandardPaths, GetUserLocalDataDir)
                 {
                     value_to_return0 = ((wxStandardPaths_php*)native_object)->GetUserLocalDataDir();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;

@@ -3486,8 +3486,8 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
     ZVAL_LONG(&arguments[1], col);
     object_init_ex(&arguments[2], php_wxGrid_entry);
     Z_wxGrid_P(&arguments[2])->native_object = (wxGrid_php*) &grid;
-    ZVAL_STRING(&arguments[3], oldval.char_str());
-    ZVAL_STRING(&arguments[4], newval->char_str());
+    ZVAL_STRING(&arguments[3], oldval.ToUTF8().data());
+    ZVAL_STRING(&arguments[4], newval->ToUTF8().data());
     
     for(int i=0; i<5; i++)
     {
@@ -5499,11 +5499,11 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'a|b' (choices0, &allowOthers0)\n");
+        php_printf("Parsing parameters with 'a|b' (&choices0, &allowOthers0)\n");
         #endif
 
         char parse_parameters_string[] = "a|b";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, choices0, &allowOthers0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &choices0, &allowOthers0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -11341,7 +11341,7 @@ PHP_METHOD(php_wxGridTableBase, GetColLabelValue)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxGridTableBase_php*)native_object)->GetColLabelValue((int) col0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -11722,7 +11722,7 @@ PHP_METHOD(php_wxGridTableBase, GetRowLabelValue)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxGridTableBase_php*)native_object)->GetRowLabelValue((int) row0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -11944,7 +11944,7 @@ PHP_METHOD(php_wxGridTableBase, GetTypeName)
 
                 wxString value_to_return2;
                 value_to_return2 = ((wxGridTableBase_php*)native_object)->GetTypeName((int) row0, (int) col0);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -13940,7 +13940,7 @@ void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
     //Parameters for conversion
     ZVAL_LONG(&arguments[0], row);
     ZVAL_LONG(&arguments[1], col);
-    ZVAL_STRING(&arguments[2], value.char_str());
+    ZVAL_STRING(&arguments[2], value.ToUTF8().data());
     
     for(int i=0; i<3; i++)
     {
@@ -14863,7 +14863,7 @@ PHP_METHOD(php_wxGridSizesInfo, __get)
     wxGridSizesInfo_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)
@@ -21870,7 +21870,7 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 
                 wxString value_to_return2;
                 value_to_return2 = ((wxGrid_php*)native_object)->GetCellValue((int) row0, (int) col0);
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -21891,7 +21891,7 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxGrid_php*)native_object)->GetCellValue(*(wxGridCellCoords*) object_pointer1_0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
                 references->AddReference(coords1, "wxGrid::GetCellValue at call 3 with 1 argument(s)");
 
@@ -22582,7 +22582,7 @@ PHP_METHOD(php_wxGrid, GetColLabelValue)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxGrid_php*)native_object)->GetColLabelValue((int) col0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -27013,7 +27013,7 @@ PHP_METHOD(php_wxGrid, GetRowLabelValue)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxGrid_php*)native_object)->GetRowLabelValue((int) row0);
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;

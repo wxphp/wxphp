@@ -1197,7 +1197,7 @@ PHP_METHOD(php_wxDataInputStream, ReadString)
                 {
                     value_to_return0 = ((wxDataInputStream_php*)native_object)->ReadString();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5115,7 +5115,7 @@ PHP_METHOD(php_wxInputStream, Peek)
             case 0:
             {
                 #ifdef USE_WXPHP_DEBUG
-                php_printf("Executing RETURN_STRING(wxInputStream::Peek().fn_str(), 1)\n\n");
+                php_printf("Executing RETURN_STRING(wxInputStream::Peek().ToUTF8().data(), 1)\n\n");
                 #endif
 
                 char* value_to_return0;

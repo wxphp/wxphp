@@ -1317,7 +1317,7 @@ PHP_METHOD(php_wxHtmlCell, GetId)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlCell_php*)native_object)->GetId();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5492,7 +5492,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetHref)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlLinkInfo_php*)native_object)->GetHref();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5731,7 +5731,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetTarget)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlLinkInfo_php*)native_object)->GetTarget();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -6986,7 +6986,7 @@ PHP_METHOD(php_wxHtmlTagHandler, __get)
     wxHtmlTagHandler_php* native_object;
 
     char* name;
-    int name_len;
+    size_t name_len;
 
     //Get native object of the php object that called the method
     if (getThis() != NULL)
@@ -7213,7 +7213,7 @@ PHP_METHOD(php_wxHtmlTag, GetAllParams)
                 {
                     value_to_return0 = ((wxHtmlTag_php*)native_object)->GetAllParams();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -7325,7 +7325,7 @@ PHP_METHOD(php_wxHtmlTag, GetName)
                 {
                     value_to_return0 = ((wxHtmlTag_php*)native_object)->GetName();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -7444,7 +7444,7 @@ PHP_METHOD(php_wxHtmlTag, GetParam)
                 {
                     value_to_return1 = ((wxHtmlTag_php*)native_object)->GetParam(wxString(par0, wxConvUTF8));
                 }
-                ZVAL_STRING(return_value, value_to_return1.char_str());
+                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7461,7 +7461,7 @@ PHP_METHOD(php_wxHtmlTag, GetParam)
                 {
                     value_to_return2 = ((wxHtmlTag_php*)native_object)->GetParam(wxString(par0, wxConvUTF8), with_quotes0);
                 }
-                ZVAL_STRING(return_value, value_to_return2.char_str());
+                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -8482,7 +8482,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedAnchor)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlWindow_php*)native_object)->GetOpenedAnchor();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -8591,7 +8591,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedPage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlWindow_php*)native_object)->GetOpenedPage();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -8700,7 +8700,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedPageTitle)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlWindow_php*)native_object)->GetOpenedPageTitle();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -9945,7 +9945,7 @@ void wxHtmlWindow_php::OnSetTitle(const wxString& title)
     int function_called;
 
     //Parameters for conversion
-    ZVAL_STRING(&arguments[0], title.char_str());
+    ZVAL_STRING(&arguments[0], title.ToUTF8().data());
     
     for(int i=0; i<1; i++)
     {
@@ -10040,8 +10040,8 @@ wxHtmlOpeningStatus wxHtmlWindow_php::OnOpeningURL(wxHtmlURLType type, const wxS
 
     //Parameters for conversion
     ZVAL_LONG(&arguments[0], type);
-    ZVAL_STRING(&arguments[1], url.char_str());
-    ZVAL_STRING(&arguments[2], redirect->char_str());
+    ZVAL_STRING(&arguments[1], url.ToUTF8().data());
+    ZVAL_STRING(&arguments[2], redirect->ToUTF8().data());
     
     for(int i=0; i<3; i++)
     {
@@ -10568,7 +10568,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectionToText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlWindow_php*)native_object)->SelectionToText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11372,7 +11372,7 @@ PHP_METHOD(php_wxHtmlWindow, ToText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlWindow_php*)native_object)->ToText();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -14465,7 +14465,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlEasyPrinting_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -19245,7 +19245,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontFace)
                 {
                     value_to_return0 = ((wxHtmlWinParser_php*)native_object)->GetFontFace();
                 }
-                ZVAL_STRING(return_value, value_to_return0.char_str());
+                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
 
 
                 return;
