@@ -130,13 +130,13 @@ function function_parameters($method_definitions, $method_name, $class_name=null
                     {
                         case "pointer": //char* with reference
                             $parameters .= "char* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-                            $parameters .= tabs(1) . "long " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
+                            $parameters .= tabs(1) . "size_t " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
                             $parameters .= tabs(1) . "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
                             break;
 
                         case "const_pointer": //const char*
                             $parameters .= "char* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-                            $parameters .= tabs(1) . "long " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
+                            $parameters .= tabs(1) . "size_t " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
                             break;
 
                         case "reference": //char&
@@ -161,7 +161,7 @@ function function_parameters($method_definitions, $method_name, $class_name=null
                         case "const_pointer": //const void*
                         case "pointer": //void*
                             $parameters .= "char* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-                            $parameters .= tabs(1) . "long " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
+                            $parameters .= tabs(1) . "size_t " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
 
                             if($declaration_modifier == "pointer" || $declaration_modifier == "pointer_pointer")
                                 $parameters .= tabs(1) . "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
@@ -202,7 +202,7 @@ function function_parameters($method_definitions, $method_name, $class_name=null
                     {
                         case "pointer": //wxString*
                             $parameters .= "char* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-                            $parameters .= tabs(1) . "long " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
+                            $parameters .= tabs(1) . "size_t " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
                             $parameters .= tabs(1) . "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
                             break;
 
@@ -215,7 +215,7 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 
                         case "reference": //wxString&
                             $parameters .= "char* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-                            $parameters .= tabs(1) . "long " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
+                            $parameters .= tabs(1) . "size_t " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
                             $parameters .= tabs(1) . "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
                             break;
 
@@ -223,7 +223,7 @@ function function_parameters($method_definitions, $method_name, $class_name=null
                         case "none": //wxString
                         case "const_none": //const wxString
                             $parameters .= "char* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-                            $parameters .= tabs(1) . "long " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
+                            $parameters .= tabs(1) . "size_t " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
                             break;
                     }
                     break;
