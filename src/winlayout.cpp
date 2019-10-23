@@ -30774,7 +30774,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
     zval* parent1;
     wxWindow* object_pointer1_1 = 0;
     char* label1;
-    long label_len1;
+    size_t label_len1;
     bool overload1_called = false;
 
     

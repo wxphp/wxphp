@@ -2573,7 +2573,7 @@ PHP_METHOD(php_wxAnimation, LoadFile)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     long type0;
     bool overload0_called = false;
 
@@ -2667,7 +2667,7 @@ PHP_METHOD(php_wxAnimation, __construct)
 
     //Parameters for overload 1
     char* name1;
-    long name_len1;
+    size_t name_len1;
     long type1;
     bool overload1_called = false;
 
@@ -3279,7 +3279,7 @@ PHP_METHOD(php_wxBitmapHandler, SetName)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -3392,7 +3392,7 @@ PHP_METHOD(php_wxBitmapHandler, SetExtension)
 
     //Parameters for overload 0
     char* extension0;
-    long extension_len0;
+    size_t extension_len0;
     bool overload0_called = false;
 
     
@@ -3507,7 +3507,7 @@ PHP_METHOD(php_wxBitmapHandler, LoadFile)
     zval* bitmap0;
     wxBitmap* object_pointer0_0 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     long type0;
     long desiredWidth0;
     long desiredHeight0;
@@ -3968,7 +3968,7 @@ PHP_METHOD(php_wxBitmapHandler, SaveFile)
     zval* bitmap0;
     wxBitmap* object_pointer0_0 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     long type0;
     zval* palette0;
     wxPalette* object_pointer0_3 = 0;
@@ -4135,7 +4135,7 @@ PHP_METHOD(php_wxBitmapHandler, Create)
     zval* bitmap0;
     wxBitmap* object_pointer0_0 = 0;
     char* data0;
-    long data_len0;
+    size_t data_len0;
     long type0;
     long width0;
     long height0;
@@ -4726,7 +4726,7 @@ PHP_METHOD(php_wxBitmap, __construct)
 
     //Parameters for overload 4
     char* name4;
-    long name_len4;
+    size_t name_len4;
     long type4;
     bool overload4_called = false;
 
@@ -5130,7 +5130,7 @@ PHP_METHOD(php_wxBitmap, LoadFile)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     long type0;
     bool overload0_called = false;
 
@@ -5256,7 +5256,7 @@ PHP_METHOD(php_wxBitmap, RemoveHandler)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -5370,7 +5370,7 @@ PHP_METHOD(php_wxBitmap, SaveFile)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     long type0;
     zval* palette0;
     wxPalette* object_pointer0_2 = 0;
@@ -6297,12 +6297,12 @@ PHP_METHOD(php_wxBitmap, FindHandler)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* extension1;
-    long extension_len1;
+    size_t extension_len1;
     long bitmapType1;
     bool overload1_called = false;
 
@@ -10162,7 +10162,7 @@ PHP_METHOD(php_wxColour, __construct)
 
     //Parameters for overload 1
     char* colourName1;
-    long colourName_len1;
+    size_t colourName_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
@@ -10476,7 +10476,7 @@ PHP_METHOD(php_wxColour, Set)
 
     //Parameters for overload 2
     char* str2;
-    long str_len2;
+    size_t str_len2;
     bool overload2_called = false;
 
     
@@ -11703,7 +11703,7 @@ PHP_METHOD(php_wxCursor, __construct)
 
     //Parameters for overload 3
     char* cursorName3;
-    long cursorName_len3;
+    size_t cursorName_len3;
     long type3;
     long hotSpotX3;
     long hotSpotY3;
@@ -12407,7 +12407,7 @@ PHP_METHOD(php_wxFont, __construct)
     long weight2;
     bool underline2;
     char* faceName2;
-    long faceName_len2;
+    size_t faceName_len2;
     long encoding2;
     bool overload2_called = false;
 
@@ -12419,13 +12419,13 @@ PHP_METHOD(php_wxFont, __construct)
     long weight3;
     bool underline3;
     char* faceName3;
-    long faceName_len3;
+    size_t faceName_len3;
     long encoding3;
     bool overload3_called = false;
 
     //Parameters for overload 4
     char* nativeInfoString4;
-    long nativeInfoString_len4;
+    size_t nativeInfoString_len4;
     bool overload4_called = false;
 
     //Parameters for overload 5
@@ -15240,7 +15240,7 @@ PHP_METHOD(php_wxFont, NewMethod)
     long weight0;
     bool underline0;
     char* faceName0;
-    long faceName_len0;
+    size_t faceName_len0;
     long encoding0;
     bool overload0_called = false;
 
@@ -15249,7 +15249,7 @@ PHP_METHOD(php_wxFont, NewMethod)
     long family1;
     long flags1;
     char* faceName1;
-    long faceName_len1;
+    size_t faceName_len1;
     long encoding1;
     bool overload1_called = false;
 
@@ -15261,7 +15261,7 @@ PHP_METHOD(php_wxFont, NewMethod)
     long weight2;
     bool underline2;
     char* faceName2;
-    long faceName_len2;
+    size_t faceName_len2;
     long encoding2;
     bool overload2_called = false;
 
@@ -15271,13 +15271,13 @@ PHP_METHOD(php_wxFont, NewMethod)
     long family3;
     long flags3;
     char* faceName3;
-    long faceName_len3;
+    size_t faceName_len3;
     long encoding3;
     bool overload3_called = false;
 
     //Parameters for overload 4
     char* nativeInfoString4;
-    long nativeInfoString_len4;
+    size_t nativeInfoString_len4;
     bool overload4_called = false;
 
     //Parameters for overload 5
@@ -16607,7 +16607,7 @@ PHP_METHOD(php_wxFont, SetFaceName)
 
     //Parameters for overload 0
     char* faceName0;
-    long faceName_len0;
+    size_t faceName_len0;
     bool overload0_called = false;
 
     
@@ -16832,7 +16832,7 @@ PHP_METHOD(php_wxFont, SetNativeFontInfo)
 
     //Parameters for overload 0
     char* info0;
-    long info_len0;
+    size_t info_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -17004,7 +17004,7 @@ PHP_METHOD(php_wxFont, SetNativeFontInfoUserDesc)
 
     //Parameters for overload 0
     char* info0;
-    long info_len0;
+    size_t info_len0;
     bool overload0_called = false;
 
     
@@ -18450,7 +18450,7 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
     long weight0;
     bool underline0;
     char* facename0;
-    long facename_len0;
+    size_t facename_len0;
     long encoding0;
     bool overload0_called = false;
 
@@ -18962,7 +18962,7 @@ PHP_METHOD(php_wxFontEnumerator, IsValidFacename)
 
     //Parameters for overload 0
     char* facename0;
-    long facename_len0;
+    size_t facename_len0;
     bool overload0_called = false;
 
     
@@ -19234,7 +19234,7 @@ PHP_METHOD(php_wxFontEnumerator, GetEncodings)
 
     //Parameters for overload 0
     char* facename0;
-    long facename_len0;
+    size_t facename_len0;
     bool overload0_called = false;
 
     
@@ -19519,7 +19519,7 @@ PHP_METHOD(php_wxFontEnumerator, EnumerateEncodings)
 
     //Parameters for overload 0
     char* font0;
-    long font_len0;
+    size_t font_len0;
     bool overload0_called = false;
 
     
@@ -19870,7 +19870,7 @@ PHP_METHOD(php_wxNativeFontInfo, FromString)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     bool overload0_called = false;
 
     
@@ -19982,7 +19982,7 @@ PHP_METHOD(php_wxNativeFontInfo, FromUserString)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     bool overload0_called = false;
 
     
@@ -21185,7 +21185,7 @@ PHP_METHOD(php_wxNativeFontInfo, SetFaceName)
 
     //Parameters for overload 0
     char* facename0;
-    long facename_len0;
+    size_t facename_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -22208,7 +22208,7 @@ PHP_METHOD(php_wxColourDatabase, AddColour)
 
     //Parameters for overload 0
     char* colourName0;
-    long colourName_len0;
+    size_t colourName_len0;
     zval* colour0;
     wxColour* object_pointer0_1 = 0;
     bool overload0_called = false;
@@ -22341,7 +22341,7 @@ PHP_METHOD(php_wxColourDatabase, Find)
 
     //Parameters for overload 0
     char* colourName0;
-    long colourName_len0;
+    size_t colourName_len0;
     bool overload0_called = false;
 
     
@@ -22965,7 +22965,7 @@ PHP_METHOD(php_wxIcon, __construct)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     long type0;
     long desiredWidth0;
     long desiredHeight0;
@@ -23555,13 +23555,13 @@ PHP_METHOD(php_wxIcon, LoadFile)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     long type0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* name1;
-    long name_len1;
+    size_t name_len1;
     long type1;
     long desiredWidth1;
     long desiredHeight1;
@@ -24331,7 +24331,7 @@ PHP_METHOD(php_wxIconBundle, __construct)
 
     //Parameters for overload 1
     char* file1;
-    long file_len1;
+    size_t file_len1;
     long type1;
     bool overload1_called = false;
 
@@ -25165,7 +25165,7 @@ PHP_METHOD(php_wxIconBundle, AddIcon)
 
     //Parameters for overload 1
     char* file1;
-    long file_len1;
+    size_t file_len1;
     long type1;
     bool overload1_called = false;
 
@@ -25754,7 +25754,7 @@ PHP_METHOD(php_wxImageHandler, CanRead)
 
     //Parameters for overload 1
     char* filename1;
-    long filename_len1;
+    size_t filename_len1;
     bool overload1_called = false;
 
     
@@ -27118,7 +27118,7 @@ PHP_METHOD(php_wxImageHandler, SetExtension)
 
     //Parameters for overload 0
     char* extension0;
-    long extension_len0;
+    size_t extension_len0;
     bool overload0_called = false;
 
     
@@ -27234,7 +27234,7 @@ PHP_METHOD(php_wxImageHandler, SetMimeType)
 
     //Parameters for overload 0
     char* mimetype0;
-    long mimetype_len0;
+    size_t mimetype_len0;
     bool overload0_called = false;
 
     
@@ -27350,7 +27350,7 @@ PHP_METHOD(php_wxImageHandler, SetName)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -27525,16 +27525,16 @@ PHP_METHOD(php_wxImage, __construct)
 
     //Parameters for overload 3
     char* name3;
-    long name_len3;
+    size_t name_len3;
     long type3;
     long index3;
     bool overload3_called = false;
 
     //Parameters for overload 4
     char* name4;
-    long name_len4;
+    size_t name_len4;
     char* mimetype4;
-    long mimetype_len4;
+    size_t mimetype_len4;
     long index4;
     bool overload4_called = false;
 
@@ -27549,7 +27549,7 @@ PHP_METHOD(php_wxImage, __construct)
     zval* stream6;
     wxInputStream* object_pointer6_0 = 0;
     char* mimetype6;
-    long mimetype_len6;
+    size_t mimetype_len6;
     long index6;
     bool overload6_called = false;
 
@@ -28675,15 +28675,15 @@ PHP_METHOD(php_wxImage, SetOption)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     long value0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* name1;
-    long name_len1;
+    size_t name_len1;
     char* value1;
-    long value_len1;
+    size_t value_len1;
     bool overload1_called = false;
 
     
@@ -29788,12 +29788,12 @@ PHP_METHOD(php_wxImage, SaveFile)
 
     //Parameters for overload 1
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* name2;
-    long name_len2;
+    size_t name_len2;
     long type2;
     bool overload2_called = false;
 
@@ -29801,14 +29801,14 @@ PHP_METHOD(php_wxImage, SaveFile)
     zval* stream3;
     wxOutputStream* object_pointer3_0 = 0;
     char* mimetype3;
-    long mimetype_len3;
+    size_t mimetype_len3;
     bool overload3_called = false;
 
     //Parameters for overload 4
     char* name4;
-    long name_len4;
+    size_t name_len4;
     char* mimetype4;
-    long mimetype_len4;
+    size_t mimetype_len4;
     bool overload4_called = false;
 
     
@@ -31230,7 +31230,7 @@ PHP_METHOD(php_wxImage, RemoveHandler)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -31619,21 +31619,21 @@ PHP_METHOD(php_wxImage, LoadFile)
     zval* stream0;
     wxInputStream* object_pointer0_0 = 0;
     char* mimetype0;
-    long mimetype_len0;
+    size_t mimetype_len0;
     long index0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* name1;
-    long name_len1;
+    size_t name_len1;
     char* mimetype1;
-    long mimetype_len1;
+    size_t mimetype_len1;
     long index1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* name2;
-    long name_len2;
+    size_t name_len2;
     long type2;
     long index2;
     bool overload2_called = false;
@@ -32553,7 +32553,7 @@ PHP_METHOD(php_wxImage, HasOption)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -33725,7 +33725,7 @@ PHP_METHOD(php_wxImage, GetOptionInt)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -33838,7 +33838,7 @@ PHP_METHOD(php_wxImage, GetOption)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -34390,7 +34390,7 @@ PHP_METHOD(php_wxImage, GetImageCount)
 
     //Parameters for overload 1
     char* filename1;
-    long filename_len1;
+    size_t filename_len1;
     long type1;
     bool overload1_called = false;
 
@@ -35188,7 +35188,7 @@ PHP_METHOD(php_wxImage, FindHandlerMime)
 
     //Parameters for overload 0
     char* mimetype0;
-    long mimetype_len0;
+    size_t mimetype_len0;
     bool overload0_called = false;
 
     
@@ -35325,13 +35325,13 @@ PHP_METHOD(php_wxImage, FindHandler)
 
     //Parameters for overload 1
     char* extension1;
-    long extension_len1;
+    size_t extension_len1;
     long imageType1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* name2;
-    long name_len2;
+    size_t name_len2;
     bool overload2_called = false;
 
     
@@ -37528,7 +37528,7 @@ PHP_METHOD(php_wxImage, CanRead)
 
     //Parameters for overload 1
     char* filename1;
-    long filename_len1;
+    size_t filename_len1;
     bool overload1_called = false;
 
     
@@ -45410,7 +45410,7 @@ PHP_METHOD(php_wxRendererNative, Load)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     

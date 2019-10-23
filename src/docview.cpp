@@ -192,7 +192,7 @@ PHP_METHOD(php_wxFileHistory, AddFileToHistory)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overload0_called = false;
 
     

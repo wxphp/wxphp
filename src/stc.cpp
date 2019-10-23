@@ -134,7 +134,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
     wxSize* object_pointer0_3 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -816,7 +816,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LoadFile)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overload0_called = false;
 
     
@@ -929,7 +929,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SaveFile)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overload0_called = false;
 
     
@@ -1368,7 +1368,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -3150,7 +3150,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyles)
     //Parameters for overload 0
     long line0;
     char* styles0;
-    long styles_len0;
+    size_t styles_len0;
     bool overload0_called = false;
 
     
@@ -3264,7 +3264,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetText)
     //Parameters for overload 0
     long line0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -3489,7 +3489,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AppendText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -4993,7 +4993,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSelect)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -5554,7 +5554,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetFillUps)
 
     //Parameters for overload 0
     char* characterSet0;
-    long characterSet_len0;
+    size_t characterSet_len0;
     bool overload0_called = false;
 
     
@@ -6228,7 +6228,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompShow)
     //Parameters for overload 0
     long lenEntered0;
     char* itemList0;
-    long itemList_len0;
+    size_t itemList_len0;
     bool overload0_called = false;
 
     
@@ -6341,7 +6341,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompStops)
 
     //Parameters for overload 0
     char* characterSet0;
-    long characterSet_len0;
+    size_t characterSet_len0;
     bool overload0_called = false;
 
     
@@ -7833,7 +7833,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipShow)
     //Parameters for overload 0
     long pos0;
     char* definition0;
-    long definition_len0;
+    size_t definition_len0;
     bool overload0_called = false;
 
     
@@ -10995,7 +10995,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyText)
     //Parameters for overload 0
     long length0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -11116,7 +11116,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
     wxSize* object_pointer0_3 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -12211,7 +12211,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDropText)
     long x0;
     long y0;
     char* data0;
-    long data_len0;
+    size_t data_len0;
     bool overload0_called = false;
 
     
@@ -13631,7 +13631,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FindText)
     long minPos0;
     long maxPos0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -21683,7 +21683,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetProperty)
 
     //Parameters for overload 0
     char* key0;
-    long key_len0;
+    size_t key_len0;
     bool overload0_called = false;
 
     
@@ -21798,7 +21798,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyExpanded)
 
     //Parameters for overload 0
     char* key0;
-    long key_len0;
+    size_t key_len0;
     bool overload0_called = false;
 
     
@@ -21913,7 +21913,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyInt)
 
     //Parameters for overload 0
     char* key0;
-    long key_len0;
+    size_t key_len0;
     bool overload0_called = false;
 
     
@@ -29206,7 +29206,7 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertText)
     //Parameters for overload 0
     long pos0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -29320,7 +29320,7 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertTextRaw)
     //Parameters for overload 0
     long pos0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -33014,7 +33014,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyles)
     //Parameters for overload 0
     long line0;
     char* styles0;
-    long styles_len0;
+    size_t styles_len0;
     bool overload0_called = false;
 
     
@@ -33128,7 +33128,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetText)
     //Parameters for overload 0
     long line0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -37374,7 +37374,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceSelection)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -37487,7 +37487,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTarget)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -37600,7 +37600,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTargetRE)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -38151,7 +38151,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchInTarget)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -38265,7 +38265,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchNext)
     //Parameters for overload 0
     long flags0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -38379,7 +38379,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchPrev)
     //Parameters for overload 0
     long flags0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -43615,7 +43615,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetKeyWords)
     //Parameters for overload 0
     long keywordSet0;
     char* keyWords0;
-    long keyWords_len0;
+    size_t keyWords_len0;
     bool overload0_called = false;
 
     
@@ -44175,7 +44175,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLexerLanguage)
 
     //Parameters for overload 0
     char* language0;
-    long language_len0;
+    size_t language_len0;
     bool overload0_called = false;
 
     
@@ -46423,9 +46423,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetProperty)
 
     //Parameters for overload 0
     char* key0;
-    long key_len0;
+    size_t key_len0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     
@@ -50045,7 +50045,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -50158,7 +50158,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTextRaw)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -51542,7 +51542,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceChars)
 
     //Parameters for overload 0
     char* characters0;
-    long characters_len0;
+    size_t characters_len0;
     bool overload0_called = false;
 
     
@@ -51899,7 +51899,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWordChars)
 
     //Parameters for overload 0
     char* characters0;
-    long characters_len0;
+    size_t characters_len0;
     bool overload0_called = false;
 
     
@@ -54802,7 +54802,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFaceName)
     //Parameters for overload 0
     long style0;
     char* fontName0;
-    long fontName_len0;
+    size_t fontName_len0;
     bool overload0_called = false;
 
     
@@ -55049,7 +55049,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontAttr)
     long styleNum0;
     long size0;
     char* faceName0;
-    long faceName_len0;
+    size_t faceName_len0;
     bool bold0;
     bool italic0;
     bool underline0;
@@ -55763,7 +55763,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetSpec)
     //Parameters for overload 0
     long styleNum0;
     char* spec0;
-    long spec_len0;
+    size_t spec_len0;
     bool overload0_called = false;
 
     
@@ -56536,7 +56536,7 @@ PHP_METHOD(php_wxStyledTextCtrl, TextWidth)
     //Parameters for overload 0
     long style0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -57195,7 +57195,7 @@ PHP_METHOD(php_wxStyledTextCtrl, UserListShow)
     //Parameters for overload 0
     long listType0;
     char* itemList0;
-    long itemList_len0;
+    size_t itemList_len0;
     bool overload0_called = false;
 
     
@@ -59243,7 +59243,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AppendTextRaw)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     long length0;
     bool overload0_called = false;
 
@@ -59369,7 +59369,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddTextRaw)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     long length0;
     bool overload0_called = false;
 
@@ -61297,7 +61297,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DescribeProperty)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -66406,7 +66406,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PropertyType)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -66997,7 +66997,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Replace)
     long from0;
     long to0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     
@@ -67329,7 +67329,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WriteText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -71437,7 +71437,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPunctuationChars)
 
     //Parameters for overload 0
     char* characters0;
-    long characters_len0;
+    size_t characters_len0;
     bool overload0_called = false;
 
     

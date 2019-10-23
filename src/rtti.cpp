@@ -9011,7 +9011,7 @@ PHP_METHOD(php_wxClassInfo, FindClass)
 
     //Parameters for overload 0
     char* className0;
-    long className_len0;
+    size_t className_len0;
     bool overload0_called = false;
 
     

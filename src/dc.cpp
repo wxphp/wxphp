@@ -434,7 +434,7 @@ PHP_METHOD(php_wxDC, StartDoc)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     bool overload0_called = false;
 
     
@@ -6003,7 +6003,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     zval* bitmap0;
     wxBitmap* object_pointer0_1 = 0;
     zval* rect0;
@@ -6016,7 +6016,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 
     //Parameters for overload 1
     char* text1;
-    long text_len1;
+    size_t text_len1;
     zval* rect1;
     wxRect* object_pointer1_1 = 0;
     long alignment1;
@@ -7762,7 +7762,7 @@ PHP_METHOD(php_wxDC, DrawRotatedText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     long x0;
     long y0;
     double angle0;
@@ -7770,7 +7770,7 @@ PHP_METHOD(php_wxDC, DrawRotatedText)
 
     //Parameters for overload 1
     char* text1;
-    long text_len1;
+    size_t text_len1;
     zval* point1;
     wxPoint* object_pointer1_1 = 0;
     double angle1;
@@ -8727,14 +8727,14 @@ PHP_METHOD(php_wxDC, DrawText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     long x0;
     long y0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* text1;
-    long text_len1;
+    size_t text_len1;
     zval* pt1;
     wxPoint* object_pointer1_1 = 0;
     bool overload1_called = false;
@@ -13062,7 +13062,7 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 
     //Parameters for overload 0
     char* string0;
-    long string_len0;
+    size_t string_len0;
     long w0;
     long h0;
     long heightLine0;
@@ -13072,7 +13072,7 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 
     //Parameters for overload 1
     char* string1;
-    long string_len1;
+    size_t string_len1;
     bool overload1_called = false;
 
     
@@ -15239,7 +15239,7 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 
     //Parameters for overload 0
     char* string0;
-    long string_len0;
+    size_t string_len0;
     long w0;
     long h0;
     long descent0;
@@ -15250,7 +15250,7 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 
     //Parameters for overload 1
     char* string1;
-    long string_len1;
+    size_t string_len1;
     bool overload1_called = false;
 
     

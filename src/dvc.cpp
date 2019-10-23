@@ -5512,7 +5512,7 @@ PHP_METHOD(php_wxDataViewItem, __construct)
 
     //Parameters for overload 2
     char* id2;
-    long id_len2;
+    size_t id_len2;
     zval id2_ref;
     bool overload2_called = false;
 
@@ -8950,7 +8950,7 @@ PHP_METHOD(php_wxDataViewTextRenderer, __construct)
 
     //Parameters for overload 0
     char* varianttype0;
-    long varianttype_len0;
+    size_t varianttype_len0;
     long mode0;
     long align0;
     bool overload0_called = false;
@@ -9155,7 +9155,7 @@ PHP_METHOD(php_wxDataViewIconTextRenderer, __construct)
 
     //Parameters for overload 0
     char* varianttype0;
-    long varianttype_len0;
+    size_t varianttype_len0;
     long mode0;
     long align0;
     bool overload0_called = false;
@@ -9360,9 +9360,9 @@ PHP_METHOD(php_wxDataViewProgressRenderer, __construct)
 
     //Parameters for overload 0
     char* label0;
-    long label_len0;
+    size_t label_len0;
     char* varianttype0;
-    long varianttype_len0;
+    size_t varianttype_len0;
     long mode0;
     long align0;
     bool overload0_called = false;
@@ -9772,7 +9772,7 @@ PHP_METHOD(php_wxDataViewToggleRenderer, __construct)
 
     //Parameters for overload 0
     char* varianttype0;
-    long varianttype_len0;
+    size_t varianttype_len0;
     long mode0;
     long align0;
     bool overload0_called = false;
@@ -9977,7 +9977,7 @@ PHP_METHOD(php_wxDataViewDateRenderer, __construct)
 
     //Parameters for overload 0
     char* varianttype0;
-    long varianttype_len0;
+    size_t varianttype_len0;
     long mode0;
     long align0;
     bool overload0_called = false;
@@ -11234,7 +11234,7 @@ PHP_METHOD(php_wxDataViewCustomRenderer, RenderText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     long xoffset0;
     zval* cell0;
     wxRect* object_pointer0_2 = 0;
@@ -11642,7 +11642,7 @@ PHP_METHOD(php_wxDataViewBitmapRenderer, __construct)
 
     //Parameters for overload 0
     char* varianttype0;
-    long varianttype_len0;
+    size_t varianttype_len0;
     long mode0;
     long align0;
     bool overload0_called = false;
@@ -12084,7 +12084,7 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 
     //Parameters for overload 0
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* renderer0;
     wxDataViewRenderer* object_pointer0_1 = 0;
     long model_column0;
@@ -12602,7 +12602,7 @@ PHP_METHOD(php_wxDataViewListStore, AppendColumn)
 
     //Parameters for overload 0
     char* varianttype0;
-    long varianttype_len0;
+    size_t varianttype_len0;
     bool overload0_called = false;
 
     
@@ -13289,7 +13289,7 @@ PHP_METHOD(php_wxDataViewListStore, InsertColumn)
     //Parameters for overload 0
     long pos0;
     char* varianttype0;
-    long varianttype_len0;
+    size_t varianttype_len0;
     bool overload0_called = false;
 
     
@@ -13402,7 +13402,7 @@ PHP_METHOD(php_wxDataViewListStore, PrependColumn)
 
     //Parameters for overload 0
     char* varianttype0;
-    long varianttype_len0;
+    size_t varianttype_len0;
     bool overload0_called = false;
 
     
@@ -13814,7 +13814,7 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
     zval* parent0;
     wxDataViewItem* object_pointer0_0 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     zval* icon0;
     wxIcon* object_pointer0_2 = 0;
     zval* expanded0;
@@ -14077,7 +14077,7 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
     zval* parent0;
     wxDataViewItem* object_pointer0_0 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     zval* icon0;
     wxIcon* object_pointer0_2 = 0;
     zval* data0;
@@ -15528,7 +15528,7 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
     zval* previous0;
     wxDataViewItem* object_pointer0_1 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     zval* icon0;
     wxIcon* object_pointer0_3 = 0;
     zval* expanded0;
@@ -15814,7 +15814,7 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
     zval* previous0;
     wxDataViewItem* object_pointer0_1 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     zval* icon0;
     wxIcon* object_pointer0_3 = 0;
     zval* data0;
@@ -16055,7 +16055,7 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
     zval* parent0;
     wxDataViewItem* object_pointer0_0 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     zval* icon0;
     wxIcon* object_pointer0_2 = 0;
     zval* expanded0;
@@ -16318,7 +16318,7 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
     zval* parent0;
     wxDataViewItem* object_pointer0_0 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     zval* icon0;
     wxIcon* object_pointer0_2 = 0;
     zval* data0;
@@ -17521,7 +17521,7 @@ PHP_METHOD(php_wxDataViewIconText, SetText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -17597,7 +17597,7 @@ PHP_METHOD(php_wxDataViewIconText, __construct)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     zval* icon0;
     wxIcon* object_pointer0_1 = 0;
     bool overload0_called = false;

@@ -136,7 +136,7 @@ PHP_METHOD(php_wxScrolledWindow, __construct)
     wxSize* object_pointer1_3 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -8972,9 +8972,9 @@ PHP_METHOD(php_wxProgressDialog, __construct)
 
     //Parameters for overload 0
     char* title0;
-    long title_len0;
+    size_t title_len0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     long maximum0;
     zval* parent0;
     wxWindow* object_pointer0_3 = 0;
@@ -11614,7 +11614,7 @@ PHP_METHOD(php_wxGridHeaderLabelsRenderer, DrawLabel)
     zval* dc0;
     wxDC* object_pointer0_1 = 0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     zval* rect0;
     wxRect* object_pointer0_3 = 0;
     long horizAlign0;
@@ -12660,7 +12660,7 @@ PHP_METHOD(php_wxFileTypeInfo, AddExtension)
 
     //Parameters for overload 0
     char* ext0;
-    long ext_len0;
+    size_t ext_len0;
     bool overload0_called = false;
 
     
@@ -12773,7 +12773,7 @@ PHP_METHOD(php_wxFileTypeInfo, SetDescription)
 
     //Parameters for overload 0
     char* description0;
-    long description_len0;
+    size_t description_len0;
     bool overload0_called = false;
 
     
@@ -12886,7 +12886,7 @@ PHP_METHOD(php_wxFileTypeInfo, SetOpenCommand)
 
     //Parameters for overload 0
     char* command0;
-    long command_len0;
+    size_t command_len0;
     bool overload0_called = false;
 
     
@@ -12999,7 +12999,7 @@ PHP_METHOD(php_wxFileTypeInfo, SetPrintCommand)
 
     //Parameters for overload 0
     char* command0;
-    long command_len0;
+    size_t command_len0;
     bool overload0_called = false;
 
     
@@ -13112,7 +13112,7 @@ PHP_METHOD(php_wxFileTypeInfo, SetShortDesc)
 
     //Parameters for overload 0
     char* shortDesc0;
-    long shortDesc_len0;
+    size_t shortDesc_len0;
     bool overload0_called = false;
 
     
@@ -13191,7 +13191,7 @@ PHP_METHOD(php_wxFileTypeInfo, __construct)
 
     //Parameters for overload 1
     char* mimeType1;
-    long mimeType_len1;
+    size_t mimeType_len1;
     bool overload1_called = false;
 
     
@@ -16754,7 +16754,7 @@ PHP_METHOD(php_wxToolBarToolBase, SetLabel)
 
     //Parameters for overload 0
     char* label0;
-    long label_len0;
+    size_t label_len0;
     bool overload0_called = false;
 
     
@@ -16869,7 +16869,7 @@ PHP_METHOD(php_wxToolBarToolBase, SetLongHelp)
 
     //Parameters for overload 0
     char* help0;
-    long help_len0;
+    size_t help_len0;
     bool overload0_called = false;
 
     
@@ -17117,7 +17117,7 @@ PHP_METHOD(php_wxToolBarToolBase, SetShortHelp)
 
     //Parameters for overload 0
     char* help0;
-    long help_len0;
+    size_t help_len0;
     bool overload0_called = false;
 
     

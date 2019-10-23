@@ -616,7 +616,7 @@ PHP_METHOD(php_wxTextAttr, SetURL)
 
     //Parameters for overload 0
     char* url0;
-    long url_len0;
+    size_t url_len0;
     bool overload0_called = false;
 
     
@@ -1196,7 +1196,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphStyleName)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -1645,7 +1645,7 @@ PHP_METHOD(php_wxTextAttr, SetListStyleName)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -9914,7 +9914,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletFont)
 
     //Parameters for overload 0
     char* font0;
-    long font_len0;
+    size_t font_len0;
     bool overload0_called = false;
 
     
@@ -10027,7 +10027,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletName)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -10364,7 +10364,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -10477,7 +10477,7 @@ PHP_METHOD(php_wxTextAttr, SetCharacterStyleName)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -10814,7 +10814,7 @@ PHP_METHOD(php_wxTextAttr, SetFontFaceName)
 
     //Parameters for overload 0
     char* faceName0;
-    long faceName_len0;
+    size_t faceName_len0;
     bool overload0_called = false;
 
     

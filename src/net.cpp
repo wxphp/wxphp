@@ -410,7 +410,7 @@ PHP_METHOD(php_wxURI, Create)
 
     //Parameters for overload 0
     char* uri0;
-    long uri_len0;
+    size_t uri_len0;
     bool overload0_called = false;
 
     
@@ -1032,7 +1032,7 @@ PHP_METHOD(php_wxURI, __construct)
 
     //Parameters for overload 1
     char* uri1;
-    long uri_len1;
+    size_t uri_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
@@ -1247,7 +1247,7 @@ PHP_METHOD(php_wxURI, Unescape)
 
     //Parameters for overload 0
     char* uri0;
-    long uri_len0;
+    size_t uri_len0;
     bool overload0_called = false;
 
     

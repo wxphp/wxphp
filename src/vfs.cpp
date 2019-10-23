@@ -275,7 +275,7 @@ PHP_METHOD(php_wxFileSystem, URLToFileName)
 
     //Parameters for overload 0
     char* url0;
-    long url_len0;
+    size_t url_len0;
     bool overload0_called = false;
 
     
@@ -396,7 +396,7 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 
     //Parameters for overload 0
     char* location0;
-    long location_len0;
+    size_t location_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -568,7 +568,7 @@ PHP_METHOD(php_wxFileSystem, HasHandlerForPath)
 
     //Parameters for overload 0
     char* location0;
-    long location_len0;
+    size_t location_len0;
     bool overload0_called = false;
 
     
@@ -900,7 +900,7 @@ PHP_METHOD(php_wxFileSystem, FindFirst)
 
     //Parameters for overload 0
     char* wildcard0;
-    long wildcard_len0;
+    size_t wildcard_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -1030,12 +1030,12 @@ PHP_METHOD(php_wxFileSystem, FindFileInPath)
 
     //Parameters for overload 0
     char* pStr0;
-    long pStr_len0;
+    size_t pStr_len0;
     zval pStr0_ref;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     char* file0;
-    long file_len0;
+    size_t file_len0;
     bool overload0_called = false;
 
     
@@ -1286,7 +1286,7 @@ PHP_METHOD(php_wxFileSystem, ChangePathTo)
 
     //Parameters for overload 0
     char* location0;
-    long location_len0;
+    size_t location_len0;
     bool is_dir0;
     bool overload0_called = false;
 
@@ -1714,7 +1714,7 @@ PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 
     //Parameters for overload 0
     char* wildcard0;
-    long wildcard_len0;
+    size_t wildcard_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -1953,7 +1953,7 @@ PHP_METHOD(php_wxFileSystemHandler, GetMimeTypeFromExt)
 
     //Parameters for overload 0
     char* location0;
-    long location_len0;
+    size_t location_len0;
     bool overload0_called = false;
 
     

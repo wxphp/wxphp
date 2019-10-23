@@ -4175,7 +4175,7 @@ PHP_METHOD(php_wxProcess, Open)
 
     //Parameters for overload 0
     char* cmd0;
-    long cmd_len0;
+    size_t cmd_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -4592,9 +4592,9 @@ PHP_METHOD(php_wxSingleInstanceChecker, Create)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -4899,9 +4899,9 @@ PHP_METHOD(php_wxSingleInstanceChecker, __construct)
 
     //Parameters for overload 1
     char* name1;
-    long name_len1;
+    size_t name_len1;
     char* path1;
-    long path_len1;
+    size_t path_len1;
     bool overload1_called = false;
 
     

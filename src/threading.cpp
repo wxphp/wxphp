@@ -4452,7 +4452,7 @@ PHP_METHOD(php_wxThread, Delete)
 
     //Parameters for overload 0
     char* rc0;
-    long rc_len0;
+    size_t rc_len0;
     zval rc0_ref;
     long waitMode0;
     bool overload0_called = false;

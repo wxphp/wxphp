@@ -192,9 +192,9 @@ PHP_METHOD(php_wxXmlNode, AddAttribute)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -497,7 +497,7 @@ PHP_METHOD(php_wxXmlNode, DeleteAttribute)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -610,17 +610,17 @@ PHP_METHOD(php_wxXmlNode, GetAttribute)
 
     //Parameters for overload 0
     char* attrName0;
-    long attrName_len0;
+    size_t attrName_len0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     zval value0_ref;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* attrName1;
-    long attrName_len1;
+    size_t attrName_len1;
     char* defaultVal1;
-    long defaultVal_len1;
+    size_t defaultVal_len1;
     bool overload1_called = false;
 
     
@@ -2101,7 +2101,7 @@ PHP_METHOD(php_wxXmlNode, HasAttribute)
 
     //Parameters for overload 0
     char* attrName0;
-    long attrName_len0;
+    size_t attrName_len0;
     bool overload0_called = false;
 
     
@@ -3016,7 +3016,7 @@ PHP_METHOD(php_wxXmlNode, SetContent)
 
     //Parameters for overload 0
     char* con0;
-    long con_len0;
+    size_t con_len0;
     bool overload0_called = false;
 
     
@@ -3129,7 +3129,7 @@ PHP_METHOD(php_wxXmlNode, SetName)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -3694,9 +3694,9 @@ PHP_METHOD(php_wxXmlNode, __construct)
     wxXmlNode* object_pointer0_0 = 0;
     long type0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     char* content0;
-    long content_len0;
+    size_t content_len0;
     zval* attrs0;
     wxXmlAttribute* object_pointer0_4 = 0;
     zval* next0;
@@ -3707,9 +3707,9 @@ PHP_METHOD(php_wxXmlNode, __construct)
     //Parameters for overload 1
     long type1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     char* content1;
-    long content_len1;
+    size_t content_len1;
     long lineNo1;
     bool overload1_called = false;
 
@@ -4485,7 +4485,7 @@ PHP_METHOD(php_wxXmlAttribute, SetName)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -4729,7 +4729,7 @@ PHP_METHOD(php_wxXmlAttribute, SetValue)
 
     //Parameters for overload 0
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     
@@ -4808,9 +4808,9 @@ PHP_METHOD(php_wxXmlAttribute, __construct)
 
     //Parameters for overload 1
     char* name1;
-    long name_len1;
+    size_t name_len1;
     char* value1;
-    long value_len1;
+    size_t value_len1;
     zval* next1;
     wxXmlAttribute* object_pointer1_2 = 0;
     bool overload1_called = false;
@@ -6170,9 +6170,9 @@ PHP_METHOD(php_wxXmlDocument, Load)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     char* encoding0;
-    long encoding_len0;
+    size_t encoding_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -6180,7 +6180,7 @@ PHP_METHOD(php_wxXmlDocument, Load)
     zval* stream1;
     wxInputStream* object_pointer1_0 = 0;
     char* encoding1;
-    long encoding_len1;
+    size_t encoding_len1;
     long flags1;
     bool overload1_called = false;
 
@@ -6398,7 +6398,7 @@ PHP_METHOD(php_wxXmlDocument, Save)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     long indentstep0;
     bool overload0_called = false;
 
@@ -6728,7 +6728,7 @@ PHP_METHOD(php_wxXmlDocument, SetFileEncoding)
 
     //Parameters for overload 0
     char* encoding0;
-    long encoding_len0;
+    size_t encoding_len0;
     bool overload0_called = false;
 
     
@@ -6972,7 +6972,7 @@ PHP_METHOD(php_wxXmlDocument, SetVersion)
 
     //Parameters for overload 0
     char* version0;
-    long version_len0;
+    size_t version_len0;
     bool overload0_called = false;
 
     
@@ -7056,16 +7056,16 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 
     //Parameters for overload 2
     char* filename2;
-    long filename_len2;
+    size_t filename_len2;
     char* encoding2;
-    long encoding_len2;
+    size_t encoding_len2;
     bool overload2_called = false;
 
     //Parameters for overload 3
     zval* stream3;
     wxInputStream* object_pointer3_0 = 0;
     char* encoding3;
-    long encoding_len3;
+    size_t encoding_len3;
     bool overload3_called = false;
 
     

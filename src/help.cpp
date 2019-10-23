@@ -198,7 +198,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
 
     //Parameters for overload 1
     char* bookUrl1;
-    long bookUrl_len1;
+    size_t bookUrl_len1;
     bool showWaitMsg1;
     bool overload1_called = false;
 
@@ -601,7 +601,7 @@ PHP_METHOD(php_wxHtmlHelpController, Display)
 
     //Parameters for overload 0
     char* x0;
-    long x_len0;
+    size_t x_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -968,7 +968,7 @@ PHP_METHOD(php_wxHtmlHelpController, KeywordSearch)
 
     //Parameters for overload 0
     char* keyword0;
-    long keyword_len0;
+    size_t keyword_len0;
     long mode0;
     bool overload0_called = false;
 
@@ -1096,7 +1096,7 @@ PHP_METHOD(php_wxHtmlHelpController, ReadCustomization)
     zval* cfg0;
     wxConfigBase* object_pointer0_0 = 0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -1352,7 +1352,7 @@ PHP_METHOD(php_wxHtmlHelpController, SetTempDir)
 
     //Parameters for overload 0
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -1465,7 +1465,7 @@ PHP_METHOD(php_wxHtmlHelpController, SetTitleFormat)
 
     //Parameters for overload 0
     char* format0;
-    long format_len0;
+    size_t format_len0;
     bool overload0_called = false;
 
     
@@ -1580,7 +1580,7 @@ PHP_METHOD(php_wxHtmlHelpController, UseConfig)
     zval* config0;
     wxConfigBase* object_pointer0_0 = 0;
     char* rootpath0;
-    long rootpath_len0;
+    size_t rootpath_len0;
     bool overload0_called = false;
 
     
@@ -1726,7 +1726,7 @@ PHP_METHOD(php_wxHtmlHelpController, WriteCustomization)
     zval* cfg0;
     wxConfigBase* object_pointer0_0 = 0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -2046,9 +2046,9 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* helpFile0;
-    long helpFile_len0;
+    size_t helpFile_len0;
     char* topic0;
-    long topic_len0;
+    size_t topic_len0;
     long style0;
     bool overload0_called = false;
 
@@ -2298,7 +2298,7 @@ PHP_METHOD(php_wxHtmlHelpData, AddBook)
 
     //Parameters for overload 0
     char* book_url0;
-    long book_url_len0;
+    size_t book_url_len0;
     bool overload0_called = false;
 
     
@@ -2525,7 +2525,7 @@ PHP_METHOD(php_wxHtmlHelpData, FindPageByName)
 
     //Parameters for overload 0
     char* page0;
-    long page_len0;
+    size_t page_len0;
     bool overload0_called = false;
 
     
@@ -2640,7 +2640,7 @@ PHP_METHOD(php_wxHtmlHelpData, SetTempDir)
 
     //Parameters for overload 0
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -3020,7 +3020,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     long style0;
     bool overload0_called = false;
 
@@ -3439,7 +3439,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, SetTitleFormat)
 
     //Parameters for overload 0
     char* format0;
-    long format_len0;
+    size_t format_len0;
     bool overload0_called = false;
 
     
@@ -3522,7 +3522,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
     wxWindow* object_pointer1_0 = 0;
     long id1;
     char* title1;
-    long title_len1;
+    size_t title_len1;
     long style1;
     zval* data1;
     wxHtmlHelpData* object_pointer1_4 = 0;
@@ -3971,12 +3971,12 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     long style0;
     zval* config0;
     wxConfigBase* object_pointer0_4 = 0;
     char* rootpath0;
-    long rootpath_len0;
+    size_t rootpath_len0;
     bool overload0_called = false;
 
     
@@ -4439,7 +4439,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, SetTitleFormat)
 
     //Parameters for overload 0
     char* format0;
-    long format_len0;
+    size_t format_len0;
     bool overload0_called = false;
 
     
@@ -4522,14 +4522,14 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
     wxWindow* object_pointer1_0 = 0;
     long id1;
     char* title1;
-    long title_len1;
+    size_t title_len1;
     long style1;
     zval* data1;
     wxHtmlHelpData* object_pointer1_4 = 0;
     zval* config1;
     wxConfigBase* object_pointer1_5 = 0;
     char* rootpath1;
-    long rootpath_len1;
+    size_t rootpath_len1;
     bool overload1_called = false;
 
     
@@ -5247,7 +5247,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Display)
 
     //Parameters for overload 0
     char* x0;
-    long x_len0;
+    size_t x_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -5744,7 +5744,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, KeywordSearch)
 
     //Parameters for overload 0
     char* keyword0;
-    long keyword_len0;
+    size_t keyword_len0;
     long mode0;
     bool overload0_called = false;
 
@@ -5872,7 +5872,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, ReadCustomization)
     zval* cfg0;
     wxConfigBase* object_pointer0_0 = 0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -6125,7 +6125,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, UseConfig)
     zval* config0;
     wxConfigBase* object_pointer0_0 = 0;
     char* rootpath0;
-    long rootpath_len0;
+    size_t rootpath_len0;
     bool overload0_called = false;
 
     
@@ -6271,7 +6271,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, WriteCustomization)
     zval* cfg0;
     wxConfigBase* object_pointer0_0 = 0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -6764,7 +6764,7 @@ PHP_METHOD(php_wxToolTip, __construct)
 
     //Parameters for overload 0
     char* tip0;
-    long tip_len0;
+    size_t tip_len0;
     bool overload0_called = false;
 
     
@@ -6890,7 +6890,7 @@ PHP_METHOD(php_wxToolTip, SetTip)
 
     //Parameters for overload 0
     char* tip0;
-    long tip_len0;
+    size_t tip_len0;
     bool overload0_called = false;
 
     

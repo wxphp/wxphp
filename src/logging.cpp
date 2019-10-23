@@ -216,7 +216,7 @@ PHP_METHOD(php_wxLog, AddTraceMask)
 
     //Parameters for overload 0
     char* mask0;
-    long mask_len0;
+    size_t mask_len0;
     bool overload0_called = false;
 
     
@@ -2190,7 +2190,7 @@ PHP_METHOD(php_wxLog, IsAllowedTraceMask)
 
     //Parameters for overload 0
     char* mask0;
-    long mask_len0;
+    size_t mask_len0;
     bool overload0_called = false;
 
     
@@ -2461,7 +2461,7 @@ PHP_METHOD(php_wxLog, IsLevelEnabled)
     //Parameters for overload 0
     long level0;
     char* component0;
-    long component_len0;
+    size_t component_len0;
     bool overload0_called = false;
 
     
@@ -2599,7 +2599,7 @@ PHP_METHOD(php_wxLog, RemoveTraceMask)
 
     //Parameters for overload 0
     char* mask0;
-    long mask_len0;
+    size_t mask_len0;
     bool overload0_called = false;
 
     
@@ -3043,7 +3043,7 @@ PHP_METHOD(php_wxLog, SetComponentLevel)
 
     //Parameters for overload 0
     char* component0;
-    long component_len0;
+    size_t component_len0;
     long level0;
     bool overload0_called = false;
 
@@ -3643,7 +3643,7 @@ PHP_METHOD(php_wxLog, SetTimestamp)
 
     //Parameters for overload 0
     char* format0;
-    long format_len0;
+    size_t format_len0;
     bool overload0_called = false;
 
     
@@ -5888,7 +5888,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
     zval* pParent0;
     wxWindow* object_pointer0_0 = 0;
     char* szTitle0;
-    long szTitle_len0;
+    size_t szTitle_len0;
     bool show0;
     bool passToOld0;
     bool overload0_called = false;

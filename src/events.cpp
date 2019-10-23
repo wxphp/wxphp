@@ -24945,7 +24945,7 @@ PHP_METHOD(php_wxCommandEvent, SetString)
 
     //Parameters for overload 0
     char* string0;
-    long string_len0;
+    size_t string_len0;
     bool overload0_called = false;
 
     
@@ -29690,7 +29690,7 @@ PHP_METHOD(php_wxUpdateUIEvent, SetText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -37626,7 +37626,7 @@ PHP_METHOD(php_wxThreadEvent, SetString)
 
     //Parameters for overload 0
     char* string0;
-    long string_len0;
+    size_t string_len0;
     bool overload0_called = false;
 
     
@@ -45521,7 +45521,7 @@ PHP_METHOD(php_wxFileCtrlEvent, SetDirectory)
 
     //Parameters for overload 0
     char* directory0;
-    long directory_len0;
+    size_t directory_len0;
     bool overload0_called = false;
 
     
@@ -46175,7 +46175,7 @@ PHP_METHOD(php_wxFileDirPickerEvent, SetPath)
 
     //Parameters for overload 0
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -46255,7 +46255,7 @@ PHP_METHOD(php_wxFileDirPickerEvent, __construct)
     wxObject* object_pointer0_1 = 0;
     long id0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -52819,7 +52819,7 @@ PHP_METHOD(php_wxHyperlinkEvent, SetURL)
 
     //Parameters for overload 0
     char* url0;
-    long url_len0;
+    size_t url_len0;
     bool overload0_called = false;
 
     
@@ -52898,7 +52898,7 @@ PHP_METHOD(php_wxHyperlinkEvent, __construct)
     wxObject* object_pointer0_0 = 0;
     long id0;
     char* url0;
-    long url_len0;
+    size_t url_len0;
     bool overload0_called = false;
 
     
@@ -65128,7 +65128,7 @@ PHP_METHOD(php_wxStyledTextEvent, SetText)
 
     //Parameters for overload 0
     char* t0;
-    long t_len0;
+    size_t t_len0;
     bool overload0_called = false;
 
     
@@ -68469,7 +68469,7 @@ PHP_METHOD(php_wxStyledTextEvent, SetDragText)
 
     //Parameters for overload 0
     char* val0;
-    long val_len0;
+    size_t val_len0;
     bool overload0_called = false;
 
     
@@ -70634,7 +70634,7 @@ PHP_METHOD(php_wxTreeEvent, SetToolTip)
 
     //Parameters for overload 0
     char* tooltip0;
-    long tooltip_len0;
+    size_t tooltip_len0;
     bool overload0_called = false;
 
     
@@ -71153,9 +71153,9 @@ PHP_METHOD(php_wxWebViewEvent, __construct)
     long type1;
     long id1;
     char* href1;
-    long href_len1;
+    size_t href_len1;
     char* target1;
-    long target_len1;
+    size_t target_len1;
     bool overload1_called = false;
 
     

@@ -155,9 +155,9 @@ PHP_METHOD(php_wxWebViewHistoryItem, __construct)
 
     //Parameters for overload 0
     char* url0;
-    long url_len0;
+    size_t url_len0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     bool overload0_called = false;
 
     
@@ -543,7 +543,7 @@ PHP_METHOD(php_wxWebViewHandler, __construct)
 
     //Parameters for overload 0
     char* scheme0;
-    long scheme_len0;
+    size_t scheme_len0;
     bool overload0_called = false;
 
     
@@ -924,7 +924,7 @@ PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
 
     //Parameters for overload 0
     char* scheme0;
-    long scheme_len0;
+    size_t scheme_len0;
     bool overload0_called = false;
 
     
@@ -1049,7 +1049,7 @@ PHP_METHOD(php_wxWebViewArchiveHandler, GetFile)
 
     //Parameters for overload 0
     char* uri0;
-    long uri_len0;
+    size_t uri_len0;
     bool overload0_called = false;
 
     

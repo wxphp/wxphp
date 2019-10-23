@@ -516,7 +516,7 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
     wxSize* object_pointer0_3 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -997,7 +997,7 @@ PHP_METHOD(php_wxBookCtrlBase, AddPage)
     zval* page0;
     wxWindow* object_pointer0_0 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool select0;
     long imageId0;
     bool overload0_called = false;
@@ -1006,7 +1006,7 @@ PHP_METHOD(php_wxBookCtrlBase, AddPage)
     zval* page1;
     wxWindow* object_pointer1_0 = 0;
     char* caption1;
-    long caption_len1;
+    size_t caption_len1;
     bool select1;
     zval* bitmap1;
     wxBitmap* object_pointer1_3 = 0;
@@ -4464,7 +4464,7 @@ PHP_METHOD(php_wxChoicebook, __construct)
     wxSize* object_pointer1_3 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -4751,7 +4751,7 @@ PHP_METHOD(php_wxListbook, __construct)
     wxSize* object_pointer0_3 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -5320,7 +5320,7 @@ PHP_METHOD(php_wxNotebook, Create)
     wxSize* object_pointer0_3 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -6102,7 +6102,7 @@ PHP_METHOD(php_wxNotebook, InsertPage)
     zval* page0;
     wxWindow* object_pointer0_1 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool select0;
     long imageId0;
     bool overload0_called = false;
@@ -6506,7 +6506,7 @@ PHP_METHOD(php_wxNotebook, SetPageText)
     //Parameters for overload 0
     long page0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -6705,7 +6705,7 @@ PHP_METHOD(php_wxNotebook, __construct)
     wxSize* object_pointer1_3 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -6995,7 +6995,7 @@ PHP_METHOD(php_wxToolbook, __construct)
     wxSize* object_pointer1_3 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -7443,7 +7443,7 @@ PHP_METHOD(php_wxTreebook, AddPage)
     zval* page0;
     wxWindow* object_pointer0_0 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool bSelect0;
     long imageId0;
     bool overload0_called = false;
@@ -7604,7 +7604,7 @@ PHP_METHOD(php_wxTreebook, AddSubPage)
     zval* page0;
     wxWindow* object_pointer0_0 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool bSelect0;
     long imageId0;
     bool overload0_called = false;
@@ -7883,7 +7883,7 @@ PHP_METHOD(php_wxTreebook, Create)
     wxSize* object_pointer0_3 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -8566,7 +8566,7 @@ PHP_METHOD(php_wxTreebook, InsertPage)
     zval* page0;
     wxWindow* object_pointer0_1 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool bSelect0;
     long imageId0;
     bool overload0_called = false;
@@ -8728,7 +8728,7 @@ PHP_METHOD(php_wxTreebook, InsertSubPage)
     zval* page0;
     wxWindow* object_pointer0_1 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool bSelect0;
     long imageId0;
     bool overload0_called = false;
@@ -8973,7 +8973,7 @@ PHP_METHOD(php_wxTreebook, __construct)
     wxSize* object_pointer1_3 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     

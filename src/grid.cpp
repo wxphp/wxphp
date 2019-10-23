@@ -877,7 +877,7 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, SetParameters)
 
     //Parameters for overload 0
     char* params0;
-    long params_len0;
+    size_t params_len0;
     bool overload0_called = false;
 
     
@@ -953,9 +953,9 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 
     //Parameters for overload 0
     char* outformat0;
-    long outformat_len0;
+    size_t outformat_len0;
     char* informat0;
-    long informat_len0;
+    size_t informat_len0;
     bool overload0_called = false;
 
     
@@ -1184,7 +1184,7 @@ PHP_METHOD(php_wxGridCellEnumRenderer, SetParameters)
 
     //Parameters for overload 0
     char* params0;
-    long params_len0;
+    size_t params_len0;
     bool overload0_called = false;
 
     
@@ -1260,7 +1260,7 @@ PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 
     //Parameters for overload 0
     char* choices0;
-    long choices_len0;
+    size_t choices_len0;
     bool overload0_called = false;
 
     
@@ -1911,7 +1911,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetParameters)
 
     //Parameters for overload 0
     char* params0;
-    long params_len0;
+    size_t params_len0;
     bool overload0_called = false;
 
     
@@ -5017,7 +5017,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, IsTrueValue)
 
     //Parameters for overload 0
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     
@@ -5131,9 +5131,9 @@ PHP_METHOD(php_wxGridCellBoolEditor, UseStringValues)
 
     //Parameters for overload 0
     char* valueTrue0;
-    long valueTrue_len0;
+    size_t valueTrue_len0;
     char* valueFalse0;
-    long valueFalse_len0;
+    size_t valueFalse_len0;
     bool overload0_called = false;
 
     
@@ -5413,7 +5413,7 @@ PHP_METHOD(php_wxGridCellChoiceEditor, SetParameters)
 
     //Parameters for overload 0
     char* params0;
-    long params_len0;
+    size_t params_len0;
     bool overload0_called = false;
 
     
@@ -5675,7 +5675,7 @@ PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 
     //Parameters for overload 0
     char* choices0;
-    long choices_len0;
+    size_t choices_len0;
     bool overload0_called = false;
 
     
@@ -5976,7 +5976,7 @@ PHP_METHOD(php_wxGridCellTextEditor, SetParameters)
 
     //Parameters for overload 0
     char* params0;
-    long params_len0;
+    size_t params_len0;
     bool overload0_called = false;
 
     
@@ -6265,7 +6265,7 @@ PHP_METHOD(php_wxGridCellFloatEditor, SetParameters)
 
     //Parameters for overload 0
     char* params0;
-    long params_len0;
+    size_t params_len0;
     bool overload0_called = false;
 
     
@@ -6542,7 +6542,7 @@ PHP_METHOD(php_wxGridCellNumberEditor, SetParameters)
 
     //Parameters for overload 0
     char* params0;
-    long params_len0;
+    size_t params_len0;
     bool overload0_called = false;
 
     
@@ -10325,7 +10325,7 @@ PHP_METHOD(php_wxGridTableBase, CanGetValueAs)
     long row0;
     long col0;
     char* typeName0;
-    long typeName_len0;
+    size_t typeName_len0;
     bool overload0_called = false;
 
     
@@ -10547,7 +10547,7 @@ PHP_METHOD(php_wxGridTableBase, CanSetValueAs)
     long row0;
     long col0;
     char* typeName0;
-    long typeName_len0;
+    size_t typeName_len0;
     bool overload0_called = false;
 
     
@@ -12231,7 +12231,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsCustom)
     long row0;
     long col0;
     char* typeName0;
-    long typeName_len0;
+    size_t typeName_len0;
     bool overload0_called = false;
 
     
@@ -13615,7 +13615,7 @@ PHP_METHOD(php_wxGridTableBase, SetColLabelValue)
     //Parameters for overload 0
     long col0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     bool overload0_called = false;
 
     
@@ -13861,7 +13861,7 @@ PHP_METHOD(php_wxGridTableBase, SetRowLabelValue)
     //Parameters for overload 0
     long row0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     bool overload0_called = false;
 
     
@@ -14182,9 +14182,9 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsCustom)
     long row0;
     long col0;
     char* typeName0;
-    long typeName_len0;
+    size_t typeName_len0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     zval value0_ref;
     bool overload0_called = false;
 
@@ -18015,7 +18015,7 @@ PHP_METHOD(php_wxGrid, Create)
     wxSize* object_pointer0_3 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -24082,7 +24082,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
 
     //Parameters for overload 0
     char* typeName0;
-    long typeName_len0;
+    size_t typeName_len0;
     bool overload0_called = false;
 
     
@@ -24599,7 +24599,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
 
     //Parameters for overload 0
     char* typeName0;
-    long typeName_len0;
+    size_t typeName_len0;
     bool overload0_called = false;
 
     
@@ -32090,7 +32090,7 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 
     //Parameters for overload 0
     char* typeName0;
-    long typeName_len0;
+    size_t typeName_len0;
     zval* renderer0;
     wxGridCellRenderer* object_pointer0_1 = 0;
     zval* editor0;
@@ -34095,14 +34095,14 @@ PHP_METHOD(php_wxGrid, SetCellValue)
     long row0;
     long col0;
     char* s0;
-    long s_len0;
+    size_t s_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     zval* coords1;
     wxGridCellCoords* object_pointer1_0 = 0;
     char* s1;
-    long s_len1;
+    size_t s_len1;
     bool overload1_called = false;
 
     
@@ -34514,7 +34514,7 @@ PHP_METHOD(php_wxGrid, SetColFormatCustom)
     //Parameters for overload 0
     long col0;
     char* typeName0;
-    long typeName_len0;
+    size_t typeName_len0;
     bool overload0_called = false;
 
     
@@ -35215,7 +35215,7 @@ PHP_METHOD(php_wxGrid, SetColLabelValue)
     //Parameters for overload 0
     long col0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     
@@ -38221,7 +38221,7 @@ PHP_METHOD(php_wxGrid, SetRowLabelValue)
     //Parameters for overload 0
     long row0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     
@@ -41005,7 +41005,7 @@ PHP_METHOD(php_wxGrid, __construct)
     wxSize* object_pointer1_3 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     

@@ -801,7 +801,7 @@ PHP_METHOD(php_wxArtProvider, GetSizeHint)
 
     //Parameters for overload 0
     char* client0;
-    long client_len0;
+    size_t client_len0;
     bool platform_default0;
     bool overload0_called = false;
 
@@ -943,7 +943,7 @@ PHP_METHOD(php_wxArtProvider, GetNativeSizeHint)
 
     //Parameters for overload 0
     char* client0;
-    long client_len0;
+    size_t client_len0;
     bool overload0_called = false;
 
     
@@ -1064,9 +1064,9 @@ PHP_METHOD(php_wxArtProvider, GetIconBundle)
 
     //Parameters for overload 0
     char* id0;
-    long id_len0;
+    size_t id_len0;
     char* client0;
-    long client_len0;
+    size_t client_len0;
     bool overload0_called = false;
 
     
@@ -1213,9 +1213,9 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 
     //Parameters for overload 0
     char* id0;
-    long id_len0;
+    size_t id_len0;
     char* client0;
-    long client_len0;
+    size_t client_len0;
     zval* size0;
     wxSize* object_pointer0_2 = 0;
     bool overload0_called = false;
@@ -1404,9 +1404,9 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 
     //Parameters for overload 0
     char* id0;
-    long id_len0;
+    size_t id_len0;
     char* client0;
-    long client_len0;
+    size_t client_len0;
     zval* size0;
     wxSize* object_pointer0_2 = 0;
     bool overload0_called = false;
@@ -3735,7 +3735,7 @@ PHP_METHOD(php_wxNotificationMessage, SetMessage)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     bool overload0_called = false;
 
     
@@ -3979,7 +3979,7 @@ PHP_METHOD(php_wxNotificationMessage, SetTitle)
 
     //Parameters for overload 0
     char* title0;
-    long title_len0;
+    size_t title_len0;
     bool overload0_called = false;
 
     
@@ -4182,9 +4182,9 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 
     //Parameters for overload 1
     char* title1;
-    long title_len1;
+    size_t title_len1;
     char* message1;
-    long message_len1;
+    size_t message_len1;
     zval* parent1;
     wxWindow* object_pointer1_2 = 0;
     long flags1;
@@ -5849,7 +5849,7 @@ PHP_METHOD(php_wxTaskBarIcon, SetIcon)
     zval* icon0;
     wxIcon* object_pointer0_0 = 0;
     char* tooltip0;
-    long tooltip_len0;
+    size_t tooltip_len0;
     bool overload0_called = false;
 
     

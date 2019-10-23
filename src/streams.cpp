@@ -969,7 +969,7 @@ PHP_METHOD(php_wxDataOutputStream, WriteString)
 
     //Parameters for overload 0
     char* string0;
-    long string_len0;
+    size_t string_len0;
     bool overload0_called = false;
 
     
@@ -3398,7 +3398,7 @@ PHP_METHOD(php_wxOutputStream, Write)
 
     //Parameters for overload 1
     char* buffer1;
-    long buffer_len1;
+    size_t buffer_len1;
     long size1;
     bool overload1_called = false;
 
@@ -4428,7 +4428,7 @@ PHP_METHOD(php_wxInputStream, Ungetch)
 
     //Parameters for overload 1
     char* buffer1;
-    long buffer_len1;
+    size_t buffer_len1;
     long size1;
     bool overload1_called = false;
 
@@ -4863,7 +4863,7 @@ PHP_METHOD(php_wxInputStream, Read)
 
     //Parameters for overload 1
     char* buffer1;
-    long buffer_len1;
+    size_t buffer_len1;
     zval buffer1_ref;
     long size1;
     bool overload1_called = false;
@@ -5943,9 +5943,9 @@ PHP_METHOD(php_wxFFileOutputStream, __construct)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     char* mode0;
-    long mode_len0;
+    size_t mode_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -6295,7 +6295,7 @@ PHP_METHOD(php_wxFileOutputStream, __construct)
 
     //Parameters for overload 0
     char* ofileName0;
-    long ofileName_len0;
+    size_t ofileName_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -6673,7 +6673,7 @@ PHP_METHOD(php_wxFileInputStream, __construct)
 
     //Parameters for overload 0
     char* ifileName0;
-    long ifileName_len0;
+    size_t ifileName_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -6945,9 +6945,9 @@ PHP_METHOD(php_wxFFileInputStream, __construct)
 
     //Parameters for overload 1
     char* filename1;
-    long filename_len1;
+    size_t filename_len1;
     char* mode1;
-    long mode_len1;
+    size_t mode_len1;
     bool overload1_called = false;
 
     
@@ -7399,9 +7399,9 @@ PHP_METHOD(php_wxFFileStream, __construct)
 
     //Parameters for overload 0
     char* iofileName0;
-    long iofileName_len0;
+    size_t iofileName_len0;
     char* mode0;
-    long mode_len0;
+    size_t mode_len0;
     bool overload0_called = false;
 
     
@@ -7689,7 +7689,7 @@ PHP_METHOD(php_wxFileStream, __construct)
 
     //Parameters for overload 0
     char* iofileName0;
-    long iofileName_len0;
+    size_t iofileName_len0;
     bool overload0_called = false;
 
     

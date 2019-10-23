@@ -934,14 +934,14 @@ PHP_FUNCTION(php_wxFromString)
 
     //Parameters for overload 0
     char* string0;
-    long string_len0;
+    size_t string_len0;
     zval* font0;
     wxFont* object_pointer0_1 = 0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* string1;
-    long string_len1;
+    size_t string_len1;
     zval* colour1;
     wxColour* object_pointer1_1 = 0;
     bool overload1_called = false;
@@ -1240,9 +1240,9 @@ PHP_FUNCTION(php_wxSafeShowMessage)
 
     //Parameters for overload 0
     char* title0;
-    long title_len0;
+    size_t title_len0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -1618,17 +1618,17 @@ PHP_FUNCTION(php_wxBase64Encode)
 
     //Parameters for overload 0
     char* dst0;
-    long dst_len0;
+    size_t dst_len0;
     zval dst0_ref;
     long dstLen0;
     char* src0;
-    long src_len0;
+    size_t src_len0;
     long srcLen0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* src1;
-    long src_len1;
+    size_t src_len1;
     long srcLen1;
     bool overload1_called = false;
 
@@ -1891,11 +1891,11 @@ PHP_FUNCTION(php_wxBase64Decode)
 
     //Parameters for overload 0
     char* dst0;
-    long dst_len0;
+    size_t dst_len0;
     zval dst0_ref;
     long dstLen0;
     char* src0;
-    long src_len0;
+    size_t src_len0;
     long srcLen0;
     long mode0;
     long* posErr0;
@@ -1904,11 +1904,11 @@ PHP_FUNCTION(php_wxBase64Decode)
 
     //Parameters for overload 1
     char* dst1;
-    long dst_len1;
+    size_t dst_len1;
     zval dst1_ref;
     long dstLen1;
     char* str1;
-    long str_len1;
+    size_t str_len1;
     long mode1;
     long* posErr1;
     zval posErr1_ref;
@@ -2106,9 +2106,9 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     zval* aChoices0;
     zval* parent0;
     wxWindow* object_pointer0_3 = 0;
@@ -2122,9 +2122,9 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 
     //Parameters for overload 1
     char* message1;
-    long message_len1;
+    size_t message_len1;
     char* caption1;
-    long caption_len1;
+    size_t caption_len1;
     long n1;
     zval choices1;
     zval* parent1;
@@ -2139,9 +2139,9 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 
     //Parameters for overload 2
     char* message2;
-    long message_len2;
+    size_t message_len2;
     char* caption2;
-    long caption_len2;
+    size_t caption_len2;
     zval* choices2;
     long initialSelection2;
     zval* parent2;
@@ -2150,9 +2150,9 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 
     //Parameters for overload 3
     char* message3;
-    long message_len3;
+    size_t message_len3;
     char* caption3;
-    long caption_len3;
+    size_t caption_len3;
     long n3;
     zval choices3;
     long initialSelection3;
@@ -2935,9 +2935,9 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     zval* aChoices0;
     zval* parent0;
     wxWindow* object_pointer0_3 = 0;
@@ -2951,9 +2951,9 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
     //Parameters for overload 1
     char* message1;
-    long message_len1;
+    size_t message_len1;
     char* caption1;
-    long caption_len1;
+    size_t caption_len1;
     long n1;
     zval choices1;
     zval* parent1;
@@ -2968,9 +2968,9 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
     //Parameters for overload 2
     char* message2;
-    long message_len2;
+    size_t message_len2;
     char* caption2;
-    long caption_len2;
+    size_t caption_len2;
     zval* choices2;
     long initialSelection2;
     zval* parent2;
@@ -2979,9 +2979,9 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
     //Parameters for overload 3
     char* message3;
-    long message_len3;
+    size_t message_len3;
     char* caption3;
-    long caption_len3;
+    size_t caption_len3;
     long n3;
     zval choices3;
     long initialSelection3;
@@ -3808,7 +3808,7 @@ PHP_FUNCTION(php_wxGetColourFromUser)
     zval* colInit0;
     wxColour* object_pointer0_1 = 0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     zval* data0;
     wxColourData* object_pointer0_3 = 0;
     bool overload0_called = false;
@@ -4433,9 +4433,9 @@ PHP_FUNCTION(php_wxDirSelector)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* default_path0;
-    long default_path_len0;
+    size_t default_path_len0;
     long style0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
@@ -4908,15 +4908,15 @@ PHP_FUNCTION(php_wxFileSelector)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* default_path0;
-    long default_path_len0;
+    size_t default_path_len0;
     char* default_filename0;
-    long default_filename_len0;
+    size_t default_filename_len0;
     char* default_extension0;
-    long default_extension_len0;
+    size_t default_extension_len0;
     char* wildcard0;
-    long wildcard_len0;
+    size_t wildcard_len0;
     long flags0;
     zval* parent0;
     wxWindow* object_pointer0_6 = 0;
@@ -5126,15 +5126,15 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* default_path0;
-    long default_path_len0;
+    size_t default_path_len0;
     char* default_filename0;
-    long default_filename_len0;
+    size_t default_filename_len0;
     long* indexDefaultExtension0;
     zval indexDefaultExtension0_ref;
     char* wildcard0;
-    long wildcard_len0;
+    size_t wildcard_len0;
     long flags0;
     zval* parent0;
     wxWindow* object_pointer0_6 = 0;
@@ -5397,11 +5397,11 @@ PHP_FUNCTION(php_wxLoadFileSelector)
 
     //Parameters for overload 0
     char* what0;
-    long what_len0;
+    size_t what_len0;
     char* extension0;
-    long extension_len0;
+    size_t extension_len0;
     char* default_name0;
-    long default_name_len0;
+    size_t default_name_len0;
     zval* parent0;
     wxWindow* object_pointer0_3 = 0;
     bool overload0_called = false;
@@ -5524,11 +5524,11 @@ PHP_FUNCTION(php_wxSaveFileSelector)
 
     //Parameters for overload 0
     char* what0;
-    long what_len0;
+    size_t what_len0;
     char* extension0;
-    long extension_len0;
+    size_t extension_len0;
     char* default_name0;
-    long default_name_len0;
+    size_t default_name_len0;
     zval* parent0;
     wxWindow* object_pointer0_3 = 0;
     bool overload0_called = false;
@@ -5721,7 +5721,7 @@ PHP_FUNCTION(php_wxParseCommonDialogsFilter)
 
     //Parameters for overload 0
     char* wildCard0;
-    long wildCard_len0;
+    size_t wildCard_len0;
     zval* descriptions0;
     zval descriptions0_ref;
     zval* filters0;
@@ -5845,7 +5845,7 @@ PHP_FUNCTION(php_wxDirExists)
 
     //Parameters for overload 0
     char* dirname0;
-    long dirname_len0;
+    size_t dirname_len0;
     bool overload0_called = false;
 
     
@@ -5919,9 +5919,9 @@ PHP_FUNCTION(php_wxRenameFile)
 
     //Parameters for overload 0
     char* file10;
-    long file1_len0;
+    size_t file1_len0;
     char* file20;
-    long file2_len0;
+    size_t file2_len0;
     bool overwrite0;
     bool overload0_called = false;
 
@@ -6008,9 +6008,9 @@ PHP_FUNCTION(php_wxCopyFile)
 
     //Parameters for overload 0
     char* file10;
-    long file1_len0;
+    size_t file1_len0;
     char* file20;
-    long file2_len0;
+    size_t file2_len0;
     bool overwrite0;
     bool overload0_called = false;
 
@@ -6097,7 +6097,7 @@ PHP_FUNCTION(php_wxFileExists)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overload0_called = false;
 
     
@@ -6171,9 +6171,9 @@ PHP_FUNCTION(php_wxMatchWild)
 
     //Parameters for overload 0
     char* pattern0;
-    long pattern_len0;
+    size_t pattern_len0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool dot_special0;
     bool overload0_called = false;
 
@@ -6248,7 +6248,7 @@ PHP_FUNCTION(php_wxPathOnly)
 
     //Parameters for overload 0
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -6324,7 +6324,7 @@ PHP_FUNCTION(php_wxIsWild)
 
     //Parameters for overload 0
     char* pattern0;
-    long pattern_len0;
+    size_t pattern_len0;
     bool overload0_called = false;
 
     
@@ -6398,7 +6398,7 @@ PHP_FUNCTION(php_wxIsAbsolutePath)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overload0_called = false;
 
     
@@ -6542,7 +6542,7 @@ PHP_FUNCTION(php_wxSetWorkingDirectory)
 
     //Parameters for overload 0
     char* dir0;
-    long dir_len0;
+    size_t dir_len0;
     bool overload0_called = false;
 
     
@@ -6616,11 +6616,11 @@ PHP_FUNCTION(php_wxConcatFiles)
 
     //Parameters for overload 0
     char* file10;
-    long file1_len0;
+    size_t file1_len0;
     char* file20;
-    long file2_len0;
+    size_t file2_len0;
     char* file30;
-    long file3_len0;
+    size_t file3_len0;
     bool overload0_called = false;
 
     
@@ -6694,7 +6694,7 @@ PHP_FUNCTION(php_wxRemoveFile)
 
     //Parameters for overload 0
     char* file0;
-    long file_len0;
+    size_t file_len0;
     bool overload0_called = false;
 
     
@@ -6768,7 +6768,7 @@ PHP_FUNCTION(php_wxMkdir)
 
     //Parameters for overload 0
     char* dir0;
-    long dir_len0;
+    size_t dir_len0;
     long perm0;
     bool overload0_called = false;
 
@@ -6855,7 +6855,7 @@ PHP_FUNCTION(php_wxRmdir)
 
     //Parameters for overload 0
     char* dir0;
-    long dir_len0;
+    size_t dir_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -7012,7 +7012,7 @@ PHP_FUNCTION(php_wxFindFirstFile)
 
     //Parameters for overload 0
     char* spec0;
-    long spec_len0;
+    size_t spec_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -7180,7 +7180,7 @@ PHP_FUNCTION(php_wxGetFontFromUser)
     zval* fontInit0;
     wxFont* object_pointer0_1 = 0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     bool overload0_called = false;
 
     
@@ -8576,9 +8576,9 @@ PHP_FUNCTION(php_wxMessageBox)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     long style0;
     zval* parent0;
     wxWindow* object_pointer0_3 = 0;
@@ -8734,11 +8734,11 @@ PHP_FUNCTION(php_wxGetNumberFromUser)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* prompt0;
-    long prompt_len0;
+    size_t prompt_len0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     long value0;
     long min0;
     long max0;
@@ -8901,7 +8901,7 @@ PHP_FUNCTION(php_wxCreateDynamicObject)
 
     //Parameters for overload 0
     char* className0;
-    long className_len0;
+    size_t className_len0;
     bool overload0_called = false;
 
     
@@ -9911,11 +9911,11 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     char* default_value0;
-    long default_value_len0;
+    size_t default_value_len0;
     zval* parent0;
     wxWindow* object_pointer0_3 = 0;
     long x0;
@@ -10097,11 +10097,11 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     char* default_value0;
-    long default_value_len0;
+    size_t default_value_len0;
     zval* parent0;
     wxWindow* object_pointer0_3 = 0;
     long x0;
@@ -10487,9 +10487,9 @@ PHP_FUNCTION(php_wxStringTokenize)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     char* delims0;
-    long delims_len0;
+    size_t delims_len0;
     long mode0;
     bool overload0_called = false;
 
@@ -10606,19 +10606,19 @@ PHP_FUNCTION(php_wxGetTranslation)
 
     //Parameters for overload 0
     char* string0;
-    long string_len0;
+    size_t string_len0;
     char* domain0;
-    long domain_len0;
+    size_t domain_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* string1;
-    long string_len1;
+    size_t string_len1;
     char* plural1;
-    long plural_len1;
+    size_t plural_len1;
     long n1;
     char* domain1;
-    long domain_len1;
+    size_t domain_len1;
     bool overload1_called = false;
 
     
@@ -11232,12 +11232,12 @@ PHP_FUNCTION(php_wxGetenv)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -11351,9 +11351,9 @@ PHP_FUNCTION(php_wxSetEnv)
 
     //Parameters for overload 0
     char* var0;
-    long var_len0;
+    size_t var_len0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     
@@ -11427,7 +11427,7 @@ PHP_FUNCTION(php_wxUnsetEnv)
 
     //Parameters for overload 0
     char* var0;
-    long var_len0;
+    size_t var_len0;
     bool overload0_called = false;
 
     
@@ -12058,9 +12058,9 @@ PHP_FUNCTION(php_wxFindMenuItemId)
     zval* frame0;
     wxFrame* object_pointer0_0 = 0;
     char* menuString0;
-    long menuString_len0;
+    size_t menuString_len0;
     char* itemString0;
-    long itemString_len0;
+    size_t itemString_len0;
     bool overload0_called = false;
 
     
@@ -12224,7 +12224,7 @@ PHP_FUNCTION(php_wxLaunchDefaultApplication)
 
     //Parameters for overload 0
     char* document0;
-    long document_len0;
+    size_t document_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -12311,7 +12311,7 @@ PHP_FUNCTION(php_wxLaunchDefaultBrowser)
 
     //Parameters for overload 0
     char* url0;
-    long url_len0;
+    size_t url_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -12398,7 +12398,7 @@ PHP_FUNCTION(php_wxStripMenuCodes)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -12629,7 +12629,7 @@ PHP_FUNCTION(php_wxGetUserHome)
 
     //Parameters for overload 0
     char* user0;
-    long user_len0;
+    size_t user_len0;
     bool overload0_called = false;
 
     
@@ -13242,7 +13242,7 @@ PHP_FUNCTION(php_wxShell)
 
     //Parameters for overload 0
     char* command0;
-    long command_len0;
+    size_t command_len0;
     bool overload0_called = false;
 
     
@@ -13701,12 +13701,12 @@ PHP_FUNCTION(php_wxIsEmpty)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* s1;
-    long s_len1;
+    size_t s_len1;
     bool overload1_called = false;
 
     
@@ -13815,7 +13815,7 @@ PHP_FUNCTION(php_wxTmemchr)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     long c0;
     long len0;
     bool overload0_called = false;
@@ -13892,9 +13892,9 @@ PHP_FUNCTION(php_wxTmemcmp)
 
     //Parameters for overload 0
     char* sz10;
-    long sz1_len0;
+    size_t sz1_len0;
     char* sz20;
-    long sz2_len0;
+    size_t sz2_len0;
     long len0;
     bool overload0_called = false;
 
@@ -13968,10 +13968,10 @@ PHP_FUNCTION(php_wxTmemcpy)
 
     //Parameters for overload 0
     char* szOut0;
-    long szOut_len0;
+    size_t szOut_len0;
     zval szOut0_ref;
     char* szIn0;
-    long szIn_len0;
+    size_t szIn_len0;
     long len0;
     bool overload0_called = false;
 
@@ -14051,10 +14051,10 @@ PHP_FUNCTION(php_wxTmemmove)
 
     //Parameters for overload 0
     char* szOut0;
-    long szOut_len0;
+    size_t szOut_len0;
     zval szOut0_ref;
     char* szIn0;
-    long szIn_len0;
+    size_t szIn_len0;
     long len0;
     bool overload0_called = false;
 
@@ -14134,7 +14134,7 @@ PHP_FUNCTION(php_wxTmemset)
 
     //Parameters for overload 0
     char* szOut0;
-    long szOut_len0;
+    size_t szOut_len0;
     zval szOut0_ref;
     long cIn0;
     long len0;
@@ -14217,7 +14217,7 @@ PHP_FUNCTION(php_wxSetlocale)
     //Parameters for overload 0
     long category0;
     char* locale0;
-    long locale_len0;
+    size_t locale_len0;
     bool overload0_called = false;
 
     
@@ -14292,7 +14292,7 @@ PHP_FUNCTION(php_wxStrlen)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     bool overload0_called = false;
 
     
@@ -14365,7 +14365,7 @@ PHP_FUNCTION(php_wxStrnlen)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     long maxlen0;
     bool overload0_called = false;
 
@@ -14439,7 +14439,7 @@ PHP_FUNCTION(php_wxStrdup)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     bool overload0_called = false;
 
     
@@ -14514,18 +14514,18 @@ PHP_FUNCTION(php_wxStrcpy)
 
     //Parameters for overload 0
     char* dest0;
-    long dest_len0;
+    size_t dest_len0;
     zval dest0_ref;
     char* src0;
-    long src_len0;
+    size_t src_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* dest1;
-    long dest_len1;
+    size_t dest_len1;
     zval dest1_ref;
     char* src1;
-    long src_len1;
+    size_t src_len1;
     bool overload1_called = false;
 
     
@@ -14646,19 +14646,19 @@ PHP_FUNCTION(php_wxStrncpy)
 
     //Parameters for overload 0
     char* dest0;
-    long dest_len0;
+    size_t dest_len0;
     zval dest0_ref;
     char* src0;
-    long src_len0;
+    size_t src_len0;
     long n0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* dest1;
-    long dest_len1;
+    size_t dest_len1;
     zval dest1_ref;
     char* src1;
-    long src_len1;
+    size_t src_len1;
     long n1;
     bool overload1_called = false;
 
@@ -14780,10 +14780,10 @@ PHP_FUNCTION(php_wxStrlcpy)
 
     //Parameters for overload 0
     char* dest0;
-    long dest_len0;
+    size_t dest_len0;
     zval dest0_ref;
     char* src0;
-    long src_len0;
+    size_t src_len0;
     long n0;
     bool overload0_called = false;
 
@@ -14861,18 +14861,18 @@ PHP_FUNCTION(php_wxStrcat)
 
     //Parameters for overload 0
     char* dest0;
-    long dest_len0;
+    size_t dest_len0;
     zval dest0_ref;
     char* src0;
-    long src_len0;
+    size_t src_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* dest1;
-    long dest_len1;
+    size_t dest_len1;
     zval dest1_ref;
     char* src1;
-    long src_len1;
+    size_t src_len1;
     bool overload1_called = false;
 
     
@@ -14993,19 +14993,19 @@ PHP_FUNCTION(php_wxStrncat)
 
     //Parameters for overload 0
     char* dest0;
-    long dest_len0;
+    size_t dest_len0;
     zval dest0_ref;
     char* src0;
-    long src_len0;
+    size_t src_len0;
     long n0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* dest1;
-    long dest_len1;
+    size_t dest_len1;
     zval dest1_ref;
     char* src1;
-    long src_len1;
+    size_t src_len1;
     long n1;
     bool overload1_called = false;
 
@@ -15127,19 +15127,19 @@ PHP_FUNCTION(php_wxStrxfrm)
 
     //Parameters for overload 0
     char* dest0;
-    long dest_len0;
+    size_t dest_len0;
     zval dest0_ref;
     char* src0;
-    long src_len0;
+    size_t src_len0;
     long n0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* dest1;
-    long dest_len1;
+    size_t dest_len1;
     zval dest1_ref;
     char* src1;
-    long src_len1;
+    size_t src_len1;
     long n1;
     bool overload1_called = false;
 
@@ -15257,46 +15257,46 @@ PHP_FUNCTION(php_wxStrstr)
 
     //Parameters for overload 0
     char* haystack0;
-    long haystack_len0;
+    size_t haystack_len0;
     char* needle0;
-    long needle_len0;
+    size_t needle_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* haystack1;
-    long haystack_len1;
+    size_t haystack_len1;
     char* needle1;
-    long needle_len1;
+    size_t needle_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* haystack2;
-    long haystack_len2;
+    size_t haystack_len2;
     char* needle2;
-    long needle_len2;
+    size_t needle_len2;
     bool overload2_called = false;
 
     //Parameters for overload 3
     char* haystack3;
-    long haystack_len3;
+    size_t haystack_len3;
     char* needle3;
-    long needle_len3;
+    size_t needle_len3;
     bool overload3_called = false;
 
     //Parameters for overload 4
     char* haystack4;
-    long haystack_len4;
+    size_t haystack_len4;
     zval haystack4_ref;
     char* needle4;
-    long needle_len4;
+    size_t needle_len4;
     bool overload4_called = false;
 
     //Parameters for overload 5
     char* haystack5;
-    long haystack_len5;
+    size_t haystack_len5;
     zval haystack5_ref;
     char* needle5;
-    long needle_len5;
+    size_t needle_len5;
     bool overload5_called = false;
 
     
@@ -15569,25 +15569,25 @@ PHP_FUNCTION(php_wxStrchr)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     long c0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* s1;
-    long s_len1;
+    size_t s_len1;
     long c1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* s2;
-    long s_len2;
+    size_t s_len2;
     long c2;
     bool overload2_called = false;
 
     //Parameters for overload 3
     char* s3;
-    long s_len3;
+    size_t s_len3;
     zval s3_ref;
     long c3;
     bool overload3_called = false;
@@ -15782,25 +15782,25 @@ PHP_FUNCTION(php_wxStrrchr)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     long c0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* s1;
-    long s_len1;
+    size_t s_len1;
     long c1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* s2;
-    long s_len2;
+    size_t s_len2;
     long c2;
     bool overload2_called = false;
 
     //Parameters for overload 3
     char* s3;
-    long s_len3;
+    size_t s_len3;
     zval s3_ref;
     long c3;
     bool overload3_called = false;
@@ -15995,46 +15995,46 @@ PHP_FUNCTION(php_wxStrpbrk)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     char* accept0;
-    long accept_len0;
+    size_t accept_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* s1;
-    long s_len1;
+    size_t s_len1;
     char* accept1;
-    long accept_len1;
+    size_t accept_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* s2;
-    long s_len2;
+    size_t s_len2;
     char* accept2;
-    long accept_len2;
+    size_t accept_len2;
     bool overload2_called = false;
 
     //Parameters for overload 3
     char* s3;
-    long s_len3;
+    size_t s_len3;
     char* accept3;
-    long accept_len3;
+    size_t accept_len3;
     bool overload3_called = false;
 
     //Parameters for overload 4
     char* s4;
-    long s_len4;
+    size_t s_len4;
     zval s4_ref;
     char* accept4;
-    long accept_len4;
+    size_t accept_len4;
     bool overload4_called = false;
 
     //Parameters for overload 5
     char* s5;
-    long s_len5;
+    size_t s_len5;
     zval s5_ref;
     char* accept5;
-    long accept_len5;
+    size_t accept_len5;
     bool overload5_called = false;
 
     
@@ -16307,7 +16307,7 @@ PHP_FUNCTION(php_wxRemove)
 
     //Parameters for overload 0
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -16380,9 +16380,9 @@ PHP_FUNCTION(php_wxRename)
 
     //Parameters for overload 0
     char* oldpath0;
-    long oldpath_len0;
+    size_t oldpath_len0;
     char* newpath0;
-    long newpath_len0;
+    size_t newpath_len0;
     bool overload0_called = false;
 
     
@@ -16455,7 +16455,7 @@ PHP_FUNCTION(php_wxAtoi)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     bool overload0_called = false;
 
     
@@ -16528,7 +16528,7 @@ PHP_FUNCTION(php_wxAtol)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     bool overload0_called = false;
 
     
@@ -16601,7 +16601,7 @@ PHP_FUNCTION(php_wxAtof)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     bool overload0_called = false;
 
     
@@ -16674,7 +16674,7 @@ PHP_FUNCTION(php_wxSystem)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     bool overload0_called = false;
 
     

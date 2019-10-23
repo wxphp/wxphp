@@ -155,9 +155,9 @@ PHP_METHOD(php_wxFFile, __construct)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     char* mode0;
-    long mode_len0;
+    size_t mode_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -328,7 +328,7 @@ PHP_METHOD(php_wxFFile, Write)
 
     //Parameters for overload 0
     char* buffer0;
-    long buffer_len0;
+    size_t buffer_len0;
     long count0;
     bool overload0_called = false;
 
@@ -798,7 +798,7 @@ PHP_METHOD(php_wxFFile, Read)
 
     //Parameters for overload 0
     char* buffer0;
-    long buffer_len0;
+    size_t buffer_len0;
     zval buffer0_ref;
     long count0;
     bool overload0_called = false;
@@ -917,9 +917,9 @@ PHP_METHOD(php_wxFFile, Open)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     char* mode0;
-    long mode_len0;
+    size_t mode_len0;
     bool overload0_called = false;
 
     
@@ -2230,7 +2230,7 @@ PHP_METHOD(php_wxFile, Write)
 
     //Parameters for overload 0
     char* buffer0;
-    long buffer_len0;
+    size_t buffer_len0;
     long count0;
     bool overload0_called = false;
 
@@ -2417,7 +2417,7 @@ PHP_METHOD(php_wxFile, __construct)
 
     //Parameters for overload 1
     char* filename1;
-    long filename_len1;
+    size_t filename_len1;
     long mode1;
     bool overload1_called = false;
 
@@ -2625,7 +2625,7 @@ PHP_METHOD(php_wxFile, Open)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     long mode0;
     long access0;
     bool overload0_called = false;
@@ -3299,7 +3299,7 @@ PHP_METHOD(php_wxFile, Exists)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overload0_called = false;
 
     
@@ -3520,7 +3520,7 @@ PHP_METHOD(php_wxFile, Create)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overwrite0;
     long access0;
     bool overload0_called = false;
@@ -4092,7 +4092,7 @@ PHP_METHOD(php_wxFile, Access)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     long mode0;
     bool overload0_called = false;
 
@@ -4288,7 +4288,7 @@ PHP_METHOD(php_wxPathList, Add)
 
     //Parameters for overload 0
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -4459,7 +4459,7 @@ PHP_METHOD(php_wxPathList, AddEnvList)
 
     //Parameters for overload 0
     char* env_variable0;
-    long env_variable_len0;
+    size_t env_variable_len0;
     bool overload0_called = false;
 
     
@@ -4572,7 +4572,7 @@ PHP_METHOD(php_wxPathList, EnsureFileAccessible)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overload0_called = false;
 
     
@@ -4685,7 +4685,7 @@ PHP_METHOD(php_wxPathList, FindAbsoluteValidPath)
 
     //Parameters for overload 0
     char* file0;
-    long file_len0;
+    size_t file_len0;
     bool overload0_called = false;
 
     
@@ -4800,7 +4800,7 @@ PHP_METHOD(php_wxPathList, FindValidPath)
 
     //Parameters for overload 0
     char* file0;
-    long file_len0;
+    size_t file_len0;
     bool overload0_called = false;
 
     
@@ -5136,7 +5136,7 @@ PHP_METHOD(php_wxFileName, AppendDir)
 
     //Parameters for overload 0
     char* dir0;
-    long dir_len0;
+    size_t dir_len0;
     bool overload0_called = false;
 
     
@@ -5250,7 +5250,7 @@ PHP_METHOD(php_wxFileName, InsertDir)
     //Parameters for overload 0
     long before0;
     char* dir0;
-    long dir_len0;
+    size_t dir_len0;
     bool overload0_called = false;
 
     
@@ -5368,50 +5368,50 @@ PHP_METHOD(php_wxFileName, Assign)
 
     //Parameters for overload 1
     char* fullpath1;
-    long fullpath_len1;
+    size_t fullpath_len1;
     long format1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* volume2;
-    long volume_len2;
+    size_t volume_len2;
     char* path2;
-    long path_len2;
+    size_t path_len2;
     char* name2;
-    long name_len2;
+    size_t name_len2;
     char* ext2;
-    long ext_len2;
+    size_t ext_len2;
     bool hasExt2;
     long format2;
     bool overload2_called = false;
 
     //Parameters for overload 3
     char* volume3;
-    long volume_len3;
+    size_t volume_len3;
     char* path3;
-    long path_len3;
+    size_t path_len3;
     char* name3;
-    long name_len3;
+    size_t name_len3;
     char* ext3;
-    long ext_len3;
+    size_t ext_len3;
     long format3;
     bool overload3_called = false;
 
     //Parameters for overload 4
     char* path4;
-    long path_len4;
+    size_t path_len4;
     char* name4;
-    long name_len4;
+    size_t name_len4;
     long format4;
     bool overload4_called = false;
 
     //Parameters for overload 5
     char* path5;
-    long path_len5;
+    size_t path_len5;
     char* name5;
-    long name_len5;
+    size_t name_len5;
     char* ext5;
-    long ext_len5;
+    size_t ext_len5;
     long format5;
     bool overload5_called = false;
 
@@ -5754,37 +5754,37 @@ PHP_METHOD(php_wxFileName, __construct)
 
     //Parameters for overload 2
     char* fullpath2;
-    long fullpath_len2;
+    size_t fullpath_len2;
     long format2;
     bool overload2_called = false;
 
     //Parameters for overload 3
     char* path3;
-    long path_len3;
+    size_t path_len3;
     char* name3;
-    long name_len3;
+    size_t name_len3;
     long format3;
     bool overload3_called = false;
 
     //Parameters for overload 4
     char* path4;
-    long path_len4;
+    size_t path_len4;
     char* name4;
-    long name_len4;
+    size_t name_len4;
     char* ext4;
-    long ext_len4;
+    size_t ext_len4;
     long format4;
     bool overload4_called = false;
 
     //Parameters for overload 5
     char* volume5;
-    long volume_len5;
+    size_t volume_len5;
     char* path5;
-    long path_len5;
+    size_t path_len5;
     char* name5;
-    long name_len5;
+    size_t name_len5;
     char* ext5;
-    long ext_len5;
+    size_t ext_len5;
     long format5;
     bool overload5_called = false;
 
@@ -6251,7 +6251,7 @@ PHP_METHOD(php_wxFileName, StripExtension)
 
     //Parameters for overload 0
     char* fullname0;
-    long fullname_len0;
+    size_t fullname_len0;
     bool overload0_called = false;
 
     
@@ -6367,12 +6367,12 @@ PHP_METHOD(php_wxFileName, SplitVolume)
 
     //Parameters for overload 0
     char* fullpath0;
-    long fullpath_len0;
+    size_t fullpath_len0;
     char* volume0;
-    long volume_len0;
+    size_t volume_len0;
     zval volume0_ref;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     zval path0_ref;
     long format0;
     bool overload0_called = false;
@@ -6512,51 +6512,51 @@ PHP_METHOD(php_wxFileName, SplitPath)
 
     //Parameters for overload 0
     char* fullpath0;
-    long fullpath_len0;
+    size_t fullpath_len0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     zval path0_ref;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     zval name0_ref;
     char* ext0;
-    long ext_len0;
+    size_t ext_len0;
     zval ext0_ref;
     long format0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* fullpath1;
-    long fullpath_len1;
+    size_t fullpath_len1;
     char* volume1;
-    long volume_len1;
+    size_t volume_len1;
     zval volume1_ref;
     char* path1;
-    long path_len1;
+    size_t path_len1;
     zval path1_ref;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     zval name1_ref;
     char* ext1;
-    long ext_len1;
+    size_t ext_len1;
     zval ext1_ref;
     long format1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* fullpath2;
-    long fullpath_len2;
+    size_t fullpath_len2;
     char* volume2;
-    long volume_len2;
+    size_t volume_len2;
     zval volume2_ref;
     char* path2;
-    long path_len2;
+    size_t path_len2;
     zval path2_ref;
     char* name2;
-    long name_len2;
+    size_t name_len2;
     zval name2_ref;
     char* ext2;
-    long ext_len2;
+    size_t ext_len2;
     zval ext2_ref;
     bool* hasExt2;
     zval hasExt2_ref;
@@ -6852,7 +6852,7 @@ PHP_METHOD(php_wxFileName, SetVolume)
 
     //Parameters for overload 0
     char* volume0;
-    long volume_len0;
+    size_t volume_len0;
     bool overload0_called = false;
 
     
@@ -7157,7 +7157,7 @@ PHP_METHOD(php_wxFileName, SetPath)
 
     //Parameters for overload 0
     char* path0;
-    long path_len0;
+    size_t path_len0;
     long format0;
     bool overload0_called = false;
 
@@ -7283,7 +7283,7 @@ PHP_METHOD(php_wxFileName, SetName)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -7396,7 +7396,7 @@ PHP_METHOD(php_wxFileName, SetFullName)
 
     //Parameters for overload 0
     char* fullname0;
-    long fullname_len0;
+    size_t fullname_len0;
     bool overload0_called = false;
 
     
@@ -7509,7 +7509,7 @@ PHP_METHOD(php_wxFileName, SetExt)
 
     //Parameters for overload 0
     char* ext0;
-    long ext_len0;
+    size_t ext_len0;
     bool overload0_called = false;
 
     
@@ -7729,7 +7729,7 @@ PHP_METHOD(php_wxFileName, SetCwd)
 
     //Parameters for overload 0
     char* cwd0;
-    long cwd_len0;
+    size_t cwd_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -8023,7 +8023,7 @@ PHP_METHOD(php_wxFileName, Rmdir)
 
     //Parameters for overload 0
     char* dir0;
-    long dir_len0;
+    size_t dir_len0;
     long flags0;
     bool overload0_called = false;
 
@@ -8327,9 +8327,9 @@ PHP_METHOD(php_wxFileName, ReplaceEnvVariable)
 
     //Parameters for overload 0
     char* envname0;
-    long envname_len0;
+    size_t envname_len0;
     char* replacementFmtString0;
-    long replacementFmtString_len0;
+    size_t replacementFmtString_len0;
     long format0;
     bool overload0_called = false;
 
@@ -8686,7 +8686,7 @@ PHP_METHOD(php_wxFileName, PrependDir)
 
     //Parameters for overload 0
     char* dir0;
-    long dir_len0;
+    size_t dir_len0;
     bool overload0_called = false;
 
     
@@ -8799,7 +8799,7 @@ PHP_METHOD(php_wxFileName, AssignCwd)
 
     //Parameters for overload 0
     char* volume0;
-    long volume_len0;
+    size_t volume_len0;
     bool overload0_called = false;
 
     
@@ -8924,7 +8924,7 @@ PHP_METHOD(php_wxFileName, AssignDir)
 
     //Parameters for overload 0
     char* dir0;
-    long dir_len0;
+    size_t dir_len0;
     long format0;
     bool overload0_called = false;
 
@@ -9157,19 +9157,19 @@ PHP_METHOD(php_wxFileName, AssignTempFileName)
 
     //Parameters for overload 0
     char* prefix0;
-    long prefix_len0;
+    size_t prefix_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* prefix1;
-    long prefix_len1;
+    size_t prefix_len1;
     zval* fileTemp1;
     wxFile* object_pointer1_1 = 0;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* prefix2;
-    long prefix_len2;
+    size_t prefix_len2;
     zval* fileTemp2;
     wxFFile* object_pointer2_1 = 0;
     bool overload2_called = false;
@@ -9606,14 +9606,14 @@ PHP_METHOD(php_wxFileName, CreateTempFileName)
 
     //Parameters for overload 0
     char* prefix0;
-    long prefix_len0;
+    size_t prefix_len0;
     zval* fileTemp0;
     wxFile* object_pointer0_1 = 0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* prefix1;
-    long prefix_len1;
+    size_t prefix_len1;
     zval* fileTemp1;
     wxFFile* object_pointer1_1 = 0;
     bool overload1_called = false;
@@ -9837,7 +9837,7 @@ PHP_METHOD(php_wxFileName, DirExists)
 
     //Parameters for overload 1
     char* dir1;
-    long dir_len1;
+    size_t dir_len1;
     bool overload1_called = false;
 
     
@@ -9983,7 +9983,7 @@ PHP_METHOD(php_wxFileName, DirName)
 
     //Parameters for overload 0
     char* dir0;
-    long dir_len0;
+    size_t dir_len0;
     long format0;
     bool overload0_called = false;
 
@@ -10128,7 +10128,7 @@ PHP_METHOD(php_wxFileName, FileExists)
 
     //Parameters for overload 1
     char* file1;
-    long file_len1;
+    size_t file_len1;
     bool overload1_called = false;
 
     
@@ -10274,7 +10274,7 @@ PHP_METHOD(php_wxFileName, FileName)
 
     //Parameters for overload 0
     char* file0;
-    long file_len0;
+    size_t file_len0;
     long format0;
     bool overload0_called = false;
 
@@ -10416,7 +10416,7 @@ PHP_METHOD(php_wxFileName, GetCwd)
 
     //Parameters for overload 0
     char* volume0;
-    long volume_len0;
+    size_t volume_len0;
     bool overload0_called = false;
 
     
@@ -11479,7 +11479,7 @@ PHP_METHOD(php_wxFileName, GetHumanReadableSize)
 
     //Parameters for overload 0
     char* failmsg0;
-    long failmsg_len0;
+    size_t failmsg_len0;
     long precision0;
     long conv0;
     bool overload0_called = false;
@@ -13635,7 +13635,7 @@ PHP_METHOD(php_wxFileName, IsDirReadable)
 
     //Parameters for overload 1
     char* dir1;
-    long dir_len1;
+    size_t dir_len1;
     bool overload1_called = false;
 
     
@@ -13784,7 +13784,7 @@ PHP_METHOD(php_wxFileName, IsDirWritable)
 
     //Parameters for overload 1
     char* dir1;
-    long dir_len1;
+    size_t dir_len1;
     bool overload1_called = false;
 
     
@@ -13933,7 +13933,7 @@ PHP_METHOD(php_wxFileName, IsFileExecutable)
 
     //Parameters for overload 1
     char* file1;
-    long file_len1;
+    size_t file_len1;
     bool overload1_called = false;
 
     
@@ -14082,7 +14082,7 @@ PHP_METHOD(php_wxFileName, IsFileReadable)
 
     //Parameters for overload 1
     char* file1;
-    long file_len1;
+    size_t file_len1;
     bool overload1_called = false;
 
     
@@ -14231,7 +14231,7 @@ PHP_METHOD(php_wxFileName, IsFileWritable)
 
     //Parameters for overload 1
     char* file1;
-    long file_len1;
+    size_t file_len1;
     bool overload1_called = false;
 
     
@@ -14377,7 +14377,7 @@ PHP_METHOD(php_wxFileName, IsMSWUniqueVolumeNamePath)
 
     //Parameters for overload 0
     char* path0;
-    long path_len0;
+    size_t path_len0;
     long format0;
     bool overload0_called = false;
 
@@ -14736,7 +14736,7 @@ PHP_METHOD(php_wxFileName, MakeAbsolute)
 
     //Parameters for overload 0
     char* cwd0;
-    long cwd_len0;
+    size_t cwd_len0;
     long format0;
     bool overload0_called = false;
 
@@ -14874,7 +14874,7 @@ PHP_METHOD(php_wxFileName, MakeRelativeTo)
 
     //Parameters for overload 0
     char* pathBase0;
-    long pathBase_len0;
+    size_t pathBase_len0;
     long format0;
     bool overload0_called = false;
 
@@ -15017,7 +15017,7 @@ PHP_METHOD(php_wxFileName, Mkdir)
 
     //Parameters for overload 1
     char* dir1;
-    long dir_len1;
+    size_t dir_len1;
     long perm1;
     long flags1;
     bool overload1_called = false;
@@ -15220,7 +15220,7 @@ PHP_METHOD(php_wxFileName, Normalize)
     //Parameters for overload 0
     long flags0;
     char* cwd0;
-    long cwd_len0;
+    size_t cwd_len0;
     long format0;
     bool overload0_called = false;
 
@@ -15416,11 +15416,11 @@ PHP_METHOD(php_wxFSFile, __construct)
     zval* stream0;
     wxInputStream* object_pointer0_0 = 0;
     char* location0;
-    long location_len0;
+    size_t location_len0;
     char* mimetype0;
-    long mimetype_len0;
+    size_t mimetype_len0;
     char* anchor0;
-    long anchor_len0;
+    size_t anchor_len0;
     time_t modif0;
     bool overload0_called = false;
 
@@ -16490,7 +16490,7 @@ PHP_METHOD(php_wxFileSystemWatcher, AddTree)
     wxFileName* object_pointer0_0 = 0;
     long events0;
     char* filter0;
-    long filter_len0;
+    size_t filter_len0;
     bool overload0_called = false;
 
     

@@ -264,7 +264,7 @@ PHP_METHOD(php_wxMenuBar, Append)
     zval* menu0;
     wxMenu* object_pointer0_0 = 0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     bool overload0_called = false;
 
     
@@ -970,7 +970,7 @@ PHP_METHOD(php_wxMenuBar, FindMenu)
 
     //Parameters for overload 0
     char* title0;
-    long title_len0;
+    size_t title_len0;
     bool overload0_called = false;
 
     
@@ -1083,9 +1083,9 @@ PHP_METHOD(php_wxMenuBar, FindMenuItem)
 
     //Parameters for overload 0
     char* menuString0;
-    long menuString_len0;
+    size_t menuString_len0;
     char* itemString0;
-    long itemString_len0;
+    size_t itemString_len0;
     bool overload0_called = false;
 
     
@@ -2028,7 +2028,7 @@ PHP_METHOD(php_wxMenuBar, Insert)
     zval* menu0;
     wxMenu* object_pointer0_1 = 0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     bool overload0_called = false;
 
     
@@ -2783,7 +2783,7 @@ PHP_METHOD(php_wxMenuBar, Replace)
     zval* menu0;
     wxMenu* object_pointer0_1 = 0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     bool overload0_called = false;
 
     
@@ -2938,7 +2938,7 @@ PHP_METHOD(php_wxMenuBar, SetHelpString)
     //Parameters for overload 0
     long id0;
     char* helpString0;
-    long helpString_len0;
+    size_t helpString_len0;
     bool overload0_called = false;
 
     
@@ -3052,7 +3052,7 @@ PHP_METHOD(php_wxMenuBar, SetLabel)
     //Parameters for overload 0
     long id0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     bool overload0_called = false;
 
     
@@ -3166,7 +3166,7 @@ PHP_METHOD(php_wxMenuBar, SetMenuLabel)
     //Parameters for overload 0
     long pos0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     bool overload0_called = false;
 
     
@@ -3298,7 +3298,7 @@ PHP_METHOD(php_wxMenu, __construct)
 
     //Parameters for overload 1
     char* title1;
-    long title_len1;
+    size_t title_len1;
     long style1;
     bool overload1_called = false;
 
@@ -3505,7 +3505,7 @@ PHP_METHOD(php_wxMenu, SetTitle)
 
     //Parameters for overload 0
     char* title0;
-    long title_len0;
+    size_t title_len0;
     bool overload0_called = false;
 
     
@@ -3749,7 +3749,7 @@ PHP_METHOD(php_wxMenu, SetLabel)
     //Parameters for overload 0
     long id0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     bool overload0_called = false;
 
     
@@ -3993,7 +3993,7 @@ PHP_METHOD(php_wxMenu, SetHelpString)
     //Parameters for overload 0
     long id0;
     char* helpString0;
-    long helpString_len0;
+    size_t helpString_len0;
     bool overload0_called = false;
 
     
@@ -4454,9 +4454,9 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
     //Parameters for overload 0
     long id0;
     char* item0;
-    long item_len0;
+    size_t item_len0;
     char* helpString0;
-    long helpString_len0;
+    size_t helpString_len0;
     bool overload0_called = false;
 
     
@@ -4628,9 +4628,9 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
     //Parameters for overload 0
     long id0;
     char* item0;
-    long item_len0;
+    size_t item_len0;
     char* helpString0;
-    long helpString_len0;
+    size_t helpString_len0;
     bool overload0_called = false;
 
     
@@ -4802,9 +4802,9 @@ PHP_METHOD(php_wxMenu, Prepend)
     //Parameters for overload 0
     long id0;
     char* item0;
-    long item_len0;
+    size_t item_len0;
     char* helpString0;
-    long helpString_len0;
+    size_t helpString_len0;
     long kind0;
     bool overload0_called = false;
 
@@ -5129,20 +5129,20 @@ PHP_METHOD(php_wxMenu, Append)
     //Parameters for overload 0
     long id0;
     char* item0;
-    long item_len0;
+    size_t item_len0;
     char* helpString0;
-    long helpString_len0;
+    size_t helpString_len0;
     long kind0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     long id1;
     char* item1;
-    long item_len1;
+    size_t item_len1;
     zval* subMenu1;
     wxMenu* object_pointer1_2 = 0;
     char* helpString1;
-    long helpString_len1;
+    size_t helpString_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
@@ -5579,9 +5579,9 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
     //Parameters for overload 0
     long id0;
     char* item0;
-    long item_len0;
+    size_t item_len0;
     char* help0;
-    long help_len0;
+    size_t help_len0;
     bool overload0_called = false;
 
     
@@ -5753,9 +5753,9 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
     //Parameters for overload 0
     long id0;
     char* item0;
-    long item_len0;
+    size_t item_len0;
     char* help0;
-    long help_len0;
+    size_t help_len0;
     bool overload0_called = false;
 
     
@@ -6058,9 +6058,9 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
     zval* submenu0;
     wxMenu* object_pointer0_0 = 0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     char* help0;
-    long help_len0;
+    size_t help_len0;
     bool overload0_called = false;
 
     
@@ -7161,7 +7161,7 @@ PHP_METHOD(php_wxMenu, FindItem)
 
     //Parameters for overload 0
     char* itemString0;
-    long itemString_len0;
+    size_t itemString_len0;
     bool overload0_called = false;
 
     
@@ -8468,9 +8468,9 @@ PHP_METHOD(php_wxMenu, Insert)
     long pos1;
     long id1;
     char* item1;
-    long item_len1;
+    size_t item_len1;
     char* helpString1;
-    long helpString_len1;
+    size_t helpString_len1;
     long kind1;
     bool overload1_called = false;
 
@@ -8791,9 +8791,9 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
     long pos0;
     long id0;
     char* item0;
-    long item_len0;
+    size_t item_len0;
     char* helpString0;
-    long helpString_len0;
+    size_t helpString_len0;
     bool overload0_called = false;
 
     
@@ -8966,9 +8966,9 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
     long pos0;
     long id0;
     char* item0;
-    long item_len0;
+    size_t item_len0;
     char* helpString0;
-    long helpString_len0;
+    size_t helpString_len0;
     bool overload0_called = false;
 
     
@@ -9803,9 +9803,9 @@ PHP_METHOD(php_wxMenuItem, __construct)
     wxMenu* object_pointer0_0 = 0;
     long id0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     char* helpString0;
-    long helpString_len0;
+    size_t helpString_len0;
     long kind0;
     zval* subMenu0;
     wxMenu* object_pointer0_5 = 0;
@@ -10303,7 +10303,7 @@ PHP_METHOD(php_wxMenuItem, SetItemLabel)
 
     //Parameters for overload 0
     char* label0;
-    long label_len0;
+    size_t label_len0;
     bool overload0_called = false;
 
     
@@ -10416,7 +10416,7 @@ PHP_METHOD(php_wxMenuItem, SetHelp)
 
     //Parameters for overload 0
     char* helpString0;
-    long helpString_len0;
+    size_t helpString_len0;
     bool overload0_called = false;
 
     
@@ -11532,7 +11532,7 @@ PHP_METHOD(php_wxMenuItem, GetLabelText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     

@@ -163,7 +163,7 @@ PHP_METHOD(php_wxMediaCtrl, Load)
 
     //Parameters for overload 0
     char* fileName0;
-    long fileName_len0;
+    size_t fileName_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -417,18 +417,18 @@ PHP_METHOD(php_wxMediaCtrl, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* fileName0;
-    long fileName_len0;
+    size_t fileName_len0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
     zval* size0;
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* szBackend0;
-    long szBackend_len0;
+    size_t szBackend_len0;
     zval* validator0;
     wxValidator* object_pointer0_7 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -1149,7 +1149,7 @@ PHP_METHOD(php_wxMediaCtrl, LoadURI)
 
     //Parameters for overload 0
     char* fileName0;
-    long fileName_len0;
+    size_t fileName_len0;
     bool overload0_called = false;
 
     
@@ -1262,9 +1262,9 @@ PHP_METHOD(php_wxMediaCtrl, LoadURIWithProxy)
 
     //Parameters for overload 0
     char* fileName0;
-    long fileName_len0;
+    size_t fileName_len0;
     char* proxy0;
-    long proxy_len0;
+    size_t proxy_len0;
     bool overload0_called = false;
 
     
@@ -2140,18 +2140,18 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
     wxWindow* object_pointer1_0 = 0;
     long id1;
     char* fileName1;
-    long fileName_len1;
+    size_t fileName_len1;
     zval* pos1;
     wxPoint* object_pointer1_3 = 0;
     zval* size1;
     wxSize* object_pointer1_4 = 0;
     long style1;
     char* szBackend1;
-    long szBackend_len1;
+    size_t szBackend_len1;
     zval* validator1;
     wxValidator* object_pointer1_7 = 0;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -2769,7 +2769,7 @@ PHP_METHOD(php_wxSound, Create)
 
     //Parameters for overload 0
     char* fileName0;
-    long fileName_len0;
+    size_t fileName_len0;
     bool isResource0;
     bool overload0_called = false;
 
@@ -3006,7 +3006,7 @@ PHP_METHOD(php_wxSound, Play)
 
     //Parameters for overload 1
     char* filename1;
-    long filename_len1;
+    size_t filename_len1;
     long flags1;
     bool overload1_called = false;
 
@@ -3256,14 +3256,14 @@ PHP_METHOD(php_wxSound, __construct)
 
     //Parameters for overload 1
     char* fileName1;
-    long fileName_len1;
+    size_t fileName_len1;
     bool isResource1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     long size2;
     char* data2;
-    long data_len2;
+    size_t data_len2;
     bool overload2_called = false;
 
     

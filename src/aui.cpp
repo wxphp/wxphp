@@ -1574,7 +1574,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetShortHelp)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     bool overload0_called = false;
 
     
@@ -1927,7 +1927,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetLongHelp)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     bool overload0_called = false;
 
     
@@ -2039,7 +2039,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetLabel)
 
     //Parameters for overload 0
     char* s0;
-    long s_len0;
+    size_t s_len0;
     bool overload0_called = false;
 
     
@@ -10489,7 +10489,7 @@ PHP_METHOD(php_wxAuiToolBar, AddControl)
     zval* control0;
     wxControl* object_pointer0_0 = 0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     bool overload0_called = false;
 
     
@@ -10679,7 +10679,7 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
     //Parameters for overload 0
     long tool_id0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     long width0;
     bool overload0_called = false;
 
@@ -12311,7 +12311,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolShortHelp)
     //Parameters for overload 0
     long tool_id0;
     char* help_string0;
-    long help_string_len0;
+    size_t help_string_len0;
     bool overload0_called = false;
 
     
@@ -12758,7 +12758,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolLongHelp)
     //Parameters for overload 0
     long tool_id0;
     char* help_string0;
-    long help_string_len0;
+    size_t help_string_len0;
     bool overload0_called = false;
 
     
@@ -12871,7 +12871,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolLabel)
     //Parameters for overload 0
     long tool_id0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     bool overload0_called = false;
 
     
@@ -17702,27 +17702,27 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
     //Parameters for overload 0
     long tool_id0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     zval* bitmap0;
     wxBitmap* object_pointer0_2 = 0;
     char* short_help_string0;
-    long short_help_string_len0;
+    size_t short_help_string_len0;
     long kind0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     long tool_id1;
     char* label1;
-    long label_len1;
+    size_t label_len1;
     zval* bitmap1;
     wxBitmap* object_pointer1_2 = 0;
     zval* disabled_bitmap1;
     wxBitmap* object_pointer1_3 = 0;
     long kind1;
     char* short_help_string1;
-    long short_help_string_len1;
+    size_t short_help_string_len1;
     char* long_help_string1;
-    long long_help_string_len1;
+    size_t long_help_string_len1;
     zval* client_data1;
     wxObject* object_pointer1_7 = 0;
     bool overload1_called = false;
@@ -17737,9 +17737,9 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
     zval* client_data2;
     wxObject* object_pointer2_4 = 0;
     char* short_help_string2;
-    long short_help_string_len2;
+    size_t short_help_string_len2;
     char* long_help_string2;
-    long long_help_string_len2;
+    size_t long_help_string_len2;
     bool overload2_called = false;
 
     
@@ -19222,7 +19222,7 @@ PHP_METHOD(php_wxAuiNotebook, SetPageText)
     //Parameters for overload 0
     long page0;
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -22094,7 +22094,7 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
     zval* page0;
     wxWindow* object_pointer0_0 = 0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     bool select0;
     zval* bitmap0;
     wxBitmap* object_pointer0_3 = 0;
@@ -26242,7 +26242,7 @@ PHP_METHOD(php_wxAuiManager, LoadPerspective)
 
     //Parameters for overload 0
     char* perspective0;
-    long perspective_len0;
+    size_t perspective_len0;
     bool update0;
     bool overload0_called = false;
 
@@ -26368,7 +26368,7 @@ PHP_METHOD(php_wxAuiManager, LoadPaneInfo)
 
     //Parameters for overload 0
     char* pane_part0;
-    long pane_part_len0;
+    size_t pane_part_len0;
     zval* pane0;
     wxAuiPaneInfo* object_pointer0_1 = 0;
     bool overload0_called = false;
@@ -26774,7 +26774,7 @@ PHP_METHOD(php_wxAuiManager, GetPane)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -27776,7 +27776,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
     wxWindow* object_pointer1_0 = 0;
     long direction1;
     char* caption1;
-    long caption_len1;
+    size_t caption_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
@@ -30442,7 +30442,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Name)
 
     //Parameters for overload 0
     char* n0;
-    long n_len0;
+    size_t n_len0;
     bool overload0_called = false;
 
     
@@ -37542,7 +37542,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Caption)
 
     //Parameters for overload 0
     char* c0;
-    long c_len0;
+    size_t c_len0;
     bool overload0_called = false;
 
     

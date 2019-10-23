@@ -5464,11 +5464,11 @@ PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
     //Parameters for overload 0
     long button_id0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     zval* bitmap0;
     wxBitmap* object_pointer0_2 = 0;
     char* help_string0;
-    long help_string_len0;
+    size_t help_string_len0;
     bool overload0_called = false;
 
     
@@ -5659,11 +5659,11 @@ PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
     //Parameters for overload 0
     long button_id0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     zval* bitmap0;
     wxBitmap* object_pointer0_2 = 0;
     char* help_string0;
-    long help_string_len0;
+    size_t help_string_len0;
     bool overload0_called = false;
 
     
@@ -5854,11 +5854,11 @@ PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
     //Parameters for overload 0
     long button_id0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     zval* bitmap0;
     wxBitmap* object_pointer0_2 = 0;
     char* help_string0;
-    long help_string_len0;
+    size_t help_string_len0;
     bool overload0_called = false;
 
     
@@ -7075,18 +7075,18 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
     //Parameters for overload 0
     long button_id0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     zval* bitmap0;
     wxBitmap* object_pointer0_2 = 0;
     char* help_string0;
-    long help_string_len0;
+    size_t help_string_len0;
     long kind0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     long button_id1;
     char* label1;
-    long label_len1;
+    size_t label_len1;
     zval* bitmap1;
     wxBitmap* object_pointer1_2 = 0;
     zval* bitmap_small1;
@@ -7097,7 +7097,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
     wxBitmap* object_pointer1_5 = 0;
     long kind1;
     char* help_string1;
-    long help_string_len1;
+    size_t help_string_len1;
     bool overload1_called = false;
 
     
@@ -8966,7 +8966,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
     zval* validator1;
     wxValidator* object_pointer1_5 = 0;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -9324,7 +9324,7 @@ PHP_METHOD(php_wxRibbonGallery, Append)
     wxBitmap* object_pointer1_0 = 0;
     long id1;
     char* clientData1;
-    long clientData_len1;
+    size_t clientData_len1;
     zval clientData1_ref;
     bool overload1_called = false;
 
@@ -11807,7 +11807,7 @@ PHP_METHOD(php_wxRibbonGallery, SetItemClientData)
     zval* item0;
     wxRibbonGalleryItem* object_pointer0_0 = 0;
     char* data0;
-    long data_len0;
+    size_t data_len0;
     zval data0_ref;
     bool overload0_called = false;
 
@@ -12645,7 +12645,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
     wxRibbonBar* object_pointer0_0 = 0;
     long id0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     zval* icon0;
     wxBitmap* object_pointer0_3 = 0;
     long style0;
@@ -13737,7 +13737,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
     wxRibbonBar* object_pointer1_0 = 0;
     long id1;
     char* label1;
-    long label_len1;
+    size_t label_len1;
     zval* icon1;
     wxBitmap* object_pointer1_3 = 0;
     long style1;
@@ -14144,7 +14144,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* label0;
-    long label_len0;
+    size_t label_len0;
     zval* icon0;
     wxBitmap* object_pointer0_3 = 0;
     zval* pos0;
@@ -15555,7 +15555,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
     wxWindow* object_pointer1_0 = 0;
     long id1;
     char* label1;
-    long label_len1;
+    size_t label_len1;
     zval* minimised_icon1;
     wxBitmap* object_pointer1_3 = 0;
     zval* pos1;
@@ -15924,7 +15924,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
     zval* bitmap0;
     wxBitmap* object_pointer0_1 = 0;
     char* help_string0;
-    long help_string_len0;
+    size_t help_string_len0;
     bool overload0_called = false;
 
     
@@ -16117,7 +16117,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
     zval* bitmap0;
     wxBitmap* object_pointer0_1 = 0;
     char* help_string0;
-    long help_string_len0;
+    size_t help_string_len0;
     bool overload0_called = false;
 
     
@@ -16440,7 +16440,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
     zval* bitmap0;
     wxBitmap* object_pointer0_1 = 0;
     char* help_string0;
-    long help_string_len0;
+    size_t help_string_len0;
     long kind0;
     bool overload0_called = false;
 
@@ -16451,7 +16451,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
     zval* bitmap_disabled1;
     wxBitmap* object_pointer1_2 = 0;
     char* help_string1;
-    long help_string_len1;
+    size_t help_string_len1;
     long kind1;
     zval* client_data1;
     wxObject* object_pointer1_5 = 0;

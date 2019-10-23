@@ -1217,7 +1217,7 @@ PHP_METHOD(php_wxAcceleratorEntry, FromString)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     bool overload0_called = false;
 
     
@@ -9682,7 +9682,7 @@ PHP_METHOD(php_wxPrintData, SetFilename)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overload0_called = false;
 
     
@@ -10242,7 +10242,7 @@ PHP_METHOD(php_wxPrintData, SetPrinterName)
 
     //Parameters for overload 0
     char* printerName0;
-    long printerName_len0;
+    size_t printerName_len0;
     bool overload0_called = false;
 
     
@@ -19191,7 +19191,7 @@ PHP_METHOD(php_wxListItem, SetText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -21746,7 +21746,7 @@ PHP_METHOD(php_wxFileType, GetDescription)
 
     //Parameters for overload 0
     char* desc0;
-    long desc_len0;
+    size_t desc_len0;
     zval desc0_ref;
     bool overload0_called = false;
 
@@ -22001,7 +22001,7 @@ PHP_METHOD(php_wxFileType, GetMimeType)
 
     //Parameters for overload 0
     char* mimeType0;
-    long mimeType_len0;
+    size_t mimeType_len0;
     zval mimeType0_ref;
     bool overload0_called = false;
 
@@ -22256,7 +22256,7 @@ PHP_METHOD(php_wxFileType, GetOpenCommand)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overload0_called = false;
 
     
@@ -27299,7 +27299,7 @@ PHP_METHOD(php_wxVariant, Convert)
 
     //Parameters for overload 4
     char* value4;
-    long value_len4;
+    size_t value_len4;
     zval value4_ref;
     bool overload4_called = false;
 
@@ -29550,7 +29550,7 @@ PHP_METHOD(php_wxVariant, IsType)
 
     //Parameters for overload 0
     char* type0;
-    long type_len0;
+    size_t type_len0;
     bool overload0_called = false;
 
     
@@ -30080,54 +30080,54 @@ PHP_METHOD(php_wxVariant, __construct)
 
     //Parameters for overload 0
     char* value0;
-    long value_len0;
+    size_t value_len0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     long value1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     bool value2;
     char* name2;
-    long name_len2;
+    size_t name_len2;
     bool overload2_called = false;
 
     //Parameters for overload 3
     double value3;
     char* name3;
-    long name_len3;
+    size_t name_len3;
     bool overload3_called = false;
 
     //Parameters for overload 4
     char* value4;
-    long value_len4;
+    size_t value_len4;
     zval value4_ref;
     char* name4;
-    long name_len4;
+    size_t name_len4;
     bool overload4_called = false;
 
     //Parameters for overload 5
     zval* value5;
     wxObject* object_pointer5_0 = 0;
     char* name5;
-    long name_len5;
+    size_t name_len5;
     bool overload5_called = false;
 
     //Parameters for overload 6
     time_t val6;
     char* name6;
-    long name_len6;
+    size_t name_len6;
     bool overload6_called = false;
 
     //Parameters for overload 7
     zval* val7;
     char* name7;
-    long name_len7;
+    size_t name_len7;
     bool overload7_called = false;
 
     //Parameters for overload 8
@@ -31397,7 +31397,7 @@ PHP_METHOD(php_wxVariantData, Read)
 
     //Parameters for overload 0
     char* string0;
-    long string_len0;
+    size_t string_len0;
     zval string0_ref;
     bool overload0_called = false;
 
@@ -31516,7 +31516,7 @@ PHP_METHOD(php_wxVariantData, Write)
 
     //Parameters for overload 0
     char* string0;
-    long string_len0;
+    size_t string_len0;
     zval string0_ref;
     bool overload0_called = false;
 
@@ -32735,14 +32735,14 @@ PHP_METHOD(php_wxVersionInfo, __construct)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     long major0;
     long minor0;
     long micro0;
     char* description0;
-    long description_len0;
+    size_t description_len0;
     char* copyright0;
-    long copyright_len0;
+    size_t copyright_len0;
     bool overload0_called = false;
 
     

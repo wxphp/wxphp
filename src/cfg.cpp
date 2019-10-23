@@ -699,7 +699,7 @@ PHP_METHOD(php_wxConfigBase, Exists)
 
     //Parameters for overload 0
     char* strName0;
-    long strName_len0;
+    size_t strName_len0;
     bool overload0_called = false;
 
     
@@ -1201,7 +1201,7 @@ PHP_METHOD(php_wxConfigBase, GetEntryType)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -2483,39 +2483,39 @@ PHP_METHOD(php_wxConfigBase, Read)
 
     //Parameters for overload 0
     char* key0;
-    long key_len0;
+    size_t key_len0;
     char* str0;
-    long str_len0;
+    size_t str_len0;
     zval str0_ref;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* key1;
-    long key_len1;
+    size_t key_len1;
     char* str1;
-    long str_len1;
+    size_t str_len1;
     zval str1_ref;
     char* defaultVal1;
-    long defaultVal_len1;
+    size_t defaultVal_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* key2;
-    long key_len2;
+    size_t key_len2;
     char* defaultVal2;
-    long defaultVal_len2;
+    size_t defaultVal_len2;
     bool overload2_called = false;
 
     //Parameters for overload 3
     char* key3;
-    long key_len3;
+    size_t key_len3;
     long* l3;
     zval l3_ref;
     bool overload3_called = false;
 
     //Parameters for overload 4
     char* key4;
-    long key_len4;
+    size_t key_len4;
     long* l4;
     zval l4_ref;
     long defaultVal4;
@@ -2523,14 +2523,14 @@ PHP_METHOD(php_wxConfigBase, Read)
 
     //Parameters for overload 5
     char* key5;
-    long key_len5;
+    size_t key_len5;
     double* d5;
     zval d5_ref;
     bool overload5_called = false;
 
     //Parameters for overload 6
     char* key6;
-    long key_len6;
+    size_t key_len6;
     double* d6;
     zval d6_ref;
     double defaultVal6;
@@ -2538,14 +2538,14 @@ PHP_METHOD(php_wxConfigBase, Read)
 
     //Parameters for overload 7
     char* key7;
-    long key_len7;
+    size_t key_len7;
     double* f7;
     zval f7_ref;
     bool overload7_called = false;
 
     //Parameters for overload 8
     char* key8;
-    long key_len8;
+    size_t key_len8;
     double* f8;
     zval f8_ref;
     double defaultVal8;
@@ -2553,14 +2553,14 @@ PHP_METHOD(php_wxConfigBase, Read)
 
     //Parameters for overload 9
     char* key9;
-    long key_len9;
+    size_t key_len9;
     bool* b9;
     zval b9_ref;
     bool overload9_called = false;
 
     //Parameters for overload 10
     char* key10;
-    long key_len10;
+    size_t key_len10;
     bool* d10;
     zval d10_ref;
     bool defaultVal10;
@@ -3201,7 +3201,7 @@ PHP_METHOD(php_wxConfigBase, ReadBool)
 
     //Parameters for overload 0
     char* key0;
-    long key_len0;
+    size_t key_len0;
     bool defaultVal0;
     bool overload0_called = false;
 
@@ -3326,7 +3326,7 @@ PHP_METHOD(php_wxConfigBase, ReadDouble)
 
     //Parameters for overload 0
     char* key0;
-    long key_len0;
+    size_t key_len0;
     double defaultVal0;
     bool overload0_called = false;
 
@@ -3451,7 +3451,7 @@ PHP_METHOD(php_wxConfigBase, ReadLong)
 
     //Parameters for overload 0
     char* key0;
-    long key_len0;
+    size_t key_len0;
     long defaultVal0;
     bool overload0_called = false;
 
@@ -4286,26 +4286,26 @@ PHP_METHOD(php_wxConfigBase, Write)
 
     //Parameters for overload 0
     char* key0;
-    long key_len0;
+    size_t key_len0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* key1;
-    long key_len1;
+    size_t key_len1;
     long value1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* key2;
-    long key_len2;
+    size_t key_len2;
     double value2;
     bool overload2_called = false;
 
     //Parameters for overload 3
     char* key3;
-    long key_len3;
+    size_t key_len3;
     bool value3;
     bool overload3_called = false;
 
@@ -6000,7 +6000,7 @@ PHP_METHOD(php_wxFileConfig, DeleteEntry)
 
     //Parameters for overload 0
     char* key0;
-    long key_len0;
+    size_t key_len0;
     bool bDeleteGroupIfEmpty0;
     bool overload0_called = false;
 
@@ -6132,7 +6132,7 @@ PHP_METHOD(php_wxFileConfig, DeleteGroup)
 
     //Parameters for overload 0
     char* key0;
-    long key_len0;
+    size_t key_len0;
     bool overload0_called = false;
 
     
@@ -6378,7 +6378,7 @@ PHP_METHOD(php_wxFileConfig, GetFirstEntry)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     zval str0_ref;
     long index0;
     zval index0_ref;
@@ -6503,7 +6503,7 @@ PHP_METHOD(php_wxFileConfig, GetFirstGroup)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     zval str0_ref;
     long index0;
     zval index0_ref;
@@ -6628,7 +6628,7 @@ PHP_METHOD(php_wxFileConfig, GetGlobalFile)
 
     //Parameters for overload 0
     char* basename0;
-    long basename_len0;
+    size_t basename_len0;
     bool overload0_called = false;
 
     
@@ -6748,7 +6748,7 @@ PHP_METHOD(php_wxFileConfig, GetGlobalFileName)
 
     //Parameters for overload 0
     char* szFile0;
-    long szFile_len0;
+    size_t szFile_len0;
     bool overload0_called = false;
 
     
@@ -6864,7 +6864,7 @@ PHP_METHOD(php_wxFileConfig, GetLocalFile)
 
     //Parameters for overload 0
     char* basename0;
-    long basename_len0;
+    size_t basename_len0;
     long style0;
     bool overload0_called = false;
 
@@ -7005,7 +7005,7 @@ PHP_METHOD(php_wxFileConfig, GetLocalFileName)
 
     //Parameters for overload 0
     char* szFile0;
-    long szFile_len0;
+    size_t szFile_len0;
     long style0;
     bool overload0_called = false;
 
@@ -7137,7 +7137,7 @@ PHP_METHOD(php_wxFileConfig, GetNextEntry)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     zval str0_ref;
     long index0;
     zval index0_ref;
@@ -7262,7 +7262,7 @@ PHP_METHOD(php_wxFileConfig, GetNextGroup)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     zval str0_ref;
     long index0;
     zval index0_ref;
@@ -7758,7 +7758,7 @@ PHP_METHOD(php_wxFileConfig, HasEntry)
 
     //Parameters for overload 0
     char* strName0;
-    long strName_len0;
+    size_t strName_len0;
     bool overload0_called = false;
 
     
@@ -7873,7 +7873,7 @@ PHP_METHOD(php_wxFileConfig, HasGroup)
 
     //Parameters for overload 0
     char* strName0;
-    long strName_len0;
+    size_t strName_len0;
     bool overload0_called = false;
 
     
@@ -7989,9 +7989,9 @@ PHP_METHOD(php_wxFileConfig, RenameEntry)
 
     //Parameters for overload 0
     char* oldName0;
-    long oldName_len0;
+    size_t oldName_len0;
     char* newName0;
-    long newName_len0;
+    size_t newName_len0;
     bool overload0_called = false;
 
     
@@ -8107,9 +8107,9 @@ PHP_METHOD(php_wxFileConfig, RenameGroup)
 
     //Parameters for overload 0
     char* oldName0;
-    long oldName_len0;
+    size_t oldName_len0;
     char* newName0;
-    long newName_len0;
+    size_t newName_len0;
     bool overload0_called = false;
 
     
@@ -8225,7 +8225,7 @@ PHP_METHOD(php_wxFileConfig, SetPath)
 
     //Parameters for overload 0
     char* strPath0;
-    long strPath_len0;
+    size_t strPath_len0;
     bool overload0_called = false;
 
     
@@ -8537,7 +8537,7 @@ PHP_METHOD(php_wxFontMapper, CharsetToEncoding)
 
     //Parameters for overload 0
     char* charset0;
-    long charset_len0;
+    size_t charset_len0;
     bool interactive0;
     bool overload0_called = false;
 
@@ -8793,7 +8793,7 @@ PHP_METHOD(php_wxFontMapper, GetAltForEncoding)
     long* alt_encoding0;
     zval alt_encoding0_ref;
     char* facename0;
-    long facename_len0;
+    size_t facename_len0;
     bool interactive0;
     bool overload0_called = false;
 
@@ -9180,7 +9180,7 @@ PHP_METHOD(php_wxFontMapper, GetEncodingFromName)
 
     //Parameters for overload 0
     char* encoding0;
-    long encoding_len0;
+    size_t encoding_len0;
     bool overload0_called = false;
 
     
@@ -9518,7 +9518,7 @@ PHP_METHOD(php_wxFontMapper, IsEncodingAvailable)
     //Parameters for overload 0
     long encoding0;
     char* facename0;
-    long facename_len0;
+    size_t facename_len0;
     bool overload0_called = false;
 
     
@@ -9793,7 +9793,7 @@ PHP_METHOD(php_wxFontMapper, SetConfigPath)
 
     //Parameters for overload 0
     char* prefix0;
-    long prefix_len0;
+    size_t prefix_len0;
     bool overload0_called = false;
 
     
@@ -10037,7 +10037,7 @@ PHP_METHOD(php_wxFontMapper, SetDialogTitle)
 
     //Parameters for overload 0
     char* title0;
-    long title_len0;
+    size_t title_len0;
     bool overload0_called = false;
 
     
@@ -10870,7 +10870,7 @@ PHP_METHOD(php_wxPlatformInfo, GetArch)
 
     //Parameters for overload 0
     char* arch0;
-    long arch_len0;
+    size_t arch_len0;
     bool overload0_called = false;
 
     
@@ -11355,7 +11355,7 @@ PHP_METHOD(php_wxPlatformInfo, GetEndianness)
 
     //Parameters for overload 1
     char* end1;
-    long end_len1;
+    size_t end_len1;
     bool overload1_called = false;
 
     
@@ -12241,7 +12241,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemId)
 
     //Parameters for overload 1
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -12542,7 +12542,7 @@ PHP_METHOD(php_wxPlatformInfo, GetPortId)
 
     //Parameters for overload 1
     char* portname1;
-    long portname_len1;
+    size_t portname_len1;
     bool overload1_called = false;
 
     
@@ -13534,7 +13534,7 @@ PHP_METHOD(php_wxPlatformInfo, SetDesktopEnvironment)
 
     //Parameters for overload 0
     char* de0;
-    long de_len0;
+    size_t de_len0;
     bool overload0_called = false;
 
     
@@ -13872,7 +13872,7 @@ PHP_METHOD(php_wxPlatformInfo, SetOperatingSystemDescription)
 
     //Parameters for overload 0
     char* desc0;
-    long desc_len0;
+    size_t desc_len0;
     bool overload0_called = false;
 
     
@@ -15096,7 +15096,7 @@ PHP_METHOD(php_wxSystemOptions, GetOption)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -15212,7 +15212,7 @@ PHP_METHOD(php_wxSystemOptions, GetOptionInt)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -15326,7 +15326,7 @@ PHP_METHOD(php_wxSystemOptions, HasOption)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -15440,7 +15440,7 @@ PHP_METHOD(php_wxSystemOptions, IsFalse)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -15554,14 +15554,14 @@ PHP_METHOD(php_wxSystemOptions, SetOption)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* name1;
-    long name_len1;
+    size_t name_len1;
     long value1;
     bool overload1_called = false;
 

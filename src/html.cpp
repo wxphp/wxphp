@@ -2393,7 +2393,7 @@ PHP_METHOD(php_wxHtmlCell, SetId)
 
     //Parameters for overload 0
     char* id0;
-    long id_len0;
+    size_t id_len0;
     bool overload0_called = false;
 
     
@@ -3156,7 +3156,7 @@ PHP_METHOD(php_wxHtmlCell, Find)
     //Parameters for overload 0
     long condition0;
     char* param0;
-    long param_len0;
+    size_t param_len0;
     bool overload0_called = false;
 
     
@@ -5778,9 +5778,9 @@ PHP_METHOD(php_wxHtmlLinkInfo, __construct)
 
     //Parameters for overload 1
     char* href1;
-    long href_len1;
+    size_t href_len1;
     char* target1;
-    long target_len1;
+    size_t target_len1;
     bool overload1_called = false;
 
     
@@ -7406,7 +7406,7 @@ PHP_METHOD(php_wxHtmlTag, GetParam)
 
     //Parameters for overload 0
     char* par0;
-    long par_len0;
+    size_t par_len0;
     bool with_quotes0;
     bool overload0_called = false;
 
@@ -7542,7 +7542,7 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsColour)
 
     //Parameters for overload 0
     char* par0;
-    long par_len0;
+    size_t par_len0;
     zval* clr0;
     wxColour* object_pointer0_1 = 0;
     bool overload0_called = false;
@@ -7788,7 +7788,7 @@ PHP_METHOD(php_wxHtmlTag, HasParam)
 
     //Parameters for overload 0
     char* par0;
-    long par_len0;
+    size_t par_len0;
     bool overload0_called = false;
 
     
@@ -7904,7 +7904,7 @@ PHP_METHOD(php_wxHtmlTag, ParseAsColour)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     zval* clr0;
     wxColour* object_pointer0_1 = 0;
     bool overload0_called = false;
@@ -8037,11 +8037,11 @@ PHP_METHOD(php_wxHtmlTag, ScanParam)
 
     //Parameters for overload 0
     char* par0;
-    long par_len0;
+    size_t par_len0;
     char* format0;
-    long format_len0;
+    size_t format_len0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     zval value0_ref;
     bool overload0_called = false;
 
@@ -8162,7 +8162,7 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsInt)
 
     //Parameters for overload 0
     char* par0;
-    long par_len0;
+    size_t par_len0;
     long* value0;
     zval value0_ref;
     bool overload0_called = false;
@@ -8341,7 +8341,7 @@ PHP_METHOD(php_wxHtmlWindow, AppendToPage)
 
     //Parameters for overload 0
     char* source0;
-    long source_len0;
+    size_t source_len0;
     bool overload0_called = false;
 
     
@@ -9446,7 +9446,7 @@ PHP_METHOD(php_wxHtmlWindow, LoadPage)
 
     //Parameters for overload 0
     char* location0;
-    long location_len0;
+    size_t location_len0;
     bool overload0_called = false;
 
     
@@ -10761,7 +10761,7 @@ PHP_METHOD(php_wxHtmlWindow, SetPage)
 
     //Parameters for overload 0
     char* source0;
-    long source_len0;
+    size_t source_len0;
     bool overload0_called = false;
 
     
@@ -10876,7 +10876,7 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedFrame)
     zval* frame0;
     wxFrame* object_pointer0_0 = 0;
     char* format0;
-    long format_len0;
+    size_t format_len0;
     bool overload0_called = false;
 
     
@@ -11193,9 +11193,9 @@ PHP_METHOD(php_wxHtmlWindow, SetStandardFonts)
     //Parameters for overload 0
     long size0;
     char* normal_face0;
-    long normal_face_len0;
+    size_t normal_face_len0;
     char* fixed_face0;
-    long fixed_face_len0;
+    size_t fixed_face_len0;
     bool overload0_called = false;
 
     
@@ -11455,7 +11455,7 @@ PHP_METHOD(php_wxHtmlWindow, WriteCustomization)
     zval* cfg0;
     wxConfigBase* object_pointer0_0 = 0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -11573,7 +11573,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
     wxSize* object_pointer1_3 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -12110,9 +12110,9 @@ PHP_METHOD(php_wxHtmlWindow, SetFonts)
 
     //Parameters for overload 0
     char* normal_face0;
-    long normal_face_len0;
+    size_t normal_face_len0;
     char* fixed_face0;
-    long fixed_face_len0;
+    size_t fixed_face_len0;
     zval sizes0;
     bool overload0_called = false;
 
@@ -13653,9 +13653,9 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetStandardFonts)
     //Parameters for overload 0
     long size0;
     char* normal_face0;
-    long normal_face_len0;
+    size_t normal_face_len0;
     char* fixed_face0;
-    long fixed_face_len0;
+    size_t fixed_face_len0;
     bool overload0_called = false;
 
     
@@ -13917,9 +13917,9 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetHtmlText)
 
     //Parameters for overload 0
     char* html0;
-    long html_len0;
+    size_t html_len0;
     char* basepath0;
-    long basepath_len0;
+    size_t basepath_len0;
     bool isdir0;
     bool overload0_called = false;
 
@@ -14057,9 +14057,9 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetFonts)
 
     //Parameters for overload 0
     char* normal_face0;
-    long normal_face_len0;
+    size_t normal_face_len0;
     char* fixed_face0;
-    long fixed_face_len0;
+    size_t fixed_face_len0;
     zval sizes0;
     bool overload0_called = false;
 
@@ -15043,7 +15043,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewFile)
 
     //Parameters for overload 0
     char* htmlfile0;
-    long htmlfile_len0;
+    size_t htmlfile_len0;
     bool overload0_called = false;
 
     
@@ -15156,9 +15156,9 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewText)
 
     //Parameters for overload 0
     char* htmltext0;
-    long htmltext_len0;
+    size_t htmltext_len0;
     char* basepath0;
-    long basepath_len0;
+    size_t basepath_len0;
     bool overload0_called = false;
 
     
@@ -15283,7 +15283,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintFile)
 
     //Parameters for overload 0
     char* htmlfile0;
-    long htmlfile_len0;
+    size_t htmlfile_len0;
     bool overload0_called = false;
 
     
@@ -15396,9 +15396,9 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintText)
 
     //Parameters for overload 0
     char* htmltext0;
-    long htmltext_len0;
+    size_t htmltext_len0;
     char* basepath0;
-    long basepath_len0;
+    size_t basepath_len0;
     bool overload0_called = false;
 
     
@@ -15523,7 +15523,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFooter)
 
     //Parameters for overload 0
     char* footer0;
-    long footer_len0;
+    size_t footer_len0;
     long pg0;
     bool overload0_called = false;
 
@@ -15649,7 +15649,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetHeader)
 
     //Parameters for overload 0
     char* header0;
-    long header_len0;
+    size_t header_len0;
     long pg0;
     bool overload0_called = false;
 
@@ -15738,7 +15738,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, __construct)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     zval* parentWindow0;
     wxWindow* object_pointer0_1 = 0;
     bool overload0_called = false;
@@ -15907,9 +15907,9 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetStandardFonts)
     //Parameters for overload 0
     long size0;
     char* normal_face0;
-    long normal_face_len0;
+    size_t normal_face_len0;
     char* fixed_face0;
-    long fixed_face_len0;
+    size_t fixed_face_len0;
     bool overload0_called = false;
 
     
@@ -16189,7 +16189,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetName)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -16302,9 +16302,9 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
 
     //Parameters for overload 0
     char* normal_face0;
-    long normal_face_len0;
+    size_t normal_face_len0;
     char* fixed_face0;
-    long fixed_face_len0;
+    size_t fixed_face_len0;
     zval sizes0;
     bool overload0_called = false;
 
@@ -16500,7 +16500,7 @@ PHP_METHOD(php_wxHtmlPrintout, __construct)
 
     //Parameters for overload 0
     char* title0;
-    long title_len0;
+    size_t title_len0;
     bool overload0_called = false;
 
     
@@ -16813,9 +16813,9 @@ PHP_METHOD(php_wxHtmlPrintout, SetHtmlText)
 
     //Parameters for overload 0
     char* html0;
-    long html_len0;
+    size_t html_len0;
     char* basepath0;
-    long basepath_len0;
+    size_t basepath_len0;
     bool isdir0;
     bool overload0_called = false;
 
@@ -16953,7 +16953,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetHtmlFile)
 
     //Parameters for overload 0
     char* htmlfile0;
-    long htmlfile_len0;
+    size_t htmlfile_len0;
     bool overload0_called = false;
 
     
@@ -17066,7 +17066,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetHeader)
 
     //Parameters for overload 0
     char* header0;
-    long header_len0;
+    size_t header_len0;
     long pg0;
     bool overload0_called = false;
 
@@ -17192,7 +17192,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetFooter)
 
     //Parameters for overload 0
     char* footer0;
-    long footer_len0;
+    size_t footer_len0;
     long pg0;
     bool overload0_called = false;
 
@@ -17318,9 +17318,9 @@ PHP_METHOD(php_wxHtmlPrintout, SetFonts)
 
     //Parameters for overload 0
     char* normal_face0;
-    long normal_face_len0;
+    size_t normal_face_len0;
     char* fixed_face0;
-    long fixed_face_len0;
+    size_t fixed_face_len0;
     zval sizes0;
     bool overload0_called = false;
 
@@ -20831,7 +20831,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontFace)
 
     //Parameters for overload 0
     char* face0;
-    long face_len0;
+    size_t face_len0;
     bool overload0_called = false;
 
     
@@ -21407,9 +21407,9 @@ PHP_METHOD(php_wxHtmlWinParser, SetFonts)
 
     //Parameters for overload 0
     char* normal_face0;
-    long normal_face_len0;
+    size_t normal_face_len0;
     char* fixed_face0;
-    long fixed_face_len0;
+    size_t fixed_face_len0;
     zval sizes0;
     bool overload0_called = false;
 

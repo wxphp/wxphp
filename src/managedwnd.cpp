@@ -129,14 +129,14 @@ PHP_METHOD(php_wxFrame, __construct)
     wxWindow* object_pointer1_0 = 0;
     long id1;
     char* title1;
-    long title_len1;
+    size_t title_len1;
     zval* pos1;
     wxPoint* object_pointer1_3 = 0;
     zval* size1;
     wxSize* object_pointer1_4 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -583,14 +583,14 @@ PHP_METHOD(php_wxFrame, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
     zval* size0;
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -598,14 +598,14 @@ PHP_METHOD(php_wxFrame, Create)
     wxMDIParentFrame* object_pointer1_0 = 0;
     long id1;
     char* title1;
-    long title_len1;
+    size_t title_len1;
     zval* pos1;
     wxPoint* object_pointer1_3 = 0;
     zval* size1;
     wxSize* object_pointer1_4 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
@@ -613,7 +613,7 @@ PHP_METHOD(php_wxFrame, Create)
     wxWindow* object_pointer2_0 = 0;
     long id2;
     char* title2;
-    long title_len2;
+    size_t title_len2;
     long style2;
     bool overload2_called = false;
 
@@ -622,12 +622,12 @@ PHP_METHOD(php_wxFrame, Create)
     wxWindow* object_pointer3_0 = 0;
     long id3;
     char* title3;
-    long title_len3;
+    size_t title_len3;
     long style3;
     zval* config3;
     wxConfigBase* object_pointer3_4 = 0;
     char* rootpath3;
-    long rootpath_len3;
+    size_t rootpath_len3;
     bool overload3_called = false;
 
     
@@ -1530,7 +1530,7 @@ PHP_METHOD(php_wxFrame, SetStatusText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     long number0;
     bool overload0_called = false;
 
@@ -2834,7 +2834,7 @@ PHP_METHOD(php_wxFrame, PushStatusText)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     long number0;
     bool overload0_called = false;
 
@@ -3581,7 +3581,7 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
     long style0;
     long id0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -3887,7 +3887,7 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
     long style0;
     long id0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -4920,14 +4920,14 @@ PHP_METHOD(php_wxMDIParentFrame, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
     zval* size0;
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -5837,14 +5837,14 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
     wxWindow* object_pointer1_0 = 0;
     long id1;
     char* title1;
-    long title_len1;
+    size_t title_len1;
     zval* pos1;
     wxPoint* object_pointer1_3 = 0;
     zval* size1;
     wxSize* object_pointer1_4 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -6123,14 +6123,14 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
     wxMDIParentFrame* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
     zval* size0;
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -6868,14 +6868,14 @@ PHP_METHOD(php_wxMDIChildFrame, Create)
     wxMDIParentFrame* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
     zval* size0;
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -7258,14 +7258,14 @@ PHP_METHOD(php_wxMiniFrame, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
     zval* size0;
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -7458,14 +7458,14 @@ PHP_METHOD(php_wxMiniFrame, __construct)
     wxWindow* object_pointer1_0 = 0;
     long id1;
     char* title1;
-    long title_len1;
+    size_t title_len1;
     zval* pos1;
     wxPoint* object_pointer1_3 = 0;
     zval* size1;
     wxSize* object_pointer1_4 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -9005,14 +9005,14 @@ PHP_METHOD(php_wxPropertySheetDialog, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
     zval* size0;
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -10190,14 +10190,14 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
     zval* size0;
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -10959,14 +10959,14 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
     wxWindow* object_pointer1_0 = 0;
     long id1;
     char* title1;
-    long title_len1;
+    size_t title_len1;
     zval* pos1;
     wxPoint* object_pointer1_3 = 0;
     zval* size1;
     wxSize* object_pointer1_4 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -11322,7 +11322,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetTitle)
 
     //Parameters for overload 0
     char* title0;
-    long title_len0;
+    size_t title_len0;
     bool overload0_called = false;
 
     
@@ -13217,14 +13217,14 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
     zval* size0;
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -13232,14 +13232,14 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
     wxMDIParentFrame* object_pointer1_0 = 0;
     long id1;
     char* title1;
-    long title_len1;
+    size_t title_len1;
     zval* pos1;
     wxPoint* object_pointer1_3 = 0;
     zval* size1;
     wxSize* object_pointer1_4 = 0;
     long style1;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
@@ -13247,7 +13247,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
     wxWindow* object_pointer2_0 = 0;
     long id2;
     char* title2;
-    long title_len2;
+    size_t title_len2;
     long style2;
     bool overload2_called = false;
 
@@ -13256,12 +13256,12 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
     wxWindow* object_pointer3_0 = 0;
     long id3;
     char* title3;
-    long title_len3;
+    size_t title_len3;
     long style3;
     zval* config3;
     wxConfigBase* object_pointer3_4 = 0;
     char* rootpath3;
-    long rootpath_len3;
+    size_t rootpath_len3;
     bool overload3_called = false;
 
     //Parameters for overload 4
@@ -13270,22 +13270,22 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
     zval* data4;
     wxFindReplaceData* object_pointer4_1 = 0;
     char* title4;
-    long title_len4;
+    size_t title_len4;
     long style4;
     bool overload4_called = false;
 
     //Parameters for overload 5
     char* symbol5;
-    long symbol_len5;
+    size_t symbol_len5;
     char* initialFont5;
-    long initialFont_len5;
+    size_t initialFont_len5;
     char* normalTextFont5;
-    long normalTextFont_len5;
+    size_t normalTextFont_len5;
     zval* parent5;
     wxWindow* object_pointer5_3 = 0;
     long id5;
     char* caption5;
-    long caption_len5;
+    size_t caption_len5;
     zval* pos5;
     wxPoint* object_pointer5_6 = 0;
     zval* size5;
@@ -13298,7 +13298,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
     wxWindow* object_pointer6_0 = 0;
     long id6;
     char* title6;
-    long title_len6;
+    size_t title_len6;
     zval* bitmap6;
     wxBitmap* object_pointer6_3 = 0;
     zval* pos6;

@@ -275,9 +275,9 @@ PHP_METHOD(php_wxAboutDialogInfo, SetWebSite)
 
     //Parameters for overload 0
     char* url0;
-    long url_len0;
+    size_t url_len0;
     char* desc0;
-    long desc_len0;
+    size_t desc_len0;
     bool overload0_called = false;
 
     
@@ -402,9 +402,9 @@ PHP_METHOD(php_wxAboutDialogInfo, SetVersion)
 
     //Parameters for overload 0
     char* version0;
-    long version_len0;
+    size_t version_len0;
     char* longVersion0;
-    long longVersion_len0;
+    size_t longVersion_len0;
     bool overload0_called = false;
 
     
@@ -529,7 +529,7 @@ PHP_METHOD(php_wxAboutDialogInfo, AddDeveloper)
 
     //Parameters for overload 0
     char* developer0;
-    long developer_len0;
+    size_t developer_len0;
     bool overload0_called = false;
 
     
@@ -642,7 +642,7 @@ PHP_METHOD(php_wxAboutDialogInfo, AddDocWriter)
 
     //Parameters for overload 0
     char* docwriter0;
-    long docwriter_len0;
+    size_t docwriter_len0;
     bool overload0_called = false;
 
     
@@ -755,7 +755,7 @@ PHP_METHOD(php_wxAboutDialogInfo, AddTranslator)
 
     //Parameters for overload 0
     char* translator0;
-    long translator_len0;
+    size_t translator_len0;
     bool overload0_called = false;
 
     
@@ -1430,7 +1430,7 @@ PHP_METHOD(php_wxAboutDialogInfo, SetCopyright)
 
     //Parameters for overload 0
     char* copyright0;
-    long copyright_len0;
+    size_t copyright_len0;
     bool overload0_called = false;
 
     
@@ -1543,7 +1543,7 @@ PHP_METHOD(php_wxAboutDialogInfo, SetDescription)
 
     //Parameters for overload 0
     char* desc0;
-    long desc_len0;
+    size_t desc_len0;
     bool overload0_called = false;
 
     
@@ -2047,7 +2047,7 @@ PHP_METHOD(php_wxAboutDialogInfo, SetLicence)
 
     //Parameters for overload 0
     char* licence0;
-    long licence_len0;
+    size_t licence_len0;
     bool overload0_called = false;
 
     
@@ -2160,7 +2160,7 @@ PHP_METHOD(php_wxAboutDialogInfo, SetLicense)
 
     //Parameters for overload 0
     char* licence0;
-    long licence_len0;
+    size_t licence_len0;
     bool overload0_called = false;
 
     
@@ -2273,7 +2273,7 @@ PHP_METHOD(php_wxAboutDialogInfo, SetName)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -2516,7 +2516,7 @@ PHP_METHOD(php_wxAboutDialogInfo, AddArtist)
 
     //Parameters for overload 0
     char* artist0;
-    long artist_len0;
+    size_t artist_len0;
     bool overload0_called = false;
 
     
@@ -2782,7 +2782,7 @@ PHP_METHOD(php_wxBusyInfo, __construct)
 
     //Parameters for overload 0
     char* msg0;
-    long msg_len0;
+    size_t msg_len0;
     zval* parent0;
     wxWindow* object_pointer0_1 = 0;
     bool overload0_called = false;
@@ -3388,13 +3388,13 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     long n0;
     zval choices0;
     char* clientData0;
-    long clientData_len0;
+    size_t clientData_len0;
     zval clientData0_ref;
     long style0;
     zval* pos0;
@@ -3405,12 +3405,12 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
     zval* parent1;
     wxWindow* object_pointer1_0 = 0;
     char* message1;
-    long message_len1;
+    size_t message_len1;
     char* caption1;
-    long caption_len1;
+    size_t caption_len1;
     zval* choices1;
     char* clientData1;
-    long clientData_len1;
+    size_t clientData_len1;
     zval clientData1_ref;
     long style1;
     zval* pos1;
@@ -8447,7 +8447,7 @@ PHP_METHOD(php_wxColourData, FromString)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     bool overload0_called = false;
 
     
@@ -9016,14 +9016,14 @@ PHP_METHOD(php_wxDialog, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
     zval* size0;
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -9032,22 +9032,22 @@ PHP_METHOD(php_wxDialog, Create)
     zval* data1;
     wxFindReplaceData* object_pointer1_1 = 0;
     char* title1;
-    long title_len1;
+    size_t title_len1;
     long style1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     char* symbol2;
-    long symbol_len2;
+    size_t symbol_len2;
     char* initialFont2;
-    long initialFont_len2;
+    size_t initialFont_len2;
     char* normalTextFont2;
-    long normalTextFont_len2;
+    size_t normalTextFont_len2;
     zval* parent2;
     wxWindow* object_pointer2_3 = 0;
     long id2;
     char* caption2;
-    long caption_len2;
+    size_t caption_len2;
     zval* pos2;
     wxPoint* object_pointer2_6 = 0;
     zval* size2;
@@ -9060,7 +9060,7 @@ PHP_METHOD(php_wxDialog, Create)
     wxWindow* object_pointer3_0 = 0;
     long id3;
     char* title3;
-    long title_len3;
+    size_t title_len3;
     zval* bitmap3;
     wxBitmap* object_pointer3_3 = 0;
     zval* pos3;
@@ -12187,14 +12187,14 @@ PHP_METHOD(php_wxDialog, __construct)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* pos0;
     wxPoint* object_pointer0_3 = 0;
     zval* size0;
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -15433,7 +15433,7 @@ PHP_METHOD(php_wxDirDialog, SetMessage)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     bool overload0_called = false;
 
     
@@ -15546,7 +15546,7 @@ PHP_METHOD(php_wxDirDialog, SetPath)
 
     //Parameters for overload 0
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -15731,16 +15731,16 @@ PHP_METHOD(php_wxDirDialog, __construct)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* defaultPath0;
-    long defaultPath_len0;
+    size_t defaultPath_len0;
     long style0;
     zval* pos0;
     wxPoint* object_pointer0_4 = 0;
     zval* size0;
     wxSize* object_pointer0_5 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -16401,7 +16401,7 @@ PHP_METHOD(php_wxFindReplaceData, SetFindString)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     bool overload0_called = false;
 
     
@@ -16626,7 +16626,7 @@ PHP_METHOD(php_wxFindReplaceData, SetReplaceString)
 
     //Parameters for overload 0
     char* str0;
-    long str_len0;
+    size_t str_len0;
     bool overload0_called = false;
 
     
@@ -16891,7 +16891,7 @@ PHP_METHOD(php_wxFindReplaceDialog, Create)
     zval* data0;
     wxFindReplaceData* object_pointer0_1 = 0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     long style0;
     bool overload0_called = false;
 
@@ -17152,7 +17152,7 @@ PHP_METHOD(php_wxFindReplaceDialog, __construct)
     zval* data0;
     wxFindReplaceData* object_pointer0_1 = 0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     long style0;
     bool overload0_called = false;
 
@@ -17376,20 +17376,20 @@ PHP_METHOD(php_wxFileDialog, __construct)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* defaultDir0;
-    long defaultDir_len0;
+    size_t defaultDir_len0;
     char* defaultFile0;
-    long defaultFile_len0;
+    size_t defaultFile_len0;
     char* wildcard0;
-    long wildcard_len0;
+    size_t wildcard_len0;
     long style0;
     zval* pos0;
     wxPoint* object_pointer0_6 = 0;
     zval* size0;
     wxSize* object_pointer0_7 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -17775,7 +17775,7 @@ PHP_METHOD(php_wxFileDialog, SetWildcard)
 
     //Parameters for overload 0
     char* wildCard0;
-    long wildCard_len0;
+    size_t wildCard_len0;
     bool overload0_called = false;
 
     
@@ -17888,7 +17888,7 @@ PHP_METHOD(php_wxFileDialog, SetPath)
 
     //Parameters for overload 0
     char* path0;
-    long path_len0;
+    size_t path_len0;
     bool overload0_called = false;
 
     
@@ -18001,7 +18001,7 @@ PHP_METHOD(php_wxFileDialog, SetMessage)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     bool overload0_called = false;
 
     
@@ -18226,7 +18226,7 @@ PHP_METHOD(php_wxFileDialog, SetFilename)
 
     //Parameters for overload 0
     char* setfilename0;
-    long setfilename_len0;
+    size_t setfilename_len0;
     bool overload0_called = false;
 
     
@@ -18339,7 +18339,7 @@ PHP_METHOD(php_wxFileDialog, SetDirectory)
 
     //Parameters for overload 0
     char* directory0;
-    long directory_len0;
+    size_t directory_len0;
     bool overload0_called = false;
 
     
@@ -23188,7 +23188,7 @@ PHP_METHOD(php_wxMessageDialog, SetExtendedMessage)
 
     //Parameters for overload 0
     char* extendedMessage0;
-    long extendedMessage_len0;
+    size_t extendedMessage_len0;
     bool overload0_called = false;
 
     
@@ -23266,9 +23266,9 @@ PHP_METHOD(php_wxMessageDialog, __construct)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     long style0;
     zval* pos0;
     wxPoint* object_pointer0_4 = 0;
@@ -23576,9 +23576,9 @@ PHP_METHOD(php_wxMessageDialog, SetYesNoLabels)
 
     //Parameters for overload 0
     char* yes0;
-    long yes_len0;
+    size_t yes_len0;
     char* no0;
-    long no_len0;
+    size_t no_len0;
     bool overload0_called = false;
 
     
@@ -23691,11 +23691,11 @@ PHP_METHOD(php_wxMessageDialog, SetYesNoCancelLabels)
 
     //Parameters for overload 0
     char* yes0;
-    long yes_len0;
+    size_t yes_len0;
     char* no0;
-    long no_len0;
+    size_t no_len0;
     char* cancel0;
-    long cancel_len0;
+    size_t cancel_len0;
     bool overload0_called = false;
 
     
@@ -23808,7 +23808,7 @@ PHP_METHOD(php_wxMessageDialog, SetOKLabel)
 
     //Parameters for overload 0
     char* ok0;
-    long ok_len0;
+    size_t ok_len0;
     bool overload0_called = false;
 
     
@@ -23921,9 +23921,9 @@ PHP_METHOD(php_wxMessageDialog, SetOKCancelLabels)
 
     //Parameters for overload 0
     char* ok0;
-    long ok_len0;
+    size_t ok_len0;
     char* cancel0;
-    long cancel_len0;
+    size_t cancel_len0;
     bool overload0_called = false;
 
     
@@ -24036,7 +24036,7 @@ PHP_METHOD(php_wxMessageDialog, SetMessage)
 
     //Parameters for overload 0
     char* message0;
-    long message_len0;
+    size_t message_len0;
     bool overload0_called = false;
 
     
@@ -24149,7 +24149,7 @@ PHP_METHOD(php_wxMessageDialog, SetHelpLabel)
 
     //Parameters for overload 0
     char* help0;
-    long help_len0;
+    size_t help_len0;
     bool overload0_called = false;
 
     
@@ -24761,7 +24761,7 @@ PHP_METHOD(php_wxGenericProgressDialog, Pulse)
 
     //Parameters for overload 0
     char* newmsg0;
-    long newmsg_len0;
+    size_t newmsg_len0;
     bool* skip0;
     zval skip0_ref;
     bool overload0_called = false;
@@ -25030,7 +25030,7 @@ PHP_METHOD(php_wxGenericProgressDialog, Update)
     //Parameters for overload 0
     long value0;
     char* newmsg0;
-    long newmsg_len0;
+    size_t newmsg_len0;
     bool* skip0;
     zval skip0_ref;
     bool overload0_called = false;
@@ -25363,9 +25363,9 @@ PHP_METHOD(php_wxGenericProgressDialog, __construct)
 
     //Parameters for overload 0
     char* title0;
-    long title_len0;
+    size_t title_len0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     long maximum0;
     zval* parent0;
     wxWindow* object_pointer0_3 = 0;
@@ -26021,16 +26021,16 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
 
     //Parameters for overload 0
     char* symbol0;
-    long symbol_len0;
+    size_t symbol_len0;
     char* initialFont0;
-    long initialFont_len0;
+    size_t initialFont_len0;
     char* normalTextFont0;
-    long normalTextFont_len0;
+    size_t normalTextFont_len0;
     zval* parent0;
     wxWindow* object_pointer0_3 = 0;
     long id0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     zval* pos0;
     wxPoint* object_pointer0_6 = 0;
     zval* size0;
@@ -26918,7 +26918,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetFontName)
 
     //Parameters for overload 0
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     
@@ -27143,7 +27143,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetNormalTextFontName)
 
     //Parameters for overload 0
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     
@@ -27256,7 +27256,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetSymbol)
 
     //Parameters for overload 0
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     
@@ -27554,16 +27554,16 @@ PHP_METHOD(php_wxSymbolPickerDialog, __construct)
 
     //Parameters for overload 1
     char* symbol1;
-    long symbol_len1;
+    size_t symbol_len1;
     char* initialFont1;
-    long initialFont_len1;
+    size_t initialFont_len1;
     char* normalTextFont1;
-    long normalTextFont_len1;
+    size_t normalTextFont_len1;
     zval* parent1;
     wxWindow* object_pointer1_3 = 0;
     long id1;
     char* title1;
-    long title_len1;
+    size_t title_len1;
     zval* pos1;
     wxPoint* object_pointer1_6 = 0;
     zval* size1;
@@ -27856,11 +27856,11 @@ PHP_METHOD(php_wxPasswordEntryDialog, __construct)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     char* defaultValue0;
-    long defaultValue_len0;
+    size_t defaultValue_len0;
     long style0;
     zval* pos0;
     wxPoint* object_pointer0_5 = 0;
@@ -28239,7 +28239,7 @@ PHP_METHOD(php_wxTextEntryDialog, SetValue)
 
     //Parameters for overload 0
     char* value0;
-    long value_len0;
+    size_t value_len0;
     bool overload0_called = false;
 
     
@@ -28428,11 +28428,11 @@ PHP_METHOD(php_wxTextEntryDialog, __construct)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* caption0;
-    long caption_len0;
+    size_t caption_len0;
     char* value0;
-    long value_len0;
+    size_t value_len0;
     long style0;
     zval* pos0;
     wxPoint* object_pointer0_5 = 0;
@@ -28697,7 +28697,7 @@ PHP_METHOD(php_wxWizard, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* title0;
-    long title_len0;
+    size_t title_len0;
     zval* bitmap0;
     wxBitmap* object_pointer0_3 = 0;
     zval* pos0;
@@ -30871,7 +30871,7 @@ PHP_METHOD(php_wxWizard, __construct)
     wxWindow* object_pointer1_0 = 0;
     long id1;
     char* title1;
-    long title_len1;
+    size_t title_len1;
     zval* bitmap1;
     wxBitmap* object_pointer1_3 = 0;
     zval* pos1;

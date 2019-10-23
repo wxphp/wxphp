@@ -1989,7 +1989,7 @@ PHP_METHOD(php_wxDataFormat, SetId)
 
     //Parameters for overload 0
     char* format0;
-    long format_len0;
+    size_t format_len0;
     bool overload0_called = false;
 
     
@@ -2181,7 +2181,7 @@ PHP_METHOD(php_wxDataFormat, __construct)
 
     //Parameters for overload 1
     char* format1;
-    long format_len1;
+    size_t format_len1;
     bool overload1_called = false;
 
     
@@ -3078,19 +3078,19 @@ PHP_METHOD(php_wxDataObject, SetData)
     wxDataFormat* object_pointer0_0 = 0;
     long len0;
     char* buf0;
-    long buf_len0;
+    size_t buf_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     long len1;
     char* buf1;
-    long buf_len1;
+    size_t buf_len1;
     bool overload1_called = false;
 
     //Parameters for overload 2
     long size2;
     char* data2;
-    long data_len2;
+    size_t data_len2;
     bool overload2_called = false;
 
     
@@ -3863,7 +3863,7 @@ PHP_METHOD(php_wxCustomDataObject, SetData)
     //Parameters for overload 0
     long size0;
     char* data0;
-    long data_len0;
+    size_t data_len0;
     bool overload0_called = false;
 
     
@@ -3977,7 +3977,7 @@ PHP_METHOD(php_wxCustomDataObject, TakeData)
     //Parameters for overload 0
     long size0;
     char* data0;
-    long data_len0;
+    size_t data_len0;
     zval data0_ref;
     bool overload0_called = false;
 
@@ -4872,7 +4872,7 @@ PHP_METHOD(php_wxDataObjectSimple, GetDataHere)
 
     //Parameters for overload 0
     char* buf0;
-    long buf_len0;
+    size_t buf_len0;
     zval buf0_ref;
     bool overload0_called = false;
 
@@ -5285,7 +5285,7 @@ PHP_METHOD(php_wxDataObjectSimple, SetData)
     //Parameters for overload 0
     long len0;
     char* buf0;
-    long buf_len0;
+    size_t buf_len0;
     bool overload0_called = false;
 
     
@@ -6246,7 +6246,7 @@ PHP_METHOD(php_wxURLDataObject, SetURL)
 
     //Parameters for overload 0
     char* url0;
-    long url_len0;
+    size_t url_len0;
     bool overload0_called = false;
 
     
@@ -6322,7 +6322,7 @@ PHP_METHOD(php_wxURLDataObject, __construct)
 
     //Parameters for overload 0
     char* url0;
-    long url_len0;
+    size_t url_len0;
     bool overload0_called = false;
 
     
@@ -7148,7 +7148,7 @@ PHP_METHOD(php_wxTextDataObject, SetText)
 
     //Parameters for overload 0
     char* strText0;
-    long strText_len0;
+    size_t strText_len0;
     bool overload0_called = false;
 
     
@@ -7224,7 +7224,7 @@ PHP_METHOD(php_wxTextDataObject, __construct)
 
     //Parameters for overload 0
     char* text0;
-    long text_len0;
+    size_t text_len0;
     bool overload0_called = false;
 
     
@@ -7414,7 +7414,7 @@ PHP_METHOD(php_wxFileDataObject, AddFile)
 
     //Parameters for overload 0
     char* file0;
-    long file_len0;
+    size_t file_len0;
     bool overload0_called = false;
 
     

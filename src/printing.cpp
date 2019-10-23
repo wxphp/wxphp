@@ -765,7 +765,7 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
     wxSize* object_pointer0_4 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -1044,7 +1044,7 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
     wxSize* object_pointer0_3 = 0;
     long style0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -4733,7 +4733,7 @@ PHP_METHOD(php_wxPrinter, ReportError)
     zval* printout0;
     wxPrintout* object_pointer0_1 = 0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     bool overload0_called = false;
 
     
@@ -8617,7 +8617,7 @@ PHP_METHOD(php_wxPrintout, __construct)
 
     //Parameters for overload 0
     char* title0;
-    long title_len0;
+    size_t title_len0;
     bool overload0_called = false;
 
     

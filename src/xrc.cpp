@@ -993,7 +993,7 @@ PHP_METHOD(php_wxXmlResource, AttachUnknownControl)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     zval* control0;
     wxWindow* object_pointer0_1 = 0;
     zval* parent0;
@@ -1936,7 +1936,7 @@ PHP_METHOD(php_wxXmlResource, GetResourceNode)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -2179,7 +2179,7 @@ PHP_METHOD(php_wxXmlResource, GetXRCID)
 
     //Parameters for overload 0
     char* str_id0;
-    long str_id_len0;
+    size_t str_id_len0;
     long value_if_not_found0;
     bool overload0_called = false;
 
@@ -2414,7 +2414,7 @@ PHP_METHOD(php_wxXmlResource, Load)
 
     //Parameters for overload 0
     char* filemask0;
-    long filemask_len0;
+    size_t filemask_len0;
     bool overload0_called = false;
 
     
@@ -2527,7 +2527,7 @@ PHP_METHOD(php_wxXmlResource, LoadAllFiles)
 
     //Parameters for overload 0
     char* dirname0;
-    long dirname_len0;
+    size_t dirname_len0;
     bool overload0_called = false;
 
     
@@ -2640,7 +2640,7 @@ PHP_METHOD(php_wxXmlResource, LoadBitmap)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -2763,7 +2763,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -2772,7 +2772,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
     zval* parent1;
     wxWindow* object_pointer1_1 = 0;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -3133,7 +3133,7 @@ PHP_METHOD(php_wxXmlResource, LoadFrame)
     zval* parent0;
     wxWindow* object_pointer0_1 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -3282,7 +3282,7 @@ PHP_METHOD(php_wxXmlResource, LoadIcon)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -3403,7 +3403,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenu)
 
     //Parameters for overload 0
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -3541,12 +3541,12 @@ PHP_METHOD(php_wxXmlResource, LoadMenuBar)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -3761,9 +3761,9 @@ PHP_METHOD(php_wxXmlResource, LoadObject)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     char* classname0;
-    long classname_len0;
+    size_t classname_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -3772,9 +3772,9 @@ PHP_METHOD(php_wxXmlResource, LoadObject)
     zval* parent1;
     wxWindow* object_pointer1_1 = 0;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     char* classname1;
-    long classname_len1;
+    size_t classname_len1;
     bool overload1_called = false;
 
     
@@ -4002,9 +4002,9 @@ PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     char* classname0;
-    long classname_len0;
+    size_t classname_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -4013,9 +4013,9 @@ PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
     zval* parent1;
     wxWindow* object_pointer1_1 = 0;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     char* classname1;
-    long classname_len1;
+    size_t classname_len1;
     bool overload1_called = false;
 
     
@@ -4243,7 +4243,7 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
@@ -4252,7 +4252,7 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
     zval* parent1;
     wxWindow* object_pointer1_1 = 0;
     char* name1;
-    long name_len1;
+    size_t name_len1;
     bool overload1_called = false;
 
     
@@ -4480,7 +4480,7 @@ PHP_METHOD(php_wxXmlResource, LoadToolBar)
     zval* parent0;
     wxWindow* object_pointer0_0 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -4784,7 +4784,7 @@ PHP_METHOD(php_wxXmlResource, SetDomain)
 
     //Parameters for overload 0
     char* domain0;
-    long domain_len0;
+    size_t domain_len0;
     bool overload0_called = false;
 
     
@@ -5009,7 +5009,7 @@ PHP_METHOD(php_wxXmlResource, Unload)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overload0_called = false;
 
     
@@ -5085,16 +5085,16 @@ PHP_METHOD(php_wxXmlResource, __construct)
 
     //Parameters for overload 0
     char* filemask0;
-    long filemask_len0;
+    size_t filemask_len0;
     long flags0;
     char* domain0;
-    long domain_len0;
+    size_t domain_len0;
     bool overload0_called = false;
 
     //Parameters for overload 1
     long flags1;
     char* domain1;
-    long domain_len1;
+    size_t domain_len1;
     bool overload1_called = false;
 
     

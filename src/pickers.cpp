@@ -175,7 +175,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
     zval* validator0;
     wxValidator* object_pointer0_6 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -589,7 +589,7 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 
     //Parameters for overload 1
     char* colname1;
-    long colname_len1;
+    size_t colname_len1;
     bool overload1_called = false;
 
     
@@ -731,7 +731,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
     zval* validator0;
     wxValidator* object_pointer0_6 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -1058,7 +1058,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
     zval* validator0;
     wxValidator* object_pointer0_6 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -1347,7 +1347,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
     zval* validator0;
     wxValidator* object_pointer0_6 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -2129,11 +2129,11 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* wildcard0;
-    long wildcard_len0;
+    size_t wildcard_len0;
     zval* pos0;
     wxPoint* object_pointer0_5 = 0;
     zval* size0;
@@ -2142,7 +2142,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
     zval* validator0;
     wxValidator* object_pointer0_8 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -2679,7 +2679,7 @@ PHP_METHOD(php_wxFilePickerCtrl, SetPath)
 
     //Parameters for overload 0
     char* filename0;
-    long filename_len0;
+    size_t filename_len0;
     bool overload0_called = false;
 
     
@@ -2758,11 +2758,11 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     char* wildcard0;
-    long wildcard_len0;
+    size_t wildcard_len0;
     zval* pos0;
     wxPoint* object_pointer0_5 = 0;
     zval* size0;
@@ -2771,7 +2771,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
     zval* validator0;
     wxValidator* object_pointer0_8 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -3242,9 +3242,9 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     zval* pos0;
     wxPoint* object_pointer0_4 = 0;
     zval* size0;
@@ -3253,7 +3253,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
     zval* validator0;
     wxValidator* object_pointer0_7 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -3891,7 +3891,7 @@ PHP_METHOD(php_wxDirPickerCtrl, SetPath)
 
     //Parameters for overload 0
     char* dirname0;
-    long dirname_len0;
+    size_t dirname_len0;
     bool overload0_called = false;
 
     
@@ -3970,9 +3970,9 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
     wxWindow* object_pointer0_0 = 0;
     long id0;
     char* path0;
-    long path_len0;
+    size_t path_len0;
     char* message0;
-    long message_len0;
+    size_t message_len0;
     zval* pos0;
     wxPoint* object_pointer0_4 = 0;
     zval* size0;
@@ -3981,7 +3981,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
     zval* validator0;
     wxValidator* object_pointer0_7 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -4335,7 +4335,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
     zval* validator0;
     wxValidator* object_pointer0_6 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -5069,7 +5069,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
     zval* validator0;
     wxValidator* object_pointer0_6 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -7435,7 +7435,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
     zval* validator0;
     wxValidator* object_pointer0_6 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     
@@ -7724,7 +7724,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
     zval* validator0;
     wxValidator* object_pointer0_6 = 0;
     char* name0;
-    long name_len0;
+    size_t name_len0;
     bool overload0_called = false;
 
     

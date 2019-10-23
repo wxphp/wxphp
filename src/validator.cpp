@@ -504,7 +504,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 
     //Parameters for overload 1
     char* valPtr1;
-    long valPtr_len1;
+    size_t valPtr_len1;
     zval valPtr1_ref;
     bool overload1_called = false;
 
@@ -2736,7 +2736,7 @@ PHP_METHOD(php_wxTextValidator, SetCharExcludes)
 
     //Parameters for overload 0
     char* chars0;
-    long chars_len0;
+    size_t chars_len0;
     bool overload0_called = false;
 
     
@@ -2849,7 +2849,7 @@ PHP_METHOD(php_wxTextValidator, SetCharIncludes)
 
     //Parameters for overload 0
     char* chars0;
-    long chars_len0;
+    size_t chars_len0;
     bool overload0_called = false;
 
     
@@ -3643,7 +3643,7 @@ PHP_METHOD(php_wxTextValidator, __construct)
     //Parameters for overload 0
     long style0;
     char* valPtr0;
-    long valPtr_len0;
+    size_t valPtr_len0;
     zval valPtr0_ref;
     bool overload0_called = false;
 
