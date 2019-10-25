@@ -7,7 +7,6 @@ PHP_FUNCTION(php_wxDynamicCast)
     void* native_object = 0;
 
     char parse_parameters[] = "z!s!";
-    //char parse_parameters[] = "z!|s!";
 
     if (
         zend_parse_parameters_ex(
