@@ -88,8 +88,8 @@ zend_object* php_wxMenuBar_new(zend_class_entry *class_type)
     custom_object = (zo_wxMenuBar*) ecalloc(
         1,
         sizeof(zo_wxMenuBar)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3256,8 +3256,8 @@ zend_object* php_wxMenu_new(zend_class_entry *class_type)
     custom_object = (zo_wxMenu*) ecalloc(
         1,
         sizeof(zo_wxMenu)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9762,8 +9762,8 @@ zend_object* php_wxMenuItem_new(zend_class_entry *class_type)
     custom_object = (zo_wxMenuItem*) ecalloc(
         1,
         sizeof(zo_wxMenuItem)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

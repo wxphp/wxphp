@@ -117,8 +117,8 @@ zend_object* php_wxConfigBase_new(zend_class_entry *class_type)
     custom_object = (zo_wxConfigBase*) ecalloc(
         1,
         sizeof(zo_wxConfigBase)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4561,8 +4561,8 @@ zend_object* php_wxDisplay_new(zend_class_entry *class_type)
     custom_object = (zo_wxDisplay*) ecalloc(
         1,
         sizeof(zo_wxDisplay)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5815,8 +5815,8 @@ zend_object* php_wxFileConfig_new(zend_class_entry *class_type)
     custom_object = (zo_wxFileConfig*) ecalloc(
         1,
         sizeof(zo_wxFileConfig)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -8462,8 +8462,8 @@ zend_object* php_wxFontMapper_new(zend_class_entry *class_type)
     custom_object = (zo_wxFontMapper*) ecalloc(
         1,
         sizeof(zo_wxFontMapper)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -10239,8 +10239,8 @@ zend_object* php_wxPlatformInfo_new(zend_class_entry *class_type)
     custom_object = (zo_wxPlatformInfo*) ecalloc(
         1,
         sizeof(zo_wxPlatformInfo)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -14328,8 +14328,8 @@ zend_object* php_wxSystemSettings_new(zend_class_entry *class_type)
     custom_object = (zo_wxSystemSettings*) ecalloc(
         1,
         sizeof(zo_wxSystemSettings)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -15021,8 +15021,8 @@ zend_object* php_wxSystemOptions_new(zend_class_entry *class_type)
     custom_object = (zo_wxSystemOptions*) ecalloc(
         1,
         sizeof(zo_wxSystemOptions)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -15720,8 +15720,8 @@ zend_object* php_wxVideoMode_new(zend_class_entry *class_type)
     custom_object = (zo_wxVideoMode*) ecalloc(
         1,
         sizeof(zo_wxVideoMode)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

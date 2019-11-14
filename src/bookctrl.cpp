@@ -117,8 +117,8 @@ zend_object* php_wxAuiNotebookEvent_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiNotebookEvent*) ecalloc(
         1,
         sizeof(zo_wxAuiNotebookEvent)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -409,8 +409,8 @@ zend_object* php_wxBookCtrlBase_new(zend_class_entry *class_type)
     custom_object = (zo_wxBookCtrlBase*) ecalloc(
         1,
         sizeof(zo_wxBookCtrlBase)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3644,8 +3644,8 @@ zend_object* php_wxBookCtrlEvent_new(zend_class_entry *class_type)
     custom_object = (zo_wxBookCtrlEvent*) ecalloc(
         1,
         sizeof(zo_wxBookCtrlEvent)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4285,8 +4285,8 @@ zend_object* php_wxChoicebook_new(zend_class_entry *class_type)
     custom_object = (zo_wxChoicebook*) ecalloc(
         1,
         sizeof(zo_wxChoicebook)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4705,8 +4705,8 @@ zend_object* php_wxListbook_new(zend_class_entry *class_type)
     custom_object = (zo_wxListbook*) ecalloc(
         1,
         sizeof(zo_wxListbook)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5125,8 +5125,8 @@ zend_object* php_wxNotebook_new(zend_class_entry *class_type)
     custom_object = (zo_wxNotebook*) ecalloc(
         1,
         sizeof(zo_wxNotebook)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6946,8 +6946,8 @@ zend_object* php_wxToolbook_new(zend_class_entry *class_type)
     custom_object = (zo_wxToolbook*) ecalloc(
         1,
         sizeof(zo_wxToolbook)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7366,8 +7366,8 @@ zend_object* php_wxTreebook_new(zend_class_entry *class_type)
     custom_object = (zo_wxTreebook*) ecalloc(
         1,
         sizeof(zo_wxTreebook)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

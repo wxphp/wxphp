@@ -117,8 +117,8 @@ zend_object* php_wxRibbonArtProvider_new(zend_class_entry *class_type)
     custom_object = (zo_wxRibbonArtProvider*) ecalloc(
         1,
         sizeof(zo_wxRibbonArtProvider)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3665,8 +3665,8 @@ zend_object* php_wxRibbonBar_new(zend_class_entry *class_type)
     custom_object = (zo_wxRibbonBar*) ecalloc(
         1,
         sizeof(zo_wxRibbonBar)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5388,8 +5388,8 @@ zend_object* php_wxRibbonButtonBar_new(zend_class_entry *class_type)
     custom_object = (zo_wxRibbonButtonBar*) ecalloc(
         1,
         sizeof(zo_wxRibbonButtonBar)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7584,8 +7584,8 @@ zend_object* php_wxRibbonControl_new(zend_class_entry *class_type)
     custom_object = (zo_wxRibbonControl*) ecalloc(
         1,
         sizeof(zo_wxRibbonControl)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9240,8 +9240,8 @@ zend_object* php_wxRibbonGallery_new(zend_class_entry *class_type)
     custom_object = (zo_wxRibbonGallery*) ecalloc(
         1,
         sizeof(zo_wxRibbonGallery)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -12436,8 +12436,8 @@ zend_object* php_wxRibbonPage_new(zend_class_entry *class_type)
     custom_object = (zo_wxRibbonPage*) ecalloc(
         1,
         sizeof(zo_wxRibbonPage)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -13959,8 +13959,8 @@ zend_object* php_wxRibbonPanel_new(zend_class_entry *class_type)
     custom_object = (zo_wxRibbonPanel*) ecalloc(
         1,
         sizeof(zo_wxRibbonPanel)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -15846,8 +15846,8 @@ zend_object* php_wxRibbonToolBar_new(zend_class_entry *class_type)
     custom_object = (zo_wxRibbonToolBar*) ecalloc(
         1,
         sizeof(zo_wxRibbonToolBar)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

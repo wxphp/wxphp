@@ -117,8 +117,8 @@ zend_object* php_wxWebViewHistoryItem_new(zend_class_entry *class_type)
     custom_object = (zo_wxWebViewHistoryItem*) ecalloc(
         1,
         sizeof(zo_wxWebViewHistoryItem)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -505,8 +505,8 @@ zend_object* php_wxWebViewHandler_new(zend_class_entry *class_type)
     custom_object = (zo_wxWebViewHandler*) ecalloc(
         1,
         sizeof(zo_wxWebViewHandler)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -886,8 +886,8 @@ zend_object* php_wxWebViewArchiveHandler_new(zend_class_entry *class_type)
     custom_object = (zo_wxWebViewArchiveHandler*) ecalloc(
         1,
         sizeof(zo_wxWebViewArchiveHandler)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

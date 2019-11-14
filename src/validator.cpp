@@ -117,8 +117,8 @@ zend_object* php_wxGenericValidator_new(zend_class_entry *class_type)
     custom_object = (zo_wxGenericValidator*) ecalloc(
         1,
         sizeof(zo_wxGenericValidator)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -910,8 +910,8 @@ zend_object* php_wxValidator_new(zend_class_entry *class_type)
     custom_object = (zo_wxValidator*) ecalloc(
         1,
         sizeof(zo_wxValidator)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1992,8 +1992,8 @@ zend_object* php_wxTextValidator_new(zend_class_entry *class_type)
     custom_object = (zo_wxTextValidator*) ecalloc(
         1,
         sizeof(zo_wxTextValidator)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

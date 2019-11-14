@@ -89,8 +89,8 @@ zend_object* php_wxRefCounter_new(zend_class_entry *class_type)
     custom_object = (zo_wxRefCounter*) ecalloc(
         1,
         sizeof(zo_wxRefCounter)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -647,8 +647,8 @@ zend_object* php_wxObject_new(zend_class_entry *class_type)
     custom_object = (zo_wxObject*) ecalloc(
         1,
         sizeof(zo_wxObject)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -8803,8 +8803,8 @@ zend_object* php_wxClassInfo_new(zend_class_entry *class_type)
     custom_object = (zo_wxClassInfo*) ecalloc(
         1,
         sizeof(zo_wxClassInfo)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

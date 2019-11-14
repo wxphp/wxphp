@@ -117,8 +117,8 @@ zend_object* php_wxLog_new(zend_class_entry *class_type)
     custom_object = (zo_wxLog*) ecalloc(
         1,
         sizeof(zo_wxLog)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4045,8 +4045,8 @@ zend_object* php_wxLogChain_new(zend_class_entry *class_type)
     custom_object = (zo_wxLogChain*) ecalloc(
         1,
         sizeof(zo_wxLogChain)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4860,8 +4860,8 @@ zend_object* php_wxLogInterposer_new(zend_class_entry *class_type)
     custom_object = (zo_wxLogInterposer*) ecalloc(
         1,
         sizeof(zo_wxLogInterposer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5024,8 +5024,8 @@ zend_object* php_wxLogBuffer_new(zend_class_entry *class_type)
     custom_object = (zo_wxLogBuffer*) ecalloc(
         1,
         sizeof(zo_wxLogBuffer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5404,8 +5404,8 @@ zend_object* php_wxLogWindow_new(zend_class_entry *class_type)
     custom_object = (zo_wxLogWindow*) ecalloc(
         1,
         sizeof(zo_wxLogWindow)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6065,8 +6065,8 @@ zend_object* php_wxLogGui_new(zend_class_entry *class_type)
     custom_object = (zo_wxLogGui*) ecalloc(
         1,
         sizeof(zo_wxLogGui)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6423,8 +6423,8 @@ zend_object* php_wxLogTextCtrl_new(zend_class_entry *class_type)
     custom_object = (zo_wxLogTextCtrl*) ecalloc(
         1,
         sizeof(zo_wxLogTextCtrl)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

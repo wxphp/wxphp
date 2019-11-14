@@ -117,8 +117,8 @@ zend_object* php_wxAuiToolBarEvent_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiToolBarEvent*) ecalloc(
         1,
         sizeof(zo_wxAuiToolBarEvent)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -654,8 +654,8 @@ zend_object* php_wxAuiToolBarItem_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiToolBarItem*) ecalloc(
         1,
         sizeof(zo_wxAuiToolBarItem)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5387,8 +5387,8 @@ zend_object* php_wxAuiToolBarArt_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiToolBarArt*) ecalloc(
         1,
         sizeof(zo_wxAuiToolBarArt)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7220,8 +7220,8 @@ zend_object* php_wxAuiDefaultToolBarArt_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiDefaultToolBarArt*) ecalloc(
         1,
         sizeof(zo_wxAuiDefaultToolBarArt)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -10179,8 +10179,8 @@ zend_object* php_wxAuiToolBar_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiToolBar*) ecalloc(
         1,
         sizeof(zo_wxAuiToolBar)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -18318,8 +18318,8 @@ zend_object* php_wxAuiNotebook_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiNotebook*) ecalloc(
         1,
         sizeof(zo_wxAuiNotebook)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -22390,8 +22390,8 @@ zend_object* php_wxAuiTabArt_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiTabArt*) ecalloc(
         1,
         sizeof(zo_wxAuiTabArt)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -23582,8 +23582,8 @@ zend_object* php_wxAuiDockArt_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiDockArt*) ecalloc(
         1,
         sizeof(zo_wxAuiDockArt)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -24865,8 +24865,8 @@ zend_object* php_wxAuiManager_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiManager*) ecalloc(
         1,
         sizeof(zo_wxAuiManager)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -28109,8 +28109,8 @@ zend_object* php_wxAuiPaneInfo_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiPaneInfo*) ecalloc(
         1,
         sizeof(zo_wxAuiPaneInfo)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -38184,8 +38184,8 @@ zend_object* php_wxAuiManagerEvent_new(zend_class_entry *class_type)
     custom_object = (zo_wxAuiManagerEvent*) ecalloc(
         1,
         sizeof(zo_wxAuiManagerEvent)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

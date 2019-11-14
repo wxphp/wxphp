@@ -117,8 +117,8 @@ zend_object* php_wxXmlNode_new(zend_class_entry *class_type)
     custom_object = (zo_wxXmlNode*) ecalloc(
         1,
         sizeof(zo_wxXmlNode)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4062,8 +4062,8 @@ zend_object* php_wxXmlAttribute_new(zend_class_entry *class_type)
     custom_object = (zo_wxXmlAttribute*) ecalloc(
         1,
         sizeof(zo_wxXmlAttribute)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5004,8 +5004,8 @@ zend_object* php_wxXmlDocument_new(zend_class_entry *class_type)
     custom_object = (zo_wxXmlDocument*) ecalloc(
         1,
         sizeof(zo_wxXmlDocument)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

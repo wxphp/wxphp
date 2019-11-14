@@ -117,8 +117,8 @@ zend_object* php_wxDataViewChoiceRenderer_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewChoiceRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewChoiceRenderer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -557,8 +557,8 @@ zend_object* php_wxDataViewModel_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewModel*) ecalloc(
         1,
         sizeof(zo_wxDataViewModel)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3833,8 +3833,8 @@ zend_object* php_wxDataViewListModel_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewListModel*) ecalloc(
         1,
         sizeof(zo_wxDataViewListModel)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4571,8 +4571,8 @@ zend_object* php_wxDataViewIndexListModel_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewIndexListModel*) ecalloc(
         1,
         sizeof(zo_wxDataViewIndexListModel)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4652,8 +4652,8 @@ zend_object* php_wxDataViewVirtualListModel_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewVirtualListModel*) ecalloc(
         1,
         sizeof(zo_wxDataViewVirtualListModel)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4733,8 +4733,8 @@ zend_object* php_wxDataViewItemAttr_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewItemAttr*) ecalloc(
         1,
         sizeof(zo_wxDataViewItemAttr)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5252,8 +5252,8 @@ zend_object* php_wxDataViewItem_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewItem*) ecalloc(
         1,
         sizeof(zo_wxDataViewItem)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5732,8 +5732,8 @@ zend_object* php_wxDataViewModelNotifier_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewModelNotifier*) ecalloc(
         1,
         sizeof(zo_wxDataViewModelNotifier)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6686,8 +6686,8 @@ zend_object* php_wxDataViewRenderer_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewRenderer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -8912,8 +8912,8 @@ zend_object* php_wxDataViewTextRenderer_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewTextRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewTextRenderer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9117,8 +9117,8 @@ zend_object* php_wxDataViewIconTextRenderer_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewIconTextRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewIconTextRenderer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9322,8 +9322,8 @@ zend_object* php_wxDataViewProgressRenderer_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewProgressRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewProgressRenderer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9540,8 +9540,8 @@ zend_object* php_wxDataViewSpinRenderer_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewSpinRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewSpinRenderer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9734,8 +9734,8 @@ zend_object* php_wxDataViewToggleRenderer_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewToggleRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewToggleRenderer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9939,8 +9939,8 @@ zend_object* php_wxDataViewDateRenderer_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewDateRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewDateRenderer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -10144,8 +10144,8 @@ zend_object* php_wxDataViewCustomRenderer_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewCustomRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewCustomRenderer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -11604,8 +11604,8 @@ zend_object* php_wxDataViewBitmapRenderer_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewBitmapRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewBitmapRenderer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -11809,8 +11809,8 @@ zend_object* php_wxDataViewColumn_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewColumn*) ecalloc(
         1,
         sizeof(zo_wxDataViewColumn)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -12527,8 +12527,8 @@ zend_object* php_wxDataViewListStore_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewListStore*) ecalloc(
         1,
         sizeof(zo_wxDataViewListStore)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -13737,8 +13737,8 @@ zend_object* php_wxDataViewTreeStore_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewTreeStore*) ecalloc(
         1,
         sizeof(zo_wxDataViewTreeStore)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17079,8 +17079,8 @@ zend_object* php_wxDataViewIconText_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewIconText*) ecalloc(
         1,
         sizeof(zo_wxDataViewIconText)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17829,8 +17829,8 @@ zend_object* php_wxDataViewEvent_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataViewEvent*) ecalloc(
         1,
         sizeof(zo_wxDataViewEvent)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

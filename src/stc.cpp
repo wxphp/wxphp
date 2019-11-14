@@ -88,8 +88,8 @@ zend_object* php_wxStyledTextCtrl_new(zend_class_entry *class_type)
     custom_object = (zo_wxStyledTextCtrl*) ecalloc(
         1,
         sizeof(zo_wxStyledTextCtrl)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

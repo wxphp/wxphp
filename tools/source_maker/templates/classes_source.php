@@ -188,7 +188,8 @@ zend_object* php_<?=$class_name?>_new(zend_class_entry *class_type)
     custom_object = (zo_<?=$class_name?>*) ecalloc(
         1,
         sizeof(zo_<?=$class_name?>)
-        + abs((int)zend_object_properties_size(class_type))
+        + zend_object_properties_size(class_type)
+        <? if($class_name === 'wxSizerItem') print('+ 16'); ?>
     );
 
     zend_object_std_init(&custom_object->zo, class_type);

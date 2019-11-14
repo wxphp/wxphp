@@ -117,8 +117,8 @@ zend_object* php_wxHtmlRenderingStyle_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlRenderingStyle*) ecalloc(
         1,
         sizeof(zo_wxHtmlRenderingStyle)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -400,8 +400,8 @@ zend_object* php_wxHtmlRenderingInfo_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlRenderingInfo*) ecalloc(
         1,
         sizeof(zo_wxHtmlRenderingInfo)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -822,8 +822,8 @@ zend_object* php_wxHtmlCell_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlCell*) ecalloc(
         1,
         sizeof(zo_wxHtmlCell)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3298,8 +3298,8 @@ zend_object* php_wxHtmlContainerCell_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlContainerCell*) ecalloc(
         1,
         sizeof(zo_wxHtmlContainerCell)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5259,8 +5259,8 @@ zend_object* php_wxHtmlLinkInfo_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlLinkInfo*) ecalloc(
         1,
         sizeof(zo_wxHtmlLinkInfo)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5954,8 +5954,8 @@ zend_object* php_wxHtmlColourCell_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlColourCell*) ecalloc(
         1,
         sizeof(zo_wxHtmlColourCell)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6155,8 +6155,8 @@ zend_object* php_wxHtmlWidgetCell_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlWidgetCell*) ecalloc(
         1,
         sizeof(zo_wxHtmlWidgetCell)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6356,8 +6356,8 @@ zend_object* php_wxHtmlFilter_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlFilter*) ecalloc(
         1,
         sizeof(zo_wxHtmlFilter)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6703,8 +6703,8 @@ zend_object* php_wxHtmlTagHandler_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlTagHandler*) ecalloc(
         1,
         sizeof(zo_wxHtmlTagHandler)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7107,8 +7107,8 @@ zend_object* php_wxHtmlTag_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlTag*) ecalloc(
         1,
         sizeof(zo_wxHtmlTag)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -8266,8 +8266,8 @@ zend_object* php_wxHtmlWindow_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlWindow*) ecalloc(
         1,
         sizeof(zo_wxHtmlWindow)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -12270,8 +12270,8 @@ zend_object* php_wxHtmlLinkEvent_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlLinkEvent*) ecalloc(
         1,
         sizeof(zo_wxHtmlLinkEvent)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -12586,8 +12586,8 @@ zend_object* php_wxHtmlCellEvent_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlCellEvent*) ecalloc(
         1,
         sizeof(zo_wxHtmlCellEvent)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -13280,8 +13280,8 @@ zend_object* php_wxHtmlDCRenderer_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlDCRenderer*) ecalloc(
         1,
         sizeof(zo_wxHtmlDCRenderer)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -14362,8 +14362,8 @@ zend_object* php_wxHtmlEasyPrinting_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlEasyPrinting*) ecalloc(
         1,
         sizeof(zo_wxHtmlEasyPrinting)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -16462,8 +16462,8 @@ zend_object* php_wxHtmlPrintout_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlPrintout*) ecalloc(
         1,
         sizeof(zo_wxHtmlPrintout)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17609,8 +17609,8 @@ zend_object* php_wxHtmlTagsModule_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlTagsModule*) ecalloc(
         1,
         sizeof(zo_wxHtmlTagsModule)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17825,8 +17825,8 @@ zend_object* php_wxHtmlWinTagHandler_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlWinTagHandler*) ecalloc(
         1,
         sizeof(zo_wxHtmlWinTagHandler)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17906,8 +17906,8 @@ zend_object* php_wxHtmlWinParser_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlWinParser*) ecalloc(
         1,
         sizeof(zo_wxHtmlWinParser)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

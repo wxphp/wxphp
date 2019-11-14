@@ -117,8 +117,8 @@ zend_object* php_wxEventLoopBase_new(zend_class_entry *class_type)
     custom_object = (zo_wxEventLoopBase*) ecalloc(
         1,
         sizeof(zo_wxEventLoopBase)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2100,8 +2100,8 @@ zend_object* php_wxEventLoopActivator_new(zend_class_entry *class_type)
     custom_object = (zo_wxEventLoopActivator*) ecalloc(
         1,
         sizeof(zo_wxEventLoopActivator)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2288,8 +2288,8 @@ zend_object* php_wxModule_new(zend_class_entry *class_type)
     custom_object = (zo_wxModule*) ecalloc(
         1,
         sizeof(zo_wxModule)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2612,8 +2612,8 @@ zend_object* php_wxProcess_new(zend_class_entry *class_type)
     custom_object = (zo_wxProcess*) ecalloc(
         1,
         sizeof(zo_wxProcess)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4517,8 +4517,8 @@ zend_object* php_wxSingleInstanceChecker_new(zend_class_entry *class_type)
     custom_object = (zo_wxSingleInstanceChecker*) ecalloc(
         1,
         sizeof(zo_wxSingleInstanceChecker)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

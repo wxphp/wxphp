@@ -117,8 +117,8 @@ zend_object* php_wxURI_new(zend_class_entry *class_type)
     custom_object = (zo_wxURI*) ecalloc(
         1,
         sizeof(zo_wxURI)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

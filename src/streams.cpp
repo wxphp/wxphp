@@ -117,8 +117,8 @@ zend_object* php_wxDataOutputStream_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataOutputStream*) ecalloc(
         1,
         sizeof(zo_wxDataOutputStream)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1091,8 +1091,8 @@ zend_object* php_wxDataInputStream_new(zend_class_entry *class_type)
     custom_object = (zo_wxDataInputStream*) ecalloc(
         1,
         sizeof(zo_wxDataInputStream)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2025,8 +2025,8 @@ zend_object* php_wxStreamBase_new(zend_class_entry *class_type)
     custom_object = (zo_wxStreamBase*) ecalloc(
         1,
         sizeof(zo_wxStreamBase)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3219,8 +3219,8 @@ zend_object* php_wxOutputStream_new(zend_class_entry *class_type)
     custom_object = (zo_wxOutputStream*) ecalloc(
         1,
         sizeof(zo_wxOutputStream)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4250,8 +4250,8 @@ zend_object* php_wxInputStream_new(zend_class_entry *class_type)
     custom_object = (zo_wxInputStream*) ecalloc(
         1,
         sizeof(zo_wxInputStream)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5794,8 +5794,8 @@ zend_object* php_wxFFileOutputStream_new(zend_class_entry *class_type)
     custom_object = (zo_wxFFileOutputStream*) ecalloc(
         1,
         sizeof(zo_wxFFileOutputStream)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6146,8 +6146,8 @@ zend_object* php_wxFileOutputStream_new(zend_class_entry *class_type)
     custom_object = (zo_wxFileOutputStream*) ecalloc(
         1,
         sizeof(zo_wxFileOutputStream)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6524,8 +6524,8 @@ zend_object* php_wxFileInputStream_new(zend_class_entry *class_type)
     custom_object = (zo_wxFileInputStream*) ecalloc(
         1,
         sizeof(zo_wxFileInputStream)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6902,8 +6902,8 @@ zend_object* php_wxFFileInputStream_new(zend_class_entry *class_type)
     custom_object = (zo_wxFFileInputStream*) ecalloc(
         1,
         sizeof(zo_wxFFileInputStream)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7254,8 +7254,8 @@ zend_object* php_wxFFileStream_new(zend_class_entry *class_type)
     custom_object = (zo_wxFFileStream*) ecalloc(
         1,
         sizeof(zo_wxFFileStream)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7544,8 +7544,8 @@ zend_object* php_wxFileStream_new(zend_class_entry *class_type)
     custom_object = (zo_wxFileStream*) ecalloc(
         1,
         sizeof(zo_wxFileStream)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

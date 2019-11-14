@@ -117,8 +117,8 @@ zend_object* php_wxHtmlHelpController_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlHelpController*) ecalloc(
         1,
         sizeof(zo_wxHtmlHelpController)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2006,8 +2006,8 @@ zend_object* php_wxHtmlModalHelp_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlModalHelp*) ecalloc(
         1,
         sizeof(zo_wxHtmlModalHelp)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2223,8 +2223,8 @@ zend_object* php_wxHtmlHelpData_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlHelpData*) ecalloc(
         1,
         sizeof(zo_wxHtmlHelpData)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2810,8 +2810,8 @@ zend_object* php_wxHtmlHelpDialog_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlHelpDialog*) ecalloc(
         1,
         sizeof(zo_wxHtmlHelpDialog)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3761,8 +3761,8 @@ zend_object* php_wxHtmlHelpFrame_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlHelpFrame*) ecalloc(
         1,
         sizeof(zo_wxHtmlHelpFrame)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4845,8 +4845,8 @@ zend_object* php_wxHtmlHelpWindow_new(zend_class_entry *class_type)
     custom_object = (zo_wxHtmlHelpWindow*) ecalloc(
         1,
         sizeof(zo_wxHtmlHelpWindow)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6726,8 +6726,8 @@ zend_object* php_wxToolTip_new(zend_class_entry *class_type)
     custom_object = (zo_wxToolTip*) ecalloc(
         1,
         sizeof(zo_wxToolTip)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

@@ -117,8 +117,8 @@ zend_object* php_wxFileSystem_new(zend_class_entry *class_type)
     custom_object = (zo_wxFileSystem*) ecalloc(
         1,
         sizeof(zo_wxFileSystem)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1549,8 +1549,8 @@ zend_object* php_wxFileSystemHandler_new(zend_class_entry *class_type)
     custom_object = (zo_wxFileSystemHandler*) ecalloc(
         1,
         sizeof(zo_wxFileSystemHandler)
-        + abs((int)zend_object_properties_size(class_type))
-    );
+        + zend_object_properties_size(class_type)
+            );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
