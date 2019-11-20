@@ -557,15 +557,12 @@ zend_class_entry *php_wxApp_entry;
  * Custom function to register global objects as constants
  */
 BEGIN_EXTERN_C()
-void wxphp_register_object_constant(const char *name, uint name_len, zval object, int flags, int module_number)
+void wxphp_register_object_constant(const char *name, zval object, int flags, int module_number)
 {
     zend_constant c;
 
+    c.name = zend_string_init(name, strlen(name), flags & CONST_PERSISTENT);
     ZVAL_COPY(&c.value, &object);
-    c.name = zend_string_init_interned(name, name_len, flags & CONST_PERSISTENT);
-
-    //c.value = object;
-    //c.name = zend_string_init(name, name_len, flags & CONST_PERSISTENT);
 
     #if PHP_VERSION_ID < 70300
     c.flags = flags;

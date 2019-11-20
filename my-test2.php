@@ -240,3 +240,5 @@ class CredentialsDialog extends wxDialog
 
 $dialog = new CredentialsDialog('Foo', true, true);
 $result = $dialog->show();
+
+exit(42);

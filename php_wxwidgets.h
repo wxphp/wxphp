@@ -73,13 +73,12 @@ extern zend_module_entry wxWidgets_module_entry;
  */
 #define wxPHP_REGISTER_OBJECT_CONSTANT(name, object, flags)  \
     wxphp_register_object_constant( \
-        (name), sizeof(name) - 1, (object), (flags), module_number \
+        (name), (object), (flags), module_number \
     )
 
 BEGIN_EXTERN_C()
 void wxphp_register_object_constant(
     const char *name,
-    uint name_len,
     zval object,
     int flags,
     int module_number
