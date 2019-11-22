@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_printing_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxPrinterDC_entry;
+extern zend_object_handlers wxphp_wxPrinterDC_object_handlers;
 void php_wxPrinterDC_destruction_handler(zend_resource*);
 
 class wxPrinterDC_php: public wxPrinterDC{
@@ -63,6 +64,7 @@ static inline zo_wxPrinterDC * php_wxPrinterDC_fetch_object(zend_object *obj) {
 #define Z_wxPrinterDC_P(zv) \
     php_wxPrinterDC_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPreviewControlBar_entry;
+extern zend_object_handlers wxphp_wxPreviewControlBar_object_handlers;
 void php_wxPreviewControlBar_destruction_handler(zend_resource*);
 
 class wxPreviewControlBar_php: public wxPreviewControlBar{
@@ -108,6 +110,7 @@ static inline zo_wxPreviewControlBar * php_wxPreviewControlBar_fetch_object(zend
 #define Z_wxPreviewControlBar_P(zv) \
     php_wxPreviewControlBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPreviewCanvas_entry;
+extern zend_object_handlers wxphp_wxPreviewCanvas_object_handlers;
 void php_wxPreviewCanvas_destruction_handler(zend_resource*);
 
 class wxPreviewCanvas_php: public wxPreviewCanvas{
@@ -150,6 +153,7 @@ static inline zo_wxPreviewCanvas * php_wxPreviewCanvas_fetch_object(zend_object 
 #define Z_wxPreviewCanvas_P(zv) \
     php_wxPreviewCanvas_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPreviewFrame_entry;
+extern zend_object_handlers wxphp_wxPreviewFrame_object_handlers;
 void php_wxPreviewFrame_destruction_handler(zend_resource*);
 
 class wxPreviewFrame_php: public wxPreviewFrame{
@@ -194,6 +198,7 @@ static inline zo_wxPreviewFrame * php_wxPreviewFrame_fetch_object(zend_object *o
 #define Z_wxPreviewFrame_P(zv) \
     php_wxPreviewFrame_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPrintPreview_entry;
+extern zend_object_handlers wxphp_wxPrintPreview_object_handlers;
 void php_wxPrintPreview_destruction_handler(zend_resource*);
 
 class wxPrintPreview_php: public wxPrintPreview{
@@ -252,6 +257,7 @@ static inline zo_wxPrintPreview * php_wxPrintPreview_fetch_object(zend_object *o
 #define Z_wxPrintPreview_P(zv) \
     php_wxPrintPreview_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPrinter_entry;
+extern zend_object_handlers wxphp_wxPrinter_object_handlers;
 void php_wxPrinter_destruction_handler(zend_resource*);
 
 class wxPrinter_php: public wxPrinter{
@@ -301,6 +307,7 @@ static inline zo_wxPrinter * php_wxPrinter_fetch_object(zend_object *obj) {
 #define Z_wxPrinter_P(zv) \
     php_wxPrinter_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPrintout_entry;
+extern zend_object_handlers wxphp_wxPrintout_object_handlers;
 void php_wxPrintout_destruction_handler(zend_resource*);
 
 class wxPrintout_php: public wxPrintout{
@@ -372,6 +379,7 @@ static inline zo_wxPrintout * php_wxPrintout_fetch_object(zend_object *obj) {
 #define Z_wxPrintout_P(zv) \
     php_wxPrintout_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPrintDialog_entry;
+extern zend_object_handlers wxphp_wxPrintDialog_object_handlers;
 void php_wxPrintDialog_destruction_handler(zend_resource*);
 
 class wxPrintDialog_php: public wxPrintDialog{
@@ -419,6 +427,7 @@ static inline zo_wxPrintDialog * php_wxPrintDialog_fetch_object(zend_object *obj
 #define Z_wxPrintDialog_P(zv) \
     php_wxPrintDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPageSetupDialog_entry;
+extern zend_object_handlers wxphp_wxPageSetupDialog_object_handlers;
 void php_wxPageSetupDialog_destruction_handler(zend_resource*);
 
 class wxPageSetupDialog_php: public wxPageSetupDialog{

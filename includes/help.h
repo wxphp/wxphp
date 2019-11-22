@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_help_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxHtmlHelpController_entry;
+extern zend_object_handlers wxphp_wxHtmlHelpController_object_handlers;
 void php_wxHtmlHelpController_destruction_handler(zend_resource*);
 
 class wxHtmlHelpController_php: public wxHtmlHelpController{
@@ -75,6 +76,7 @@ static inline zo_wxHtmlHelpController * php_wxHtmlHelpController_fetch_object(ze
 #define Z_wxHtmlHelpController_P(zv) \
     php_wxHtmlHelpController_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlModalHelp_entry;
+extern zend_object_handlers wxphp_wxHtmlModalHelp_object_handlers;
 void php_wxHtmlModalHelp_destruction_handler(zend_resource*);
 
 class wxHtmlModalHelp_php: public wxHtmlModalHelp{
@@ -117,6 +119,7 @@ static inline zo_wxHtmlModalHelp * php_wxHtmlModalHelp_fetch_object(zend_object 
 #define Z_wxHtmlModalHelp_P(zv) \
     php_wxHtmlModalHelp_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlHelpData_entry;
+extern zend_object_handlers wxphp_wxHtmlHelpData_object_handlers;
 void php_wxHtmlHelpData_destruction_handler(zend_resource*);
 
 class wxHtmlHelpData_php: public wxHtmlHelpData{
@@ -163,6 +166,7 @@ static inline zo_wxHtmlHelpData * php_wxHtmlHelpData_fetch_object(zend_object *o
 #define Z_wxHtmlHelpData_P(zv) \
     php_wxHtmlHelpData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlHelpDialog_entry;
+extern zend_object_handlers wxphp_wxHtmlHelpDialog_object_handlers;
 void php_wxHtmlHelpDialog_destruction_handler(zend_resource*);
 
 class wxHtmlHelpDialog_php: public wxHtmlHelpDialog{
@@ -211,6 +215,7 @@ static inline zo_wxHtmlHelpDialog * php_wxHtmlHelpDialog_fetch_object(zend_objec
 #define Z_wxHtmlHelpDialog_P(zv) \
     php_wxHtmlHelpDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlHelpFrame_entry;
+extern zend_object_handlers wxphp_wxHtmlHelpFrame_object_handlers;
 void php_wxHtmlHelpFrame_destruction_handler(zend_resource*);
 
 class wxHtmlHelpFrame_php: public wxHtmlHelpFrame{
@@ -259,6 +264,7 @@ static inline zo_wxHtmlHelpFrame * php_wxHtmlHelpFrame_fetch_object(zend_object 
 #define Z_wxHtmlHelpFrame_P(zv) \
     php_wxHtmlHelpFrame_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlHelpWindow_entry;
+extern zend_object_handlers wxphp_wxHtmlHelpWindow_object_handlers;
 void php_wxHtmlHelpWindow_destruction_handler(zend_resource*);
 
 class wxHtmlHelpWindow_php: public wxHtmlHelpWindow{
@@ -313,6 +319,7 @@ static inline zo_wxHtmlHelpWindow * php_wxHtmlHelpWindow_fetch_object(zend_objec
 #define Z_wxHtmlHelpWindow_P(zv) \
     php_wxHtmlHelpWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxToolTip_entry;
+extern zend_object_handlers wxphp_wxToolTip_object_handlers;
 void php_wxToolTip_destruction_handler(zend_resource*);
 
 class wxToolTip_php: public wxToolTip{

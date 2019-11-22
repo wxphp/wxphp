@@ -123,7 +123,7 @@ zend_object* php_wxGBPosition_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGBPosition_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGBPOSITION_TYPE;
@@ -736,7 +736,7 @@ zend_object* php_wxGridBagSizer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridBagSizer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDBAGSIZER_TYPE;
@@ -4588,7 +4588,7 @@ zend_object* php_wxGBSizerItem_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGBSizerItem_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGBSIZERITEM_TYPE;
@@ -6396,7 +6396,7 @@ zend_object* php_wxGBSpan_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGBSpan_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGBSPAN_TYPE;
@@ -7038,7 +7038,7 @@ zend_object* php_wxLayoutAlgorithm_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxLayoutAlgorithm_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXLAYOUTALGORITHM_TYPE;
@@ -7694,7 +7694,7 @@ zend_object* php_wxSizer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxSizer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSIZER_TYPE;
@@ -18647,7 +18647,7 @@ zend_object* php_wxStdDialogButtonSizer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxStdDialogButtonSizer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSTDDIALOGBUTTONSIZER_TYPE;
@@ -19663,7 +19663,7 @@ zend_object* php_wxSizerItem_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxSizerItem_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSIZERITEM_TYPE;
@@ -24469,7 +24469,7 @@ zend_object* php_wxSizerFlags_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxSizerFlags_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSIZERFLAGS_TYPE;
@@ -26942,7 +26942,7 @@ zend_object* php_wxFlexGridSizer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFlexGridSizer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFLEXGRIDSIZER_TYPE;
@@ -28661,7 +28661,7 @@ zend_object* php_wxGridSizer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridSizer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDSIZER_TYPE;
@@ -30382,7 +30382,7 @@ zend_object* php_wxStaticBoxSizer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxStaticBoxSizer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSTATICBOXSIZER_TYPE;
@@ -30966,7 +30966,7 @@ zend_object* php_wxBoxSizer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxBoxSizer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXBOXSIZER_TYPE;
@@ -31617,7 +31617,7 @@ zend_object* php_wxWrapSizer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxWrapSizer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXWRAPSIZER_TYPE;

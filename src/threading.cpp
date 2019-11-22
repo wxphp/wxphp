@@ -123,7 +123,7 @@ zend_object* php_wxCondition_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxCondition_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCONDITION_TYPE;
@@ -851,7 +851,7 @@ zend_object* php_wxCriticalSectionLocker_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxCriticalSectionLocker_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCRITICALSECTIONLOCKER_TYPE;
@@ -1039,7 +1039,7 @@ zend_object* php_wxThreadHelper_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxThreadHelper_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTHREADHELPER_TYPE;
@@ -1399,7 +1399,7 @@ zend_object* php_wxCriticalSection_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxCriticalSection_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCRITICALSECTION_TYPE;
@@ -1871,7 +1871,7 @@ zend_object* php_wxThread_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxThread_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTHREAD_TYPE;
@@ -4810,7 +4810,7 @@ zend_object* php_wxSemaphore_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxSemaphore_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSEMAPHORE_TYPE;
@@ -5435,7 +5435,7 @@ zend_object* php_wxMutexLocker_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMutexLocker_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMUTEXLOCKER_TYPE;
@@ -5730,7 +5730,7 @@ zend_object* php_wxMutex_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMutex_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMUTEX_TYPE;

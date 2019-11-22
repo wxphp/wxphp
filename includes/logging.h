@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_logging_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxLog_entry;
+extern zend_object_handlers wxphp_wxLog_object_handlers;
 void php_wxLog_destruction_handler(zend_resource*);
 
 class wxLog_php: public wxLog{
@@ -88,6 +89,7 @@ static inline zo_wxLog * php_wxLog_fetch_object(zend_object *obj) {
 #define Z_wxLog_P(zv) \
     php_wxLog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogChain_entry;
+extern zend_object_handlers wxphp_wxLogChain_object_handlers;
 void php_wxLogChain_destruction_handler(zend_resource*);
 
 class wxLogChain_php: public wxLogChain{
@@ -135,6 +137,7 @@ static inline zo_wxLogChain * php_wxLogChain_fetch_object(zend_object *obj) {
 #define Z_wxLogChain_P(zv) \
     php_wxLogChain_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogInterposer_entry;
+extern zend_object_handlers wxphp_wxLogInterposer_object_handlers;
 void php_wxLogInterposer_destruction_handler(zend_resource*);
 
 class wxLogInterposer_php: public wxLogInterposer{
@@ -177,6 +180,7 @@ static inline zo_wxLogInterposer * php_wxLogInterposer_fetch_object(zend_object 
 #define Z_wxLogInterposer_P(zv) \
     php_wxLogInterposer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogBuffer_entry;
+extern zend_object_handlers wxphp_wxLogBuffer_object_handlers;
 void php_wxLogBuffer_destruction_handler(zend_resource*);
 
 class wxLogBuffer_php: public wxLogBuffer{
@@ -221,6 +225,7 @@ static inline zo_wxLogBuffer * php_wxLogBuffer_fetch_object(zend_object *obj) {
 #define Z_wxLogBuffer_P(zv) \
     php_wxLogBuffer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogWindow_entry;
+extern zend_object_handlers wxphp_wxLogWindow_object_handlers;
 void php_wxLogWindow_destruction_handler(zend_resource*);
 
 class wxLogWindow_php: public wxLogWindow{
@@ -267,6 +272,7 @@ static inline zo_wxLogWindow * php_wxLogWindow_fetch_object(zend_object *obj) {
 #define Z_wxLogWindow_P(zv) \
     php_wxLogWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogGui_entry;
+extern zend_object_handlers wxphp_wxLogGui_object_handlers;
 void php_wxLogGui_destruction_handler(zend_resource*);
 
 class wxLogGui_php: public wxLogGui{
@@ -328,6 +334,7 @@ static inline zo_wxLogGui * php_wxLogGui_fetch_object(zend_object *obj) {
 #define Z_wxLogGui_P(zv) \
     php_wxLogGui_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogTextCtrl_entry;
+extern zend_object_handlers wxphp_wxLogTextCtrl_object_handlers;
 void php_wxLogTextCtrl_destruction_handler(zend_resource*);
 
 class wxLogTextCtrl_php: public wxLogTextCtrl{

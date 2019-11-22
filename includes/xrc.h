@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_xrc_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxXmlResourceHandler_entry;
+extern zend_object_handlers wxphp_wxXmlResourceHandler_object_handlers;
 void php_wxXmlResourceHandler_destruction_handler(zend_resource*);
 
 class wxXmlResourceHandler_php: public wxXmlResourceHandler{
@@ -66,6 +67,7 @@ static inline zo_wxXmlResourceHandler * php_wxXmlResourceHandler_fetch_object(ze
 #define Z_wxXmlResourceHandler_P(zv) \
     php_wxXmlResourceHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxXmlResource_entry;
+extern zend_object_handlers wxphp_wxXmlResource_object_handlers;
 void php_wxXmlResource_destruction_handler(zend_resource*);
 
 class wxXmlResource_php: public wxXmlResource{

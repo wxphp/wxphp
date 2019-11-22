@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_bookctrl_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxAuiNotebookEvent_entry;
+extern zend_object_handlers wxphp_wxAuiNotebookEvent_object_handlers;
 void php_wxAuiNotebookEvent_destruction_handler(zend_resource*);
 
 class wxAuiNotebookEvent_php: public wxAuiNotebookEvent{
@@ -63,6 +64,7 @@ static inline zo_wxAuiNotebookEvent * php_wxAuiNotebookEvent_fetch_object(zend_o
 #define Z_wxAuiNotebookEvent_P(zv) \
     php_wxAuiNotebookEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBookCtrlBase_entry;
+extern zend_object_handlers wxphp_wxBookCtrlBase_object_handlers;
 void php_wxBookCtrlBase_destruction_handler(zend_resource*);
 
 class wxBookCtrlBase_php: public wxBookCtrlBase{
@@ -360,6 +362,7 @@ static inline zo_wxBookCtrlBase * php_wxBookCtrlBase_fetch_object(zend_object *o
 #define Z_wxBookCtrlBase_P(zv) \
     php_wxBookCtrlBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBookCtrlEvent_entry;
+extern zend_object_handlers wxphp_wxBookCtrlEvent_object_handlers;
 void php_wxBookCtrlEvent_destruction_handler(zend_resource*);
 
 class wxBookCtrlEvent_php: public wxBookCtrlEvent{
@@ -406,6 +409,7 @@ static inline zo_wxBookCtrlEvent * php_wxBookCtrlEvent_fetch_object(zend_object 
 #define Z_wxBookCtrlEvent_P(zv) \
     php_wxBookCtrlEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxChoicebook_entry;
+extern zend_object_handlers wxphp_wxChoicebook_object_handlers;
 void php_wxChoicebook_destruction_handler(zend_resource*);
 
 class wxChoicebook_php: public wxChoicebook{
@@ -450,6 +454,7 @@ static inline zo_wxChoicebook * php_wxChoicebook_fetch_object(zend_object *obj) 
 #define Z_wxChoicebook_P(zv) \
     php_wxChoicebook_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxListbook_entry;
+extern zend_object_handlers wxphp_wxListbook_object_handlers;
 void php_wxListbook_destruction_handler(zend_resource*);
 
 class wxListbook_php: public wxListbook{
@@ -494,6 +499,7 @@ static inline zo_wxListbook * php_wxListbook_fetch_object(zend_object *obj) {
 #define Z_wxListbook_P(zv) \
     php_wxListbook_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxNotebook_entry;
+extern zend_object_handlers wxphp_wxNotebook_object_handlers;
 void php_wxNotebook_destruction_handler(zend_resource*);
 
 class wxNotebook_php: public wxNotebook{
@@ -549,6 +555,7 @@ static inline zo_wxNotebook * php_wxNotebook_fetch_object(zend_object *obj) {
 #define Z_wxNotebook_P(zv) \
     php_wxNotebook_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxToolbook_entry;
+extern zend_object_handlers wxphp_wxToolbook_object_handlers;
 void php_wxToolbook_destruction_handler(zend_resource*);
 
 class wxToolbook_php: public wxToolbook{
@@ -593,6 +600,7 @@ static inline zo_wxToolbook * php_wxToolbook_fetch_object(zend_object *obj) {
 #define Z_wxToolbook_P(zv) \
     php_wxToolbook_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTreebook_entry;
+extern zend_object_handlers wxphp_wxTreebook_object_handlers;
 void php_wxTreebook_destruction_handler(zend_resource*);
 
 class wxTreebook_php: public wxTreebook{

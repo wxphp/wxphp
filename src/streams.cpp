@@ -123,7 +123,7 @@ zend_object* php_wxDataOutputStream_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDataOutputStream_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDATAOUTPUTSTREAM_TYPE;
@@ -1097,7 +1097,7 @@ zend_object* php_wxDataInputStream_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDataInputStream_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDATAINPUTSTREAM_TYPE;
@@ -2031,7 +2031,7 @@ zend_object* php_wxStreamBase_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxStreamBase_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSTREAMBASE_TYPE;
@@ -3225,7 +3225,7 @@ zend_object* php_wxOutputStream_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxOutputStream_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXOUTPUTSTREAM_TYPE;
@@ -4256,7 +4256,7 @@ zend_object* php_wxInputStream_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxInputStream_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXINPUTSTREAM_TYPE;
@@ -5800,7 +5800,7 @@ zend_object* php_wxFFileOutputStream_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFFileOutputStream_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFFILEOUTPUTSTREAM_TYPE;
@@ -6152,7 +6152,7 @@ zend_object* php_wxFileOutputStream_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFileOutputStream_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILEOUTPUTSTREAM_TYPE;
@@ -6530,7 +6530,7 @@ zend_object* php_wxFileInputStream_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFileInputStream_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILEINPUTSTREAM_TYPE;
@@ -6908,7 +6908,7 @@ zend_object* php_wxFFileInputStream_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFFileInputStream_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFFILEINPUTSTREAM_TYPE;
@@ -7260,7 +7260,7 @@ zend_object* php_wxFFileStream_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFFileStream_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFFILESTREAM_TYPE;
@@ -7550,7 +7550,7 @@ zend_object* php_wxFileStream_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFileStream_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILESTREAM_TYPE;

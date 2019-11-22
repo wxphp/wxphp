@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_threading_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxCondition_entry;
+extern zend_object_handlers wxphp_wxCondition_object_handlers;
 void php_wxCondition_destruction_handler(zend_resource*);
 
 class wxCondition_php: public wxCondition{
@@ -67,6 +68,7 @@ static inline zo_wxCondition * php_wxCondition_fetch_object(zend_object *obj) {
 #define Z_wxCondition_P(zv) \
     php_wxCondition_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCriticalSectionLocker_entry;
+extern zend_object_handlers wxphp_wxCriticalSectionLocker_object_handlers;
 void php_wxCriticalSectionLocker_destruction_handler(zend_resource*);
 
 class wxCriticalSectionLocker_php: public wxCriticalSectionLocker{
@@ -109,6 +111,7 @@ static inline zo_wxCriticalSectionLocker * php_wxCriticalSectionLocker_fetch_obj
 #define Z_wxCriticalSectionLocker_P(zv) \
     php_wxCriticalSectionLocker_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxThreadHelper_entry;
+extern zend_object_handlers wxphp_wxThreadHelper_object_handlers;
 void php_wxThreadHelper_destruction_handler(zend_resource*);
 
 class wxThreadHelper_php: public wxThreadHelper{
@@ -151,6 +154,7 @@ static inline zo_wxThreadHelper * php_wxThreadHelper_fetch_object(zend_object *o
 #define Z_wxThreadHelper_P(zv) \
     php_wxThreadHelper_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCriticalSection_entry;
+extern zend_object_handlers wxphp_wxCriticalSection_object_handlers;
 void php_wxCriticalSection_destruction_handler(zend_resource*);
 
 class wxCriticalSection_php: public wxCriticalSection{
@@ -196,6 +200,7 @@ static inline zo_wxCriticalSection * php_wxCriticalSection_fetch_object(zend_obj
 #define Z_wxCriticalSection_P(zv) \
     php_wxCriticalSection_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxThread_entry;
+extern zend_object_handlers wxphp_wxThread_object_handlers;
 void php_wxThread_destruction_handler(zend_resource*);
 
 class wxThread_php: public wxThread{
@@ -263,6 +268,7 @@ static inline zo_wxThread * php_wxThread_fetch_object(zend_object *obj) {
 #define Z_wxThread_P(zv) \
     php_wxThread_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSemaphore_entry;
+extern zend_object_handlers wxphp_wxSemaphore_object_handlers;
 void php_wxSemaphore_destruction_handler(zend_resource*);
 
 class wxSemaphore_php: public wxSemaphore{
@@ -309,6 +315,7 @@ static inline zo_wxSemaphore * php_wxSemaphore_fetch_object(zend_object *obj) {
 #define Z_wxSemaphore_P(zv) \
     php_wxSemaphore_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMutexLocker_entry;
+extern zend_object_handlers wxphp_wxMutexLocker_object_handlers;
 void php_wxMutexLocker_destruction_handler(zend_resource*);
 
 class wxMutexLocker_php: public wxMutexLocker{
@@ -352,6 +359,7 @@ static inline zo_wxMutexLocker * php_wxMutexLocker_fetch_object(zend_object *obj
 #define Z_wxMutexLocker_P(zv) \
     php_wxMutexLocker_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMutex_entry;
+extern zend_object_handlers wxphp_wxMutex_object_handlers;
 void php_wxMutex_destruction_handler(zend_resource*);
 
 class wxMutex_php: public wxMutex{

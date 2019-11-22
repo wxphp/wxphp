@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_stc_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxStyledTextCtrl_entry;
+extern zend_object_handlers wxphp_wxStyledTextCtrl_object_handlers;
 void php_wxStyledTextCtrl_destruction_handler(zend_resource*);
 
 class wxStyledTextCtrl_php: public wxStyledTextCtrl{

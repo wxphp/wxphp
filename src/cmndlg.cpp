@@ -123,7 +123,7 @@ zend_object* php_wxAboutDialogInfo_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAboutDialogInfo_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXABOUTDIALOGINFO_TYPE;
@@ -2750,7 +2750,7 @@ zend_object* php_wxBusyInfo_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxBusyInfo_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXBUSYINFO_TYPE;
@@ -2919,7 +2919,7 @@ zend_object* php_wxSingleChoiceDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxSingleChoiceDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSINGLECHOICEDIALOG_TYPE;
@@ -3977,7 +3977,7 @@ zend_object* php_wxPrintDialogData_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPrintDialogData_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPRINTDIALOGDATA_TYPE;
@@ -6839,7 +6839,7 @@ zend_object* php_wxColourDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxColourDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCOLOURDIALOG_TYPE;
@@ -7457,7 +7457,7 @@ zend_object* php_wxColourData_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxColourData_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCOLOURDATA_TYPE;
@@ -8540,7 +8540,7 @@ zend_object* php_wxDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDIALOG_TYPE;
@@ -15146,7 +15146,7 @@ zend_object* php_wxDirDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDirDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDIRDIALOG_TYPE;
@@ -16007,7 +16007,7 @@ zend_object* php_wxFindReplaceData_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFindReplaceData_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFINDREPLACEDATA_TYPE;
@@ -16818,7 +16818,7 @@ zend_object* php_wxFindReplaceDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFindReplaceDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFINDREPLACEDIALOG_TYPE;
@@ -17342,7 +17342,7 @@ zend_object* php_wxFileDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFileDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILEDIALOG_TYPE;
@@ -19518,7 +19518,7 @@ zend_object* php_wxFontData_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFontData_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFONTDATA_TYPE;
@@ -21170,7 +21170,7 @@ zend_object* php_wxFontDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFontDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFONTDIALOG_TYPE;
@@ -21937,7 +21937,7 @@ zend_object* php_wxMessageDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMessageDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMESSAGEDIALOG_TYPE;
@@ -24242,7 +24242,7 @@ zend_object* php_wxGenericProgressDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGenericProgressDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGENERICPROGRESSDIALOG_TYPE;
@@ -25559,7 +25559,7 @@ zend_object* php_wxRearrangeDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRearrangeDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXREARRANGEDIALOG_TYPE;
@@ -25952,7 +25952,7 @@ zend_object* php_wxSymbolPickerDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxSymbolPickerDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSYMBOLPICKERDIALOG_TYPE;
@@ -27822,7 +27822,7 @@ zend_object* php_wxPasswordEntryDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPasswordEntryDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPASSWORDENTRYDIALOG_TYPE;
@@ -28053,7 +28053,7 @@ zend_object* php_wxTextEntryDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxTextEntryDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTEXTENTRYDIALOG_TYPE;
@@ -28625,7 +28625,7 @@ zend_object* php_wxWizard_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxWizard_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXWIZARD_TYPE;

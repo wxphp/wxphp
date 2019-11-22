@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_misc_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxArtProvider_entry;
+extern zend_object_handlers wxphp_wxArtProvider_object_handlers;
 void php_wxArtProvider_destruction_handler(zend_resource*);
 
 class wxArtProvider_php: public wxArtProvider{
@@ -71,6 +72,7 @@ static inline zo_wxArtProvider * php_wxArtProvider_fetch_object(zend_object *obj
 #define Z_wxArtProvider_P(zv) \
     php_wxArtProvider_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCaret_entry;
+extern zend_object_handlers wxphp_wxCaret_object_handlers;
 void php_wxCaret_destruction_handler(zend_resource*);
 
 class wxCaret_php: public wxCaret{
@@ -125,6 +127,7 @@ static inline zo_wxCaret * php_wxCaret_fetch_object(zend_object *obj) {
 #define Z_wxCaret_P(zv) \
     php_wxCaret_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxNotificationMessage_entry;
+extern zend_object_handlers wxphp_wxNotificationMessage_object_handlers;
 void php_wxNotificationMessage_destruction_handler(zend_resource*);
 
 class wxNotificationMessage_php: public wxNotificationMessage{
@@ -174,6 +177,7 @@ static inline zo_wxNotificationMessage * php_wxNotificationMessage_fetch_object(
 #define Z_wxNotificationMessage_P(zv) \
     php_wxNotificationMessage_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStopWatch_entry;
+extern zend_object_handlers wxphp_wxStopWatch_object_handlers;
 void php_wxStopWatch_destruction_handler(zend_resource*);
 
 class wxStopWatch_php: public wxStopWatch{
@@ -220,6 +224,7 @@ static inline zo_wxStopWatch * php_wxStopWatch_fetch_object(zend_object *obj) {
 #define Z_wxStopWatch_P(zv) \
     php_wxStopWatch_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTaskBarIcon_entry;
+extern zend_object_handlers wxphp_wxTaskBarIcon_object_handlers;
 void php_wxTaskBarIcon_destruction_handler(zend_resource*);
 
 class wxTaskBarIcon_php: public wxTaskBarIcon{
@@ -270,6 +275,7 @@ static inline zo_wxTaskBarIcon * php_wxTaskBarIcon_fetch_object(zend_object *obj
 #define Z_wxTaskBarIcon_P(zv) \
     php_wxTaskBarIcon_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTimer_entry;
+extern zend_object_handlers wxphp_wxTimer_object_handlers;
 void php_wxTimer_destruction_handler(zend_resource*);
 
 class wxTimer_php: public wxTimer{
@@ -322,6 +328,7 @@ static inline zo_wxTimer * php_wxTimer_fetch_object(zend_object *obj) {
 #define Z_wxTimer_P(zv) \
     php_wxTimer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWindowDisabler_entry;
+extern zend_object_handlers wxphp_wxWindowDisabler_object_handlers;
 void php_wxWindowDisabler_destruction_handler(zend_resource*);
 
 class wxWindowDisabler_php: public wxWindowDisabler{
@@ -365,6 +372,7 @@ static inline zo_wxWindowDisabler * php_wxWindowDisabler_fetch_object(zend_objec
 #define Z_wxWindowDisabler_P(zv) \
     php_wxWindowDisabler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBusyCursor_entry;
+extern zend_object_handlers wxphp_wxBusyCursor_object_handlers;
 void php_wxBusyCursor_destruction_handler(zend_resource*);
 
 class wxBusyCursor_php: public wxBusyCursor{

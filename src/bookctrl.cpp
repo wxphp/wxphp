@@ -123,7 +123,7 @@ zend_object* php_wxAuiNotebookEvent_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiNotebookEvent_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUINOTEBOOKEVENT_TYPE;
@@ -415,7 +415,7 @@ zend_object* php_wxBookCtrlBase_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxBookCtrlBase_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXBOOKCTRLBASE_TYPE;
@@ -3650,7 +3650,7 @@ zend_object* php_wxBookCtrlEvent_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxBookCtrlEvent_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXBOOKCTRLEVENT_TYPE;
@@ -4291,7 +4291,7 @@ zend_object* php_wxChoicebook_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxChoicebook_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCHOICEBOOK_TYPE;
@@ -4711,7 +4711,7 @@ zend_object* php_wxListbook_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxListbook_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXLISTBOOK_TYPE;
@@ -5131,7 +5131,7 @@ zend_object* php_wxNotebook_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxNotebook_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXNOTEBOOK_TYPE;
@@ -6952,7 +6952,7 @@ zend_object* php_wxToolbook_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxToolbook_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTOOLBOOK_TYPE;
@@ -7372,7 +7372,7 @@ zend_object* php_wxTreebook_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxTreebook_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTREEBOOK_TYPE;

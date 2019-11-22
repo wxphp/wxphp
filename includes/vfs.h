@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_vfs_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxFileSystem_entry;
+extern zend_object_handlers wxphp_wxFileSystem_object_handlers;
 void php_wxFileSystem_destruction_handler(zend_resource*);
 
 class wxFileSystem_php: public wxFileSystem{
@@ -72,6 +73,7 @@ static inline zo_wxFileSystem * php_wxFileSystem_fetch_object(zend_object *obj) 
 #define Z_wxFileSystem_P(zv) \
     php_wxFileSystem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileSystemHandler_entry;
+extern zend_object_handlers wxphp_wxFileSystemHandler_object_handlers;
 void php_wxFileSystemHandler_destruction_handler(zend_resource*);
 
 class wxFileSystemHandler_php: public wxFileSystemHandler{

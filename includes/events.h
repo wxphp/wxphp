@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_events_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxEventFilter_entry;
+extern zend_object_handlers wxphp_wxEventFilter_object_handlers;
 void php_wxEventFilter_destruction_handler(zend_resource*);
 
 class wxEventFilter_php: public wxEventFilter{
@@ -63,6 +64,7 @@ static inline zo_wxEventFilter * php_wxEventFilter_fetch_object(zend_object *obj
 #define Z_wxEventFilter_P(zv) \
     php_wxEventFilter_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxKeyboardState_entry;
+extern zend_object_handlers wxphp_wxKeyboardState_object_handlers;
 void php_wxKeyboardState_destruction_handler(zend_resource*);
 
 class wxKeyboardState_php: public wxKeyboardState{
@@ -117,6 +119,7 @@ static inline zo_wxKeyboardState * php_wxKeyboardState_fetch_object(zend_object 
 #define Z_wxKeyboardState_P(zv) \
     php_wxKeyboardState_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCalendarEvent_entry;
+extern zend_object_handlers wxphp_wxCalendarEvent_object_handlers;
 void php_wxCalendarEvent_destruction_handler(zend_resource*);
 
 class wxCalendarEvent_php: public wxCalendarEvent{
@@ -159,6 +162,7 @@ static inline zo_wxCalendarEvent * php_wxCalendarEvent_fetch_object(zend_object 
 #define Z_wxCalendarEvent_P(zv) \
     php_wxCalendarEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxColourPickerEvent_entry;
+extern zend_object_handlers wxphp_wxColourPickerEvent_object_handlers;
 void php_wxColourPickerEvent_destruction_handler(zend_resource*);
 
 class wxColourPickerEvent_php: public wxColourPickerEvent{
@@ -203,6 +207,7 @@ static inline zo_wxColourPickerEvent * php_wxColourPickerEvent_fetch_object(zend
 #define Z_wxColourPickerEvent_P(zv) \
     php_wxColourPickerEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCollapsiblePaneEvent_entry;
+extern zend_object_handlers wxphp_wxCollapsiblePaneEvent_object_handlers;
 void php_wxCollapsiblePaneEvent_destruction_handler(zend_resource*);
 
 class wxCollapsiblePaneEvent_php: public wxCollapsiblePaneEvent{
@@ -247,6 +252,7 @@ static inline zo_wxCollapsiblePaneEvent * php_wxCollapsiblePaneEvent_fetch_objec
 #define Z_wxCollapsiblePaneEvent_P(zv) \
     php_wxCollapsiblePaneEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDateEvent_entry;
+extern zend_object_handlers wxphp_wxDateEvent_object_handlers;
 void php_wxDateEvent_destruction_handler(zend_resource*);
 
 class wxDateEvent_php: public wxDateEvent{
@@ -289,6 +295,7 @@ static inline zo_wxDateEvent * php_wxDateEvent_fetch_object(zend_object *obj) {
 #define Z_wxDateEvent_P(zv) \
     php_wxDateEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxEvent_entry;
+extern zend_object_handlers wxphp_wxEvent_object_handlers;
 void php_wxEvent_destruction_handler(zend_resource*);
 
 class wxEvent_php: public wxEvent{
@@ -360,6 +367,7 @@ static inline zo_wxEvent * php_wxEvent_fetch_object(zend_object *obj) {
 #define Z_wxEvent_P(zv) \
     php_wxEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxEventBlocker_entry;
+extern zend_object_handlers wxphp_wxEventBlocker_object_handlers;
 void php_wxEventBlocker_destruction_handler(zend_resource*);
 
 class wxEventBlocker_php: public wxEventBlocker{
@@ -403,6 +411,7 @@ static inline zo_wxEventBlocker * php_wxEventBlocker_fetch_object(zend_object *o
 #define Z_wxEventBlocker_P(zv) \
     php_wxEventBlocker_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxEvtHandler_entry;
+extern zend_object_handlers wxphp_wxEvtHandler_object_handlers;
 void php_wxEvtHandler_destruction_handler(zend_resource*);
 
 class wxEvtHandler_php: public wxEvtHandler{
@@ -466,6 +475,7 @@ static inline zo_wxEvtHandler * php_wxEvtHandler_fetch_object(zend_object *obj) 
 #define Z_wxEvtHandler_P(zv) \
     php_wxEvtHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxKeyEvent_entry;
+extern zend_object_handlers wxphp_wxKeyEvent_object_handlers;
 void php_wxKeyEvent_destruction_handler(zend_resource*);
 
 class wxKeyEvent_php: public wxKeyEvent{
@@ -550,6 +560,7 @@ static inline zo_wxKeyEvent * php_wxKeyEvent_fetch_object(zend_object *obj) {
 #define Z_wxKeyEvent_P(zv) \
     php_wxKeyEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxScrollWinEvent_entry;
+extern zend_object_handlers wxphp_wxScrollWinEvent_object_handlers;
 void php_wxScrollWinEvent_destruction_handler(zend_resource*);
 
 class wxScrollWinEvent_php: public wxScrollWinEvent{
@@ -596,6 +607,7 @@ static inline zo_wxScrollWinEvent * php_wxScrollWinEvent_fetch_object(zend_objec
 #define Z_wxScrollWinEvent_P(zv) \
     php_wxScrollWinEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSysColourChangedEvent_entry;
+extern zend_object_handlers wxphp_wxSysColourChangedEvent_object_handlers;
 void php_wxSysColourChangedEvent_destruction_handler(zend_resource*);
 
 class wxSysColourChangedEvent_php: public wxSysColourChangedEvent{
@@ -638,6 +650,7 @@ static inline zo_wxSysColourChangedEvent * php_wxSysColourChangedEvent_fetch_obj
 #define Z_wxSysColourChangedEvent_P(zv) \
     php_wxSysColourChangedEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCommandEvent_entry;
+extern zend_object_handlers wxphp_wxCommandEvent_object_handlers;
 void php_wxCommandEvent_destruction_handler(zend_resource*);
 
 class wxCommandEvent_php: public wxCommandEvent{
@@ -689,6 +702,7 @@ static inline zo_wxCommandEvent * php_wxCommandEvent_fetch_object(zend_object *o
 #define Z_wxCommandEvent_P(zv) \
     php_wxCommandEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWindowCreateEvent_entry;
+extern zend_object_handlers wxphp_wxWindowCreateEvent_object_handlers;
 void php_wxWindowCreateEvent_destruction_handler(zend_resource*);
 
 class wxWindowCreateEvent_php: public wxWindowCreateEvent{
@@ -732,6 +746,7 @@ static inline zo_wxWindowCreateEvent * php_wxWindowCreateEvent_fetch_object(zend
 #define Z_wxWindowCreateEvent_P(zv) \
     php_wxWindowCreateEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPaintEvent_entry;
+extern zend_object_handlers wxphp_wxPaintEvent_object_handlers;
 void php_wxPaintEvent_destruction_handler(zend_resource*);
 
 class wxPaintEvent_php: public wxPaintEvent{
@@ -774,6 +789,7 @@ static inline zo_wxPaintEvent * php_wxPaintEvent_fetch_object(zend_object *obj) 
 #define Z_wxPaintEvent_P(zv) \
     php_wxPaintEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMaximizeEvent_entry;
+extern zend_object_handlers wxphp_wxMaximizeEvent_object_handlers;
 void php_wxMaximizeEvent_destruction_handler(zend_resource*);
 
 class wxMaximizeEvent_php: public wxMaximizeEvent{
@@ -816,6 +832,7 @@ static inline zo_wxMaximizeEvent * php_wxMaximizeEvent_fetch_object(zend_object 
 #define Z_wxMaximizeEvent_P(zv) \
     php_wxMaximizeEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxUpdateUIEvent_entry;
+extern zend_object_handlers wxphp_wxUpdateUIEvent_object_handlers;
 void php_wxUpdateUIEvent_destruction_handler(zend_resource*);
 
 class wxUpdateUIEvent_php: public wxUpdateUIEvent{
@@ -876,6 +893,7 @@ static inline zo_wxUpdateUIEvent * php_wxUpdateUIEvent_fetch_object(zend_object 
 #define Z_wxUpdateUIEvent_P(zv) \
     php_wxUpdateUIEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxClipboardTextEvent_entry;
+extern zend_object_handlers wxphp_wxClipboardTextEvent_object_handlers;
 void php_wxClipboardTextEvent_destruction_handler(zend_resource*);
 
 class wxClipboardTextEvent_php: public wxClipboardTextEvent{
@@ -918,6 +936,7 @@ static inline zo_wxClipboardTextEvent * php_wxClipboardTextEvent_fetch_object(ze
 #define Z_wxClipboardTextEvent_P(zv) \
     php_wxClipboardTextEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMouseEvent_entry;
+extern zend_object_handlers wxphp_wxMouseEvent_object_handlers;
 void php_wxMouseEvent_destruction_handler(zend_resource*);
 
 class wxMouseEvent_php: public wxMouseEvent{
@@ -1042,6 +1061,7 @@ static inline zo_wxMouseEvent * php_wxMouseEvent_fetch_object(zend_object *obj) 
 #define Z_wxMouseEvent_P(zv) \
     php_wxMouseEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxActivateEvent_entry;
+extern zend_object_handlers wxphp_wxActivateEvent_object_handlers;
 void php_wxActivateEvent_destruction_handler(zend_resource*);
 
 class wxActivateEvent_php: public wxActivateEvent{
@@ -1085,6 +1105,7 @@ static inline zo_wxActivateEvent * php_wxActivateEvent_fetch_object(zend_object 
 #define Z_wxActivateEvent_P(zv) \
     php_wxActivateEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxContextMenuEvent_entry;
+extern zend_object_handlers wxphp_wxContextMenuEvent_object_handlers;
 void php_wxContextMenuEvent_destruction_handler(zend_resource*);
 
 class wxContextMenuEvent_php: public wxContextMenuEvent{
@@ -1129,6 +1150,7 @@ static inline zo_wxContextMenuEvent * php_wxContextMenuEvent_fetch_object(zend_o
 #define Z_wxContextMenuEvent_P(zv) \
     php_wxContextMenuEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxEraseEvent_entry;
+extern zend_object_handlers wxphp_wxEraseEvent_object_handlers;
 void php_wxEraseEvent_destruction_handler(zend_resource*);
 
 class wxEraseEvent_php: public wxEraseEvent{
@@ -1172,6 +1194,7 @@ static inline zo_wxEraseEvent * php_wxEraseEvent_fetch_object(zend_object *obj) 
 #define Z_wxEraseEvent_P(zv) \
     php_wxEraseEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFocusEvent_entry;
+extern zend_object_handlers wxphp_wxFocusEvent_object_handlers;
 void php_wxFocusEvent_destruction_handler(zend_resource*);
 
 class wxFocusEvent_php: public wxFocusEvent{
@@ -1216,6 +1239,7 @@ static inline zo_wxFocusEvent * php_wxFocusEvent_fetch_object(zend_object *obj) 
 #define Z_wxFocusEvent_P(zv) \
     php_wxFocusEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxChildFocusEvent_entry;
+extern zend_object_handlers wxphp_wxChildFocusEvent_object_handlers;
 void php_wxChildFocusEvent_destruction_handler(zend_resource*);
 
 class wxChildFocusEvent_php: public wxChildFocusEvent{
@@ -1259,6 +1283,7 @@ static inline zo_wxChildFocusEvent * php_wxChildFocusEvent_fetch_object(zend_obj
 #define Z_wxChildFocusEvent_P(zv) \
     php_wxChildFocusEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxNotifyEvent_entry;
+extern zend_object_handlers wxphp_wxNotifyEvent_object_handlers;
 void php_wxNotifyEvent_destruction_handler(zend_resource*);
 
 class wxNotifyEvent_php: public wxNotifyEvent{
@@ -1304,6 +1329,7 @@ static inline zo_wxNotifyEvent * php_wxNotifyEvent_fetch_object(zend_object *obj
 #define Z_wxNotifyEvent_P(zv) \
     php_wxNotifyEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxThreadEvent_entry;
+extern zend_object_handlers wxphp_wxThreadEvent_object_handlers;
 void php_wxThreadEvent_destruction_handler(zend_resource*);
 
 class wxThreadEvent_php: public wxThreadEvent{
@@ -1354,6 +1380,7 @@ static inline zo_wxThreadEvent * php_wxThreadEvent_fetch_object(zend_object *obj
 #define Z_wxThreadEvent_P(zv) \
     php_wxThreadEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHelpEvent_entry;
+extern zend_object_handlers wxphp_wxHelpEvent_object_handlers;
 void php_wxHelpEvent_destruction_handler(zend_resource*);
 
 class wxHelpEvent_php: public wxHelpEvent{
@@ -1400,6 +1427,7 @@ static inline zo_wxHelpEvent * php_wxHelpEvent_fetch_object(zend_object *obj) {
 #define Z_wxHelpEvent_P(zv) \
     php_wxHelpEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxScrollEvent_entry;
+extern zend_object_handlers wxphp_wxScrollEvent_object_handlers;
 void php_wxScrollEvent_destruction_handler(zend_resource*);
 
 class wxScrollEvent_php: public wxScrollEvent{
@@ -1446,6 +1474,7 @@ static inline zo_wxScrollEvent * php_wxScrollEvent_fetch_object(zend_object *obj
 #define Z_wxScrollEvent_P(zv) \
     php_wxScrollEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxIdleEvent_entry;
+extern zend_object_handlers wxphp_wxIdleEvent_object_handlers;
 void php_wxIdleEvent_destruction_handler(zend_resource*);
 
 class wxIdleEvent_php: public wxIdleEvent{
@@ -1492,6 +1521,7 @@ static inline zo_wxIdleEvent * php_wxIdleEvent_fetch_object(zend_object *obj) {
 #define Z_wxIdleEvent_P(zv) \
     php_wxIdleEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxInitDialogEvent_entry;
+extern zend_object_handlers wxphp_wxInitDialogEvent_object_handlers;
 void php_wxInitDialogEvent_destruction_handler(zend_resource*);
 
 class wxInitDialogEvent_php: public wxInitDialogEvent{
@@ -1534,6 +1564,7 @@ static inline zo_wxInitDialogEvent * php_wxInitDialogEvent_fetch_object(zend_obj
 #define Z_wxInitDialogEvent_P(zv) \
     php_wxInitDialogEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWindowDestroyEvent_entry;
+extern zend_object_handlers wxphp_wxWindowDestroyEvent_object_handlers;
 void php_wxWindowDestroyEvent_destruction_handler(zend_resource*);
 
 class wxWindowDestroyEvent_php: public wxWindowDestroyEvent{
@@ -1577,6 +1608,7 @@ static inline zo_wxWindowDestroyEvent * php_wxWindowDestroyEvent_fetch_object(ze
 #define Z_wxWindowDestroyEvent_P(zv) \
     php_wxWindowDestroyEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxNavigationKeyEvent_entry;
+extern zend_object_handlers wxphp_wxNavigationKeyEvent_object_handlers;
 void php_wxNavigationKeyEvent_destruction_handler(zend_resource*);
 
 class wxNavigationKeyEvent_php: public wxNavigationKeyEvent{
@@ -1628,6 +1660,7 @@ static inline zo_wxNavigationKeyEvent * php_wxNavigationKeyEvent_fetch_object(ze
 #define Z_wxNavigationKeyEvent_P(zv) \
     php_wxNavigationKeyEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCloseEvent_entry;
+extern zend_object_handlers wxphp_wxCloseEvent_object_handlers;
 void php_wxCloseEvent_destruction_handler(zend_resource*);
 
 class wxCloseEvent_php: public wxCloseEvent{
@@ -1675,6 +1708,7 @@ static inline zo_wxCloseEvent * php_wxCloseEvent_fetch_object(zend_object *obj) 
 #define Z_wxCloseEvent_P(zv) \
     php_wxCloseEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMenuEvent_entry;
+extern zend_object_handlers wxphp_wxMenuEvent_object_handlers;
 void php_wxMenuEvent_destruction_handler(zend_resource*);
 
 class wxMenuEvent_php: public wxMenuEvent{
@@ -1720,6 +1754,7 @@ static inline zo_wxMenuEvent * php_wxMenuEvent_fetch_object(zend_object *obj) {
 #define Z_wxMenuEvent_P(zv) \
     php_wxMenuEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMoveEvent_entry;
+extern zend_object_handlers wxphp_wxMoveEvent_object_handlers;
 void php_wxMoveEvent_destruction_handler(zend_resource*);
 
 class wxMoveEvent_php: public wxMoveEvent{
@@ -1766,6 +1801,7 @@ static inline zo_wxMoveEvent * php_wxMoveEvent_fetch_object(zend_object *obj) {
 #define Z_wxMoveEvent_P(zv) \
     php_wxMoveEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSizeEvent_entry;
+extern zend_object_handlers wxphp_wxSizeEvent_object_handlers;
 void php_wxSizeEvent_destruction_handler(zend_resource*);
 
 class wxSizeEvent_php: public wxSizeEvent{
@@ -1812,6 +1848,7 @@ static inline zo_wxSizeEvent * php_wxSizeEvent_fetch_object(zend_object *obj) {
 #define Z_wxSizeEvent_P(zv) \
     php_wxSizeEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSetCursorEvent_entry;
+extern zend_object_handlers wxphp_wxSetCursorEvent_object_handlers;
 void php_wxSetCursorEvent_destruction_handler(zend_resource*);
 
 class wxSetCursorEvent_php: public wxSetCursorEvent{
@@ -1859,6 +1896,7 @@ static inline zo_wxSetCursorEvent * php_wxSetCursorEvent_fetch_object(zend_objec
 #define Z_wxSetCursorEvent_P(zv) \
     php_wxSetCursorEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileCtrlEvent_entry;
+extern zend_object_handlers wxphp_wxFileCtrlEvent_object_handlers;
 void php_wxFileCtrlEvent_destruction_handler(zend_resource*);
 
 class wxFileCtrlEvent_php: public wxFileCtrlEvent{
@@ -1908,6 +1946,7 @@ static inline zo_wxFileCtrlEvent * php_wxFileCtrlEvent_fetch_object(zend_object 
 #define Z_wxFileCtrlEvent_P(zv) \
     php_wxFileCtrlEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileDirPickerEvent_entry;
+extern zend_object_handlers wxphp_wxFileDirPickerEvent_object_handlers;
 void php_wxFileDirPickerEvent_destruction_handler(zend_resource*);
 
 class wxFileDirPickerEvent_php: public wxFileDirPickerEvent{
@@ -1952,6 +1991,7 @@ static inline zo_wxFileDirPickerEvent * php_wxFileDirPickerEvent_fetch_object(ze
 #define Z_wxFileDirPickerEvent_P(zv) \
     php_wxFileDirPickerEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontPickerEvent_entry;
+extern zend_object_handlers wxphp_wxFontPickerEvent_object_handlers;
 void php_wxFontPickerEvent_destruction_handler(zend_resource*);
 
 class wxFontPickerEvent_php: public wxFontPickerEvent{
@@ -1996,6 +2036,7 @@ static inline zo_wxFontPickerEvent * php_wxFontPickerEvent_fetch_object(zend_obj
 #define Z_wxFontPickerEvent_P(zv) \
     php_wxFontPickerEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileSystemWatcherEvent_entry;
+extern zend_object_handlers wxphp_wxFileSystemWatcherEvent_object_handlers;
 void php_wxFileSystemWatcherEvent_destruction_handler(zend_resource*);
 
 class wxFileSystemWatcherEvent_php: public wxFileSystemWatcherEvent{
@@ -2042,6 +2083,7 @@ static inline zo_wxFileSystemWatcherEvent * php_wxFileSystemWatcherEvent_fetch_o
 #define Z_wxFileSystemWatcherEvent_P(zv) \
     php_wxFileSystemWatcherEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridEvent_entry;
+extern zend_object_handlers wxphp_wxGridEvent_object_handlers;
 void php_wxGridEvent_destruction_handler(zend_resource*);
 
 class wxGridEvent_php: public wxGridEvent{
@@ -2093,6 +2135,7 @@ static inline zo_wxGridEvent * php_wxGridEvent_fetch_object(zend_object *obj) {
 #define Z_wxGridEvent_P(zv) \
     php_wxGridEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridSizeEvent_entry;
+extern zend_object_handlers wxphp_wxGridSizeEvent_object_handlers;
 void php_wxGridSizeEvent_destruction_handler(zend_resource*);
 
 class wxGridSizeEvent_php: public wxGridSizeEvent{
@@ -2142,6 +2185,7 @@ static inline zo_wxGridSizeEvent * php_wxGridSizeEvent_fetch_object(zend_object 
 #define Z_wxGridSizeEvent_P(zv) \
     php_wxGridSizeEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridRangeSelectEvent_entry;
+extern zend_object_handlers wxphp_wxGridRangeSelectEvent_object_handlers;
 void php_wxGridRangeSelectEvent_destruction_handler(zend_resource*);
 
 class wxGridRangeSelectEvent_php: public wxGridRangeSelectEvent{
@@ -2196,6 +2240,7 @@ static inline zo_wxGridRangeSelectEvent * php_wxGridRangeSelectEvent_fetch_objec
 #define Z_wxGridRangeSelectEvent_P(zv) \
     php_wxGridRangeSelectEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridEditorCreatedEvent_entry;
+extern zend_object_handlers wxphp_wxGridEditorCreatedEvent_object_handlers;
 void php_wxGridEditorCreatedEvent_destruction_handler(zend_resource*);
 
 class wxGridEditorCreatedEvent_php: public wxGridEditorCreatedEvent{
@@ -2245,6 +2290,7 @@ static inline zo_wxGridEditorCreatedEvent * php_wxGridEditorCreatedEvent_fetch_o
 #define Z_wxGridEditorCreatedEvent_P(zv) \
     php_wxGridEditorCreatedEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHeaderCtrlEvent_entry;
+extern zend_object_handlers wxphp_wxHeaderCtrlEvent_object_handlers;
 void php_wxHeaderCtrlEvent_destruction_handler(zend_resource*);
 
 class wxHeaderCtrlEvent_php: public wxHeaderCtrlEvent{
@@ -2288,6 +2334,7 @@ static inline zo_wxHeaderCtrlEvent * php_wxHeaderCtrlEvent_fetch_object(zend_obj
 #define Z_wxHeaderCtrlEvent_P(zv) \
     php_wxHeaderCtrlEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHyperlinkEvent_entry;
+extern zend_object_handlers wxphp_wxHyperlinkEvent_object_handlers;
 void php_wxHyperlinkEvent_destruction_handler(zend_resource*);
 
 class wxHyperlinkEvent_php: public wxHyperlinkEvent{
@@ -2332,6 +2379,7 @@ static inline zo_wxHyperlinkEvent * php_wxHyperlinkEvent_fetch_object(zend_objec
 #define Z_wxHyperlinkEvent_P(zv) \
     php_wxHyperlinkEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxQueryLayoutInfoEvent_entry;
+extern zend_object_handlers wxphp_wxQueryLayoutInfoEvent_object_handlers;
 void php_wxQueryLayoutInfoEvent_destruction_handler(zend_resource*);
 
 class wxQueryLayoutInfoEvent_php: public wxQueryLayoutInfoEvent{
@@ -2384,6 +2432,7 @@ static inline zo_wxQueryLayoutInfoEvent * php_wxQueryLayoutInfoEvent_fetch_objec
 #define Z_wxQueryLayoutInfoEvent_P(zv) \
     php_wxQueryLayoutInfoEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCalculateLayoutEvent_entry;
+extern zend_object_handlers wxphp_wxCalculateLayoutEvent_object_handlers;
 void php_wxCalculateLayoutEvent_destruction_handler(zend_resource*);
 
 class wxCalculateLayoutEvent_php: public wxCalculateLayoutEvent{
@@ -2430,6 +2479,7 @@ static inline zo_wxCalculateLayoutEvent * php_wxCalculateLayoutEvent_fetch_objec
 #define Z_wxCalculateLayoutEvent_P(zv) \
     php_wxCalculateLayoutEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxListEvent_entry;
+extern zend_object_handlers wxphp_wxListEvent_object_handlers;
 void php_wxListEvent_destruction_handler(zend_resource*);
 
 class wxListEvent_php: public wxListEvent{
@@ -2484,6 +2534,7 @@ static inline zo_wxListEvent * php_wxListEvent_fetch_object(zend_object *obj) {
 #define Z_wxListEvent_P(zv) \
     php_wxListEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMediaEvent_entry;
+extern zend_object_handlers wxphp_wxMediaEvent_object_handlers;
 void php_wxMediaEvent_destruction_handler(zend_resource*);
 
 class wxMediaEvent_php: public wxMediaEvent{
@@ -2526,6 +2577,7 @@ static inline zo_wxMediaEvent * php_wxMediaEvent_fetch_object(zend_object *obj) 
 #define Z_wxMediaEvent_P(zv) \
     php_wxMediaEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMouseEventsManager_entry;
+extern zend_object_handlers wxphp_wxMouseEventsManager_object_handlers;
 void php_wxMouseEventsManager_destruction_handler(zend_resource*);
 
 class wxMouseEventsManager_php: public wxMouseEventsManager{
@@ -2578,6 +2630,7 @@ static inline zo_wxMouseEventsManager * php_wxMouseEventsManager_fetch_object(ze
 #define Z_wxMouseEventsManager_P(zv) \
     php_wxMouseEventsManager_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMouseState_entry;
+extern zend_object_handlers wxphp_wxMouseState_object_handlers;
 void php_wxMouseState_destruction_handler(zend_resource*);
 
 class wxMouseState_php: public wxMouseState{
@@ -2637,6 +2690,7 @@ static inline zo_wxMouseState * php_wxMouseState_fetch_object(zend_object *obj) 
 #define Z_wxMouseState_P(zv) \
     php_wxMouseState_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxProcessEvent_entry;
+extern zend_object_handlers wxphp_wxProcessEvent_object_handlers;
 void php_wxProcessEvent_destruction_handler(zend_resource*);
 
 class wxProcessEvent_php: public wxProcessEvent{
@@ -2681,6 +2735,7 @@ static inline zo_wxProcessEvent * php_wxProcessEvent_fetch_object(zend_object *o
 #define Z_wxProcessEvent_P(zv) \
     php_wxProcessEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonBarEvent_entry;
+extern zend_object_handlers wxphp_wxRibbonBarEvent_object_handlers;
 void php_wxRibbonBarEvent_destruction_handler(zend_resource*);
 
 class wxRibbonBarEvent_php: public wxRibbonBarEvent{
@@ -2725,6 +2780,7 @@ static inline zo_wxRibbonBarEvent * php_wxRibbonBarEvent_fetch_object(zend_objec
 #define Z_wxRibbonBarEvent_P(zv) \
     php_wxRibbonBarEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonButtonBarEvent_entry;
+extern zend_object_handlers wxphp_wxRibbonButtonBarEvent_object_handlers;
 void php_wxRibbonButtonBarEvent_destruction_handler(zend_resource*);
 
 class wxRibbonButtonBarEvent_php: public wxRibbonButtonBarEvent{
@@ -2770,6 +2826,7 @@ static inline zo_wxRibbonButtonBarEvent * php_wxRibbonButtonBarEvent_fetch_objec
 #define Z_wxRibbonButtonBarEvent_P(zv) \
     php_wxRibbonButtonBarEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonGalleryEvent_entry;
+extern zend_object_handlers wxphp_wxRibbonGalleryEvent_object_handlers;
 void php_wxRibbonGalleryEvent_destruction_handler(zend_resource*);
 
 class wxRibbonGalleryEvent_php: public wxRibbonGalleryEvent{
@@ -2816,6 +2873,7 @@ static inline zo_wxRibbonGalleryEvent * php_wxRibbonGalleryEvent_fetch_object(ze
 #define Z_wxRibbonGalleryEvent_P(zv) \
     php_wxRibbonGalleryEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSashEvent_entry;
+extern zend_object_handlers wxphp_wxSashEvent_object_handlers;
 void php_wxSashEvent_destruction_handler(zend_resource*);
 
 class wxSashEvent_php: public wxSashEvent{
@@ -2861,6 +2919,7 @@ static inline zo_wxSashEvent * php_wxSashEvent_fetch_object(zend_object *obj) {
 #define Z_wxSashEvent_P(zv) \
     php_wxSashEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSpinEvent_entry;
+extern zend_object_handlers wxphp_wxSpinEvent_object_handlers;
 void php_wxSpinEvent_destruction_handler(zend_resource*);
 
 class wxSpinEvent_php: public wxSpinEvent{
@@ -2905,6 +2964,7 @@ static inline zo_wxSpinEvent * php_wxSpinEvent_fetch_object(zend_object *obj) {
 #define Z_wxSpinEvent_P(zv) \
     php_wxSpinEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSpinDoubleEvent_entry;
+extern zend_object_handlers wxphp_wxSpinDoubleEvent_object_handlers;
 void php_wxSpinDoubleEvent_destruction_handler(zend_resource*);
 
 class wxSpinDoubleEvent_php: public wxSpinDoubleEvent{
@@ -2950,6 +3010,7 @@ static inline zo_wxSpinDoubleEvent * php_wxSpinDoubleEvent_fetch_object(zend_obj
 #define Z_wxSpinDoubleEvent_P(zv) \
     php_wxSpinDoubleEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSplitterEvent_entry;
+extern zend_object_handlers wxphp_wxSplitterEvent_object_handlers;
 void php_wxSplitterEvent_destruction_handler(zend_resource*);
 
 class wxSplitterEvent_php: public wxSplitterEvent{
@@ -2997,6 +3058,7 @@ static inline zo_wxSplitterEvent * php_wxSplitterEvent_fetch_object(zend_object 
 #define Z_wxSplitterEvent_P(zv) \
     php_wxSplitterEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStyledTextEvent_entry;
+extern zend_object_handlers wxphp_wxStyledTextEvent_object_handlers;
 void php_wxStyledTextEvent_destruction_handler(zend_resource*);
 
 class wxStyledTextEvent_php: public wxStyledTextEvent{
@@ -3081,6 +3143,7 @@ static inline zo_wxStyledTextEvent * php_wxStyledTextEvent_fetch_object(zend_obj
 #define Z_wxStyledTextEvent_P(zv) \
     php_wxStyledTextEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTaskBarIconEvent_entry;
+extern zend_object_handlers wxphp_wxTaskBarIconEvent_object_handlers;
 void php_wxTaskBarIconEvent_destruction_handler(zend_resource*);
 
 class wxTaskBarIconEvent_php: public wxTaskBarIconEvent{
@@ -3123,6 +3186,7 @@ static inline zo_wxTaskBarIconEvent * php_wxTaskBarIconEvent_fetch_object(zend_o
 #define Z_wxTaskBarIconEvent_P(zv) \
     php_wxTaskBarIconEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTimerEvent_entry;
+extern zend_object_handlers wxphp_wxTimerEvent_object_handlers;
 void php_wxTimerEvent_destruction_handler(zend_resource*);
 
 class wxTimerEvent_php: public wxTimerEvent{
@@ -3167,6 +3231,7 @@ static inline zo_wxTimerEvent * php_wxTimerEvent_fetch_object(zend_object *obj) 
 #define Z_wxTimerEvent_P(zv) \
     php_wxTimerEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTreeEvent_entry;
+extern zend_object_handlers wxphp_wxTreeEvent_object_handlers;
 void php_wxTreeEvent_destruction_handler(zend_resource*);
 
 class wxTreeEvent_php: public wxTreeEvent{
@@ -3217,6 +3282,7 @@ static inline zo_wxTreeEvent * php_wxTreeEvent_fetch_object(zend_object *obj) {
 #define Z_wxTreeEvent_P(zv) \
     php_wxTreeEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWebViewEvent_entry;
+extern zend_object_handlers wxphp_wxWebViewEvent_object_handlers;
 void php_wxWebViewEvent_destruction_handler(zend_resource*);
 
 class wxWebViewEvent_php: public wxWebViewEvent{
@@ -3262,6 +3328,7 @@ static inline zo_wxWebViewEvent * php_wxWebViewEvent_fetch_object(zend_object *o
 #define Z_wxWebViewEvent_P(zv) \
     php_wxWebViewEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWizardEvent_entry;
+extern zend_object_handlers wxphp_wxWizardEvent_object_handlers;
 void php_wxWizardEvent_destruction_handler(zend_resource*);
 
 class wxWizardEvent_php: public wxWizardEvent{

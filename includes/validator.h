@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_validator_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxGenericValidator_entry;
+extern zend_object_handlers wxphp_wxGenericValidator_object_handlers;
 void php_wxGenericValidator_destruction_handler(zend_resource*);
 
 class wxGenericValidator_php: public wxGenericValidator{
@@ -71,6 +72,7 @@ static inline zo_wxGenericValidator * php_wxGenericValidator_fetch_object(zend_o
 #define Z_wxGenericValidator_P(zv) \
     php_wxGenericValidator_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxValidator_entry;
+extern zend_object_handlers wxphp_wxValidator_object_handlers;
 void php_wxValidator_destruction_handler(zend_resource*);
 
 class wxValidator_php: public wxValidator{
@@ -120,6 +122,7 @@ static inline zo_wxValidator * php_wxValidator_fetch_object(zend_object *obj) {
 #define Z_wxValidator_P(zv) \
     php_wxValidator_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextValidator_entry;
+extern zend_object_handlers wxphp_wxTextValidator_object_handlers;
 void php_wxTextValidator_destruction_handler(zend_resource*);
 
 class wxTextValidator_php: public wxTextValidator{

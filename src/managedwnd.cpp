@@ -91,7 +91,7 @@ zend_object* php_wxFrame_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFrame_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFRAME_TYPE;
@@ -4143,7 +4143,7 @@ zend_object* php_wxMDIClientWindow_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMDIClientWindow_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMDICLIENTWINDOW_TYPE;
@@ -4420,7 +4420,7 @@ zend_object* php_wxMDIParentFrame_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMDIParentFrame_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMDIPARENTFRAME_TYPE;
@@ -6088,7 +6088,7 @@ zend_object* php_wxMDIChildFrame_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMDIChildFrame_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMDICHILDFRAME_TYPE;
@@ -7186,7 +7186,7 @@ zend_object* php_wxMiniFrame_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMiniFrame_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMINIFRAME_TYPE;
@@ -7744,7 +7744,7 @@ zend_object* php_wxPopupWindow_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPopupWindow_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPOPUPWINDOW_TYPE;
@@ -8252,7 +8252,7 @@ zend_object* php_wxPopupTransientWindow_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPopupTransientWindow_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPOPUPTRANSIENTWINDOW_TYPE;
@@ -8802,7 +8802,7 @@ zend_object* php_wxPropertySheetDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPropertySheetDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPROPERTYSHEETDIALOG_TYPE;
@@ -10410,7 +10410,7 @@ zend_object* php_wxSplashScreen_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxSplashScreen_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSPLASHSCREEN_TYPE;
@@ -10921,7 +10921,7 @@ zend_object* php_wxTopLevelWindow_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxTopLevelWindow_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTOPLEVELWINDOW_TYPE;

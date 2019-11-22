@@ -123,7 +123,7 @@ zend_object* php_wxClipboard_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxClipboard_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCLIPBOARD_TYPE;
@@ -1704,7 +1704,7 @@ zend_object* php_wxDataFormat_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDataFormat_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDATAFORMAT_TYPE;
@@ -2337,7 +2337,7 @@ zend_object* php_wxDataObject_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDataObject_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDATAOBJECT_TYPE;
@@ -3360,7 +3360,7 @@ zend_object* php_wxCustomDataObject_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxCustomDataObject_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCUSTOMDATAOBJECT_TYPE;
@@ -4197,7 +4197,7 @@ zend_object* php_wxDataObjectComposite_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDataObjectComposite_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDATAOBJECTCOMPOSITE_TYPE;
@@ -4783,7 +4783,7 @@ zend_object* php_wxDataObjectSimple_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDataObjectSimple_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDATAOBJECTSIMPLE_TYPE;
@@ -5651,7 +5651,7 @@ zend_object* php_wxBitmapDataObject_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxBitmapDataObject_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXBITMAPDATAOBJECT_TYPE;
@@ -6068,7 +6068,7 @@ zend_object* php_wxURLDataObject_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxURLDataObject_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXURLDATAOBJECT_TYPE;
@@ -6443,7 +6443,7 @@ zend_object* php_wxTextDataObject_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxTextDataObject_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTEXTDATAOBJECT_TYPE;
@@ -7345,7 +7345,7 @@ zend_object* php_wxFileDataObject_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFileDataObject_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILEDATAOBJECT_TYPE;
@@ -7707,7 +7707,7 @@ zend_object* php_wxDropTarget_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDropTarget_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDROPTARGET_TYPE;
@@ -8595,7 +8595,7 @@ zend_object* php_wxTextDropTarget_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxTextDropTarget_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTEXTDROPTARGET_TYPE;
@@ -8918,7 +8918,7 @@ zend_object* php_wxFileDropTarget_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFileDropTarget_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILEDROPTARGET_TYPE;

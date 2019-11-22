@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_menus_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxMenuBar_entry;
+extern zend_object_handlers wxphp_wxMenuBar_object_handlers;
 void php_wxMenuBar_destruction_handler(zend_resource*);
 
 class wxMenuBar_php: public wxMenuBar{
@@ -87,6 +88,7 @@ static inline zo_wxMenuBar * php_wxMenuBar_fetch_object(zend_object *obj) {
 #define Z_wxMenuBar_P(zv) \
     php_wxMenuBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMenu_entry;
+extern zend_object_handlers wxphp_wxMenu_object_handlers;
 void php_wxMenu_destruction_handler(zend_resource*);
 
 class wxMenu_php: public wxMenu{
@@ -172,6 +174,7 @@ static inline zo_wxMenu * php_wxMenu_fetch_object(zend_object *obj) {
 #define Z_wxMenu_P(zv) \
     php_wxMenu_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMenuItem_entry;
+extern zend_object_handlers wxphp_wxMenuItem_object_handlers;
 void php_wxMenuItem_destruction_handler(zend_resource*);
 
 class wxMenuItem_php: public wxMenuItem{

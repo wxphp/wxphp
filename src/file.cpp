@@ -123,7 +123,7 @@ zend_object* php_wxFFile_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFFile_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFFILE_TYPE;
@@ -1805,7 +1805,7 @@ zend_object* php_wxFile_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFile_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILE_TYPE;
@@ -4219,7 +4219,7 @@ zend_object* php_wxPathList_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPathList_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPATHLIST_TYPE;
@@ -5067,7 +5067,7 @@ zend_object* php_wxFileName_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFileName_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILENAME_TYPE;
@@ -15382,7 +15382,7 @@ zend_object* php_wxFSFile_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFSFile_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFSFILE_TYPE;
@@ -16273,7 +16273,7 @@ zend_object* php_wxFileSystemWatcher_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFileSystemWatcher_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILESYSTEMWATCHER_TYPE;
@@ -17349,7 +17349,7 @@ zend_object* php_wxStandardPaths_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxStandardPaths_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSTANDARDPATHS_TYPE;

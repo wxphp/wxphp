@@ -94,7 +94,7 @@ zend_object* php_wxColourPickerCtrl_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxColourPickerCtrl_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCOLOURPICKERCTRL_TYPE;
@@ -1015,7 +1015,7 @@ zend_object* php_wxDatePickerCtrl_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDatePickerCtrl_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDATEPICKERCTRL_TYPE;
@@ -2057,7 +2057,7 @@ zend_object* php_wxFilePickerCtrl_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFilePickerCtrl_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILEPICKERCTRL_TYPE;
@@ -3170,7 +3170,7 @@ zend_object* php_wxDirPickerCtrl_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDirPickerCtrl_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDIRPICKERCTRL_TYPE;
@@ -4254,7 +4254,7 @@ zend_object* php_wxFontPickerCtrl_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFontPickerCtrl_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFONTPICKERCTRL_TYPE;
@@ -5353,7 +5353,7 @@ zend_object* php_wxPickerBase_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPickerBase_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPICKERBASE_TYPE;
@@ -7392,7 +7392,7 @@ zend_object* php_wxTimePickerCtrl_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxTimePickerCtrl_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTIMEPICKERCTRL_TYPE;

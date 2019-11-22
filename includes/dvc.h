@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_dvc_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxDataViewChoiceRenderer_entry;
+extern zend_object_handlers wxphp_wxDataViewChoiceRenderer_object_handlers;
 void php_wxDataViewChoiceRenderer_destruction_handler(zend_resource*);
 
 class wxDataViewChoiceRenderer_php: public wxDataViewChoiceRenderer{
@@ -64,6 +65,7 @@ static inline zo_wxDataViewChoiceRenderer * php_wxDataViewChoiceRenderer_fetch_o
 #define Z_wxDataViewChoiceRenderer_P(zv) \
     php_wxDataViewChoiceRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewModel_entry;
+extern zend_object_handlers wxphp_wxDataViewModel_object_handlers;
 void php_wxDataViewModel_destruction_handler(zend_resource*);
 
 class wxDataViewModel_php: public wxDataViewModel{
@@ -125,6 +127,7 @@ static inline zo_wxDataViewModel * php_wxDataViewModel_fetch_object(zend_object 
 #define Z_wxDataViewModel_P(zv) \
     php_wxDataViewModel_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewListModel_entry;
+extern zend_object_handlers wxphp_wxDataViewListModel_object_handlers;
 void php_wxDataViewListModel_destruction_handler(zend_resource*);
 
 class wxDataViewListModel_php: public wxDataViewListModel{
@@ -171,6 +174,7 @@ static inline zo_wxDataViewListModel * php_wxDataViewListModel_fetch_object(zend
 #define Z_wxDataViewListModel_P(zv) \
     php_wxDataViewListModel_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewIndexListModel_entry;
+extern zend_object_handlers wxphp_wxDataViewIndexListModel_object_handlers;
 void php_wxDataViewIndexListModel_destruction_handler(zend_resource*);
 
 class wxDataViewIndexListModel_php: public wxDataViewIndexListModel{
@@ -211,6 +215,7 @@ static inline zo_wxDataViewIndexListModel * php_wxDataViewIndexListModel_fetch_o
 #define Z_wxDataViewIndexListModel_P(zv) \
     php_wxDataViewIndexListModel_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewVirtualListModel_entry;
+extern zend_object_handlers wxphp_wxDataViewVirtualListModel_object_handlers;
 void php_wxDataViewVirtualListModel_destruction_handler(zend_resource*);
 
 class wxDataViewVirtualListModel_php: public wxDataViewVirtualListModel{
@@ -251,6 +256,7 @@ static inline zo_wxDataViewVirtualListModel * php_wxDataViewVirtualListModel_fet
 #define Z_wxDataViewVirtualListModel_P(zv) \
     php_wxDataViewVirtualListModel_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewItemAttr_entry;
+extern zend_object_handlers wxphp_wxDataViewItemAttr_object_handlers;
 void php_wxDataViewItemAttr_destruction_handler(zend_resource*);
 
 class wxDataViewItemAttr_php: public wxDataViewItemAttr{
@@ -296,6 +302,7 @@ static inline zo_wxDataViewItemAttr * php_wxDataViewItemAttr_fetch_object(zend_o
 #define Z_wxDataViewItemAttr_P(zv) \
     php_wxDataViewItemAttr_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewItem_entry;
+extern zend_object_handlers wxphp_wxDataViewItem_object_handlers;
 void php_wxDataViewItem_destruction_handler(zend_resource*);
 
 class wxDataViewItem_php: public wxDataViewItem{
@@ -342,6 +349,7 @@ static inline zo_wxDataViewItem * php_wxDataViewItem_fetch_object(zend_object *o
 #define Z_wxDataViewItem_P(zv) \
     php_wxDataViewItem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewModelNotifier_entry;
+extern zend_object_handlers wxphp_wxDataViewModelNotifier_object_handlers;
 void php_wxDataViewModelNotifier_destruction_handler(zend_resource*);
 
 class wxDataViewModelNotifier_php: public wxDataViewModelNotifier{
@@ -392,6 +400,7 @@ static inline zo_wxDataViewModelNotifier * php_wxDataViewModelNotifier_fetch_obj
 #define Z_wxDataViewModelNotifier_P(zv) \
     php_wxDataViewModelNotifier_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewRenderer_entry;
+extern zend_object_handlers wxphp_wxDataViewRenderer_object_handlers;
 void php_wxDataViewRenderer_destruction_handler(zend_resource*);
 
 class wxDataViewRenderer_php: public wxDataViewRenderer{
@@ -444,6 +453,7 @@ static inline zo_wxDataViewRenderer * php_wxDataViewRenderer_fetch_object(zend_o
 #define Z_wxDataViewRenderer_P(zv) \
     php_wxDataViewRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewTextRenderer_entry;
+extern zend_object_handlers wxphp_wxDataViewTextRenderer_object_handlers;
 void php_wxDataViewTextRenderer_destruction_handler(zend_resource*);
 
 class wxDataViewTextRenderer_php: public wxDataViewTextRenderer{
@@ -486,6 +496,7 @@ static inline zo_wxDataViewTextRenderer * php_wxDataViewTextRenderer_fetch_objec
 #define Z_wxDataViewTextRenderer_P(zv) \
     php_wxDataViewTextRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewIconTextRenderer_entry;
+extern zend_object_handlers wxphp_wxDataViewIconTextRenderer_object_handlers;
 void php_wxDataViewIconTextRenderer_destruction_handler(zend_resource*);
 
 class wxDataViewIconTextRenderer_php: public wxDataViewIconTextRenderer{
@@ -528,6 +539,7 @@ static inline zo_wxDataViewIconTextRenderer * php_wxDataViewIconTextRenderer_fet
 #define Z_wxDataViewIconTextRenderer_P(zv) \
     php_wxDataViewIconTextRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewProgressRenderer_entry;
+extern zend_object_handlers wxphp_wxDataViewProgressRenderer_object_handlers;
 void php_wxDataViewProgressRenderer_destruction_handler(zend_resource*);
 
 class wxDataViewProgressRenderer_php: public wxDataViewProgressRenderer{
@@ -570,6 +582,7 @@ static inline zo_wxDataViewProgressRenderer * php_wxDataViewProgressRenderer_fet
 #define Z_wxDataViewProgressRenderer_P(zv) \
     php_wxDataViewProgressRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewSpinRenderer_entry;
+extern zend_object_handlers wxphp_wxDataViewSpinRenderer_object_handlers;
 void php_wxDataViewSpinRenderer_destruction_handler(zend_resource*);
 
 class wxDataViewSpinRenderer_php: public wxDataViewSpinRenderer{
@@ -612,6 +625,7 @@ static inline zo_wxDataViewSpinRenderer * php_wxDataViewSpinRenderer_fetch_objec
 #define Z_wxDataViewSpinRenderer_P(zv) \
     php_wxDataViewSpinRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewToggleRenderer_entry;
+extern zend_object_handlers wxphp_wxDataViewToggleRenderer_object_handlers;
 void php_wxDataViewToggleRenderer_destruction_handler(zend_resource*);
 
 class wxDataViewToggleRenderer_php: public wxDataViewToggleRenderer{
@@ -654,6 +668,7 @@ static inline zo_wxDataViewToggleRenderer * php_wxDataViewToggleRenderer_fetch_o
 #define Z_wxDataViewToggleRenderer_P(zv) \
     php_wxDataViewToggleRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewDateRenderer_entry;
+extern zend_object_handlers wxphp_wxDataViewDateRenderer_object_handlers;
 void php_wxDataViewDateRenderer_destruction_handler(zend_resource*);
 
 class wxDataViewDateRenderer_php: public wxDataViewDateRenderer{
@@ -696,6 +711,7 @@ static inline zo_wxDataViewDateRenderer * php_wxDataViewDateRenderer_fetch_objec
 #define Z_wxDataViewDateRenderer_P(zv) \
     php_wxDataViewDateRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewCustomRenderer_entry;
+extern zend_object_handlers wxphp_wxDataViewCustomRenderer_object_handlers;
 void php_wxDataViewCustomRenderer_destruction_handler(zend_resource*);
 
 class wxDataViewCustomRenderer_php: public wxDataViewCustomRenderer{
@@ -745,6 +761,7 @@ static inline zo_wxDataViewCustomRenderer * php_wxDataViewCustomRenderer_fetch_o
 #define Z_wxDataViewCustomRenderer_P(zv) \
     php_wxDataViewCustomRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewBitmapRenderer_entry;
+extern zend_object_handlers wxphp_wxDataViewBitmapRenderer_object_handlers;
 void php_wxDataViewBitmapRenderer_destruction_handler(zend_resource*);
 
 class wxDataViewBitmapRenderer_php: public wxDataViewBitmapRenderer{
@@ -787,6 +804,7 @@ static inline zo_wxDataViewBitmapRenderer * php_wxDataViewBitmapRenderer_fetch_o
 #define Z_wxDataViewBitmapRenderer_P(zv) \
     php_wxDataViewBitmapRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewColumn_entry;
+extern zend_object_handlers wxphp_wxDataViewColumn_object_handlers;
 void php_wxDataViewColumn_destruction_handler(zend_resource*);
 
 class wxDataViewColumn_php: public wxDataViewColumn{
@@ -833,6 +851,7 @@ static inline zo_wxDataViewColumn * php_wxDataViewColumn_fetch_object(zend_objec
 #define Z_wxDataViewColumn_P(zv) \
     php_wxDataViewColumn_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewListStore_entry;
+extern zend_object_handlers wxphp_wxDataViewListStore_object_handlers;
 void php_wxDataViewListStore_destruction_handler(zend_resource*);
 
 class wxDataViewListStore_php: public wxDataViewListStore{
@@ -884,6 +903,7 @@ static inline zo_wxDataViewListStore * php_wxDataViewListStore_fetch_object(zend
 #define Z_wxDataViewListStore_P(zv) \
     php_wxDataViewListStore_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewTreeStore_entry;
+extern zend_object_handlers wxphp_wxDataViewTreeStore_object_handlers;
 void php_wxDataViewTreeStore_destruction_handler(zend_resource*);
 
 class wxDataViewTreeStore_php: public wxDataViewTreeStore{
@@ -944,6 +964,7 @@ static inline zo_wxDataViewTreeStore * php_wxDataViewTreeStore_fetch_object(zend
 #define Z_wxDataViewTreeStore_P(zv) \
     php_wxDataViewTreeStore_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewIconText_entry;
+extern zend_object_handlers wxphp_wxDataViewIconText_object_handlers;
 void php_wxDataViewIconText_destruction_handler(zend_resource*);
 
 class wxDataViewIconText_php: public wxDataViewIconText{
@@ -991,6 +1012,7 @@ static inline zo_wxDataViewIconText * php_wxDataViewIconText_fetch_object(zend_o
 #define Z_wxDataViewIconText_P(zv) \
     php_wxDataViewIconText_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewEvent_entry;
+extern zend_object_handlers wxphp_wxDataViewEvent_object_handlers;
 void php_wxDataViewEvent_destruction_handler(zend_resource*);
 
 class wxDataViewEvent_php: public wxDataViewEvent{

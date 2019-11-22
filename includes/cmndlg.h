@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_cmndlg_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxAboutDialogInfo_entry;
+extern zend_object_handlers wxphp_wxAboutDialogInfo_object_handlers;
 void php_wxAboutDialogInfo_destruction_handler(zend_resource*);
 
 class wxAboutDialogInfo_php: public wxAboutDialogInfo{
@@ -83,6 +84,7 @@ static inline zo_wxAboutDialogInfo * php_wxAboutDialogInfo_fetch_object(zend_obj
 #define Z_wxAboutDialogInfo_P(zv) \
     php_wxAboutDialogInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBusyInfo_entry;
+extern zend_object_handlers wxphp_wxBusyInfo_object_handlers;
 void php_wxBusyInfo_destruction_handler(zend_resource*);
 
 class wxBusyInfo_php: public wxBusyInfo{
@@ -125,6 +127,7 @@ static inline zo_wxBusyInfo * php_wxBusyInfo_fetch_object(zend_object *obj) {
 #define Z_wxBusyInfo_P(zv) \
     php_wxBusyInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSingleChoiceDialog_entry;
+extern zend_object_handlers wxphp_wxSingleChoiceDialog_object_handlers;
 void php_wxSingleChoiceDialog_destruction_handler(zend_resource*);
 
 class wxSingleChoiceDialog_php: public wxSingleChoiceDialog{
@@ -173,6 +176,7 @@ static inline zo_wxSingleChoiceDialog * php_wxSingleChoiceDialog_fetch_object(ze
 #define Z_wxSingleChoiceDialog_P(zv) \
     php_wxSingleChoiceDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPrintDialogData_entry;
+extern zend_object_handlers wxphp_wxPrintDialogData_object_handlers;
 void php_wxPrintDialogData_destruction_handler(zend_resource*);
 
 class wxPrintDialogData_php: public wxPrintDialogData{
@@ -240,6 +244,7 @@ static inline zo_wxPrintDialogData * php_wxPrintDialogData_fetch_object(zend_obj
 #define Z_wxPrintDialogData_P(zv) \
     php_wxPrintDialogData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxColourDialog_entry;
+extern zend_object_handlers wxphp_wxColourDialog_object_handlers;
 void php_wxColourDialog_destruction_handler(zend_resource*);
 
 class wxColourDialog_php: public wxColourDialog{
@@ -285,6 +290,7 @@ static inline zo_wxColourDialog * php_wxColourDialog_fetch_object(zend_object *o
 #define Z_wxColourDialog_P(zv) \
     php_wxColourDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxColourData_entry;
+extern zend_object_handlers wxphp_wxColourData_object_handlers;
 void php_wxColourData_destruction_handler(zend_resource*);
 
 class wxColourData_php: public wxColourData{
@@ -335,6 +341,7 @@ static inline zo_wxColourData * php_wxColourData_fetch_object(zend_object *obj) 
 #define Z_wxColourData_P(zv) \
     php_wxColourData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDialog_entry;
+extern zend_object_handlers wxphp_wxDialog_object_handlers;
 void php_wxDialog_destruction_handler(zend_resource*);
 
 class wxDialog_php: public wxDialog{
@@ -410,6 +417,7 @@ static inline zo_wxDialog * php_wxDialog_fetch_object(zend_object *obj) {
 #define Z_wxDialog_P(zv) \
     php_wxDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDirDialog_entry;
+extern zend_object_handlers wxphp_wxDirDialog_object_handlers;
 void php_wxDirDialog_destruction_handler(zend_resource*);
 
 class wxDirDialog_php: public wxDirDialog{
@@ -457,6 +465,7 @@ static inline zo_wxDirDialog * php_wxDirDialog_fetch_object(zend_object *obj) {
 #define Z_wxDirDialog_P(zv) \
     php_wxDirDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFindReplaceData_entry;
+extern zend_object_handlers wxphp_wxFindReplaceData_object_handlers;
 void php_wxFindReplaceData_destruction_handler(zend_resource*);
 
 class wxFindReplaceData_php: public wxFindReplaceData{
@@ -505,6 +514,7 @@ static inline zo_wxFindReplaceData * php_wxFindReplaceData_fetch_object(zend_obj
 #define Z_wxFindReplaceData_P(zv) \
     php_wxFindReplaceData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFindReplaceDialog_entry;
+extern zend_object_handlers wxphp_wxFindReplaceDialog_object_handlers;
 void php_wxFindReplaceDialog_destruction_handler(zend_resource*);
 
 class wxFindReplaceDialog_php: public wxFindReplaceDialog{
@@ -550,6 +560,7 @@ static inline zo_wxFindReplaceDialog * php_wxFindReplaceDialog_fetch_object(zend
 #define Z_wxFindReplaceDialog_P(zv) \
     php_wxFindReplaceDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileDialog_entry;
+extern zend_object_handlers wxphp_wxFileDialog_object_handlers;
 void php_wxFileDialog_destruction_handler(zend_resource*);
 
 class wxFileDialog_php: public wxFileDialog{
@@ -608,6 +619,7 @@ static inline zo_wxFileDialog * php_wxFileDialog_fetch_object(zend_object *obj) 
 #define Z_wxFileDialog_P(zv) \
     php_wxFileDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontData_entry;
+extern zend_object_handlers wxphp_wxFontData_object_handlers;
 void php_wxFontData_destruction_handler(zend_resource*);
 
 class wxFontData_php: public wxFontData{
@@ -663,6 +675,7 @@ static inline zo_wxFontData * php_wxFontData_fetch_object(zend_object *obj) {
 #define Z_wxFontData_P(zv) \
     php_wxFontData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontDialog_entry;
+extern zend_object_handlers wxphp_wxFontDialog_object_handlers;
 void php_wxFontDialog_destruction_handler(zend_resource*);
 
 class wxFontDialog_php: public wxFontDialog{
@@ -710,6 +723,7 @@ static inline zo_wxFontDialog * php_wxFontDialog_fetch_object(zend_object *obj) 
 #define Z_wxFontDialog_P(zv) \
     php_wxFontDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMessageDialog_entry;
+extern zend_object_handlers wxphp_wxMessageDialog_object_handlers;
 void php_wxMessageDialog_destruction_handler(zend_resource*);
 
 class wxMessageDialog_php: public wxMessageDialog{
@@ -771,6 +785,7 @@ static inline zo_wxMessageDialog * php_wxMessageDialog_fetch_object(zend_object 
 #define Z_wxMessageDialog_P(zv) \
     php_wxMessageDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGenericProgressDialog_entry;
+extern zend_object_handlers wxphp_wxGenericProgressDialog_object_handlers;
 void php_wxGenericProgressDialog_destruction_handler(zend_resource*);
 
 class wxGenericProgressDialog_php: public wxGenericProgressDialog{
@@ -822,6 +837,7 @@ static inline zo_wxGenericProgressDialog * php_wxGenericProgressDialog_fetch_obj
 #define Z_wxGenericProgressDialog_P(zv) \
     php_wxGenericProgressDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRearrangeDialog_entry;
+extern zend_object_handlers wxphp_wxRearrangeDialog_object_handlers;
 void php_wxRearrangeDialog_destruction_handler(zend_resource*);
 
 class wxRearrangeDialog_php: public wxRearrangeDialog{
@@ -866,6 +882,7 @@ static inline zo_wxRearrangeDialog * php_wxRearrangeDialog_fetch_object(zend_obj
 #define Z_wxRearrangeDialog_P(zv) \
     php_wxRearrangeDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSymbolPickerDialog_entry;
+extern zend_object_handlers wxphp_wxSymbolPickerDialog_object_handlers;
 void php_wxSymbolPickerDialog_destruction_handler(zend_resource*);
 
 class wxSymbolPickerDialog_php: public wxSymbolPickerDialog{
@@ -922,6 +939,7 @@ static inline zo_wxSymbolPickerDialog * php_wxSymbolPickerDialog_fetch_object(ze
 #define Z_wxSymbolPickerDialog_P(zv) \
     php_wxSymbolPickerDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPasswordEntryDialog_entry;
+extern zend_object_handlers wxphp_wxPasswordEntryDialog_object_handlers;
 void php_wxPasswordEntryDialog_destruction_handler(zend_resource*);
 
 class wxPasswordEntryDialog_php: public wxPasswordEntryDialog{
@@ -964,6 +982,7 @@ static inline zo_wxPasswordEntryDialog * php_wxPasswordEntryDialog_fetch_object(
 #define Z_wxPasswordEntryDialog_P(zv) \
     php_wxPasswordEntryDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextEntryDialog_entry;
+extern zend_object_handlers wxphp_wxTextEntryDialog_object_handlers;
 void php_wxTextEntryDialog_destruction_handler(zend_resource*);
 
 class wxTextEntryDialog_php: public wxTextEntryDialog{
@@ -1009,6 +1028,7 @@ static inline zo_wxTextEntryDialog * php_wxTextEntryDialog_fetch_object(zend_obj
 #define Z_wxTextEntryDialog_P(zv) \
     php_wxTextEntryDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWizard_entry;
+extern zend_object_handlers wxphp_wxWizard_object_handlers;
 void php_wxWizard_destruction_handler(zend_resource*);
 
 class wxWizard_php: public wxWizard{

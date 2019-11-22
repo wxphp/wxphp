@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_others_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxScrolledWindow_entry;
+extern zend_object_handlers wxphp_wxScrolledWindow_object_handlers;
 void php_wxScrolledWindow_destruction_handler(zend_resource*);
 
 class wxScrolledWindow_php: public wxScrolledWindow{
@@ -321,6 +322,7 @@ static inline zo_wxScrolledWindow * php_wxScrolledWindow_fetch_object(zend_objec
 #define Z_wxScrolledWindow_P(zv) \
     php_wxScrolledWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonButtonBarButtonBase_entry;
+extern zend_object_handlers wxphp_wxRibbonButtonBarButtonBase_object_handlers;
 void php_wxRibbonButtonBarButtonBase_destruction_handler(zend_resource*);
 
 class wxRibbonButtonBarButtonBase_php{
@@ -361,6 +363,7 @@ static inline zo_wxRibbonButtonBarButtonBase * php_wxRibbonButtonBarButtonBase_f
 #define Z_wxRibbonButtonBarButtonBase_P(zv) \
     php_wxRibbonButtonBarButtonBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonGalleryItem_entry;
+extern zend_object_handlers wxphp_wxRibbonGalleryItem_object_handlers;
 void php_wxRibbonGalleryItem_destruction_handler(zend_resource*);
 
 class wxRibbonGalleryItem_php{
@@ -401,6 +404,7 @@ static inline zo_wxRibbonGalleryItem * php_wxRibbonGalleryItem_fetch_object(zend
 #define Z_wxRibbonGalleryItem_P(zv) \
     php_wxRibbonGalleryItem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonToolBarToolBase_entry;
+extern zend_object_handlers wxphp_wxRibbonToolBarToolBase_object_handlers;
 void php_wxRibbonToolBarToolBase_destruction_handler(zend_resource*);
 
 class wxRibbonToolBarToolBase_php{
@@ -441,6 +445,7 @@ static inline zo_wxRibbonToolBarToolBase * php_wxRibbonToolBarToolBase_fetch_obj
 #define Z_wxRibbonToolBarToolBase_P(zv) \
     php_wxRibbonToolBarToolBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellCoords_entry;
+extern zend_object_handlers wxphp_wxGridCellCoords_object_handlers;
 void php_wxGridCellCoords_destruction_handler(zend_resource*);
 
 class wxGridCellCoords_php: public wxGridCellCoords{
@@ -489,6 +494,7 @@ static inline zo_wxGridCellCoords * php_wxGridCellCoords_fetch_object(zend_objec
 #define Z_wxGridCellCoords_P(zv) \
     php_wxGridCellCoords_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxNonOwnedWindow_entry;
+extern zend_object_handlers wxphp_wxNonOwnedWindow_object_handlers;
 void php_wxNonOwnedWindow_destruction_handler(zend_resource*);
 
 class wxNonOwnedWindow_php: public wxNonOwnedWindow{
@@ -530,6 +536,7 @@ static inline zo_wxNonOwnedWindow * php_wxNonOwnedWindow_fetch_object(zend_objec
 #define Z_wxNonOwnedWindow_P(zv) \
     php_wxNonOwnedWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAnyButton_entry;
+extern zend_object_handlers wxphp_wxAnyButton_object_handlers;
 void php_wxAnyButton_destruction_handler(zend_resource*);
 
 class wxAnyButton_php: public wxAnyButton{
@@ -587,6 +594,7 @@ static inline zo_wxAnyButton * php_wxAnyButton_fetch_object(zend_object *obj) {
 #define Z_wxAnyButton_P(zv) \
     php_wxAnyButton_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWithImages_entry;
+extern zend_object_handlers wxphp_wxWithImages_object_handlers;
 void php_wxWithImages_destruction_handler(zend_resource*);
 
 class wxWithImages_php: public wxWithImages{
@@ -632,6 +640,7 @@ static inline zo_wxWithImages * php_wxWithImages_fetch_object(zend_object *obj) 
 #define Z_wxWithImages_P(zv) \
     php_wxWithImages_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextCompleter_entry;
+extern zend_object_handlers wxphp_wxTextCompleter_object_handlers;
 void php_wxTextCompleter_destruction_handler(zend_resource*);
 
 class wxTextCompleter_php: public wxTextCompleter{
@@ -674,6 +683,7 @@ static inline zo_wxTextCompleter * php_wxTextCompleter_fetch_object(zend_object 
 #define Z_wxTextCompleter_P(zv) \
     php_wxTextCompleter_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWindowModalDialogEvent_entry;
+extern zend_object_handlers wxphp_wxWindowModalDialogEvent_object_handlers;
 void php_wxWindowModalDialogEvent_destruction_handler(zend_resource*);
 
 class wxWindowModalDialogEvent_php: public wxWindowModalDialogEvent{
@@ -719,6 +729,7 @@ static inline zo_wxWindowModalDialogEvent * php_wxWindowModalDialogEvent_fetch_o
 #define Z_wxWindowModalDialogEvent_P(zv) \
     php_wxWindowModalDialogEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPoint2DDouble_entry;
+extern zend_object_handlers wxphp_wxPoint2DDouble_object_handlers;
 void php_wxPoint2DDouble_destruction_handler(zend_resource*);
 
 class wxPoint2DDouble_php: public wxPoint2DDouble{
@@ -790,6 +801,7 @@ static inline zo_wxPoint2DDouble * php_wxPoint2DDouble_fetch_object(zend_object 
 #define Z_wxPoint2DDouble_P(zv) \
     php_wxPoint2DDouble_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPoint2DInt_entry;
+extern zend_object_handlers wxphp_wxPoint2DInt_object_handlers;
 void php_wxPoint2DInt_destruction_handler(zend_resource*);
 
 class wxPoint2DInt_php: public wxPoint2DInt{
@@ -860,6 +872,7 @@ static inline zo_wxPoint2DInt * php_wxPoint2DInt_fetch_object(zend_object *obj) 
 #define Z_wxPoint2DInt_P(zv) \
     php_wxPoint2DInt_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxProgressDialog_entry;
+extern zend_object_handlers wxphp_wxProgressDialog_object_handlers;
 void php_wxProgressDialog_destruction_handler(zend_resource*);
 
 class wxProgressDialog_php: public wxProgressDialog{
@@ -1190,6 +1203,7 @@ static inline zo_wxProgressDialog * php_wxProgressDialog_fetch_object(zend_objec
 #define Z_wxProgressDialog_P(zv) \
     php_wxProgressDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLayoutConstraints_entry;
+extern zend_object_handlers wxphp_wxLayoutConstraints_object_handlers;
 void php_wxLayoutConstraints_destruction_handler(zend_resource*);
 
 class wxLayoutConstraints_php: public wxLayoutConstraints{
@@ -1254,6 +1268,7 @@ static inline zo_wxLayoutConstraints * php_wxLayoutConstraints_fetch_object(zend
 #define Z_wxLayoutConstraints_P(zv) \
     php_wxLayoutConstraints_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellAttrProvider_entry;
+extern zend_object_handlers wxphp_wxGridCellAttrProvider_object_handlers;
 void php_wxGridCellAttrProvider_destruction_handler(zend_resource*);
 
 class wxGridCellAttrProvider_php: public wxGridCellAttrProvider{
@@ -1303,6 +1318,7 @@ static inline zo_wxGridCellAttrProvider * php_wxGridCellAttrProvider_fetch_objec
 #define Z_wxGridCellAttrProvider_P(zv) \
     php_wxGridCellAttrProvider_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridColumnHeaderRenderer_entry;
+extern zend_object_handlers wxphp_wxGridColumnHeaderRenderer_object_handlers;
 void php_wxGridColumnHeaderRenderer_destruction_handler(zend_resource*);
 
 class wxGridColumnHeaderRenderer_php: public wxGridColumnHeaderRenderer{
@@ -1343,6 +1359,7 @@ static inline zo_wxGridColumnHeaderRenderer * php_wxGridColumnHeaderRenderer_fet
 #define Z_wxGridColumnHeaderRenderer_P(zv) \
     php_wxGridColumnHeaderRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridColumnHeaderRendererDefault_entry;
+extern zend_object_handlers wxphp_wxGridColumnHeaderRendererDefault_object_handlers;
 void php_wxGridColumnHeaderRendererDefault_destruction_handler(zend_resource*);
 
 class wxGridColumnHeaderRendererDefault_php: public wxGridColumnHeaderRendererDefault{
@@ -1384,6 +1401,7 @@ static inline zo_wxGridColumnHeaderRendererDefault * php_wxGridColumnHeaderRende
 #define Z_wxGridColumnHeaderRendererDefault_P(zv) \
     php_wxGridColumnHeaderRendererDefault_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCornerHeaderRenderer_entry;
+extern zend_object_handlers wxphp_wxGridCornerHeaderRenderer_object_handlers;
 void php_wxGridCornerHeaderRenderer_destruction_handler(zend_resource*);
 
 class wxGridCornerHeaderRenderer_php: public wxGridCornerHeaderRenderer{
@@ -1425,6 +1443,7 @@ static inline zo_wxGridCornerHeaderRenderer * php_wxGridCornerHeaderRenderer_fet
 #define Z_wxGridCornerHeaderRenderer_P(zv) \
     php_wxGridCornerHeaderRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCornerHeaderRendererDefault_entry;
+extern zend_object_handlers wxphp_wxGridCornerHeaderRendererDefault_object_handlers;
 void php_wxGridCornerHeaderRendererDefault_destruction_handler(zend_resource*);
 
 class wxGridCornerHeaderRendererDefault_php: public wxGridCornerHeaderRendererDefault{
@@ -1466,6 +1485,7 @@ static inline zo_wxGridCornerHeaderRendererDefault * php_wxGridCornerHeaderRende
 #define Z_wxGridCornerHeaderRendererDefault_P(zv) \
     php_wxGridCornerHeaderRendererDefault_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridHeaderLabelsRenderer_entry;
+extern zend_object_handlers wxphp_wxGridHeaderLabelsRenderer_object_handlers;
 void php_wxGridHeaderLabelsRenderer_destruction_handler(zend_resource*);
 
 class wxGridHeaderLabelsRenderer_php: public wxGridHeaderLabelsRenderer{
@@ -1507,6 +1527,7 @@ static inline zo_wxGridHeaderLabelsRenderer * php_wxGridHeaderLabelsRenderer_fet
 #define Z_wxGridHeaderLabelsRenderer_P(zv) \
     php_wxGridHeaderLabelsRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridRowHeaderRenderer_entry;
+extern zend_object_handlers wxphp_wxGridRowHeaderRenderer_object_handlers;
 void php_wxGridRowHeaderRenderer_destruction_handler(zend_resource*);
 
 class wxGridRowHeaderRenderer_php: public wxGridRowHeaderRenderer{
@@ -1547,6 +1568,7 @@ static inline zo_wxGridRowHeaderRenderer * php_wxGridRowHeaderRenderer_fetch_obj
 #define Z_wxGridRowHeaderRenderer_P(zv) \
     php_wxGridRowHeaderRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridRowHeaderRendererDefault_entry;
+extern zend_object_handlers wxphp_wxGridRowHeaderRendererDefault_object_handlers;
 void php_wxGridRowHeaderRendererDefault_destruction_handler(zend_resource*);
 
 class wxGridRowHeaderRendererDefault_php: public wxGridRowHeaderRendererDefault{
@@ -1588,6 +1610,7 @@ static inline zo_wxGridRowHeaderRendererDefault * php_wxGridRowHeaderRendererDef
 #define Z_wxGridRowHeaderRendererDefault_P(zv) \
     php_wxGridRowHeaderRendererDefault_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPaletteChangedEvent_entry;
+extern zend_object_handlers wxphp_wxPaletteChangedEvent_object_handlers;
 void php_wxPaletteChangedEvent_destruction_handler(zend_resource*);
 
 class wxPaletteChangedEvent_php: public wxPaletteChangedEvent{
@@ -1632,6 +1655,7 @@ static inline zo_wxPaletteChangedEvent * php_wxPaletteChangedEvent_fetch_object(
 #define Z_wxPaletteChangedEvent_P(zv) \
     php_wxPaletteChangedEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileTypeInfo_entry;
+extern zend_object_handlers wxphp_wxFileTypeInfo_object_handlers;
 void php_wxFileTypeInfo_destruction_handler(zend_resource*);
 
 class wxFileTypeInfo_php: public wxFileTypeInfo{
@@ -1680,6 +1704,7 @@ static inline zo_wxFileTypeInfo * php_wxFileTypeInfo_fetch_object(zend_object *o
 #define Z_wxFileTypeInfo_P(zv) \
     php_wxFileTypeInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDisplayChangedEvent_entry;
+extern zend_object_handlers wxphp_wxDisplayChangedEvent_object_handlers;
 void php_wxDisplayChangedEvent_destruction_handler(zend_resource*);
 
 class wxDisplayChangedEvent_php: public wxDisplayChangedEvent{
@@ -1722,6 +1747,7 @@ static inline zo_wxDisplayChangedEvent * php_wxDisplayChangedEvent_fetch_object(
 #define Z_wxDisplayChangedEvent_P(zv) \
     php_wxDisplayChangedEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTimerRunner_entry;
+extern zend_object_handlers wxphp_wxTimerRunner_object_handlers;
 void php_wxTimerRunner_destruction_handler(zend_resource*);
 
 class wxTimerRunner_php: public wxTimerRunner{
@@ -1766,6 +1792,7 @@ static inline zo_wxTimerRunner * php_wxTimerRunner_fetch_object(zend_object *obj
 #define Z_wxTimerRunner_P(zv) \
     php_wxTimerRunner_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxToolBarToolBase_entry;
+extern zend_object_handlers wxphp_wxToolBarToolBase_object_handlers;
 void php_wxToolBarToolBase_destruction_handler(zend_resource*);
 
 class wxToolBarToolBase_php: public wxToolBarToolBase{
@@ -1838,6 +1865,7 @@ static inline zo_wxToolBarToolBase * php_wxToolBarToolBase_fetch_object(zend_obj
 #define Z_wxToolBarToolBase_P(zv) \
     php_wxToolBarToolBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextCompleterSimple_entry;
+extern zend_object_handlers wxphp_wxTextCompleterSimple_object_handlers;
 void php_wxTextCompleterSimple_destruction_handler(zend_resource*);
 
 class wxTextCompleterSimple_php: public wxTextCompleterSimple{

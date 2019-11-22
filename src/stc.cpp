@@ -94,7 +94,7 @@ zend_object* php_wxStyledTextCtrl_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxStyledTextCtrl_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSTYLEDTEXTCTRL_TYPE;

@@ -123,7 +123,7 @@ zend_object* php_wxHtmlHelpController_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlHelpController_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLHELPCONTROLLER_TYPE;
@@ -2012,7 +2012,7 @@ zend_object* php_wxHtmlModalHelp_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlModalHelp_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLMODALHELP_TYPE;
@@ -2229,7 +2229,7 @@ zend_object* php_wxHtmlHelpData_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlHelpData_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLHELPDATA_TYPE;
@@ -2816,7 +2816,7 @@ zend_object* php_wxHtmlHelpDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlHelpDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLHELPDIALOG_TYPE;
@@ -3767,7 +3767,7 @@ zend_object* php_wxHtmlHelpFrame_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlHelpFrame_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLHELPFRAME_TYPE;
@@ -4851,7 +4851,7 @@ zend_object* php_wxHtmlHelpWindow_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlHelpWindow_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLHELPWINDOW_TYPE;
@@ -6732,7 +6732,7 @@ zend_object* php_wxToolTip_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxToolTip_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTOOLTIP_TYPE;

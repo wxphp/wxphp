@@ -123,7 +123,7 @@ zend_object* php_wxArtProvider_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxArtProvider_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXARTPROVIDER_TYPE;
@@ -1738,7 +1738,7 @@ zend_object* php_wxCaret_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxCaret_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCARET_TYPE;
@@ -3447,7 +3447,7 @@ zend_object* php_wxNotificationMessage_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxNotificationMessage_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXNOTIFICATIONMESSAGE_TYPE;
@@ -4408,7 +4408,7 @@ zend_object* php_wxStopWatch_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxStopWatch_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSTOPWATCH_TYPE;
@@ -5017,7 +5017,7 @@ zend_object* php_wxTaskBarIcon_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxTaskBarIcon_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTASKBARICON_TYPE;
@@ -6104,7 +6104,7 @@ zend_object* php_wxTimer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxTimer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTIMER_TYPE;
@@ -7393,7 +7393,7 @@ zend_object* php_wxWindowDisabler_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxWindowDisabler_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXWINDOWDISABLER_TYPE;
@@ -7631,7 +7631,7 @@ zend_object* php_wxBusyCursor_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxBusyCursor_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXBUSYCURSOR_TYPE;

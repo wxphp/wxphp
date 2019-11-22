@@ -123,7 +123,7 @@ zend_object* php_wxRibbonArtProvider_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRibbonArtProvider_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXRIBBONARTPROVIDER_TYPE;
@@ -3671,7 +3671,7 @@ zend_object* php_wxRibbonBar_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRibbonBar_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXRIBBONBAR_TYPE;
@@ -5394,7 +5394,7 @@ zend_object* php_wxRibbonButtonBar_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRibbonButtonBar_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXRIBBONBUTTONBAR_TYPE;
@@ -7590,7 +7590,7 @@ zend_object* php_wxRibbonControl_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRibbonControl_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXRIBBONCONTROL_TYPE;
@@ -9246,7 +9246,7 @@ zend_object* php_wxRibbonGallery_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRibbonGallery_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXRIBBONGALLERY_TYPE;
@@ -12442,7 +12442,7 @@ zend_object* php_wxRibbonPage_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRibbonPage_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXRIBBONPAGE_TYPE;
@@ -13965,7 +13965,7 @@ zend_object* php_wxRibbonPanel_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRibbonPanel_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXRIBBONPANEL_TYPE;
@@ -15852,7 +15852,7 @@ zend_object* php_wxRibbonToolBar_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRibbonToolBar_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXRIBBONTOOLBAR_TYPE;

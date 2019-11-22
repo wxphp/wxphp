@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_ctrl_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxAnimationCtrl_entry;
+extern zend_object_handlers wxphp_wxAnimationCtrl_object_handlers;
 void php_wxAnimationCtrl_destruction_handler(zend_resource*);
 
 class wxAnimationCtrl_php: public wxAnimationCtrl{
@@ -72,6 +73,7 @@ static inline zo_wxAnimationCtrl * php_wxAnimationCtrl_fetch_object(zend_object 
 #define Z_wxAnimationCtrl_P(zv) \
     php_wxAnimationCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBitmapButton_entry;
+extern zend_object_handlers wxphp_wxBitmapButton_object_handlers;
 void php_wxBitmapButton_destruction_handler(zend_resource*);
 
 class wxBitmapButton_php: public wxBitmapButton{
@@ -116,6 +118,7 @@ static inline zo_wxBitmapButton * php_wxBitmapButton_fetch_object(zend_object *o
 #define Z_wxBitmapButton_P(zv) \
     php_wxBitmapButton_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBitmapComboBox_entry;
+extern zend_object_handlers wxphp_wxBitmapComboBox_object_handlers;
 void php_wxBitmapComboBox_destruction_handler(zend_resource*);
 
 class wxBitmapComboBox_php: public wxBitmapComboBox{
@@ -165,6 +168,7 @@ static inline zo_wxBitmapComboBox * php_wxBitmapComboBox_fetch_object(zend_objec
 #define Z_wxBitmapComboBox_P(zv) \
     php_wxBitmapComboBox_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxButton_entry;
+extern zend_object_handlers wxphp_wxButton_object_handlers;
 void php_wxButton_destruction_handler(zend_resource*);
 
 class wxButton_php: public wxButton{
@@ -215,6 +219,7 @@ static inline zo_wxButton * php_wxButton_fetch_object(zend_object *obj) {
 #define Z_wxButton_P(zv) \
     php_wxButton_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCalendarCtrl_entry;
+extern zend_object_handlers wxphp_wxCalendarCtrl_object_handlers;
 void php_wxCalendarCtrl_destruction_handler(zend_resource*);
 
 class wxCalendarCtrl_php: public wxCalendarCtrl{
@@ -280,6 +285,7 @@ static inline zo_wxCalendarCtrl * php_wxCalendarCtrl_fetch_object(zend_object *o
 #define Z_wxCalendarCtrl_P(zv) \
     php_wxCalendarCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCheckBox_entry;
+extern zend_object_handlers wxphp_wxCheckBox_object_handlers;
 void php_wxCheckBox_destruction_handler(zend_resource*);
 
 class wxCheckBox_php: public wxCheckBox{
@@ -331,6 +337,7 @@ static inline zo_wxCheckBox * php_wxCheckBox_fetch_object(zend_object *obj) {
 #define Z_wxCheckBox_P(zv) \
     php_wxCheckBox_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCheckListBox_entry;
+extern zend_object_handlers wxphp_wxCheckListBox_object_handlers;
 void php_wxCheckListBox_destruction_handler(zend_resource*);
 
 class wxCheckListBox_php: public wxCheckListBox{
@@ -377,6 +384,7 @@ static inline zo_wxCheckListBox * php_wxCheckListBox_fetch_object(zend_object *o
 #define Z_wxCheckListBox_P(zv) \
     php_wxCheckListBox_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxChoice_entry;
+extern zend_object_handlers wxphp_wxChoice_object_handlers;
 void php_wxChoice_destruction_handler(zend_resource*);
 
 class wxChoice_php: public wxChoice{
@@ -431,6 +439,7 @@ static inline zo_wxChoice * php_wxChoice_fetch_object(zend_object *obj) {
 #define Z_wxChoice_P(zv) \
     php_wxChoice_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCollapsiblePane_entry;
+extern zend_object_handlers wxphp_wxCollapsiblePane_object_handlers;
 void php_wxCollapsiblePane_destruction_handler(zend_resource*);
 
 class wxCollapsiblePane_php: public wxCollapsiblePane{
@@ -480,6 +489,7 @@ static inline zo_wxCollapsiblePane * php_wxCollapsiblePane_fetch_object(zend_obj
 #define Z_wxCollapsiblePane_P(zv) \
     php_wxCollapsiblePane_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxComboPopup_entry;
+extern zend_object_handlers wxphp_wxComboPopup_object_handlers;
 void php_wxComboPopup_destruction_handler(zend_resource*);
 
 class wxComboPopup_php: public wxComboPopup{
@@ -552,6 +562,7 @@ static inline zo_wxComboPopup * php_wxComboPopup_fetch_object(zend_object *obj) 
 #define Z_wxComboPopup_P(zv) \
     php_wxComboPopup_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxComboCtrl_entry;
+extern zend_object_handlers wxphp_wxComboCtrl_object_handlers;
 void php_wxComboCtrl_destruction_handler(zend_resource*);
 
 class wxComboCtrl_php: public wxComboCtrl{
@@ -901,6 +912,7 @@ static inline zo_wxComboCtrl * php_wxComboCtrl_fetch_object(zend_object *obj) {
 #define Z_wxComboCtrl_P(zv) \
     php_wxComboCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxComboBox_entry;
+extern zend_object_handlers wxphp_wxComboBox_object_handlers;
 void php_wxComboBox_destruction_handler(zend_resource*);
 
 class wxComboBox_php: public wxComboBox{
@@ -1234,6 +1246,7 @@ static inline zo_wxComboBox * php_wxComboBox_fetch_object(zend_object *obj) {
 #define Z_wxComboBox_P(zv) \
     php_wxComboBox_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxControl_entry;
+extern zend_object_handlers wxphp_wxControl_object_handlers;
 void php_wxControl_destruction_handler(zend_resource*);
 
 class wxControl_php: public wxControl{
@@ -1286,6 +1299,7 @@ static inline zo_wxControl * php_wxControl_fetch_object(zend_object *obj) {
 #define Z_wxControl_P(zv) \
     php_wxControl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxItemContainerImmutable_entry;
+extern zend_object_handlers wxphp_wxItemContainerImmutable_object_handlers;
 void php_wxItemContainerImmutable_destruction_handler(zend_resource*);
 
 class wxItemContainerImmutable_php: public wxItemContainerImmutable{
@@ -1335,6 +1349,7 @@ static inline zo_wxItemContainerImmutable * php_wxItemContainerImmutable_fetch_o
 #define Z_wxItemContainerImmutable_P(zv) \
     php_wxItemContainerImmutable_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxItemContainer_entry;
+extern zend_object_handlers wxphp_wxItemContainer_object_handlers;
 void php_wxItemContainer_destruction_handler(zend_resource*);
 
 class wxItemContainer_php: public wxItemContainer{
@@ -1380,6 +1395,7 @@ static inline zo_wxItemContainer * php_wxItemContainer_fetch_object(zend_object 
 #define Z_wxItemContainer_P(zv) \
     php_wxItemContainer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxControlWithItems_entry;
+extern zend_object_handlers wxphp_wxControlWithItems_object_handlers;
 void php_wxControlWithItems_destruction_handler(zend_resource*);
 
 class wxControlWithItems_php: public wxControlWithItems{
@@ -1666,6 +1682,7 @@ static inline zo_wxControlWithItems * php_wxControlWithItems_fetch_object(zend_o
 #define Z_wxControlWithItems_P(zv) \
     php_wxControlWithItems_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewCtrl_entry;
+extern zend_object_handlers wxphp_wxDataViewCtrl_object_handlers;
 void php_wxDataViewCtrl_destruction_handler(zend_resource*);
 
 class wxDataViewCtrl_php: public wxDataViewCtrl{
@@ -1751,6 +1768,7 @@ static inline zo_wxDataViewCtrl * php_wxDataViewCtrl_fetch_object(zend_object *o
 #define Z_wxDataViewCtrl_P(zv) \
     php_wxDataViewCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewListCtrl_entry;
+extern zend_object_handlers wxphp_wxDataViewListCtrl_object_handlers;
 void php_wxDataViewListCtrl_destruction_handler(zend_resource*);
 
 class wxDataViewListCtrl_php: public wxDataViewListCtrl{
@@ -1817,6 +1835,7 @@ static inline zo_wxDataViewListCtrl * php_wxDataViewListCtrl_fetch_object(zend_o
 #define Z_wxDataViewListCtrl_P(zv) \
     php_wxDataViewListCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataViewTreeCtrl_entry;
+extern zend_object_handlers wxphp_wxDataViewTreeCtrl_object_handlers;
 void php_wxDataViewTreeCtrl_destruction_handler(zend_resource*);
 
 class wxDataViewTreeCtrl_php: public wxDataViewTreeCtrl{
@@ -1884,6 +1903,7 @@ static inline zo_wxDataViewTreeCtrl * php_wxDataViewTreeCtrl_fetch_object(zend_o
 #define Z_wxDataViewTreeCtrl_P(zv) \
     php_wxDataViewTreeCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGenericDirCtrl_entry;
+extern zend_object_handlers wxphp_wxGenericDirCtrl_object_handlers;
 void php_wxGenericDirCtrl_destruction_handler(zend_resource*);
 
 class wxGenericDirCtrl_php: public wxGenericDirCtrl{
@@ -1950,6 +1970,7 @@ static inline zo_wxGenericDirCtrl * php_wxGenericDirCtrl_fetch_object(zend_objec
 #define Z_wxGenericDirCtrl_P(zv) \
     php_wxGenericDirCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxEditableListBox_entry;
+extern zend_object_handlers wxphp_wxEditableListBox_object_handlers;
 void php_wxEditableListBox_destruction_handler(zend_resource*);
 
 class wxEditableListBox_php: public wxEditableListBox{
@@ -1996,6 +2017,7 @@ static inline zo_wxEditableListBox * php_wxEditableListBox_fetch_object(zend_obj
 #define Z_wxEditableListBox_P(zv) \
     php_wxEditableListBox_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileCtrl_entry;
+extern zend_object_handlers wxphp_wxFileCtrl_object_handlers;
 void php_wxFileCtrl_destruction_handler(zend_resource*);
 
 class wxFileCtrl_php: public wxFileCtrl{
@@ -2051,6 +2073,7 @@ static inline zo_wxFileCtrl * php_wxFileCtrl_fetch_object(zend_object *obj) {
 #define Z_wxFileCtrl_P(zv) \
     php_wxFileCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGauge_entry;
+extern zend_object_handlers wxphp_wxGauge_object_handlers;
 void php_wxGauge_destruction_handler(zend_resource*);
 
 class wxGauge_php: public wxGauge{
@@ -2105,6 +2128,7 @@ static inline zo_wxGauge * php_wxGauge_fetch_object(zend_object *obj) {
 #define Z_wxGauge_P(zv) \
     php_wxGauge_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHeaderColumn_entry;
+extern zend_object_handlers wxphp_wxHeaderColumn_object_handlers;
 void php_wxHeaderColumn_destruction_handler(zend_resource*);
 
 class wxHeaderColumn_php: public wxHeaderColumn{
@@ -2159,6 +2183,7 @@ static inline zo_wxHeaderColumn * php_wxHeaderColumn_fetch_object(zend_object *o
 #define Z_wxHeaderColumn_P(zv) \
     php_wxHeaderColumn_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSettableHeaderColumn_entry;
+extern zend_object_handlers wxphp_wxSettableHeaderColumn_object_handlers;
 void php_wxSettableHeaderColumn_destruction_handler(zend_resource*);
 
 class wxSettableHeaderColumn_php: public wxSettableHeaderColumn{
@@ -2216,6 +2241,7 @@ static inline zo_wxSettableHeaderColumn * php_wxSettableHeaderColumn_fetch_objec
 #define Z_wxSettableHeaderColumn_P(zv) \
     php_wxSettableHeaderColumn_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHeaderColumnSimple_entry;
+extern zend_object_handlers wxphp_wxHeaderColumnSimple_object_handlers;
 void php_wxHeaderColumnSimple_destruction_handler(zend_resource*);
 
 class wxHeaderColumnSimple_php: public wxHeaderColumnSimple{
@@ -2274,6 +2300,7 @@ static inline zo_wxHeaderColumnSimple * php_wxHeaderColumnSimple_fetch_object(ze
 #define Z_wxHeaderColumnSimple_P(zv) \
     php_wxHeaderColumnSimple_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHeaderCtrl_entry;
+extern zend_object_handlers wxphp_wxHeaderCtrl_object_handlers;
 void php_wxHeaderCtrl_destruction_handler(zend_resource*);
 
 class wxHeaderCtrl_php: public wxHeaderCtrl{
@@ -2332,6 +2359,7 @@ static inline zo_wxHeaderCtrl * php_wxHeaderCtrl_fetch_object(zend_object *obj) 
 #define Z_wxHeaderCtrl_P(zv) \
     php_wxHeaderCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHeaderCtrlSimple_entry;
+extern zend_object_handlers wxphp_wxHeaderCtrlSimple_object_handlers;
 void php_wxHeaderCtrlSimple_destruction_handler(zend_resource*);
 
 class wxHeaderCtrlSimple_php: public wxHeaderCtrlSimple{
@@ -2383,6 +2411,7 @@ static inline zo_wxHeaderCtrlSimple * php_wxHeaderCtrlSimple_fetch_object(zend_o
 #define Z_wxHeaderCtrlSimple_P(zv) \
     php_wxHeaderCtrlSimple_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlListBox_entry;
+extern zend_object_handlers wxphp_wxHtmlListBox_object_handlers;
 void php_wxHtmlListBox_destruction_handler(zend_resource*);
 
 class wxHtmlListBox_php: public wxHtmlListBox{
@@ -2432,6 +2461,7 @@ static inline zo_wxHtmlListBox * php_wxHtmlListBox_fetch_object(zend_object *obj
 #define Z_wxHtmlListBox_P(zv) \
     php_wxHtmlListBox_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSimpleHtmlListBox_entry;
+extern zend_object_handlers wxphp_wxSimpleHtmlListBox_object_handlers;
 void php_wxSimpleHtmlListBox_destruction_handler(zend_resource*);
 
 class wxSimpleHtmlListBox_php: public wxSimpleHtmlListBox{
@@ -2505,6 +2535,7 @@ static inline zo_wxSimpleHtmlListBox * php_wxSimpleHtmlListBox_fetch_object(zend
 #define Z_wxSimpleHtmlListBox_P(zv) \
     php_wxSimpleHtmlListBox_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHyperlinkCtrl_entry;
+extern zend_object_handlers wxphp_wxHyperlinkCtrl_object_handlers;
 void php_wxHyperlinkCtrl_destruction_handler(zend_resource*);
 
 class wxHyperlinkCtrl_php: public wxHyperlinkCtrl{
@@ -2558,6 +2589,7 @@ static inline zo_wxHyperlinkCtrl * php_wxHyperlinkCtrl_fetch_object(zend_object 
 #define Z_wxHyperlinkCtrl_P(zv) \
     php_wxHyperlinkCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxListBox_entry;
+extern zend_object_handlers wxphp_wxListBox_object_handlers;
 void php_wxListBox_destruction_handler(zend_resource*);
 
 class wxListBox_php: public wxListBox{
@@ -2616,6 +2648,7 @@ static inline zo_wxListBox * php_wxListBox_fetch_object(zend_object *obj) {
 #define Z_wxListBox_P(zv) \
     php_wxListBox_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxListCtrl_entry;
+extern zend_object_handlers wxphp_wxListCtrl_object_handlers;
 void php_wxListCtrl_destruction_handler(zend_resource*);
 
 class wxListCtrl_php: public wxListCtrl{
@@ -2717,6 +2750,7 @@ static inline zo_wxListCtrl * php_wxListCtrl_fetch_object(zend_object *obj) {
 #define Z_wxListCtrl_P(zv) \
     php_wxListCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxListView_entry;
+extern zend_object_handlers wxphp_wxListView_object_handlers;
 void php_wxListView_destruction_handler(zend_resource*);
 
 class wxListView_php: public wxListView{
@@ -2765,6 +2799,7 @@ static inline zo_wxListView * php_wxListView_fetch_object(zend_object *obj) {
 #define Z_wxListView_P(zv) \
     php_wxListView_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRadioBox_entry;
+extern zend_object_handlers wxphp_wxRadioBox_object_handlers;
 void php_wxRadioBox_destruction_handler(zend_resource*);
 
 class wxRadioBox_php: public wxRadioBox{
@@ -3063,6 +3098,7 @@ static inline zo_wxRadioBox * php_wxRadioBox_fetch_object(zend_object *obj) {
 #define Z_wxRadioBox_P(zv) \
     php_wxRadioBox_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRadioButton_entry;
+extern zend_object_handlers wxphp_wxRadioButton_object_handlers;
 void php_wxRadioButton_destruction_handler(zend_resource*);
 
 class wxRadioButton_php: public wxRadioButton{
@@ -3109,6 +3145,7 @@ static inline zo_wxRadioButton * php_wxRadioButton_fetch_object(zend_object *obj
 #define Z_wxRadioButton_P(zv) \
     php_wxRadioButton_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRearrangeList_entry;
+extern zend_object_handlers wxphp_wxRearrangeList_object_handlers;
 void php_wxRearrangeList_destruction_handler(zend_resource*);
 
 class wxRearrangeList_php: public wxRearrangeList{
@@ -3155,6 +3192,7 @@ static inline zo_wxRearrangeList * php_wxRearrangeList_fetch_object(zend_object 
 #define Z_wxRearrangeList_P(zv) \
     php_wxRearrangeList_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRearrangeCtrl_entry;
+extern zend_object_handlers wxphp_wxRearrangeCtrl_object_handlers;
 void php_wxRearrangeCtrl_destruction_handler(zend_resource*);
 
 class wxRearrangeCtrl_php: public wxRearrangeCtrl{
@@ -3198,6 +3236,7 @@ static inline zo_wxRearrangeCtrl * php_wxRearrangeCtrl_fetch_object(zend_object 
 #define Z_wxRearrangeCtrl_P(zv) \
     php_wxRearrangeCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxScrollBar_entry;
+extern zend_object_handlers wxphp_wxScrollBar_object_handlers;
 void php_wxScrollBar_destruction_handler(zend_resource*);
 
 class wxScrollBar_php: public wxScrollBar{
@@ -3248,6 +3287,7 @@ static inline zo_wxScrollBar * php_wxScrollBar_fetch_object(zend_object *obj) {
 #define Z_wxScrollBar_P(zv) \
     php_wxScrollBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSlider_entry;
+extern zend_object_handlers wxphp_wxSlider_object_handlers;
 void php_wxSlider_destruction_handler(zend_resource*);
 
 class wxSlider_php: public wxSlider{
@@ -3301,6 +3341,7 @@ static inline zo_wxSlider * php_wxSlider_fetch_object(zend_object *obj) {
 #define Z_wxSlider_P(zv) \
     php_wxSlider_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSpinButton_entry;
+extern zend_object_handlers wxphp_wxSpinButton_object_handlers;
 void php_wxSpinButton_destruction_handler(zend_resource*);
 
 class wxSpinButton_php: public wxSpinButton{
@@ -3350,6 +3391,7 @@ static inline zo_wxSpinButton * php_wxSpinButton_fetch_object(zend_object *obj) 
 #define Z_wxSpinButton_P(zv) \
     php_wxSpinButton_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSpinCtrl_entry;
+extern zend_object_handlers wxphp_wxSpinCtrl_object_handlers;
 void php_wxSpinCtrl_destruction_handler(zend_resource*);
 
 class wxSpinCtrl_php: public wxSpinCtrl{
@@ -3400,6 +3442,7 @@ static inline zo_wxSpinCtrl * php_wxSpinCtrl_fetch_object(zend_object *obj) {
 #define Z_wxSpinCtrl_P(zv) \
     php_wxSpinCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSpinCtrlDouble_entry;
+extern zend_object_handlers wxphp_wxSpinCtrlDouble_object_handlers;
 void php_wxSpinCtrlDouble_destruction_handler(zend_resource*);
 
 class wxSpinCtrlDouble_php: public wxSpinCtrlDouble{
@@ -3453,6 +3496,7 @@ static inline zo_wxSpinCtrlDouble * php_wxSpinCtrlDouble_fetch_object(zend_objec
 #define Z_wxSpinCtrlDouble_P(zv) \
     php_wxSpinCtrlDouble_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSearchCtrl_entry;
+extern zend_object_handlers wxphp_wxSearchCtrl_object_handlers;
 void php_wxSearchCtrl_destruction_handler(zend_resource*);
 
 class wxSearchCtrl_php: public wxSearchCtrl{
@@ -3505,6 +3549,7 @@ static inline zo_wxSearchCtrl * php_wxSearchCtrl_fetch_object(zend_object *obj) 
 #define Z_wxSearchCtrl_P(zv) \
     php_wxSearchCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStaticBitmap_entry;
+extern zend_object_handlers wxphp_wxStaticBitmap_object_handlers;
 void php_wxStaticBitmap_destruction_handler(zend_resource*);
 
 class wxStaticBitmap_php: public wxStaticBitmap{
@@ -3553,6 +3598,7 @@ static inline zo_wxStaticBitmap * php_wxStaticBitmap_fetch_object(zend_object *o
 #define Z_wxStaticBitmap_P(zv) \
     php_wxStaticBitmap_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStaticBox_entry;
+extern zend_object_handlers wxphp_wxStaticBox_object_handlers;
 void php_wxStaticBox_destruction_handler(zend_resource*);
 
 class wxStaticBox_php: public wxStaticBox{
@@ -3597,6 +3643,7 @@ static inline zo_wxStaticBox * php_wxStaticBox_fetch_object(zend_object *obj) {
 #define Z_wxStaticBox_P(zv) \
     php_wxStaticBox_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStaticLine_entry;
+extern zend_object_handlers wxphp_wxStaticLine_object_handlers;
 void php_wxStaticLine_destruction_handler(zend_resource*);
 
 class wxStaticLine_php: public wxStaticLine{
@@ -3643,6 +3690,7 @@ static inline zo_wxStaticLine * php_wxStaticLine_fetch_object(zend_object *obj) 
 #define Z_wxStaticLine_P(zv) \
     php_wxStaticLine_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStaticText_entry;
+extern zend_object_handlers wxphp_wxStaticText_object_handlers;
 void php_wxStaticText_destruction_handler(zend_resource*);
 
 class wxStaticText_php: public wxStaticText{
@@ -3689,6 +3737,7 @@ static inline zo_wxStaticText * php_wxStaticText_fetch_object(zend_object *obj) 
 #define Z_wxStaticText_P(zv) \
     php_wxStaticText_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextCtrl_entry;
+extern zend_object_handlers wxphp_wxTextCtrl_object_handlers;
 void php_wxTextCtrl_destruction_handler(zend_resource*);
 
 class wxTextCtrl_php: public wxTextCtrl{
@@ -4026,6 +4075,7 @@ static inline zo_wxTextCtrl * php_wxTextCtrl_fetch_object(zend_object *obj) {
 #define Z_wxTextCtrl_P(zv) \
     php_wxTextCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextEntry_entry;
+extern zend_object_handlers wxphp_wxTextEntry_object_handlers;
 void php_wxTextEntry_destruction_handler(zend_resource*);
 
 class wxTextEntry_php: public wxTextEntry{
@@ -4104,6 +4154,7 @@ static inline zo_wxTextEntry * php_wxTextEntry_fetch_object(zend_object *obj) {
 #define Z_wxTextEntry_P(zv) \
     php_wxTextEntry_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxToggleButton_entry;
+extern zend_object_handlers wxphp_wxToggleButton_object_handlers;
 void php_wxToggleButton_destruction_handler(zend_resource*);
 
 class wxToggleButton_php: public wxToggleButton{
@@ -4150,6 +4201,7 @@ static inline zo_wxToggleButton * php_wxToggleButton_fetch_object(zend_object *o
 #define Z_wxToggleButton_P(zv) \
     php_wxToggleButton_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBitmapToggleButton_entry;
+extern zend_object_handlers wxphp_wxBitmapToggleButton_object_handlers;
 void php_wxBitmapToggleButton_destruction_handler(zend_resource*);
 
 class wxBitmapToggleButton_php: public wxBitmapToggleButton{
@@ -4196,6 +4248,7 @@ static inline zo_wxBitmapToggleButton * php_wxBitmapToggleButton_fetch_object(ze
 #define Z_wxBitmapToggleButton_P(zv) \
     php_wxBitmapToggleButton_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTreeCtrl_entry;
+extern zend_object_handlers wxphp_wxTreeCtrl_object_handlers;
 void php_wxTreeCtrl_destruction_handler(zend_resource*);
 
 class wxTreeCtrl_php: public wxTreeCtrl{
@@ -4316,6 +4369,7 @@ static inline zo_wxTreeCtrl * php_wxTreeCtrl_fetch_object(zend_object *obj) {
 #define Z_wxTreeCtrl_P(zv) \
     php_wxTreeCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTreeListItem_entry;
+extern zend_object_handlers wxphp_wxTreeListItem_object_handlers;
 void php_wxTreeListItem_destruction_handler(zend_resource*);
 
 class wxTreeListItem_php: public wxTreeListItem{
@@ -4359,6 +4413,7 @@ static inline zo_wxTreeListItem * php_wxTreeListItem_fetch_object(zend_object *o
 #define Z_wxTreeListItem_P(zv) \
     php_wxTreeListItem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTreeListCtrl_entry;
+extern zend_object_handlers wxphp_wxTreeListCtrl_object_handlers;
 void php_wxTreeListCtrl_destruction_handler(zend_resource*);
 
 class wxTreeListCtrl_php: public wxTreeListCtrl{
@@ -4446,6 +4501,7 @@ static inline zo_wxTreeListCtrl * php_wxTreeListCtrl_fetch_object(zend_object *o
 #define Z_wxTreeListCtrl_P(zv) \
     php_wxTreeListCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxVListBox_entry;
+extern zend_object_handlers wxphp_wxVListBox_object_handlers;
 void php_wxVListBox_destruction_handler(zend_resource*);
 
 class wxVListBox_php: public wxVListBox{
@@ -4515,6 +4571,7 @@ static inline zo_wxVListBox * php_wxVListBox_fetch_object(zend_object *obj) {
 #define Z_wxVListBox_P(zv) \
     php_wxVListBox_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWebView_entry;
+extern zend_object_handlers wxphp_wxWebView_object_handlers;
 void php_wxWebView_destruction_handler(zend_resource*);
 
 class wxWebView_php: public wxWebView{

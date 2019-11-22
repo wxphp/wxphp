@@ -123,7 +123,7 @@ zend_object* php_wxGraphicsGradientStop_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGraphicsGradientStop_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRAPHICSGRADIENTSTOP_TYPE;
@@ -810,7 +810,7 @@ zend_object* php_wxGraphicsGradientStops_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGraphicsGradientStops_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRAPHICSGRADIENTSTOPS_TYPE;
@@ -1944,7 +1944,7 @@ zend_object* php_wxAnimation_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAnimation_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXANIMATION_TYPE;
@@ -3015,7 +3015,7 @@ zend_object* php_wxBitmapHandler_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxBitmapHandler_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXBITMAPHANDLER_TYPE;
@@ -4295,7 +4295,7 @@ zend_object* php_wxBitmap_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxBitmap_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXBITMAP_TYPE;
@@ -8006,7 +8006,7 @@ zend_object* php_wxMask_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMask_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMASK_TYPE;
@@ -8635,7 +8635,7 @@ zend_object* php_wxBrush_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxBrush_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXBRUSH_TYPE;
@@ -10124,7 +10124,7 @@ zend_object* php_wxColour_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxColour_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCOLOUR_TYPE;
@@ -11551,7 +11551,7 @@ zend_object* php_wxCursor_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxCursor_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCURSOR_TYPE;
@@ -12014,7 +12014,7 @@ zend_object* php_wxDCClipper_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDCClipper_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDCCLIPPER_TYPE;
@@ -12362,7 +12362,7 @@ zend_object* php_wxFont_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFont_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFONT_TYPE;
@@ -18293,7 +18293,7 @@ zend_object* php_wxFontList_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFontList_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFONTLIST_TYPE;
@@ -18704,7 +18704,7 @@ zend_object* php_wxFontEnumerator_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFontEnumerator_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFONTENUMERATOR_TYPE;
@@ -19662,7 +19662,7 @@ zend_object* php_wxNativeFontInfo_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxNativeFontInfo_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXNATIVEFONTINFO_TYPE;
@@ -22139,7 +22139,7 @@ zend_object* php_wxColourDatabase_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxColourDatabase_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCOLOURDATABASE_TYPE;
@@ -22690,7 +22690,7 @@ zend_object* php_wxGDIObject_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGDIObject_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGDIOBJECT_TYPE;
@@ -22771,7 +22771,7 @@ zend_object* php_wxGraphicsRenderer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGraphicsRenderer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRAPHICSRENDERER_TYPE;
@@ -22852,7 +22852,7 @@ zend_object* php_wxGraphicsMatrix_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGraphicsMatrix_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRAPHICSMATRIX_TYPE;
@@ -22933,7 +22933,7 @@ zend_object* php_wxIcon_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxIcon_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXICON_TYPE;
@@ -24296,7 +24296,7 @@ zend_object* php_wxIconBundle_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxIconBundle_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXICONBUNDLE_TYPE;
@@ -25680,7 +25680,7 @@ zend_object* php_wxImageHandler_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxImageHandler_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXIMAGEHANDLER_TYPE;
@@ -27478,7 +27478,7 @@ zend_object* php_wxImage_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxImage_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXIMAGE_TYPE;
@@ -38427,7 +38427,7 @@ zend_object* php_wxImageList_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxImageList_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXIMAGELIST_TYPE;
@@ -40051,7 +40051,7 @@ zend_object* php_wxPalette_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPalette_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPALETTE_TYPE;
@@ -41050,7 +41050,7 @@ zend_object* php_wxPen_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPen_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPEN_TYPE;
@@ -43044,7 +43044,7 @@ zend_object* php_wxPenList_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPenList_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPENLIST_TYPE;
@@ -43436,7 +43436,7 @@ zend_object* php_wxRendererNative_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRendererNative_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXRENDERERNATIVE_TYPE;

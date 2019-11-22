@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_net_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxURI_entry;
+extern zend_object_handlers wxphp_wxURI_object_handlers;
 void php_wxURI_destruction_handler(zend_resource*);
 
 class wxURI_php: public wxURI{

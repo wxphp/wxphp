@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_dc_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxDC_entry;
+extern zend_object_handlers wxphp_wxDC_object_handlers;
 void php_wxDC_destruction_handler(zend_resource*);
 
 class wxDC_php: public wxDC{
@@ -147,6 +148,7 @@ static inline zo_wxDC * php_wxDC_fetch_object(zend_object *obj) {
 #define Z_wxDC_P(zv) \
     php_wxDC_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBufferedDC_entry;
+extern zend_object_handlers wxphp_wxBufferedDC_object_handlers;
 void php_wxBufferedDC_destruction_handler(zend_resource*);
 
 class wxBufferedDC_php: public wxBufferedDC{
@@ -192,6 +194,7 @@ static inline zo_wxBufferedDC * php_wxBufferedDC_fetch_object(zend_object *obj) 
 #define Z_wxBufferedDC_P(zv) \
     php_wxBufferedDC_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAutoBufferedPaintDC_entry;
+extern zend_object_handlers wxphp_wxAutoBufferedPaintDC_object_handlers;
 void php_wxAutoBufferedPaintDC_destruction_handler(zend_resource*);
 
 class wxAutoBufferedPaintDC_php: public wxAutoBufferedPaintDC{
@@ -234,6 +237,7 @@ static inline zo_wxAutoBufferedPaintDC * php_wxAutoBufferedPaintDC_fetch_object(
 #define Z_wxAutoBufferedPaintDC_P(zv) \
     php_wxAutoBufferedPaintDC_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBufferedPaintDC_entry;
+extern zend_object_handlers wxphp_wxBufferedPaintDC_object_handlers;
 void php_wxBufferedPaintDC_destruction_handler(zend_resource*);
 
 class wxBufferedPaintDC_php: public wxBufferedPaintDC{
@@ -277,6 +281,7 @@ static inline zo_wxBufferedPaintDC * php_wxBufferedPaintDC_fetch_object(zend_obj
 #define Z_wxBufferedPaintDC_P(zv) \
     php_wxBufferedPaintDC_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPaintDC_entry;
+extern zend_object_handlers wxphp_wxPaintDC_object_handlers;
 void php_wxPaintDC_destruction_handler(zend_resource*);
 
 class wxPaintDC_php: public wxPaintDC{
@@ -319,6 +324,7 @@ static inline zo_wxPaintDC * php_wxPaintDC_fetch_object(zend_object *obj) {
 #define Z_wxPaintDC_P(zv) \
     php_wxPaintDC_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxClientDC_entry;
+extern zend_object_handlers wxphp_wxClientDC_object_handlers;
 void php_wxClientDC_destruction_handler(zend_resource*);
 
 class wxClientDC_php: public wxClientDC{
@@ -361,6 +367,7 @@ static inline zo_wxClientDC * php_wxClientDC_fetch_object(zend_object *obj) {
 #define Z_wxClientDC_P(zv) \
     php_wxClientDC_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWindowDC_entry;
+extern zend_object_handlers wxphp_wxWindowDC_object_handlers;
 void php_wxWindowDC_destruction_handler(zend_resource*);
 
 class wxWindowDC_php: public wxWindowDC{
@@ -403,6 +410,7 @@ static inline zo_wxWindowDC * php_wxWindowDC_fetch_object(zend_object *obj) {
 #define Z_wxWindowDC_P(zv) \
     php_wxWindowDC_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMemoryDC_entry;
+extern zend_object_handlers wxphp_wxMemoryDC_object_handlers;
 void php_wxMemoryDC_destruction_handler(zend_resource*);
 
 class wxMemoryDC_php: public wxMemoryDC{
@@ -449,6 +457,7 @@ static inline zo_wxMemoryDC * php_wxMemoryDC_fetch_object(zend_object *obj) {
 #define Z_wxMemoryDC_P(zv) \
     php_wxMemoryDC_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMirrorDC_entry;
+extern zend_object_handlers wxphp_wxMirrorDC_object_handlers;
 void php_wxMirrorDC_destruction_handler(zend_resource*);
 
 class wxMirrorDC_php: public wxMirrorDC{
@@ -491,6 +500,7 @@ static inline zo_wxMirrorDC * php_wxMirrorDC_fetch_object(zend_object *obj) {
 #define Z_wxMirrorDC_P(zv) \
     php_wxMirrorDC_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPostScriptDC_entry;
+extern zend_object_handlers wxphp_wxPostScriptDC_object_handlers;
 void php_wxPostScriptDC_destruction_handler(zend_resource*);
 
 class wxPostScriptDC_php: public wxPostScriptDC{
@@ -534,6 +544,7 @@ static inline zo_wxPostScriptDC * php_wxPostScriptDC_fetch_object(zend_object *o
 #define Z_wxPostScriptDC_P(zv) \
     php_wxPostScriptDC_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxScreenDC_entry;
+extern zend_object_handlers wxphp_wxScreenDC_object_handlers;
 void php_wxScreenDC_destruction_handler(zend_resource*);
 
 class wxScreenDC_php: public wxScreenDC{

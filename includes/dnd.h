@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_dnd_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxClipboard_entry;
+extern zend_object_handlers wxphp_wxClipboard_object_handlers;
 void php_wxClipboard_destruction_handler(zend_resource*);
 
 class wxClipboard_php: public wxClipboard{
@@ -74,6 +75,7 @@ static inline zo_wxClipboard * php_wxClipboard_fetch_object(zend_object *obj) {
 #define Z_wxClipboard_P(zv) \
     php_wxClipboard_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataFormat_entry;
+extern zend_object_handlers wxphp_wxDataFormat_object_handlers;
 void php_wxDataFormat_destruction_handler(zend_resource*);
 
 class wxDataFormat_php: public wxDataFormat{
@@ -121,6 +123,7 @@ static inline zo_wxDataFormat * php_wxDataFormat_fetch_object(zend_object *obj) 
 #define Z_wxDataFormat_P(zv) \
     php_wxDataFormat_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataObject_entry;
+extern zend_object_handlers wxphp_wxDataObject_object_handlers;
 void php_wxDataObject_destruction_handler(zend_resource*);
 
 class wxDataObject_php: public wxDataObject{
@@ -170,6 +173,7 @@ static inline zo_wxDataObject * php_wxDataObject_fetch_object(zend_object *obj) 
 #define Z_wxDataObject_P(zv) \
     php_wxDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCustomDataObject_entry;
+extern zend_object_handlers wxphp_wxCustomDataObject_object_handlers;
 void php_wxCustomDataObject_destruction_handler(zend_resource*);
 
 class wxCustomDataObject_php: public wxCustomDataObject{
@@ -218,6 +222,7 @@ static inline zo_wxCustomDataObject * php_wxCustomDataObject_fetch_object(zend_o
 #define Z_wxCustomDataObject_P(zv) \
     php_wxCustomDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataObjectComposite_entry;
+extern zend_object_handlers wxphp_wxDataObjectComposite_object_handlers;
 void php_wxDataObjectComposite_destruction_handler(zend_resource*);
 
 class wxDataObjectComposite_php: public wxDataObjectComposite{
@@ -263,6 +268,7 @@ static inline zo_wxDataObjectComposite * php_wxDataObjectComposite_fetch_object(
 #define Z_wxDataObjectComposite_P(zv) \
     php_wxDataObjectComposite_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataObjectSimple_entry;
+extern zend_object_handlers wxphp_wxDataObjectSimple_object_handlers;
 void php_wxDataObjectSimple_destruction_handler(zend_resource*);
 
 class wxDataObjectSimple_php: public wxDataObjectSimple{
@@ -310,6 +316,7 @@ static inline zo_wxDataObjectSimple * php_wxDataObjectSimple_fetch_object(zend_o
 #define Z_wxDataObjectSimple_P(zv) \
     php_wxDataObjectSimple_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBitmapDataObject_entry;
+extern zend_object_handlers wxphp_wxBitmapDataObject_object_handlers;
 void php_wxBitmapDataObject_destruction_handler(zend_resource*);
 
 class wxBitmapDataObject_php: public wxBitmapDataObject{
@@ -354,6 +361,7 @@ static inline zo_wxBitmapDataObject * php_wxBitmapDataObject_fetch_object(zend_o
 #define Z_wxBitmapDataObject_P(zv) \
     php_wxBitmapDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxURLDataObject_entry;
+extern zend_object_handlers wxphp_wxURLDataObject_object_handlers;
 void php_wxURLDataObject_destruction_handler(zend_resource*);
 
 class wxURLDataObject_php: public wxURLDataObject{
@@ -398,6 +406,7 @@ static inline zo_wxURLDataObject * php_wxURLDataObject_fetch_object(zend_object 
 #define Z_wxURLDataObject_P(zv) \
     php_wxURLDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextDataObject_entry;
+extern zend_object_handlers wxphp_wxTextDataObject_object_handlers;
 void php_wxTextDataObject_destruction_handler(zend_resource*);
 
 class wxTextDataObject_php: public wxTextDataObject{
@@ -446,6 +455,7 @@ static inline zo_wxTextDataObject * php_wxTextDataObject_fetch_object(zend_objec
 #define Z_wxTextDataObject_P(zv) \
     php_wxTextDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileDataObject_entry;
+extern zend_object_handlers wxphp_wxFileDataObject_object_handlers;
 void php_wxFileDataObject_destruction_handler(zend_resource*);
 
 class wxFileDataObject_php: public wxFileDataObject{
@@ -490,6 +500,7 @@ static inline zo_wxFileDataObject * php_wxFileDataObject_fetch_object(zend_objec
 #define Z_wxFileDataObject_P(zv) \
     php_wxFileDataObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDropTarget_entry;
+extern zend_object_handlers wxphp_wxDropTarget_object_handlers;
 void php_wxDropTarget_destruction_handler(zend_resource*);
 
 class wxDropTarget_php: public wxDropTarget{
@@ -539,6 +550,7 @@ static inline zo_wxDropTarget * php_wxDropTarget_fetch_object(zend_object *obj) 
 #define Z_wxDropTarget_P(zv) \
     php_wxDropTarget_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextDropTarget_entry;
+extern zend_object_handlers wxphp_wxTextDropTarget_object_handlers;
 void php_wxTextDropTarget_destruction_handler(zend_resource*);
 
 class wxTextDropTarget_php: public wxTextDropTarget{
@@ -583,6 +595,7 @@ static inline zo_wxTextDropTarget * php_wxTextDropTarget_fetch_object(zend_objec
 #define Z_wxTextDropTarget_P(zv) \
     php_wxTextDropTarget_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileDropTarget_entry;
+extern zend_object_handlers wxphp_wxFileDropTarget_object_handlers;
 void php_wxFileDropTarget_destruction_handler(zend_resource*);
 
 class wxFileDropTarget_php: public wxFileDropTarget{

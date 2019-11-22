@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_gdi_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxGraphicsGradientStop_entry;
+extern zend_object_handlers wxphp_wxGraphicsGradientStop_object_handlers;
 void php_wxGraphicsGradientStop_destruction_handler(zend_resource*);
 
 class wxGraphicsGradientStop_php: public wxGraphicsGradientStop{
@@ -66,6 +67,7 @@ static inline zo_wxGraphicsGradientStop * php_wxGraphicsGradientStop_fetch_objec
 #define Z_wxGraphicsGradientStop_P(zv) \
     php_wxGraphicsGradientStop_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGraphicsGradientStops_entry;
+extern zend_object_handlers wxphp_wxGraphicsGradientStops_object_handlers;
 void php_wxGraphicsGradientStops_destruction_handler(zend_resource*);
 
 class wxGraphicsGradientStops_php: public wxGraphicsGradientStops{
@@ -115,6 +117,7 @@ static inline zo_wxGraphicsGradientStops * php_wxGraphicsGradientStops_fetch_obj
 #define Z_wxGraphicsGradientStops_P(zv) \
     php_wxGraphicsGradientStops_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAnimation_entry;
+extern zend_object_handlers wxphp_wxAnimation_object_handlers;
 void php_wxAnimation_destruction_handler(zend_resource*);
 
 class wxAnimation_php: public wxAnimation{
@@ -165,6 +168,7 @@ static inline zo_wxAnimation * php_wxAnimation_fetch_object(zend_object *obj) {
 #define Z_wxAnimation_P(zv) \
     php_wxAnimation_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBitmapHandler_entry;
+extern zend_object_handlers wxphp_wxBitmapHandler_object_handlers;
 void php_wxBitmapHandler_destruction_handler(zend_resource*);
 
 class wxBitmapHandler_php: public wxBitmapHandler{
@@ -216,6 +220,7 @@ static inline zo_wxBitmapHandler * php_wxBitmapHandler_fetch_object(zend_object 
 #define Z_wxBitmapHandler_P(zv) \
     php_wxBitmapHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBitmap_entry;
+extern zend_object_handlers wxphp_wxBitmap_object_handlers;
 void php_wxBitmap_destruction_handler(zend_resource*);
 
 class wxBitmap_php: public wxBitmap{
@@ -288,6 +293,7 @@ static inline zo_wxBitmap * php_wxBitmap_fetch_object(zend_object *obj) {
 #define Z_wxBitmap_P(zv) \
     php_wxBitmap_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMask_entry;
+extern zend_object_handlers wxphp_wxMask_object_handlers;
 void php_wxMask_destruction_handler(zend_resource*);
 
 class wxMask_php: public wxMask{
@@ -334,6 +340,7 @@ static inline zo_wxMask * php_wxMask_fetch_object(zend_object *obj) {
 #define Z_wxMask_P(zv) \
     php_wxMask_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBrush_entry;
+extern zend_object_handlers wxphp_wxBrush_object_handlers;
 void php_wxBrush_destruction_handler(zend_resource*);
 
 class wxBrush_php: public wxBrush{
@@ -388,6 +395,7 @@ static inline zo_wxBrush * php_wxBrush_fetch_object(zend_object *obj) {
 #define Z_wxBrush_P(zv) \
     php_wxBrush_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxColour_entry;
+extern zend_object_handlers wxphp_wxColour_object_handlers;
 void php_wxColour_destruction_handler(zend_resource*);
 
 class wxColour_php: public wxColour{
@@ -443,6 +451,7 @@ static inline zo_wxColour * php_wxColour_fetch_object(zend_object *obj) {
 #define Z_wxColour_P(zv) \
     php_wxColour_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCursor_entry;
+extern zend_object_handlers wxphp_wxCursor_object_handlers;
 void php_wxCursor_destruction_handler(zend_resource*);
 
 class wxCursor_php: public wxCursor{
@@ -489,6 +498,7 @@ static inline zo_wxCursor * php_wxCursor_fetch_object(zend_object *obj) {
 #define Z_wxCursor_P(zv) \
     php_wxCursor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDCClipper_entry;
+extern zend_object_handlers wxphp_wxDCClipper_object_handlers;
 void php_wxDCClipper_destruction_handler(zend_resource*);
 
 class wxDCClipper_php: public wxDCClipper{
@@ -533,6 +543,7 @@ static inline zo_wxDCClipper * php_wxDCClipper_fetch_object(zend_object *obj) {
 #define Z_wxDCClipper_P(zv) \
     php_wxDCClipper_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFont_entry;
+extern zend_object_handlers wxphp_wxFont_object_handlers;
 void php_wxFont_destruction_handler(zend_resource*);
 
 class wxFont_php: public wxFont{
@@ -620,6 +631,7 @@ static inline zo_wxFont * php_wxFont_fetch_object(zend_object *obj) {
 #define Z_wxFont_P(zv) \
     php_wxFont_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontList_entry;
+extern zend_object_handlers wxphp_wxFontList_object_handlers;
 void php_wxFontList_destruction_handler(zend_resource*);
 
 class wxFontList_php: public wxFontList{
@@ -663,6 +675,7 @@ static inline zo_wxFontList * php_wxFontList_fetch_object(zend_object *obj) {
 #define Z_wxFontList_P(zv) \
     php_wxFontList_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontEnumerator_entry;
+extern zend_object_handlers wxphp_wxFontEnumerator_object_handlers;
 void php_wxFontEnumerator_destruction_handler(zend_resource*);
 
 class wxFontEnumerator_php: public wxFontEnumerator{
@@ -710,6 +723,7 @@ static inline zo_wxFontEnumerator * php_wxFontEnumerator_fetch_object(zend_objec
 #define Z_wxFontEnumerator_P(zv) \
     php_wxFontEnumerator_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxNativeFontInfo_entry;
+extern zend_object_handlers wxphp_wxNativeFontInfo_object_handlers;
 void php_wxNativeFontInfo_destruction_handler(zend_resource*);
 
 class wxNativeFontInfo_php: public wxNativeFontInfo{
@@ -773,6 +787,7 @@ static inline zo_wxNativeFontInfo * php_wxNativeFontInfo_fetch_object(zend_objec
 #define Z_wxNativeFontInfo_P(zv) \
     php_wxNativeFontInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxColourDatabase_entry;
+extern zend_object_handlers wxphp_wxColourDatabase_object_handlers;
 void php_wxColourDatabase_destruction_handler(zend_resource*);
 
 class wxColourDatabase_php: public wxColourDatabase{
@@ -818,6 +833,7 @@ static inline zo_wxColourDatabase * php_wxColourDatabase_fetch_object(zend_objec
 #define Z_wxColourDatabase_P(zv) \
     php_wxColourDatabase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGDIObject_entry;
+extern zend_object_handlers wxphp_wxGDIObject_object_handlers;
 void php_wxGDIObject_destruction_handler(zend_resource*);
 
 class wxGDIObject_php: public wxGDIObject{
@@ -858,6 +874,7 @@ static inline zo_wxGDIObject * php_wxGDIObject_fetch_object(zend_object *obj) {
 #define Z_wxGDIObject_P(zv) \
     php_wxGDIObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGraphicsRenderer_entry;
+extern zend_object_handlers wxphp_wxGraphicsRenderer_object_handlers;
 void php_wxGraphicsRenderer_destruction_handler(zend_resource*);
 
 class wxGraphicsRenderer_php: public wxGraphicsRenderer{
@@ -898,6 +915,7 @@ static inline zo_wxGraphicsRenderer * php_wxGraphicsRenderer_fetch_object(zend_o
 #define Z_wxGraphicsRenderer_P(zv) \
     php_wxGraphicsRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGraphicsMatrix_entry;
+extern zend_object_handlers wxphp_wxGraphicsMatrix_object_handlers;
 void php_wxGraphicsMatrix_destruction_handler(zend_resource*);
 
 class wxGraphicsMatrix_php: public wxGraphicsMatrix{
@@ -938,6 +956,7 @@ static inline zo_wxGraphicsMatrix * php_wxGraphicsMatrix_fetch_object(zend_objec
 #define Z_wxGraphicsMatrix_P(zv) \
     php_wxGraphicsMatrix_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxIcon_entry;
+extern zend_object_handlers wxphp_wxIcon_object_handlers;
 void php_wxIcon_destruction_handler(zend_resource*);
 
 class wxIcon_php: public wxIcon{
@@ -991,6 +1010,7 @@ static inline zo_wxIcon * php_wxIcon_fetch_object(zend_object *obj) {
 #define Z_wxIcon_P(zv) \
     php_wxIcon_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxIconBundle_entry;
+extern zend_object_handlers wxphp_wxIconBundle_object_handlers;
 void php_wxIconBundle_destruction_handler(zend_resource*);
 
 class wxIconBundle_php: public wxIconBundle{
@@ -1043,6 +1063,7 @@ static inline zo_wxIconBundle * php_wxIconBundle_fetch_object(zend_object *obj) 
 #define Z_wxIconBundle_P(zv) \
     php_wxIconBundle_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxImageHandler_entry;
+extern zend_object_handlers wxphp_wxImageHandler_object_handlers;
 void php_wxImageHandler_destruction_handler(zend_resource*);
 
 class wxImageHandler_php: public wxImageHandler{
@@ -1096,6 +1117,7 @@ static inline zo_wxImageHandler * php_wxImageHandler_fetch_object(zend_object *o
 #define Z_wxImageHandler_P(zv) \
     php_wxImageHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxImage_entry;
+extern zend_object_handlers wxphp_wxImage_object_handlers;
 void php_wxImage_destruction_handler(zend_resource*);
 
 class wxImage_php: public wxImage{
@@ -1216,6 +1238,7 @@ static inline zo_wxImage * php_wxImage_fetch_object(zend_object *obj) {
 #define Z_wxImage_P(zv) \
     php_wxImage_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxImageList_entry;
+extern zend_object_handlers wxphp_wxImageList_object_handlers;
 void php_wxImageList_destruction_handler(zend_resource*);
 
 class wxImageList_php: public wxImageList{
@@ -1269,6 +1292,7 @@ static inline zo_wxImageList * php_wxImageList_fetch_object(zend_object *obj) {
 #define Z_wxImageList_P(zv) \
     php_wxImageList_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPalette_entry;
+extern zend_object_handlers wxphp_wxPalette_object_handlers;
 void php_wxPalette_destruction_handler(zend_resource*);
 
 class wxPalette_php: public wxPalette{
@@ -1318,6 +1342,7 @@ static inline zo_wxPalette * php_wxPalette_fetch_object(zend_object *obj) {
 #define Z_wxPalette_P(zv) \
     php_wxPalette_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPen_entry;
+extern zend_object_handlers wxphp_wxPen_object_handlers;
 void php_wxPen_destruction_handler(zend_resource*);
 
 class wxPen_php: public wxPen{
@@ -1376,6 +1401,7 @@ static inline zo_wxPen * php_wxPen_fetch_object(zend_object *obj) {
 #define Z_wxPen_P(zv) \
     php_wxPen_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPenList_entry;
+extern zend_object_handlers wxphp_wxPenList_object_handlers;
 void php_wxPenList_destruction_handler(zend_resource*);
 
 class wxPenList_php: public wxPenList{
@@ -1419,6 +1445,7 @@ static inline zo_wxPenList * php_wxPenList_fetch_object(zend_object *obj) {
 #define Z_wxPenList_P(zv) \
     php_wxPenList_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRendererNative_entry;
+extern zend_object_handlers wxphp_wxRendererNative_object_handlers;
 void php_wxRendererNative_destruction_handler(zend_resource*);
 
 class wxRendererNative_php: public wxRendererNative{

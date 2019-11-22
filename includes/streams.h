@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_streams_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxDataOutputStream_entry;
+extern zend_object_handlers wxphp_wxDataOutputStream_object_handlers;
 void php_wxDataOutputStream_destruction_handler(zend_resource*);
 
 class wxDataOutputStream_php: public wxDataOutputStream{
@@ -66,6 +67,7 @@ static inline zo_wxDataOutputStream * php_wxDataOutputStream_fetch_object(zend_o
 #define Z_wxDataOutputStream_P(zv) \
     php_wxDataOutputStream_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDataInputStream_entry;
+extern zend_object_handlers wxphp_wxDataInputStream_object_handlers;
 void php_wxDataInputStream_destruction_handler(zend_resource*);
 
 class wxDataInputStream_php: public wxDataInputStream{
@@ -112,6 +114,7 @@ static inline zo_wxDataInputStream * php_wxDataInputStream_fetch_object(zend_obj
 #define Z_wxDataInputStream_P(zv) \
     php_wxDataInputStream_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStreamBase_entry;
+extern zend_object_handlers wxphp_wxStreamBase_object_handlers;
 void php_wxStreamBase_destruction_handler(zend_resource*);
 
 class wxStreamBase_php: public wxStreamBase{
@@ -162,6 +165,7 @@ static inline zo_wxStreamBase * php_wxStreamBase_fetch_object(zend_object *obj) 
 #define Z_wxStreamBase_P(zv) \
     php_wxStreamBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxOutputStream_entry;
+extern zend_object_handlers wxphp_wxOutputStream_object_handlers;
 void php_wxOutputStream_destruction_handler(zend_resource*);
 
 class wxOutputStream_php: public wxOutputStream{
@@ -210,6 +214,7 @@ static inline zo_wxOutputStream * php_wxOutputStream_fetch_object(zend_object *o
 #define Z_wxOutputStream_P(zv) \
     php_wxOutputStream_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxInputStream_entry;
+extern zend_object_handlers wxphp_wxInputStream_object_handlers;
 void php_wxInputStream_destruction_handler(zend_resource*);
 
 class wxInputStream_php: public wxInputStream{
@@ -262,6 +267,7 @@ static inline zo_wxInputStream * php_wxInputStream_fetch_object(zend_object *obj
 #define Z_wxInputStream_P(zv) \
     php_wxInputStream_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFFileOutputStream_entry;
+extern zend_object_handlers wxphp_wxFFileOutputStream_object_handlers;
 void php_wxFFileOutputStream_destruction_handler(zend_resource*);
 
 class wxFFileOutputStream_php: public wxFFileOutputStream{
@@ -306,6 +312,7 @@ static inline zo_wxFFileOutputStream * php_wxFFileOutputStream_fetch_object(zend
 #define Z_wxFFileOutputStream_P(zv) \
     php_wxFFileOutputStream_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileOutputStream_entry;
+extern zend_object_handlers wxphp_wxFileOutputStream_object_handlers;
 void php_wxFileOutputStream_destruction_handler(zend_resource*);
 
 class wxFileOutputStream_php: public wxFileOutputStream{
@@ -351,6 +358,7 @@ static inline zo_wxFileOutputStream * php_wxFileOutputStream_fetch_object(zend_o
 #define Z_wxFileOutputStream_P(zv) \
     php_wxFileOutputStream_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileInputStream_entry;
+extern zend_object_handlers wxphp_wxFileInputStream_object_handlers;
 void php_wxFileInputStream_destruction_handler(zend_resource*);
 
 class wxFileInputStream_php: public wxFileInputStream{
@@ -396,6 +404,7 @@ static inline zo_wxFileInputStream * php_wxFileInputStream_fetch_object(zend_obj
 #define Z_wxFileInputStream_P(zv) \
     php_wxFileInputStream_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFFileInputStream_entry;
+extern zend_object_handlers wxphp_wxFFileInputStream_object_handlers;
 void php_wxFFileInputStream_destruction_handler(zend_resource*);
 
 class wxFFileInputStream_php: public wxFFileInputStream{
@@ -440,6 +449,7 @@ static inline zo_wxFFileInputStream * php_wxFFileInputStream_fetch_object(zend_o
 #define Z_wxFFileInputStream_P(zv) \
     php_wxFFileInputStream_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFFileStream_entry;
+extern zend_object_handlers wxphp_wxFFileStream_object_handlers;
 void php_wxFFileStream_destruction_handler(zend_resource*);
 
 class wxFFileStream_php: public wxFFileStream{
@@ -503,6 +513,7 @@ static inline zo_wxFFileStream * php_wxFFileStream_fetch_object(zend_object *obj
 #define Z_wxFFileStream_P(zv) \
     php_wxFFileStream_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileStream_entry;
+extern zend_object_handlers wxphp_wxFileStream_object_handlers;
 void php_wxFileStream_destruction_handler(zend_resource*);
 
 class wxFileStream_php: public wxFileStream{

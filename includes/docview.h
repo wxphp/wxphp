@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_docview_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxFileHistory_entry;
+extern zend_object_handlers wxphp_wxFileHistory_object_handlers;
 void php_wxFileHistory_destruction_handler(zend_resource*);
 
 class wxFileHistory_php: public wxFileHistory{

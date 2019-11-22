@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_file_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxFFile_entry;
+extern zend_object_handlers wxphp_wxFFile_object_handlers;
 void php_wxFFile_destruction_handler(zend_resource*);
 
 class wxFFile_php: public wxFFile{
@@ -76,6 +77,7 @@ static inline zo_wxFFile * php_wxFFile_fetch_object(zend_object *obj) {
 #define Z_wxFFile_P(zv) \
     php_wxFFile_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFile_entry;
+extern zend_object_handlers wxphp_wxFile_object_handlers;
 void php_wxFile_destruction_handler(zend_resource*);
 
 class wxFile_php: public wxFile{
@@ -139,6 +141,7 @@ static inline zo_wxFile * php_wxFile_fetch_object(zend_object *obj) {
 #define Z_wxFile_P(zv) \
     php_wxFile_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPathList_entry;
+extern zend_object_handlers wxphp_wxPathList_object_handlers;
 void php_wxPathList_destruction_handler(zend_resource*);
 
 class wxPathList_php: public wxPathList{
@@ -187,6 +190,7 @@ static inline zo_wxPathList * php_wxPathList_fetch_object(zend_object *obj) {
 #define Z_wxPathList_P(zv) \
     php_wxPathList_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileName_entry;
+extern zend_object_handlers wxphp_wxFileName_object_handlers;
 void php_wxFileName_destruction_handler(zend_resource*);
 
 class wxFileName_php: public wxFileName{
@@ -306,6 +310,7 @@ static inline zo_wxFileName * php_wxFileName_fetch_object(zend_object *obj) {
 #define Z_wxFileName_P(zv) \
     php_wxFileName_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFSFile_entry;
+extern zend_object_handlers wxphp_wxFSFile_object_handlers;
 void php_wxFSFile_destruction_handler(zend_resource*);
 
 class wxFSFile_php: public wxFSFile{
@@ -354,6 +359,7 @@ static inline zo_wxFSFile * php_wxFSFile_fetch_object(zend_object *obj) {
 #define Z_wxFSFile_P(zv) \
     php_wxFSFile_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileSystemWatcher_entry;
+extern zend_object_handlers wxphp_wxFileSystemWatcher_object_handlers;
 void php_wxFileSystemWatcher_destruction_handler(zend_resource*);
 
 class wxFileSystemWatcher_php: public wxFileSystemWatcher{
@@ -403,6 +409,7 @@ static inline zo_wxFileSystemWatcher * php_wxFileSystemWatcher_fetch_object(zend
 #define Z_wxFileSystemWatcher_P(zv) \
     php_wxFileSystemWatcher_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStandardPaths_entry;
+extern zend_object_handlers wxphp_wxStandardPaths_object_handlers;
 void php_wxStandardPaths_destruction_handler(zend_resource*);
 
 class wxStandardPaths_php: public wxStandardPaths{

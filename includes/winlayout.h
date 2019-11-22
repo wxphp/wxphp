@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_winlayout_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxGBPosition_entry;
+extern zend_object_handlers wxphp_wxGBPosition_object_handlers;
 void php_wxGBPosition_destruction_handler(zend_resource*);
 
 class wxGBPosition_php: public wxGBPosition{
@@ -67,6 +68,7 @@ static inline zo_wxGBPosition * php_wxGBPosition_fetch_object(zend_object *obj) 
 #define Z_wxGBPosition_P(zv) \
     php_wxGBPosition_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridBagSizer_entry;
+extern zend_object_handlers wxphp_wxGridBagSizer_object_handlers;
 void php_wxGridBagSizer_destruction_handler(zend_resource*);
 
 class wxGridBagSizer_php: public wxGridBagSizer{
@@ -124,6 +126,7 @@ static inline zo_wxGridBagSizer * php_wxGridBagSizer_fetch_object(zend_object *o
 #define Z_wxGridBagSizer_P(zv) \
     php_wxGridBagSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGBSizerItem_entry;
+extern zend_object_handlers wxphp_wxGBSizerItem_object_handlers;
 void php_wxGBSizerItem_destruction_handler(zend_resource*);
 
 class wxGBSizerItem_php: public wxGBSizerItem{
@@ -176,6 +179,7 @@ static inline zo_wxGBSizerItem * php_wxGBSizerItem_fetch_object(zend_object *obj
 #define Z_wxGBSizerItem_P(zv) \
     php_wxGBSizerItem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGBSpan_entry;
+extern zend_object_handlers wxphp_wxGBSpan_object_handlers;
 void php_wxGBSpan_destruction_handler(zend_resource*);
 
 class wxGBSpan_php: public wxGBSpan{
@@ -223,6 +227,7 @@ static inline zo_wxGBSpan * php_wxGBSpan_fetch_object(zend_object *obj) {
 #define Z_wxGBSpan_P(zv) \
     php_wxGBSpan_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLayoutAlgorithm_entry;
+extern zend_object_handlers wxphp_wxLayoutAlgorithm_object_handlers;
 void php_wxLayoutAlgorithm_destruction_handler(zend_resource*);
 
 class wxLayoutAlgorithm_php: public wxLayoutAlgorithm{
@@ -268,6 +273,7 @@ static inline zo_wxLayoutAlgorithm * php_wxLayoutAlgorithm_fetch_object(zend_obj
 #define Z_wxLayoutAlgorithm_P(zv) \
     php_wxLayoutAlgorithm_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSizer_entry;
+extern zend_object_handlers wxphp_wxSizer_object_handlers;
 void php_wxSizer_destruction_handler(zend_resource*);
 
 class wxSizer_php: public wxSizer{
@@ -346,6 +352,7 @@ static inline zo_wxSizer * php_wxSizer_fetch_object(zend_object *obj) {
 #define Z_wxSizer_P(zv) \
     php_wxSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStdDialogButtonSizer_entry;
+extern zend_object_handlers wxphp_wxStdDialogButtonSizer_object_handlers;
 void php_wxStdDialogButtonSizer_destruction_handler(zend_resource*);
 
 class wxStdDialogButtonSizer_php: public wxStdDialogButtonSizer{
@@ -395,6 +402,7 @@ static inline zo_wxStdDialogButtonSizer * php_wxStdDialogButtonSizer_fetch_objec
 #define Z_wxStdDialogButtonSizer_P(zv) \
     php_wxStdDialogButtonSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSizerItem_entry;
+extern zend_object_handlers wxphp_wxSizerItem_object_handlers;
 void php_wxSizerItem_destruction_handler(zend_resource*);
 
 class wxSizerItem_php: public wxSizerItem{
@@ -474,6 +482,7 @@ static inline zo_wxSizerItem * php_wxSizerItem_fetch_object(zend_object *obj) {
 #define Z_wxSizerItem_P(zv) \
     php_wxSizerItem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSizerFlags_entry;
+extern zend_object_handlers wxphp_wxSizerFlags_object_handlers;
 void php_wxSizerFlags_destruction_handler(zend_resource*);
 
 class wxSizerFlags_php: public wxSizerFlags{
@@ -533,6 +542,7 @@ static inline zo_wxSizerFlags * php_wxSizerFlags_fetch_object(zend_object *obj) 
 #define Z_wxSizerFlags_P(zv) \
     php_wxSizerFlags_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFlexGridSizer_entry;
+extern zend_object_handlers wxphp_wxFlexGridSizer_object_handlers;
 void php_wxFlexGridSizer_destruction_handler(zend_resource*);
 
 class wxFlexGridSizer_php: public wxFlexGridSizer{
@@ -590,6 +600,7 @@ static inline zo_wxFlexGridSizer * php_wxFlexGridSizer_fetch_object(zend_object 
 #define Z_wxFlexGridSizer_P(zv) \
     php_wxFlexGridSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridSizer_entry;
+extern zend_object_handlers wxphp_wxGridSizer_object_handlers;
 void php_wxGridSizer_destruction_handler(zend_resource*);
 
 class wxGridSizer_php: public wxGridSizer{
@@ -647,6 +658,7 @@ static inline zo_wxGridSizer * php_wxGridSizer_fetch_object(zend_object *obj) {
 #define Z_wxGridSizer_P(zv) \
     php_wxGridSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStaticBoxSizer_entry;
+extern zend_object_handlers wxphp_wxStaticBoxSizer_object_handlers;
 void php_wxStaticBoxSizer_destruction_handler(zend_resource*);
 
 class wxStaticBoxSizer_php: public wxStaticBoxSizer{
@@ -693,6 +705,7 @@ static inline zo_wxStaticBoxSizer * php_wxStaticBoxSizer_fetch_object(zend_objec
 #define Z_wxStaticBoxSizer_P(zv) \
     php_wxStaticBoxSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBoxSizer_entry;
+extern zend_object_handlers wxphp_wxBoxSizer_object_handlers;
 void php_wxBoxSizer_destruction_handler(zend_resource*);
 
 class wxBoxSizer_php: public wxBoxSizer{
@@ -739,6 +752,7 @@ static inline zo_wxBoxSizer * php_wxBoxSizer_fetch_object(zend_object *obj) {
 #define Z_wxBoxSizer_P(zv) \
     php_wxBoxSizer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWrapSizer_entry;
+extern zend_object_handlers wxphp_wxWrapSizer_object_handlers;
 void php_wxWrapSizer_destruction_handler(zend_resource*);
 
 class wxWrapSizer_php: public wxWrapSizer{

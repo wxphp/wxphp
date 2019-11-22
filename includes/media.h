@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_media_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxMediaCtrl_entry;
+extern zend_object_handlers wxphp_wxMediaCtrl_object_handlers;
 void php_wxMediaCtrl_destruction_handler(zend_resource*);
 
 class wxMediaCtrl_php: public wxMediaCtrl{
@@ -80,6 +81,7 @@ static inline zo_wxMediaCtrl * php_wxMediaCtrl_fetch_object(zend_object *obj) {
 #define Z_wxMediaCtrl_P(zv) \
     php_wxMediaCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSound_entry;
+extern zend_object_handlers wxphp_wxSound_object_handlers;
 void php_wxSound_destruction_handler(zend_resource*);
 
 class wxSound_php: public wxSound{

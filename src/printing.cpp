@@ -123,7 +123,7 @@ zend_object* php_wxPrinterDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPrinterDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPRINTERDC_TYPE;
@@ -397,7 +397,7 @@ zend_object* php_wxPreviewControlBar_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPreviewControlBar_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPREVIEWCONTROLBAR_TYPE;
@@ -1003,7 +1003,7 @@ zend_object* php_wxPreviewCanvas_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPreviewCanvas_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPREVIEWCANVAS_TYPE;
@@ -1279,7 +1279,7 @@ zend_object* php_wxPreviewFrame_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPreviewFrame_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPREVIEWFRAME_TYPE;
@@ -1805,7 +1805,7 @@ zend_object* php_wxPrintPreview_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPrintPreview_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPRINTPREVIEW_TYPE;
@@ -3998,7 +3998,7 @@ zend_object* php_wxPrinter_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPrinter_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPRINTER_TYPE;
@@ -5143,7 +5143,7 @@ zend_object* php_wxPrintout_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPrintout_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPRINTOUT_TYPE;
@@ -8766,7 +8766,7 @@ zend_object* php_wxPrintDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPrintDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPRINTDIALOG_TYPE;
@@ -9555,7 +9555,7 @@ zend_object* php_wxPageSetupDialog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPageSetupDialog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPAGESETUPDIALOG_TYPE;

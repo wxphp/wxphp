@@ -123,7 +123,7 @@ zend_object* php_wxWebViewHistoryItem_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxWebViewHistoryItem_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXWEBVIEWHISTORYITEM_TYPE;
@@ -511,7 +511,7 @@ zend_object* php_wxWebViewHandler_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxWebViewHandler_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXWEBVIEWHANDLER_TYPE;
@@ -892,7 +892,7 @@ zend_object* php_wxWebViewArchiveHandler_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxWebViewArchiveHandler_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXWEBVIEWARCHIVEHANDLER_TYPE;

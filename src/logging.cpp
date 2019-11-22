@@ -123,7 +123,7 @@ zend_object* php_wxLog_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxLog_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXLOG_TYPE;
@@ -4051,7 +4051,7 @@ zend_object* php_wxLogChain_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxLogChain_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXLOGCHAIN_TYPE;
@@ -4866,7 +4866,7 @@ zend_object* php_wxLogInterposer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxLogInterposer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXLOGINTERPOSER_TYPE;
@@ -5030,7 +5030,7 @@ zend_object* php_wxLogBuffer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxLogBuffer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXLOGBUFFER_TYPE;
@@ -5410,7 +5410,7 @@ zend_object* php_wxLogWindow_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxLogWindow_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXLOGWINDOW_TYPE;
@@ -6071,7 +6071,7 @@ zend_object* php_wxLogGui_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxLogGui_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXLOGGUI_TYPE;
@@ -6429,7 +6429,7 @@ zend_object* php_wxLogTextCtrl_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxLogTextCtrl_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXLOGTEXTCTRL_TYPE;

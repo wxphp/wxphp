@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_grid_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxGridCellRenderer_entry;
+extern zend_object_handlers wxphp_wxGridCellRenderer_object_handlers;
 void php_wxGridCellRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellRenderer_php: public wxGridCellRenderer{
@@ -63,6 +64,7 @@ static inline zo_wxGridCellRenderer * php_wxGridCellRenderer_fetch_object(zend_o
 #define Z_wxGridCellRenderer_P(zv) \
     php_wxGridCellRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellAutoWrapStringRenderer_entry;
+extern zend_object_handlers wxphp_wxGridCellAutoWrapStringRenderer_object_handlers;
 void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellAutoWrapStringRenderer_php: public wxGridCellAutoWrapStringRenderer{
@@ -105,6 +107,7 @@ static inline zo_wxGridCellAutoWrapStringRenderer * php_wxGridCellAutoWrapString
 #define Z_wxGridCellAutoWrapStringRenderer_P(zv) \
     php_wxGridCellAutoWrapStringRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellBoolRenderer_entry;
+extern zend_object_handlers wxphp_wxGridCellBoolRenderer_object_handlers;
 void php_wxGridCellBoolRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellBoolRenderer_php: public wxGridCellBoolRenderer{
@@ -147,6 +150,7 @@ static inline zo_wxGridCellBoolRenderer * php_wxGridCellBoolRenderer_fetch_objec
 #define Z_wxGridCellBoolRenderer_P(zv) \
     php_wxGridCellBoolRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellDateTimeRenderer_entry;
+extern zend_object_handlers wxphp_wxGridCellDateTimeRenderer_object_handlers;
 void php_wxGridCellDateTimeRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellDateTimeRenderer_php: public wxGridCellDateTimeRenderer{
@@ -190,6 +194,7 @@ static inline zo_wxGridCellDateTimeRenderer * php_wxGridCellDateTimeRenderer_fet
 #define Z_wxGridCellDateTimeRenderer_P(zv) \
     php_wxGridCellDateTimeRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellEnumRenderer_entry;
+extern zend_object_handlers wxphp_wxGridCellEnumRenderer_object_handlers;
 void php_wxGridCellEnumRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellEnumRenderer_php: public wxGridCellEnumRenderer{
@@ -233,6 +238,7 @@ static inline zo_wxGridCellEnumRenderer * php_wxGridCellEnumRenderer_fetch_objec
 #define Z_wxGridCellEnumRenderer_P(zv) \
     php_wxGridCellEnumRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellFloatRenderer_entry;
+extern zend_object_handlers wxphp_wxGridCellFloatRenderer_object_handlers;
 void php_wxGridCellFloatRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellFloatRenderer_php: public wxGridCellFloatRenderer{
@@ -282,6 +288,7 @@ static inline zo_wxGridCellFloatRenderer * php_wxGridCellFloatRenderer_fetch_obj
 #define Z_wxGridCellFloatRenderer_P(zv) \
     php_wxGridCellFloatRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellNumberRenderer_entry;
+extern zend_object_handlers wxphp_wxGridCellNumberRenderer_object_handlers;
 void php_wxGridCellNumberRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellNumberRenderer_php: public wxGridCellNumberRenderer{
@@ -324,6 +331,7 @@ static inline zo_wxGridCellNumberRenderer * php_wxGridCellNumberRenderer_fetch_o
 #define Z_wxGridCellNumberRenderer_P(zv) \
     php_wxGridCellNumberRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellStringRenderer_entry;
+extern zend_object_handlers wxphp_wxGridCellStringRenderer_object_handlers;
 void php_wxGridCellStringRenderer_destruction_handler(zend_resource*);
 
 class wxGridCellStringRenderer_php: public wxGridCellStringRenderer{
@@ -366,6 +374,7 @@ static inline zo_wxGridCellStringRenderer * php_wxGridCellStringRenderer_fetch_o
 #define Z_wxGridCellStringRenderer_P(zv) \
     php_wxGridCellStringRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellEditor_entry;
+extern zend_object_handlers wxphp_wxGridCellEditor_object_handlers;
 void php_wxGridCellEditor_destruction_handler(zend_resource*);
 
 class wxGridCellEditor_php: public wxGridCellEditor{
@@ -420,6 +429,7 @@ static inline zo_wxGridCellEditor * php_wxGridCellEditor_fetch_object(zend_objec
 #define Z_wxGridCellEditor_P(zv) \
     php_wxGridCellEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellAutoWrapStringEditor_entry;
+extern zend_object_handlers wxphp_wxGridCellAutoWrapStringEditor_object_handlers;
 void php_wxGridCellAutoWrapStringEditor_destruction_handler(zend_resource*);
 
 class wxGridCellAutoWrapStringEditor_php: public wxGridCellAutoWrapStringEditor{
@@ -462,6 +472,7 @@ static inline zo_wxGridCellAutoWrapStringEditor * php_wxGridCellAutoWrapStringEd
 #define Z_wxGridCellAutoWrapStringEditor_P(zv) \
     php_wxGridCellAutoWrapStringEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellBoolEditor_entry;
+extern zend_object_handlers wxphp_wxGridCellBoolEditor_object_handlers;
 void php_wxGridCellBoolEditor_destruction_handler(zend_resource*);
 
 class wxGridCellBoolEditor_php: public wxGridCellBoolEditor{
@@ -506,6 +517,7 @@ static inline zo_wxGridCellBoolEditor * php_wxGridCellBoolEditor_fetch_object(ze
 #define Z_wxGridCellBoolEditor_P(zv) \
     php_wxGridCellBoolEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellChoiceEditor_entry;
+extern zend_object_handlers wxphp_wxGridCellChoiceEditor_object_handlers;
 void php_wxGridCellChoiceEditor_destruction_handler(zend_resource*);
 
 class wxGridCellChoiceEditor_php: public wxGridCellChoiceEditor{
@@ -549,6 +561,7 @@ static inline zo_wxGridCellChoiceEditor * php_wxGridCellChoiceEditor_fetch_objec
 #define Z_wxGridCellChoiceEditor_P(zv) \
     php_wxGridCellChoiceEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellEnumEditor_entry;
+extern zend_object_handlers wxphp_wxGridCellEnumEditor_object_handlers;
 void php_wxGridCellEnumEditor_destruction_handler(zend_resource*);
 
 class wxGridCellEnumEditor_php: public wxGridCellEnumEditor{
@@ -591,6 +604,7 @@ static inline zo_wxGridCellEnumEditor * php_wxGridCellEnumEditor_fetch_object(ze
 #define Z_wxGridCellEnumEditor_P(zv) \
     php_wxGridCellEnumEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellTextEditor_entry;
+extern zend_object_handlers wxphp_wxGridCellTextEditor_object_handlers;
 void php_wxGridCellTextEditor_destruction_handler(zend_resource*);
 
 class wxGridCellTextEditor_php: public wxGridCellTextEditor{
@@ -634,6 +648,7 @@ static inline zo_wxGridCellTextEditor * php_wxGridCellTextEditor_fetch_object(ze
 #define Z_wxGridCellTextEditor_P(zv) \
     php_wxGridCellTextEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellFloatEditor_entry;
+extern zend_object_handlers wxphp_wxGridCellFloatEditor_object_handlers;
 void php_wxGridCellFloatEditor_destruction_handler(zend_resource*);
 
 class wxGridCellFloatEditor_php: public wxGridCellFloatEditor{
@@ -677,6 +692,7 @@ static inline zo_wxGridCellFloatEditor * php_wxGridCellFloatEditor_fetch_object(
 #define Z_wxGridCellFloatEditor_P(zv) \
     php_wxGridCellFloatEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellNumberEditor_entry;
+extern zend_object_handlers wxphp_wxGridCellNumberEditor_object_handlers;
 void php_wxGridCellNumberEditor_destruction_handler(zend_resource*);
 
 class wxGridCellNumberEditor_php: public wxGridCellNumberEditor{
@@ -720,6 +736,7 @@ static inline zo_wxGridCellNumberEditor * php_wxGridCellNumberEditor_fetch_objec
 #define Z_wxGridCellNumberEditor_P(zv) \
     php_wxGridCellNumberEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellAttr_entry;
+extern zend_object_handlers wxphp_wxGridCellAttr_object_handlers;
 void php_wxGridCellAttr_destruction_handler(zend_resource*);
 
 class wxGridCellAttr_php: public wxGridCellAttr{
@@ -788,6 +805,7 @@ static inline zo_wxGridCellAttr * php_wxGridCellAttr_fetch_object(zend_object *o
 #define Z_wxGridCellAttr_P(zv) \
     php_wxGridCellAttr_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridTableBase_entry;
+extern zend_object_handlers wxphp_wxGridTableBase_object_handlers;
 void php_wxGridTableBase_destruction_handler(zend_resource*);
 
 class wxGridTableBase_php: public wxGridTableBase{
@@ -869,6 +887,7 @@ static inline zo_wxGridTableBase * php_wxGridTableBase_fetch_object(zend_object 
 #define Z_wxGridTableBase_P(zv) \
     php_wxGridTableBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridSizesInfo_entry;
+extern zend_object_handlers wxphp_wxGridSizesInfo_object_handlers;
 void php_wxGridSizesInfo_destruction_handler(zend_resource*);
 
 class wxGridSizesInfo_php: public wxGridSizesInfo{
@@ -926,6 +945,7 @@ static inline zo_wxGridSizesInfo * php_wxGridSizesInfo_fetch_object(zend_object 
 #define Z_wxGridSizesInfo_P(zv) \
     php_wxGridSizesInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGrid_entry;
+extern zend_object_handlers wxphp_wxGrid_object_handlers;
 void php_wxGrid_destruction_handler(zend_resource*);
 
 class wxGrid_php: public wxGrid{
@@ -1179,6 +1199,7 @@ static inline zo_wxGrid * php_wxGrid_fetch_object(zend_object *obj) {
 #define Z_wxGrid_P(zv) \
     php_wxGrid_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridUpdateLocker_entry;
+extern zend_object_handlers wxphp_wxGridUpdateLocker_object_handlers;
 void php_wxGridUpdateLocker_destruction_handler(zend_resource*);
 
 class wxGridUpdateLocker_php: public wxGridUpdateLocker{

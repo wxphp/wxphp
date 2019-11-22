@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_html_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxHtmlRenderingStyle_entry;
+extern zend_object_handlers wxphp_wxHtmlRenderingStyle_object_handlers;
 void php_wxHtmlRenderingStyle_destruction_handler(zend_resource*);
 
 class wxHtmlRenderingStyle_php: public wxHtmlRenderingStyle{
@@ -62,6 +63,7 @@ static inline zo_wxHtmlRenderingStyle * php_wxHtmlRenderingStyle_fetch_object(ze
 #define Z_wxHtmlRenderingStyle_P(zv) \
     php_wxHtmlRenderingStyle_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlRenderingInfo_entry;
+extern zend_object_handlers wxphp_wxHtmlRenderingInfo_object_handlers;
 void php_wxHtmlRenderingInfo_destruction_handler(zend_resource*);
 
 class wxHtmlRenderingInfo_php: public wxHtmlRenderingInfo{
@@ -106,6 +108,7 @@ static inline zo_wxHtmlRenderingInfo * php_wxHtmlRenderingInfo_fetch_object(zend
 #define Z_wxHtmlRenderingInfo_P(zv) \
     php_wxHtmlRenderingInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlCell_entry;
+extern zend_object_handlers wxphp_wxHtmlCell_object_handlers;
 void php_wxHtmlCell_destruction_handler(zend_resource*);
 
 class wxHtmlCell_php: public wxHtmlCell{
@@ -165,6 +168,7 @@ static inline zo_wxHtmlCell * php_wxHtmlCell_fetch_object(zend_object *obj) {
 #define Z_wxHtmlCell_P(zv) \
     php_wxHtmlCell_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlContainerCell_entry;
+extern zend_object_handlers wxphp_wxHtmlContainerCell_object_handlers;
 void php_wxHtmlContainerCell_destruction_handler(zend_resource*);
 
 class wxHtmlContainerCell_php: public wxHtmlContainerCell{
@@ -221,6 +225,7 @@ static inline zo_wxHtmlContainerCell * php_wxHtmlContainerCell_fetch_object(zend
 #define Z_wxHtmlContainerCell_P(zv) \
     php_wxHtmlContainerCell_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlLinkInfo_entry;
+extern zend_object_handlers wxphp_wxHtmlLinkInfo_object_handlers;
 void php_wxHtmlLinkInfo_destruction_handler(zend_resource*);
 
 class wxHtmlLinkInfo_php: public wxHtmlLinkInfo{
@@ -268,6 +273,7 @@ static inline zo_wxHtmlLinkInfo * php_wxHtmlLinkInfo_fetch_object(zend_object *o
 #define Z_wxHtmlLinkInfo_P(zv) \
     php_wxHtmlLinkInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlColourCell_entry;
+extern zend_object_handlers wxphp_wxHtmlColourCell_object_handlers;
 void php_wxHtmlColourCell_destruction_handler(zend_resource*);
 
 class wxHtmlColourCell_php: public wxHtmlColourCell{
@@ -310,6 +316,7 @@ static inline zo_wxHtmlColourCell * php_wxHtmlColourCell_fetch_object(zend_objec
 #define Z_wxHtmlColourCell_P(zv) \
     php_wxHtmlColourCell_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlWidgetCell_entry;
+extern zend_object_handlers wxphp_wxHtmlWidgetCell_object_handlers;
 void php_wxHtmlWidgetCell_destruction_handler(zend_resource*);
 
 class wxHtmlWidgetCell_php: public wxHtmlWidgetCell{
@@ -352,6 +359,7 @@ static inline zo_wxHtmlWidgetCell * php_wxHtmlWidgetCell_fetch_object(zend_objec
 #define Z_wxHtmlWidgetCell_P(zv) \
     php_wxHtmlWidgetCell_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlFilter_entry;
+extern zend_object_handlers wxphp_wxHtmlFilter_object_handlers;
 void php_wxHtmlFilter_destruction_handler(zend_resource*);
 
 class wxHtmlFilter_php: public wxHtmlFilter{
@@ -396,6 +404,7 @@ static inline zo_wxHtmlFilter * php_wxHtmlFilter_fetch_object(zend_object *obj) 
 #define Z_wxHtmlFilter_P(zv) \
     php_wxHtmlFilter_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlTagHandler_entry;
+extern zend_object_handlers wxphp_wxHtmlTagHandler_object_handlers;
 void php_wxHtmlTagHandler_destruction_handler(zend_resource*);
 
 class wxHtmlTagHandler_php: public wxHtmlTagHandler{
@@ -453,6 +462,7 @@ static inline zo_wxHtmlTagHandler * php_wxHtmlTagHandler_fetch_object(zend_objec
 #define Z_wxHtmlTagHandler_P(zv) \
     php_wxHtmlTagHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlTag_entry;
+extern zend_object_handlers wxphp_wxHtmlTag_object_handlers;
 void php_wxHtmlTag_destruction_handler(zend_resource*);
 
 class wxHtmlTag_php: public wxHtmlTag{
@@ -502,6 +512,7 @@ static inline zo_wxHtmlTag * php_wxHtmlTag_fetch_object(zend_object *obj) {
 #define Z_wxHtmlTag_P(zv) \
     php_wxHtmlTag_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlWindow_entry;
+extern zend_object_handlers wxphp_wxHtmlWindow_object_handlers;
 void php_wxHtmlWindow_destruction_handler(zend_resource*);
 
 class wxHtmlWindow_php: public wxHtmlWindow{
@@ -576,6 +587,7 @@ static inline zo_wxHtmlWindow * php_wxHtmlWindow_fetch_object(zend_object *obj) 
 #define Z_wxHtmlWindow_P(zv) \
     php_wxHtmlWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlLinkEvent_entry;
+extern zend_object_handlers wxphp_wxHtmlLinkEvent_object_handlers;
 void php_wxHtmlLinkEvent_destruction_handler(zend_resource*);
 
 class wxHtmlLinkEvent_php: public wxHtmlLinkEvent{
@@ -619,6 +631,7 @@ static inline zo_wxHtmlLinkEvent * php_wxHtmlLinkEvent_fetch_object(zend_object 
 #define Z_wxHtmlLinkEvent_P(zv) \
     php_wxHtmlLinkEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlCellEvent_entry;
+extern zend_object_handlers wxphp_wxHtmlCellEvent_object_handlers;
 void php_wxHtmlCellEvent_destruction_handler(zend_resource*);
 
 class wxHtmlCellEvent_php: public wxHtmlCellEvent{
@@ -665,6 +678,7 @@ static inline zo_wxHtmlCellEvent * php_wxHtmlCellEvent_fetch_object(zend_object 
 #define Z_wxHtmlCellEvent_P(zv) \
     php_wxHtmlCellEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlDCRenderer_entry;
+extern zend_object_handlers wxphp_wxHtmlDCRenderer_object_handlers;
 void php_wxHtmlDCRenderer_destruction_handler(zend_resource*);
 
 class wxHtmlDCRenderer_php: public wxHtmlDCRenderer{
@@ -714,6 +728,7 @@ static inline zo_wxHtmlDCRenderer * php_wxHtmlDCRenderer_fetch_object(zend_objec
 #define Z_wxHtmlDCRenderer_P(zv) \
     php_wxHtmlDCRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlEasyPrinting_entry;
+extern zend_object_handlers wxphp_wxHtmlEasyPrinting_object_handlers;
 void php_wxHtmlEasyPrinting_destruction_handler(zend_resource*);
 
 class wxHtmlEasyPrinting_php: public wxHtmlEasyPrinting{
@@ -771,6 +786,7 @@ static inline zo_wxHtmlEasyPrinting * php_wxHtmlEasyPrinting_fetch_object(zend_o
 #define Z_wxHtmlEasyPrinting_P(zv) \
     php_wxHtmlEasyPrinting_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlPrintout_entry;
+extern zend_object_handlers wxphp_wxHtmlPrintout_object_handlers;
 void php_wxHtmlPrintout_destruction_handler(zend_resource*);
 
 class wxHtmlPrintout_php: public wxHtmlPrintout{
@@ -820,6 +836,7 @@ static inline zo_wxHtmlPrintout * php_wxHtmlPrintout_fetch_object(zend_object *o
 #define Z_wxHtmlPrintout_P(zv) \
     php_wxHtmlPrintout_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlTagsModule_entry;
+extern zend_object_handlers wxphp_wxHtmlTagsModule_object_handlers;
 void php_wxHtmlTagsModule_destruction_handler(zend_resource*);
 
 class wxHtmlTagsModule_php: public wxHtmlTagsModule{
@@ -861,6 +878,7 @@ static inline zo_wxHtmlTagsModule * php_wxHtmlTagsModule_fetch_object(zend_objec
 #define Z_wxHtmlTagsModule_P(zv) \
     php_wxHtmlTagsModule_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlWinTagHandler_entry;
+extern zend_object_handlers wxphp_wxHtmlWinTagHandler_object_handlers;
 void php_wxHtmlWinTagHandler_destruction_handler(zend_resource*);
 
 class wxHtmlWinTagHandler_php: public wxHtmlWinTagHandler{
@@ -913,6 +931,7 @@ static inline zo_wxHtmlWinTagHandler * php_wxHtmlWinTagHandler_fetch_object(zend
 #define Z_wxHtmlWinTagHandler_P(zv) \
     php_wxHtmlWinTagHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHtmlWinParser_entry;
+extern zend_object_handlers wxphp_wxHtmlWinParser_object_handlers;
 void php_wxHtmlWinParser_destruction_handler(zend_resource*);
 
 class wxHtmlWinParser_php: public wxHtmlWinParser{

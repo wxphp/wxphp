@@ -123,7 +123,7 @@ zend_object* php_wxGenericValidator_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGenericValidator_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGENERICVALIDATOR_TYPE;
@@ -916,7 +916,7 @@ zend_object* php_wxValidator_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxValidator_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXVALIDATOR_TYPE;
@@ -1998,7 +1998,7 @@ zend_object* php_wxTextValidator_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxTextValidator_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTEXTVALIDATOR_TYPE;

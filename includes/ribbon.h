@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_ribbon_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxRibbonArtProvider_entry;
+extern zend_object_handlers wxphp_wxRibbonArtProvider_object_handlers;
 void php_wxRibbonArtProvider_destruction_handler(zend_resource*);
 
 class wxRibbonArtProvider_php: public wxRibbonArtProvider{
@@ -95,6 +96,7 @@ static inline zo_wxRibbonArtProvider * php_wxRibbonArtProvider_fetch_object(zend
 #define Z_wxRibbonArtProvider_P(zv) \
     php_wxRibbonArtProvider_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonBar_entry;
+extern zend_object_handlers wxphp_wxRibbonBar_object_handlers;
 void php_wxRibbonBar_destruction_handler(zend_resource*);
 
 class wxRibbonBar_php: public wxRibbonBar{
@@ -149,6 +151,7 @@ static inline zo_wxRibbonBar * php_wxRibbonBar_fetch_object(zend_object *obj) {
 #define Z_wxRibbonBar_P(zv) \
     php_wxRibbonBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonButtonBar_entry;
+extern zend_object_handlers wxphp_wxRibbonButtonBar_object_handlers;
 void php_wxRibbonButtonBar_destruction_handler(zend_resource*);
 
 class wxRibbonButtonBar_php: public wxRibbonButtonBar{
@@ -202,6 +205,7 @@ static inline zo_wxRibbonButtonBar * php_wxRibbonButtonBar_fetch_object(zend_obj
 #define Z_wxRibbonButtonBar_P(zv) \
     php_wxRibbonButtonBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonControl_entry;
+extern zend_object_handlers wxphp_wxRibbonControl_object_handlers;
 void php_wxRibbonControl_destruction_handler(zend_resource*);
 
 class wxRibbonControl_php: public wxRibbonControl{
@@ -254,6 +258,7 @@ static inline zo_wxRibbonControl * php_wxRibbonControl_fetch_object(zend_object 
 #define Z_wxRibbonControl_P(zv) \
     php_wxRibbonControl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonGallery_entry;
+extern zend_object_handlers wxphp_wxRibbonGallery_object_handlers;
 void php_wxRibbonGallery_destruction_handler(zend_resource*);
 
 class wxRibbonGallery_php: public wxRibbonGallery{
@@ -318,6 +323,7 @@ static inline zo_wxRibbonGallery * php_wxRibbonGallery_fetch_object(zend_object 
 #define Z_wxRibbonGallery_P(zv) \
     php_wxRibbonGallery_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonPage_entry;
+extern zend_object_handlers wxphp_wxRibbonPage_object_handlers;
 void php_wxRibbonPage_destruction_handler(zend_resource*);
 
 class wxRibbonPage_php: public wxRibbonPage{
@@ -371,6 +377,7 @@ static inline zo_wxRibbonPage * php_wxRibbonPage_fetch_object(zend_object *obj) 
 #define Z_wxRibbonPage_P(zv) \
     php_wxRibbonPage_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonPanel_entry;
+extern zend_object_handlers wxphp_wxRibbonPanel_object_handlers;
 void php_wxRibbonPanel_destruction_handler(zend_resource*);
 
 class wxRibbonPanel_php: public wxRibbonPanel{
@@ -425,6 +432,7 @@ static inline zo_wxRibbonPanel * php_wxRibbonPanel_fetch_object(zend_object *obj
 #define Z_wxRibbonPanel_P(zv) \
     php_wxRibbonPanel_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRibbonToolBar_entry;
+extern zend_object_handlers wxphp_wxRibbonToolBar_object_handlers;
 void php_wxRibbonToolBar_destruction_handler(zend_resource*);
 
 class wxRibbonToolBar_php: public wxRibbonToolBar{

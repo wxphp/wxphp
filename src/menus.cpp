@@ -94,7 +94,7 @@ zend_object* php_wxMenuBar_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMenuBar_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMENUBAR_TYPE;
@@ -3262,7 +3262,7 @@ zend_object* php_wxMenu_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMenu_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMENU_TYPE;
@@ -9768,7 +9768,7 @@ zend_object* php_wxMenuItem_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMenuItem_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMENUITEM_TYPE;

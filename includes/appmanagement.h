@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_appmanagement_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxEventLoopBase_entry;
+extern zend_object_handlers wxphp_wxEventLoopBase_object_handlers;
 void php_wxEventLoopBase_destruction_handler(zend_resource*);
 
 class wxEventLoopBase_php: public wxEventLoopBase{
@@ -78,6 +79,7 @@ static inline zo_wxEventLoopBase * php_wxEventLoopBase_fetch_object(zend_object 
 #define Z_wxEventLoopBase_P(zv) \
     php_wxEventLoopBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxEventLoopActivator_entry;
+extern zend_object_handlers wxphp_wxEventLoopActivator_object_handlers;
 void php_wxEventLoopActivator_destruction_handler(zend_resource*);
 
 class wxEventLoopActivator_php: public wxEventLoopActivator{
@@ -120,6 +122,7 @@ static inline zo_wxEventLoopActivator * php_wxEventLoopActivator_fetch_object(ze
 #define Z_wxEventLoopActivator_P(zv) \
     php_wxEventLoopActivator_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxModule_entry;
+extern zend_object_handlers wxphp_wxModule_object_handlers;
 void php_wxModule_destruction_handler(zend_resource*);
 
 class wxModule_php: public wxModule{
@@ -164,6 +167,7 @@ static inline zo_wxModule * php_wxModule_fetch_object(zend_object *obj) {
 #define Z_wxModule_P(zv) \
     php_wxModule_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxProcess_entry;
+extern zend_object_handlers wxphp_wxProcess_object_handlers;
 void php_wxProcess_destruction_handler(zend_resource*);
 
 class wxProcess_php: public wxProcess{
@@ -221,6 +225,7 @@ static inline zo_wxProcess * php_wxProcess_fetch_object(zend_object *obj) {
 #define Z_wxProcess_P(zv) \
     php_wxProcess_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSingleInstanceChecker_entry;
+extern zend_object_handlers wxphp_wxSingleInstanceChecker_object_handlers;
 void php_wxSingleInstanceChecker_destruction_handler(zend_resource*);
 
 class wxSingleInstanceChecker_php: public wxSingleInstanceChecker{

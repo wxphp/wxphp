@@ -123,7 +123,7 @@ zend_object* php_wxDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDC_TYPE;
@@ -23516,7 +23516,7 @@ zend_object* php_wxBufferedDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxBufferedDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXBUFFEREDDC_TYPE;
@@ -24157,7 +24157,7 @@ zend_object* php_wxAutoBufferedPaintDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAutoBufferedPaintDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUTOBUFFEREDPAINTDC_TYPE;
@@ -24345,7 +24345,7 @@ zend_object* php_wxBufferedPaintDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxBufferedPaintDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXBUFFEREDPAINTDC_TYPE;
@@ -24638,7 +24638,7 @@ zend_object* php_wxPaintDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPaintDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPAINTDC_TYPE;
@@ -24826,7 +24826,7 @@ zend_object* php_wxClientDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxClientDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCLIENTDC_TYPE;
@@ -25014,7 +25014,7 @@ zend_object* php_wxWindowDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxWindowDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXWINDOWDC_TYPE;
@@ -25202,7 +25202,7 @@ zend_object* php_wxMemoryDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMemoryDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMEMORYDC_TYPE;
@@ -25768,7 +25768,7 @@ zend_object* php_wxMirrorDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxMirrorDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMIRRORDC_TYPE;
@@ -25957,7 +25957,7 @@ zend_object* php_wxPostScriptDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPostScriptDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPOSTSCRIPTDC_TYPE;
@@ -26178,7 +26178,7 @@ zend_object* php_wxScreenDC_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxScreenDC_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSCREENDC_TYPE;

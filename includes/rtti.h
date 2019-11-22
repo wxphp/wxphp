@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_rtti_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxRefCounter_entry;
+extern zend_object_handlers wxphp_wxRefCounter_object_handlers;
 void php_wxRefCounter_destruction_handler(zend_resource*);
 
 class wxRefCounter_php: public wxRefCounter{
@@ -65,6 +66,7 @@ static inline zo_wxRefCounter * php_wxRefCounter_fetch_object(zend_object *obj) 
 #define Z_wxRefCounter_P(zv) \
     php_wxRefCounter_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxObject_entry;
+extern zend_object_handlers wxphp_wxObject_object_handlers;
 void php_wxObject_destruction_handler(zend_resource*);
 
 class wxObject_php: public wxObject{
@@ -127,6 +129,7 @@ static inline zo_wxObject * php_wxObject_fetch_object(zend_object *obj) {
 #define Z_wxObject_P(zv) \
     php_wxObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxClassInfo_entry;
+extern zend_object_handlers wxphp_wxClassInfo_object_handlers;
 void php_wxClassInfo_destruction_handler(zend_resource*);
 
 class wxClassInfo_php: public wxClassInfo{

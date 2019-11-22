@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_data_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxAcceleratorEntry_entry;
+extern zend_object_handlers wxphp_wxAcceleratorEntry_object_handlers;
 void php_wxAcceleratorEntry_destruction_handler(zend_resource*);
 
 class wxAcceleratorEntry_php: public wxAcceleratorEntry{
@@ -71,6 +72,7 @@ static inline zo_wxAcceleratorEntry * php_wxAcceleratorEntry_fetch_object(zend_o
 #define Z_wxAcceleratorEntry_P(zv) \
     php_wxAcceleratorEntry_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAcceleratorTable_entry;
+extern zend_object_handlers wxphp_wxAcceleratorTable_object_handlers;
 void php_wxAcceleratorTable_destruction_handler(zend_resource*);
 
 class wxAcceleratorTable_php: public wxAcceleratorTable{
@@ -114,6 +116,7 @@ static inline zo_wxAcceleratorTable * php_wxAcceleratorTable_fetch_object(zend_o
 #define Z_wxAcceleratorTable_P(zv) \
     php_wxAcceleratorTable_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCalendarDateAttr_entry;
+extern zend_object_handlers wxphp_wxCalendarDateAttr_object_handlers;
 void php_wxCalendarDateAttr_destruction_handler(zend_resource*);
 
 class wxCalendarDateAttr_php: public wxCalendarDateAttr{
@@ -176,6 +179,7 @@ static inline zo_wxCalendarDateAttr * php_wxCalendarDateAttr_fetch_object(zend_o
 #define Z_wxCalendarDateAttr_P(zv) \
     php_wxCalendarDateAttr_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPageSetupDialogData_entry;
+extern zend_object_handlers wxphp_wxPageSetupDialogData_object_handlers;
 void php_wxPageSetupDialogData_destruction_handler(zend_resource*);
 
 class wxPageSetupDialogData_php: public wxPageSetupDialogData{
@@ -248,6 +252,7 @@ static inline zo_wxPageSetupDialogData * php_wxPageSetupDialogData_fetch_object(
 #define Z_wxPageSetupDialogData_P(zv) \
     php_wxPageSetupDialogData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPrintData_entry;
+extern zend_object_handlers wxphp_wxPrintData_object_handlers;
 void php_wxPrintData_destruction_handler(zend_resource*);
 
 class wxPrintData_php: public wxPrintData{
@@ -313,6 +318,7 @@ static inline zo_wxPrintData * php_wxPrintData_fetch_object(zend_object *obj) {
 #define Z_wxPrintData_P(zv) \
     php_wxPrintData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRealPoint_entry;
+extern zend_object_handlers wxphp_wxRealPoint_object_handlers;
 void php_wxRealPoint_destruction_handler(zend_resource*);
 
 class wxRealPoint_php: public wxRealPoint{
@@ -371,6 +377,7 @@ static inline zo_wxRealPoint * php_wxRealPoint_fetch_object(zend_object *obj) {
 #define Z_wxRealPoint_P(zv) \
     php_wxRealPoint_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRect_entry;
+extern zend_object_handlers wxphp_wxRect_object_handlers;
 void php_wxRect_destruction_handler(zend_resource*);
 
 class wxRect_php: public wxRect{
@@ -462,6 +469,7 @@ static inline zo_wxRect * php_wxRect_fetch_object(zend_object *obj) {
 #define Z_wxRect_P(zv) \
     php_wxRect_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPoint_entry;
+extern zend_object_handlers wxphp_wxPoint_object_handlers;
 void php_wxPoint_destruction_handler(zend_resource*);
 
 class wxPoint_php: public wxPoint{
@@ -521,6 +529,7 @@ static inline zo_wxPoint * php_wxPoint_fetch_object(zend_object *obj) {
 #define Z_wxPoint_P(zv) \
     php_wxPoint_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSize_entry;
+extern zend_object_handlers wxphp_wxSize_object_handlers;
 void php_wxSize_destruction_handler(zend_resource*);
 
 class wxSize_php: public wxSize{
@@ -574,6 +583,7 @@ static inline zo_wxSize * php_wxSize_fetch_object(zend_object *obj) {
 #define Z_wxSize_P(zv) \
     php_wxSize_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxListItemAttr_entry;
+extern zend_object_handlers wxphp_wxListItemAttr_object_handlers;
 void php_wxListItemAttr_destruction_handler(zend_resource*);
 
 class wxListItemAttr_php: public wxListItemAttr{
@@ -626,6 +636,7 @@ static inline zo_wxListItemAttr * php_wxListItemAttr_fetch_object(zend_object *o
 #define Z_wxListItemAttr_P(zv) \
     php_wxListItemAttr_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxListItem_entry;
+extern zend_object_handlers wxphp_wxListItem_object_handlers;
 void php_wxListItem_destruction_handler(zend_resource*);
 
 class wxListItem_php: public wxListItem{
@@ -693,6 +704,7 @@ static inline zo_wxListItem * php_wxListItem_fetch_object(zend_object *obj) {
 #define Z_wxListItem_P(zv) \
     php_wxListItem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileType_entry;
+extern zend_object_handlers wxphp_wxFileType_object_handlers;
 void php_wxFileType_destruction_handler(zend_resource*);
 
 class wxFileType_php: public wxFileType{
@@ -740,6 +752,7 @@ static inline zo_wxFileType * php_wxFileType_fetch_object(zend_object *obj) {
 #define Z_wxFileType_P(zv) \
     php_wxFileType_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPosition_entry;
+extern zend_object_handlers wxphp_wxPosition_object_handlers;
 void php_wxPosition_destruction_handler(zend_resource*);
 
 class wxPosition_php: public wxPosition{
@@ -789,6 +802,7 @@ static inline zo_wxPosition * php_wxPosition_fetch_object(zend_object *obj) {
 #define Z_wxPosition_P(zv) \
     php_wxPosition_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRegion_entry;
+extern zend_object_handlers wxphp_wxRegion_object_handlers;
 void php_wxRegion_destruction_handler(zend_resource*);
 
 class wxRegion_php: public wxRegion{
@@ -849,6 +863,7 @@ static inline zo_wxRegion * php_wxRegion_fetch_object(zend_object *obj) {
 #define Z_wxRegion_P(zv) \
     php_wxRegion_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStatusBarPane_entry;
+extern zend_object_handlers wxphp_wxStatusBarPane_object_handlers;
 void php_wxStatusBarPane_destruction_handler(zend_resource*);
 
 class wxStatusBarPane_php: public wxStatusBarPane{
@@ -894,6 +909,7 @@ static inline zo_wxStatusBarPane * php_wxStatusBarPane_fetch_object(zend_object 
 #define Z_wxStatusBarPane_P(zv) \
     php_wxStatusBarPane_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTreeItemId_entry;
+extern zend_object_handlers wxphp_wxTreeItemId_object_handlers;
 void php_wxTreeItemId_destruction_handler(zend_resource*);
 
 class wxTreeItemId_php: public wxTreeItemId{
@@ -937,6 +953,7 @@ static inline zo_wxTreeItemId * php_wxTreeItemId_fetch_object(zend_object *obj) 
 #define Z_wxTreeItemId_P(zv) \
     php_wxTreeItemId_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxVariant_entry;
+extern zend_object_handlers wxphp_wxVariant_object_handlers;
 void php_wxVariant_destruction_handler(zend_resource*);
 
 class wxVariant_php: public wxVariant{
@@ -1013,6 +1030,7 @@ static inline zo_wxVariant * php_wxVariant_fetch_object(zend_object *obj) {
 #define Z_wxVariant_P(zv) \
     php_wxVariant_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxVariantData_entry;
+extern zend_object_handlers wxphp_wxVariantData_object_handlers;
 void php_wxVariantData_destruction_handler(zend_resource*);
 
 class wxVariantData_php: public wxVariantData{
@@ -1063,6 +1081,7 @@ static inline zo_wxVariantData * php_wxVariantData_fetch_object(zend_object *obj
 #define Z_wxVariantData_P(zv) \
     php_wxVariantData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxVersionInfo_entry;
+extern zend_object_handlers wxphp_wxVersionInfo_object_handlers;
 void php_wxVersionInfo_destruction_handler(zend_resource*);
 
 class wxVersionInfo_php: public wxVersionInfo{

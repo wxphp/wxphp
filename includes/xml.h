@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_xml_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxXmlNode_entry;
+extern zend_object_handlers wxphp_wxXmlNode_object_handlers;
 void php_wxXmlNode_destruction_handler(zend_resource*);
 
 class wxXmlNode_php: public wxXmlNode{
@@ -92,6 +93,7 @@ static inline zo_wxXmlNode * php_wxXmlNode_fetch_object(zend_object *obj) {
 #define Z_wxXmlNode_P(zv) \
     php_wxXmlNode_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxXmlAttribute_entry;
+extern zend_object_handlers wxphp_wxXmlAttribute_object_handlers;
 void php_wxXmlAttribute_destruction_handler(zend_resource*);
 
 class wxXmlAttribute_php: public wxXmlAttribute{
@@ -141,6 +143,7 @@ static inline zo_wxXmlAttribute * php_wxXmlAttribute_fetch_object(zend_object *o
 #define Z_wxXmlAttribute_P(zv) \
     php_wxXmlAttribute_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxXmlDocument_entry;
+extern zend_object_handlers wxphp_wxXmlDocument_object_handlers;
 void php_wxXmlDocument_destruction_handler(zend_resource*);
 
 class wxXmlDocument_php: public wxXmlDocument{

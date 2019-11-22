@@ -1,4 +1,5 @@
 extern zend_class_entry* php_<?=$class_name?>_entry;
+extern zend_object_handlers wxphp_<?=$class_name?>_object_handlers;
 void php_<?=$class_name?>_destruction_handler(zend_resource*);
 
 class <?=$class_name?>_php<?if($class_name == "wxScrolled"){?>: public <?=$class_name?><wxPanel><?} elseif(!$class_methods["_forward_declaration"]){?>: public <?=$class_name?><?}?>

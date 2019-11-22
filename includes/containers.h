@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_containers_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxClientData_entry;
+extern zend_object_handlers wxphp_wxClientData_object_handlers;
 void php_wxClientData_destruction_handler(zend_resource*);
 
 class wxClientData_php: public wxClientData{
@@ -62,6 +63,7 @@ static inline zo_wxClientData * php_wxClientData_fetch_object(zend_object *obj) 
 #define Z_wxClientData_P(zv) \
     php_wxClientData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTreeItemData_entry;
+extern zend_object_handlers wxphp_wxTreeItemData_object_handlers;
 void php_wxTreeItemData_destruction_handler(zend_resource*);
 
 class wxTreeItemData_php: public wxTreeItemData{

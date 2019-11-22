@@ -123,7 +123,7 @@ zend_object* php_wxHtmlRenderingStyle_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlRenderingStyle_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLRENDERINGSTYLE_TYPE;
@@ -406,7 +406,7 @@ zend_object* php_wxHtmlRenderingInfo_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlRenderingInfo_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLRENDERINGINFO_TYPE;
@@ -828,7 +828,7 @@ zend_object* php_wxHtmlCell_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlCell_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLCELL_TYPE;
@@ -3304,7 +3304,7 @@ zend_object* php_wxHtmlContainerCell_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlContainerCell_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLCONTAINERCELL_TYPE;
@@ -5265,7 +5265,7 @@ zend_object* php_wxHtmlLinkInfo_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlLinkInfo_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLLINKINFO_TYPE;
@@ -5960,7 +5960,7 @@ zend_object* php_wxHtmlColourCell_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlColourCell_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLCOLOURCELL_TYPE;
@@ -6161,7 +6161,7 @@ zend_object* php_wxHtmlWidgetCell_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlWidgetCell_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLWIDGETCELL_TYPE;
@@ -6362,7 +6362,7 @@ zend_object* php_wxHtmlFilter_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlFilter_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLFILTER_TYPE;
@@ -6709,7 +6709,7 @@ zend_object* php_wxHtmlTagHandler_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlTagHandler_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLTAGHANDLER_TYPE;
@@ -7113,7 +7113,7 @@ zend_object* php_wxHtmlTag_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlTag_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLTAG_TYPE;
@@ -8272,7 +8272,7 @@ zend_object* php_wxHtmlWindow_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlWindow_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLWINDOW_TYPE;
@@ -12276,7 +12276,7 @@ zend_object* php_wxHtmlLinkEvent_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlLinkEvent_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLLINKEVENT_TYPE;
@@ -12592,7 +12592,7 @@ zend_object* php_wxHtmlCellEvent_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlCellEvent_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLCELLEVENT_TYPE;
@@ -13286,7 +13286,7 @@ zend_object* php_wxHtmlDCRenderer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlDCRenderer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLDCRENDERER_TYPE;
@@ -14368,7 +14368,7 @@ zend_object* php_wxHtmlEasyPrinting_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlEasyPrinting_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLEASYPRINTING_TYPE;
@@ -16468,7 +16468,7 @@ zend_object* php_wxHtmlPrintout_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlPrintout_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLPRINTOUT_TYPE;
@@ -17615,7 +17615,7 @@ zend_object* php_wxHtmlTagsModule_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlTagsModule_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLTAGSMODULE_TYPE;
@@ -17831,7 +17831,7 @@ zend_object* php_wxHtmlWinTagHandler_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlWinTagHandler_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLWINTAGHANDLER_TYPE;
@@ -17912,7 +17912,7 @@ zend_object* php_wxHtmlWinParser_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxHtmlWinParser_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXHTMLWINPARSER_TYPE;

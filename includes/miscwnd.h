@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_miscwnd_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxBannerWindow_entry;
+extern zend_object_handlers wxphp_wxBannerWindow_object_handlers;
 void php_wxBannerWindow_destruction_handler(zend_resource*);
 
 class wxBannerWindow_php: public wxBannerWindow{
@@ -68,6 +69,7 @@ static inline zo_wxBannerWindow * php_wxBannerWindow_fetch_object(zend_object *o
 #define Z_wxBannerWindow_P(zv) \
     php_wxBannerWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxInfoBar_entry;
+extern zend_object_handlers wxphp_wxInfoBar_object_handlers;
 void php_wxInfoBar_destruction_handler(zend_resource*);
 
 class wxInfoBar_php: public wxInfoBar{
@@ -122,6 +124,7 @@ static inline zo_wxInfoBar * php_wxInfoBar_fetch_object(zend_object *obj) {
 #define Z_wxInfoBar_P(zv) \
     php_wxInfoBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRichToolTip_entry;
+extern zend_object_handlers wxphp_wxRichToolTip_object_handlers;
 void php_wxRichToolTip_destruction_handler(zend_resource*);
 
 class wxRichToolTip_php: public wxRichToolTip{
@@ -169,6 +172,7 @@ static inline zo_wxRichToolTip * php_wxRichToolTip_fetch_object(zend_object *obj
 #define Z_wxRichToolTip_P(zv) \
     php_wxRichToolTip_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxScrolled_entry;
+extern zend_object_handlers wxphp_wxScrolled_object_handlers;
 void php_wxScrolled_destruction_handler(zend_resource*);
 
 class wxScrolled_php: public wxScrolled<wxPanel>{
@@ -242,6 +246,7 @@ static inline zo_wxScrolled * php_wxScrolled_fetch_object(zend_object *obj) {
 #define Z_wxScrolled_P(zv) \
     php_wxScrolled_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSashLayoutWindow_entry;
+extern zend_object_handlers wxphp_wxSashLayoutWindow_object_handlers;
 void php_wxSashLayoutWindow_destruction_handler(zend_resource*);
 
 class wxSashLayoutWindow_php: public wxSashLayoutWindow{
@@ -291,6 +296,7 @@ static inline zo_wxSashLayoutWindow * php_wxSashLayoutWindow_fetch_object(zend_o
 #define Z_wxSashLayoutWindow_P(zv) \
     php_wxSashLayoutWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPanel_entry;
+extern zend_object_handlers wxphp_wxPanel_object_handlers;
 void php_wxPanel_destruction_handler(zend_resource*);
 
 class wxPanel_php: public wxPanel{
@@ -340,6 +346,7 @@ static inline zo_wxPanel * php_wxPanel_fetch_object(zend_object *obj) {
 #define Z_wxPanel_P(zv) \
     php_wxPanel_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSashWindow_entry;
+extern zend_object_handlers wxphp_wxSashWindow_object_handlers;
 void php_wxSashWindow_destruction_handler(zend_resource*);
 
 class wxSashWindow_php: public wxSashWindow{
@@ -393,6 +400,7 @@ static inline zo_wxSashWindow * php_wxSashWindow_fetch_object(zend_object *obj) 
 #define Z_wxSashWindow_P(zv) \
     php_wxSashWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSplitterWindow_entry;
+extern zend_object_handlers wxphp_wxSplitterWindow_object_handlers;
 void php_wxSplitterWindow_destruction_handler(zend_resource*);
 
 class wxSplitterWindow_php: public wxSplitterWindow{
@@ -458,6 +466,7 @@ static inline zo_wxSplitterWindow * php_wxSplitterWindow_fetch_object(zend_objec
 #define Z_wxSplitterWindow_P(zv) \
     php_wxSplitterWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStatusBar_entry;
+extern zend_object_handlers wxphp_wxStatusBar_object_handlers;
 void php_wxStatusBar_destruction_handler(zend_resource*);
 
 class wxStatusBar_php: public wxStatusBar{
@@ -516,6 +525,7 @@ static inline zo_wxStatusBar * php_wxStatusBar_fetch_object(zend_object *obj) {
 #define Z_wxStatusBar_P(zv) \
     php_wxStatusBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxToolBar_entry;
+extern zend_object_handlers wxphp_wxToolBar_object_handlers;
 void php_wxToolBar_destruction_handler(zend_resource*);
 
 class wxToolBar_php: public wxToolBar{
@@ -604,6 +614,7 @@ static inline zo_wxToolBar * php_wxToolBar_fetch_object(zend_object *obj) {
 #define Z_wxToolBar_P(zv) \
     php_wxToolBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxHScrolledWindow_entry;
+extern zend_object_handlers wxphp_wxHScrolledWindow_object_handlers;
 void php_wxHScrolledWindow_destruction_handler(zend_resource*);
 
 class wxHScrolledWindow_php: public wxHScrolledWindow{
@@ -876,6 +887,7 @@ static inline zo_wxHScrolledWindow * php_wxHScrolledWindow_fetch_object(zend_obj
 #define Z_wxHScrolledWindow_P(zv) \
     php_wxHScrolledWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWindow_entry;
+extern zend_object_handlers wxphp_wxWindow_object_handlers;
 void php_wxWindow_destruction_handler(zend_resource*);
 
 class wxWindow_php: public wxWindow{
@@ -1132,6 +1144,7 @@ static inline zo_wxWindow * php_wxWindow_fetch_object(zend_object *obj) {
 #define Z_wxWindow_P(zv) \
     php_wxWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWizardPage_entry;
+extern zend_object_handlers wxphp_wxWizardPage_object_handlers;
 void php_wxWizardPage_destruction_handler(zend_resource*);
 
 class wxWizardPage_php: public wxWizardPage{
@@ -1177,6 +1190,7 @@ static inline zo_wxWizardPage * php_wxWizardPage_fetch_object(zend_object *obj) 
 #define Z_wxWizardPage_P(zv) \
     php_wxWizardPage_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWizardPageSimple_entry;
+extern zend_object_handlers wxphp_wxWizardPageSimple_object_handlers;
 void php_wxWizardPageSimple_destruction_handler(zend_resource*);
 
 class wxWizardPageSimple_php: public wxWizardPageSimple{

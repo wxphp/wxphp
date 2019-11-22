@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_pickers_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxColourPickerCtrl_entry;
+extern zend_object_handlers wxphp_wxColourPickerCtrl_object_handlers;
 void php_wxColourPickerCtrl_destruction_handler(zend_resource*);
 
 class wxColourPickerCtrl_php: public wxColourPickerCtrl{
@@ -65,6 +66,7 @@ static inline zo_wxColourPickerCtrl * php_wxColourPickerCtrl_fetch_object(zend_o
 #define Z_wxColourPickerCtrl_P(zv) \
     php_wxColourPickerCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDatePickerCtrl_entry;
+extern zend_object_handlers wxphp_wxDatePickerCtrl_object_handlers;
 void php_wxDatePickerCtrl_destruction_handler(zend_resource*);
 
 class wxDatePickerCtrl_php: public wxDatePickerCtrl{
@@ -112,6 +114,7 @@ static inline zo_wxDatePickerCtrl * php_wxDatePickerCtrl_fetch_object(zend_objec
 #define Z_wxDatePickerCtrl_P(zv) \
     php_wxDatePickerCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFilePickerCtrl_entry;
+extern zend_object_handlers wxphp_wxFilePickerCtrl_object_handlers;
 void php_wxFilePickerCtrl_destruction_handler(zend_resource*);
 
 class wxFilePickerCtrl_php: public wxFilePickerCtrl{
@@ -159,6 +162,7 @@ static inline zo_wxFilePickerCtrl * php_wxFilePickerCtrl_fetch_object(zend_objec
 #define Z_wxFilePickerCtrl_P(zv) \
     php_wxFilePickerCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDirPickerCtrl_entry;
+extern zend_object_handlers wxphp_wxDirPickerCtrl_object_handlers;
 void php_wxDirPickerCtrl_destruction_handler(zend_resource*);
 
 class wxDirPickerCtrl_php: public wxDirPickerCtrl{
@@ -206,6 +210,7 @@ static inline zo_wxDirPickerCtrl * php_wxDirPickerCtrl_fetch_object(zend_object 
 #define Z_wxDirPickerCtrl_P(zv) \
     php_wxDirPickerCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontPickerCtrl_entry;
+extern zend_object_handlers wxphp_wxFontPickerCtrl_object_handlers;
 void php_wxFontPickerCtrl_destruction_handler(zend_resource*);
 
 class wxFontPickerCtrl_php: public wxFontPickerCtrl{
@@ -253,6 +258,7 @@ static inline zo_wxFontPickerCtrl * php_wxFontPickerCtrl_fetch_object(zend_objec
 #define Z_wxFontPickerCtrl_P(zv) \
     php_wxFontPickerCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPickerBase_entry;
+extern zend_object_handlers wxphp_wxPickerBase_object_handlers;
 void php_wxPickerBase_destruction_handler(zend_resource*);
 
 class wxPickerBase_php: public wxPickerBase{
@@ -306,6 +312,7 @@ static inline zo_wxPickerBase * php_wxPickerBase_fetch_object(zend_object *obj) 
 #define Z_wxPickerBase_P(zv) \
     php_wxPickerBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTimePickerCtrl_entry;
+extern zend_object_handlers wxphp_wxTimePickerCtrl_object_handlers;
 void php_wxTimePickerCtrl_destruction_handler(zend_resource*);
 
 class wxTimePickerCtrl_php: public wxTimePickerCtrl{

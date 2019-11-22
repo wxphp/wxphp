@@ -95,7 +95,7 @@ zend_object* php_wxGridCellRenderer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellRenderer_object_handlers;
 
     custom_object->native_object = NULL;
 
@@ -480,7 +480,7 @@ zend_object* php_wxGridCellAutoWrapStringRenderer_new(zend_class_entry *class_ty
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellAutoWrapStringRenderer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLAUTOWRAPSTRINGRENDERER_TYPE;
@@ -644,7 +644,7 @@ zend_object* php_wxGridCellBoolRenderer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellBoolRenderer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLBOOLRENDERER_TYPE;
@@ -808,7 +808,7 @@ zend_object* php_wxGridCellDateTimeRenderer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellDateTimeRenderer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLDATETIMERENDERER_TYPE;
@@ -1115,7 +1115,7 @@ zend_object* php_wxGridCellEnumRenderer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellEnumRenderer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLENUMRENDERER_TYPE;
@@ -1409,7 +1409,7 @@ zend_object* php_wxGridCellFloatRenderer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellFloatRenderer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLFLOATRENDERER_TYPE;
@@ -2383,7 +2383,7 @@ zend_object* php_wxGridCellNumberRenderer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellNumberRenderer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLNUMBERRENDERER_TYPE;
@@ -2547,7 +2547,7 @@ zend_object* php_wxGridCellStringRenderer_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellStringRenderer_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLSTRINGRENDERER_TYPE;
@@ -2683,7 +2683,7 @@ zend_object* php_wxGridCellEditor_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellEditor_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLEDITOR_TYPE;
@@ -4813,7 +4813,7 @@ zend_object* php_wxGridCellAutoWrapStringEditor_new(zend_class_entry *class_type
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellAutoWrapStringEditor_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE;
@@ -4948,7 +4948,7 @@ zend_object* php_wxGridCellBoolEditor_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellBoolEditor_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLBOOLEDITOR_TYPE;
@@ -5340,7 +5340,7 @@ zend_object* php_wxGridCellChoiceEditor_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellChoiceEditor_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLCHOICEEDITOR_TYPE;
@@ -5643,7 +5643,7 @@ zend_object* php_wxGridCellEnumEditor_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellEnumEditor_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLENUMEDITOR_TYPE;
@@ -5796,7 +5796,7 @@ zend_object* php_wxGridCellTextEditor_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellTextEditor_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLTEXTEDITOR_TYPE;
@@ -6073,7 +6073,7 @@ zend_object* php_wxGridCellFloatEditor_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellFloatEditor_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLFLOATEDITOR_TYPE;
@@ -6362,7 +6362,7 @@ zend_object* php_wxGridCellNumberEditor_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellNumberEditor_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLNUMBEREDITOR_TYPE;
@@ -6639,7 +6639,7 @@ zend_object* php_wxGridCellAttr_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridCellAttr_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDCELLATTR_TYPE;
@@ -10006,7 +10006,7 @@ zend_object* php_wxGridTableBase_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridTableBase_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDTABLEBASE_TYPE;
@@ -14757,7 +14757,7 @@ zend_object* php_wxGridSizesInfo_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridSizesInfo_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDSIZESINFO_TYPE;
@@ -15077,7 +15077,7 @@ zend_object* php_wxGrid_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGrid_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRID_TYPE;
@@ -41281,7 +41281,7 @@ zend_object* php_wxGridUpdateLocker_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxGridUpdateLocker_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXGRIDUPDATELOCKER_TYPE;

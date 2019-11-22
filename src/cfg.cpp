@@ -123,7 +123,7 @@ zend_object* php_wxConfigBase_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxConfigBase_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCONFIGBASE_TYPE;
@@ -4567,7 +4567,7 @@ zend_object* php_wxDisplay_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxDisplay_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXDISPLAY_TYPE;
@@ -5821,7 +5821,7 @@ zend_object* php_wxFileConfig_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFileConfig_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILECONFIG_TYPE;
@@ -8468,7 +8468,7 @@ zend_object* php_wxFontMapper_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFontMapper_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFONTMAPPER_TYPE;
@@ -10245,7 +10245,7 @@ zend_object* php_wxPlatformInfo_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPlatformInfo_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPLATFORMINFO_TYPE;
@@ -14334,7 +14334,7 @@ zend_object* php_wxSystemSettings_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxSystemSettings_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSYSTEMSETTINGS_TYPE;
@@ -15027,7 +15027,7 @@ zend_object* php_wxSystemOptions_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxSystemOptions_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSYSTEMOPTIONS_TYPE;
@@ -15726,7 +15726,7 @@ zend_object* php_wxVideoMode_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxVideoMode_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXVIDEOMODE_TYPE;

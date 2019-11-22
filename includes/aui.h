@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_aui_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxAuiToolBarEvent_entry;
+extern zend_object_handlers wxphp_wxAuiToolBarEvent_object_handlers;
 void php_wxAuiToolBarEvent_destruction_handler(zend_resource*);
 
 class wxAuiToolBarEvent_php: public wxAuiToolBarEvent{
@@ -64,6 +65,7 @@ static inline zo_wxAuiToolBarEvent * php_wxAuiToolBarEvent_fetch_object(zend_obj
 #define Z_wxAuiToolBarEvent_P(zv) \
     php_wxAuiToolBarEvent_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAuiToolBarItem_entry;
+extern zend_object_handlers wxphp_wxAuiToolBarItem_object_handlers;
 void php_wxAuiToolBarItem_destruction_handler(zend_resource*);
 
 class wxAuiToolBarItem_php: public wxAuiToolBarItem{
@@ -146,6 +148,7 @@ static inline zo_wxAuiToolBarItem * php_wxAuiToolBarItem_fetch_object(zend_objec
 #define Z_wxAuiToolBarItem_P(zv) \
     php_wxAuiToolBarItem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAuiToolBarArt_entry;
+extern zend_object_handlers wxphp_wxAuiToolBarArt_object_handlers;
 void php_wxAuiToolBarArt_destruction_handler(zend_resource*);
 
 class wxAuiToolBarArt_php: public wxAuiToolBarArt{
@@ -205,6 +208,7 @@ static inline zo_wxAuiToolBarArt * php_wxAuiToolBarArt_fetch_object(zend_object 
 #define Z_wxAuiToolBarArt_P(zv) \
     php_wxAuiToolBarArt_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAuiDefaultToolBarArt_entry;
+extern zend_object_handlers wxphp_wxAuiDefaultToolBarArt_object_handlers;
 void php_wxAuiDefaultToolBarArt_destruction_handler(zend_resource*);
 
 class wxAuiDefaultToolBarArt_php: public wxAuiDefaultToolBarArt{
@@ -266,6 +270,7 @@ static inline zo_wxAuiDefaultToolBarArt * php_wxAuiDefaultToolBarArt_fetch_objec
 #define Z_wxAuiDefaultToolBarArt_P(zv) \
     php_wxAuiDefaultToolBarArt_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAuiToolBar_entry;
+extern zend_object_handlers wxphp_wxAuiToolBar_object_handlers;
 void php_wxAuiToolBar_destruction_handler(zend_resource*);
 
 class wxAuiToolBar_php: public wxAuiToolBar{
@@ -370,6 +375,7 @@ static inline zo_wxAuiToolBar * php_wxAuiToolBar_fetch_object(zend_object *obj) 
 #define Z_wxAuiToolBar_P(zv) \
     php_wxAuiToolBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAuiNotebook_entry;
+extern zend_object_handlers wxphp_wxAuiNotebook_object_handlers;
 void php_wxAuiNotebook_destruction_handler(zend_resource*);
 
 class wxAuiNotebook_php: public wxAuiNotebook{
@@ -443,6 +449,7 @@ static inline zo_wxAuiNotebook * php_wxAuiNotebook_fetch_object(zend_object *obj
 #define Z_wxAuiNotebook_P(zv) \
     php_wxAuiNotebook_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAuiTabArt_entry;
+extern zend_object_handlers wxphp_wxAuiTabArt_object_handlers;
 void php_wxAuiTabArt_destruction_handler(zend_resource*);
 
 class wxAuiTabArt_php: public wxAuiTabArt{
@@ -495,6 +502,7 @@ static inline zo_wxAuiTabArt * php_wxAuiTabArt_fetch_object(zend_object *obj) {
 #define Z_wxAuiTabArt_P(zv) \
     php_wxAuiTabArt_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAuiDockArt_entry;
+extern zend_object_handlers wxphp_wxAuiDockArt_object_handlers;
 void php_wxAuiDockArt_destruction_handler(zend_resource*);
 
 class wxAuiDockArt_php: public wxAuiDockArt{
@@ -549,6 +557,7 @@ static inline zo_wxAuiDockArt * php_wxAuiDockArt_fetch_object(zend_object *obj) 
 #define Z_wxAuiDockArt_P(zv) \
     php_wxAuiDockArt_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAuiManager_entry;
+extern zend_object_handlers wxphp_wxAuiManager_object_handlers;
 void php_wxAuiManager_destruction_handler(zend_resource*);
 
 class wxAuiManager_php: public wxAuiManager{
@@ -613,6 +622,7 @@ static inline zo_wxAuiManager * php_wxAuiManager_fetch_object(zend_object *obj) 
 #define Z_wxAuiManager_P(zv) \
     php_wxAuiManager_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAuiPaneInfo_entry;
+extern zend_object_handlers wxphp_wxAuiPaneInfo_object_handlers;
 void php_wxAuiPaneInfo_destruction_handler(zend_resource*);
 
 class wxAuiPaneInfo_php: public wxAuiPaneInfo{
@@ -741,6 +751,7 @@ static inline zo_wxAuiPaneInfo * php_wxAuiPaneInfo_fetch_object(zend_object *obj
 #define Z_wxAuiPaneInfo_P(zv) \
     php_wxAuiPaneInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAuiManagerEvent_entry;
+extern zend_object_handlers wxphp_wxAuiManagerEvent_object_handlers;
 void php_wxAuiManagerEvent_destruction_handler(zend_resource*);
 
 class wxAuiManagerEvent_php: public wxAuiManagerEvent{

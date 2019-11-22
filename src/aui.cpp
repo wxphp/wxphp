@@ -123,7 +123,7 @@ zend_object* php_wxAuiToolBarEvent_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiToolBarEvent_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUITOOLBAREVENT_TYPE;
@@ -660,7 +660,7 @@ zend_object* php_wxAuiToolBarItem_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiToolBarItem_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUITOOLBARITEM_TYPE;
@@ -5393,7 +5393,7 @@ zend_object* php_wxAuiToolBarArt_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiToolBarArt_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUITOOLBARART_TYPE;
@@ -7226,7 +7226,7 @@ zend_object* php_wxAuiDefaultToolBarArt_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiDefaultToolBarArt_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUIDEFAULTTOOLBARART_TYPE;
@@ -10185,7 +10185,7 @@ zend_object* php_wxAuiToolBar_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiToolBar_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUITOOLBAR_TYPE;
@@ -18324,7 +18324,7 @@ zend_object* php_wxAuiNotebook_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiNotebook_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUINOTEBOOK_TYPE;
@@ -22396,7 +22396,7 @@ zend_object* php_wxAuiTabArt_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiTabArt_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUITABART_TYPE;
@@ -23588,7 +23588,7 @@ zend_object* php_wxAuiDockArt_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiDockArt_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUIDOCKART_TYPE;
@@ -24871,7 +24871,7 @@ zend_object* php_wxAuiManager_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiManager_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUIMANAGER_TYPE;
@@ -28115,7 +28115,7 @@ zend_object* php_wxAuiPaneInfo_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiPaneInfo_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUIPANEINFO_TYPE;
@@ -38190,7 +38190,7 @@ zend_object* php_wxAuiManagerEvent_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAuiManagerEvent_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAUIMANAGEREVENT_TYPE;

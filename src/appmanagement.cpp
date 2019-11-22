@@ -123,7 +123,7 @@ zend_object* php_wxEventLoopBase_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxEventLoopBase_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXEVENTLOOPBASE_TYPE;
@@ -2106,7 +2106,7 @@ zend_object* php_wxEventLoopActivator_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxEventLoopActivator_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXEVENTLOOPACTIVATOR_TYPE;
@@ -2294,7 +2294,7 @@ zend_object* php_wxModule_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxModule_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXMODULE_TYPE;
@@ -2618,7 +2618,7 @@ zend_object* php_wxProcess_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxProcess_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPROCESS_TYPE;
@@ -4523,7 +4523,7 @@ zend_object* php_wxSingleInstanceChecker_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxSingleInstanceChecker_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSINGLEINSTANCECHECKER_TYPE;

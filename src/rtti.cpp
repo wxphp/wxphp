@@ -95,7 +95,7 @@ zend_object* php_wxRefCounter_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRefCounter_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXREFCOUNTER_TYPE;
@@ -653,7 +653,7 @@ zend_object* php_wxObject_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxObject_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXOBJECT_TYPE;
@@ -8809,7 +8809,7 @@ zend_object* php_wxClassInfo_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxClassInfo_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCLASSINFO_TYPE;

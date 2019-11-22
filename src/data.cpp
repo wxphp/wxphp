@@ -123,7 +123,7 @@ zend_object* php_wxAcceleratorEntry_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAcceleratorEntry_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXACCELERATORENTRY_TYPE;
@@ -1342,7 +1342,7 @@ zend_object* php_wxAcceleratorTable_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxAcceleratorTable_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXACCELERATORTABLE_TYPE;
@@ -1613,7 +1613,7 @@ zend_object* php_wxCalendarDateAttr_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxCalendarDateAttr_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXCALENDARDATEATTR_TYPE;
@@ -4257,7 +4257,7 @@ zend_object* php_wxPageSetupDialogData_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPageSetupDialogData_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPAGESETUPDIALOGDATA_TYPE;
@@ -7880,7 +7880,7 @@ zend_object* php_wxPrintData_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPrintData_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPRINTDATA_TYPE;
@@ -10563,7 +10563,7 @@ zend_object* php_wxRealPoint_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRealPoint_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXREALPOINT_TYPE;
@@ -10900,7 +10900,7 @@ zend_object* php_wxRect_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRect_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXRECT_TYPE;
@@ -15501,7 +15501,7 @@ zend_object* php_wxPoint_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPoint_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPOINT_TYPE;
@@ -15944,7 +15944,7 @@ zend_object* php_wxSize_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxSize_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSIZE_TYPE;
@@ -17332,7 +17332,7 @@ zend_object* php_wxListItemAttr_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxListItemAttr_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXLISTITEMATTR_TYPE;
@@ -18689,7 +18689,7 @@ zend_object* php_wxListItem_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxListItem_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXLISTITEM_TYPE;
@@ -21677,7 +21677,7 @@ zend_object* php_wxFileType_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxFileType_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXFILETYPE_TYPE;
@@ -22490,7 +22490,7 @@ zend_object* php_wxPosition_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxPosition_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXPOSITION_TYPE;
@@ -23351,7 +23351,7 @@ zend_object* php_wxRegion_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxRegion_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXREGION_TYPE;
@@ -26079,7 +26079,7 @@ zend_object* php_wxStatusBarPane_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxStatusBarPane_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXSTATUSBARPANE_TYPE;
@@ -26594,7 +26594,7 @@ zend_object* php_wxTreeItemId_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxTreeItemId_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXTREEITEMID_TYPE;
@@ -26865,7 +26865,7 @@ zend_object* php_wxVariant_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxVariant_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXVARIANT_TYPE;
@@ -30683,7 +30683,7 @@ zend_object* php_wxVariantData_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxVariantData_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXVARIANTDATA_TYPE;
@@ -31730,7 +31730,7 @@ zend_object* php_wxVersionInfo_new(zend_class_entry *class_type)
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
 
-    custom_object->zo.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = &wxphp_wxVersionInfo_object_handlers;
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXVERSIONINFO_TYPE;

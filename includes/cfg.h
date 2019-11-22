@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_cfg_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxConfigBase_entry;
+extern zend_object_handlers wxphp_wxConfigBase_object_handlers;
 void php_wxConfigBase_destruction_handler(zend_resource*);
 
 class wxConfigBase_php: public wxConfigBase{
@@ -93,6 +94,7 @@ static inline zo_wxConfigBase * php_wxConfigBase_fetch_object(zend_object *obj) 
 #define Z_wxConfigBase_P(zv) \
     php_wxConfigBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDisplay_entry;
+extern zend_object_handlers wxphp_wxDisplay_object_handlers;
 void php_wxDisplay_destruction_handler(zend_resource*);
 
 class wxDisplay_php: public wxDisplay{
@@ -144,6 +146,7 @@ static inline zo_wxDisplay * php_wxDisplay_fetch_object(zend_object *obj) {
 #define Z_wxDisplay_P(zv) \
     php_wxDisplay_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileConfig_entry;
+extern zend_object_handlers wxphp_wxFileConfig_object_handlers;
 void php_wxFileConfig_destruction_handler(zend_resource*);
 
 class wxFileConfig_php: public wxFileConfig{
@@ -205,6 +208,7 @@ static inline zo_wxFileConfig * php_wxFileConfig_fetch_object(zend_object *obj) 
 #define Z_wxFileConfig_P(zv) \
     php_wxFileConfig_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontMapper_entry;
+extern zend_object_handlers wxphp_wxFontMapper_object_handlers;
 void php_wxFontMapper_destruction_handler(zend_resource*);
 
 class wxFontMapper_php: public wxFontMapper{
@@ -260,6 +264,7 @@ static inline zo_wxFontMapper * php_wxFontMapper_fetch_object(zend_object *obj) 
 #define Z_wxFontMapper_P(zv) \
     php_wxFontMapper_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPlatformInfo_entry;
+extern zend_object_handlers wxphp_wxPlatformInfo_object_handlers;
 void php_wxPlatformInfo_destruction_handler(zend_resource*);
 
 class wxPlatformInfo_php: public wxPlatformInfo{
@@ -334,6 +339,7 @@ static inline zo_wxPlatformInfo * php_wxPlatformInfo_fetch_object(zend_object *o
 #define Z_wxPlatformInfo_P(zv) \
     php_wxPlatformInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSystemSettings_entry;
+extern zend_object_handlers wxphp_wxSystemSettings_object_handlers;
 void php_wxSystemSettings_destruction_handler(zend_resource*);
 
 class wxSystemSettings_php: public wxSystemSettings{
@@ -379,6 +385,7 @@ static inline zo_wxSystemSettings * php_wxSystemSettings_fetch_object(zend_objec
 #define Z_wxSystemSettings_P(zv) \
     php_wxSystemSettings_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSystemOptions_entry;
+extern zend_object_handlers wxphp_wxSystemOptions_object_handlers;
 void php_wxSystemOptions_destruction_handler(zend_resource*);
 
 class wxSystemOptions_php: public wxSystemOptions{
@@ -424,6 +431,7 @@ static inline zo_wxSystemOptions * php_wxSystemOptions_fetch_object(zend_object 
 #define Z_wxSystemOptions_P(zv) \
     php_wxSystemOptions_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxVideoMode_entry;
+extern zend_object_handlers wxphp_wxVideoMode_object_handlers;
 void php_wxVideoMode_destruction_handler(zend_resource*);
 
 class wxVideoMode_php: public wxVideoMode{

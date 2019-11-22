@@ -545,6 +545,7 @@ $entries .= "\n";
 foreach($defIni as $class_name => $class_methods)
 {
     $entries .= "zend_class_entry* php_{$class_name}_entry;\n";
+    $entries .= "zend_object_handlers wxphp_{$class_name}_object_handlers;\n";
 }
 
 $entries .= "\n";
@@ -591,6 +592,9 @@ foreach($sorted_classes as $class_name => $class_methods)
 		. "php_{$class_name}_new;"
 		. "\n"
 	;
+
+    $classes .= tabs(1) . "memcpy(&wxphp_{$class_name}_object_handlers, zend_get_std_object_handlers(), sizeof(zend_object_handlers));\n";
+    $classes .= tabs(1) . "wxphp_{$class_name}_object_handlers.offset = XtOffsetOf(zo_{$class_name}, zo);\n";
 
     $classes .= "\n";
 }

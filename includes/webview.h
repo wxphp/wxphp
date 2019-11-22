@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_webview_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxWebViewHistoryItem_entry;
+extern zend_object_handlers wxphp_wxWebViewHistoryItem_object_handlers;
 void php_wxWebViewHistoryItem_destruction_handler(zend_resource*);
 
 class wxWebViewHistoryItem_php: public wxWebViewHistoryItem{
@@ -64,6 +65,7 @@ static inline zo_wxWebViewHistoryItem * php_wxWebViewHistoryItem_fetch_object(ze
 #define Z_wxWebViewHistoryItem_P(zv) \
     php_wxWebViewHistoryItem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWebViewHandler_entry;
+extern zend_object_handlers wxphp_wxWebViewHandler_object_handlers;
 void php_wxWebViewHandler_destruction_handler(zend_resource*);
 
 class wxWebViewHandler_php: public wxWebViewHandler{
@@ -108,6 +110,7 @@ static inline zo_wxWebViewHandler * php_wxWebViewHandler_fetch_object(zend_objec
 #define Z_wxWebViewHandler_P(zv) \
     php_wxWebViewHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWebViewArchiveHandler_entry;
+extern zend_object_handlers wxphp_wxWebViewArchiveHandler_object_handlers;
 void php_wxWebViewArchiveHandler_destruction_handler(zend_resource*);
 
 class wxWebViewArchiveHandler_php: public wxWebViewArchiveHandler{

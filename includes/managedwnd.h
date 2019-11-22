@@ -20,6 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_managedwnd_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxFrame_entry;
+extern zend_object_handlers wxphp_wxFrame_object_handlers;
 void php_wxFrame_destruction_handler(zend_resource*);
 
 class wxFrame_php: public wxFrame{
@@ -83,6 +84,7 @@ static inline zo_wxFrame * php_wxFrame_fetch_object(zend_object *obj) {
 #define Z_wxFrame_P(zv) \
     php_wxFrame_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMDIClientWindow_entry;
+extern zend_object_handlers wxphp_wxMDIClientWindow_object_handlers;
 void php_wxMDIClientWindow_destruction_handler(zend_resource*);
 
 class wxMDIClientWindow_php: public wxMDIClientWindow{
@@ -126,6 +128,7 @@ static inline zo_wxMDIClientWindow * php_wxMDIClientWindow_fetch_object(zend_obj
 #define Z_wxMDIClientWindow_P(zv) \
     php_wxMDIClientWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMDIParentFrame_entry;
+extern zend_object_handlers wxphp_wxMDIParentFrame_object_handlers;
 void php_wxMDIParentFrame_destruction_handler(zend_resource*);
 
 class wxMDIParentFrame_php: public wxMDIParentFrame{
@@ -180,6 +183,7 @@ static inline zo_wxMDIParentFrame * php_wxMDIParentFrame_fetch_object(zend_objec
 #define Z_wxMDIParentFrame_P(zv) \
     php_wxMDIParentFrame_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMDIChildFrame_entry;
+extern zend_object_handlers wxphp_wxMDIChildFrame_object_handlers;
 void php_wxMDIChildFrame_destruction_handler(zend_resource*);
 
 class wxMDIChildFrame_php: public wxMDIChildFrame{
@@ -229,6 +233,7 @@ static inline zo_wxMDIChildFrame * php_wxMDIChildFrame_fetch_object(zend_object 
 #define Z_wxMDIChildFrame_P(zv) \
     php_wxMDIChildFrame_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMiniFrame_entry;
+extern zend_object_handlers wxphp_wxMiniFrame_object_handlers;
 void php_wxMiniFrame_destruction_handler(zend_resource*);
 
 class wxMiniFrame_php: public wxMiniFrame{
@@ -273,6 +278,7 @@ static inline zo_wxMiniFrame * php_wxMiniFrame_fetch_object(zend_object *obj) {
 #define Z_wxMiniFrame_P(zv) \
     php_wxMiniFrame_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPopupWindow_entry;
+extern zend_object_handlers wxphp_wxPopupWindow_object_handlers;
 void php_wxPopupWindow_destruction_handler(zend_resource*);
 
 class wxPopupWindow_php: public wxPopupWindow{
@@ -317,6 +323,7 @@ static inline zo_wxPopupWindow * php_wxPopupWindow_fetch_object(zend_object *obj
 #define Z_wxPopupWindow_P(zv) \
     php_wxPopupWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPopupTransientWindow_entry;
+extern zend_object_handlers wxphp_wxPopupTransientWindow_object_handlers;
 void php_wxPopupTransientWindow_destruction_handler(zend_resource*);
 
 class wxPopupTransientWindow_php: public wxPopupTransientWindow{
@@ -362,6 +369,7 @@ static inline zo_wxPopupTransientWindow * php_wxPopupTransientWindow_fetch_objec
 #define Z_wxPopupTransientWindow_P(zv) \
     php_wxPopupTransientWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPropertySheetDialog_entry;
+extern zend_object_handlers wxphp_wxPropertySheetDialog_object_handlers;
 void php_wxPropertySheetDialog_destruction_handler(zend_resource*);
 
 class wxPropertySheetDialog_php: public wxPropertySheetDialog{
@@ -414,6 +422,7 @@ static inline zo_wxPropertySheetDialog * php_wxPropertySheetDialog_fetch_object(
 #define Z_wxPropertySheetDialog_P(zv) \
     php_wxPropertySheetDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSplashScreen_entry;
+extern zend_object_handlers wxphp_wxSplashScreen_object_handlers;
 void php_wxSplashScreen_destruction_handler(zend_resource*);
 
 class wxSplashScreen_php: public wxSplashScreen{
@@ -458,6 +467,7 @@ static inline zo_wxSplashScreen * php_wxSplashScreen_fetch_object(zend_object *o
 #define Z_wxSplashScreen_P(zv) \
     php_wxSplashScreen_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTopLevelWindow_entry;
+extern zend_object_handlers wxphp_wxTopLevelWindow_object_handlers;
 void php_wxTopLevelWindow_destruction_handler(zend_resource*);
 
 class wxTopLevelWindow_php: public wxTopLevelWindow{
