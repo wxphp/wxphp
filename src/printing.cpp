@@ -112,13 +112,11 @@ zend_object* php_wxPrinterDC_new(zend_class_entry *class_type)
 
     zo_wxPrinterDC* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPrinterDC*) ecalloc(
         1,
         sizeof(zo_wxPrinterDC)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -386,13 +384,11 @@ zend_object* php_wxPreviewControlBar_new(zend_class_entry *class_type)
 
     zo_wxPreviewControlBar* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPreviewControlBar*) ecalloc(
         1,
         sizeof(zo_wxPreviewControlBar)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -992,13 +988,11 @@ zend_object* php_wxPreviewCanvas_new(zend_class_entry *class_type)
 
     zo_wxPreviewCanvas* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPreviewCanvas*) ecalloc(
         1,
         sizeof(zo_wxPreviewCanvas)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1268,13 +1262,11 @@ zend_object* php_wxPreviewFrame_new(zend_class_entry *class_type)
 
     zo_wxPreviewFrame* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPreviewFrame*) ecalloc(
         1,
         sizeof(zo_wxPreviewFrame)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1794,13 +1786,11 @@ zend_object* php_wxPrintPreview_new(zend_class_entry *class_type)
 
     zo_wxPrintPreview* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPrintPreview*) ecalloc(
         1,
         sizeof(zo_wxPrintPreview)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3987,13 +3977,11 @@ zend_object* php_wxPrinter_new(zend_class_entry *class_type)
 
     zo_wxPrinter* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPrinter*) ecalloc(
         1,
         sizeof(zo_wxPrinter)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5132,13 +5120,11 @@ zend_object* php_wxPrintout_new(zend_class_entry *class_type)
 
     zo_wxPrintout* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPrintout*) ecalloc(
         1,
         sizeof(zo_wxPrintout)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -8755,13 +8741,11 @@ zend_object* php_wxPrintDialog_new(zend_class_entry *class_type)
 
     zo_wxPrintDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPrintDialog*) ecalloc(
         1,
         sizeof(zo_wxPrintDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9544,13 +9528,11 @@ zend_object* php_wxPageSetupDialog_new(zend_class_entry *class_type)
 
     zo_wxPageSetupDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPageSetupDialog*) ecalloc(
         1,
         sizeof(zo_wxPageSetupDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

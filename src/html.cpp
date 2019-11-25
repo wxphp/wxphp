@@ -112,13 +112,11 @@ zend_object* php_wxHtmlRenderingStyle_new(zend_class_entry *class_type)
 
     zo_wxHtmlRenderingStyle* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlRenderingStyle*) ecalloc(
         1,
         sizeof(zo_wxHtmlRenderingStyle)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -395,13 +393,11 @@ zend_object* php_wxHtmlRenderingInfo_new(zend_class_entry *class_type)
 
     zo_wxHtmlRenderingInfo* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlRenderingInfo*) ecalloc(
         1,
         sizeof(zo_wxHtmlRenderingInfo)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -817,13 +813,11 @@ zend_object* php_wxHtmlCell_new(zend_class_entry *class_type)
 
     zo_wxHtmlCell* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlCell*) ecalloc(
         1,
         sizeof(zo_wxHtmlCell)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3293,13 +3287,11 @@ zend_object* php_wxHtmlContainerCell_new(zend_class_entry *class_type)
 
     zo_wxHtmlContainerCell* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlContainerCell*) ecalloc(
         1,
         sizeof(zo_wxHtmlContainerCell)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5254,13 +5246,11 @@ zend_object* php_wxHtmlLinkInfo_new(zend_class_entry *class_type)
 
     zo_wxHtmlLinkInfo* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlLinkInfo*) ecalloc(
         1,
         sizeof(zo_wxHtmlLinkInfo)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5949,13 +5939,11 @@ zend_object* php_wxHtmlColourCell_new(zend_class_entry *class_type)
 
     zo_wxHtmlColourCell* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlColourCell*) ecalloc(
         1,
         sizeof(zo_wxHtmlColourCell)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6150,13 +6138,11 @@ zend_object* php_wxHtmlWidgetCell_new(zend_class_entry *class_type)
 
     zo_wxHtmlWidgetCell* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlWidgetCell*) ecalloc(
         1,
         sizeof(zo_wxHtmlWidgetCell)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6351,13 +6337,11 @@ zend_object* php_wxHtmlFilter_new(zend_class_entry *class_type)
 
     zo_wxHtmlFilter* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlFilter*) ecalloc(
         1,
         sizeof(zo_wxHtmlFilter)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6698,13 +6682,11 @@ zend_object* php_wxHtmlTagHandler_new(zend_class_entry *class_type)
 
     zo_wxHtmlTagHandler* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlTagHandler*) ecalloc(
         1,
         sizeof(zo_wxHtmlTagHandler)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7102,13 +7084,11 @@ zend_object* php_wxHtmlTag_new(zend_class_entry *class_type)
 
     zo_wxHtmlTag* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlTag*) ecalloc(
         1,
         sizeof(zo_wxHtmlTag)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -8261,13 +8241,11 @@ zend_object* php_wxHtmlWindow_new(zend_class_entry *class_type)
 
     zo_wxHtmlWindow* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlWindow*) ecalloc(
         1,
         sizeof(zo_wxHtmlWindow)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -12265,13 +12243,11 @@ zend_object* php_wxHtmlLinkEvent_new(zend_class_entry *class_type)
 
     zo_wxHtmlLinkEvent* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlLinkEvent*) ecalloc(
         1,
         sizeof(zo_wxHtmlLinkEvent)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -12581,13 +12557,11 @@ zend_object* php_wxHtmlCellEvent_new(zend_class_entry *class_type)
 
     zo_wxHtmlCellEvent* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlCellEvent*) ecalloc(
         1,
         sizeof(zo_wxHtmlCellEvent)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -13275,13 +13249,11 @@ zend_object* php_wxHtmlDCRenderer_new(zend_class_entry *class_type)
 
     zo_wxHtmlDCRenderer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlDCRenderer*) ecalloc(
         1,
         sizeof(zo_wxHtmlDCRenderer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -14357,13 +14329,11 @@ zend_object* php_wxHtmlEasyPrinting_new(zend_class_entry *class_type)
 
     zo_wxHtmlEasyPrinting* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlEasyPrinting*) ecalloc(
         1,
         sizeof(zo_wxHtmlEasyPrinting)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -16457,13 +16427,11 @@ zend_object* php_wxHtmlPrintout_new(zend_class_entry *class_type)
 
     zo_wxHtmlPrintout* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlPrintout*) ecalloc(
         1,
         sizeof(zo_wxHtmlPrintout)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17604,13 +17572,11 @@ zend_object* php_wxHtmlTagsModule_new(zend_class_entry *class_type)
 
     zo_wxHtmlTagsModule* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlTagsModule*) ecalloc(
         1,
         sizeof(zo_wxHtmlTagsModule)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17820,13 +17786,11 @@ zend_object* php_wxHtmlWinTagHandler_new(zend_class_entry *class_type)
 
     zo_wxHtmlWinTagHandler* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlWinTagHandler*) ecalloc(
         1,
         sizeof(zo_wxHtmlWinTagHandler)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17901,13 +17865,11 @@ zend_object* php_wxHtmlWinParser_new(zend_class_entry *class_type)
 
     zo_wxHtmlWinParser* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlWinParser*) ecalloc(
         1,
         sizeof(zo_wxHtmlWinParser)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

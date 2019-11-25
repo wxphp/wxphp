@@ -112,13 +112,11 @@ zend_object* php_wxGenericValidator_new(zend_class_entry *class_type)
 
     zo_wxGenericValidator* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxGenericValidator*) ecalloc(
         1,
         sizeof(zo_wxGenericValidator)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -905,13 +903,11 @@ zend_object* php_wxValidator_new(zend_class_entry *class_type)
 
     zo_wxValidator* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxValidator*) ecalloc(
         1,
         sizeof(zo_wxValidator)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1987,13 +1983,11 @@ zend_object* php_wxTextValidator_new(zend_class_entry *class_type)
 
     zo_wxTextValidator* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxTextValidator*) ecalloc(
         1,
         sizeof(zo_wxTextValidator)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

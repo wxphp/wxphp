@@ -112,13 +112,11 @@ zend_object* php_wxEventLoopBase_new(zend_class_entry *class_type)
 
     zo_wxEventLoopBase* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxEventLoopBase*) ecalloc(
         1,
         sizeof(zo_wxEventLoopBase)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2095,13 +2093,11 @@ zend_object* php_wxEventLoopActivator_new(zend_class_entry *class_type)
 
     zo_wxEventLoopActivator* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxEventLoopActivator*) ecalloc(
         1,
         sizeof(zo_wxEventLoopActivator)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2283,13 +2279,11 @@ zend_object* php_wxModule_new(zend_class_entry *class_type)
 
     zo_wxModule* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxModule*) ecalloc(
         1,
         sizeof(zo_wxModule)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2607,13 +2601,11 @@ zend_object* php_wxProcess_new(zend_class_entry *class_type)
 
     zo_wxProcess* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxProcess*) ecalloc(
         1,
         sizeof(zo_wxProcess)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4512,13 +4504,11 @@ zend_object* php_wxSingleInstanceChecker_new(zend_class_entry *class_type)
 
     zo_wxSingleInstanceChecker* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxSingleInstanceChecker*) ecalloc(
         1,
         sizeof(zo_wxSingleInstanceChecker)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

@@ -112,13 +112,11 @@ zend_object* php_wxClientData_new(zend_class_entry *class_type)
 
     zo_wxClientData* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxClientData*) ecalloc(
         1,
         sizeof(zo_wxClientData)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -248,13 +246,11 @@ zend_object* php_wxTreeItemData_new(zend_class_entry *class_type)
 
     zo_wxTreeItemData* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxTreeItemData*) ecalloc(
         1,
         sizeof(zo_wxTreeItemData)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

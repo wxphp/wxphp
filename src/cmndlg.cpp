@@ -112,13 +112,11 @@ zend_object* php_wxAboutDialogInfo_new(zend_class_entry *class_type)
 
     zo_wxAboutDialogInfo* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAboutDialogInfo*) ecalloc(
         1,
         sizeof(zo_wxAboutDialogInfo)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2739,13 +2737,11 @@ zend_object* php_wxBusyInfo_new(zend_class_entry *class_type)
 
     zo_wxBusyInfo* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxBusyInfo*) ecalloc(
         1,
         sizeof(zo_wxBusyInfo)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2908,13 +2904,11 @@ zend_object* php_wxSingleChoiceDialog_new(zend_class_entry *class_type)
 
     zo_wxSingleChoiceDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxSingleChoiceDialog*) ecalloc(
         1,
         sizeof(zo_wxSingleChoiceDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3966,13 +3960,11 @@ zend_object* php_wxPrintDialogData_new(zend_class_entry *class_type)
 
     zo_wxPrintDialogData* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPrintDialogData*) ecalloc(
         1,
         sizeof(zo_wxPrintDialogData)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6828,13 +6820,11 @@ zend_object* php_wxColourDialog_new(zend_class_entry *class_type)
 
     zo_wxColourDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxColourDialog*) ecalloc(
         1,
         sizeof(zo_wxColourDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7446,13 +7436,11 @@ zend_object* php_wxColourData_new(zend_class_entry *class_type)
 
     zo_wxColourData* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxColourData*) ecalloc(
         1,
         sizeof(zo_wxColourData)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -8529,13 +8517,11 @@ zend_object* php_wxDialog_new(zend_class_entry *class_type)
 
     zo_wxDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDialog*) ecalloc(
         1,
         sizeof(zo_wxDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -15135,13 +15121,11 @@ zend_object* php_wxDirDialog_new(zend_class_entry *class_type)
 
     zo_wxDirDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDirDialog*) ecalloc(
         1,
         sizeof(zo_wxDirDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -15996,13 +15980,11 @@ zend_object* php_wxFindReplaceData_new(zend_class_entry *class_type)
 
     zo_wxFindReplaceData* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFindReplaceData*) ecalloc(
         1,
         sizeof(zo_wxFindReplaceData)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -16807,13 +16789,11 @@ zend_object* php_wxFindReplaceDialog_new(zend_class_entry *class_type)
 
     zo_wxFindReplaceDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFindReplaceDialog*) ecalloc(
         1,
         sizeof(zo_wxFindReplaceDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17331,13 +17311,11 @@ zend_object* php_wxFileDialog_new(zend_class_entry *class_type)
 
     zo_wxFileDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFileDialog*) ecalloc(
         1,
         sizeof(zo_wxFileDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -19507,13 +19485,11 @@ zend_object* php_wxFontData_new(zend_class_entry *class_type)
 
     zo_wxFontData* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFontData*) ecalloc(
         1,
         sizeof(zo_wxFontData)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -21159,13 +21135,11 @@ zend_object* php_wxFontDialog_new(zend_class_entry *class_type)
 
     zo_wxFontDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFontDialog*) ecalloc(
         1,
         sizeof(zo_wxFontDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -21926,13 +21900,11 @@ zend_object* php_wxMessageDialog_new(zend_class_entry *class_type)
 
     zo_wxMessageDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxMessageDialog*) ecalloc(
         1,
         sizeof(zo_wxMessageDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -24231,13 +24203,11 @@ zend_object* php_wxGenericProgressDialog_new(zend_class_entry *class_type)
 
     zo_wxGenericProgressDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxGenericProgressDialog*) ecalloc(
         1,
         sizeof(zo_wxGenericProgressDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -25548,13 +25518,11 @@ zend_object* php_wxRearrangeDialog_new(zend_class_entry *class_type)
 
     zo_wxRearrangeDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxRearrangeDialog*) ecalloc(
         1,
         sizeof(zo_wxRearrangeDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -25941,13 +25909,11 @@ zend_object* php_wxSymbolPickerDialog_new(zend_class_entry *class_type)
 
     zo_wxSymbolPickerDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxSymbolPickerDialog*) ecalloc(
         1,
         sizeof(zo_wxSymbolPickerDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -27811,13 +27777,11 @@ zend_object* php_wxPasswordEntryDialog_new(zend_class_entry *class_type)
 
     zo_wxPasswordEntryDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPasswordEntryDialog*) ecalloc(
         1,
         sizeof(zo_wxPasswordEntryDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -28042,13 +28006,11 @@ zend_object* php_wxTextEntryDialog_new(zend_class_entry *class_type)
 
     zo_wxTextEntryDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxTextEntryDialog*) ecalloc(
         1,
         sizeof(zo_wxTextEntryDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -28614,13 +28576,11 @@ zend_object* php_wxWizard_new(zend_class_entry *class_type)
 
     zo_wxWizard* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxWizard*) ecalloc(
         1,
         sizeof(zo_wxWizard)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

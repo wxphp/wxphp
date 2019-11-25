@@ -112,13 +112,11 @@ zend_object* php_wxXmlNode_new(zend_class_entry *class_type)
 
     zo_wxXmlNode* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxXmlNode*) ecalloc(
         1,
         sizeof(zo_wxXmlNode)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4057,13 +4055,11 @@ zend_object* php_wxXmlAttribute_new(zend_class_entry *class_type)
 
     zo_wxXmlAttribute* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxXmlAttribute*) ecalloc(
         1,
         sizeof(zo_wxXmlAttribute)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4999,13 +4995,11 @@ zend_object* php_wxXmlDocument_new(zend_class_entry *class_type)
 
     zo_wxXmlDocument* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxXmlDocument*) ecalloc(
         1,
         sizeof(zo_wxXmlDocument)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

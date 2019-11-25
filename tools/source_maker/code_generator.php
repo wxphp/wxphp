@@ -593,8 +593,7 @@ foreach($sorted_classes as $class_name => $class_methods)
 		. "\n"
 	;
 
-    $classes .= tabs(1) . "memcpy(&wxphp_{$class_name}_object_handlers, zend_get_std_object_handlers(), sizeof(zend_object_handlers));\n";
-    $classes .= tabs(1) . "wxphp_{$class_name}_object_handlers.offset = XtOffsetOf(zo_{$class_name}, zo);\n";
+    $classes .= tabs(1) . "wxPHP_PREPARE_OBJECT_HANDLERS({$class_name})\n";
 
     $classes .= "\n";
 }

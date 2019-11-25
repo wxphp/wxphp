@@ -112,13 +112,11 @@ zend_object* php_wxWebViewHistoryItem_new(zend_class_entry *class_type)
 
     zo_wxWebViewHistoryItem* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxWebViewHistoryItem*) ecalloc(
         1,
         sizeof(zo_wxWebViewHistoryItem)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -500,13 +498,11 @@ zend_object* php_wxWebViewHandler_new(zend_class_entry *class_type)
 
     zo_wxWebViewHandler* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxWebViewHandler*) ecalloc(
         1,
         sizeof(zo_wxWebViewHandler)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -881,13 +877,11 @@ zend_object* php_wxWebViewArchiveHandler_new(zend_class_entry *class_type)
 
     zo_wxWebViewArchiveHandler* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxWebViewArchiveHandler*) ecalloc(
         1,
         sizeof(zo_wxWebViewArchiveHandler)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

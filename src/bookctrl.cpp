@@ -112,13 +112,11 @@ zend_object* php_wxAuiNotebookEvent_new(zend_class_entry *class_type)
 
     zo_wxAuiNotebookEvent* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiNotebookEvent*) ecalloc(
         1,
         sizeof(zo_wxAuiNotebookEvent)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -404,13 +402,11 @@ zend_object* php_wxBookCtrlBase_new(zend_class_entry *class_type)
 
     zo_wxBookCtrlBase* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxBookCtrlBase*) ecalloc(
         1,
         sizeof(zo_wxBookCtrlBase)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3639,13 +3635,11 @@ zend_object* php_wxBookCtrlEvent_new(zend_class_entry *class_type)
 
     zo_wxBookCtrlEvent* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxBookCtrlEvent*) ecalloc(
         1,
         sizeof(zo_wxBookCtrlEvent)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4280,13 +4274,11 @@ zend_object* php_wxChoicebook_new(zend_class_entry *class_type)
 
     zo_wxChoicebook* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxChoicebook*) ecalloc(
         1,
         sizeof(zo_wxChoicebook)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4700,13 +4692,11 @@ zend_object* php_wxListbook_new(zend_class_entry *class_type)
 
     zo_wxListbook* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxListbook*) ecalloc(
         1,
         sizeof(zo_wxListbook)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5120,13 +5110,11 @@ zend_object* php_wxNotebook_new(zend_class_entry *class_type)
 
     zo_wxNotebook* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxNotebook*) ecalloc(
         1,
         sizeof(zo_wxNotebook)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6941,13 +6929,11 @@ zend_object* php_wxToolbook_new(zend_class_entry *class_type)
 
     zo_wxToolbook* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxToolbook*) ecalloc(
         1,
         sizeof(zo_wxToolbook)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7361,13 +7347,11 @@ zend_object* php_wxTreebook_new(zend_class_entry *class_type)
 
     zo_wxTreebook* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxTreebook*) ecalloc(
         1,
         sizeof(zo_wxTreebook)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

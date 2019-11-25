@@ -101,6 +101,13 @@ int wxphp_call_method(
 );
 END_EXTERN_C()
 
+/**
+ * Custom macro to prepare object handlers
+ */
+#define wxPHP_PREPARE_OBJECT_HANDLERS(class_name) \
+    memcpy(&wxphp_##class_name##_object_handlers, zend_get_std_object_handlers(), sizeof(zend_object_handlers)); \
+    wxphp_##class_name##_object_handlers.offset = XtOffsetOf(zo_##class_name, zo);
+
 class wxPhpClientData : public wxClientData
 {
     public:

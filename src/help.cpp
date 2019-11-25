@@ -112,13 +112,11 @@ zend_object* php_wxHtmlHelpController_new(zend_class_entry *class_type)
 
     zo_wxHtmlHelpController* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlHelpController*) ecalloc(
         1,
         sizeof(zo_wxHtmlHelpController)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2001,13 +1999,11 @@ zend_object* php_wxHtmlModalHelp_new(zend_class_entry *class_type)
 
     zo_wxHtmlModalHelp* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlModalHelp*) ecalloc(
         1,
         sizeof(zo_wxHtmlModalHelp)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2218,13 +2214,11 @@ zend_object* php_wxHtmlHelpData_new(zend_class_entry *class_type)
 
     zo_wxHtmlHelpData* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlHelpData*) ecalloc(
         1,
         sizeof(zo_wxHtmlHelpData)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2805,13 +2799,11 @@ zend_object* php_wxHtmlHelpDialog_new(zend_class_entry *class_type)
 
     zo_wxHtmlHelpDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlHelpDialog*) ecalloc(
         1,
         sizeof(zo_wxHtmlHelpDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3756,13 +3748,11 @@ zend_object* php_wxHtmlHelpFrame_new(zend_class_entry *class_type)
 
     zo_wxHtmlHelpFrame* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlHelpFrame*) ecalloc(
         1,
         sizeof(zo_wxHtmlHelpFrame)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4840,13 +4830,11 @@ zend_object* php_wxHtmlHelpWindow_new(zend_class_entry *class_type)
 
     zo_wxHtmlHelpWindow* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxHtmlHelpWindow*) ecalloc(
         1,
         sizeof(zo_wxHtmlHelpWindow)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6721,13 +6709,11 @@ zend_object* php_wxToolTip_new(zend_class_entry *class_type)
 
     zo_wxToolTip* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxToolTip*) ecalloc(
         1,
         sizeof(zo_wxToolTip)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

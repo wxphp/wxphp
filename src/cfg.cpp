@@ -112,13 +112,11 @@ zend_object* php_wxConfigBase_new(zend_class_entry *class_type)
 
     zo_wxConfigBase* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxConfigBase*) ecalloc(
         1,
         sizeof(zo_wxConfigBase)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4556,13 +4554,11 @@ zend_object* php_wxDisplay_new(zend_class_entry *class_type)
 
     zo_wxDisplay* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDisplay*) ecalloc(
         1,
         sizeof(zo_wxDisplay)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5810,13 +5806,11 @@ zend_object* php_wxFileConfig_new(zend_class_entry *class_type)
 
     zo_wxFileConfig* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFileConfig*) ecalloc(
         1,
         sizeof(zo_wxFileConfig)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -8457,13 +8451,11 @@ zend_object* php_wxFontMapper_new(zend_class_entry *class_type)
 
     zo_wxFontMapper* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFontMapper*) ecalloc(
         1,
         sizeof(zo_wxFontMapper)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -10234,13 +10226,11 @@ zend_object* php_wxPlatformInfo_new(zend_class_entry *class_type)
 
     zo_wxPlatformInfo* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPlatformInfo*) ecalloc(
         1,
         sizeof(zo_wxPlatformInfo)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -14323,13 +14313,11 @@ zend_object* php_wxSystemSettings_new(zend_class_entry *class_type)
 
     zo_wxSystemSettings* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxSystemSettings*) ecalloc(
         1,
         sizeof(zo_wxSystemSettings)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -15016,13 +15004,11 @@ zend_object* php_wxSystemOptions_new(zend_class_entry *class_type)
 
     zo_wxSystemOptions* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxSystemOptions*) ecalloc(
         1,
         sizeof(zo_wxSystemOptions)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -15715,13 +15701,11 @@ zend_object* php_wxVideoMode_new(zend_class_entry *class_type)
 
     zo_wxVideoMode* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxVideoMode*) ecalloc(
         1,
         sizeof(zo_wxVideoMode)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

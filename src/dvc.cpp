@@ -112,13 +112,11 @@ zend_object* php_wxDataViewChoiceRenderer_new(zend_class_entry *class_type)
 
     zo_wxDataViewChoiceRenderer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewChoiceRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewChoiceRenderer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -552,13 +550,11 @@ zend_object* php_wxDataViewModel_new(zend_class_entry *class_type)
 
     zo_wxDataViewModel* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewModel*) ecalloc(
         1,
         sizeof(zo_wxDataViewModel)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3828,13 +3824,11 @@ zend_object* php_wxDataViewListModel_new(zend_class_entry *class_type)
 
     zo_wxDataViewListModel* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewListModel*) ecalloc(
         1,
         sizeof(zo_wxDataViewListModel)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4566,13 +4560,11 @@ zend_object* php_wxDataViewIndexListModel_new(zend_class_entry *class_type)
 
     zo_wxDataViewIndexListModel* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewIndexListModel*) ecalloc(
         1,
         sizeof(zo_wxDataViewIndexListModel)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4647,13 +4639,11 @@ zend_object* php_wxDataViewVirtualListModel_new(zend_class_entry *class_type)
 
     zo_wxDataViewVirtualListModel* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewVirtualListModel*) ecalloc(
         1,
         sizeof(zo_wxDataViewVirtualListModel)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4728,13 +4718,11 @@ zend_object* php_wxDataViewItemAttr_new(zend_class_entry *class_type)
 
     zo_wxDataViewItemAttr* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewItemAttr*) ecalloc(
         1,
         sizeof(zo_wxDataViewItemAttr)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5247,13 +5235,11 @@ zend_object* php_wxDataViewItem_new(zend_class_entry *class_type)
 
     zo_wxDataViewItem* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewItem*) ecalloc(
         1,
         sizeof(zo_wxDataViewItem)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5727,13 +5713,11 @@ zend_object* php_wxDataViewModelNotifier_new(zend_class_entry *class_type)
 
     zo_wxDataViewModelNotifier* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewModelNotifier*) ecalloc(
         1,
         sizeof(zo_wxDataViewModelNotifier)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6681,13 +6665,11 @@ zend_object* php_wxDataViewRenderer_new(zend_class_entry *class_type)
 
     zo_wxDataViewRenderer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewRenderer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -8907,13 +8889,11 @@ zend_object* php_wxDataViewTextRenderer_new(zend_class_entry *class_type)
 
     zo_wxDataViewTextRenderer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewTextRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewTextRenderer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9112,13 +9092,11 @@ zend_object* php_wxDataViewIconTextRenderer_new(zend_class_entry *class_type)
 
     zo_wxDataViewIconTextRenderer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewIconTextRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewIconTextRenderer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9317,13 +9295,11 @@ zend_object* php_wxDataViewProgressRenderer_new(zend_class_entry *class_type)
 
     zo_wxDataViewProgressRenderer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewProgressRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewProgressRenderer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9535,13 +9511,11 @@ zend_object* php_wxDataViewSpinRenderer_new(zend_class_entry *class_type)
 
     zo_wxDataViewSpinRenderer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewSpinRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewSpinRenderer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9729,13 +9703,11 @@ zend_object* php_wxDataViewToggleRenderer_new(zend_class_entry *class_type)
 
     zo_wxDataViewToggleRenderer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewToggleRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewToggleRenderer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9934,13 +9906,11 @@ zend_object* php_wxDataViewDateRenderer_new(zend_class_entry *class_type)
 
     zo_wxDataViewDateRenderer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewDateRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewDateRenderer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -10139,13 +10109,11 @@ zend_object* php_wxDataViewCustomRenderer_new(zend_class_entry *class_type)
 
     zo_wxDataViewCustomRenderer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewCustomRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewCustomRenderer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -11599,13 +11567,11 @@ zend_object* php_wxDataViewBitmapRenderer_new(zend_class_entry *class_type)
 
     zo_wxDataViewBitmapRenderer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewBitmapRenderer*) ecalloc(
         1,
         sizeof(zo_wxDataViewBitmapRenderer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -11804,13 +11770,11 @@ zend_object* php_wxDataViewColumn_new(zend_class_entry *class_type)
 
     zo_wxDataViewColumn* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewColumn*) ecalloc(
         1,
         sizeof(zo_wxDataViewColumn)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -12522,13 +12486,11 @@ zend_object* php_wxDataViewListStore_new(zend_class_entry *class_type)
 
     zo_wxDataViewListStore* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewListStore*) ecalloc(
         1,
         sizeof(zo_wxDataViewListStore)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -13732,13 +13694,11 @@ zend_object* php_wxDataViewTreeStore_new(zend_class_entry *class_type)
 
     zo_wxDataViewTreeStore* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewTreeStore*) ecalloc(
         1,
         sizeof(zo_wxDataViewTreeStore)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17074,13 +17034,11 @@ zend_object* php_wxDataViewIconText_new(zend_class_entry *class_type)
 
     zo_wxDataViewIconText* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewIconText*) ecalloc(
         1,
         sizeof(zo_wxDataViewIconText)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17824,13 +17782,11 @@ zend_object* php_wxDataViewEvent_new(zend_class_entry *class_type)
 
     zo_wxDataViewEvent* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataViewEvent*) ecalloc(
         1,
         sizeof(zo_wxDataViewEvent)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

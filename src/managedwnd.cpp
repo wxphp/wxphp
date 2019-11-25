@@ -80,13 +80,11 @@ zend_object* php_wxFrame_new(zend_class_entry *class_type)
 
     zo_wxFrame* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFrame*) ecalloc(
         1,
         sizeof(zo_wxFrame)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4132,13 +4130,11 @@ zend_object* php_wxMDIClientWindow_new(zend_class_entry *class_type)
 
     zo_wxMDIClientWindow* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxMDIClientWindow*) ecalloc(
         1,
         sizeof(zo_wxMDIClientWindow)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4409,13 +4405,11 @@ zend_object* php_wxMDIParentFrame_new(zend_class_entry *class_type)
 
     zo_wxMDIParentFrame* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxMDIParentFrame*) ecalloc(
         1,
         sizeof(zo_wxMDIParentFrame)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6077,13 +6071,11 @@ zend_object* php_wxMDIChildFrame_new(zend_class_entry *class_type)
 
     zo_wxMDIChildFrame* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxMDIChildFrame*) ecalloc(
         1,
         sizeof(zo_wxMDIChildFrame)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7175,13 +7167,11 @@ zend_object* php_wxMiniFrame_new(zend_class_entry *class_type)
 
     zo_wxMiniFrame* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxMiniFrame*) ecalloc(
         1,
         sizeof(zo_wxMiniFrame)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7733,13 +7723,11 @@ zend_object* php_wxPopupWindow_new(zend_class_entry *class_type)
 
     zo_wxPopupWindow* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPopupWindow*) ecalloc(
         1,
         sizeof(zo_wxPopupWindow)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -8241,13 +8229,11 @@ zend_object* php_wxPopupTransientWindow_new(zend_class_entry *class_type)
 
     zo_wxPopupTransientWindow* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPopupTransientWindow*) ecalloc(
         1,
         sizeof(zo_wxPopupTransientWindow)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -8791,13 +8777,11 @@ zend_object* php_wxPropertySheetDialog_new(zend_class_entry *class_type)
 
     zo_wxPropertySheetDialog* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPropertySheetDialog*) ecalloc(
         1,
         sizeof(zo_wxPropertySheetDialog)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -10399,13 +10383,11 @@ zend_object* php_wxSplashScreen_new(zend_class_entry *class_type)
 
     zo_wxSplashScreen* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxSplashScreen*) ecalloc(
         1,
         sizeof(zo_wxSplashScreen)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -10910,13 +10892,11 @@ zend_object* php_wxTopLevelWindow_new(zend_class_entry *class_type)
 
     zo_wxTopLevelWindow* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxTopLevelWindow*) ecalloc(
         1,
         sizeof(zo_wxTopLevelWindow)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

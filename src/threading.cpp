@@ -112,13 +112,11 @@ zend_object* php_wxCondition_new(zend_class_entry *class_type)
 
     zo_wxCondition* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxCondition*) ecalloc(
         1,
         sizeof(zo_wxCondition)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -840,13 +838,11 @@ zend_object* php_wxCriticalSectionLocker_new(zend_class_entry *class_type)
 
     zo_wxCriticalSectionLocker* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxCriticalSectionLocker*) ecalloc(
         1,
         sizeof(zo_wxCriticalSectionLocker)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1028,13 +1024,11 @@ zend_object* php_wxThreadHelper_new(zend_class_entry *class_type)
 
     zo_wxThreadHelper* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxThreadHelper*) ecalloc(
         1,
         sizeof(zo_wxThreadHelper)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1388,13 +1382,11 @@ zend_object* php_wxCriticalSection_new(zend_class_entry *class_type)
 
     zo_wxCriticalSection* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxCriticalSection*) ecalloc(
         1,
         sizeof(zo_wxCriticalSection)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1860,13 +1852,11 @@ zend_object* php_wxThread_new(zend_class_entry *class_type)
 
     zo_wxThread* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxThread*) ecalloc(
         1,
         sizeof(zo_wxThread)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4799,13 +4789,11 @@ zend_object* php_wxSemaphore_new(zend_class_entry *class_type)
 
     zo_wxSemaphore* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxSemaphore*) ecalloc(
         1,
         sizeof(zo_wxSemaphore)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5424,13 +5412,11 @@ zend_object* php_wxMutexLocker_new(zend_class_entry *class_type)
 
     zo_wxMutexLocker* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxMutexLocker*) ecalloc(
         1,
         sizeof(zo_wxMutexLocker)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5719,13 +5705,11 @@ zend_object* php_wxMutex_new(zend_class_entry *class_type)
 
     zo_wxMutex* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxMutex*) ecalloc(
         1,
         sizeof(zo_wxMutex)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

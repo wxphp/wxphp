@@ -112,13 +112,11 @@ zend_object* php_wxAuiToolBarEvent_new(zend_class_entry *class_type)
 
     zo_wxAuiToolBarEvent* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiToolBarEvent*) ecalloc(
         1,
         sizeof(zo_wxAuiToolBarEvent)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -649,13 +647,11 @@ zend_object* php_wxAuiToolBarItem_new(zend_class_entry *class_type)
 
     zo_wxAuiToolBarItem* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiToolBarItem*) ecalloc(
         1,
         sizeof(zo_wxAuiToolBarItem)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5382,13 +5378,11 @@ zend_object* php_wxAuiToolBarArt_new(zend_class_entry *class_type)
 
     zo_wxAuiToolBarArt* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiToolBarArt*) ecalloc(
         1,
         sizeof(zo_wxAuiToolBarArt)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7215,13 +7209,11 @@ zend_object* php_wxAuiDefaultToolBarArt_new(zend_class_entry *class_type)
 
     zo_wxAuiDefaultToolBarArt* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiDefaultToolBarArt*) ecalloc(
         1,
         sizeof(zo_wxAuiDefaultToolBarArt)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -10174,13 +10166,11 @@ zend_object* php_wxAuiToolBar_new(zend_class_entry *class_type)
 
     zo_wxAuiToolBar* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiToolBar*) ecalloc(
         1,
         sizeof(zo_wxAuiToolBar)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -18313,13 +18303,11 @@ zend_object* php_wxAuiNotebook_new(zend_class_entry *class_type)
 
     zo_wxAuiNotebook* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiNotebook*) ecalloc(
         1,
         sizeof(zo_wxAuiNotebook)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -22385,13 +22373,11 @@ zend_object* php_wxAuiTabArt_new(zend_class_entry *class_type)
 
     zo_wxAuiTabArt* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiTabArt*) ecalloc(
         1,
         sizeof(zo_wxAuiTabArt)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -23577,13 +23563,11 @@ zend_object* php_wxAuiDockArt_new(zend_class_entry *class_type)
 
     zo_wxAuiDockArt* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiDockArt*) ecalloc(
         1,
         sizeof(zo_wxAuiDockArt)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -24860,13 +24844,11 @@ zend_object* php_wxAuiManager_new(zend_class_entry *class_type)
 
     zo_wxAuiManager* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiManager*) ecalloc(
         1,
         sizeof(zo_wxAuiManager)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -28104,13 +28086,11 @@ zend_object* php_wxAuiPaneInfo_new(zend_class_entry *class_type)
 
     zo_wxAuiPaneInfo* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiPaneInfo*) ecalloc(
         1,
         sizeof(zo_wxAuiPaneInfo)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -38179,13 +38159,11 @@ zend_object* php_wxAuiManagerEvent_new(zend_class_entry *class_type)
 
     zo_wxAuiManagerEvent* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxAuiManagerEvent*) ecalloc(
         1,
         sizeof(zo_wxAuiManagerEvent)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

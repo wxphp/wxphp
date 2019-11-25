@@ -83,13 +83,11 @@ zend_object* php_wxMediaCtrl_new(zend_class_entry *class_type)
 
     zo_wxMediaCtrl* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxMediaCtrl*) ecalloc(
         1,
         sizeof(zo_wxMediaCtrl)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2689,13 +2687,11 @@ zend_object* php_wxSound_new(zend_class_entry *class_type)
 
     zo_wxSound* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxSound*) ecalloc(
         1,
         sizeof(zo_wxSound)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

@@ -1,7 +1,7 @@
 <?=proto_begin($function_name)?>
 PHP_FUNCTION(php_wxDynamicCast)
 {
-    zval* object;
+    zval object;
     char* object_type;
     size_t object_type_len = 0;
     void* native_object = 0;
@@ -19,10 +19,10 @@ PHP_FUNCTION(php_wxDynamicCast)
         ) == SUCCESS
     )
     {
-        if(Z_TYPE_P(object) == IS_OBJECT)
+        if(Z_TYPE(object) == IS_OBJECT)
         {
             native_object = (void*)
-                Z_wxObject_P(object)->native_object
+                Z_wxObject_P(&object)->native_object
             ;
 
             if(!native_object)

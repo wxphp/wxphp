@@ -112,13 +112,11 @@ zend_object* php_wxXmlResourceHandler_new(zend_class_entry *class_type)
 
     zo_wxXmlResourceHandler* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxXmlResourceHandler*) ecalloc(
         1,
         sizeof(zo_wxXmlResourceHandler)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -782,13 +780,11 @@ zend_object* php_wxXmlResource_new(zend_class_entry *class_type)
 
     zo_wxXmlResource* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxXmlResource*) ecalloc(
         1,
         sizeof(zo_wxXmlResource)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

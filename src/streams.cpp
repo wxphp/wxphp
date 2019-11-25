@@ -112,13 +112,11 @@ zend_object* php_wxDataOutputStream_new(zend_class_entry *class_type)
 
     zo_wxDataOutputStream* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataOutputStream*) ecalloc(
         1,
         sizeof(zo_wxDataOutputStream)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1086,13 +1084,11 @@ zend_object* php_wxDataInputStream_new(zend_class_entry *class_type)
 
     zo_wxDataInputStream* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDataInputStream*) ecalloc(
         1,
         sizeof(zo_wxDataInputStream)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2020,13 +2016,11 @@ zend_object* php_wxStreamBase_new(zend_class_entry *class_type)
 
     zo_wxStreamBase* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxStreamBase*) ecalloc(
         1,
         sizeof(zo_wxStreamBase)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3214,13 +3208,11 @@ zend_object* php_wxOutputStream_new(zend_class_entry *class_type)
 
     zo_wxOutputStream* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxOutputStream*) ecalloc(
         1,
         sizeof(zo_wxOutputStream)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4245,13 +4237,11 @@ zend_object* php_wxInputStream_new(zend_class_entry *class_type)
 
     zo_wxInputStream* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxInputStream*) ecalloc(
         1,
         sizeof(zo_wxInputStream)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5789,13 +5779,11 @@ zend_object* php_wxFFileOutputStream_new(zend_class_entry *class_type)
 
     zo_wxFFileOutputStream* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFFileOutputStream*) ecalloc(
         1,
         sizeof(zo_wxFFileOutputStream)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6141,13 +6129,11 @@ zend_object* php_wxFileOutputStream_new(zend_class_entry *class_type)
 
     zo_wxFileOutputStream* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFileOutputStream*) ecalloc(
         1,
         sizeof(zo_wxFileOutputStream)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6519,13 +6505,11 @@ zend_object* php_wxFileInputStream_new(zend_class_entry *class_type)
 
     zo_wxFileInputStream* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFileInputStream*) ecalloc(
         1,
         sizeof(zo_wxFileInputStream)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6897,13 +6881,11 @@ zend_object* php_wxFFileInputStream_new(zend_class_entry *class_type)
 
     zo_wxFFileInputStream* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFFileInputStream*) ecalloc(
         1,
         sizeof(zo_wxFFileInputStream)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7249,13 +7231,11 @@ zend_object* php_wxFFileStream_new(zend_class_entry *class_type)
 
     zo_wxFFileStream* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFFileStream*) ecalloc(
         1,
         sizeof(zo_wxFFileStream)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7539,13 +7519,11 @@ zend_object* php_wxFileStream_new(zend_class_entry *class_type)
 
     zo_wxFileStream* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFileStream*) ecalloc(
         1,
         sizeof(zo_wxFileStream)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

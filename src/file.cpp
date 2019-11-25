@@ -112,13 +112,11 @@ zend_object* php_wxFFile_new(zend_class_entry *class_type)
 
     zo_wxFFile* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFFile*) ecalloc(
         1,
         sizeof(zo_wxFFile)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1794,13 +1792,11 @@ zend_object* php_wxFile_new(zend_class_entry *class_type)
 
     zo_wxFile* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFile*) ecalloc(
         1,
         sizeof(zo_wxFile)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4208,13 +4204,11 @@ zend_object* php_wxPathList_new(zend_class_entry *class_type)
 
     zo_wxPathList* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPathList*) ecalloc(
         1,
         sizeof(zo_wxPathList)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5056,13 +5050,11 @@ zend_object* php_wxFileName_new(zend_class_entry *class_type)
 
     zo_wxFileName* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFileName*) ecalloc(
         1,
         sizeof(zo_wxFileName)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -15371,13 +15363,11 @@ zend_object* php_wxFSFile_new(zend_class_entry *class_type)
 
     zo_wxFSFile* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFSFile*) ecalloc(
         1,
         sizeof(zo_wxFSFile)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -16262,13 +16252,11 @@ zend_object* php_wxFileSystemWatcher_new(zend_class_entry *class_type)
 
     zo_wxFileSystemWatcher* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFileSystemWatcher*) ecalloc(
         1,
         sizeof(zo_wxFileSystemWatcher)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -17338,13 +17326,11 @@ zend_object* php_wxStandardPaths_new(zend_class_entry *class_type)
 
     zo_wxStandardPaths* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxStandardPaths*) ecalloc(
         1,
         sizeof(zo_wxStandardPaths)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

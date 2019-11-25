@@ -83,13 +83,11 @@ zend_object* php_wxColourPickerCtrl_new(zend_class_entry *class_type)
 
     zo_wxColourPickerCtrl* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxColourPickerCtrl*) ecalloc(
         1,
         sizeof(zo_wxColourPickerCtrl)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -1004,13 +1002,11 @@ zend_object* php_wxDatePickerCtrl_new(zend_class_entry *class_type)
 
     zo_wxDatePickerCtrl* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDatePickerCtrl*) ecalloc(
         1,
         sizeof(zo_wxDatePickerCtrl)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -2046,13 +2042,11 @@ zend_object* php_wxFilePickerCtrl_new(zend_class_entry *class_type)
 
     zo_wxFilePickerCtrl* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFilePickerCtrl*) ecalloc(
         1,
         sizeof(zo_wxFilePickerCtrl)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3159,13 +3153,11 @@ zend_object* php_wxDirPickerCtrl_new(zend_class_entry *class_type)
 
     zo_wxDirPickerCtrl* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxDirPickerCtrl*) ecalloc(
         1,
         sizeof(zo_wxDirPickerCtrl)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4243,13 +4235,11 @@ zend_object* php_wxFontPickerCtrl_new(zend_class_entry *class_type)
 
     zo_wxFontPickerCtrl* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFontPickerCtrl*) ecalloc(
         1,
         sizeof(zo_wxFontPickerCtrl)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -5342,13 +5332,11 @@ zend_object* php_wxPickerBase_new(zend_class_entry *class_type)
 
     zo_wxPickerBase* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxPickerBase*) ecalloc(
         1,
         sizeof(zo_wxPickerBase)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7381,13 +7369,11 @@ zend_object* php_wxTimePickerCtrl_new(zend_class_entry *class_type)
 
     zo_wxTimePickerCtrl* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxTimePickerCtrl*) ecalloc(
         1,
         sizeof(zo_wxTimePickerCtrl)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

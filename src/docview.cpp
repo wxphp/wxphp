@@ -112,13 +112,11 @@ zend_object* php_wxFileHistory_new(zend_class_entry *class_type)
 
     zo_wxFileHistory* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFileHistory*) ecalloc(
         1,
         sizeof(zo_wxFileHistory)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

@@ -112,13 +112,11 @@ zend_object* php_wxGBPosition_new(zend_class_entry *class_type)
 
     zo_wxGBPosition* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxGBPosition*) ecalloc(
         1,
         sizeof(zo_wxGBPosition)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -725,13 +723,11 @@ zend_object* php_wxGridBagSizer_new(zend_class_entry *class_type)
 
     zo_wxGridBagSizer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxGridBagSizer*) ecalloc(
         1,
         sizeof(zo_wxGridBagSizer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -4577,13 +4573,11 @@ zend_object* php_wxGBSizerItem_new(zend_class_entry *class_type)
 
     zo_wxGBSizerItem* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxGBSizerItem*) ecalloc(
         1,
         sizeof(zo_wxGBSizerItem)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -6385,13 +6379,11 @@ zend_object* php_wxGBSpan_new(zend_class_entry *class_type)
 
     zo_wxGBSpan* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxGBSpan*) ecalloc(
         1,
         sizeof(zo_wxGBSpan)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7027,13 +7019,11 @@ zend_object* php_wxLayoutAlgorithm_new(zend_class_entry *class_type)
 
     zo_wxLayoutAlgorithm* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxLayoutAlgorithm*) ecalloc(
         1,
         sizeof(zo_wxLayoutAlgorithm)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -7683,13 +7673,11 @@ zend_object* php_wxSizer_new(zend_class_entry *class_type)
 
     zo_wxSizer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxSizer*) ecalloc(
         1,
         sizeof(zo_wxSizer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -18636,13 +18624,11 @@ zend_object* php_wxStdDialogButtonSizer_new(zend_class_entry *class_type)
 
     zo_wxStdDialogButtonSizer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxStdDialogButtonSizer*) ecalloc(
         1,
         sizeof(zo_wxStdDialogButtonSizer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -19652,13 +19638,11 @@ zend_object* php_wxSizerItem_new(zend_class_entry *class_type)
 
     zo_wxSizerItem* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxSizerItem*) ecalloc(
         1,
         sizeof(zo_wxSizerItem)
         + zend_object_properties_size(class_type)
-        + 16    );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -24458,13 +24442,11 @@ zend_object* php_wxSizerFlags_new(zend_class_entry *class_type)
 
     zo_wxSizerFlags* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxSizerFlags*) ecalloc(
         1,
         sizeof(zo_wxSizerFlags)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -26931,13 +26913,11 @@ zend_object* php_wxFlexGridSizer_new(zend_class_entry *class_type)
 
     zo_wxFlexGridSizer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxFlexGridSizer*) ecalloc(
         1,
         sizeof(zo_wxFlexGridSizer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -28650,13 +28630,11 @@ zend_object* php_wxGridSizer_new(zend_class_entry *class_type)
 
     zo_wxGridSizer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxGridSizer*) ecalloc(
         1,
         sizeof(zo_wxGridSizer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -30371,13 +30349,11 @@ zend_object* php_wxStaticBoxSizer_new(zend_class_entry *class_type)
 
     zo_wxStaticBoxSizer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxStaticBoxSizer*) ecalloc(
         1,
         sizeof(zo_wxStaticBoxSizer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -30955,13 +30931,11 @@ zend_object* php_wxBoxSizer_new(zend_class_entry *class_type)
 
     zo_wxBoxSizer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxBoxSizer*) ecalloc(
         1,
         sizeof(zo_wxBoxSizer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -31606,13 +31580,11 @@ zend_object* php_wxWrapSizer_new(zend_class_entry *class_type)
 
     zo_wxWrapSizer* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxWrapSizer*) ecalloc(
         1,
         sizeof(zo_wxWrapSizer)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

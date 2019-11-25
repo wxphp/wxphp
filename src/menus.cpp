@@ -83,13 +83,11 @@ zend_object* php_wxMenuBar_new(zend_class_entry *class_type)
 
     zo_wxMenuBar* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxMenuBar*) ecalloc(
         1,
         sizeof(zo_wxMenuBar)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -3251,13 +3249,11 @@ zend_object* php_wxMenu_new(zend_class_entry *class_type)
 
     zo_wxMenu* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxMenu*) ecalloc(
         1,
         sizeof(zo_wxMenu)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);
@@ -9757,13 +9753,11 @@ zend_object* php_wxMenuItem_new(zend_class_entry *class_type)
 
     zo_wxMenuItem* custom_object;
 
-    // For some reason zend_object_properties_size()
-    // can go negative which leads to segfaults so we use abs().
     custom_object = (zo_wxMenuItem*) ecalloc(
         1,
         sizeof(zo_wxMenuItem)
         + zend_object_properties_size(class_type)
-            );
+    );
 
     zend_object_std_init(&custom_object->zo, class_type);
     object_properties_init(&custom_object->zo, class_type);

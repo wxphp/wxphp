@@ -46,7 +46,8 @@ PHP_METHOD(php_wxWindow, GetHandle)
     void* argument_native_object = NULL;
 
     //Other variables used thru the code
-    zval* dummy = NULL;
+    zval dummy;
+    ZVAL_NULL(&dummy);
     bool already_called = false;
     wxPHPObjectReferences* references;
     int arguments_received = ZEND_NUM_ARGS();
