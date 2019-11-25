@@ -40044,9 +40044,9 @@ PHP_METHOD(php_wxPalette, __construct)
 
     //Parameters for overload 2
     long n2;
-    zval red2;
-    zval green2;
-    zval blue2;
+    zval* red2;
+    zval* green2;
+    zval* blue2;
     bool overload2_called = false;
 
     
@@ -40103,11 +40103,11 @@ PHP_METHOD(php_wxPalette, __construct)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'laaa' (&n2, red2, green2, blue2)\n");
+        php_printf("Parsing parameters with 'laaa' (&n2, &red2, &green2, &blue2)\n");
         #endif
 
         char parse_parameters_string[] = "laaa";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &n2, red2, green2, blue2 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &n2, &red2, &green2, &blue2 ) == SUCCESS)
         {
             overload2_called = true;
             already_called = true;
@@ -40158,7 +40158,7 @@ PHP_METHOD(php_wxPalette, __construct)
         HashTable* arr_hash2_1;
         if(arguments_received > 1)
         {
-            arr_hash2_1 = Z_ARRVAL(red2);
+            arr_hash2_1 = Z_ARRVAL_P(red2);
             array_count2_1 = zend_hash_num_elements(arr_hash2_1);
         }
         unsigned char* integers_array2_1 = new unsigned char[array_count2_1];
@@ -40168,7 +40168,7 @@ PHP_METHOD(php_wxPalette, __construct)
         HashTable* arr_hash2_2;
         if(arguments_received > 2)
         {
-            arr_hash2_2 = Z_ARRVAL(green2);
+            arr_hash2_2 = Z_ARRVAL_P(green2);
             array_count2_2 = zend_hash_num_elements(arr_hash2_2);
         }
         unsigned char* integers_array2_2 = new unsigned char[array_count2_2];
@@ -40178,7 +40178,7 @@ PHP_METHOD(php_wxPalette, __construct)
         HashTable* arr_hash2_3;
         if(arguments_received > 3)
         {
-            arr_hash2_3 = Z_ARRVAL(blue2);
+            arr_hash2_3 = Z_ARRVAL_P(blue2);
             array_count2_3 = zend_hash_num_elements(arr_hash2_3);
         }
         unsigned char* integers_array2_3 = new unsigned char[array_count2_3];
@@ -40192,7 +40192,7 @@ PHP_METHOD(php_wxPalette, __construct)
                 zval* temp_array_value2_1 = 0;
                 while(integers_continue2_1)
                 {
-                    if((temp_array_value2_1 = zend_hash_index_find(HASH_OF(&red2), array_index2_1)) != NULL)
+                    if((temp_array_value2_1 = zend_hash_index_find(HASH_OF(red2), array_index2_1)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value2_1);
                         integers_array2_1[array_index2_1] = (unsigned char) Z_LVAL_P(temp_array_value2_1);
@@ -40207,7 +40207,7 @@ PHP_METHOD(php_wxPalette, __construct)
                 zval* temp_array_value2_2 = 0;
                 while(integers_continue2_2)
                 {
-                    if((temp_array_value2_2 = zend_hash_index_find(HASH_OF(&green2), array_index2_2)) != NULL)
+                    if((temp_array_value2_2 = zend_hash_index_find(HASH_OF(green2), array_index2_2)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value2_2);
                         integers_array2_2[array_index2_2] = (unsigned char) Z_LVAL_P(temp_array_value2_2);
@@ -40222,7 +40222,7 @@ PHP_METHOD(php_wxPalette, __construct)
                 zval* temp_array_value2_3 = 0;
                 while(integers_continue2_3)
                 {
-                    if((temp_array_value2_3 = zend_hash_index_find(HASH_OF(&blue2), array_index2_3)) != NULL)
+                    if((temp_array_value2_3 = zend_hash_index_find(HASH_OF(blue2), array_index2_3)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value2_3);
                         integers_array2_3[array_index2_3] = (unsigned char) Z_LVAL_P(temp_array_value2_3);
@@ -40659,9 +40659,9 @@ PHP_METHOD(php_wxPalette, Create)
 
     //Parameters for overload 0
     long n0;
-    zval red0;
-    zval green0;
-    zval blue0;
+    zval* red0;
+    zval* green0;
+    zval* blue0;
     bool overload0_called = false;
 
     
@@ -40671,11 +40671,11 @@ PHP_METHOD(php_wxPalette, Create)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'laaa' (&n0, red0, green0, blue0)\n");
+        php_printf("Parsing parameters with 'laaa' (&n0, &red0, &green0, &blue0)\n");
         #endif
 
         char parse_parameters_string[] = "laaa";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &n0, red0, green0, blue0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &n0, &red0, &green0, &blue0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -40689,7 +40689,7 @@ PHP_METHOD(php_wxPalette, Create)
         HashTable* arr_hash0_1;
         if(arguments_received > 1)
         {
-            arr_hash0_1 = Z_ARRVAL(red0);
+            arr_hash0_1 = Z_ARRVAL_P(red0);
             array_count0_1 = zend_hash_num_elements(arr_hash0_1);
         }
         unsigned char* integers_array0_1 = new unsigned char[array_count0_1];
@@ -40699,7 +40699,7 @@ PHP_METHOD(php_wxPalette, Create)
         HashTable* arr_hash0_2;
         if(arguments_received > 2)
         {
-            arr_hash0_2 = Z_ARRVAL(green0);
+            arr_hash0_2 = Z_ARRVAL_P(green0);
             array_count0_2 = zend_hash_num_elements(arr_hash0_2);
         }
         unsigned char* integers_array0_2 = new unsigned char[array_count0_2];
@@ -40709,7 +40709,7 @@ PHP_METHOD(php_wxPalette, Create)
         HashTable* arr_hash0_3;
         if(arguments_received > 3)
         {
-            arr_hash0_3 = Z_ARRVAL(blue0);
+            arr_hash0_3 = Z_ARRVAL_P(blue0);
             array_count0_3 = zend_hash_num_elements(arr_hash0_3);
         }
         unsigned char* integers_array0_3 = new unsigned char[array_count0_3];
@@ -40723,7 +40723,7 @@ PHP_METHOD(php_wxPalette, Create)
                 zval* temp_array_value0_1 = 0;
                 while(integers_continue0_1)
                 {
-                    if((temp_array_value0_1 = zend_hash_index_find(HASH_OF(&red0), array_index0_1)) != NULL)
+                    if((temp_array_value0_1 = zend_hash_index_find(HASH_OF(red0), array_index0_1)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_1);
                         integers_array0_1[array_index0_1] = (unsigned char) Z_LVAL_P(temp_array_value0_1);
@@ -40738,7 +40738,7 @@ PHP_METHOD(php_wxPalette, Create)
                 zval* temp_array_value0_2 = 0;
                 while(integers_continue0_2)
                 {
-                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(&green0), array_index0_2)) != NULL)
+                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(green0), array_index0_2)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_2);
                         integers_array0_2[array_index0_2] = (unsigned char) Z_LVAL_P(temp_array_value0_2);
@@ -40753,7 +40753,7 @@ PHP_METHOD(php_wxPalette, Create)
                 zval* temp_array_value0_3 = 0;
                 while(integers_continue0_3)
                 {
-                    if((temp_array_value0_3 = zend_hash_index_find(HASH_OF(&blue0), array_index0_3)) != NULL)
+                    if((temp_array_value0_3 = zend_hash_index_find(HASH_OF(blue0), array_index0_3)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_3);
                         integers_array0_3[array_index0_3] = (unsigned char) Z_LVAL_P(temp_array_value0_3);

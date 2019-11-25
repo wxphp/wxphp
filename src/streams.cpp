@@ -785,7 +785,7 @@ PHP_METHOD(php_wxDataOutputStream, WriteDouble)
     bool overload0_called = false;
 
     //Parameters for overload 1
-    zval buffer1;
+    zval* buffer1;
     long size1;
     bool overload1_called = false;
 
@@ -813,11 +813,11 @@ PHP_METHOD(php_wxDataOutputStream, WriteDouble)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'al' (buffer1, &size1)\n");
+        php_printf("Parsing parameters with 'al' (&buffer1, &size1)\n");
         #endif
 
         char parse_parameters_string[] = "al";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, buffer1, &size1 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &buffer1, &size1 ) == SUCCESS)
         {
             overload1_called = true;
             already_called = true;
@@ -853,7 +853,7 @@ PHP_METHOD(php_wxDataOutputStream, WriteDouble)
         HashTable* arr_hash1_0;
         if(arguments_received > 0)
         {
-            arr_hash1_0 = Z_ARRVAL(buffer1);
+            arr_hash1_0 = Z_ARRVAL_P(buffer1);
             array_count1_0 = zend_hash_num_elements(arr_hash1_0);
         }
         double* floats_array1_0 = new double[array_count1_0];
@@ -867,7 +867,7 @@ PHP_METHOD(php_wxDataOutputStream, WriteDouble)
                 zval* temp_array_value1_0 = 0;
                 while(floats_continue1_0)
                 {
-                    if((temp_array_value1_0 = zend_hash_index_find(HASH_OF(&buffer1), array_index1_0)) != NULL)
+                    if((temp_array_value1_0 = zend_hash_index_find(HASH_OF(buffer1), array_index1_0)) != NULL)
                     {
                         convert_to_double_ex(temp_array_value1_0);
                         floats_array1_0[array_index1_0] = (double) Z_DVAL_P(temp_array_value1_0);

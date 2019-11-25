@@ -3386,7 +3386,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
     char* caption0;
     size_t caption_len0;
     long n0;
-    zval choices0;
+    zval* choices0;
     char* clientData0;
     size_t clientData_len0;
     zval clientData0_ref;
@@ -3418,11 +3418,11 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'zssla|slO' (&parent0, &message0, &message_len0, &caption0, &caption_len0, &n0, choices0, &clientData0, &clientData_len0, &style0, &pos0, php_wxPoint_entry)\n");
+        php_printf("Parsing parameters with 'zssla|slO' (&parent0, &message0, &message_len0, &caption0, &caption_len0, &n0, &choices0, &clientData0, &clientData_len0, &style0, &pos0, php_wxPoint_entry)\n");
         #endif
 
         char parse_parameters_string[] = "zssla|slO";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &message0, &message_len0, &caption0, &caption_len0, &n0, choices0, &clientData0, &clientData_len0, &style0, &pos0, php_wxPoint_entry ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &parent0, &message0, &message_len0, &caption0, &caption_len0, &n0, &choices0, &clientData0, &clientData_len0, &style0, &pos0, php_wxPoint_entry ) == SUCCESS)
         {
             if(arguments_received >= 1){
                 if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -3527,7 +3527,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
         HashTable* arr_hash0_4;
         if(arguments_received > 4)
         {
-            arr_hash0_4 = Z_ARRVAL(choices0);
+            arr_hash0_4 = Z_ARRVAL_P(choices0);
             array_count0_4 = zend_hash_num_elements(arr_hash0_4);
         }
         wxString* strings_array0_4 = new wxString[array_count0_4];
@@ -3541,7 +3541,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
                 zval* temp_array_value0_4 = 0;
                 while(strings_continue0_4)
                 {
-                    if((temp_array_value0_4 = zend_hash_index_find(HASH_OF(&choices0), array_index0_4)) != NULL)
+                    if((temp_array_value0_4 = zend_hash_index_find(HASH_OF(choices0), array_index0_4)) != NULL)
                     {
                         convert_to_string(temp_array_value0_4);
                         strings_array0_4[array_index0_4] = wxString(Z_STRVAL_P(temp_array_value0_4), wxConvUTF8);
@@ -3568,7 +3568,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
                 zval* temp_array_value0_4 = 0;
                 while(strings_continue0_4)
                 {
-                    if((temp_array_value0_4 = zend_hash_index_find(HASH_OF(&choices0), array_index0_4)) != NULL)
+                    if((temp_array_value0_4 = zend_hash_index_find(HASH_OF(choices0), array_index0_4)) != NULL)
                     {
                         convert_to_string(temp_array_value0_4);
                         strings_array0_4[array_index0_4] = wxString(Z_STRVAL_P(temp_array_value0_4), wxConvUTF8);
@@ -3595,7 +3595,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
                 zval* temp_array_value0_4 = 0;
                 while(strings_continue0_4)
                 {
-                    if((temp_array_value0_4 = zend_hash_index_find(HASH_OF(&choices0), array_index0_4)) != NULL)
+                    if((temp_array_value0_4 = zend_hash_index_find(HASH_OF(choices0), array_index0_4)) != NULL)
                     {
                         convert_to_string(temp_array_value0_4);
                         strings_array0_4[array_index0_4] = wxString(Z_STRVAL_P(temp_array_value0_4), wxConvUTF8);
@@ -3622,7 +3622,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
                 zval* temp_array_value0_4 = 0;
                 while(strings_continue0_4)
                 {
-                    if((temp_array_value0_4 = zend_hash_index_find(HASH_OF(&choices0), array_index0_4)) != NULL)
+                    if((temp_array_value0_4 = zend_hash_index_find(HASH_OF(choices0), array_index0_4)) != NULL)
                     {
                         convert_to_string(temp_array_value0_4);
                         strings_array0_4[array_index0_4] = wxString(Z_STRVAL_P(temp_array_value0_4), wxConvUTF8);

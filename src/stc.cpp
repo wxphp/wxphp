@@ -59819,7 +59819,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineRGBAImage)
 
     //Parameters for overload 0
     long markerNumber0;
-    zval pixels0;
+    zval* pixels0;
     bool overload0_called = false;
 
     
@@ -59829,11 +59829,11 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineRGBAImage)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'la' (&markerNumber0, pixels0)\n");
+        php_printf("Parsing parameters with 'la' (&markerNumber0, &pixels0)\n");
         #endif
 
         char parse_parameters_string[] = "la";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &markerNumber0, pixels0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &markerNumber0, &pixels0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -59847,7 +59847,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineRGBAImage)
         HashTable* arr_hash0_1;
         if(arguments_received > 1)
         {
-            arr_hash0_1 = Z_ARRVAL(pixels0);
+            arr_hash0_1 = Z_ARRVAL_P(pixels0);
             array_count0_1 = zend_hash_num_elements(arr_hash0_1);
         }
         unsigned char* integers_array0_1 = new unsigned char[array_count0_1];
@@ -59861,7 +59861,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineRGBAImage)
                 zval* temp_array_value0_1 = 0;
                 while(integers_continue0_1)
                 {
-                    if((temp_array_value0_1 = zend_hash_index_find(HASH_OF(&pixels0), array_index0_1)) != NULL)
+                    if((temp_array_value0_1 = zend_hash_index_find(HASH_OF(pixels0), array_index0_1)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_1);
                         integers_array0_1[array_index0_1] = (unsigned char) Z_LVAL_P(temp_array_value0_1);
@@ -66741,7 +66741,7 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterRGBAImage)
 
     //Parameters for overload 0
     long type0;
-    zval pixels0;
+    zval* pixels0;
     bool overload0_called = false;
 
     
@@ -66751,11 +66751,11 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterRGBAImage)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'la' (&type0, pixels0)\n");
+        php_printf("Parsing parameters with 'la' (&type0, &pixels0)\n");
         #endif
 
         char parse_parameters_string[] = "la";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &type0, pixels0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &type0, &pixels0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -66769,7 +66769,7 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterRGBAImage)
         HashTable* arr_hash0_1;
         if(arguments_received > 1)
         {
-            arr_hash0_1 = Z_ARRVAL(pixels0);
+            arr_hash0_1 = Z_ARRVAL_P(pixels0);
             array_count0_1 = zend_hash_num_elements(arr_hash0_1);
         }
         unsigned char* integers_array0_1 = new unsigned char[array_count0_1];
@@ -66783,7 +66783,7 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterRGBAImage)
                 zval* temp_array_value0_1 = 0;
                 while(integers_continue0_1)
                 {
-                    if((temp_array_value0_1 = zend_hash_index_find(HASH_OF(&pixels0), array_index0_1)) != NULL)
+                    if((temp_array_value0_1 = zend_hash_index_find(HASH_OF(pixels0), array_index0_1)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_1);
                         integers_array0_1[array_index0_1] = (unsigned char) Z_LVAL_P(temp_array_value0_1);

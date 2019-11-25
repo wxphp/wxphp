@@ -2986,7 +2986,7 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
 
     //Parameters for overload 0
     long n0;
-    zval widths_field0;
+    zval* widths_field0;
     bool overload0_called = false;
 
     
@@ -2996,11 +2996,11 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'la' (&n0, widths_field0)\n");
+        php_printf("Parsing parameters with 'la' (&n0, &widths_field0)\n");
         #endif
 
         char parse_parameters_string[] = "la";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &n0, widths_field0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &n0, &widths_field0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -3014,7 +3014,7 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
         HashTable* arr_hash0_1;
         if(arguments_received > 1)
         {
-            arr_hash0_1 = Z_ARRVAL(widths_field0);
+            arr_hash0_1 = Z_ARRVAL_P(widths_field0);
             array_count0_1 = zend_hash_num_elements(arr_hash0_1);
         }
         int* integers_array0_1 = new int[array_count0_1];
@@ -3028,7 +3028,7 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
                 zval* temp_array_value0_1 = 0;
                 while(integers_continue0_1)
                 {
-                    if((temp_array_value0_1 = zend_hash_index_find(HASH_OF(&widths_field0), array_index0_1)) != NULL)
+                    if((temp_array_value0_1 = zend_hash_index_find(HASH_OF(widths_field0), array_index0_1)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_1);
                         integers_array0_1[array_index0_1] = (int) Z_LVAL_P(temp_array_value0_1);

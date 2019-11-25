@@ -12091,7 +12091,7 @@ PHP_METHOD(php_wxHtmlWindow, SetFonts)
     size_t normal_face_len0;
     char* fixed_face0;
     size_t fixed_face_len0;
-    zval sizes0;
+    zval* sizes0;
     bool overload0_called = false;
 
     
@@ -12101,11 +12101,11 @@ PHP_METHOD(php_wxHtmlWindow, SetFonts)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, sizes0)\n");
+        php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0)\n");
         #endif
 
         char parse_parameters_string[] = "ss|a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, sizes0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -12119,7 +12119,7 @@ PHP_METHOD(php_wxHtmlWindow, SetFonts)
         HashTable* arr_hash0_2;
         if(arguments_received > 2)
         {
-            arr_hash0_2 = Z_ARRVAL(sizes0);
+            arr_hash0_2 = Z_ARRVAL_P(sizes0);
             array_count0_2 = zend_hash_num_elements(arr_hash0_2);
         }
         int* integers_array0_2 = new int[array_count0_2];
@@ -12145,7 +12145,7 @@ PHP_METHOD(php_wxHtmlWindow, SetFonts)
                 zval* temp_array_value0_2 = 0;
                 while(integers_continue0_2)
                 {
-                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(&sizes0), array_index0_2)) != NULL)
+                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(sizes0), array_index0_2)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_2);
                         integers_array0_2[array_index0_2] = (int) Z_LVAL_P(temp_array_value0_2);
@@ -14032,7 +14032,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetFonts)
     size_t normal_face_len0;
     char* fixed_face0;
     size_t fixed_face_len0;
-    zval sizes0;
+    zval* sizes0;
     bool overload0_called = false;
 
     
@@ -14042,11 +14042,11 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetFonts)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, sizes0)\n");
+        php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0)\n");
         #endif
 
         char parse_parameters_string[] = "ss|a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, sizes0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -14060,7 +14060,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetFonts)
         HashTable* arr_hash0_2;
         if(arguments_received > 2)
         {
-            arr_hash0_2 = Z_ARRVAL(sizes0);
+            arr_hash0_2 = Z_ARRVAL_P(sizes0);
             array_count0_2 = zend_hash_num_elements(arr_hash0_2);
         }
         int* integers_array0_2 = new int[array_count0_2];
@@ -14086,7 +14086,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetFonts)
                 zval* temp_array_value0_2 = 0;
                 while(integers_continue0_2)
                 {
-                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(&sizes0), array_index0_2)) != NULL)
+                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(sizes0), array_index0_2)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_2);
                         integers_array0_2[array_index0_2] = (int) Z_LVAL_P(temp_array_value0_2);
@@ -16275,7 +16275,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
     size_t normal_face_len0;
     char* fixed_face0;
     size_t fixed_face_len0;
-    zval sizes0;
+    zval* sizes0;
     bool overload0_called = false;
 
     
@@ -16285,11 +16285,11 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, sizes0)\n");
+        php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0)\n");
         #endif
 
         char parse_parameters_string[] = "ss|a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, sizes0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -16303,7 +16303,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
         HashTable* arr_hash0_2;
         if(arguments_received > 2)
         {
-            arr_hash0_2 = Z_ARRVAL(sizes0);
+            arr_hash0_2 = Z_ARRVAL_P(sizes0);
             array_count0_2 = zend_hash_num_elements(arr_hash0_2);
         }
         int* integers_array0_2 = new int[array_count0_2];
@@ -16329,7 +16329,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
                 zval* temp_array_value0_2 = 0;
                 while(integers_continue0_2)
                 {
-                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(&sizes0), array_index0_2)) != NULL)
+                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(sizes0), array_index0_2)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_2);
                         integers_array0_2[array_index0_2] = (int) Z_LVAL_P(temp_array_value0_2);
@@ -17289,7 +17289,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetFonts)
     size_t normal_face_len0;
     char* fixed_face0;
     size_t fixed_face_len0;
-    zval sizes0;
+    zval* sizes0;
     bool overload0_called = false;
 
     
@@ -17299,11 +17299,11 @@ PHP_METHOD(php_wxHtmlPrintout, SetFonts)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, sizes0)\n");
+        php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0)\n");
         #endif
 
         char parse_parameters_string[] = "ss|a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, sizes0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -17317,7 +17317,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetFonts)
         HashTable* arr_hash0_2;
         if(arguments_received > 2)
         {
-            arr_hash0_2 = Z_ARRVAL(sizes0);
+            arr_hash0_2 = Z_ARRVAL_P(sizes0);
             array_count0_2 = zend_hash_num_elements(arr_hash0_2);
         }
         int* integers_array0_2 = new int[array_count0_2];
@@ -17343,7 +17343,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetFonts)
                 zval* temp_array_value0_2 = 0;
                 while(integers_continue0_2)
                 {
-                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(&sizes0), array_index0_2)) != NULL)
+                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(sizes0), array_index0_2)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_2);
                         integers_array0_2[array_index0_2] = (int) Z_LVAL_P(temp_array_value0_2);
@@ -21372,7 +21372,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFonts)
     size_t normal_face_len0;
     char* fixed_face0;
     size_t fixed_face_len0;
-    zval sizes0;
+    zval* sizes0;
     bool overload0_called = false;
 
     
@@ -21382,11 +21382,11 @@ PHP_METHOD(php_wxHtmlWinParser, SetFonts)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, sizes0)\n");
+        php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0)\n");
         #endif
 
         char parse_parameters_string[] = "ss|a";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, sizes0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -21400,7 +21400,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFonts)
         HashTable* arr_hash0_2;
         if(arguments_received > 2)
         {
-            arr_hash0_2 = Z_ARRVAL(sizes0);
+            arr_hash0_2 = Z_ARRVAL_P(sizes0);
             array_count0_2 = zend_hash_num_elements(arr_hash0_2);
         }
         int* integers_array0_2 = new int[array_count0_2];
@@ -21429,7 +21429,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFonts)
                 zval* temp_array_value0_2 = 0;
                 while(integers_continue0_2)
                 {
-                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(&sizes0), array_index0_2)) != NULL)
+                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(sizes0), array_index0_2)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_2);
                         integers_array0_2[array_index0_2] = (int) Z_LVAL_P(temp_array_value0_2);

@@ -6956,9 +6956,9 @@ PHP_METHOD(php_wxFileName, SetTimes)
     #endif
 
     //Parameters for overload 0
-    zval dtAccess0;
-    zval dtMod0;
-    zval dtCreate0;
+    zval* dtAccess0;
+    zval* dtMod0;
+    zval* dtCreate0;
     bool overload0_called = false;
 
     
@@ -6968,11 +6968,11 @@ PHP_METHOD(php_wxFileName, SetTimes)
     {
         #ifdef USE_WXPHP_DEBUG
         php_printf("Parameters received %d\n", arguments_received);
-        php_printf("Parsing parameters with 'aaa' (dtAccess0, dtMod0, dtCreate0)\n");
+        php_printf("Parsing parameters with 'aaa' (&dtAccess0, &dtMod0, &dtCreate0)\n");
         #endif
 
         char parse_parameters_string[] = "aaa";
-        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, dtAccess0, dtMod0, dtCreate0 ) == SUCCESS)
+        if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received, parse_parameters_string, &dtAccess0, &dtMod0, &dtCreate0 ) == SUCCESS)
         {
             overload0_called = true;
             already_called = true;
@@ -6986,7 +6986,7 @@ PHP_METHOD(php_wxFileName, SetTimes)
         HashTable* arr_hash0_0;
         if(arguments_received > 0)
         {
-            arr_hash0_0 = Z_ARRVAL(dtAccess0);
+            arr_hash0_0 = Z_ARRVAL_P(dtAccess0);
             array_count0_0 = zend_hash_num_elements(arr_hash0_0);
         }
         wxDateTime* dates_array0_0 = new wxDateTime[array_count0_0];
@@ -6996,7 +6996,7 @@ PHP_METHOD(php_wxFileName, SetTimes)
         HashTable* arr_hash0_1;
         if(arguments_received > 1)
         {
-            arr_hash0_1 = Z_ARRVAL(dtMod0);
+            arr_hash0_1 = Z_ARRVAL_P(dtMod0);
             array_count0_1 = zend_hash_num_elements(arr_hash0_1);
         }
         wxDateTime* dates_array0_1 = new wxDateTime[array_count0_1];
@@ -7006,7 +7006,7 @@ PHP_METHOD(php_wxFileName, SetTimes)
         HashTable* arr_hash0_2;
         if(arguments_received > 2)
         {
-            arr_hash0_2 = Z_ARRVAL(dtCreate0);
+            arr_hash0_2 = Z_ARRVAL_P(dtCreate0);
             array_count0_2 = zend_hash_num_elements(arr_hash0_2);
         }
         wxDateTime* dates_array0_2 = new wxDateTime[array_count0_2];
@@ -7020,7 +7020,7 @@ PHP_METHOD(php_wxFileName, SetTimes)
                 zval* temp_array_value0_0 = 0;
                 while(dates_continue0_0)
                 {
-                    if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(&dtAccess0), array_index0_0)) != NULL)
+                    if((temp_array_value0_0 = zend_hash_index_find(HASH_OF(dtAccess0), array_index0_0)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_0);
                         dates_array0_0[array_index0_0] = wxDateTime((time_t) Z_LVAL_P(temp_array_value0_0));
@@ -7035,7 +7035,7 @@ PHP_METHOD(php_wxFileName, SetTimes)
                 zval* temp_array_value0_1 = 0;
                 while(dates_continue0_1)
                 {
-                    if((temp_array_value0_1 = zend_hash_index_find(HASH_OF(&dtMod0), array_index0_1)) != NULL)
+                    if((temp_array_value0_1 = zend_hash_index_find(HASH_OF(dtMod0), array_index0_1)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_1);
                         dates_array0_1[array_index0_1] = wxDateTime((time_t) Z_LVAL_P(temp_array_value0_1));
@@ -7050,7 +7050,7 @@ PHP_METHOD(php_wxFileName, SetTimes)
                 zval* temp_array_value0_2 = 0;
                 while(dates_continue0_2)
                 {
-                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(&dtCreate0), array_index0_2)) != NULL)
+                    if((temp_array_value0_2 = zend_hash_index_find(HASH_OF(dtCreate0), array_index0_2)) != NULL)
                     {
                         convert_to_long_ex(temp_array_value0_2);
                         dates_array0_2[array_index0_2] = wxDateTime((time_t) Z_LVAL_P(temp_array_value0_2));
