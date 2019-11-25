@@ -1574,7 +1574,7 @@ PHP_FUNCTION(php_wxMutexGuiLeave)
 PHP_FUNCTION(php_wxAboutBox)
 {
     wxAboutDialogInfo *info;
-    zval object;
+    zval* object;
 
     char parse_parameters[] = "O";
 
@@ -1591,7 +1591,7 @@ PHP_FUNCTION(php_wxAboutBox)
     }
 
     info = (wxAboutDialogInfo*)
-        Z_wxAboutDialogInfo_P(&object)->native_object
+        Z_wxAboutDialogInfo_P(object)->native_object
     ;
 
     wxAboutBox(*info);
@@ -16731,7 +16731,7 @@ PHP_FUNCTION(php_wxSystem)
 /* {{{ proto  wxDynamicCast() */
 PHP_FUNCTION(php_wxDynamicCast)
 {
-    zval object;
+    zval* object;
     char* object_type;
     size_t object_type_len = 0;
     void* native_object = 0;
@@ -16749,10 +16749,10 @@ PHP_FUNCTION(php_wxDynamicCast)
         ) == SUCCESS
     )
     {
-        if(Z_TYPE(object) == IS_OBJECT)
+        if(Z_TYPE_P(object) == IS_OBJECT)
         {
             native_object = (void*)
-                Z_wxObject_P(&object)->native_object
+                Z_wxObject_P(object)->native_object
             ;
 
             if(!native_object)
