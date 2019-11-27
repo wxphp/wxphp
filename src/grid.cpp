@@ -6707,7 +6707,7 @@ PHP_METHOD(php_wxGridCellAttr, CloneMethod)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -7071,7 +7071,7 @@ PHP_METHOD(php_wxGridCellAttr, GetBackgroundColour)
 
                 if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -7226,7 +7226,7 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -7354,7 +7354,7 @@ PHP_METHOD(php_wxGridCellAttr, GetFont)
 
                 if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -7639,7 +7639,7 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -7767,7 +7767,7 @@ PHP_METHOD(php_wxGridCellAttr, GetTextColour)
 
                 if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -11045,7 +11045,7 @@ PHP_METHOD(php_wxGridTableBase, GetAttr)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -11175,7 +11175,7 @@ PHP_METHOD(php_wxGridTableBase, GetAttrProvider)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -12567,7 +12567,7 @@ PHP_METHOD(php_wxGridTableBase, GetView)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -21084,7 +21084,7 @@ PHP_METHOD(php_wxGrid, GetCellEditor)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -21341,7 +21341,7 @@ PHP_METHOD(php_wxGrid, GetCellRenderer)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -23791,7 +23791,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditor)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -23944,7 +23944,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForCell)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -24081,7 +24081,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -24326,7 +24326,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRenderer)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -24462,7 +24462,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForCell)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -24598,7 +24598,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -24942,7 +24942,7 @@ PHP_METHOD(php_wxGrid, GetGridColHeader)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -25072,7 +25072,7 @@ PHP_METHOD(php_wxGrid, GetGridColLabelWindow)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -25202,7 +25202,7 @@ PHP_METHOD(php_wxGrid, GetGridCornerLabelWindow)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -25661,7 +25661,7 @@ PHP_METHOD(php_wxGrid, GetGridRowLabelWindow)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -25791,7 +25791,7 @@ PHP_METHOD(php_wxGrid, GetGridWindow)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -26486,7 +26486,7 @@ PHP_METHOD(php_wxGrid, GetOrCreateCellAttr)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -28079,7 +28079,7 @@ PHP_METHOD(php_wxGrid, GetTable)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }

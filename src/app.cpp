@@ -647,7 +647,7 @@ PHP_METHOD(php_wxApp, GetInstance)
     }
     else if(!Z_ISNULL(instance->phpObj)) // Todo: Does this work?
     {
-        return_value = &instance->phpObj;
+        ZVAL_COPY_VALUE(return_value, &instance->phpObj);
         zval_add_ref(&instance->phpObj);
     }
     else

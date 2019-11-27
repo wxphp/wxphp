@@ -1641,7 +1641,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                                 $return_called_overload .= tabs(4) . "}\n";
                                 $return_called_overload .= tabs(4) . "else if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
                                 $return_called_overload .= tabs(5) . "if(!Z_ISNULL(value_to_return{$required_parameters}->phpObj)){\n";
-                                $return_called_overload .= tabs(6) . "return_value = &value_to_return{$required_parameters}->phpObj;\n";
+                                $return_called_overload .= tabs(6) . "ZVAL_COPY_VALUE(return_value, &value_to_return{$required_parameters}->phpObj);\n";
                                 $return_called_overload .= tabs(6) . "zval_add_ref(&value_to_return{$required_parameters}->phpObj);\n";
                                 $return_called_overload .= tabs(6) . "return_is_user_initialized = true;\n";
                                 $return_called_overload .= tabs(5) . "}\n";
@@ -1689,7 +1689,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                                 }
                                 $return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
                                 $return_called_overload .= tabs(5) . "if(!Z_ISNULL(value_to_return{$required_parameters}->phpObj)){\n";
-                                $return_called_overload .= tabs(6) . "return_value = &value_to_return{$required_parameters}->phpObj;\n";
+                                $return_called_overload .= tabs(6) . "ZVAL_COPY_VALUE(return_value, &value_to_return{$required_parameters}->phpObj);\n";
                                 $return_called_overload .= tabs(6) . "zval_add_ref(&value_to_return{$required_parameters}->phpObj);\n";
                                 $return_called_overload .= tabs(6) . "return_is_user_initialized = true;\n";
                                 $return_called_overload .= tabs(5) . "}\n";

@@ -178,7 +178,7 @@ PHP_FUNCTION(php_wxC2D)
             ) == SUCCESS
         )
         {
-            return_value = &constant_object;
+            ZVAL_COPY_VALUE(return_value, &constant_object);
             zval_add_ref(&constant_object);
             return;
         }

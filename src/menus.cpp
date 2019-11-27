@@ -1229,7 +1229,7 @@ PHP_METHOD(php_wxMenuBar, GetFrame)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -1592,7 +1592,7 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -2682,7 +2682,7 @@ PHP_METHOD(php_wxMenuBar, Remove)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -2838,7 +2838,7 @@ PHP_METHOD(php_wxMenuBar, Replace)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -4180,7 +4180,7 @@ PHP_METHOD(php_wxMenu, Remove)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -4223,7 +4223,7 @@ PHP_METHOD(php_wxMenu, Remove)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -4353,7 +4353,7 @@ PHP_METHOD(php_wxMenu, PrependSeparator)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -4492,7 +4492,7 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -4527,7 +4527,7 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -4666,7 +4666,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -4701,7 +4701,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -4880,7 +4880,7 @@ PHP_METHOD(php_wxMenu, Prepend)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -4915,7 +4915,7 @@ PHP_METHOD(php_wxMenu, Prepend)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -4950,7 +4950,7 @@ PHP_METHOD(php_wxMenu, Prepend)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -4985,7 +4985,7 @@ PHP_METHOD(php_wxMenu, Prepend)
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
-                        return_value = &value_to_return4->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return4->phpObj);
                         zval_add_ref(&value_to_return4->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5027,7 +5027,7 @@ PHP_METHOD(php_wxMenu, Prepend)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5251,7 +5251,7 @@ PHP_METHOD(php_wxMenu, Append)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5286,7 +5286,7 @@ PHP_METHOD(php_wxMenu, Append)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5321,7 +5321,7 @@ PHP_METHOD(php_wxMenu, Append)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5356,7 +5356,7 @@ PHP_METHOD(php_wxMenu, Append)
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
-                        return_value = &value_to_return4->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return4->phpObj);
                         zval_add_ref(&value_to_return4->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5398,7 +5398,7 @@ PHP_METHOD(php_wxMenu, Append)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5434,7 +5434,7 @@ PHP_METHOD(php_wxMenu, Append)
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
-                        return_value = &value_to_return4->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return4->phpObj);
                         zval_add_ref(&value_to_return4->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5477,7 +5477,7 @@ PHP_METHOD(php_wxMenu, Append)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5617,7 +5617,7 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5652,7 +5652,7 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5791,7 +5791,7 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5826,7 +5826,7 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -5956,7 +5956,7 @@ PHP_METHOD(php_wxMenu, AppendSeparator)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -6113,7 +6113,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -6149,7 +6149,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -7309,7 +7309,7 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -7552,7 +7552,7 @@ PHP_METHOD(php_wxMenu, GetInvokingWindow)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -8016,7 +8016,7 @@ PHP_METHOD(php_wxMenu, GetParent)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -8360,7 +8360,7 @@ PHP_METHOD(php_wxMenu, GetWindow)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -8541,7 +8541,7 @@ PHP_METHOD(php_wxMenu, Insert)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -8584,7 +8584,7 @@ PHP_METHOD(php_wxMenu, Insert)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -8619,7 +8619,7 @@ PHP_METHOD(php_wxMenu, Insert)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -8654,7 +8654,7 @@ PHP_METHOD(php_wxMenu, Insert)
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
-                        return_value = &value_to_return4->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return4->phpObj);
                         zval_add_ref(&value_to_return4->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -8689,7 +8689,7 @@ PHP_METHOD(php_wxMenu, Insert)
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
-                        return_value = &value_to_return5->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return5->phpObj);
                         zval_add_ref(&value_to_return5->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -8829,7 +8829,7 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -8864,7 +8864,7 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
-                        return_value = &value_to_return4->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return4->phpObj);
                         zval_add_ref(&value_to_return4->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -9004,7 +9004,7 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
-                        return_value = &value_to_return3->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return3->phpObj);
                         zval_add_ref(&value_to_return3->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -9039,7 +9039,7 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
-                        return_value = &value_to_return4->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return4->phpObj);
                         zval_add_ref(&value_to_return4->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -9174,7 +9174,7 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -9644,7 +9644,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
-                        return_value = &value_to_return1->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return1->phpObj);
                         zval_add_ref(&value_to_return1->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -9679,7 +9679,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
-                        return_value = &value_to_return2->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return2->phpObj);
                         zval_add_ref(&value_to_return2->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -11676,7 +11676,7 @@ PHP_METHOD(php_wxMenuItem, GetMenu)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
@@ -11806,7 +11806,7 @@ PHP_METHOD(php_wxMenuItem, GetSubMenu)
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
-                        return_value = &value_to_return0->phpObj;
+                        ZVAL_COPY_VALUE(return_value, &value_to_return0->phpObj);
                         zval_add_ref(&value_to_return0->phpObj);
                         return_is_user_initialized = true;
                     }
