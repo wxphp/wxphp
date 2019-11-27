@@ -927,7 +927,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                                 $return_called_overload .= tabs(5) . "if((temp_array_value{$declaration_index}_{$parameter_index} = zend_hash_index_find(HASH_OF({$variable_name}), array_index{$declaration_index}_{$parameter_index})) != NULL)\n";
                                 $return_called_overload .= tabs(5) . "{\n";
                                 $return_called_overload .= tabs(6) . "convert_to_boolean_ex(temp_array_value{$declaration_index}_{$parameter_index});\n";
-                                $return_called_overload .= tabs(6) . "bools_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = Z_TYPE_INFO_P(temp_array_value{$declaration_index}_{$parameter_index}) == IS_TRUE;\n";
+                                $return_called_overload .= tabs(6) . "bools_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = Z_TYPE_P(temp_array_value{$declaration_index}_{$parameter_index}) == IS_TRUE;\n";
                                 $return_called_overload .= tabs(6) . "array_index{$declaration_index}_{$parameter_index}++;\n";
                                 $return_called_overload .= tabs(5) . "}\n";
                                 $return_called_overload .= tabs(5) . "else\n";
@@ -1386,11 +1386,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                             {
                                 case "pointer":
                                 case "const_pointer":
-                                    $return_called_overload .= tabs(4) . "ZVAL_BOOL(&return_value, *($class_name_ex::$method_name($parameters_string)));\n";
+                                    $return_called_overload .= tabs(4) . "RETVAL_BOOL(*($class_name_ex::$method_name($parameters_string)));\n";
                                     break;
 
                                 default:
-                                    $return_called_overload .= tabs(4) . "ZVAL_BOOL(return_value, $class_name_ex::$method_name($parameters_string));\n";
+                                    $return_called_overload .= tabs(4) . "RETVAL_BOOL($class_name_ex::$method_name($parameters_string));\n";
                                     break;
                             }
                         }
@@ -1422,11 +1422,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                             {
                                 case "pointer":
                                 case "const_pointer":
-                                    $return_called_overload .= tabs(4) . "ZVAL_LONG(&return_value, *($class_name_ex::$method_name($parameters_string)));\n";
+                                    $return_called_overload .= tabs(4) . "RETVAL_LONG(*($class_name_ex::$method_name($parameters_string)));\n";
                                     break;
 
                                 default:
-                                    $return_called_overload .= tabs(4) . "ZVAL_LONG(return_value, $class_name_ex::$method_name($parameters_string));\n";
+                                    $return_called_overload .= tabs(4) . "RETVAL_LONG($class_name_ex::$method_name($parameters_string));\n";
                                     break;
                             }
                         }
@@ -1456,11 +1456,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                             {
                                 case "pointer":
                                 case "const_pointer":
-                                    $return_called_overload .= tabs(4) . "ZVAL_DOUBLE(&return_value, *($class_name_ex::$method_name($parameters_string)));\n";
+                                    $return_called_overload .= tabs(4) . "RETVAL_DOUBLE(*($class_name_ex::$method_name($parameters_string)));\n";
                                     break;
 
                                 default:
-                                    $return_called_overload .= tabs(4) . "ZVAL_DOUBLE(&return_value, $class_name_ex::$method_name($parameters_string));\n";
+                                    $return_called_overload .= tabs(4) . "RETVAL_DOUBLE($class_name_ex::$method_name($parameters_string));\n";
                                     break;
                             }
                         }
@@ -1490,7 +1490,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                         {
                             $return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name_ex::$method_name($parameters_string);\n";
                         }
-                        $return_called_overload .= tabs(4) . "ZVAL_STRING(return_value, value_to_return{$required_parameters});\n";
+                        $return_called_overload .= tabs(4) . "RETVAL_STRING(value_to_return{$required_parameters});\n";
                         break;
                     }
                     case "void":
@@ -1543,7 +1543,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                         {
                             $return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name_ex::$method_name($parameters_string).GetTicks();\n";
                         }
-                        $return_called_overload .= tabs(4) . "ZVAL_LONG(return_value, value_to_return{$required_parameters});\n";
+                        $return_called_overload .= tabs(4) . "RETVAL_LONG(value_to_return{$required_parameters});\n";
                         break;
                     }
                     case    "string":
@@ -1570,7 +1570,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                         {
                             $return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name_ex::$method_name($parameters_string);\n";
                         }
-                        $return_called_overload .= tabs(4) . "ZVAL_STRING(return_value, value_to_return{$required_parameters}.ToUTF8().data());\n";
+                        $return_called_overload .= tabs(4) . "RETVAL_STRING(value_to_return{$required_parameters}.ToUTF8().data());\n";
                         break;
                     }
                     case "strings_array":
@@ -1637,7 +1637,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                                     $return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = ({$return_type}_php*) $class_name_ex::$method_name($parameters_string);\n";
                                 }
                                 $return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters} == NULL){\n";
-                                $return_called_overload .= tabs(5) . "ZVAL_NULL(return_value);\n";
+                                $return_called_overload .= tabs(5) . "RETVAL_NULL();\n";
                                 $return_called_overload .= tabs(4) . "}\n";
                                 $return_called_overload .= tabs(4) . "else if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
                                 $return_called_overload .= tabs(5) . "if(!Z_ISNULL(value_to_return{$required_parameters}->phpObj)){\n";
@@ -1808,14 +1808,14 @@ function function_return_call($method_name, $parameters_string, $required_parame
             {
                 case "const_pointer":
                 case "pointer":
-                    $call_code .= tabs($t) . "ZVAL_BOOL(&return_value, *($method_name($parameters_string)));\n";
+                    $call_code .= tabs($t) . "RETVAL_BOOL(*($method_name($parameters_string)));\n";
                     break;
 
                 case "const_reference":
                 case "reference":
                 case "const_none":
                 case "none":
-                    $call_code .= tabs($t) . "ZVAL_BOOL(return_value, $method_name($parameters_string));\n";
+                    $call_code .= tabs($t) . "RETVAL_BOOL($method_name($parameters_string));\n";
                     break;
             }
             break;
@@ -1828,14 +1828,14 @@ function function_return_call($method_name, $parameters_string, $required_parame
             {
                 case "const_pointer":
                 case "pointer":
-                    $call_code .= tabs($t) . "ZVAL_LONG(return_value, *($method_name($parameters_string)));\n";
+                    $call_code .= tabs($t) . "RETVAL_LONG(*($method_name($parameters_string)));\n";
                     break;
 
                 case "const_reference":
                 case "reference":
                 case "const_none":
                 case "none":
-                    $call_code .= tabs($t) . "ZVAL_LONG(return_value, $method_name($parameters_string));\n";
+                    $call_code .= tabs($t) . "RETVAL_LONG($method_name($parameters_string));\n";
                     break;
             }
             break;
@@ -1846,14 +1846,14 @@ function function_return_call($method_name, $parameters_string, $required_parame
             {
                 case "const_pointer":
                 case "pointer":
-                    $call_code .= tabs($t) . "ZVAL_DOUBLE(&return_value, *($method_name($parameters_string)));\n";
+                    $call_code .= tabs($t) . "RETVAL_DOUBLE(*($method_name($parameters_string)));\n";
                     break;
 
                 case "const_reference":
                 case "reference":
                 case "const_none":
                 case "none":
-                    $call_code .= tabs($t) . "ZVAL_DOUBLE(return_value, $method_name($parameters_string));\n";
+                    $call_code .= tabs($t) . "RETVAL_DOUBLE($method_name($parameters_string));\n";
                     break;
             }
             break;
@@ -1886,7 +1886,7 @@ function function_return_call($method_name, $parameters_string, $required_parame
             {
                 case "const_pointer":
                 case "pointer":
-                    $call_code .= tabs($t) . "ZVAL_STRING(&return_value, (char*) $method_name($parameters_string));\n";
+                    $call_code .= tabs($t) . "RETVAL_STRING((char*) $method_name($parameters_string));\n";
                     break;
 
                 case "const_none":
@@ -2071,17 +2071,17 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
                 {
                     case "const_pointer":
                     case "pointer":
-                        $call_code .= tabs($t) . "ZVAL_BOOL(&return_value, *((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
+                        $call_code .= tabs($t) . "RETVAL_BOOL(*((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
                         break;
 
                     case "const_reference":
                     case "reference":
-                        $call_code .= tabs($t) . "ZVAL_BOOL(&return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+                        $call_code .= tabs($t) . "RETVAL_BOOL((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
                         break;
 
                     case "const_none":
                     case "none":
-                        $call_code .= tabs($t) . "ZVAL_BOOL(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+                        $call_code .= tabs($t) . "RETVAL_BOOL((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
                         break;
                 }
                 break;
@@ -2094,17 +2094,17 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
                 {
                     case "const_pointer":
                     case "pointer":
-                        $call_code .= tabs($t) . "ZVAL_LONG(return_value, *((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
+                        $call_code .= tabs($t) . "RETVAL_LONG(*((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
                         break;
 
                     case "const_reference":
                     case "reference":
-                        $call_code .= tabs($t) . "ZVAL_LONG(&return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+                        $call_code .= tabs($t) . "RETVAL_LONG((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
                         break;
 
                     case "const_none":
                     case "none":
-                        $call_code .= tabs($t) . "ZVAL_LONG(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+                        $call_code .= tabs($t) . "RETVAL_LONG((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
                         break;
                 }
                 break;
@@ -2115,17 +2115,17 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
                 {
                     case "const_pointer":
                     case "pointer":
-                        $call_code .= tabs($t) . "ZVAL_DOUBLE(&return_value, *((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
+                        $call_code .= tabs($t) . "RETVAL_DOUBLE(*((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
                         break;
 
                     case "const_reference":
                     case "reference":
-                        $call_code .= tabs($t) . "ZVAL_DOUBLE(&return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+                        $call_code .= tabs($t) . "RETVAL_DOUBLE((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
                         break;
 
                     case "const_none":
                     case "none":
-                        $call_code .= tabs($t) . "ZVAL_DOUBLE(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+                        $call_code .= tabs($t) . "RETVAL_DOUBLE((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
                         break;
                 }
                 break;
@@ -2162,7 +2162,7 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
                 {
                     case "const_pointer":
                     case "pointer":
-                        $call_code .= tabs($t) . "ZVAL_STRING(return_value, (char*) (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+                        $call_code .= tabs($t) . "RETVAL_STRING((char*) (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
                         break;
 
                     case "const_none":

@@ -581,10 +581,7 @@ PHP_METHOD(php_wxWindow, GetHandle)
                 #endif
 
                 #ifdef __WXMSW__
-                ZVAL_LONG(
-                    return_value,
-                    (size_t) ((wxWindow_php*)native_object)->GetHandle()
-                );
+                RETVAL_LONG((size_t) ((wxWindow_php*)native_object)->GetHandle());
                 #endif
 
                 #if defined(__WXGTK__) || defined(__WXX11__)
@@ -592,39 +589,23 @@ PHP_METHOD(php_wxWindow, GetHandle)
                 #ifdef __WXGTK3__
                 if(gtk_widget_get_window(win->m_wxwindow))
                 {
-                    ZVAL_LONG(
-                        return_value,
-                        (size_t) GDK_WINDOW_XID(
-                            gtk_widget_get_window(win->m_wxwindow)
-                        )
-                    );
+                    RETVAL_LONG((size_t) GDK_WINDOW_XID(gtk_widget_get_window(win->m_wxwindow)));
                 }
                 else if(gtk_widget_get_window(win->m_widget))
                 {
-                    ZVAL_LONG(
-                        return_value,
-                        (size_t) GDK_WINDOW_XID(
-                            gtk_widget_get_window(win->m_widget)
-                        )
-                    );
+                    RETVAL_LONG((size_t) GDK_WINDOW_XID(gtk_widget_get_window(win->m_widget)));
                 }
                 else
                 {
-                    ZVAL_LONG(return_value, 0);
+                    RETVAL_LONG(0);
                 }
                 #else
-                ZVAL_LONG(
-                    return_value,
-                    (size_t) GetXWindow(win)
-                );
+                RETVAL_LONG((size_t) GetXWindow(win));
                 #endif
                 #endif
 
                 #ifdef __WXMAC__
-                ZVAL_LONG(
-                    return_value,
-                    (size_t) ((wxWindow_php*)native_object)->GetHandle()
-                );
+                RETVAL_LONG((size_t) ((wxWindow_php*)native_object)->GetHandle());
                 #endif
 
                 return;

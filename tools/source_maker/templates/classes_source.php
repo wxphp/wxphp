@@ -198,8 +198,7 @@ zend_object* php_<?=$class_name?>_new(zend_class_entry *class_type)
 <? if(!in_array("__construct", funcsOfClass($class_name, 1, $output)) && has_all_pure_virtual_implemented($class_name)){ ?>
 
     zval temp;
-    Z_TYPE_INFO(temp) = IS_OBJECT;
-    Z_OBJ(temp) = &custom_object->zo;
+    ZVAL_OBJ(&temp, &custom_object->zo);
 
     custom_object->native_object = new <?=$class_name?>_php();
     custom_object->native_object->phpObj = temp;
