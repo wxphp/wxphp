@@ -311,7 +311,7 @@ PHP_METHOD(php_wxMenuBar, Append)
                 php_printf("Executing RETURN_BOOL(wxMenuBar::Append((wxMenu*) object_pointer0_0, wxString(title0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->Append((wxMenu*) object_pointer0_0, wxString(title0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMenuBar_php*)native_object)->Append((wxMenu*) object_pointer0_0, wxString(title0, wxConvUTF8)));
 
                 references->AddReference(menu0, "wxMenuBar::Append at call 1 with 2 argument(s)");
 
@@ -1000,7 +1000,7 @@ PHP_METHOD(php_wxMenuBar, FindMenu)
                 php_printf("Executing RETURN_LONG(wxMenuBar::FindMenu(wxString(title0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMenuBar_php*)native_object)->FindMenu(wxString(title0, wxConvUTF8)));
+                RETVAL_LONG(((wxMenuBar_php*)native_object)->FindMenu(wxString(title0, wxConvUTF8)));
 
 
                 return;
@@ -1115,7 +1115,7 @@ PHP_METHOD(php_wxMenuBar, FindMenuItem)
                 php_printf("Executing RETURN_LONG(wxMenuBar::FindMenuItem(wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMenuBar_php*)native_object)->FindMenuItem(wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)));
+                RETVAL_LONG(((wxMenuBar_php*)native_object)->FindMenuItem(wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)));
 
 
                 return;
@@ -1225,7 +1225,7 @@ PHP_METHOD(php_wxMenuBar, GetFrame)
                 value_to_return0 = (wxFrame_php*) ((wxMenuBar_php*)native_object)->GetFrame();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -1358,7 +1358,7 @@ PHP_METHOD(php_wxMenuBar, GetHelpString)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenuBar_php*)native_object)->GetHelpString((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1472,7 +1472,7 @@ PHP_METHOD(php_wxMenuBar, GetLabel)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenuBar_php*)native_object)->GetLabel((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1588,7 +1588,7 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
                 value_to_return1 = (wxMenu_php*) ((wxMenuBar_php*)native_object)->GetMenu((size_t) menuIndex0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -1714,7 +1714,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuCount)
                 php_printf("Executing RETURN_LONG(wxMenuBar::GetMenuCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMenuBar_php*)native_object)->GetMenuCount());
+                RETVAL_LONG(((wxMenuBar_php*)native_object)->GetMenuCount());
 
 
                 return;
@@ -1828,7 +1828,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabel)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenuBar_php*)native_object)->GetMenuLabel((size_t) pos0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1942,7 +1942,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabelText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenuBar_php*)native_object)->GetMenuLabelText((size_t) pos0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -2075,7 +2075,7 @@ PHP_METHOD(php_wxMenuBar, Insert)
                 php_printf("Executing RETURN_BOOL(wxMenuBar::Insert((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->Insert((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMenuBar_php*)native_object)->Insert((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8)));
 
                 references->AddReference(menu0, "wxMenuBar::Insert at call 1 with 3 argument(s)");
 
@@ -2182,7 +2182,7 @@ PHP_METHOD(php_wxMenuBar, IsAttached)
                 php_printf("Executing RETURN_BOOL(wxMenuBar::IsAttached())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->IsAttached());
+                RETVAL_BOOL(((wxMenuBar_php*)native_object)->IsAttached());
 
 
                 return;
@@ -2294,7 +2294,7 @@ PHP_METHOD(php_wxMenuBar, IsChecked)
                 php_printf("Executing RETURN_BOOL(wxMenuBar::IsChecked((int) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->IsChecked((int) id0));
+                RETVAL_BOOL(((wxMenuBar_php*)native_object)->IsChecked((int) id0));
 
 
                 return;
@@ -2406,7 +2406,7 @@ PHP_METHOD(php_wxMenuBar, IsEnabled)
                 php_printf("Executing RETURN_BOOL(wxMenuBar::IsEnabled((int) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->IsEnabled((int) id0));
+                RETVAL_BOOL(((wxMenuBar_php*)native_object)->IsEnabled((int) id0));
 
 
                 return;
@@ -2678,7 +2678,7 @@ PHP_METHOD(php_wxMenuBar, Remove)
                 value_to_return1 = (wxMenu_php*) ((wxMenuBar_php*)native_object)->Remove((size_t) pos0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -2834,7 +2834,7 @@ PHP_METHOD(php_wxMenuBar, Replace)
                 value_to_return3 = (wxMenu_php*) ((wxMenuBar_php*)native_object)->Replace((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -4176,7 +4176,7 @@ PHP_METHOD(php_wxMenu, Remove)
                 value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Remove((wxMenuItem*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -4219,7 +4219,7 @@ PHP_METHOD(php_wxMenu, Remove)
                 value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Remove((int) id1);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -4349,7 +4349,7 @@ PHP_METHOD(php_wxMenu, PrependSeparator)
                 value_to_return0 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->PrependSeparator();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -4488,7 +4488,7 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
                 value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->PrependRadioItem((int) id0, wxString(item0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -4523,7 +4523,7 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
                 value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->PrependRadioItem((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -4662,7 +4662,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
                 value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->PrependCheckItem((int) id0, wxString(item0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -4697,7 +4697,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
                 value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->PrependCheckItem((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -4876,7 +4876,7 @@ PHP_METHOD(php_wxMenu, Prepend)
                 value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Prepend((int) id0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -4911,7 +4911,7 @@ PHP_METHOD(php_wxMenu, Prepend)
                 value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Prepend((int) id0, wxString(item0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -4946,7 +4946,7 @@ PHP_METHOD(php_wxMenu, Prepend)
                 value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Prepend((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -4981,7 +4981,7 @@ PHP_METHOD(php_wxMenu, Prepend)
                 value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Prepend((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -5023,7 +5023,7 @@ PHP_METHOD(php_wxMenu, Prepend)
                 value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Prepend((wxMenuItem*) object_pointer1_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -5247,7 +5247,7 @@ PHP_METHOD(php_wxMenu, Append)
                 value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -5282,7 +5282,7 @@ PHP_METHOD(php_wxMenu, Append)
                 value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id0, wxString(item0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -5317,7 +5317,7 @@ PHP_METHOD(php_wxMenu, Append)
                 value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -5352,7 +5352,7 @@ PHP_METHOD(php_wxMenu, Append)
                 value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -5394,7 +5394,7 @@ PHP_METHOD(php_wxMenu, Append)
                 value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -5430,7 +5430,7 @@ PHP_METHOD(php_wxMenu, Append)
                 value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2, wxString(helpString1, wxConvUTF8));
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -5473,7 +5473,7 @@ PHP_METHOD(php_wxMenu, Append)
                 value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((wxMenuItem*) object_pointer2_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -5613,7 +5613,7 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
                 value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendCheckItem((int) id0, wxString(item0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -5648,7 +5648,7 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
                 value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendCheckItem((int) id0, wxString(item0, wxConvUTF8), wxString(help0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -5787,7 +5787,7 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
                 value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendRadioItem((int) id0, wxString(item0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -5822,7 +5822,7 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
                 value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendRadioItem((int) id0, wxString(item0, wxConvUTF8), wxString(help0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -5952,7 +5952,7 @@ PHP_METHOD(php_wxMenu, AppendSeparator)
                 value_to_return0 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendSeparator();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -6109,7 +6109,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
                 value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendSubMenu((wxMenu*) object_pointer0_0, wxString(text0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -6145,7 +6145,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
                 value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendSubMenu((wxMenu*) object_pointer0_0, wxString(text0, wxConvUTF8), wxString(help0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -6666,7 +6666,7 @@ PHP_METHOD(php_wxMenu, Delete)
                 php_printf("Executing RETURN_BOOL(wxMenu::Delete((int) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->Delete((int) id0));
+                RETVAL_BOOL(((wxMenu_php*)native_object)->Delete((int) id0));
 
 
                 return;
@@ -6685,7 +6685,7 @@ PHP_METHOD(php_wxMenu, Delete)
                 php_printf("Executing RETURN_BOOL(wxMenu::Delete((wxMenuItem*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->Delete((wxMenuItem*) object_pointer1_0));
+                RETVAL_BOOL(((wxMenu_php*)native_object)->Delete((wxMenuItem*) object_pointer1_0));
 
                 references->AddReference(item1, "wxMenu::Delete at call 1 with 1 argument(s)");
 
@@ -6837,7 +6837,7 @@ PHP_METHOD(php_wxMenu, Destroy)
                 php_printf("Executing RETURN_BOOL(wxMenu::Destroy((int) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->Destroy((int) id0));
+                RETVAL_BOOL(((wxMenu_php*)native_object)->Destroy((int) id0));
 
 
                 return;
@@ -6856,7 +6856,7 @@ PHP_METHOD(php_wxMenu, Destroy)
                 php_printf("Executing RETURN_BOOL(wxMenu::Destroy((wxMenuItem*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->Destroy((wxMenuItem*) object_pointer1_0));
+                RETVAL_BOOL(((wxMenu_php*)native_object)->Destroy((wxMenuItem*) object_pointer1_0));
 
                 references->AddReference(item1, "wxMenu::Destroy at call 1 with 1 argument(s)");
 
@@ -7189,7 +7189,7 @@ PHP_METHOD(php_wxMenu, FindItem)
                 php_printf("Executing RETURN_LONG(wxMenu::FindItem(wxString(itemString0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMenu_php*)native_object)->FindItem(wxString(itemString0, wxConvUTF8)));
+                RETVAL_LONG(((wxMenu_php*)native_object)->FindItem(wxString(itemString0, wxConvUTF8)));
 
 
                 return;
@@ -7305,7 +7305,7 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
                 value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->FindItemByPosition((size_t) position0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -7438,7 +7438,7 @@ PHP_METHOD(php_wxMenu, GetHelpString)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenu_php*)native_object)->GetHelpString((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7548,7 +7548,7 @@ PHP_METHOD(php_wxMenu, GetInvokingWindow)
                 value_to_return0 = (wxWindow_php*) ((wxMenu_php*)native_object)->GetInvokingWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -7681,7 +7681,7 @@ PHP_METHOD(php_wxMenu, GetLabel)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenu_php*)native_object)->GetLabel((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7795,7 +7795,7 @@ PHP_METHOD(php_wxMenu, GetLabelText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxMenu_php*)native_object)->GetLabelText((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7902,7 +7902,7 @@ PHP_METHOD(php_wxMenu, GetMenuItemCount)
                 php_printf("Executing RETURN_LONG(wxMenu::GetMenuItemCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMenu_php*)native_object)->GetMenuItemCount());
+                RETVAL_LONG(((wxMenu_php*)native_object)->GetMenuItemCount());
 
 
                 return;
@@ -8012,7 +8012,7 @@ PHP_METHOD(php_wxMenu, GetParent)
                 value_to_return0 = (wxMenu_php*) ((wxMenu_php*)native_object)->GetParent();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -8137,7 +8137,7 @@ PHP_METHOD(php_wxMenu, GetStyle)
                 php_printf("Executing RETURN_LONG(wxMenu::GetStyle())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMenu_php*)native_object)->GetStyle());
+                RETVAL_LONG(((wxMenu_php*)native_object)->GetStyle());
 
 
                 return;
@@ -8246,7 +8246,7 @@ PHP_METHOD(php_wxMenu, GetTitle)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMenu_php*)native_object)->GetTitle();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -8356,7 +8356,7 @@ PHP_METHOD(php_wxMenu, GetWindow)
                 value_to_return0 = (wxWindow_php*) ((wxMenu_php*)native_object)->GetWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -8537,7 +8537,7 @@ PHP_METHOD(php_wxMenu, Insert)
                 value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Insert((size_t) pos0, (wxMenuItem*) object_pointer0_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -8580,7 +8580,7 @@ PHP_METHOD(php_wxMenu, Insert)
                 value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Insert((size_t) pos1, (int) id1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -8615,7 +8615,7 @@ PHP_METHOD(php_wxMenu, Insert)
                 value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -8650,7 +8650,7 @@ PHP_METHOD(php_wxMenu, Insert)
                 value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8), wxString(helpString1, wxConvUTF8));
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -8685,7 +8685,7 @@ PHP_METHOD(php_wxMenu, Insert)
                 value_to_return5 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8), wxString(helpString1, wxConvUTF8), (wxItemKind) kind1);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -8825,7 +8825,7 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
                 value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->InsertCheckItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -8860,7 +8860,7 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
                 value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->InsertCheckItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -9000,7 +9000,7 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
                 value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->InsertRadioItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -9035,7 +9035,7 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
                 value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->InsertRadioItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -9170,7 +9170,7 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
                 value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->InsertSeparator((size_t) pos0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -9295,7 +9295,7 @@ PHP_METHOD(php_wxMenu, IsAttached)
                 php_printf("Executing RETURN_BOOL(wxMenu::IsAttached())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->IsAttached());
+                RETVAL_BOOL(((wxMenu_php*)native_object)->IsAttached());
 
 
                 return;
@@ -9407,7 +9407,7 @@ PHP_METHOD(php_wxMenu, IsChecked)
                 php_printf("Executing RETURN_BOOL(wxMenu::IsChecked((int) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->IsChecked((int) id0));
+                RETVAL_BOOL(((wxMenu_php*)native_object)->IsChecked((int) id0));
 
 
                 return;
@@ -9519,7 +9519,7 @@ PHP_METHOD(php_wxMenu, IsEnabled)
                 php_printf("Executing RETURN_BOOL(wxMenu::IsEnabled((int) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->IsEnabled((int) id0));
+                RETVAL_BOOL(((wxMenu_php*)native_object)->IsEnabled((int) id0));
 
 
                 return;
@@ -9640,7 +9640,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
                 value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->FindChildItem((int) id0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -9675,7 +9675,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
                 value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->FindChildItem((int) id0, (size_t*) pos0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -10549,7 +10549,7 @@ PHP_METHOD(php_wxMenuItem, IsSubMenu)
                 php_printf("Executing RETURN_BOOL(wxMenuItem::IsSubMenu())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenuItem_php*)native_object)->IsSubMenu());
+                RETVAL_BOOL(((wxMenuItem_php*)native_object)->IsSubMenu());
 
 
                 return;
@@ -10656,7 +10656,7 @@ PHP_METHOD(php_wxMenuItem, IsSeparator)
                 php_printf("Executing RETURN_BOOL(wxMenuItem::IsSeparator())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenuItem_php*)native_object)->IsSeparator());
+                RETVAL_BOOL(((wxMenuItem_php*)native_object)->IsSeparator());
 
 
                 return;
@@ -11013,7 +11013,7 @@ PHP_METHOD(php_wxMenuItem, GetHelp)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMenuItem_php*)native_object)->GetHelp();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11120,7 +11120,7 @@ PHP_METHOD(php_wxMenuItem, GetId)
                 php_printf("Executing RETURN_LONG(wxMenuItem::GetId())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMenuItem_php*)native_object)->GetId());
+                RETVAL_LONG(((wxMenuItem_php*)native_object)->GetId());
 
 
                 return;
@@ -11229,7 +11229,7 @@ PHP_METHOD(php_wxMenuItem, GetItemLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMenuItem_php*)native_object)->GetItemLabel();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11338,7 +11338,7 @@ PHP_METHOD(php_wxMenuItem, GetItemLabelText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMenuItem_php*)native_object)->GetItemLabelText();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11445,7 +11445,7 @@ PHP_METHOD(php_wxMenuItem, GetKind)
                 php_printf("Executing RETURN_LONG(wxMenuItem::GetKind())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMenuItem_php*)native_object)->GetKind());
+                RETVAL_LONG(((wxMenuItem_php*)native_object)->GetKind());
 
 
                 return;
@@ -11561,7 +11561,7 @@ PHP_METHOD(php_wxMenuItem, GetLabelText)
 
                 wxString value_to_return1;
                 value_to_return1 = wxMenuItem::GetLabelText(wxString(text0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -11672,7 +11672,7 @@ PHP_METHOD(php_wxMenuItem, GetMenu)
                 value_to_return0 = (wxMenu_php*) ((wxMenuItem_php*)native_object)->GetMenu();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -11802,7 +11802,7 @@ PHP_METHOD(php_wxMenuItem, GetSubMenu)
                 value_to_return0 = (wxMenu_php*) ((wxMenuItem_php*)native_object)->GetSubMenu();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -11928,7 +11928,7 @@ PHP_METHOD(php_wxMenuItem, IsCheckable)
                 php_printf("Executing RETURN_BOOL(wxMenuItem::IsCheckable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenuItem_php*)native_object)->IsCheckable());
+                RETVAL_BOOL(((wxMenuItem_php*)native_object)->IsCheckable());
 
 
                 return;
@@ -12035,7 +12035,7 @@ PHP_METHOD(php_wxMenuItem, IsChecked)
                 php_printf("Executing RETURN_BOOL(wxMenuItem::IsChecked())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenuItem_php*)native_object)->IsChecked());
+                RETVAL_BOOL(((wxMenuItem_php*)native_object)->IsChecked());
 
 
                 return;
@@ -12142,7 +12142,7 @@ PHP_METHOD(php_wxMenuItem, IsEnabled)
                 php_printf("Executing RETURN_BOOL(wxMenuItem::IsEnabled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenuItem_php*)native_object)->IsEnabled());
+                RETVAL_BOOL(((wxMenuItem_php*)native_object)->IsEnabled());
 
 
                 return;

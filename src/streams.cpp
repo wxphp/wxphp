@@ -1193,7 +1193,7 @@ PHP_METHOD(php_wxDataInputStream, ReadString)
                 {
                     value_to_return0 = ((wxDataInputStream_php*)native_object)->ReadString();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1356,7 +1356,7 @@ PHP_METHOD(php_wxDataInputStream, ReadDouble)
 
                 if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
                 {
-                    ZVAL_DOUBLE(return_value, ((wxDataInputStream_php*)native_object)->ReadDouble());
+                    RETVAL_DOUBLE(((wxDataInputStream_php*)native_object)->ReadDouble());
                 }
 
 
@@ -1510,7 +1510,7 @@ PHP_METHOD(php_wxDataInputStream, Read8)
 
                 if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxDataInputStream_php*)native_object)->Read8());
+                    RETVAL_LONG(((wxDataInputStream_php*)native_object)->Read8());
                 }
 
 
@@ -1664,7 +1664,7 @@ PHP_METHOD(php_wxDataInputStream, Read32)
 
                 if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxDataInputStream_php*)native_object)->Read32());
+                    RETVAL_LONG(((wxDataInputStream_php*)native_object)->Read32());
                 }
 
 
@@ -1818,7 +1818,7 @@ PHP_METHOD(php_wxDataInputStream, Read16)
 
                 if(current_object_type == PHP_WXDATAINPUTSTREAM_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxDataInputStream_php*)native_object)->Read16());
+                    RETVAL_LONG(((wxDataInputStream_php*)native_object)->Read16());
                 }
 
 
@@ -2391,7 +2391,7 @@ PHP_METHOD(php_wxStreamBase, IsSeekable)
                 php_printf("Executing RETURN_BOOL(wxStreamBase::IsSeekable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStreamBase_php*)native_object)->IsSeekable());
+                RETVAL_BOOL(((wxStreamBase_php*)native_object)->IsSeekable());
 
 
                 return;
@@ -2530,7 +2530,7 @@ PHP_METHOD(php_wxStreamBase, IsOk)
                 php_printf("Executing RETURN_BOOL(wxStreamBase::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStreamBase_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxStreamBase_php*)native_object)->IsOk());
 
 
                 return;
@@ -2669,7 +2669,7 @@ PHP_METHOD(php_wxStreamBase, GetSize)
                 php_printf("Executing RETURN_LONG(wxStreamBase::GetSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStreamBase_php*)native_object)->GetSize());
+                RETVAL_LONG(((wxStreamBase_php*)native_object)->GetSize());
 
 
                 return;
@@ -2808,7 +2808,7 @@ PHP_METHOD(php_wxStreamBase, GetLength)
                 php_printf("Executing RETURN_LONG(wxStreamBase::GetLength())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStreamBase_php*)native_object)->GetLength());
+                RETVAL_LONG(((wxStreamBase_php*)native_object)->GetLength());
 
 
                 return;
@@ -2947,7 +2947,7 @@ PHP_METHOD(php_wxStreamBase, GetLastError)
                 php_printf("Executing RETURN_LONG(wxStreamBase::GetLastError())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStreamBase_php*)native_object)->GetLastError());
+                RETVAL_LONG(((wxStreamBase_php*)native_object)->GetLastError());
 
 
                 return;
@@ -3640,7 +3640,7 @@ PHP_METHOD(php_wxOutputStream, TellO)
                 php_printf("Executing RETURN_LONG(wxOutputStream::TellO())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->TellO());
+                RETVAL_LONG(((wxOutputStream_php*)native_object)->TellO());
 
 
                 return;
@@ -3769,7 +3769,7 @@ PHP_METHOD(php_wxOutputStream, SeekO)
                 php_printf("Executing RETURN_LONG(wxOutputStream::SeekO((wxFileOffset) pos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->SeekO((wxFileOffset) pos0));
+                RETVAL_LONG(((wxOutputStream_php*)native_object)->SeekO((wxFileOffset) pos0));
 
 
                 return;
@@ -3781,7 +3781,7 @@ PHP_METHOD(php_wxOutputStream, SeekO)
                 php_printf("Executing RETURN_LONG(wxOutputStream::SeekO((wxFileOffset) pos0, (wxSeekMode) mode0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->SeekO((wxFileOffset) pos0, (wxSeekMode) mode0));
+                RETVAL_LONG(((wxOutputStream_php*)native_object)->SeekO((wxFileOffset) pos0, (wxSeekMode) mode0));
 
 
                 return;
@@ -4032,7 +4032,7 @@ PHP_METHOD(php_wxOutputStream, Close)
                 php_printf("Executing RETURN_BOOL(wxOutputStream::Close())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxOutputStream_php*)native_object)->Close());
+                RETVAL_BOOL(((wxOutputStream_php*)native_object)->Close());
 
 
                 return;
@@ -4155,7 +4155,7 @@ PHP_METHOD(php_wxOutputStream, LastWrite)
                 php_printf("Executing RETURN_LONG(wxOutputStream::LastWrite())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxOutputStream_php*)native_object)->LastWrite());
+                RETVAL_LONG(((wxOutputStream_php*)native_object)->LastWrite());
 
 
                 return;
@@ -4468,7 +4468,7 @@ PHP_METHOD(php_wxInputStream, Ungetch)
                 php_printf("Executing RETURN_BOOL(wxInputStream::Ungetch((char) c0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxInputStream_php*)native_object)->Ungetch((char) c0));
+                RETVAL_BOOL(((wxInputStream_php*)native_object)->Ungetch((char) c0));
 
 
                 return;
@@ -4487,7 +4487,7 @@ PHP_METHOD(php_wxInputStream, Ungetch)
                 php_printf("Executing RETURN_LONG(wxInputStream::Ungetch((const void*) buffer1, (size_t) size1))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->Ungetch((const void*) buffer1, (size_t) size1));
+                RETVAL_LONG(((wxInputStream_php*)native_object)->Ungetch((const void*) buffer1, (size_t) size1));
 
 
                 return;
@@ -4610,7 +4610,7 @@ PHP_METHOD(php_wxInputStream, TellI)
                 php_printf("Executing RETURN_LONG(wxInputStream::TellI())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->TellI());
+                RETVAL_LONG(((wxInputStream_php*)native_object)->TellI());
 
 
                 return;
@@ -4739,7 +4739,7 @@ PHP_METHOD(php_wxInputStream, SeekI)
                 php_printf("Executing RETURN_LONG(wxInputStream::SeekI((wxFileOffset) pos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->SeekI((wxFileOffset) pos0));
+                RETVAL_LONG(((wxInputStream_php*)native_object)->SeekI((wxFileOffset) pos0));
 
 
                 return;
@@ -4751,7 +4751,7 @@ PHP_METHOD(php_wxInputStream, SeekI)
                 php_printf("Executing RETURN_LONG(wxInputStream::SeekI((wxFileOffset) pos0, (wxSeekMode) mode0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->SeekI((wxFileOffset) pos0, (wxSeekMode) mode0));
+                RETVAL_LONG(((wxInputStream_php*)native_object)->SeekI((wxFileOffset) pos0, (wxSeekMode) mode0));
 
 
                 return;
@@ -5111,7 +5111,7 @@ PHP_METHOD(php_wxInputStream, Peek)
                 char* value_to_return0;
                 char value_to_return_temp0 = ((wxInputStream_php*)native_object)->Peek();
                 value_to_return0 = &value_to_return_temp0;
-                ZVAL_STRING(return_value, value_to_return0);
+                RETVAL_STRING(value_to_return0);
 
 
                 return;
@@ -5328,7 +5328,7 @@ PHP_METHOD(php_wxInputStream, LastRead)
                 php_printf("Executing RETURN_LONG(wxInputStream::LastRead())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->LastRead());
+                RETVAL_LONG(((wxInputStream_php*)native_object)->LastRead());
 
 
                 return;
@@ -5451,7 +5451,7 @@ PHP_METHOD(php_wxInputStream, GetC)
                 php_printf("Executing RETURN_LONG(wxInputStream::GetC())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxInputStream_php*)native_object)->GetC());
+                RETVAL_LONG(((wxInputStream_php*)native_object)->GetC());
 
 
                 return;
@@ -5574,7 +5574,7 @@ PHP_METHOD(php_wxInputStream, Eof)
                 php_printf("Executing RETURN_BOOL(wxInputStream::Eof())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxInputStream_php*)native_object)->Eof());
+                RETVAL_BOOL(((wxInputStream_php*)native_object)->Eof());
 
 
                 return;
@@ -5697,7 +5697,7 @@ PHP_METHOD(php_wxInputStream, CanRead)
                 php_printf("Executing RETURN_BOOL(wxInputStream::CanRead())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxInputStream_php*)native_object)->CanRead());
+                RETVAL_BOOL(((wxInputStream_php*)native_object)->CanRead());
 
 
                 return;
@@ -5887,7 +5887,7 @@ PHP_METHOD(php_wxFFileOutputStream, IsOk)
                 php_printf("Executing RETURN_BOOL(wxFFileOutputStream::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFFileOutputStream_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxFFileOutputStream_php*)native_object)->IsOk());
 
 
                 return;
@@ -6237,7 +6237,7 @@ PHP_METHOD(php_wxFileOutputStream, IsOk)
                 php_printf("Executing RETURN_BOOL(wxFileOutputStream::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFileOutputStream_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxFileOutputStream_php*)native_object)->IsOk());
 
 
                 return;
@@ -6613,7 +6613,7 @@ PHP_METHOD(php_wxFileInputStream, IsOk)
                 php_printf("Executing RETURN_BOOL(wxFileInputStream::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFileInputStream_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxFileInputStream_php*)native_object)->IsOk());
 
 
                 return;
@@ -7149,7 +7149,7 @@ PHP_METHOD(php_wxFFileInputStream, IsOk)
                 php_printf("Executing RETURN_BOOL(wxFFileInputStream::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFFileInputStream_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxFFileInputStream_php*)native_object)->IsOk());
 
 
                 return;
@@ -7335,7 +7335,7 @@ PHP_METHOD(php_wxFFileStream, IsOk)
                 php_printf("Executing RETURN_BOOL(wxFFileStream::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFFileStream_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxFFileStream_php*)native_object)->IsOk());
 
 
                 return;
@@ -7623,7 +7623,7 @@ PHP_METHOD(php_wxFileStream, IsOk)
                 php_printf("Executing RETURN_BOOL(wxFileStream::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFileStream_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxFileStream_php*)native_object)->IsOk());
 
 
                 return;

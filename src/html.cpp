@@ -929,7 +929,7 @@ PHP_METHOD(php_wxHtmlCell, GetDescent)
                 php_printf("Executing RETURN_LONG(wxHtmlCell::GetDescent())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHtmlCell_php*)native_object)->GetDescent());
+                RETVAL_LONG(((wxHtmlCell_php*)native_object)->GetDescent());
 
 
                 return;
@@ -1052,7 +1052,7 @@ PHP_METHOD(php_wxHtmlCell, GetFirstChild)
                 value_to_return0 = (wxHtmlCell_php*) ((wxHtmlCell_php*)native_object)->GetFirstChild();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -1190,7 +1190,7 @@ PHP_METHOD(php_wxHtmlCell, GetHeight)
                 php_printf("Executing RETURN_LONG(wxHtmlCell::GetHeight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHtmlCell_php*)native_object)->GetHeight());
+                RETVAL_LONG(((wxHtmlCell_php*)native_object)->GetHeight());
 
 
                 return;
@@ -1311,7 +1311,7 @@ PHP_METHOD(php_wxHtmlCell, GetId)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlCell_php*)native_object)->GetId();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1440,7 +1440,7 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
                 value_to_return0 = (wxHtmlLinkInfo_php*) ((wxHtmlCell_php*)native_object)->GetLink();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -1475,7 +1475,7 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
                 value_to_return1 = (wxHtmlLinkInfo_php*) ((wxHtmlCell_php*)native_object)->GetLink((int) x0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -1510,7 +1510,7 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
                 value_to_return2 = (wxHtmlLinkInfo_php*) ((wxHtmlCell_php*)native_object)->GetLink((int) x0, (int) y0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -1652,7 +1652,7 @@ PHP_METHOD(php_wxHtmlCell, GetNext)
                 value_to_return0 = (wxHtmlCell_php*) ((wxHtmlCell_php*)native_object)->GetNext();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -1794,7 +1794,7 @@ PHP_METHOD(php_wxHtmlCell, GetParent)
                 value_to_return0 = (wxHtmlContainerCell_php*) ((wxHtmlCell_php*)native_object)->GetParent();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -1932,7 +1932,7 @@ PHP_METHOD(php_wxHtmlCell, GetPosX)
                 php_printf("Executing RETURN_LONG(wxHtmlCell::GetPosX())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHtmlCell_php*)native_object)->GetPosX());
+                RETVAL_LONG(((wxHtmlCell_php*)native_object)->GetPosX());
 
 
                 return;
@@ -2051,7 +2051,7 @@ PHP_METHOD(php_wxHtmlCell, GetPosY)
                 php_printf("Executing RETURN_LONG(wxHtmlCell::GetPosY())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHtmlCell_php*)native_object)->GetPosY());
+                RETVAL_LONG(((wxHtmlCell_php*)native_object)->GetPosY());
 
 
                 return;
@@ -2170,7 +2170,7 @@ PHP_METHOD(php_wxHtmlCell, GetWidth)
                 php_printf("Executing RETURN_LONG(wxHtmlCell::GetWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHtmlCell_php*)native_object)->GetWidth());
+                RETVAL_LONG(((wxHtmlCell_php*)native_object)->GetWidth());
 
 
                 return;
@@ -3186,7 +3186,7 @@ PHP_METHOD(php_wxHtmlCell, Find)
                 value_to_return2 = (wxHtmlCell_php*) ((wxHtmlCell_php*)native_object)->Find((int) condition0, (const void*) param0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -4723,7 +4723,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetIndentUnits)
                 php_printf("Executing RETURN_LONG(wxHtmlContainerCell::GetIndentUnits((int) ind0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHtmlContainerCell_php*)native_object)->GetIndentUnits((int) ind0));
+                RETVAL_LONG(((wxHtmlContainerCell_php*)native_object)->GetIndentUnits((int) ind0));
 
 
                 return;
@@ -4835,7 +4835,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetIndent)
                 php_printf("Executing RETURN_LONG(wxHtmlContainerCell::GetIndent((int) ind0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHtmlContainerCell_php*)native_object)->GetIndent((int) ind0));
+                RETVAL_LONG(((wxHtmlContainerCell_php*)native_object)->GetIndent((int) ind0));
 
 
                 return;
@@ -5057,7 +5057,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetAlignVer)
                 php_printf("Executing RETURN_LONG(wxHtmlContainerCell::GetAlignVer())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHtmlContainerCell_php*)native_object)->GetAlignVer());
+                RETVAL_LONG(((wxHtmlContainerCell_php*)native_object)->GetAlignVer());
 
 
                 return;
@@ -5164,7 +5164,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetAlignHor)
                 php_printf("Executing RETURN_LONG(wxHtmlContainerCell::GetAlignHor())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHtmlContainerCell_php*)native_object)->GetAlignHor());
+                RETVAL_LONG(((wxHtmlContainerCell_php*)native_object)->GetAlignHor());
 
 
                 return;
@@ -5354,7 +5354,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetEvent)
                 value_to_return0 = (wxMouseEvent_php*) ((wxHtmlLinkInfo_php*)native_object)->GetEvent();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -5482,7 +5482,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetHref)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlLinkInfo_php*)native_object)->GetHref();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5593,7 +5593,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetHtmlCell)
                 value_to_return0 = (wxHtmlCell_php*) ((wxHtmlLinkInfo_php*)native_object)->GetHtmlCell();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -5721,7 +5721,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetTarget)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlLinkInfo_php*)native_object)->GetTarget();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -6442,7 +6442,7 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -6867,7 +6867,7 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -7193,7 +7193,7 @@ PHP_METHOD(php_wxHtmlTag, GetAllParams)
                 {
                     value_to_return0 = ((wxHtmlTag_php*)native_object)->GetAllParams();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -7305,7 +7305,7 @@ PHP_METHOD(php_wxHtmlTag, GetName)
                 {
                     value_to_return0 = ((wxHtmlTag_php*)native_object)->GetName();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -7424,7 +7424,7 @@ PHP_METHOD(php_wxHtmlTag, GetParam)
                 {
                     value_to_return1 = ((wxHtmlTag_php*)native_object)->GetParam(wxString(par0, wxConvUTF8));
                 }
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -7441,7 +7441,7 @@ PHP_METHOD(php_wxHtmlTag, GetParam)
                 {
                     value_to_return2 = ((wxHtmlTag_php*)native_object)->GetParam(wxString(par0, wxConvUTF8), with_quotes0);
                 }
-                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
+                RETVAL_STRING(value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -7575,7 +7575,7 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsColour)
 
                 if(current_object_type == PHP_WXHTMLTAG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxHtmlTag_php*)native_object)->GetParamAsColour(wxString(par0, wxConvUTF8), (wxColour*) object_pointer0_1));
+                    RETVAL_BOOL(((wxHtmlTag_php*)native_object)->GetParamAsColour(wxString(par0, wxConvUTF8), (wxColour*) object_pointer0_1));
                 }
 
                 references->AddReference(clr0, "wxHtmlTag::GetParamAsColour at call 1 with 2 argument(s)");
@@ -7686,7 +7686,7 @@ PHP_METHOD(php_wxHtmlTag, HasEnding)
 
                 if(current_object_type == PHP_WXHTMLTAG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxHtmlTag_php*)native_object)->HasEnding());
+                    RETVAL_BOOL(((wxHtmlTag_php*)native_object)->HasEnding());
                 }
 
 
@@ -7802,7 +7802,7 @@ PHP_METHOD(php_wxHtmlTag, HasParam)
 
                 if(current_object_type == PHP_WXHTMLTAG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxHtmlTag_php*)native_object)->HasParam(wxString(par0, wxConvUTF8)));
+                    RETVAL_BOOL(((wxHtmlTag_php*)native_object)->HasParam(wxString(par0, wxConvUTF8)));
                 }
 
 
@@ -7936,7 +7936,7 @@ PHP_METHOD(php_wxHtmlTag, ParseAsColour)
                 php_printf("Executing RETURN_BOOL(wxHtmlTag::ParseAsColour(wxString(str0, wxConvUTF8), (wxColour*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxHtmlTag::ParseAsColour(wxString(str0, wxConvUTF8), (wxColour*) object_pointer0_1));
+                RETVAL_BOOL(wxHtmlTag::ParseAsColour(wxString(str0, wxConvUTF8), (wxColour*) object_pointer0_1));
 
 
                 return;
@@ -8059,7 +8059,7 @@ PHP_METHOD(php_wxHtmlTag, ScanParam)
 
                 if(current_object_type == PHP_WXHTMLTAG_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHtmlTag_php*)native_object)->ScanParam(wxString(par0, wxConvUTF8), format0, (void*) value0));
+                    RETVAL_LONG(((wxHtmlTag_php*)native_object)->ScanParam(wxString(par0, wxConvUTF8), format0, (void*) value0));
                 }
 
                 ZVAL_STRING(&value0_ref, (char*) value0);
@@ -8181,7 +8181,7 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsInt)
 
                 if(current_object_type == PHP_WXHTMLTAG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxHtmlTag_php*)native_object)->GetParamAsInt(wxString(par0, wxConvUTF8), (int*) value0));
+                    RETVAL_BOOL(((wxHtmlTag_php*)native_object)->GetParamAsInt(wxString(par0, wxConvUTF8), (int*) value0));
                 }
 
                 size_t elements_returned0_1 = sizeof(value0)/sizeof(*value0);
@@ -8351,7 +8351,7 @@ PHP_METHOD(php_wxHtmlWindow, AppendToPage)
                 php_printf("Executing RETURN_BOOL(wxHtmlWindow::AppendToPage(wxString(source0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)native_object)->AppendToPage(wxString(source0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlWindow_php*)native_object)->AppendToPage(wxString(source0, wxConvUTF8)));
 
 
                 return;
@@ -8460,7 +8460,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedAnchor)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlWindow_php*)native_object)->GetOpenedAnchor();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -8569,7 +8569,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedPage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlWindow_php*)native_object)->GetOpenedPage();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -8678,7 +8678,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedPageTitle)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlWindow_php*)native_object)->GetOpenedPageTitle();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -8789,7 +8789,7 @@ PHP_METHOD(php_wxHtmlWindow, GetRelatedFrame)
                 value_to_return0 = (wxFrame_php*) ((wxHtmlWindow_php*)native_object)->GetRelatedFrame();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -8915,7 +8915,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryBack)
                 php_printf("Executing RETURN_BOOL(wxHtmlWindow::HistoryBack())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)native_object)->HistoryBack());
+                RETVAL_BOOL(((wxHtmlWindow_php*)native_object)->HistoryBack());
 
 
                 return;
@@ -9022,7 +9022,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryCanBack)
                 php_printf("Executing RETURN_BOOL(wxHtmlWindow::HistoryCanBack())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)native_object)->HistoryCanBack());
+                RETVAL_BOOL(((wxHtmlWindow_php*)native_object)->HistoryCanBack());
 
 
                 return;
@@ -9129,7 +9129,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryCanForward)
                 php_printf("Executing RETURN_BOOL(wxHtmlWindow::HistoryCanForward())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)native_object)->HistoryCanForward());
+                RETVAL_BOOL(((wxHtmlWindow_php*)native_object)->HistoryCanForward());
 
 
                 return;
@@ -9343,7 +9343,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryForward)
                 php_printf("Executing RETURN_BOOL(wxHtmlWindow::HistoryForward())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)native_object)->HistoryForward());
+                RETVAL_BOOL(((wxHtmlWindow_php*)native_object)->HistoryForward());
 
 
                 return;
@@ -9456,7 +9456,7 @@ PHP_METHOD(php_wxHtmlWindow, LoadPage)
                 php_printf("Executing RETURN_BOOL(wxHtmlWindow::LoadPage(wxString(location0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)native_object)->LoadPage(wxString(location0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlWindow_php*)native_object)->LoadPage(wxString(location0, wxConvUTF8)));
 
 
                 return;
@@ -9586,7 +9586,7 @@ PHP_METHOD(php_wxHtmlWindow, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxHtmlWindow::LoadFile(*(wxFileName*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)native_object)->LoadFile(*(wxFileName*) object_pointer0_0));
+                RETVAL_BOOL(((wxHtmlWindow_php*)native_object)->LoadFile(*(wxFileName*) object_pointer0_0));
 
                 references->AddReference(filename0, "wxHtmlWindow::LoadFile at call 3 with 1 argument(s)");
 
@@ -9694,7 +9694,7 @@ bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, con
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -10546,7 +10546,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectionToText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlWindow_php*)native_object)->SelectionToText();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -10771,7 +10771,7 @@ PHP_METHOD(php_wxHtmlWindow, SetPage)
                 php_printf("Executing RETURN_BOOL(wxHtmlWindow::SetPage(wxString(source0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)native_object)->SetPage(wxString(source0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlWindow_php*)native_object)->SetPage(wxString(source0, wxConvUTF8)));
 
 
                 return;
@@ -11350,7 +11350,7 @@ PHP_METHOD(php_wxHtmlWindow, ToText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlWindow_php*)native_object)->ToText();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -11857,7 +11857,7 @@ PHP_METHOD(php_wxHtmlWindow, GetInternalRepresentation)
                 value_to_return0 = (wxHtmlContainerCell_php*) ((wxHtmlWindow_php*)native_object)->GetInternalRepresentation();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -12665,7 +12665,7 @@ PHP_METHOD(php_wxHtmlCellEvent, GetCell)
                 value_to_return0 = (wxHtmlCell_php*) ((wxHtmlCellEvent_php*)native_object)->GetCell();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -12791,7 +12791,7 @@ PHP_METHOD(php_wxHtmlCellEvent, GetLinkClicked)
                 php_printf("Executing RETURN_BOOL(wxHtmlCellEvent::GetLinkClicked())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlCellEvent_php*)native_object)->GetLinkClicked());
+                RETVAL_BOOL(((wxHtmlCellEvent_php*)native_object)->GetLinkClicked());
 
 
                 return;
@@ -13353,7 +13353,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, GetTotalHeight)
                 php_printf("Executing RETURN_LONG(wxHtmlDCRenderer::GetTotalHeight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHtmlDCRenderer_php*)native_object)->GetTotalHeight());
+                RETVAL_LONG(((wxHtmlDCRenderer_php*)native_object)->GetTotalHeight());
 
 
                 return;
@@ -13460,7 +13460,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, GetTotalWidth)
                 php_printf("Executing RETURN_LONG(wxHtmlDCRenderer::GetTotalWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHtmlDCRenderer_php*)native_object)->GetTotalWidth());
+                RETVAL_LONG(((wxHtmlDCRenderer_php*)native_object)->GetTotalWidth());
 
 
                 return;
@@ -14435,7 +14435,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHtmlEasyPrinting_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -14546,7 +14546,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPageSetupData)
                 value_to_return0 = (wxPageSetupDialogData_php*) ((wxHtmlEasyPrinting_php*)native_object)->GetPageSetupData();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -14676,7 +14676,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetParentWindow)
                 value_to_return0 = (wxWindow_php*) ((wxHtmlEasyPrinting_php*)native_object)->GetParentWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -14806,7 +14806,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPrintData)
                 value_to_return0 = (wxPrintData_php*) ((wxHtmlEasyPrinting_php*)native_object)->GetPrintData();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -15045,7 +15045,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewFile)
                 php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PreviewFile(wxString(htmlfile0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)native_object)->PreviewFile(wxString(htmlfile0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlEasyPrinting_php*)native_object)->PreviewFile(wxString(htmlfile0, wxConvUTF8)));
 
 
                 return;
@@ -15160,7 +15160,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewText)
                 php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PreviewText(wxString(htmltext0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)native_object)->PreviewText(wxString(htmltext0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlEasyPrinting_php*)native_object)->PreviewText(wxString(htmltext0, wxConvUTF8)));
 
 
                 return;
@@ -15172,7 +15172,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewText)
                 php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PreviewText(wxString(htmltext0, wxConvUTF8), wxString(basepath0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)native_object)->PreviewText(wxString(htmltext0, wxConvUTF8), wxString(basepath0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlEasyPrinting_php*)native_object)->PreviewText(wxString(htmltext0, wxConvUTF8), wxString(basepath0, wxConvUTF8)));
 
 
                 return;
@@ -15285,7 +15285,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintFile)
                 php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PrintFile(wxString(htmlfile0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)native_object)->PrintFile(wxString(htmlfile0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlEasyPrinting_php*)native_object)->PrintFile(wxString(htmlfile0, wxConvUTF8)));
 
 
                 return;
@@ -15400,7 +15400,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintText)
                 php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PrintText(wxString(htmltext0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)native_object)->PrintText(wxString(htmltext0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlEasyPrinting_php*)native_object)->PrintText(wxString(htmltext0, wxConvUTF8)));
 
 
                 return;
@@ -15412,7 +15412,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintText)
                 php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PrintText(wxString(htmltext0, wxConvUTF8), wxString(basepath0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)native_object)->PrintText(wxString(htmltext0, wxConvUTF8), wxString(basepath0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlEasyPrinting_php*)native_object)->PrintText(wxString(htmltext0, wxConvUTF8), wxString(basepath0, wxConvUTF8)));
 
 
                 return;
@@ -18107,7 +18107,7 @@ PHP_METHOD(php_wxHtmlWinParser, CloseContainer)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -18240,7 +18240,7 @@ PHP_METHOD(php_wxHtmlWinParser, CreateCurrentFont)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -18498,7 +18498,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetAlign)
 
                 if(current_object_type == PHP_WXHTMLWINPARSER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)native_object)->GetAlign());
+                    RETVAL_LONG(((wxHtmlWinParser_php*)native_object)->GetAlign());
                 }
 
 
@@ -18608,7 +18608,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetCharHeight)
 
                 if(current_object_type == PHP_WXHTMLWINPARSER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)native_object)->GetCharHeight());
+                    RETVAL_LONG(((wxHtmlWinParser_php*)native_object)->GetCharHeight());
                 }
 
 
@@ -18718,7 +18718,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetCharWidth)
 
                 if(current_object_type == PHP_WXHTMLWINPARSER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)native_object)->GetCharWidth());
+                    RETVAL_LONG(((wxHtmlWinParser_php*)native_object)->GetCharWidth());
                 }
 
 
@@ -18833,7 +18833,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetContainer)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -18966,7 +18966,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetDC)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -19094,7 +19094,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontBold)
 
                 if(current_object_type == PHP_WXHTMLWINPARSER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)native_object)->GetFontBold());
+                    RETVAL_LONG(((wxHtmlWinParser_php*)native_object)->GetFontBold());
                 }
 
 
@@ -19207,7 +19207,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontFace)
                 {
                     value_to_return0 = ((wxHtmlWinParser_php*)native_object)->GetFontFace();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -19316,7 +19316,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontFixed)
 
                 if(current_object_type == PHP_WXHTMLWINPARSER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)native_object)->GetFontFixed());
+                    RETVAL_LONG(((wxHtmlWinParser_php*)native_object)->GetFontFixed());
                 }
 
 
@@ -19426,7 +19426,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontItalic)
 
                 if(current_object_type == PHP_WXHTMLWINPARSER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)native_object)->GetFontItalic());
+                    RETVAL_LONG(((wxHtmlWinParser_php*)native_object)->GetFontItalic());
                 }
 
 
@@ -19536,7 +19536,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontSize)
 
                 if(current_object_type == PHP_WXHTMLWINPARSER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)native_object)->GetFontSize());
+                    RETVAL_LONG(((wxHtmlWinParser_php*)native_object)->GetFontSize());
                 }
 
 
@@ -19646,7 +19646,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontUnderlined)
 
                 if(current_object_type == PHP_WXHTMLWINPARSER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)native_object)->GetFontUnderlined());
+                    RETVAL_LONG(((wxHtmlWinParser_php*)native_object)->GetFontUnderlined());
                 }
 
 
@@ -20293,7 +20293,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetContainer)
 
                 }
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -20578,7 +20578,7 @@ PHP_METHOD(php_wxHtmlWinParser, OpenContainer)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){

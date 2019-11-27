@@ -875,7 +875,7 @@ PHP_METHOD(php_wxGridCellCoords, GetRow)
                 php_printf("Executing RETURN_LONG(wxGridCellCoords::GetRow())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridCellCoords_php*)native_object)->GetRow());
+                RETVAL_LONG(((wxGridCellCoords_php*)native_object)->GetRow());
 
 
                 return;
@@ -1094,7 +1094,7 @@ PHP_METHOD(php_wxGridCellCoords, GetCol)
                 php_printf("Executing RETURN_LONG(wxGridCellCoords::GetCol())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridCellCoords_php*)native_object)->GetCol());
+                RETVAL_LONG(((wxGridCellCoords_php*)native_object)->GetCol());
 
 
                 return;
@@ -1637,111 +1637,111 @@ PHP_METHOD(php_wxNonOwnedWindow, SetShape)
 
                 if(current_object_type == PHP_WXTOPLEVELWINDOW_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxTopLevelWindow_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxTopLevelWindow_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXFRAME_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXSPLASHSCREEN_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxSplashScreen_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxSplashScreen_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXMDICHILDFRAME_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxMDIChildFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXMDIPARENTFRAME_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMDIParentFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxMDIParentFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXMINIFRAME_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMiniFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxMiniFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXPREVIEWFRAME_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxPreviewFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxPreviewFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXHTMLHELPDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxHtmlHelpDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXHTMLHELPFRAME_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxHtmlHelpFrame_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXTEXTENTRYDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxTextEntryDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxTextEntryDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXPASSWORDENTRYDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxPasswordEntryDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxPasswordEntryDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXMESSAGEDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMessageDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxMessageDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXFINDREPLACEDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFindReplaceDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxFindReplaceDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXDIRDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxDirDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxDirDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXSYMBOLPICKERDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXPROPERTYSHEETDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxPropertySheetDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxPropertySheetDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXWIZARD_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxWizard_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXPROGRESSDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxProgressDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxProgressDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXCOLOURDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxColourDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxColourDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXFILEDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFileDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxFileDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXFONTDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFontDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxFontDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXSINGLECHOICEDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxSingleChoiceDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxSingleChoiceDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXGENERICPROGRESSDIALOG_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxGenericProgressDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxGenericProgressDialog_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXPOPUPWINDOW_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxPopupWindow_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxPopupWindow_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXPOPUPTRANSIENTWINDOW_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxPopupTransientWindow_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxPopupTransientWindow_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
                 else if(current_object_type == PHP_WXNONOWNEDWINDOW_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxNonOwnedWindow_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
+                    RETVAL_BOOL(((wxNonOwnedWindow_php*)native_object)->SetShape(*(wxRegion*) object_pointer0_0));
                 }
 
                 references->AddReference(region0, "wxNonOwnedWindow::SetShape at call 3 with 1 argument(s)");
@@ -4462,7 +4462,7 @@ PHP_METHOD(php_wxWithImages, GetImageList)
                 value_to_return0 = (wxImageList_php*) ((wxWithImages_php*)native_object)->GetImageList();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -4906,7 +4906,7 @@ bool wxTextCompleter_php::Start(const wxString& prefix)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -5079,7 +5079,7 @@ PHP_METHOD(php_wxWindowModalDialogEvent, CloneMethod)
                 value_to_return0 = (wxEvent_php*) ((wxWindowModalDialogEvent_php*)native_object)->Clone();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -5209,7 +5209,7 @@ PHP_METHOD(php_wxWindowModalDialogEvent, GetDialog)
                 value_to_return0 = (wxDialog_php*) ((wxWindowModalDialogEvent_php*)native_object)->GetDialog();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -5335,7 +5335,7 @@ PHP_METHOD(php_wxWindowModalDialogEvent, GetReturnCode)
                 php_printf("Executing RETURN_LONG(wxWindowModalDialogEvent::GetReturnCode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxWindowModalDialogEvent_php*)native_object)->GetReturnCode());
+                RETVAL_LONG(((wxWindowModalDialogEvent_php*)native_object)->GetReturnCode());
 
 
                 return;
@@ -6330,7 +6330,7 @@ PHP_METHOD(php_wxPoint2DDouble, GetVectorLength)
                 php_printf("Executing RETURN_LONG(wxPoint2DDouble::GetVectorLength())\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxPoint2DDouble_php*)native_object)->GetVectorLength());
+                RETVAL_DOUBLE(((wxPoint2DDouble_php*)native_object)->GetVectorLength());
 
 
                 return;
@@ -6436,7 +6436,7 @@ PHP_METHOD(php_wxPoint2DDouble, GetVectorAngle)
                 php_printf("Executing RETURN_LONG(wxPoint2DDouble::GetVectorAngle())\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxPoint2DDouble_php*)native_object)->GetVectorAngle());
+                RETVAL_DOUBLE(((wxPoint2DDouble_php*)native_object)->GetVectorAngle());
 
 
                 return;
@@ -6565,7 +6565,7 @@ PHP_METHOD(php_wxPoint2DDouble, GetDotProduct)
                 php_printf("Executing RETURN_LONG(wxPoint2DDouble::GetDotProduct(*(wxPoint2DDouble*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxPoint2DDouble_php*)native_object)->GetDotProduct(*(wxPoint2DDouble*) object_pointer0_0));
+                RETVAL_DOUBLE(((wxPoint2DDouble_php*)native_object)->GetDotProduct(*(wxPoint2DDouble*) object_pointer0_0));
 
                 references->AddReference(vec0, "wxPoint2DDouble::GetDotProduct at call 3 with 1 argument(s)");
 
@@ -6695,7 +6695,7 @@ PHP_METHOD(php_wxPoint2DDouble, GetDistanceSquare)
                 php_printf("Executing RETURN_LONG(wxPoint2DDouble::GetDistanceSquare(*(wxPoint2DDouble*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxPoint2DDouble_php*)native_object)->GetDistanceSquare(*(wxPoint2DDouble*) object_pointer0_0));
+                RETVAL_DOUBLE(((wxPoint2DDouble_php*)native_object)->GetDistanceSquare(*(wxPoint2DDouble*) object_pointer0_0));
 
                 references->AddReference(pt0, "wxPoint2DDouble::GetDistanceSquare at call 3 with 1 argument(s)");
 
@@ -6825,7 +6825,7 @@ PHP_METHOD(php_wxPoint2DDouble, GetDistance)
                 php_printf("Executing RETURN_LONG(wxPoint2DDouble::GetDistance(*(wxPoint2DDouble*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxPoint2DDouble_php*)native_object)->GetDistance(*(wxPoint2DDouble*) object_pointer0_0));
+                RETVAL_DOUBLE(((wxPoint2DDouble_php*)native_object)->GetDistance(*(wxPoint2DDouble*) object_pointer0_0));
 
                 references->AddReference(pt0, "wxPoint2DDouble::GetDistance at call 3 with 1 argument(s)");
 
@@ -6955,7 +6955,7 @@ PHP_METHOD(php_wxPoint2DDouble, GetCrossProduct)
                 php_printf("Executing RETURN_LONG(wxPoint2DDouble::GetCrossProduct(*(wxPoint2DDouble*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxPoint2DDouble_php*)native_object)->GetCrossProduct(*(wxPoint2DDouble*) object_pointer0_0));
+                RETVAL_DOUBLE(((wxPoint2DDouble_php*)native_object)->GetCrossProduct(*(wxPoint2DDouble*) object_pointer0_0));
 
                 references->AddReference(vec0, "wxPoint2DDouble::GetCrossProduct at call 3 with 1 argument(s)");
 
@@ -7389,7 +7389,7 @@ PHP_METHOD(php_wxPoint2DInt, GetCrossProduct)
                 php_printf("Executing RETURN_LONG(wxPoint2DInt::GetCrossProduct(*(wxPoint2DInt*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPoint2DInt_php*)native_object)->GetCrossProduct(*(wxPoint2DInt*) object_pointer0_0));
+                RETVAL_LONG(((wxPoint2DInt_php*)native_object)->GetCrossProduct(*(wxPoint2DInt*) object_pointer0_0));
 
                 references->AddReference(vec0, "wxPoint2DInt::GetCrossProduct at call 3 with 1 argument(s)");
 
@@ -7519,7 +7519,7 @@ PHP_METHOD(php_wxPoint2DInt, GetDistance)
                 php_printf("Executing RETURN_LONG(wxPoint2DInt::GetDistance(*(wxPoint2DInt*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxPoint2DInt_php*)native_object)->GetDistance(*(wxPoint2DInt*) object_pointer0_0));
+                RETVAL_DOUBLE(((wxPoint2DInt_php*)native_object)->GetDistance(*(wxPoint2DInt*) object_pointer0_0));
 
                 references->AddReference(pt0, "wxPoint2DInt::GetDistance at call 3 with 1 argument(s)");
 
@@ -7649,7 +7649,7 @@ PHP_METHOD(php_wxPoint2DInt, GetDistanceSquare)
                 php_printf("Executing RETURN_LONG(wxPoint2DInt::GetDistanceSquare(*(wxPoint2DInt*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxPoint2DInt_php*)native_object)->GetDistanceSquare(*(wxPoint2DInt*) object_pointer0_0));
+                RETVAL_DOUBLE(((wxPoint2DInt_php*)native_object)->GetDistanceSquare(*(wxPoint2DInt*) object_pointer0_0));
 
                 references->AddReference(pt0, "wxPoint2DInt::GetDistanceSquare at call 3 with 1 argument(s)");
 
@@ -7779,7 +7779,7 @@ PHP_METHOD(php_wxPoint2DInt, GetDotProduct)
                 php_printf("Executing RETURN_LONG(wxPoint2DInt::GetDotProduct(*(wxPoint2DInt*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPoint2DInt_php*)native_object)->GetDotProduct(*(wxPoint2DInt*) object_pointer0_0));
+                RETVAL_LONG(((wxPoint2DInt_php*)native_object)->GetDotProduct(*(wxPoint2DInt*) object_pointer0_0));
 
                 references->AddReference(vec0, "wxPoint2DInt::GetDotProduct at call 3 with 1 argument(s)");
 
@@ -7886,7 +7886,7 @@ PHP_METHOD(php_wxPoint2DInt, GetVectorAngle)
                 php_printf("Executing RETURN_LONG(wxPoint2DInt::GetVectorAngle())\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxPoint2DInt_php*)native_object)->GetVectorAngle());
+                RETVAL_DOUBLE(((wxPoint2DInt_php*)native_object)->GetVectorAngle());
 
 
                 return;
@@ -7992,7 +7992,7 @@ PHP_METHOD(php_wxPoint2DInt, GetVectorLength)
                 php_printf("Executing RETURN_LONG(wxPoint2DInt::GetVectorLength())\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxPoint2DInt_php*)native_object)->GetVectorLength());
+                RETVAL_DOUBLE(((wxPoint2DInt_php*)native_object)->GetVectorLength());
 
 
                 return;
@@ -9235,7 +9235,7 @@ PHP_METHOD(php_wxLayoutConstraints, AreSatisfied)
                 php_printf("Executing RETURN_BOOL(wxLayoutConstraints::AreSatisfied())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxLayoutConstraints_php*)native_object)->AreSatisfied());
+                RETVAL_BOOL(((wxLayoutConstraints_php*)native_object)->AreSatisfied());
 
 
                 return;
@@ -9541,7 +9541,7 @@ PHP_METHOD(php_wxLayoutConstraints, SatisfyConstraints)
                 php_printf("Executing RETURN_BOOL(wxLayoutConstraints::SatisfyConstraints((wxWindow*) object_pointer0_0, (int*) noChanges0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxLayoutConstraints_php*)native_object)->SatisfyConstraints((wxWindow*) object_pointer0_0, (int*) noChanges0));
+                RETVAL_BOOL(((wxLayoutConstraints_php*)native_object)->SatisfyConstraints((wxWindow*) object_pointer0_0, (int*) noChanges0));
 
                 references->AddReference(win0, "wxLayoutConstraints::SatisfyConstraints at call 1 with 2 argument(s)");
                 size_t elements_returned0_1 = sizeof(noChanges0)/sizeof(*noChanges0);
@@ -9745,7 +9745,7 @@ PHP_METHOD(php_wxGridCellAttrProvider, GetAttr)
                 value_to_return3 = (wxGridCellAttr_php*) ((wxGridCellAttrProvider_php*)native_object)->GetAttr((int) row0, (int) col0, (wxGridCellAttr::wxAttrKind) kind0);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -12205,7 +12205,7 @@ PHP_METHOD(php_wxPaletteChangedEvent, GetChangedWindow)
                 value_to_return0 = (wxWindow_php*) ((wxPaletteChangedEvent_php*)native_object)->GetChangedWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -14057,7 +14057,7 @@ PHP_METHOD(php_wxToolBarToolBase, CanBeToggled)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->CanBeToggled());
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->CanBeToggled());
                 }
 
 
@@ -14171,7 +14171,7 @@ PHP_METHOD(php_wxToolBarToolBase, Enable)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->Enable(enable0));
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->Enable(enable0));
                 }
 
 
@@ -14414,7 +14414,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetClientData)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -14546,7 +14546,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetControl)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -14807,7 +14807,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetDropdownMenu)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -14934,7 +14934,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetId)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxToolBarToolBase_php*)native_object)->GetId());
+                    RETVAL_LONG(((wxToolBarToolBase_php*)native_object)->GetId());
                 }
 
 
@@ -15043,7 +15043,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetKind)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxToolBarToolBase_php*)native_object)->GetKind());
+                    RETVAL_LONG(((wxToolBarToolBase_php*)native_object)->GetKind());
                 }
 
 
@@ -15155,7 +15155,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetLabel)
                 {
                     value_to_return0 = ((wxToolBarToolBase_php*)native_object)->GetLabel();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -15266,7 +15266,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetLongHelp)
                 {
                     value_to_return0 = ((wxToolBarToolBase_php*)native_object)->GetLongHelp();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -15506,7 +15506,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetShortHelp)
                 {
                     value_to_return0 = ((wxToolBarToolBase_php*)native_object)->GetShortHelp();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -15614,7 +15614,7 @@ PHP_METHOD(php_wxToolBarToolBase, GetStyle)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxToolBarToolBase_php*)native_object)->GetStyle());
+                    RETVAL_LONG(((wxToolBarToolBase_php*)native_object)->GetStyle());
                 }
 
 
@@ -15723,7 +15723,7 @@ PHP_METHOD(php_wxToolBarToolBase, IsButton)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->IsButton());
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->IsButton());
                 }
 
 
@@ -15832,7 +15832,7 @@ PHP_METHOD(php_wxToolBarToolBase, IsControl)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->IsControl());
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->IsControl());
                 }
 
 
@@ -15941,7 +15941,7 @@ PHP_METHOD(php_wxToolBarToolBase, IsEnabled)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->IsEnabled());
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->IsEnabled());
                 }
 
 
@@ -16050,7 +16050,7 @@ PHP_METHOD(php_wxToolBarToolBase, IsSeparator)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->IsSeparator());
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->IsSeparator());
                 }
 
 
@@ -16159,7 +16159,7 @@ PHP_METHOD(php_wxToolBarToolBase, IsStretchable)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->IsStretchable());
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->IsStretchable());
                 }
 
 
@@ -16268,7 +16268,7 @@ PHP_METHOD(php_wxToolBarToolBase, IsStretchableSpace)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->IsStretchableSpace());
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->IsStretchableSpace());
                 }
 
 
@@ -16377,7 +16377,7 @@ PHP_METHOD(php_wxToolBarToolBase, IsToggled)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->IsToggled());
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->IsToggled());
                 }
 
 
@@ -16849,7 +16849,7 @@ PHP_METHOD(php_wxToolBarToolBase, SetLongHelp)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->SetLongHelp(wxString(help0, wxConvUTF8)));
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->SetLongHelp(wxString(help0, wxConvUTF8)));
                 }
 
 
@@ -17097,7 +17097,7 @@ PHP_METHOD(php_wxToolBarToolBase, SetShortHelp)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->SetShortHelp(wxString(help0, wxConvUTF8)));
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->SetShortHelp(wxString(help0, wxConvUTF8)));
                 }
 
 
@@ -17211,7 +17211,7 @@ PHP_METHOD(php_wxToolBarToolBase, SetToggle)
 
                 if(current_object_type == PHP_WXTOOLBARTOOLBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxToolBarToolBase_php*)native_object)->SetToggle(toggle0));
+                    RETVAL_BOOL(((wxToolBarToolBase_php*)native_object)->SetToggle(toggle0));
                 }
 
 

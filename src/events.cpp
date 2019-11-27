@@ -483,19 +483,19 @@ PHP_METHOD(php_wxKeyboardState, AltDown)
 
                 if(current_object_type == PHP_WXKEYEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->AltDown());
+                    RETVAL_BOOL(((wxKeyEvent_php*)native_object)->AltDown());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->AltDown());
+                    RETVAL_BOOL(((wxMouseState_php*)native_object)->AltDown());
                 }
                 else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->AltDown());
+                    RETVAL_BOOL(((wxMouseEvent_php*)native_object)->AltDown());
                 }
                 else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->AltDown());
+                    RETVAL_BOOL(((wxKeyboardState_php*)native_object)->AltDown());
                 }
 
 
@@ -617,19 +617,19 @@ PHP_METHOD(php_wxKeyboardState, ControlDown)
 
                 if(current_object_type == PHP_WXKEYEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->ControlDown());
+                    RETVAL_BOOL(((wxKeyEvent_php*)native_object)->ControlDown());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->ControlDown());
+                    RETVAL_BOOL(((wxMouseState_php*)native_object)->ControlDown());
                 }
                 else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->ControlDown());
+                    RETVAL_BOOL(((wxMouseEvent_php*)native_object)->ControlDown());
                 }
                 else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->ControlDown());
+                    RETVAL_BOOL(((wxKeyboardState_php*)native_object)->ControlDown());
                 }
 
 
@@ -751,19 +751,19 @@ PHP_METHOD(php_wxKeyboardState, GetModifiers)
 
                 if(current_object_type == PHP_WXKEYEVENT_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxKeyEvent_php*)native_object)->GetModifiers());
+                    RETVAL_LONG(((wxKeyEvent_php*)native_object)->GetModifiers());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxMouseState_php*)native_object)->GetModifiers());
+                    RETVAL_LONG(((wxMouseState_php*)native_object)->GetModifiers());
                 }
                 else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetModifiers());
+                    RETVAL_LONG(((wxMouseEvent_php*)native_object)->GetModifiers());
                 }
                 else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxKeyboardState_php*)native_object)->GetModifiers());
+                    RETVAL_LONG(((wxKeyboardState_php*)native_object)->GetModifiers());
                 }
 
 
@@ -885,19 +885,19 @@ PHP_METHOD(php_wxKeyboardState, HasModifiers)
 
                 if(current_object_type == PHP_WXKEYEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->HasModifiers());
+                    RETVAL_BOOL(((wxKeyEvent_php*)native_object)->HasModifiers());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->HasModifiers());
+                    RETVAL_BOOL(((wxMouseState_php*)native_object)->HasModifiers());
                 }
                 else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->HasModifiers());
+                    RETVAL_BOOL(((wxMouseEvent_php*)native_object)->HasModifiers());
                 }
                 else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->HasModifiers());
+                    RETVAL_BOOL(((wxKeyboardState_php*)native_object)->HasModifiers());
                 }
 
 
@@ -1019,15 +1019,15 @@ PHP_METHOD(php_wxKeyboardState, MetaDown)
 
                 if(current_object_type == PHP_WXKEYEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->MetaDown());
+                    RETVAL_BOOL(((wxKeyEvent_php*)native_object)->MetaDown());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->MetaDown());
+                    RETVAL_BOOL(((wxMouseState_php*)native_object)->MetaDown());
                 }
                 else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->MetaDown());
+                    RETVAL_BOOL(((wxKeyboardState_php*)native_object)->MetaDown());
                 }
 
 
@@ -1149,19 +1149,19 @@ PHP_METHOD(php_wxKeyboardState, RawControlDown)
 
                 if(current_object_type == PHP_WXKEYEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->RawControlDown());
+                    RETVAL_BOOL(((wxKeyEvent_php*)native_object)->RawControlDown());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->RawControlDown());
+                    RETVAL_BOOL(((wxMouseState_php*)native_object)->RawControlDown());
                 }
                 else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->RawControlDown());
+                    RETVAL_BOOL(((wxMouseEvent_php*)native_object)->RawControlDown());
                 }
                 else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->RawControlDown());
+                    RETVAL_BOOL(((wxKeyboardState_php*)native_object)->RawControlDown());
                 }
 
 
@@ -1973,19 +1973,19 @@ PHP_METHOD(php_wxKeyboardState, ShiftDown)
 
                 if(current_object_type == PHP_WXKEYEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->ShiftDown());
+                    RETVAL_BOOL(((wxKeyEvent_php*)native_object)->ShiftDown());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->ShiftDown());
+                    RETVAL_BOOL(((wxMouseState_php*)native_object)->ShiftDown());
                 }
                 else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->ShiftDown());
+                    RETVAL_BOOL(((wxMouseEvent_php*)native_object)->ShiftDown());
                 }
                 else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->ShiftDown());
+                    RETVAL_BOOL(((wxKeyboardState_php*)native_object)->ShiftDown());
                 }
 
 
@@ -2309,7 +2309,7 @@ PHP_METHOD(php_wxCalendarEvent, GetWeekDay)
 
                 if(current_object_type == PHP_WXCALENDAREVENT_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxCalendarEvent_php*)native_object)->GetWeekDay());
+                    RETVAL_LONG(((wxCalendarEvent_php*)native_object)->GetWeekDay());
                 }
 
 
@@ -3064,7 +3064,7 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, GetCollapsed)
                 php_printf("Executing RETURN_BOOL(wxCollapsiblePaneEvent::GetCollapsed())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCollapsiblePaneEvent_php*)native_object)->GetCollapsed());
+                RETVAL_BOOL(((wxCollapsiblePaneEvent_php*)native_object)->GetCollapsed());
 
 
                 return;
@@ -3484,7 +3484,7 @@ PHP_METHOD(php_wxDateEvent, GetDate)
                 {
                     value_to_return0 = ((wxDateEvent_php*)native_object)->GetDate().GetTicks();
                 }
-                ZVAL_LONG(return_value, value_to_return0);
+                RETVAL_LONG(value_to_return0);
 
 
                 return;
@@ -4074,7 +4074,7 @@ PHP_METHOD(php_wxEvent, GetEventCategory)
                 php_printf("Executing RETURN_LONG(wxEvent::GetEventCategory())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxEvent_php*)native_object)->GetEventCategory());
+                RETVAL_LONG(((wxEvent_php*)native_object)->GetEventCategory());
 
 
                 return;
@@ -4465,7 +4465,7 @@ PHP_METHOD(php_wxEvent, GetEventObject)
                 value_to_return0 = (wxObject_php*) ((wxEvent_php*)native_object)->GetEventObject();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -4871,7 +4871,7 @@ PHP_METHOD(php_wxEvent, GetEventType)
                 php_printf("Executing RETURN_LONG(wxEvent::GetEventType())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxEvent_php*)native_object)->GetEventType());
+                RETVAL_LONG(((wxEvent_php*)native_object)->GetEventType());
 
 
                 return;
@@ -5258,7 +5258,7 @@ PHP_METHOD(php_wxEvent, GetId)
                 php_printf("Executing RETURN_LONG(wxEvent::GetId())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxEvent_php*)native_object)->GetId());
+                RETVAL_LONG(((wxEvent_php*)native_object)->GetId());
 
 
                 return;
@@ -5645,7 +5645,7 @@ PHP_METHOD(php_wxEvent, GetSkipped)
                 php_printf("Executing RETURN_BOOL(wxEvent::GetSkipped())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxEvent_php*)native_object)->GetSkipped());
+                RETVAL_BOOL(((wxEvent_php*)native_object)->GetSkipped());
 
 
                 return;
@@ -6032,7 +6032,7 @@ PHP_METHOD(php_wxEvent, GetTimestamp)
                 php_printf("Executing RETURN_LONG(wxEvent::GetTimestamp())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxEvent_php*)native_object)->GetTimestamp());
+                RETVAL_LONG(((wxEvent_php*)native_object)->GetTimestamp());
 
 
                 return;
@@ -6419,7 +6419,7 @@ PHP_METHOD(php_wxEvent, IsCommandEvent)
                 php_printf("Executing RETURN_BOOL(wxEvent::IsCommandEvent())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxEvent_php*)native_object)->IsCommandEvent());
+                RETVAL_BOOL(((wxEvent_php*)native_object)->IsCommandEvent());
 
 
                 return;
@@ -8797,7 +8797,7 @@ PHP_METHOD(php_wxEvent, ShouldPropagate)
                 php_printf("Executing RETURN_BOOL(wxEvent::ShouldPropagate())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxEvent_php*)native_object)->ShouldPropagate());
+                RETVAL_BOOL(((wxEvent_php*)native_object)->ShouldPropagate());
 
 
                 return;
@@ -9588,7 +9588,7 @@ PHP_METHOD(php_wxEvent, StopPropagation)
                 php_printf("Executing RETURN_LONG(wxEvent::StopPropagation())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxEvent_php*)native_object)->StopPropagation());
+                RETVAL_LONG(((wxEvent_php*)native_object)->StopPropagation());
 
 
                 return;
@@ -13977,7 +13977,7 @@ PHP_METHOD(php_wxEvtHandler, GetEvtHandlerEnabled)
                 php_printf("Executing RETURN_BOOL(wxEvtHandler::GetEvtHandlerEnabled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxEvtHandler_php*)native_object)->GetEvtHandlerEnabled());
+                RETVAL_BOOL(((wxEvtHandler_php*)native_object)->GetEvtHandlerEnabled());
 
 
                 return;
@@ -14604,7 +14604,7 @@ PHP_METHOD(php_wxEvtHandler, GetNextHandler)
                 value_to_return0 = (wxEvtHandler_php*) ((wxEvtHandler_php*)native_object)->GetNextHandler();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -15250,7 +15250,7 @@ PHP_METHOD(php_wxEvtHandler, GetPreviousHandler)
                 value_to_return0 = (wxEvtHandler_php*) ((wxEvtHandler_php*)native_object)->GetPreviousHandler();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -15892,7 +15892,7 @@ PHP_METHOD(php_wxEvtHandler, IsUnlinked)
                 php_printf("Executing RETURN_BOOL(wxEvtHandler::IsUnlinked())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxEvtHandler_php*)native_object)->IsUnlinked());
+                RETVAL_BOOL(((wxEvtHandler_php*)native_object)->IsUnlinked());
 
 
                 return;
@@ -16538,7 +16538,7 @@ PHP_METHOD(php_wxEvtHandler, ProcessEvent)
                 php_printf("Executing RETURN_BOOL(wxEvtHandler::ProcessEvent(*(wxEvent*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxEvtHandler_php*)native_object)->ProcessEvent(*(wxEvent*) object_pointer0_0));
+                RETVAL_BOOL(((wxEvtHandler_php*)native_object)->ProcessEvent(*(wxEvent*) object_pointer0_0));
 
                 references->AddReference(event0, "wxEvtHandler::ProcessEvent at call 3 with 1 argument(s)");
 
@@ -17185,7 +17185,7 @@ PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
                 php_printf("Executing RETURN_BOOL(wxEvtHandler::ProcessEventLocally(*(wxEvent*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxEvtHandler_php*)native_object)->ProcessEventLocally(*(wxEvent*) object_pointer0_0));
+                RETVAL_BOOL(((wxEvtHandler_php*)native_object)->ProcessEventLocally(*(wxEvent*) object_pointer0_0));
 
                 references->AddReference(event0, "wxEvtHandler::ProcessEventLocally at call 3 with 1 argument(s)");
 
@@ -19749,7 +19749,7 @@ PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
                 php_printf("Executing RETURN_BOOL(wxEvtHandler::SafelyProcessEvent(*(wxEvent*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxEvtHandler_php*)native_object)->SafelyProcessEvent(*(wxEvent*) object_pointer0_0));
+                RETVAL_BOOL(((wxEvtHandler_php*)native_object)->SafelyProcessEvent(*(wxEvent*) object_pointer0_0));
 
                 references->AddReference(event0, "wxEvtHandler::SafelyProcessEvent at call 3 with 1 argument(s)");
 
@@ -21775,7 +21775,7 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -21870,7 +21870,7 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -22778,7 +22778,7 @@ PHP_METHOD(php_wxKeyEvent, GetKeyCode)
                 php_printf("Executing RETURN_LONG(wxKeyEvent::GetKeyCode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxKeyEvent_php*)native_object)->GetKeyCode());
+                RETVAL_LONG(((wxKeyEvent_php*)native_object)->GetKeyCode());
 
 
                 return;
@@ -23041,7 +23041,7 @@ PHP_METHOD(php_wxKeyEvent, GetRawKeyCode)
                 php_printf("Executing RETURN_LONG(wxKeyEvent::GetRawKeyCode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxKeyEvent_php*)native_object)->GetRawKeyCode());
+                RETVAL_LONG(((wxKeyEvent_php*)native_object)->GetRawKeyCode());
 
 
                 return;
@@ -23148,7 +23148,7 @@ PHP_METHOD(php_wxKeyEvent, GetRawKeyFlags)
                 php_printf("Executing RETURN_LONG(wxKeyEvent::GetRawKeyFlags())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxKeyEvent_php*)native_object)->GetRawKeyFlags());
+                RETVAL_LONG(((wxKeyEvent_php*)native_object)->GetRawKeyFlags());
 
 
                 return;
@@ -23255,7 +23255,7 @@ PHP_METHOD(php_wxKeyEvent, GetX)
                 php_printf("Executing RETURN_LONG(wxKeyEvent::GetX())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxKeyEvent_php*)native_object)->GetX());
+                RETVAL_LONG(((wxKeyEvent_php*)native_object)->GetX());
 
 
                 return;
@@ -23362,7 +23362,7 @@ PHP_METHOD(php_wxKeyEvent, GetY)
                 php_printf("Executing RETURN_LONG(wxKeyEvent::GetY())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxKeyEvent_php*)native_object)->GetY());
+                RETVAL_LONG(((wxKeyEvent_php*)native_object)->GetY());
 
 
                 return;
@@ -23474,7 +23474,7 @@ PHP_METHOD(php_wxKeyEvent, IsKeyInCategory)
                 php_printf("Executing RETURN_BOOL(wxKeyEvent::IsKeyInCategory((int) category0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->IsKeyInCategory((int) category0));
+                RETVAL_BOOL(((wxKeyEvent_php*)native_object)->IsKeyInCategory((int) category0));
 
 
                 return;
@@ -23581,7 +23581,7 @@ PHP_METHOD(php_wxKeyEvent, IsNextEventAllowed)
                 php_printf("Executing RETURN_BOOL(wxKeyEvent::IsNextEventAllowed())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->IsNextEventAllowed());
+                RETVAL_BOOL(((wxKeyEvent_php*)native_object)->IsNextEventAllowed());
 
 
                 return;
@@ -24211,7 +24211,7 @@ PHP_METHOD(php_wxScrollWinEvent, GetPosition)
                 php_printf("Executing RETURN_LONG(wxScrollWinEvent::GetPosition())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxScrollWinEvent_php*)native_object)->GetPosition());
+                RETVAL_LONG(((wxScrollWinEvent_php*)native_object)->GetPosition());
 
 
                 return;
@@ -24318,7 +24318,7 @@ PHP_METHOD(php_wxScrollWinEvent, GetOrientation)
                 php_printf("Executing RETURN_LONG(wxScrollWinEvent::GetOrientation())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxScrollWinEvent_php*)native_object)->GetOrientation());
+                RETVAL_LONG(((wxScrollWinEvent_php*)native_object)->GetOrientation());
 
 
                 return;
@@ -25786,7 +25786,7 @@ PHP_METHOD(php_wxCommandEvent, IsSelection)
                 php_printf("Executing RETURN_BOOL(wxCommandEvent::IsSelection())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCommandEvent_php*)native_object)->IsSelection());
+                RETVAL_BOOL(((wxCommandEvent_php*)native_object)->IsSelection());
 
 
                 return;
@@ -26061,7 +26061,7 @@ PHP_METHOD(php_wxCommandEvent, IsChecked)
                 php_printf("Executing RETURN_BOOL(wxCommandEvent::IsChecked())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCommandEvent_php*)native_object)->IsChecked());
+                RETVAL_BOOL(((wxCommandEvent_php*)native_object)->IsChecked());
 
 
                 return;
@@ -26338,7 +26338,7 @@ PHP_METHOD(php_wxCommandEvent, GetString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxCommandEvent_php*)native_object)->GetString();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26613,7 +26613,7 @@ PHP_METHOD(php_wxCommandEvent, GetSelection)
                 php_printf("Executing RETURN_LONG(wxCommandEvent::GetSelection())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxCommandEvent_php*)native_object)->GetSelection());
+                RETVAL_LONG(((wxCommandEvent_php*)native_object)->GetSelection());
 
 
                 return;
@@ -26888,7 +26888,7 @@ PHP_METHOD(php_wxCommandEvent, GetInt)
                 php_printf("Executing RETURN_LONG(wxCommandEvent::GetInt())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxCommandEvent_php*)native_object)->GetInt());
+                RETVAL_LONG(((wxCommandEvent_php*)native_object)->GetInt());
 
 
                 return;
@@ -27163,7 +27163,7 @@ PHP_METHOD(php_wxCommandEvent, GetExtraLong)
                 php_printf("Executing RETURN_LONG(wxCommandEvent::GetExtraLong())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxCommandEvent_php*)native_object)->GetExtraLong());
+                RETVAL_LONG(((wxCommandEvent_php*)native_object)->GetExtraLong());
 
 
                 return;
@@ -27353,7 +27353,7 @@ PHP_METHOD(php_wxWindowCreateEvent, GetWindow)
                 value_to_return0 = (wxWindow_php*) ((wxWindowCreateEvent_php*)native_object)->GetWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -28056,7 +28056,7 @@ PHP_METHOD(php_wxUpdateUIEvent, CanUpdate)
                 php_printf("Executing RETURN_BOOL(wxUpdateUIEvent::CanUpdate((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxUpdateUIEvent::CanUpdate((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(wxUpdateUIEvent::CanUpdate((wxWindow*) object_pointer0_0));
 
 
                 return;
@@ -28387,7 +28387,7 @@ PHP_METHOD(php_wxUpdateUIEvent, GetEnabled)
                 php_printf("Executing RETURN_BOOL(wxUpdateUIEvent::GetEnabled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxUpdateUIEvent_php*)native_object)->GetEnabled());
+                RETVAL_BOOL(((wxUpdateUIEvent_php*)native_object)->GetEnabled());
 
 
                 return;
@@ -28494,7 +28494,7 @@ PHP_METHOD(php_wxUpdateUIEvent, GetChecked)
                 php_printf("Executing RETURN_BOOL(wxUpdateUIEvent::GetChecked())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxUpdateUIEvent_php*)native_object)->GetChecked());
+                RETVAL_BOOL(((wxUpdateUIEvent_php*)native_object)->GetChecked());
 
 
                 return;
@@ -28602,7 +28602,7 @@ PHP_METHOD(php_wxUpdateUIEvent, GetMode)
                 php_printf("Executing RETURN_LONG(wxUpdateUIEvent::GetMode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxUpdateUIEvent::GetMode());
+                RETVAL_LONG(wxUpdateUIEvent::GetMode());
 
 
                 return;
@@ -28709,7 +28709,7 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetChecked)
                 php_printf("Executing RETURN_BOOL(wxUpdateUIEvent::GetSetChecked())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxUpdateUIEvent_php*)native_object)->GetSetChecked());
+                RETVAL_BOOL(((wxUpdateUIEvent_php*)native_object)->GetSetChecked());
 
 
                 return;
@@ -28816,7 +28816,7 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetEnabled)
                 php_printf("Executing RETURN_BOOL(wxUpdateUIEvent::GetSetEnabled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxUpdateUIEvent_php*)native_object)->GetSetEnabled());
+                RETVAL_BOOL(((wxUpdateUIEvent_php*)native_object)->GetSetEnabled());
 
 
                 return;
@@ -28923,7 +28923,7 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetShown)
                 php_printf("Executing RETURN_BOOL(wxUpdateUIEvent::GetSetShown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxUpdateUIEvent_php*)native_object)->GetSetShown());
+                RETVAL_BOOL(((wxUpdateUIEvent_php*)native_object)->GetSetShown());
 
 
                 return;
@@ -29030,7 +29030,7 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetText)
                 php_printf("Executing RETURN_BOOL(wxUpdateUIEvent::GetSetText())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxUpdateUIEvent_php*)native_object)->GetSetText());
+                RETVAL_BOOL(((wxUpdateUIEvent_php*)native_object)->GetSetText());
 
 
                 return;
@@ -29137,7 +29137,7 @@ PHP_METHOD(php_wxUpdateUIEvent, GetShown)
                 php_printf("Executing RETURN_BOOL(wxUpdateUIEvent::GetShown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxUpdateUIEvent_php*)native_object)->GetShown());
+                RETVAL_BOOL(((wxUpdateUIEvent_php*)native_object)->GetShown());
 
 
                 return;
@@ -29246,7 +29246,7 @@ PHP_METHOD(php_wxUpdateUIEvent, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxUpdateUIEvent_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -29354,7 +29354,7 @@ PHP_METHOD(php_wxUpdateUIEvent, GetUpdateInterval)
                 php_printf("Executing RETURN_LONG(wxUpdateUIEvent::GetUpdateInterval())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxUpdateUIEvent::GetUpdateInterval());
+                RETVAL_LONG(wxUpdateUIEvent::GetUpdateInterval());
 
 
                 return;
@@ -30388,7 +30388,7 @@ PHP_METHOD(php_wxMouseEvent, Aux1DClick)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::Aux1DClick())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Aux1DClick());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Aux1DClick());
 
 
                 return;
@@ -30495,7 +30495,7 @@ PHP_METHOD(php_wxMouseEvent, Aux1Down)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::Aux1Down())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Aux1Down());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Aux1Down());
 
 
                 return;
@@ -30602,7 +30602,7 @@ PHP_METHOD(php_wxMouseEvent, Aux1Up)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::Aux1Up())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Aux1Up());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Aux1Up());
 
 
                 return;
@@ -30709,7 +30709,7 @@ PHP_METHOD(php_wxMouseEvent, Aux2DClick)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::Aux2DClick())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Aux2DClick());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Aux2DClick());
 
 
                 return;
@@ -30816,7 +30816,7 @@ PHP_METHOD(php_wxMouseEvent, Aux2Down)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::Aux2Down())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Aux2Down());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Aux2Down());
 
 
                 return;
@@ -30923,7 +30923,7 @@ PHP_METHOD(php_wxMouseEvent, Aux2Up)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::Aux2Up())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Aux2Up());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Aux2Up());
 
 
                 return;
@@ -31035,7 +31035,7 @@ PHP_METHOD(php_wxMouseEvent, Button)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::Button((wxMouseButton) but0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Button((wxMouseButton) but0));
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Button((wxMouseButton) but0));
 
 
                 return;
@@ -31147,7 +31147,7 @@ PHP_METHOD(php_wxMouseEvent, ButtonDClick)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::ButtonDClick())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->ButtonDClick());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->ButtonDClick());
 
 
                 return;
@@ -31159,7 +31159,7 @@ PHP_METHOD(php_wxMouseEvent, ButtonDClick)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::ButtonDClick((wxMouseButton) but0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->ButtonDClick((wxMouseButton) but0));
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->ButtonDClick((wxMouseButton) but0));
 
 
                 return;
@@ -31271,7 +31271,7 @@ PHP_METHOD(php_wxMouseEvent, ButtonDown)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::ButtonDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->ButtonDown());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->ButtonDown());
 
 
                 return;
@@ -31283,7 +31283,7 @@ PHP_METHOD(php_wxMouseEvent, ButtonDown)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::ButtonDown((wxMouseButton) but0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->ButtonDown((wxMouseButton) but0));
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->ButtonDown((wxMouseButton) but0));
 
 
                 return;
@@ -31395,7 +31395,7 @@ PHP_METHOD(php_wxMouseEvent, ButtonUp)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::ButtonUp())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->ButtonUp());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->ButtonUp());
 
 
                 return;
@@ -31407,7 +31407,7 @@ PHP_METHOD(php_wxMouseEvent, ButtonUp)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::ButtonUp((wxMouseButton) but0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->ButtonUp((wxMouseButton) but0));
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->ButtonUp((wxMouseButton) but0));
 
 
                 return;
@@ -31514,7 +31514,7 @@ PHP_METHOD(php_wxMouseEvent, Dragging)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::Dragging())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Dragging());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Dragging());
 
 
                 return;
@@ -31621,7 +31621,7 @@ PHP_METHOD(php_wxMouseEvent, Entering)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::Entering())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Entering());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Entering());
 
 
                 return;
@@ -31728,7 +31728,7 @@ PHP_METHOD(php_wxMouseEvent, GetButton)
                 php_printf("Executing RETURN_LONG(wxMouseEvent::GetButton())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetButton());
+                RETVAL_LONG(((wxMouseEvent_php*)native_object)->GetButton());
 
 
                 return;
@@ -31835,7 +31835,7 @@ PHP_METHOD(php_wxMouseEvent, GetClickCount)
                 php_printf("Executing RETURN_LONG(wxMouseEvent::GetClickCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetClickCount());
+                RETVAL_LONG(((wxMouseEvent_php*)native_object)->GetClickCount());
 
 
                 return;
@@ -31942,7 +31942,7 @@ PHP_METHOD(php_wxMouseEvent, GetLinesPerAction)
                 php_printf("Executing RETURN_LONG(wxMouseEvent::GetLinesPerAction())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetLinesPerAction());
+                RETVAL_LONG(((wxMouseEvent_php*)native_object)->GetLinesPerAction());
 
 
                 return;
@@ -32188,7 +32188,7 @@ PHP_METHOD(php_wxMouseEvent, GetWheelDelta)
                 php_printf("Executing RETURN_LONG(wxMouseEvent::GetWheelDelta())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetWheelDelta());
+                RETVAL_LONG(((wxMouseEvent_php*)native_object)->GetWheelDelta());
 
 
                 return;
@@ -32295,7 +32295,7 @@ PHP_METHOD(php_wxMouseEvent, GetWheelRotation)
                 php_printf("Executing RETURN_LONG(wxMouseEvent::GetWheelRotation())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetWheelRotation());
+                RETVAL_LONG(((wxMouseEvent_php*)native_object)->GetWheelRotation());
 
 
                 return;
@@ -32402,7 +32402,7 @@ PHP_METHOD(php_wxMouseEvent, IsButton)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::IsButton())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->IsButton());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->IsButton());
 
 
                 return;
@@ -32509,7 +32509,7 @@ PHP_METHOD(php_wxMouseEvent, IsPageScroll)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::IsPageScroll())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->IsPageScroll());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->IsPageScroll());
 
 
                 return;
@@ -32616,7 +32616,7 @@ PHP_METHOD(php_wxMouseEvent, Leaving)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::Leaving())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Leaving());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Leaving());
 
 
                 return;
@@ -32723,7 +32723,7 @@ PHP_METHOD(php_wxMouseEvent, LeftDClick)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::LeftDClick())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->LeftDClick());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->LeftDClick());
 
 
                 return;
@@ -32830,7 +32830,7 @@ PHP_METHOD(php_wxMouseEvent, LeftDown)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::LeftDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->LeftDown());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->LeftDown());
 
 
                 return;
@@ -32937,7 +32937,7 @@ PHP_METHOD(php_wxMouseEvent, LeftUp)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::LeftUp())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->LeftUp());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->LeftUp());
 
 
                 return;
@@ -33044,7 +33044,7 @@ PHP_METHOD(php_wxMouseEvent, MetaDown)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::MetaDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->MetaDown());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->MetaDown());
 
 
                 return;
@@ -33151,7 +33151,7 @@ PHP_METHOD(php_wxMouseEvent, MiddleDClick)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::MiddleDClick())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->MiddleDClick());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->MiddleDClick());
 
 
                 return;
@@ -33258,7 +33258,7 @@ PHP_METHOD(php_wxMouseEvent, MiddleDown)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::MiddleDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->MiddleDown());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->MiddleDown());
 
 
                 return;
@@ -33365,7 +33365,7 @@ PHP_METHOD(php_wxMouseEvent, MiddleUp)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::MiddleUp())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->MiddleUp());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->MiddleUp());
 
 
                 return;
@@ -33472,7 +33472,7 @@ PHP_METHOD(php_wxMouseEvent, Moving)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::Moving())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Moving());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Moving());
 
 
                 return;
@@ -33579,7 +33579,7 @@ PHP_METHOD(php_wxMouseEvent, RightDClick)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::RightDClick())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->RightDClick());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->RightDClick());
 
 
                 return;
@@ -33686,7 +33686,7 @@ PHP_METHOD(php_wxMouseEvent, RightDown)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::RightDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->RightDown());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->RightDown());
 
 
                 return;
@@ -33793,7 +33793,7 @@ PHP_METHOD(php_wxMouseEvent, RightUp)
                 php_printf("Executing RETURN_BOOL(wxMouseEvent::RightUp())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->RightUp());
+                RETVAL_BOOL(((wxMouseEvent_php*)native_object)->RightUp());
 
 
                 return;
@@ -33999,7 +33999,7 @@ PHP_METHOD(php_wxMouseEvent, GetWheelAxis)
                 php_printf("Executing RETURN_LONG(wxMouseEvent::GetWheelAxis())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetWheelAxis());
+                RETVAL_LONG(((wxMouseEvent_php*)native_object)->GetWheelAxis());
 
 
                 return;
@@ -34320,7 +34320,7 @@ PHP_METHOD(php_wxActivateEvent, GetActive)
                 php_printf("Executing RETURN_BOOL(wxActivateEvent::GetActive())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxActivateEvent_php*)native_object)->GetActive());
+                RETVAL_BOOL(((wxActivateEvent_php*)native_object)->GetActive());
 
 
                 return;
@@ -34989,7 +34989,7 @@ PHP_METHOD(php_wxEraseEvent, GetDC)
                 value_to_return0 = (wxDC_php*) ((wxEraseEvent_php*)native_object)->GetDC();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -35328,7 +35328,7 @@ PHP_METHOD(php_wxFocusEvent, GetWindow)
                 value_to_return0 = (wxWindow_php*) ((wxFocusEvent_php*)native_object)->GetWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -35778,7 +35778,7 @@ PHP_METHOD(php_wxChildFocusEvent, GetWindow)
                 value_to_return0 = (wxWindow_php*) ((wxChildFocusEvent_php*)native_object)->GetWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -36344,7 +36344,7 @@ PHP_METHOD(php_wxNotifyEvent, IsAllowed)
                 php_printf("Executing RETURN_BOOL(wxNotifyEvent::IsAllowed())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxNotifyEvent_php*)native_object)->IsAllowed());
+                RETVAL_BOOL(((wxNotifyEvent_php*)native_object)->IsAllowed());
 
 
                 return;
@@ -36820,7 +36820,7 @@ PHP_METHOD(php_wxThreadEvent, CloneMethod)
                 value_to_return0 = (wxEvent_php*) ((wxThreadEvent_php*)native_object)->Clone();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -36946,7 +36946,7 @@ PHP_METHOD(php_wxThreadEvent, GetExtraLong)
                 php_printf("Executing RETURN_LONG(wxThreadEvent::GetExtraLong())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThreadEvent_php*)native_object)->GetExtraLong());
+                RETVAL_LONG(((wxThreadEvent_php*)native_object)->GetExtraLong());
 
 
                 return;
@@ -37053,7 +37053,7 @@ PHP_METHOD(php_wxThreadEvent, GetEventCategory)
                 php_printf("Executing RETURN_LONG(wxThreadEvent::GetEventCategory())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThreadEvent_php*)native_object)->GetEventCategory());
+                RETVAL_LONG(((wxThreadEvent_php*)native_object)->GetEventCategory());
 
 
                 return;
@@ -37160,7 +37160,7 @@ PHP_METHOD(php_wxThreadEvent, GetInt)
                 php_printf("Executing RETURN_LONG(wxThreadEvent::GetInt())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThreadEvent_php*)native_object)->GetInt());
+                RETVAL_LONG(((wxThreadEvent_php*)native_object)->GetInt());
 
 
                 return;
@@ -37269,7 +37269,7 @@ PHP_METHOD(php_wxThreadEvent, GetString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxThreadEvent_php*)native_object)->GetString();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -37903,7 +37903,7 @@ PHP_METHOD(php_wxHelpEvent, GetOrigin)
                 php_printf("Executing RETURN_LONG(wxHelpEvent::GetOrigin())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxHelpEvent_php*)native_object)->GetOrigin());
+                RETVAL_LONG(((wxHelpEvent_php*)native_object)->GetOrigin());
 
 
                 return;
@@ -38971,7 +38971,7 @@ PHP_METHOD(php_wxScrollEvent, GetPosition)
                 php_printf("Executing RETURN_LONG(wxScrollEvent::GetPosition())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxScrollEvent_php*)native_object)->GetPosition());
+                RETVAL_LONG(((wxScrollEvent_php*)native_object)->GetPosition());
 
 
                 return;
@@ -39078,7 +39078,7 @@ PHP_METHOD(php_wxScrollEvent, GetOrientation)
                 php_printf("Executing RETURN_LONG(wxScrollEvent::GetOrientation())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxScrollEvent_php*)native_object)->GetOrientation());
+                RETVAL_LONG(((wxScrollEvent_php*)native_object)->GetOrientation());
 
 
                 return;
@@ -39265,7 +39265,7 @@ PHP_METHOD(php_wxIdleEvent, GetMode)
                 php_printf("Executing RETURN_LONG(wxIdleEvent::GetMode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxIdleEvent::GetMode());
+                RETVAL_LONG(wxIdleEvent::GetMode());
 
 
                 return;
@@ -39372,7 +39372,7 @@ PHP_METHOD(php_wxIdleEvent, MoreRequested)
                 php_printf("Executing RETURN_BOOL(wxIdleEvent::MoreRequested())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxIdleEvent_php*)native_object)->MoreRequested());
+                RETVAL_BOOL(((wxIdleEvent_php*)native_object)->MoreRequested());
 
 
                 return;
@@ -40060,7 +40060,7 @@ PHP_METHOD(php_wxWindowDestroyEvent, GetWindow)
                 value_to_return0 = (wxWindow_php*) ((wxWindowDestroyEvent_php*)native_object)->GetWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -40387,7 +40387,7 @@ PHP_METHOD(php_wxNavigationKeyEvent, GetCurrentFocus)
                 value_to_return0 = (wxWindow_php*) ((wxNavigationKeyEvent_php*)native_object)->GetCurrentFocus();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -40513,7 +40513,7 @@ PHP_METHOD(php_wxNavigationKeyEvent, GetDirection)
                 php_printf("Executing RETURN_BOOL(wxNavigationKeyEvent::GetDirection())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxNavigationKeyEvent_php*)native_object)->GetDirection());
+                RETVAL_BOOL(((wxNavigationKeyEvent_php*)native_object)->GetDirection());
 
 
                 return;
@@ -40620,7 +40620,7 @@ PHP_METHOD(php_wxNavigationKeyEvent, IsFromTab)
                 php_printf("Executing RETURN_BOOL(wxNavigationKeyEvent::IsFromTab())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxNavigationKeyEvent_php*)native_object)->IsFromTab());
+                RETVAL_BOOL(((wxNavigationKeyEvent_php*)native_object)->IsFromTab());
 
 
                 return;
@@ -40727,7 +40727,7 @@ PHP_METHOD(php_wxNavigationKeyEvent, IsWindowChange)
                 php_printf("Executing RETURN_BOOL(wxNavigationKeyEvent::IsWindowChange())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxNavigationKeyEvent_php*)native_object)->IsWindowChange());
+                RETVAL_BOOL(((wxNavigationKeyEvent_php*)native_object)->IsWindowChange());
 
 
                 return;
@@ -41574,7 +41574,7 @@ PHP_METHOD(php_wxCloseEvent, CanVeto)
                 php_printf("Executing RETURN_BOOL(wxCloseEvent::CanVeto())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCloseEvent_php*)native_object)->CanVeto());
+                RETVAL_BOOL(((wxCloseEvent_php*)native_object)->CanVeto());
 
 
                 return;
@@ -41681,7 +41681,7 @@ PHP_METHOD(php_wxCloseEvent, GetLoggingOff)
                 php_printf("Executing RETURN_BOOL(wxCloseEvent::GetLoggingOff())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCloseEvent_php*)native_object)->GetLoggingOff());
+                RETVAL_BOOL(((wxCloseEvent_php*)native_object)->GetLoggingOff());
 
 
                 return;
@@ -42330,7 +42330,7 @@ PHP_METHOD(php_wxMenuEvent, GetMenu)
                 value_to_return0 = (wxMenu_php*) ((wxMenuEvent_php*)native_object)->GetMenu();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -42456,7 +42456,7 @@ PHP_METHOD(php_wxMenuEvent, GetMenuId)
                 php_printf("Executing RETURN_LONG(wxMenuEvent::GetMenuId())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMenuEvent_php*)native_object)->GetMenuId());
+                RETVAL_LONG(((wxMenuEvent_php*)native_object)->GetMenuId());
 
 
                 return;
@@ -42563,7 +42563,7 @@ PHP_METHOD(php_wxMenuEvent, IsPopup)
                 php_printf("Executing RETURN_BOOL(wxMenuEvent::IsPopup())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMenuEvent_php*)native_object)->IsPopup());
+                RETVAL_BOOL(((wxMenuEvent_php*)native_object)->IsPopup());
 
 
                 return;
@@ -44391,7 +44391,7 @@ PHP_METHOD(php_wxSetCursorEvent, GetX)
                 php_printf("Executing RETURN_LONG(wxSetCursorEvent::GetX())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSetCursorEvent_php*)native_object)->GetX());
+                RETVAL_LONG(((wxSetCursorEvent_php*)native_object)->GetX());
 
 
                 return;
@@ -44498,7 +44498,7 @@ PHP_METHOD(php_wxSetCursorEvent, GetY)
                 php_printf("Executing RETURN_LONG(wxSetCursorEvent::GetY())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSetCursorEvent_php*)native_object)->GetY());
+                RETVAL_LONG(((wxSetCursorEvent_php*)native_object)->GetY());
 
 
                 return;
@@ -44605,7 +44605,7 @@ PHP_METHOD(php_wxSetCursorEvent, HasCursor)
                 php_printf("Executing RETURN_BOOL(wxSetCursorEvent::HasCursor())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSetCursorEvent_php*)native_object)->HasCursor());
+                RETVAL_BOOL(((wxSetCursorEvent_php*)native_object)->HasCursor());
 
 
                 return;
@@ -45035,7 +45035,7 @@ PHP_METHOD(php_wxFileCtrlEvent, GetDirectory)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileCtrlEvent_php*)native_object)->GetDirectory();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -45144,7 +45144,7 @@ PHP_METHOD(php_wxFileCtrlEvent, GetFile)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileCtrlEvent_php*)native_object)->GetFile();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -45364,7 +45364,7 @@ PHP_METHOD(php_wxFileCtrlEvent, GetFilterIndex)
                 php_printf("Executing RETURN_LONG(wxFileCtrlEvent::GetFilterIndex())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFileCtrlEvent_php*)native_object)->GetFilterIndex());
+                RETVAL_LONG(((wxFileCtrlEvent_php*)native_object)->GetFilterIndex());
 
 
                 return;
@@ -46016,7 +46016,7 @@ PHP_METHOD(php_wxFileDirPickerEvent, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDirPickerEvent_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -46881,7 +46881,7 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetChangeType)
 
                 if(current_object_type == PHP_WXFILESYSTEMWATCHEREVENT_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxFileSystemWatcherEvent_php*)native_object)->GetChangeType());
+                    RETVAL_LONG(((wxFileSystemWatcherEvent_php*)native_object)->GetChangeType());
                 }
 
 
@@ -46994,7 +46994,7 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetErrorDescription)
                 {
                     value_to_return0 = ((wxFileSystemWatcherEvent_php*)native_object)->GetErrorDescription();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -47363,7 +47363,7 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, IsError)
 
                 if(current_object_type == PHP_WXFILESYSTEMWATCHEREVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFileSystemWatcherEvent_php*)native_object)->IsError());
+                    RETVAL_BOOL(((wxFileSystemWatcherEvent_php*)native_object)->IsError());
                 }
 
 
@@ -47476,7 +47476,7 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, ToString)
                 {
                     value_to_return0 = ((wxFileSystemWatcherEvent_php*)native_object)->ToString();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -47662,7 +47662,7 @@ PHP_METHOD(php_wxGridEvent, AltDown)
                 php_printf("Executing RETURN_BOOL(wxGridEvent::AltDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridEvent_php*)native_object)->AltDown());
+                RETVAL_BOOL(((wxGridEvent_php*)native_object)->AltDown());
 
 
                 return;
@@ -47769,7 +47769,7 @@ PHP_METHOD(php_wxGridEvent, ControlDown)
                 php_printf("Executing RETURN_BOOL(wxGridEvent::ControlDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridEvent_php*)native_object)->ControlDown());
+                RETVAL_BOOL(((wxGridEvent_php*)native_object)->ControlDown());
 
 
                 return;
@@ -47876,7 +47876,7 @@ PHP_METHOD(php_wxGridEvent, GetCol)
                 php_printf("Executing RETURN_LONG(wxGridEvent::GetCol())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridEvent_php*)native_object)->GetCol());
+                RETVAL_LONG(((wxGridEvent_php*)native_object)->GetCol());
 
 
                 return;
@@ -48098,7 +48098,7 @@ PHP_METHOD(php_wxGridEvent, GetRow)
                 php_printf("Executing RETURN_LONG(wxGridEvent::GetRow())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridEvent_php*)native_object)->GetRow());
+                RETVAL_LONG(((wxGridEvent_php*)native_object)->GetRow());
 
 
                 return;
@@ -48205,7 +48205,7 @@ PHP_METHOD(php_wxGridEvent, MetaDown)
                 php_printf("Executing RETURN_BOOL(wxGridEvent::MetaDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridEvent_php*)native_object)->MetaDown());
+                RETVAL_BOOL(((wxGridEvent_php*)native_object)->MetaDown());
 
 
                 return;
@@ -48312,7 +48312,7 @@ PHP_METHOD(php_wxGridEvent, Selecting)
                 php_printf("Executing RETURN_BOOL(wxGridEvent::Selecting())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridEvent_php*)native_object)->Selecting());
+                RETVAL_BOOL(((wxGridEvent_php*)native_object)->Selecting());
 
 
                 return;
@@ -48419,7 +48419,7 @@ PHP_METHOD(php_wxGridEvent, ShiftDown)
                 php_printf("Executing RETURN_BOOL(wxGridEvent::ShiftDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridEvent_php*)native_object)->ShiftDown());
+                RETVAL_BOOL(((wxGridEvent_php*)native_object)->ShiftDown());
 
 
                 return;
@@ -48845,7 +48845,7 @@ PHP_METHOD(php_wxGridSizeEvent, AltDown)
                 php_printf("Executing RETURN_BOOL(wxGridSizeEvent::AltDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridSizeEvent_php*)native_object)->AltDown());
+                RETVAL_BOOL(((wxGridSizeEvent_php*)native_object)->AltDown());
 
 
                 return;
@@ -48952,7 +48952,7 @@ PHP_METHOD(php_wxGridSizeEvent, ControlDown)
                 php_printf("Executing RETURN_BOOL(wxGridSizeEvent::ControlDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridSizeEvent_php*)native_object)->ControlDown());
+                RETVAL_BOOL(((wxGridSizeEvent_php*)native_object)->ControlDown());
 
 
                 return;
@@ -49174,7 +49174,7 @@ PHP_METHOD(php_wxGridSizeEvent, GetRowOrCol)
                 php_printf("Executing RETURN_LONG(wxGridSizeEvent::GetRowOrCol())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridSizeEvent_php*)native_object)->GetRowOrCol());
+                RETVAL_LONG(((wxGridSizeEvent_php*)native_object)->GetRowOrCol());
 
 
                 return;
@@ -49281,7 +49281,7 @@ PHP_METHOD(php_wxGridSizeEvent, MetaDown)
                 php_printf("Executing RETURN_BOOL(wxGridSizeEvent::MetaDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridSizeEvent_php*)native_object)->MetaDown());
+                RETVAL_BOOL(((wxGridSizeEvent_php*)native_object)->MetaDown());
 
 
                 return;
@@ -49388,7 +49388,7 @@ PHP_METHOD(php_wxGridSizeEvent, ShiftDown)
                 php_printf("Executing RETURN_BOOL(wxGridSizeEvent::ShiftDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridSizeEvent_php*)native_object)->ShiftDown());
+                RETVAL_BOOL(((wxGridSizeEvent_php*)native_object)->ShiftDown());
 
 
                 return;
@@ -49788,7 +49788,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, AltDown)
                 php_printf("Executing RETURN_BOOL(wxGridRangeSelectEvent::AltDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridRangeSelectEvent_php*)native_object)->AltDown());
+                RETVAL_BOOL(((wxGridRangeSelectEvent_php*)native_object)->AltDown());
 
 
                 return;
@@ -49895,7 +49895,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, ControlDown)
                 php_printf("Executing RETURN_BOOL(wxGridRangeSelectEvent::ControlDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridRangeSelectEvent_php*)native_object)->ControlDown());
+                RETVAL_BOOL(((wxGridRangeSelectEvent_php*)native_object)->ControlDown());
 
 
                 return;
@@ -50116,7 +50116,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetBottomRow)
                 php_printf("Executing RETURN_LONG(wxGridRangeSelectEvent::GetBottomRow())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridRangeSelectEvent_php*)native_object)->GetBottomRow());
+                RETVAL_LONG(((wxGridRangeSelectEvent_php*)native_object)->GetBottomRow());
 
 
                 return;
@@ -50223,7 +50223,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetLeftCol)
                 php_printf("Executing RETURN_LONG(wxGridRangeSelectEvent::GetLeftCol())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridRangeSelectEvent_php*)native_object)->GetLeftCol());
+                RETVAL_LONG(((wxGridRangeSelectEvent_php*)native_object)->GetLeftCol());
 
 
                 return;
@@ -50330,7 +50330,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetRightCol)
                 php_printf("Executing RETURN_LONG(wxGridRangeSelectEvent::GetRightCol())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridRangeSelectEvent_php*)native_object)->GetRightCol());
+                RETVAL_LONG(((wxGridRangeSelectEvent_php*)native_object)->GetRightCol());
 
 
                 return;
@@ -50551,7 +50551,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetTopRow)
                 php_printf("Executing RETURN_LONG(wxGridRangeSelectEvent::GetTopRow())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridRangeSelectEvent_php*)native_object)->GetTopRow());
+                RETVAL_LONG(((wxGridRangeSelectEvent_php*)native_object)->GetTopRow());
 
 
                 return;
@@ -50658,7 +50658,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, MetaDown)
                 php_printf("Executing RETURN_BOOL(wxGridRangeSelectEvent::MetaDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridRangeSelectEvent_php*)native_object)->MetaDown());
+                RETVAL_BOOL(((wxGridRangeSelectEvent_php*)native_object)->MetaDown());
 
 
                 return;
@@ -50765,7 +50765,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, Selecting)
                 php_printf("Executing RETURN_BOOL(wxGridRangeSelectEvent::Selecting())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridRangeSelectEvent_php*)native_object)->Selecting());
+                RETVAL_BOOL(((wxGridRangeSelectEvent_php*)native_object)->Selecting());
 
 
                 return;
@@ -50872,7 +50872,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, ShiftDown)
                 php_printf("Executing RETURN_BOOL(wxGridRangeSelectEvent::ShiftDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridRangeSelectEvent_php*)native_object)->ShiftDown());
+                RETVAL_BOOL(((wxGridRangeSelectEvent_php*)native_object)->ShiftDown());
 
 
                 return;
@@ -51290,7 +51290,7 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, GetCol)
                 php_printf("Executing RETURN_LONG(wxGridEditorCreatedEvent::GetCol())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridEditorCreatedEvent_php*)native_object)->GetCol());
+                RETVAL_LONG(((wxGridEditorCreatedEvent_php*)native_object)->GetCol());
 
 
                 return;
@@ -51401,7 +51401,7 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, GetControl)
                 value_to_return0 = (wxControl_php*) ((wxGridEditorCreatedEvent_php*)native_object)->GetControl();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -51527,7 +51527,7 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, GetRow)
                 php_printf("Executing RETURN_LONG(wxGridEditorCreatedEvent::GetRow())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridEditorCreatedEvent_php*)native_object)->GetRow());
+                RETVAL_LONG(((wxGridEditorCreatedEvent_php*)native_object)->GetRow());
 
 
                 return;
@@ -52235,7 +52235,7 @@ PHP_METHOD(php_wxHeaderCtrlEvent, GetColumn)
 
                 if(current_object_type == PHP_WXHEADERCTRLEVENT_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHeaderCtrlEvent_php*)native_object)->GetColumn());
+                    RETVAL_LONG(((wxHeaderCtrlEvent_php*)native_object)->GetColumn());
                 }
 
 
@@ -52345,7 +52345,7 @@ PHP_METHOD(php_wxHeaderCtrlEvent, GetNewOrder)
 
                 if(current_object_type == PHP_WXHEADERCTRLEVENT_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHeaderCtrlEvent_php*)native_object)->GetNewOrder());
+                    RETVAL_LONG(((wxHeaderCtrlEvent_php*)native_object)->GetNewOrder());
                 }
 
 
@@ -52455,7 +52455,7 @@ PHP_METHOD(php_wxHeaderCtrlEvent, GetWidth)
 
                 if(current_object_type == PHP_WXHEADERCTRLEVENT_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxHeaderCtrlEvent_php*)native_object)->GetWidth());
+                    RETVAL_LONG(((wxHeaderCtrlEvent_php*)native_object)->GetWidth());
                 }
 
 
@@ -52644,7 +52644,7 @@ PHP_METHOD(php_wxHyperlinkEvent, GetURL)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxHyperlinkEvent_php*)native_object)->GetURL();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -53053,7 +53053,7 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetAlignment)
                 php_printf("Executing RETURN_LONG(wxQueryLayoutInfoEvent::GetAlignment())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxQueryLayoutInfoEvent_php*)native_object)->GetAlignment());
+                RETVAL_LONG(((wxQueryLayoutInfoEvent_php*)native_object)->GetAlignment());
 
 
                 return;
@@ -53160,7 +53160,7 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetFlags)
                 php_printf("Executing RETURN_LONG(wxQueryLayoutInfoEvent::GetFlags())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxQueryLayoutInfoEvent_php*)native_object)->GetFlags());
+                RETVAL_LONG(((wxQueryLayoutInfoEvent_php*)native_object)->GetFlags());
 
 
                 return;
@@ -53267,7 +53267,7 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetOrientation)
                 php_printf("Executing RETURN_LONG(wxQueryLayoutInfoEvent::GetOrientation())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxQueryLayoutInfoEvent_php*)native_object)->GetOrientation());
+                RETVAL_LONG(((wxQueryLayoutInfoEvent_php*)native_object)->GetOrientation());
 
 
                 return;
@@ -53374,7 +53374,7 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetRequestedLength)
                 php_printf("Executing RETURN_LONG(wxQueryLayoutInfoEvent::GetRequestedLength())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxQueryLayoutInfoEvent_php*)native_object)->GetRequestedLength());
+                RETVAL_LONG(((wxQueryLayoutInfoEvent_php*)native_object)->GetRequestedLength());
 
 
                 return;
@@ -54352,7 +54352,7 @@ PHP_METHOD(php_wxCalculateLayoutEvent, GetFlags)
                 php_printf("Executing RETURN_LONG(wxCalculateLayoutEvent::GetFlags())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxCalculateLayoutEvent_php*)native_object)->GetFlags());
+                RETVAL_LONG(((wxCalculateLayoutEvent_php*)native_object)->GetFlags());
 
 
                 return;
@@ -54995,7 +54995,7 @@ PHP_METHOD(php_wxListEvent, GetCacheFrom)
                 php_printf("Executing RETURN_LONG(wxListEvent::GetCacheFrom())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxListEvent_php*)native_object)->GetCacheFrom());
+                RETVAL_LONG(((wxListEvent_php*)native_object)->GetCacheFrom());
 
 
                 return;
@@ -55102,7 +55102,7 @@ PHP_METHOD(php_wxListEvent, GetCacheTo)
                 php_printf("Executing RETURN_LONG(wxListEvent::GetCacheTo())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxListEvent_php*)native_object)->GetCacheTo());
+                RETVAL_LONG(((wxListEvent_php*)native_object)->GetCacheTo());
 
 
                 return;
@@ -55209,7 +55209,7 @@ PHP_METHOD(php_wxListEvent, GetColumn)
                 php_printf("Executing RETURN_LONG(wxListEvent::GetColumn())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxListEvent_php*)native_object)->GetColumn());
+                RETVAL_LONG(((wxListEvent_php*)native_object)->GetColumn());
 
 
                 return;
@@ -55316,7 +55316,7 @@ PHP_METHOD(php_wxListEvent, GetImage)
                 php_printf("Executing RETURN_LONG(wxListEvent::GetImage())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxListEvent_php*)native_object)->GetImage());
+                RETVAL_LONG(((wxListEvent_php*)native_object)->GetImage());
 
 
                 return;
@@ -55423,7 +55423,7 @@ PHP_METHOD(php_wxListEvent, GetIndex)
                 php_printf("Executing RETURN_LONG(wxListEvent::GetIndex())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxListEvent_php*)native_object)->GetIndex());
+                RETVAL_LONG(((wxListEvent_php*)native_object)->GetIndex());
 
 
                 return;
@@ -55657,7 +55657,7 @@ PHP_METHOD(php_wxListEvent, GetKeyCode)
                 php_printf("Executing RETURN_LONG(wxListEvent::GetKeyCode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxListEvent_php*)native_object)->GetKeyCode());
+                RETVAL_LONG(((wxListEvent_php*)native_object)->GetKeyCode());
 
 
                 return;
@@ -55766,7 +55766,7 @@ PHP_METHOD(php_wxListEvent, GetLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxListEvent_php*)native_object)->GetLabel();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -55873,7 +55873,7 @@ PHP_METHOD(php_wxListEvent, GetMask)
                 php_printf("Executing RETURN_LONG(wxListEvent::GetMask())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxListEvent_php*)native_object)->GetMask());
+                RETVAL_LONG(((wxListEvent_php*)native_object)->GetMask());
 
 
                 return;
@@ -56097,7 +56097,7 @@ PHP_METHOD(php_wxListEvent, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxListEvent_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -56204,7 +56204,7 @@ PHP_METHOD(php_wxListEvent, IsEditCancelled)
                 php_printf("Executing RETURN_BOOL(wxListEvent::IsEditCancelled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxListEvent_php*)native_object)->IsEditCancelled());
+                RETVAL_BOOL(((wxListEvent_php*)native_object)->IsEditCancelled());
 
 
                 return;
@@ -56714,7 +56714,7 @@ PHP_METHOD(php_wxMouseEventsManager, Create)
                 php_printf("Executing RETURN_BOOL(wxMouseEventsManager::Create((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMouseEventsManager_php*)native_object)->Create((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxMouseEventsManager_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
                 references->AddReference(win0, "wxMouseEventsManager::Create at call 1 with 1 argument(s)");
 
@@ -57010,7 +57010,7 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -57102,7 +57102,7 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -57783,11 +57783,11 @@ PHP_METHOD(php_wxMouseState, Aux1IsDown)
 
                 if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Aux1IsDown());
+                    RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Aux1IsDown());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->Aux1IsDown());
+                    RETVAL_BOOL(((wxMouseState_php*)native_object)->Aux1IsDown());
                 }
 
 
@@ -57901,11 +57901,11 @@ PHP_METHOD(php_wxMouseState, Aux2IsDown)
 
                 if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Aux2IsDown());
+                    RETVAL_BOOL(((wxMouseEvent_php*)native_object)->Aux2IsDown());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->Aux2IsDown());
+                    RETVAL_BOOL(((wxMouseState_php*)native_object)->Aux2IsDown());
                 }
 
 
@@ -58152,11 +58152,11 @@ PHP_METHOD(php_wxMouseState, GetX)
 
                 if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetX());
+                    RETVAL_LONG(((wxMouseEvent_php*)native_object)->GetX());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxMouseState_php*)native_object)->GetX());
+                    RETVAL_LONG(((wxMouseState_php*)native_object)->GetX());
                 }
 
 
@@ -58270,11 +58270,11 @@ PHP_METHOD(php_wxMouseState, GetY)
 
                 if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetY());
+                    RETVAL_LONG(((wxMouseEvent_php*)native_object)->GetY());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxMouseState_php*)native_object)->GetY());
+                    RETVAL_LONG(((wxMouseState_php*)native_object)->GetY());
                 }
 
 
@@ -58388,11 +58388,11 @@ PHP_METHOD(php_wxMouseState, LeftIsDown)
 
                 if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->LeftIsDown());
+                    RETVAL_BOOL(((wxMouseEvent_php*)native_object)->LeftIsDown());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->LeftIsDown());
+                    RETVAL_BOOL(((wxMouseState_php*)native_object)->LeftIsDown());
                 }
 
 
@@ -58506,11 +58506,11 @@ PHP_METHOD(php_wxMouseState, MiddleIsDown)
 
                 if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->MiddleIsDown());
+                    RETVAL_BOOL(((wxMouseEvent_php*)native_object)->MiddleIsDown());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->MiddleIsDown());
+                    RETVAL_BOOL(((wxMouseState_php*)native_object)->MiddleIsDown());
                 }
 
 
@@ -58624,11 +58624,11 @@ PHP_METHOD(php_wxMouseState, RightIsDown)
 
                 if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->RightIsDown());
+                    RETVAL_BOOL(((wxMouseEvent_php*)native_object)->RightIsDown());
                 }
                 else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->RightIsDown());
+                    RETVAL_BOOL(((wxMouseState_php*)native_object)->RightIsDown());
                 }
 
 
@@ -60033,7 +60033,7 @@ PHP_METHOD(php_wxProcessEvent, GetExitCode)
                 php_printf("Executing RETURN_LONG(wxProcessEvent::GetExitCode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxProcessEvent_php*)native_object)->GetExitCode());
+                RETVAL_LONG(((wxProcessEvent_php*)native_object)->GetExitCode());
 
 
                 return;
@@ -60140,7 +60140,7 @@ PHP_METHOD(php_wxProcessEvent, GetPid)
                 php_printf("Executing RETURN_LONG(wxProcessEvent::GetPid())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxProcessEvent_php*)native_object)->GetPid());
+                RETVAL_LONG(((wxProcessEvent_php*)native_object)->GetPid());
 
 
                 return;
@@ -60453,7 +60453,7 @@ PHP_METHOD(php_wxRibbonBarEvent, GetPage)
                 value_to_return0 = (wxRibbonPage_php*) ((wxRibbonBarEvent_php*)native_object)->GetPage();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -61109,7 +61109,7 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, GetBar)
                 value_to_return0 = (wxRibbonButtonBar_php*) ((wxRibbonButtonBarEvent_php*)native_object)->GetBar();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -61258,7 +61258,7 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, PopupMenu)
                 php_printf("Executing RETURN_BOOL(wxRibbonButtonBarEvent::PopupMenu((wxMenu*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonButtonBarEvent_php*)native_object)->PopupMenu((wxMenu*) object_pointer0_0));
+                RETVAL_BOOL(((wxRibbonButtonBarEvent_php*)native_object)->PopupMenu((wxMenu*) object_pointer0_0));
 
                 references->AddReference(menu0, "wxRibbonButtonBarEvent::PopupMenu at call 1 with 1 argument(s)");
 
@@ -61580,7 +61580,7 @@ PHP_METHOD(php_wxRibbonGalleryEvent, GetGallery)
                 value_to_return0 = (wxRibbonGallery_php*) ((wxRibbonGalleryEvent_php*)native_object)->GetGallery();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -61710,7 +61710,7 @@ PHP_METHOD(php_wxRibbonGalleryEvent, GetGalleryItem)
                 value_to_return0 = (wxRibbonGalleryItem_php*) ((wxRibbonGalleryEvent_php*)native_object)->GetGalleryItem();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -62466,7 +62466,7 @@ PHP_METHOD(php_wxSashEvent, GetDragStatus)
                 php_printf("Executing RETURN_LONG(wxSashEvent::GetDragStatus())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSashEvent_php*)native_object)->GetDragStatus());
+                RETVAL_LONG(((wxSashEvent_php*)native_object)->GetDragStatus());
 
 
                 return;
@@ -62573,7 +62573,7 @@ PHP_METHOD(php_wxSashEvent, GetEdge)
                 php_printf("Executing RETURN_LONG(wxSashEvent::GetEdge())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSashEvent_php*)native_object)->GetEdge());
+                RETVAL_LONG(((wxSashEvent_php*)native_object)->GetEdge());
 
 
                 return;
@@ -62870,7 +62870,7 @@ PHP_METHOD(php_wxSpinEvent, GetPosition)
                 php_printf("Executing RETURN_LONG(wxSpinEvent::GetPosition())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSpinEvent_php*)native_object)->GetPosition());
+                RETVAL_LONG(((wxSpinEvent_php*)native_object)->GetPosition());
 
 
                 return;
@@ -63572,7 +63572,7 @@ PHP_METHOD(php_wxSpinDoubleEvent, GetValue)
                 php_printf("Executing RETURN_LONG(wxSpinDoubleEvent::GetValue())\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxSpinDoubleEvent_php*)native_object)->GetValue());
+                RETVAL_DOUBLE(((wxSpinDoubleEvent_php*)native_object)->GetValue());
 
 
                 return;
@@ -63758,7 +63758,7 @@ PHP_METHOD(php_wxSplitterEvent, GetSashPosition)
                 php_printf("Executing RETURN_LONG(wxSplitterEvent::GetSashPosition())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSplitterEvent_php*)native_object)->GetSashPosition());
+                RETVAL_LONG(((wxSplitterEvent_php*)native_object)->GetSashPosition());
 
 
                 return;
@@ -63869,7 +63869,7 @@ PHP_METHOD(php_wxSplitterEvent, GetWindowBeingRemoved)
                 value_to_return0 = (wxWindow_php*) ((wxSplitterEvent_php*)native_object)->GetWindowBeingRemoved();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -63995,7 +63995,7 @@ PHP_METHOD(php_wxSplitterEvent, GetX)
                 php_printf("Executing RETURN_LONG(wxSplitterEvent::GetX())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSplitterEvent_php*)native_object)->GetX());
+                RETVAL_LONG(((wxSplitterEvent_php*)native_object)->GetX());
 
 
                 return;
@@ -64102,7 +64102,7 @@ PHP_METHOD(php_wxSplitterEvent, GetY)
                 php_printf("Executing RETURN_LONG(wxSplitterEvent::GetY())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSplitterEvent_php*)native_object)->GetY());
+                RETVAL_LONG(((wxSplitterEvent_php*)native_object)->GetY());
 
 
                 return;
@@ -66030,7 +66030,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetAlt)
                 php_printf("Executing RETURN_BOOL(wxStyledTextEvent::GetAlt())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextEvent_php*)native_object)->GetAlt());
+                RETVAL_BOOL(((wxStyledTextEvent_php*)native_object)->GetAlt());
 
 
                 return;
@@ -66136,7 +66136,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetControl)
                 php_printf("Executing RETURN_BOOL(wxStyledTextEvent::GetControl())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextEvent_php*)native_object)->GetControl());
+                RETVAL_BOOL(((wxStyledTextEvent_php*)native_object)->GetControl());
 
 
                 return;
@@ -66244,7 +66244,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetDragText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextEvent_php*)native_object)->GetDragText();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -66350,7 +66350,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetFoldLevelNow)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetFoldLevelNow())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetFoldLevelNow());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetFoldLevelNow());
 
 
                 return;
@@ -66456,7 +66456,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetFoldLevelPrev)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetFoldLevelPrev())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetFoldLevelPrev());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetFoldLevelPrev());
 
 
                 return;
@@ -66562,7 +66562,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetKey)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetKey())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetKey());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetKey());
 
 
                 return;
@@ -66668,7 +66668,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetLParam)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetLParam())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetLParam());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetLParam());
 
 
                 return;
@@ -66774,7 +66774,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetLength)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetLength())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetLength());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetLength());
 
 
                 return;
@@ -66880,7 +66880,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetLine)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetLine())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetLine());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetLine());
 
 
                 return;
@@ -66986,7 +66986,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetLinesAdded)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetLinesAdded())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetLinesAdded());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetLinesAdded());
 
 
                 return;
@@ -67092,7 +67092,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetListType)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetListType())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetListType());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetListType());
 
 
                 return;
@@ -67198,7 +67198,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetMargin)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetMargin())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetMargin());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetMargin());
 
 
                 return;
@@ -67304,7 +67304,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetMessage)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetMessage())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetMessage());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetMessage());
 
 
                 return;
@@ -67410,7 +67410,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetModificationType)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetModificationType())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetModificationType());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetModificationType());
 
 
                 return;
@@ -67516,7 +67516,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetModifiers)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetModifiers())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetModifiers());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetModifiers());
 
 
                 return;
@@ -67622,7 +67622,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetPosition)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetPosition())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetPosition());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetPosition());
 
 
                 return;
@@ -67728,7 +67728,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetShift)
                 php_printf("Executing RETURN_BOOL(wxStyledTextEvent::GetShift())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextEvent_php*)native_object)->GetShift());
+                RETVAL_BOOL(((wxStyledTextEvent_php*)native_object)->GetShift());
 
 
                 return;
@@ -67836,7 +67836,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextEvent_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -67942,7 +67942,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetWParam)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetWParam())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetWParam());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetWParam());
 
 
                 return;
@@ -68048,7 +68048,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetX)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetX())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetX());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetX());
 
 
                 return;
@@ -68154,7 +68154,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetY)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetY())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetY());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetY());
 
 
                 return;
@@ -69038,7 +69038,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetDragResult)
                 php_printf("Executing RETURN_LONG(wxStyledTextEvent::GetDragResult())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextEvent_php*)native_object)->GetDragResult());
+                RETVAL_LONG(((wxStyledTextEvent_php*)native_object)->GetDragResult());
 
 
                 return;
@@ -69411,7 +69411,7 @@ PHP_METHOD(php_wxTimerEvent, GetInterval)
                 php_printf("Executing RETURN_LONG(wxTimerEvent::GetInterval())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTimerEvent_php*)native_object)->GetInterval());
+                RETVAL_LONG(((wxTimerEvent_php*)native_object)->GetInterval());
 
 
                 return;
@@ -69851,7 +69851,7 @@ PHP_METHOD(php_wxTreeEvent, GetKeyCode)
                 php_printf("Executing RETURN_LONG(wxTreeEvent::GetKeyCode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTreeEvent_php*)native_object)->GetKeyCode());
+                RETVAL_LONG(((wxTreeEvent_php*)native_object)->GetKeyCode());
 
 
                 return;
@@ -70087,7 +70087,7 @@ PHP_METHOD(php_wxTreeEvent, GetLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTreeEvent_php*)native_object)->GetLabel();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -70423,7 +70423,7 @@ PHP_METHOD(php_wxTreeEvent, IsEditCancelled)
                 php_printf("Executing RETURN_BOOL(wxTreeEvent::IsEditCancelled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTreeEvent_php*)native_object)->IsEditCancelled());
+                RETVAL_BOOL(((wxTreeEvent_php*)native_object)->IsEditCancelled());
 
 
                 return;
@@ -70864,7 +70864,7 @@ PHP_METHOD(php_wxWebViewEvent, GetTarget)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxWebViewEvent_php*)native_object)->GetTarget();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -70973,7 +70973,7 @@ PHP_METHOD(php_wxWebViewEvent, GetURL)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxWebViewEvent_php*)native_object)->GetURL();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -71285,7 +71285,7 @@ PHP_METHOD(php_wxWizardEvent, GetDirection)
                 php_printf("Executing RETURN_BOOL(wxWizardEvent::GetDirection())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizardEvent_php*)native_object)->GetDirection());
+                RETVAL_BOOL(((wxWizardEvent_php*)native_object)->GetDirection());
 
 
                 return;
@@ -71550,7 +71550,7 @@ PHP_METHOD(php_wxWizardEvent, GetPage)
                 value_to_return0 = (wxWizardPage_php*) ((wxWizardEvent_php*)native_object)->GetPage();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){

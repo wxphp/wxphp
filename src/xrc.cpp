@@ -217,7 +217,7 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -372,7 +372,7 @@ PHP_METHOD(php_wxXmlResourceHandler, CreateResource)
                 value_to_return3 = (wxObject_php*) ((wxXmlResourceHandler_php*)native_object)->CreateResource((wxXmlNode*) object_pointer0_0, (wxObject*) object_pointer0_1, (wxObject*) object_pointer0_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -1059,7 +1059,7 @@ PHP_METHOD(php_wxXmlResource, AttachUnknownControl)
                 php_printf("Executing RETURN_BOOL(wxXmlResource::AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxXmlResource_php*)native_object)->AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1));
+                RETVAL_BOOL(((wxXmlResource_php*)native_object)->AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1));
 
                 references->AddReference(control0, "wxXmlResource::AttachUnknownControl at call 1 with 2 argument(s)");
 
@@ -1072,7 +1072,7 @@ PHP_METHOD(php_wxXmlResource, AttachUnknownControl)
                 php_printf("Executing RETURN_BOOL(wxXmlResource::AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1, (wxWindow*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxXmlResource_php*)native_object)->AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1, (wxWindow*) object_pointer0_2));
+                RETVAL_BOOL(((wxXmlResource_php*)native_object)->AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1, (wxWindow*) object_pointer0_2));
 
                 references->AddReference(control0, "wxXmlResource::AttachUnknownControl at call 1 with 3 argument(s)");
                 references->AddReference(parent0, "wxXmlResource::AttachUnknownControl at call 1 with 3 argument(s)");
@@ -1296,7 +1296,7 @@ PHP_METHOD(php_wxXmlResource, CompareVersion)
                 php_printf("Executing RETURN_LONG(wxXmlResource::CompareVersion((int) major0, (int) minor0, (int) release0, (int) revision0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxXmlResource_php*)native_object)->CompareVersion((int) major0, (int) minor0, (int) release0, (int) revision0));
+                RETVAL_LONG(((wxXmlResource_php*)native_object)->CompareVersion((int) major0, (int) minor0, (int) release0, (int) revision0));
 
 
                 return;
@@ -1508,7 +1508,7 @@ PHP_METHOD(php_wxXmlResource, FindXRCIDById)
 
                 wxString value_to_return1;
                 value_to_return1 = wxXmlResource::FindXRCIDById((int) numId0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -1619,7 +1619,7 @@ PHP_METHOD(php_wxXmlResource, Get)
                 wxXmlResource_php* value_to_return0;
                 value_to_return0 = (wxXmlResource_php*) wxXmlResource::Get();
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -1744,7 +1744,7 @@ PHP_METHOD(php_wxXmlResource, GetDomain)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxXmlResource_php*)native_object)->GetDomain();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1851,7 +1851,7 @@ PHP_METHOD(php_wxXmlResource, GetFlags)
                 php_printf("Executing RETURN_LONG(wxXmlResource::GetFlags())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxXmlResource_php*)native_object)->GetFlags());
+                RETVAL_LONG(((wxXmlResource_php*)native_object)->GetFlags());
 
 
                 return;
@@ -1968,7 +1968,7 @@ PHP_METHOD(php_wxXmlResource, GetResourceNode)
                 value_to_return1 = (wxXmlNode_php*) ((wxXmlResource_php*)native_object)->GetResourceNode(wxString(name0, wxConvUTF8));
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -2094,7 +2094,7 @@ PHP_METHOD(php_wxXmlResource, GetVersion)
                 php_printf("Executing RETURN_LONG(wxXmlResource::GetVersion())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxXmlResource_php*)native_object)->GetVersion());
+                RETVAL_LONG(((wxXmlResource_php*)native_object)->GetVersion());
 
 
                 return;
@@ -2209,7 +2209,7 @@ PHP_METHOD(php_wxXmlResource, GetXRCID)
                 php_printf("Executing RETURN_LONG(wxXmlResource::GetXRCID(wxString(str_id0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxXmlResource::GetXRCID(wxString(str_id0, wxConvUTF8)));
+                RETVAL_LONG(wxXmlResource::GetXRCID(wxString(str_id0, wxConvUTF8)));
 
 
                 return;
@@ -2222,7 +2222,7 @@ PHP_METHOD(php_wxXmlResource, GetXRCID)
                 php_printf("Executing RETURN_LONG(wxXmlResource::GetXRCID(wxString(str_id0, wxConvUTF8), (int) value_if_not_found0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxXmlResource::GetXRCID(wxString(str_id0, wxConvUTF8), (int) value_if_not_found0));
+                RETVAL_LONG(wxXmlResource::GetXRCID(wxString(str_id0, wxConvUTF8), (int) value_if_not_found0));
 
 
                 return;
@@ -2442,7 +2442,7 @@ PHP_METHOD(php_wxXmlResource, Load)
                 php_printf("Executing RETURN_BOOL(wxXmlResource::Load(wxString(filemask0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxXmlResource_php*)native_object)->Load(wxString(filemask0, wxConvUTF8)));
+                RETVAL_BOOL(((wxXmlResource_php*)native_object)->Load(wxString(filemask0, wxConvUTF8)));
 
 
                 return;
@@ -2555,7 +2555,7 @@ PHP_METHOD(php_wxXmlResource, LoadAllFiles)
                 php_printf("Executing RETURN_BOOL(wxXmlResource::LoadAllFiles(wxString(dirname0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxXmlResource_php*)native_object)->LoadAllFiles(wxString(dirname0, wxConvUTF8)));
+                RETVAL_BOOL(((wxXmlResource_php*)native_object)->LoadAllFiles(wxString(dirname0, wxConvUTF8)));
 
 
                 return;
@@ -2872,7 +2872,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
                 value_to_return2 = (wxDialog_php*) ((wxXmlResource_php*)native_object)->LoadDialog((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -2911,7 +2911,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
                 php_printf("Executing RETURN_BOOL(wxXmlResource::LoadDialog((wxDialog*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxXmlResource_php*)native_object)->LoadDialog((wxDialog*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)));
+                RETVAL_BOOL(((wxXmlResource_php*)native_object)->LoadDialog((wxDialog*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)));
 
                 references->AddReference(dlg1, "wxXmlResource::LoadDialog at call 1 with 3 argument(s)");
                 references->AddReference(parent1, "wxXmlResource::LoadDialog at call 1 with 3 argument(s)");
@@ -3043,7 +3043,7 @@ PHP_METHOD(php_wxXmlResource, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxXmlResource::LoadFile(*(wxFileName*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxXmlResource_php*)native_object)->LoadFile(*(wxFileName*) object_pointer0_0));
+                RETVAL_BOOL(((wxXmlResource_php*)native_object)->LoadFile(*(wxFileName*) object_pointer0_0));
 
                 references->AddReference(file0, "wxXmlResource::LoadFile at call 3 with 1 argument(s)");
 
@@ -3195,7 +3195,7 @@ PHP_METHOD(php_wxXmlResource, LoadFrame)
                 php_printf("Executing RETURN_BOOL(wxXmlResource::LoadFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1, wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxXmlResource_php*)native_object)->LoadFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1, wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxXmlResource_php*)native_object)->LoadFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1, wxString(name0, wxConvUTF8)));
 
                 references->AddReference(frame0, "wxXmlResource::LoadFrame at call 1 with 3 argument(s)");
                 references->AddReference(parent0, "wxXmlResource::LoadFrame at call 1 with 3 argument(s)");
@@ -3435,7 +3435,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenu)
                 value_to_return1 = (wxMenu_php*) ((wxXmlResource_php*)native_object)->LoadMenu(wxString(name0, wxConvUTF8));
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -3612,7 +3612,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenuBar)
                 value_to_return2 = (wxMenuBar_php*) ((wxXmlResource_php*)native_object)->LoadMenuBar((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -3655,7 +3655,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenuBar)
                 value_to_return1 = (wxMenuBar_php*) ((wxXmlResource_php*)native_object)->LoadMenuBar(wxString(name1, wxConvUTF8));
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -3874,7 +3874,7 @@ PHP_METHOD(php_wxXmlResource, LoadObject)
                 value_to_return3 = (wxObject_php*) ((wxXmlResource_php*)native_object)->LoadObject((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8), wxString(classname0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -3913,7 +3913,7 @@ PHP_METHOD(php_wxXmlResource, LoadObject)
                 php_printf("Executing RETURN_BOOL(wxXmlResource::LoadObject((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxXmlResource_php*)native_object)->LoadObject((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)));
+                RETVAL_BOOL(((wxXmlResource_php*)native_object)->LoadObject((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)));
 
                 references->AddReference(instance1, "wxXmlResource::LoadObject at call 1 with 4 argument(s)");
                 references->AddReference(parent1, "wxXmlResource::LoadObject at call 1 with 4 argument(s)");
@@ -4115,7 +4115,7 @@ PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
                 value_to_return3 = (wxObject_php*) ((wxXmlResource_php*)native_object)->LoadObjectRecursively((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8), wxString(classname0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -4154,7 +4154,7 @@ PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
                 php_printf("Executing RETURN_BOOL(wxXmlResource::LoadObjectRecursively((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxXmlResource_php*)native_object)->LoadObjectRecursively((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)));
+                RETVAL_BOOL(((wxXmlResource_php*)native_object)->LoadObjectRecursively((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)));
 
                 references->AddReference(instance1, "wxXmlResource::LoadObjectRecursively at call 1 with 4 argument(s)");
                 references->AddReference(parent1, "wxXmlResource::LoadObjectRecursively at call 1 with 4 argument(s)");
@@ -4352,7 +4352,7 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
                 value_to_return2 = (wxPanel_php*) ((wxXmlResource_php*)native_object)->LoadPanel((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -4391,7 +4391,7 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
                 php_printf("Executing RETURN_BOOL(wxXmlResource::LoadPanel((wxPanel*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxXmlResource_php*)native_object)->LoadPanel((wxPanel*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)));
+                RETVAL_BOOL(((wxXmlResource_php*)native_object)->LoadPanel((wxPanel*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)));
 
                 references->AddReference(panel1, "wxXmlResource::LoadPanel at call 1 with 3 argument(s)");
                 references->AddReference(parent1, "wxXmlResource::LoadPanel at call 1 with 3 argument(s)");
@@ -4529,7 +4529,7 @@ PHP_METHOD(php_wxXmlResource, LoadToolBar)
                 value_to_return2 = (wxToolBar_php*) ((wxXmlResource_php*)native_object)->LoadToolBar((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -4683,7 +4683,7 @@ PHP_METHOD(php_wxXmlResource, Set)
                 wxXmlResource_php* value_to_return1;
                 value_to_return1 = (wxXmlResource_php*) wxXmlResource::Set((wxXmlResource*) object_pointer0_0);
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -5037,7 +5037,7 @@ PHP_METHOD(php_wxXmlResource, Unload)
                 php_printf("Executing RETURN_BOOL(wxXmlResource::Unload(wxString(filename0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxXmlResource_php*)native_object)->Unload(wxString(filename0, wxConvUTF8)));
+                RETVAL_BOOL(((wxXmlResource_php*)native_object)->Unload(wxString(filename0, wxConvUTF8)));
 
 
                 return;

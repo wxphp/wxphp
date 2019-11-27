@@ -290,7 +290,7 @@ PHP_METHOD(php_wxMediaCtrl, Load)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Load(wxString(fileName0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Load(wxString(fileName0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Load(wxString(fileName0, wxConvUTF8)));
 
 
                 return;
@@ -309,7 +309,7 @@ PHP_METHOD(php_wxMediaCtrl, Load)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Load(*(wxURI*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Load(*(wxURI*) object_pointer1_0));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Load(*(wxURI*) object_pointer1_0));
 
                 references->AddReference(uri1, "wxMediaCtrl::Load at call 3 with 1 argument(s)");
 
@@ -329,7 +329,7 @@ PHP_METHOD(php_wxMediaCtrl, Load)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Load(*(wxURI*) object_pointer2_0, *(wxURI*) object_pointer2_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Load(*(wxURI*) object_pointer2_0, *(wxURI*) object_pointer2_1));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Load(*(wxURI*) object_pointer2_0, *(wxURI*) object_pointer2_1));
 
                 references->AddReference(uri2, "wxMediaCtrl::Load at call 3 with 2 argument(s)");
                 references->AddReference(proxy2, "wxMediaCtrl::Load at call 3 with 2 argument(s)");
@@ -526,7 +526,7 @@ PHP_METHOD(php_wxMediaCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 2 argument(s)");
 
@@ -539,7 +539,7 @@ PHP_METHOD(php_wxMediaCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 3 argument(s)");
 
@@ -552,7 +552,7 @@ PHP_METHOD(php_wxMediaCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 4 argument(s)");
@@ -566,7 +566,7 @@ PHP_METHOD(php_wxMediaCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
                 references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 5 argument(s)");
@@ -581,7 +581,7 @@ PHP_METHOD(php_wxMediaCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
                 references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 6 argument(s)");
                 references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 6 argument(s)");
@@ -596,7 +596,7 @@ PHP_METHOD(php_wxMediaCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 7 argument(s)");
                 references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 7 argument(s)");
@@ -611,7 +611,7 @@ PHP_METHOD(php_wxMediaCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7));
 
                 references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 8 argument(s)");
                 references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 8 argument(s)");
@@ -627,7 +627,7 @@ PHP_METHOD(php_wxMediaCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(fileName0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(szBackend0, wxConvUTF8), *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxMediaCtrl::Create at call 1 with 9 argument(s)");
                 references->AddReference(pos0, "wxMediaCtrl::Create at call 3 with 9 argument(s)");
@@ -852,7 +852,7 @@ PHP_METHOD(php_wxMediaCtrl, GetPlaybackRate)
                 php_printf("Executing RETURN_LONG(wxMediaCtrl::GetPlaybackRate())\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxMediaCtrl_php*)native_object)->GetPlaybackRate());
+                RETVAL_DOUBLE(((wxMediaCtrl_php*)native_object)->GetPlaybackRate());
 
 
                 return;
@@ -959,7 +959,7 @@ PHP_METHOD(php_wxMediaCtrl, GetVolume)
                 php_printf("Executing RETURN_LONG(wxMediaCtrl::GetVolume())\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxMediaCtrl_php*)native_object)->GetVolume());
+                RETVAL_DOUBLE(((wxMediaCtrl_php*)native_object)->GetVolume());
 
 
                 return;
@@ -1066,7 +1066,7 @@ PHP_METHOD(php_wxMediaCtrl, Length)
                 php_printf("Executing RETURN_LONG(wxMediaCtrl::Length())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Length());
+                RETVAL_LONG(((wxMediaCtrl_php*)native_object)->Length());
 
 
                 return;
@@ -1179,7 +1179,7 @@ PHP_METHOD(php_wxMediaCtrl, LoadURI)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::LoadURI(wxString(fileName0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->LoadURI(wxString(fileName0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->LoadURI(wxString(fileName0, wxConvUTF8)));
 
 
                 return;
@@ -1294,7 +1294,7 @@ PHP_METHOD(php_wxMediaCtrl, LoadURIWithProxy)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::LoadURIWithProxy(wxString(fileName0, wxConvUTF8), wxString(proxy0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->LoadURIWithProxy(wxString(fileName0, wxConvUTF8), wxString(proxy0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->LoadURIWithProxy(wxString(fileName0, wxConvUTF8), wxString(proxy0, wxConvUTF8)));
 
 
                 return;
@@ -1401,7 +1401,7 @@ PHP_METHOD(php_wxMediaCtrl, Pause)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Pause())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Pause());
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Pause());
 
 
                 return;
@@ -1508,7 +1508,7 @@ PHP_METHOD(php_wxMediaCtrl, Play)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Play())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Play());
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Play());
 
 
                 return;
@@ -1621,7 +1621,7 @@ PHP_METHOD(php_wxMediaCtrl, Seek)
                 php_printf("Executing RETURN_LONG(wxMediaCtrl::Seek((wxFileOffset) where0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Seek((wxFileOffset) where0));
+                RETVAL_LONG(((wxMediaCtrl_php*)native_object)->Seek((wxFileOffset) where0));
 
 
                 return;
@@ -1633,7 +1633,7 @@ PHP_METHOD(php_wxMediaCtrl, Seek)
                 php_printf("Executing RETURN_LONG(wxMediaCtrl::Seek((wxFileOffset) where0, (wxSeekMode) mode0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Seek((wxFileOffset) where0, (wxSeekMode) mode0));
+                RETVAL_LONG(((wxMediaCtrl_php*)native_object)->Seek((wxFileOffset) where0, (wxSeekMode) mode0));
 
 
                 return;
@@ -1745,7 +1745,7 @@ PHP_METHOD(php_wxMediaCtrl, SetPlaybackRate)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::SetPlaybackRate(dRate0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->SetPlaybackRate(dRate0));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->SetPlaybackRate(dRate0));
 
 
                 return;
@@ -1857,7 +1857,7 @@ PHP_METHOD(php_wxMediaCtrl, SetVolume)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::SetVolume(dVolume0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->SetVolume(dVolume0));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->SetVolume(dVolume0));
 
 
                 return;
@@ -1969,7 +1969,7 @@ PHP_METHOD(php_wxMediaCtrl, ShowPlayerControls)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::ShowPlayerControls())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->ShowPlayerControls());
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->ShowPlayerControls());
 
 
                 return;
@@ -1981,7 +1981,7 @@ PHP_METHOD(php_wxMediaCtrl, ShowPlayerControls)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::ShowPlayerControls((wxMediaCtrlPlayerControls) flags0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->ShowPlayerControls((wxMediaCtrlPlayerControls) flags0));
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->ShowPlayerControls((wxMediaCtrlPlayerControls) flags0));
 
 
                 return;
@@ -2088,7 +2088,7 @@ PHP_METHOD(php_wxMediaCtrl, Stop)
                 php_printf("Executing RETURN_BOOL(wxMediaCtrl::Stop())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMediaCtrl_php*)native_object)->Stop());
+                RETVAL_BOOL(((wxMediaCtrl_php*)native_object)->Stop());
 
 
                 return;
@@ -2498,7 +2498,7 @@ PHP_METHOD(php_wxMediaCtrl, GetState)
                 php_printf("Executing RETURN_LONG(wxMediaCtrl::GetState())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->GetState());
+                RETVAL_LONG(((wxMediaCtrl_php*)native_object)->GetState());
 
 
                 return;
@@ -2605,7 +2605,7 @@ PHP_METHOD(php_wxMediaCtrl, Tell)
                 php_printf("Executing RETURN_LONG(wxMediaCtrl::Tell())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMediaCtrl_php*)native_object)->Tell());
+                RETVAL_LONG(((wxMediaCtrl_php*)native_object)->Tell());
 
 
                 return;
@@ -2798,7 +2798,7 @@ PHP_METHOD(php_wxSound, Create)
                 php_printf("Executing RETURN_BOOL(wxSound::Create(wxString(fileName0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Create(wxString(fileName0, wxConvUTF8)));
+                RETVAL_BOOL(((wxSound_php*)native_object)->Create(wxString(fileName0, wxConvUTF8)));
 
 
                 return;
@@ -2810,7 +2810,7 @@ PHP_METHOD(php_wxSound, Create)
                 php_printf("Executing RETURN_BOOL(wxSound::Create(wxString(fileName0, wxConvUTF8), isResource0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Create(wxString(fileName0, wxConvUTF8), isResource0));
+                RETVAL_BOOL(((wxSound_php*)native_object)->Create(wxString(fileName0, wxConvUTF8), isResource0));
 
 
                 return;
@@ -2917,7 +2917,7 @@ PHP_METHOD(php_wxSound, IsOk)
                 php_printf("Executing RETURN_BOOL(wxSound::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxSound_php*)native_object)->IsOk());
 
 
                 return;
@@ -3052,7 +3052,7 @@ PHP_METHOD(php_wxSound, Play)
                 php_printf("Executing RETURN_BOOL(wxSound::Play())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Play());
+                RETVAL_BOOL(((wxSound_php*)native_object)->Play());
 
 
                 return;
@@ -3064,7 +3064,7 @@ PHP_METHOD(php_wxSound, Play)
                 php_printf("Executing RETURN_BOOL(wxSound::Play((unsigned) flags0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Play((unsigned) flags0));
+                RETVAL_BOOL(((wxSound_php*)native_object)->Play((unsigned) flags0));
 
 
                 return;
@@ -3084,7 +3084,7 @@ PHP_METHOD(php_wxSound, Play)
                 php_printf("Executing RETURN_BOOL(wxSound::Play(wxString(filename1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxSound::Play(wxString(filename1, wxConvUTF8)));
+                RETVAL_BOOL(wxSound::Play(wxString(filename1, wxConvUTF8)));
 
 
                 return;
@@ -3097,7 +3097,7 @@ PHP_METHOD(php_wxSound, Play)
                 php_printf("Executing RETURN_BOOL(wxSound::Play(wxString(filename1, wxConvUTF8), (unsigned) flags1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxSound::Play(wxString(filename1, wxConvUTF8), (unsigned) flags1));
+                RETVAL_BOOL(wxSound::Play(wxString(filename1, wxConvUTF8), (unsigned) flags1));
 
 
                 return;

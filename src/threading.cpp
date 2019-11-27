@@ -216,7 +216,7 @@ PHP_METHOD(php_wxCondition, Broadcast)
                 php_printf("Executing RETURN_LONG(wxCondition::Broadcast())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxCondition_php*)native_object)->Broadcast());
+                RETVAL_LONG(((wxCondition_php*)native_object)->Broadcast());
 
 
                 return;
@@ -323,7 +323,7 @@ PHP_METHOD(php_wxCondition, IsOk)
                 php_printf("Executing RETURN_BOOL(wxCondition::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCondition_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxCondition_php*)native_object)->IsOk());
 
 
                 return;
@@ -430,7 +430,7 @@ PHP_METHOD(php_wxCondition, Signal)
                 php_printf("Executing RETURN_LONG(wxCondition::Signal())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxCondition_php*)native_object)->Signal());
+                RETVAL_LONG(((wxCondition_php*)native_object)->Signal());
 
 
                 return;
@@ -537,7 +537,7 @@ PHP_METHOD(php_wxCondition, Wait)
                 php_printf("Executing RETURN_LONG(wxCondition::Wait())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxCondition_php*)native_object)->Wait());
+                RETVAL_LONG(((wxCondition_php*)native_object)->Wait());
 
 
                 return;
@@ -649,7 +649,7 @@ PHP_METHOD(php_wxCondition, WaitTimeout)
                 php_printf("Executing RETURN_LONG(wxCondition::WaitTimeout((unsigned long) milliseconds0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxCondition_php*)native_object)->WaitTimeout((unsigned long) milliseconds0));
+                RETVAL_LONG(((wxCondition_php*)native_object)->WaitTimeout((unsigned long) milliseconds0));
 
 
                 return;
@@ -1135,7 +1135,7 @@ PHP_METHOD(php_wxThreadHelper, GetThread)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -1269,7 +1269,7 @@ PHP_METHOD(php_wxThreadHelper, CreateThread)
 
                 if(current_object_type == PHP_WXTHREADHELPER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxThreadHelper_php*)native_object)->CreateThread());
+                    RETVAL_LONG(((wxThreadHelper_php*)native_object)->CreateThread());
                 }
 
 
@@ -1284,7 +1284,7 @@ PHP_METHOD(php_wxThreadHelper, CreateThread)
 
                 if(current_object_type == PHP_WXTHREADHELPER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxThreadHelper_php*)native_object)->CreateThread((wxThreadKind) kind0));
+                    RETVAL_LONG(((wxThreadHelper_php*)native_object)->CreateThread((wxThreadKind) kind0));
                 }
 
 
@@ -1299,7 +1299,7 @@ PHP_METHOD(php_wxThreadHelper, CreateThread)
 
                 if(current_object_type == PHP_WXTHREADHELPER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxThreadHelper_php*)native_object)->CreateThread((wxThreadKind) kind0, (unsigned int) stackSize0));
+                    RETVAL_LONG(((wxThreadHelper_php*)native_object)->CreateThread((wxThreadKind) kind0, (unsigned int) stackSize0));
                 }
 
 
@@ -1700,7 +1700,7 @@ PHP_METHOD(php_wxCriticalSection, TryEnter)
                 php_printf("Executing RETURN_BOOL(wxCriticalSection::TryEnter())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCriticalSection_php*)native_object)->TryEnter());
+                RETVAL_BOOL(((wxCriticalSection_php*)native_object)->TryEnter());
 
 
                 return;
@@ -2167,7 +2167,7 @@ PHP_METHOD(php_wxThread, This)
                 wxThread_php* value_to_return0;
                 value_to_return0 = (wxThread_php*) wxThread::This();
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -2290,7 +2290,7 @@ PHP_METHOD(php_wxThread, TestDestroy)
                 php_printf("Executing RETURN_BOOL(wxThread::TestDestroy())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxThread_php*)native_object)->TestDestroy());
+                RETVAL_BOOL(((wxThread_php*)native_object)->TestDestroy());
 
 
                 return;
@@ -2628,7 +2628,7 @@ PHP_METHOD(php_wxThread, SetConcurrency)
                 php_printf("Executing RETURN_BOOL(wxThread::SetConcurrency((size_t) level0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxThread::SetConcurrency((size_t) level0));
+                RETVAL_BOOL(wxThread::SetConcurrency((size_t) level0));
 
 
                 return;
@@ -2736,7 +2736,7 @@ PHP_METHOD(php_wxThread, GetCPUCount)
                 php_printf("Executing RETURN_LONG(wxThread::GetCPUCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxThread::GetCPUCount());
+                RETVAL_LONG(wxThread::GetCPUCount());
 
 
                 return;
@@ -2844,7 +2844,7 @@ PHP_METHOD(php_wxThread, GetCurrentId)
                 php_printf("Executing RETURN_LONG(wxThread::GetCurrentId())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxThread::GetCurrentId());
+                RETVAL_LONG(wxThread::GetCurrentId());
 
 
                 return;
@@ -2951,7 +2951,7 @@ PHP_METHOD(php_wxThread, GetId)
                 php_printf("Executing RETURN_LONG(wxThread::GetId())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->GetId());
+                RETVAL_LONG(((wxThread_php*)native_object)->GetId());
 
 
                 return;
@@ -3058,7 +3058,7 @@ PHP_METHOD(php_wxThread, GetKind)
                 php_printf("Executing RETURN_LONG(wxThread::GetKind())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->GetKind());
+                RETVAL_LONG(((wxThread_php*)native_object)->GetKind());
 
 
                 return;
@@ -3166,7 +3166,7 @@ PHP_METHOD(php_wxThread, GetMainId)
                 php_printf("Executing RETURN_LONG(wxThread::GetMainId())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxThread::GetMainId());
+                RETVAL_LONG(wxThread::GetMainId());
 
 
                 return;
@@ -3273,7 +3273,7 @@ PHP_METHOD(php_wxThread, GetPriority)
                 php_printf("Executing RETURN_LONG(wxThread::GetPriority())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->GetPriority());
+                RETVAL_LONG(((wxThread_php*)native_object)->GetPriority());
 
 
                 return;
@@ -3380,7 +3380,7 @@ PHP_METHOD(php_wxThread, IsAlive)
                 php_printf("Executing RETURN_BOOL(wxThread::IsAlive())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxThread_php*)native_object)->IsAlive());
+                RETVAL_BOOL(((wxThread_php*)native_object)->IsAlive());
 
 
                 return;
@@ -3487,7 +3487,7 @@ PHP_METHOD(php_wxThread, IsDetached)
                 php_printf("Executing RETURN_BOOL(wxThread::IsDetached())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxThread_php*)native_object)->IsDetached());
+                RETVAL_BOOL(((wxThread_php*)native_object)->IsDetached());
 
 
                 return;
@@ -3595,7 +3595,7 @@ PHP_METHOD(php_wxThread, IsMain)
                 php_printf("Executing RETURN_BOOL(wxThread::IsMain())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxThread::IsMain());
+                RETVAL_BOOL(wxThread::IsMain());
 
 
                 return;
@@ -3702,7 +3702,7 @@ PHP_METHOD(php_wxThread, IsPaused)
                 php_printf("Executing RETURN_BOOL(wxThread::IsPaused())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxThread_php*)native_object)->IsPaused());
+                RETVAL_BOOL(((wxThread_php*)native_object)->IsPaused());
 
 
                 return;
@@ -3809,7 +3809,7 @@ PHP_METHOD(php_wxThread, IsRunning)
                 php_printf("Executing RETURN_BOOL(wxThread::IsRunning())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxThread_php*)native_object)->IsRunning());
+                RETVAL_BOOL(((wxThread_php*)native_object)->IsRunning());
 
 
                 return;
@@ -3916,7 +3916,7 @@ PHP_METHOD(php_wxThread, Kill)
                 php_printf("Executing RETURN_LONG(wxThread::Kill())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->Kill());
+                RETVAL_LONG(((wxThread_php*)native_object)->Kill());
 
 
                 return;
@@ -4023,7 +4023,7 @@ PHP_METHOD(php_wxThread, Pause)
                 php_printf("Executing RETURN_LONG(wxThread::Pause())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->Pause());
+                RETVAL_LONG(((wxThread_php*)native_object)->Pause());
 
 
                 return;
@@ -4130,7 +4130,7 @@ PHP_METHOD(php_wxThread, Resume)
                 php_printf("Executing RETURN_LONG(wxThread::Resume())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->Resume());
+                RETVAL_LONG(((wxThread_php*)native_object)->Resume());
 
 
                 return;
@@ -4237,7 +4237,7 @@ PHP_METHOD(php_wxThread, Run)
                 php_printf("Executing RETURN_LONG(wxThread::Run())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->Run());
+                RETVAL_LONG(((wxThread_php*)native_object)->Run());
 
 
                 return;
@@ -4349,7 +4349,7 @@ PHP_METHOD(php_wxThread, Create)
                 php_printf("Executing RETURN_LONG(wxThread::Create())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->Create());
+                RETVAL_LONG(((wxThread_php*)native_object)->Create());
 
 
                 return;
@@ -4361,7 +4361,7 @@ PHP_METHOD(php_wxThread, Create)
                 php_printf("Executing RETURN_LONG(wxThread::Create((unsigned int) stackSize0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->Create((unsigned int) stackSize0));
+                RETVAL_LONG(((wxThread_php*)native_object)->Create((unsigned int) stackSize0));
 
 
                 return;
@@ -4479,7 +4479,7 @@ PHP_METHOD(php_wxThread, Delete)
                 php_printf("Executing RETURN_LONG(wxThread::Delete())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->Delete());
+                RETVAL_LONG(((wxThread_php*)native_object)->Delete());
 
 
                 return;
@@ -4491,7 +4491,7 @@ PHP_METHOD(php_wxThread, Delete)
                 php_printf("Executing RETURN_LONG(wxThread::Delete((void**) 0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->Delete((void**) 0));
+                RETVAL_LONG(((wxThread_php*)native_object)->Delete((void**) 0));
 
 
                 return;
@@ -4503,7 +4503,7 @@ PHP_METHOD(php_wxThread, Delete)
                 php_printf("Executing RETURN_LONG(wxThread::Delete((void**) 0, (wxThreadWait) waitMode0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxThread_php*)native_object)->Delete((void**) 0, (wxThreadWait) waitMode0));
+                RETVAL_LONG(((wxThread_php*)native_object)->Delete((void**) 0, (wxThreadWait) waitMode0));
 
 
                 return;
@@ -4695,7 +4695,7 @@ PHP_METHOD(php_wxThread, Wait)
                 php_printf("Executing wxThread::Wait()\n\n");
                 #endif
 
-                ZVAL_STRING(return_value, (char*) ((wxThread_php*)native_object)->Wait());
+                RETVAL_STRING((char*) ((wxThread_php*)native_object)->Wait());
 
 
                 return;
@@ -4707,7 +4707,7 @@ PHP_METHOD(php_wxThread, Wait)
                 php_printf("Executing wxThread::Wait((wxThreadWait) flags0)\n\n");
                 #endif
 
-                ZVAL_STRING(return_value, (char*) ((wxThread_php*)native_object)->Wait((wxThreadWait) flags0));
+                RETVAL_STRING((char*) ((wxThread_php*)native_object)->Wait((wxThreadWait) flags0));
 
 
                 return;
@@ -4893,7 +4893,7 @@ PHP_METHOD(php_wxSemaphore, Post)
                 php_printf("Executing RETURN_LONG(wxSemaphore::Post())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSemaphore_php*)native_object)->Post());
+                RETVAL_LONG(((wxSemaphore_php*)native_object)->Post());
 
 
                 return;
@@ -5000,7 +5000,7 @@ PHP_METHOD(php_wxSemaphore, TryWait)
                 php_printf("Executing RETURN_LONG(wxSemaphore::TryWait())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSemaphore_php*)native_object)->TryWait());
+                RETVAL_LONG(((wxSemaphore_php*)native_object)->TryWait());
 
 
                 return;
@@ -5107,7 +5107,7 @@ PHP_METHOD(php_wxSemaphore, Wait)
                 php_printf("Executing RETURN_LONG(wxSemaphore::Wait())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSemaphore_php*)native_object)->Wait());
+                RETVAL_LONG(((wxSemaphore_php*)native_object)->Wait());
 
 
                 return;
@@ -5219,7 +5219,7 @@ PHP_METHOD(php_wxSemaphore, WaitTimeout)
                 php_printf("Executing RETURN_LONG(wxSemaphore::WaitTimeout((unsigned long) timeout_millis0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSemaphore_php*)native_object)->WaitTimeout((unsigned long) timeout_millis0));
+                RETVAL_LONG(((wxSemaphore_php*)native_object)->WaitTimeout((unsigned long) timeout_millis0));
 
 
                 return;
@@ -5516,7 +5516,7 @@ PHP_METHOD(php_wxMutexLocker, IsOk)
                 php_printf("Executing RETURN_BOOL(wxMutexLocker::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMutexLocker_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxMutexLocker_php*)native_object)->IsOk());
 
 
                 return;
@@ -5809,7 +5809,7 @@ PHP_METHOD(php_wxMutex, Lock)
                 php_printf("Executing RETURN_LONG(wxMutex::Lock())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMutex_php*)native_object)->Lock());
+                RETVAL_LONG(((wxMutex_php*)native_object)->Lock());
 
 
                 return;
@@ -5921,7 +5921,7 @@ PHP_METHOD(php_wxMutex, LockTimeout)
                 php_printf("Executing RETURN_LONG(wxMutex::LockTimeout((unsigned long) msec0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMutex_php*)native_object)->LockTimeout((unsigned long) msec0));
+                RETVAL_LONG(((wxMutex_php*)native_object)->LockTimeout((unsigned long) msec0));
 
 
                 return;
@@ -6028,7 +6028,7 @@ PHP_METHOD(php_wxMutex, TryLock)
                 php_printf("Executing RETURN_LONG(wxMutex::TryLock())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMutex_php*)native_object)->TryLock());
+                RETVAL_LONG(((wxMutex_php*)native_object)->TryLock());
 
 
                 return;
@@ -6135,7 +6135,7 @@ PHP_METHOD(php_wxMutex, Unlock)
                 php_printf("Executing RETURN_LONG(wxMutex::Unlock())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMutex_php*)native_object)->Unlock());
+                RETVAL_LONG(((wxMutex_php*)native_object)->Unlock());
 
 
                 return;

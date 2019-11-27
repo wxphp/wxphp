@@ -2509,7 +2509,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::Apply(*(wxTextAttr*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->Apply(*(wxTextAttr*) object_pointer0_0));
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->Apply(*(wxTextAttr*) object_pointer0_0));
 
                 references->AddReference(style0, "wxTextAttr::Apply at call 3 with 1 argument(s)");
 
@@ -2522,7 +2522,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::Apply(*(wxTextAttr*) object_pointer0_0, (const wxTextAttr*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->Apply(*(wxTextAttr*) object_pointer0_0, (const wxTextAttr*) object_pointer0_1));
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->Apply(*(wxTextAttr*) object_pointer0_0, (const wxTextAttr*) object_pointer0_1));
 
                 references->AddReference(style0, "wxTextAttr::Apply at call 3 with 2 argument(s)");
                 references->AddReference(compareWith0, "wxTextAttr::Apply at call 1 with 2 argument(s)");
@@ -2631,7 +2631,7 @@ PHP_METHOD(php_wxTextAttr, GetAlignment)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetAlignment())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetAlignment());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetAlignment());
 
 
                 return;
@@ -2867,7 +2867,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletFont)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletFont();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -2976,7 +2976,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3083,7 +3083,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletNumber)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetBulletNumber())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetBulletNumber());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetBulletNumber());
 
 
                 return;
@@ -3190,7 +3190,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletStyle)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetBulletStyle())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetBulletStyle());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetBulletStyle());
 
 
                 return;
@@ -3299,7 +3299,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletText();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3408,7 +3408,7 @@ PHP_METHOD(php_wxTextAttr, GetCharacterStyleName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetCharacterStyleName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3515,7 +3515,7 @@ PHP_METHOD(php_wxTextAttr, GetFlags)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetFlags())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFlags());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetFlags());
 
 
                 return;
@@ -3761,7 +3761,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::GetFontAttributes(*(wxFont*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->GetFontAttributes(*(wxFont*) object_pointer0_0));
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->GetFontAttributes(*(wxFont*) object_pointer0_0));
 
                 references->AddReference(font0, "wxTextAttr::GetFontAttributes at call 3 with 1 argument(s)");
 
@@ -3774,7 +3774,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::GetFontAttributes(*(wxFont*) object_pointer0_0, (int) flags0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->GetFontAttributes(*(wxFont*) object_pointer0_0, (int) flags0));
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->GetFontAttributes(*(wxFont*) object_pointer0_0, (int) flags0));
 
                 references->AddReference(font0, "wxTextAttr::GetFontAttributes at call 3 with 2 argument(s)");
 
@@ -3882,7 +3882,7 @@ PHP_METHOD(php_wxTextAttr, GetFontEncoding)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetFontEncoding())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFontEncoding());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetFontEncoding());
 
 
                 return;
@@ -3991,7 +3991,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFaceName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetFontFaceName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4098,7 +4098,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFamily)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetFontFamily())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFontFamily());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetFontFamily());
 
 
                 return;
@@ -4205,7 +4205,7 @@ PHP_METHOD(php_wxTextAttr, GetFontSize)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetFontSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFontSize());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetFontSize());
 
 
                 return;
@@ -4312,7 +4312,7 @@ PHP_METHOD(php_wxTextAttr, GetFontStyle)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetFontStyle())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFontStyle());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetFontStyle());
 
 
                 return;
@@ -4419,7 +4419,7 @@ PHP_METHOD(php_wxTextAttr, GetFontUnderlined)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::GetFontUnderlined())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->GetFontUnderlined());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->GetFontUnderlined());
 
 
                 return;
@@ -4526,7 +4526,7 @@ PHP_METHOD(php_wxTextAttr, GetFontWeight)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetFontWeight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFontWeight());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetFontWeight());
 
 
                 return;
@@ -4633,7 +4633,7 @@ PHP_METHOD(php_wxTextAttr, GetLeftIndent)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetLeftIndent())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetLeftIndent());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetLeftIndent());
 
 
                 return;
@@ -4740,7 +4740,7 @@ PHP_METHOD(php_wxTextAttr, GetLeftSubIndent)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetLeftSubIndent())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetLeftSubIndent());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetLeftSubIndent());
 
 
                 return;
@@ -4847,7 +4847,7 @@ PHP_METHOD(php_wxTextAttr, GetLineSpacing)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetLineSpacing())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetLineSpacing());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetLineSpacing());
 
 
                 return;
@@ -4956,7 +4956,7 @@ PHP_METHOD(php_wxTextAttr, GetListStyleName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetListStyleName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5063,7 +5063,7 @@ PHP_METHOD(php_wxTextAttr, GetOutlineLevel)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetOutlineLevel())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetOutlineLevel());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetOutlineLevel());
 
 
                 return;
@@ -5170,7 +5170,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingAfter)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetParagraphSpacingAfter())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetParagraphSpacingAfter());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetParagraphSpacingAfter());
 
 
                 return;
@@ -5277,7 +5277,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingBefore)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetParagraphSpacingBefore())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetParagraphSpacingBefore());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetParagraphSpacingBefore());
 
 
                 return;
@@ -5386,7 +5386,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphStyleName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetParagraphStyleName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5493,7 +5493,7 @@ PHP_METHOD(php_wxTextAttr, GetRightIndent)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetRightIndent())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetRightIndent());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetRightIndent());
 
 
                 return;
@@ -5727,7 +5727,7 @@ PHP_METHOD(php_wxTextAttr, GetTextEffectFlags)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetTextEffectFlags())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetTextEffectFlags());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetTextEffectFlags());
 
 
                 return;
@@ -5834,7 +5834,7 @@ PHP_METHOD(php_wxTextAttr, GetTextEffects)
                 php_printf("Executing RETURN_LONG(wxTextAttr::GetTextEffects())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetTextEffects());
+                RETVAL_LONG(((wxTextAttr_php*)native_object)->GetTextEffects());
 
 
                 return;
@@ -5943,7 +5943,7 @@ PHP_METHOD(php_wxTextAttr, GetURL)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextAttr_php*)native_object)->GetURL();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -6050,7 +6050,7 @@ PHP_METHOD(php_wxTextAttr, HasAlignment)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasAlignment())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasAlignment());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasAlignment());
 
 
                 return;
@@ -6157,7 +6157,7 @@ PHP_METHOD(php_wxTextAttr, HasBackgroundColour)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasBackgroundColour())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasBackgroundColour());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasBackgroundColour());
 
 
                 return;
@@ -6264,7 +6264,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletName)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletName())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasBulletName());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasBulletName());
 
 
                 return;
@@ -6371,7 +6371,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletNumber)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletNumber())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasBulletNumber());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasBulletNumber());
 
 
                 return;
@@ -6478,7 +6478,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletStyle)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletStyle())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasBulletStyle());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasBulletStyle());
 
 
                 return;
@@ -6585,7 +6585,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletText)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletText())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasBulletText());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasBulletText());
 
 
                 return;
@@ -6692,7 +6692,7 @@ PHP_METHOD(php_wxTextAttr, HasCharacterStyleName)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasCharacterStyleName())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasCharacterStyleName());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasCharacterStyleName());
 
 
                 return;
@@ -6804,7 +6804,7 @@ PHP_METHOD(php_wxTextAttr, HasFlag)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasFlag((long) flag0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFlag((long) flag0));
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasFlag((long) flag0));
 
 
                 return;
@@ -6911,7 +6911,7 @@ PHP_METHOD(php_wxTextAttr, HasFont)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasFont())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFont());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasFont());
 
 
                 return;
@@ -7018,7 +7018,7 @@ PHP_METHOD(php_wxTextAttr, HasFontEncoding)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontEncoding())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontEncoding());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasFontEncoding());
 
 
                 return;
@@ -7125,7 +7125,7 @@ PHP_METHOD(php_wxTextAttr, HasFontFaceName)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontFaceName())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontFaceName());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasFontFaceName());
 
 
                 return;
@@ -7232,7 +7232,7 @@ PHP_METHOD(php_wxTextAttr, HasFontFamily)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontFamily())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontFamily());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasFontFamily());
 
 
                 return;
@@ -7339,7 +7339,7 @@ PHP_METHOD(php_wxTextAttr, HasFontItalic)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontItalic())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontItalic());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasFontItalic());
 
 
                 return;
@@ -7446,7 +7446,7 @@ PHP_METHOD(php_wxTextAttr, HasFontSize)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontSize())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontSize());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasFontSize());
 
 
                 return;
@@ -7553,7 +7553,7 @@ PHP_METHOD(php_wxTextAttr, HasFontUnderlined)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontUnderlined())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontUnderlined());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasFontUnderlined());
 
 
                 return;
@@ -7660,7 +7660,7 @@ PHP_METHOD(php_wxTextAttr, HasFontWeight)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontWeight())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontWeight());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasFontWeight());
 
 
                 return;
@@ -7767,7 +7767,7 @@ PHP_METHOD(php_wxTextAttr, HasLeftIndent)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasLeftIndent())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasLeftIndent());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasLeftIndent());
 
 
                 return;
@@ -7874,7 +7874,7 @@ PHP_METHOD(php_wxTextAttr, HasLineSpacing)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasLineSpacing())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasLineSpacing());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasLineSpacing());
 
 
                 return;
@@ -7981,7 +7981,7 @@ PHP_METHOD(php_wxTextAttr, HasListStyleName)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasListStyleName())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasListStyleName());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasListStyleName());
 
 
                 return;
@@ -8088,7 +8088,7 @@ PHP_METHOD(php_wxTextAttr, HasOutlineLevel)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasOutlineLevel())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasOutlineLevel());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasOutlineLevel());
 
 
                 return;
@@ -8195,7 +8195,7 @@ PHP_METHOD(php_wxTextAttr, HasPageBreak)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasPageBreak())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasPageBreak());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasPageBreak());
 
 
                 return;
@@ -8302,7 +8302,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingAfter)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasParagraphSpacingAfter())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasParagraphSpacingAfter());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasParagraphSpacingAfter());
 
 
                 return;
@@ -8409,7 +8409,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingBefore)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasParagraphSpacingBefore())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasParagraphSpacingBefore());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasParagraphSpacingBefore());
 
 
                 return;
@@ -8516,7 +8516,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphStyleName)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasParagraphStyleName())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasParagraphStyleName());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasParagraphStyleName());
 
 
                 return;
@@ -8623,7 +8623,7 @@ PHP_METHOD(php_wxTextAttr, HasRightIndent)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasRightIndent())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasRightIndent());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasRightIndent());
 
 
                 return;
@@ -8730,7 +8730,7 @@ PHP_METHOD(php_wxTextAttr, HasTabs)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasTabs())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasTabs());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasTabs());
 
 
                 return;
@@ -8837,7 +8837,7 @@ PHP_METHOD(php_wxTextAttr, HasTextColour)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasTextColour())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasTextColour());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasTextColour());
 
 
                 return;
@@ -8944,7 +8944,7 @@ PHP_METHOD(php_wxTextAttr, HasTextEffects)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasTextEffects())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasTextEffects());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasTextEffects());
 
 
                 return;
@@ -9051,7 +9051,7 @@ PHP_METHOD(php_wxTextAttr, HasURL)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::HasURL())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasURL());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->HasURL());
 
 
                 return;
@@ -9158,7 +9158,7 @@ PHP_METHOD(php_wxTextAttr, IsCharacterStyle)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::IsCharacterStyle())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->IsCharacterStyle());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->IsCharacterStyle());
 
 
                 return;
@@ -9265,7 +9265,7 @@ PHP_METHOD(php_wxTextAttr, IsDefault)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::IsDefault())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->IsDefault());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->IsDefault());
 
 
                 return;
@@ -9372,7 +9372,7 @@ PHP_METHOD(php_wxTextAttr, IsParagraphStyle)
                 php_printf("Executing RETURN_BOOL(wxTextAttr::IsParagraphStyle())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->IsParagraphStyle());
+                RETVAL_BOOL(((wxTextAttr_php*)native_object)->IsParagraphStyle());
 
 
                 return;

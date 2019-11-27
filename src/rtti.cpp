@@ -343,7 +343,7 @@ PHP_METHOD(php_wxRefCounter, GetRefCount)
                 php_printf("Executing RETURN_LONG(wxRefCounter::GetRefCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxRefCounter_php*)native_object)->GetRefCount());
+                RETVAL_LONG(((wxRefCounter_php*)native_object)->GetRefCount());
 
 
                 return;
@@ -4755,7 +4755,7 @@ PHP_METHOD(php_wxObject, IsSameAs)
                 php_printf("Executing RETURN_BOOL(wxObject::IsSameAs(*(wxObject*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxObject_php*)native_object)->IsSameAs(*(wxObject*) object_pointer0_0));
+                RETVAL_BOOL(((wxObject_php*)native_object)->IsSameAs(*(wxObject*) object_pointer0_0));
 
                 references->AddReference(obj0, "wxObject::IsSameAs at call 3 with 1 argument(s)");
 
@@ -7374,7 +7374,7 @@ PHP_METHOD(php_wxObject, GetClassInfo)
                 value_to_return0 = (wxClassInfo_php*) ((wxObject_php*)native_object)->GetClassInfo();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -8711,7 +8711,7 @@ PHP_METHOD(php_wxObject, IsKindOf)
                 php_printf("Executing RETURN_BOOL(wxObject::IsKindOf((const wxClassInfo*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxObject_php*)native_object)->IsKindOf((const wxClassInfo*) object_pointer0_0));
+                RETVAL_BOOL(((wxObject_php*)native_object)->IsKindOf((const wxClassInfo*) object_pointer0_0));
 
                 references->AddReference(info0, "wxObject::IsKindOf at call 1 with 1 argument(s)");
 
@@ -8905,7 +8905,7 @@ PHP_METHOD(php_wxClassInfo, CreateObject)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -9041,7 +9041,7 @@ PHP_METHOD(php_wxClassInfo, FindClass)
                 wxClassInfo_php* value_to_return1;
                 value_to_return1 = (wxClassInfo_php*) wxClassInfo::FindClass(wxString(className0, wxConvUTF8));
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -9166,7 +9166,7 @@ PHP_METHOD(php_wxClassInfo, GetSize)
 
                 if(current_object_type == PHP_WXCLASSINFO_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxClassInfo_php*)native_object)->GetSize());
+                    RETVAL_LONG(((wxClassInfo_php*)native_object)->GetSize());
                 }
 
 
@@ -9276,7 +9276,7 @@ PHP_METHOD(php_wxClassInfo, IsDynamic)
 
                 if(current_object_type == PHP_WXCLASSINFO_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxClassInfo_php*)native_object)->IsDynamic());
+                    RETVAL_BOOL(((wxClassInfo_php*)native_object)->IsDynamic());
                 }
 
 
@@ -9409,7 +9409,7 @@ PHP_METHOD(php_wxClassInfo, IsKindOf)
 
                 if(current_object_type == PHP_WXCLASSINFO_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxClassInfo_php*)native_object)->IsKindOf((const wxClassInfo*) object_pointer0_0));
+                    RETVAL_BOOL(((wxClassInfo_php*)native_object)->IsKindOf((const wxClassInfo*) object_pointer0_0));
                 }
 
                 references->AddReference(info0, "wxClassInfo::IsKindOf at call 1 with 1 argument(s)");

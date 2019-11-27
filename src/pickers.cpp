@@ -290,7 +290,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 2 argument(s)");
 
@@ -303,7 +303,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2));
+                RETVAL_BOOL(((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2));
 
                 references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 3 argument(s)");
                 references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 3 argument(s)");
@@ -317,7 +317,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
+                RETVAL_BOOL(((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 4 argument(s)");
                 references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 4 argument(s)");
@@ -332,7 +332,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+                RETVAL_BOOL(((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
                 references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 5 argument(s)");
                 references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 5 argument(s)");
@@ -348,7 +348,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+                RETVAL_BOOL(((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
                 references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 6 argument(s)");
                 references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 6 argument(s)");
@@ -364,7 +364,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+                RETVAL_BOOL(((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
                 references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 7 argument(s)");
                 references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 7 argument(s)");
@@ -381,7 +381,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxColourPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxColourPickerCtrl::Create at call 1 with 8 argument(s)");
                 references->AddReference(colour0, "wxColourPickerCtrl::Create at call 3 with 8 argument(s)");
@@ -1443,7 +1443,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 2 argument(s)");
 
@@ -1456,7 +1456,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
+                RETVAL_BOOL(((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
 
                 references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 3 argument(s)");
 
@@ -1469,7 +1469,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
+                RETVAL_BOOL(((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 4 argument(s)");
@@ -1483,7 +1483,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+                RETVAL_BOOL(((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
                 references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 5 argument(s)");
@@ -1498,7 +1498,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+                RETVAL_BOOL(((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
                 references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 6 argument(s)");
                 references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 6 argument(s)");
@@ -1513,7 +1513,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+                RETVAL_BOOL(((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
                 references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 7 argument(s)");
                 references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 7 argument(s)");
@@ -1529,7 +1529,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxDatePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxDatePickerCtrl::Create at call 1 with 8 argument(s)");
                 references->AddReference(pos0, "wxDatePickerCtrl::Create at call 3 with 8 argument(s)");
@@ -1867,7 +1867,7 @@ PHP_METHOD(php_wxDatePickerCtrl, GetValue)
 
                 time_t value_to_return0;
                 value_to_return0 = ((wxDatePickerCtrl_php*)native_object)->GetValue().GetTicks();
-                ZVAL_LONG(return_value, value_to_return0);
+                RETVAL_LONG(value_to_return0);
 
 
                 return;
@@ -1987,7 +1987,7 @@ PHP_METHOD(php_wxDatePickerCtrl, GetRange)
                 php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::GetRange(&date_time0_0, &date_time0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)native_object)->GetRange(&date_time0_0, &date_time0_1));
+                RETVAL_BOOL(((wxDatePickerCtrl_php*)native_object)->GetRange(&date_time0_0, &date_time0_1));
 
                 ZVAL_LONG(&dt10_ref, date_time0_0.GetTicks());
                 ZVAL_LONG(&dt20_ref, date_time0_1.GetTicks());
@@ -2236,7 +2236,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 2 argument(s)");
 
@@ -2249,7 +2249,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
+                RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 3 argument(s)");
 
@@ -2262,7 +2262,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
+                RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 4 argument(s)");
 
@@ -2275,7 +2275,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)));
+                RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 5 argument(s)");
 
@@ -2288,7 +2288,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5));
+                RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5));
 
                 references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 6 argument(s)");
                 references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 6 argument(s)");
@@ -2302,7 +2302,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6));
+                RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6));
 
                 references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 7 argument(s)");
                 references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 7 argument(s)");
@@ -2317,7 +2317,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0));
+                RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0));
 
                 references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 8 argument(s)");
                 references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 8 argument(s)");
@@ -2332,7 +2332,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8));
+                RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8));
 
                 references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 9 argument(s)");
                 references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 9 argument(s)");
@@ -2348,7 +2348,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxFilePickerCtrl::Create at call 1 with 10 argument(s)");
                 references->AddReference(pos0, "wxFilePickerCtrl::Create at call 3 with 10 argument(s)");
@@ -2461,7 +2461,7 @@ PHP_METHOD(php_wxFilePickerCtrl, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFilePickerCtrl_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3345,7 +3345,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 2 argument(s)");
 
@@ -3358,7 +3358,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
+                RETVAL_BOOL(((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 3 argument(s)");
 
@@ -3371,7 +3371,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
+                RETVAL_BOOL(((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 4 argument(s)");
 
@@ -3384,7 +3384,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4));
+                RETVAL_BOOL(((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4));
 
                 references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 5 argument(s)");
@@ -3398,7 +3398,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5));
+                RETVAL_BOOL(((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5));
 
                 references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 6 argument(s)");
                 references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 6 argument(s)");
@@ -3413,7 +3413,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0));
+                RETVAL_BOOL(((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0));
 
                 references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 7 argument(s)");
                 references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 7 argument(s)");
@@ -3428,7 +3428,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7));
+                RETVAL_BOOL(((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7));
 
                 references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 8 argument(s)");
                 references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 8 argument(s)");
@@ -3444,7 +3444,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxDirPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxDirPickerCtrl::Create at call 1 with 9 argument(s)");
                 references->AddReference(pos0, "wxDirPickerCtrl::Create at call 3 with 9 argument(s)");
@@ -3671,7 +3671,7 @@ PHP_METHOD(php_wxDirPickerCtrl, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxDirPickerCtrl_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4442,7 +4442,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 2 argument(s)");
 
@@ -4455,7 +4455,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2));
+                RETVAL_BOOL(((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2));
 
                 references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 3 argument(s)");
                 references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 3 argument(s)");
@@ -4469,7 +4469,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
+                RETVAL_BOOL(((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 4 argument(s)");
                 references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 4 argument(s)");
@@ -4484,7 +4484,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+                RETVAL_BOOL(((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
                 references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 5 argument(s)");
                 references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 5 argument(s)");
@@ -4500,7 +4500,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+                RETVAL_BOOL(((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
                 references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 6 argument(s)");
                 references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 6 argument(s)");
@@ -4516,7 +4516,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+                RETVAL_BOOL(((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
                 references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 7 argument(s)");
                 references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 7 argument(s)");
@@ -4533,7 +4533,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxFontPickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxFontPickerCtrl::Create at call 1 with 8 argument(s)");
                 references->AddReference(font0, "wxFontPickerCtrl::Create at call 3 with 8 argument(s)");
@@ -4645,7 +4645,7 @@ PHP_METHOD(php_wxFontPickerCtrl, GetMaxPointSize)
                 php_printf("Executing RETURN_LONG(wxFontPickerCtrl::GetMaxPointSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetMaxPointSize());
+                RETVAL_LONG(((wxFontPickerCtrl_php*)native_object)->GetMaxPointSize());
 
 
                 return;
@@ -5454,23 +5454,23 @@ PHP_METHOD(php_wxPickerBase, GetInternalMargin)
 
                 if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)native_object)->GetInternalMargin());
+                    RETVAL_LONG(((wxColourPickerCtrl_php*)native_object)->GetInternalMargin());
                 }
                 else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetInternalMargin());
+                    RETVAL_LONG(((wxFontPickerCtrl_php*)native_object)->GetInternalMargin());
                 }
                 else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxFilePickerCtrl_php*)native_object)->GetInternalMargin());
+                    RETVAL_LONG(((wxFilePickerCtrl_php*)native_object)->GetInternalMargin());
                 }
                 else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxDirPickerCtrl_php*)native_object)->GetInternalMargin());
+                    RETVAL_LONG(((wxDirPickerCtrl_php*)native_object)->GetInternalMargin());
                 }
                 else if(current_object_type == PHP_WXPICKERBASE_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxPickerBase_php*)native_object)->GetInternalMargin());
+                    RETVAL_LONG(((wxPickerBase_php*)native_object)->GetInternalMargin());
                 }
 
 
@@ -5621,7 +5621,7 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrl)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -5765,23 +5765,23 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrlProportion)
 
                 if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
+                    RETVAL_LONG(((wxColourPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
                 }
                 else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
+                    RETVAL_LONG(((wxFontPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
                 }
                 else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxFilePickerCtrl_php*)native_object)->GetPickerCtrlProportion());
+                    RETVAL_LONG(((wxFilePickerCtrl_php*)native_object)->GetPickerCtrlProportion());
                 }
                 else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxDirPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
+                    RETVAL_LONG(((wxDirPickerCtrl_php*)native_object)->GetPickerCtrlProportion());
                 }
                 else if(current_object_type == PHP_WXPICKERBASE_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxPickerBase_php*)native_object)->GetPickerCtrlProportion());
+                    RETVAL_LONG(((wxPickerBase_php*)native_object)->GetPickerCtrlProportion());
                 }
 
 
@@ -5932,7 +5932,7 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrl)
 
                 }
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -6076,23 +6076,23 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrlProportion)
 
                 if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)native_object)->GetTextCtrlProportion());
+                    RETVAL_LONG(((wxColourPickerCtrl_php*)native_object)->GetTextCtrlProportion());
                 }
                 else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)native_object)->GetTextCtrlProportion());
+                    RETVAL_LONG(((wxFontPickerCtrl_php*)native_object)->GetTextCtrlProportion());
                 }
                 else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxFilePickerCtrl_php*)native_object)->GetTextCtrlProportion());
+                    RETVAL_LONG(((wxFilePickerCtrl_php*)native_object)->GetTextCtrlProportion());
                 }
                 else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxDirPickerCtrl_php*)native_object)->GetTextCtrlProportion());
+                    RETVAL_LONG(((wxDirPickerCtrl_php*)native_object)->GetTextCtrlProportion());
                 }
                 else if(current_object_type == PHP_WXPICKERBASE_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxPickerBase_php*)native_object)->GetTextCtrlProportion());
+                    RETVAL_LONG(((wxPickerBase_php*)native_object)->GetTextCtrlProportion());
                 }
 
 
@@ -6218,23 +6218,23 @@ PHP_METHOD(php_wxPickerBase, HasTextCtrl)
 
                 if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->HasTextCtrl());
+                    RETVAL_BOOL(((wxColourPickerCtrl_php*)native_object)->HasTextCtrl());
                 }
                 else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->HasTextCtrl());
+                    RETVAL_BOOL(((wxFontPickerCtrl_php*)native_object)->HasTextCtrl());
                 }
                 else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->HasTextCtrl());
+                    RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->HasTextCtrl());
                 }
                 else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->HasTextCtrl());
+                    RETVAL_BOOL(((wxDirPickerCtrl_php*)native_object)->HasTextCtrl());
                 }
                 else if(current_object_type == PHP_WXPICKERBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxPickerBase_php*)native_object)->HasTextCtrl());
+                    RETVAL_BOOL(((wxPickerBase_php*)native_object)->HasTextCtrl());
                 }
 
 
@@ -6360,23 +6360,23 @@ PHP_METHOD(php_wxPickerBase, IsPickerCtrlGrowable)
 
                 if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
+                    RETVAL_BOOL(((wxColourPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
                 }
                 else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
+                    RETVAL_BOOL(((wxFontPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
                 }
                 else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
+                    RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
                 }
                 else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
+                    RETVAL_BOOL(((wxDirPickerCtrl_php*)native_object)->IsPickerCtrlGrowable());
                 }
                 else if(current_object_type == PHP_WXPICKERBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxPickerBase_php*)native_object)->IsPickerCtrlGrowable());
+                    RETVAL_BOOL(((wxPickerBase_php*)native_object)->IsPickerCtrlGrowable());
                 }
 
 
@@ -6502,23 +6502,23 @@ PHP_METHOD(php_wxPickerBase, IsTextCtrlGrowable)
 
                 if(current_object_type == PHP_WXCOLOURPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
+                    RETVAL_BOOL(((wxColourPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
                 }
                 else if(current_object_type == PHP_WXFONTPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
+                    RETVAL_BOOL(((wxFontPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
                 }
                 else if(current_object_type == PHP_WXFILEPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)native_object)->IsTextCtrlGrowable());
+                    RETVAL_BOOL(((wxFilePickerCtrl_php*)native_object)->IsTextCtrlGrowable());
                 }
                 else if(current_object_type == PHP_WXDIRPICKERCTRL_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
+                    RETVAL_BOOL(((wxDirPickerCtrl_php*)native_object)->IsTextCtrlGrowable());
                 }
                 else if(current_object_type == PHP_WXPICKERBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxPickerBase_php*)native_object)->IsTextCtrlGrowable());
+                    RETVAL_BOOL(((wxPickerBase_php*)native_object)->IsTextCtrlGrowable());
                 }
 
 
@@ -7810,7 +7810,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 2 argument(s)");
 
@@ -7823,7 +7823,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
+                RETVAL_BOOL(((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
 
                 references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 3 argument(s)");
 
@@ -7836,7 +7836,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
+                RETVAL_BOOL(((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 4 argument(s)");
@@ -7850,7 +7850,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+                RETVAL_BOOL(((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
                 references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 5 argument(s)");
@@ -7865,7 +7865,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+                RETVAL_BOOL(((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
                 references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 6 argument(s)");
                 references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 6 argument(s)");
@@ -7880,7 +7880,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
+                RETVAL_BOOL(((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
                 references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 7 argument(s)");
                 references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 7 argument(s)");
@@ -7896,7 +7896,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxTimePickerCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxTimePickerCtrl::Create at call 1 with 8 argument(s)");
                 references->AddReference(pos0, "wxTimePickerCtrl::Create at call 3 with 8 argument(s)");
@@ -8009,7 +8009,7 @@ PHP_METHOD(php_wxTimePickerCtrl, GetValue)
 
                 time_t value_to_return0;
                 value_to_return0 = ((wxTimePickerCtrl_php*)native_object)->GetValue().GetTicks();
-                ZVAL_LONG(return_value, value_to_return0);
+                RETVAL_LONG(value_to_return0);
 
 
                 return;

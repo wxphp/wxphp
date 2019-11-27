@@ -454,7 +454,7 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetToolId)
 
                 if(current_object_type == PHP_WXAUITOOLBAREVENT_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxAuiToolBarEvent_php*)native_object)->GetToolId());
+                    RETVAL_LONG(((wxAuiToolBarEvent_php*)native_object)->GetToolId());
                 }
 
 
@@ -564,7 +564,7 @@ PHP_METHOD(php_wxAuiToolBarEvent, IsDropDownClicked)
 
                 if(current_object_type == PHP_WXAUITOOLBAREVENT_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxAuiToolBarEvent_php*)native_object)->IsDropDownClicked());
+                    RETVAL_BOOL(((wxAuiToolBarEvent_php*)native_object)->IsDropDownClicked());
                 }
 
 
@@ -3121,7 +3121,7 @@ PHP_METHOD(php_wxAuiToolBarItem, IsSticky)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBarItem::IsSticky())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBarItem_php*)native_object)->IsSticky());
+                RETVAL_BOOL(((wxAuiToolBarItem_php*)native_object)->IsSticky());
 
 
                 return;
@@ -3227,7 +3227,7 @@ PHP_METHOD(php_wxAuiToolBarItem, IsActive)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBarItem::IsActive())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBarItem_php*)native_object)->IsActive());
+                RETVAL_BOOL(((wxAuiToolBarItem_php*)native_object)->IsActive());
 
 
                 return;
@@ -3334,7 +3334,7 @@ PHP_METHOD(php_wxAuiToolBarItem, HasDropDown)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBarItem::HasDropDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBarItem_php*)native_object)->HasDropDown());
+                RETVAL_BOOL(((wxAuiToolBarItem_php*)native_object)->HasDropDown());
 
 
                 return;
@@ -3445,7 +3445,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetWindow)
                 value_to_return0 = (wxWindow_php*) ((wxAuiToolBarItem_php*)native_object)->GetWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -3570,7 +3570,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetUserData)
                 php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetUserData())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)native_object)->GetUserData());
+                RETVAL_LONG(((wxAuiToolBarItem_php*)native_object)->GetUserData());
 
 
                 return;
@@ -3676,7 +3676,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetState)
                 php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetState())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)native_object)->GetState());
+                RETVAL_LONG(((wxAuiToolBarItem_php*)native_object)->GetState());
 
 
                 return;
@@ -3782,7 +3782,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetSpacerPixels)
                 php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetSpacerPixels())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)native_object)->GetSpacerPixels());
+                RETVAL_LONG(((wxAuiToolBarItem_php*)native_object)->GetSpacerPixels());
 
 
                 return;
@@ -3892,7 +3892,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetSizerItem)
                 value_to_return0 = (wxSizerItem_php*) ((wxAuiToolBarItem_php*)native_object)->GetSizerItem();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -4019,7 +4019,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetShortHelp)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAuiToolBarItem_php*)native_object)->GetShortHelp();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4125,7 +4125,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetProportion)
                 php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetProportion())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)native_object)->GetProportion());
+                RETVAL_LONG(((wxAuiToolBarItem_php*)native_object)->GetProportion());
 
 
                 return;
@@ -4359,7 +4359,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetLongHelp)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAuiToolBarItem_php*)native_object)->GetLongHelp();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4467,7 +4467,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAuiToolBarItem_php*)native_object)->GetLabel();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4574,7 +4574,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetKind)
                 php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetKind())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)native_object)->GetKind());
+                RETVAL_LONG(((wxAuiToolBarItem_php*)native_object)->GetKind());
 
 
                 return;
@@ -4681,7 +4681,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetId)
                 php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetId())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)native_object)->GetId());
+                RETVAL_LONG(((wxAuiToolBarItem_php*)native_object)->GetId());
 
 
                 return;
@@ -5165,7 +5165,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetAlignment)
                 php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetAlignment())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)native_object)->GetAlignment());
+                RETVAL_LONG(((wxAuiToolBarItem_php*)native_object)->GetAlignment());
 
 
                 return;
@@ -7316,7 +7316,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, CloneMethod)
                 value_to_return0 = (wxAuiToolBarArt_php*) ((wxAuiDefaultToolBarArt_php*)native_object)->Clone();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -8887,7 +8887,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetElementSize)
                 php_printf("Executing RETURN_LONG(wxAuiDefaultToolBarArt::GetElementSize((int) element0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiDefaultToolBarArt_php*)native_object)->GetElementSize((int) element0));
+                RETVAL_LONG(((wxAuiDefaultToolBarArt_php*)native_object)->GetElementSize((int) element0));
 
 
                 return;
@@ -8993,7 +8993,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetFlags)
                 php_printf("Executing RETURN_LONG(wxAuiDefaultToolBarArt::GetFlags())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiDefaultToolBarArt_php*)native_object)->GetFlags());
+                RETVAL_LONG(((wxAuiDefaultToolBarArt_php*)native_object)->GetFlags());
 
 
                 return;
@@ -9390,7 +9390,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetTextOrientation)
                 php_printf("Executing RETURN_LONG(wxAuiDefaultToolBarArt::GetTextOrientation())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiDefaultToolBarArt_php*)native_object)->GetTextOrientation());
+                RETVAL_LONG(((wxAuiDefaultToolBarArt_php*)native_object)->GetTextOrientation());
 
 
                 return;
@@ -10532,7 +10532,7 @@ PHP_METHOD(php_wxAuiToolBar, AddControl)
                 value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddControl((wxControl*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -10568,7 +10568,7 @@ PHP_METHOD(php_wxAuiToolBar, AddControl)
                 value_to_return2 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddControl((wxControl*) object_pointer0_0, wxString(label0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -10706,7 +10706,7 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
                 value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddLabel((int) tool_id0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -10741,7 +10741,7 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
                 value_to_return2 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddLabel((int) tool_id0, wxString(label0, wxConvUTF8));
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -10776,7 +10776,7 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
                 value_to_return3 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddLabel((int) tool_id0, wxString(label0, wxConvUTF8), (const int) width0);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -10905,7 +10905,7 @@ PHP_METHOD(php_wxAuiToolBar, AddSeparator)
                 value_to_return0 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddSeparator();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -11039,7 +11039,7 @@ PHP_METHOD(php_wxAuiToolBar, AddSpacer)
                 value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddSpacer((int) pixels0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -11173,7 +11173,7 @@ PHP_METHOD(php_wxAuiToolBar, AddStretchSpacer)
                 value_to_return0 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddStretchSpacer();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -11208,7 +11208,7 @@ PHP_METHOD(php_wxAuiToolBar, AddStretchSpacer)
                 value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddStretchSpacer((int) proportion0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -11550,7 +11550,7 @@ PHP_METHOD(php_wxAuiToolBar, DeleteByIndex)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::DeleteByIndex((int) tool_id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->DeleteByIndex((int) tool_id0));
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->DeleteByIndex((int) tool_id0));
 
 
                 return;
@@ -11661,7 +11661,7 @@ PHP_METHOD(php_wxAuiToolBar, DeleteTool)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::DeleteTool((int) tool_id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->DeleteTool((int) tool_id0));
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->DeleteTool((int) tool_id0));
 
 
                 return;
@@ -13944,7 +13944,7 @@ PHP_METHOD(php_wxAuiToolBar, SetFont)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::SetFont(*(wxFont*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0));
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0));
 
                 references->AddReference(font0, "wxAuiToolBar::SetFont at call 3 with 1 argument(s)");
 
@@ -14051,7 +14051,7 @@ PHP_METHOD(php_wxAuiToolBar, Realize)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::Realize())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->Realize());
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->Realize());
 
 
                 return;
@@ -14180,7 +14180,7 @@ PHP_METHOD(php_wxAuiToolBar, IsPaneValid)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::IsPaneValid(*(wxAuiPaneInfo*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->IsPaneValid(*(wxAuiPaneInfo*) object_pointer0_0));
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->IsPaneValid(*(wxAuiPaneInfo*) object_pointer0_0));
 
                 references->AddReference(pane0, "wxAuiToolBar::IsPaneValid at call 3 with 1 argument(s)");
 
@@ -14288,7 +14288,7 @@ PHP_METHOD(php_wxAuiToolBar, GetWindowStyleFlag)
                 php_printf("Executing RETURN_LONG(wxAuiToolBar::GetWindowStyleFlag())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBar_php*)native_object)->GetWindowStyleFlag());
+                RETVAL_LONG(((wxAuiToolBar_php*)native_object)->GetWindowStyleFlag());
 
 
                 return;
@@ -14399,7 +14399,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolToggled)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolToggled((int) tool_id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->GetToolToggled((int) tool_id0));
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->GetToolToggled((int) tool_id0));
 
 
                 return;
@@ -14505,7 +14505,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolTextOrientation)
                 php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolTextOrientation())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBar_php*)native_object)->GetToolTextOrientation());
+                RETVAL_LONG(((wxAuiToolBar_php*)native_object)->GetToolTextOrientation());
 
 
                 return;
@@ -14616,7 +14616,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolSticky)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolSticky((int) tool_id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->GetToolSticky((int) tool_id0));
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->GetToolSticky((int) tool_id0));
 
 
                 return;
@@ -14729,7 +14729,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolShortHelp)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxAuiToolBar_php*)native_object)->GetToolShortHelp((int) tool_id0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -14835,7 +14835,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolSeparation)
                 php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolSeparation())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBar_php*)native_object)->GetToolSeparation());
+                RETVAL_LONG(((wxAuiToolBar_php*)native_object)->GetToolSeparation());
 
 
                 return;
@@ -14950,7 +14950,7 @@ PHP_METHOD(php_wxAuiToolBar, FindControl)
                 value_to_return1 = (wxControl_php*) ((wxAuiToolBar_php*)native_object)->FindControl((int) window_id0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -15084,7 +15084,7 @@ PHP_METHOD(php_wxAuiToolBar, FindTool)
                 value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->FindTool((int) tool_id0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -15218,7 +15218,7 @@ PHP_METHOD(php_wxAuiToolBar, FindToolByIndex)
                 value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->FindToolByIndex((int) idx0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -15353,7 +15353,7 @@ PHP_METHOD(php_wxAuiToolBar, FindToolByPosition)
                 value_to_return2 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->FindToolByPosition((wxCoord) x0, (wxCoord) y0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -15482,7 +15482,7 @@ PHP_METHOD(php_wxAuiToolBar, GetArtProvider)
                 value_to_return0 = (wxAuiToolBarArt_php*) ((wxAuiToolBar_php*)native_object)->GetArtProvider();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -15607,7 +15607,7 @@ PHP_METHOD(php_wxAuiToolBar, GetGripperVisible)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetGripperVisible())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->GetGripperVisible());
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->GetGripperVisible());
 
 
                 return;
@@ -15832,7 +15832,7 @@ PHP_METHOD(php_wxAuiToolBar, GetOverflowVisible)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetOverflowVisible())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->GetOverflowVisible());
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->GetOverflowVisible());
 
 
                 return;
@@ -15938,7 +15938,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBarFits)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolBarFits())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->GetToolBarFits());
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->GetToolBarFits());
 
 
                 return;
@@ -16276,7 +16276,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBorderPadding)
                 php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolBorderPadding())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBar_php*)native_object)->GetToolBorderPadding());
+                RETVAL_LONG(((wxAuiToolBar_php*)native_object)->GetToolBorderPadding());
 
 
                 return;
@@ -16382,7 +16382,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolCount)
                 php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBar_php*)native_object)->GetToolCount());
+                RETVAL_LONG(((wxAuiToolBar_php*)native_object)->GetToolCount());
 
 
                 return;
@@ -16494,7 +16494,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolDropDown)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolDropDown((int) tool_id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->GetToolDropDown((int) tool_id0));
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->GetToolDropDown((int) tool_id0));
 
 
                 return;
@@ -16605,7 +16605,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolEnabled)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolEnabled((int) tool_id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->GetToolEnabled((int) tool_id0));
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->GetToolEnabled((int) tool_id0));
 
 
                 return;
@@ -16716,7 +16716,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolFits)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolFits((int) tool_id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->GetToolFits((int) tool_id0));
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->GetToolFits((int) tool_id0));
 
 
                 return;
@@ -16827,7 +16827,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolFitsByIndex)
                 php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolFitsByIndex((int) tool_id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)native_object)->GetToolFitsByIndex((int) tool_id0));
+                RETVAL_BOOL(((wxAuiToolBar_php*)native_object)->GetToolFitsByIndex((int) tool_id0));
 
 
                 return;
@@ -16938,7 +16938,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolIndex)
                 php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolIndex((int) tool_id0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBar_php*)native_object)->GetToolIndex((int) tool_id0));
+                RETVAL_LONG(((wxAuiToolBar_php*)native_object)->GetToolIndex((int) tool_id0));
 
 
                 return;
@@ -17051,7 +17051,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolLabel)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxAuiToolBar_php*)native_object)->GetToolLabel((int) tool_id0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -17164,7 +17164,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolLongHelp)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxAuiToolBar_php*)native_object)->GetToolLongHelp((int) tool_id0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -17270,7 +17270,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolPacking)
                 php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolPacking())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBar_php*)native_object)->GetToolPacking());
+                RETVAL_LONG(((wxAuiToolBar_php*)native_object)->GetToolPacking());
 
 
                 return;
@@ -17381,7 +17381,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolPos)
                 php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolPos((int) tool_id0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBar_php*)native_object)->GetToolPos((int) tool_id0));
+                RETVAL_LONG(((wxAuiToolBar_php*)native_object)->GetToolPos((int) tool_id0));
 
 
                 return;
@@ -17492,7 +17492,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolProportion)
                 php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolProportion((int) tool_id0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiToolBar_php*)native_object)->GetToolProportion((int) tool_id0));
+                RETVAL_LONG(((wxAuiToolBar_php*)native_object)->GetToolProportion((int) tool_id0));
 
 
                 return;
@@ -17918,7 +17918,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
                 value_to_return3 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddTool((int) tool_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -17954,7 +17954,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
                 value_to_return4 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddTool((int) tool_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(short_help_string0, wxConvUTF8));
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -17990,7 +17990,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
                 value_to_return5 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddTool((int) tool_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(short_help_string0, wxConvUTF8), (wxItemKind) kind0);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -18033,7 +18033,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
                 value_to_return8 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddTool((int) tool_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, (wxItemKind) kind1, wxString(short_help_string1, wxConvUTF8), wxString(long_help_string1, wxConvUTF8), (wxObject*) object_pointer1_7);
 
                 if(value_to_return8 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return8->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return8->phpObj)){
@@ -18078,7 +18078,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
                 value_to_return3 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -18115,7 +18115,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
                 value_to_return4 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -18152,7 +18152,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
                 value_to_return5 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2, (wxObject*) object_pointer2_4);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -18190,7 +18190,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
                 value_to_return6 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2, (wxObject*) object_pointer2_4, wxString(short_help_string2, wxConvUTF8));
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -18228,7 +18228,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
                 value_to_return7 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)native_object)->AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2, (wxObject*) object_pointer2_4, wxString(short_help_string2, wxConvUTF8), wxString(long_help_string2, wxConvUTF8));
 
                 if(value_to_return7 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return7->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return7->phpObj)){
@@ -18754,7 +18754,7 @@ PHP_METHOD(php_wxAuiNotebook, ShowWindowMenu)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::ShowWindowMenu())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->ShowWindowMenu());
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->ShowWindowMenu());
 
 
                 return;
@@ -19242,7 +19242,7 @@ PHP_METHOD(php_wxAuiNotebook, SetPageText)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::SetPageText((size_t) page0, wxString(text0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->SetPageText((size_t) page0, wxString(text0, wxConvUTF8)));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->SetPageText((size_t) page0, wxString(text0, wxConvUTF8)));
 
 
                 return;
@@ -19355,7 +19355,7 @@ PHP_METHOD(php_wxAuiNotebook, SetPageImage)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::SetPageImage((size_t) n0, (int) imageId0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->SetPageImage((size_t) n0, (int) imageId0));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->SetPageImage((size_t) n0, (int) imageId0));
 
 
                 return;
@@ -19486,7 +19486,7 @@ PHP_METHOD(php_wxAuiNotebook, SetPageBitmap)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::SetPageBitmap((size_t) page0, *(wxBitmap*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->SetPageBitmap((size_t) page0, *(wxBitmap*) object_pointer0_1));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->SetPageBitmap((size_t) page0, *(wxBitmap*) object_pointer0_1));
 
                 references->AddReference(bitmap0, "wxAuiNotebook::SetPageBitmap at call 3 with 2 argument(s)");
 
@@ -19879,7 +19879,7 @@ PHP_METHOD(php_wxAuiNotebook, SetFont)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::SetFont(*(wxFont*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0));
 
                 references->AddReference(font0, "wxAuiNotebook::SetFont at call 3 with 1 argument(s)");
 
@@ -20123,7 +20123,7 @@ PHP_METHOD(php_wxAuiNotebook, RemovePage)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::RemovePage((size_t) page0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->RemovePage((size_t) page0));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->RemovePage((size_t) page0));
 
 
                 return;
@@ -20230,7 +20230,7 @@ PHP_METHOD(php_wxAuiNotebook, GetTabCtrlHeight)
                 php_printf("Executing RETURN_LONG(wxAuiNotebook::GetTabCtrlHeight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiNotebook_php*)native_object)->GetTabCtrlHeight());
+                RETVAL_LONG(((wxAuiNotebook_php*)native_object)->GetTabCtrlHeight());
 
 
                 return;
@@ -20337,7 +20337,7 @@ PHP_METHOD(php_wxAuiNotebook, GetSelection)
                 php_printf("Executing RETURN_LONG(wxAuiNotebook::GetSelection())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiNotebook_php*)native_object)->GetSelection());
+                RETVAL_LONG(((wxAuiNotebook_php*)native_object)->GetSelection());
 
 
                 return;
@@ -20451,7 +20451,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxAuiNotebook_php*)native_object)->GetPageText((size_t) page0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -20581,7 +20581,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageIndex)
                 php_printf("Executing RETURN_LONG(wxAuiNotebook::GetPageIndex((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiNotebook_php*)native_object)->GetPageIndex((wxWindow*) object_pointer0_0));
+                RETVAL_LONG(((wxAuiNotebook_php*)native_object)->GetPageIndex((wxWindow*) object_pointer0_0));
 
                 references->AddReference(page_wnd0, "wxAuiNotebook::GetPageIndex at call 1 with 1 argument(s)");
 
@@ -20689,7 +20689,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageCount)
                 php_printf("Executing RETURN_LONG(wxAuiNotebook::GetPageCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiNotebook_php*)native_object)->GetPageCount());
+                RETVAL_LONG(((wxAuiNotebook_php*)native_object)->GetPageCount());
 
 
                 return;
@@ -20925,7 +20925,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPage)
                 value_to_return1 = (wxWindow_php*) ((wxAuiNotebook_php*)native_object)->GetPage((size_t) page_idx0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -21056,7 +21056,7 @@ PHP_METHOD(php_wxAuiNotebook, GetHeightForPageHeight)
                 php_printf("Executing RETURN_LONG(wxAuiNotebook::GetHeightForPageHeight((int) pageHeight0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiNotebook_php*)native_object)->GetHeightForPageHeight((int) pageHeight0));
+                RETVAL_LONG(((wxAuiNotebook_php*)native_object)->GetHeightForPageHeight((int) pageHeight0));
 
 
                 return;
@@ -21167,7 +21167,7 @@ PHP_METHOD(php_wxAuiNotebook, GetCurrentPage)
                 value_to_return0 = (wxWindow_php*) ((wxAuiNotebook_php*)native_object)->GetCurrentPage();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -21297,7 +21297,7 @@ PHP_METHOD(php_wxAuiNotebook, GetArtProvider)
                 value_to_return0 = (wxAuiTabArt_php*) ((wxAuiNotebook_php*)native_object)->GetArtProvider();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -21428,7 +21428,7 @@ PHP_METHOD(php_wxAuiNotebook, DeletePage)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::DeletePage((size_t) page0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->DeletePage((size_t) page0));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->DeletePage((size_t) page0));
 
 
                 return;
@@ -21535,7 +21535,7 @@ PHP_METHOD(php_wxAuiNotebook, DeleteAllPages)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::DeleteAllPages())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->DeleteAllPages());
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->DeleteAllPages());
 
 
                 return;
@@ -21705,7 +21705,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::Create((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->Create((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxAuiNotebook::Create at call 1 with 1 argument(s)");
 
@@ -21718,7 +21718,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxAuiNotebook::Create at call 1 with 2 argument(s)");
 
@@ -21731,7 +21731,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
                 references->AddReference(parent0, "wxAuiNotebook::Create at call 1 with 3 argument(s)");
                 references->AddReference(pos0, "wxAuiNotebook::Create at call 3 with 3 argument(s)");
@@ -21745,7 +21745,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxAuiNotebook::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxAuiNotebook::Create at call 3 with 4 argument(s)");
@@ -21760,7 +21760,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
                 references->AddReference(parent0, "wxAuiNotebook::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxAuiNotebook::Create at call 3 with 5 argument(s)");
@@ -21875,7 +21875,7 @@ PHP_METHOD(php_wxAuiNotebook, ChangeSelection)
                 php_printf("Executing RETURN_LONG(wxAuiNotebook::ChangeSelection((size_t) n0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiNotebook_php*)native_object)->ChangeSelection((size_t) n0));
+                RETVAL_LONG(((wxAuiNotebook_php*)native_object)->ChangeSelection((size_t) n0));
 
 
                 return;
@@ -22151,7 +22151,7 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8)));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8)));
 
                 references->AddReference(page0, "wxAuiNotebook::AddPage at call 1 with 2 argument(s)");
 
@@ -22164,7 +22164,7 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0));
 
                 references->AddReference(page0, "wxAuiNotebook::AddPage at call 1 with 3 argument(s)");
 
@@ -22177,7 +22177,7 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
                 php_printf("Executing RETURN_BOOL(wxAuiNotebook::AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0, *(wxBitmap*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)native_object)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0, *(wxBitmap*) object_pointer0_3));
+                RETVAL_BOOL(((wxAuiNotebook_php*)native_object)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0, *(wxBitmap*) object_pointer0_3));
 
                 references->AddReference(page0, "wxAuiNotebook::AddPage at call 1 with 4 argument(s)");
                 references->AddReference(bitmap0, "wxAuiNotebook::AddPage at call 3 with 4 argument(s)");
@@ -22291,7 +22291,7 @@ PHP_METHOD(php_wxAuiNotebook, SetSelection)
                 php_printf("Executing RETURN_LONG(wxAuiNotebook::SetSelection((size_t) new_page0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiNotebook_php*)native_object)->SetSelection((size_t) new_page0));
+                RETVAL_LONG(((wxAuiNotebook_php*)native_object)->SetSelection((size_t) new_page0));
 
 
                 return;
@@ -25913,7 +25913,7 @@ PHP_METHOD(php_wxAuiManager, SavePerspective)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAuiManager_php*)native_object)->SavePerspective();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26045,7 +26045,7 @@ PHP_METHOD(php_wxAuiManager, SavePaneInfo)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxAuiManager_php*)native_object)->SavePaneInfo(*(wxAuiPaneInfo*) object_pointer0_0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
                 references->AddReference(pane0, "wxAuiManager::SavePaneInfo at call 3 with 1 argument(s)");
 
@@ -26151,7 +26151,7 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -26257,7 +26257,7 @@ PHP_METHOD(php_wxAuiManager, LoadPerspective)
                 php_printf("Executing RETURN_BOOL(wxAuiManager::LoadPerspective(wxString(perspective0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManager_php*)native_object)->LoadPerspective(wxString(perspective0, wxConvUTF8)));
+                RETVAL_BOOL(((wxAuiManager_php*)native_object)->LoadPerspective(wxString(perspective0, wxConvUTF8)));
 
 
                 return;
@@ -26269,7 +26269,7 @@ PHP_METHOD(php_wxAuiManager, LoadPerspective)
                 php_printf("Executing RETURN_BOOL(wxAuiManager::LoadPerspective(wxString(perspective0, wxConvUTF8), update0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManager_php*)native_object)->LoadPerspective(wxString(perspective0, wxConvUTF8), update0));
+                RETVAL_BOOL(((wxAuiManager_php*)native_object)->LoadPerspective(wxString(perspective0, wxConvUTF8), update0));
 
 
                 return;
@@ -26552,7 +26552,7 @@ PHP_METHOD(php_wxAuiManager, InsertPane)
                 php_printf("Executing RETURN_BOOL(wxAuiManager::InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManager_php*)native_object)->InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1));
+                RETVAL_BOOL(((wxAuiManager_php*)native_object)->InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1));
 
                 references->AddReference(window0, "wxAuiManager::InsertPane at call 1 with 2 argument(s)");
                 references->AddReference(insert_location0, "wxAuiManager::InsertPane at call 3 with 2 argument(s)");
@@ -26566,7 +26566,7 @@ PHP_METHOD(php_wxAuiManager, InsertPane)
                 php_printf("Executing RETURN_BOOL(wxAuiManager::InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, (int) insert_level0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManager_php*)native_object)->InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, (int) insert_level0));
+                RETVAL_BOOL(((wxAuiManager_php*)native_object)->InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, (int) insert_level0));
 
                 references->AddReference(window0, "wxAuiManager::InsertPane at call 1 with 3 argument(s)");
                 references->AddReference(insert_location0, "wxAuiManager::InsertPane at call 3 with 3 argument(s)");
@@ -27021,7 +27021,7 @@ PHP_METHOD(php_wxAuiManager, GetManager)
                 wxAuiManager_php* value_to_return1;
                 value_to_return1 = (wxAuiManager_php*) wxAuiManager::GetManager((wxWindow*) object_pointer0_0);
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -27148,7 +27148,7 @@ PHP_METHOD(php_wxAuiManager, GetManagedWindow)
                 value_to_return0 = (wxWindow_php*) ((wxAuiManager_php*)native_object)->GetManagedWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -27274,7 +27274,7 @@ PHP_METHOD(php_wxAuiManager, GetFlags)
                 php_printf("Executing RETURN_LONG(wxAuiManager::GetFlags())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiManager_php*)native_object)->GetFlags());
+                RETVAL_LONG(((wxAuiManager_php*)native_object)->GetFlags());
 
 
                 return;
@@ -27515,7 +27515,7 @@ PHP_METHOD(php_wxAuiManager, GetArtProvider)
                 value_to_return0 = (wxAuiDockArt_php*) ((wxAuiManager_php*)native_object)->GetArtProvider();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -27664,7 +27664,7 @@ PHP_METHOD(php_wxAuiManager, DetachPane)
                 php_printf("Executing RETURN_BOOL(wxAuiManager::DetachPane((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManager_php*)native_object)->DetachPane((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxAuiManager_php*)native_object)->DetachPane((wxWindow*) object_pointer0_0));
 
                 references->AddReference(window0, "wxAuiManager::DetachPane at call 1 with 1 argument(s)");
 
@@ -27933,7 +27933,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
                 php_printf("Executing RETURN_BOOL(wxAuiManager::AddPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, *(wxPoint*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManager_php*)native_object)->AddPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, *(wxPoint*) object_pointer0_2));
+                RETVAL_BOOL(((wxAuiManager_php*)native_object)->AddPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, *(wxPoint*) object_pointer0_2));
 
                 references->AddReference(window0, "wxAuiManager::AddPane at call 1 with 3 argument(s)");
                 references->AddReference(pane_info0, "wxAuiManager::AddPane at call 3 with 3 argument(s)");
@@ -27955,7 +27955,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
                 php_printf("Executing RETURN_BOOL(wxAuiManager::AddPane((wxWindow*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManager_php*)native_object)->AddPane((wxWindow*) object_pointer1_0));
+                RETVAL_BOOL(((wxAuiManager_php*)native_object)->AddPane((wxWindow*) object_pointer1_0));
 
                 references->AddReference(window1, "wxAuiManager::AddPane at call 1 with 1 argument(s)");
 
@@ -27968,7 +27968,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
                 php_printf("Executing RETURN_BOOL(wxAuiManager::AddPane((wxWindow*) object_pointer1_0, (int) direction1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManager_php*)native_object)->AddPane((wxWindow*) object_pointer1_0, (int) direction1));
+                RETVAL_BOOL(((wxAuiManager_php*)native_object)->AddPane((wxWindow*) object_pointer1_0, (int) direction1));
 
                 references->AddReference(window1, "wxAuiManager::AddPane at call 1 with 2 argument(s)");
 
@@ -27981,7 +27981,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
                 php_printf("Executing RETURN_BOOL(wxAuiManager::AddPane((wxWindow*) object_pointer1_0, (int) direction1, wxString(caption1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManager_php*)native_object)->AddPane((wxWindow*) object_pointer1_0, (int) direction1, wxString(caption1, wxConvUTF8)));
+                RETVAL_BOOL(((wxAuiManager_php*)native_object)->AddPane((wxWindow*) object_pointer1_0, (int) direction1, wxString(caption1, wxConvUTF8)));
 
                 references->AddReference(window1, "wxAuiManager::AddPane at call 1 with 3 argument(s)");
 
@@ -28001,7 +28001,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
                 php_printf("Executing RETURN_BOOL(wxAuiManager::AddPane((wxWindow*) object_pointer2_0, *(wxAuiPaneInfo*) object_pointer2_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManager_php*)native_object)->AddPane((wxWindow*) object_pointer2_0, *(wxAuiPaneInfo*) object_pointer2_1));
+                RETVAL_BOOL(((wxAuiManager_php*)native_object)->AddPane((wxWindow*) object_pointer2_0, *(wxAuiPaneInfo*) object_pointer2_1));
 
                 references->AddReference(window2, "wxAuiManager::AddPane at call 1 with 2 argument(s)");
                 references->AddReference(pane_info2, "wxAuiManager::AddPane at call 3 with 2 argument(s)");
@@ -31920,7 +31920,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsTopDockable)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsTopDockable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsTopDockable());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsTopDockable());
 
 
                 return;
@@ -32027,7 +32027,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsToolbar)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsToolbar())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsToolbar());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsToolbar());
 
 
                 return;
@@ -32134,7 +32134,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsShown)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsShown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsShown());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsShown());
 
 
                 return;
@@ -32241,7 +32241,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsRightDockable)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsRightDockable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsRightDockable());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsRightDockable());
 
 
                 return;
@@ -32348,7 +32348,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsResizable)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsResizable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsResizable());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsResizable());
 
 
                 return;
@@ -32455,7 +32455,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsOk)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsOk());
 
 
                 return;
@@ -32562,7 +32562,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsMovable)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsMovable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsMovable());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsMovable());
 
 
                 return;
@@ -32669,7 +32669,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsLeftDockable)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsLeftDockable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsLeftDockable());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsLeftDockable());
 
 
                 return;
@@ -32776,7 +32776,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFloating)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsFloating())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsFloating());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsFloating());
 
 
                 return;
@@ -32883,7 +32883,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFloatable)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsFloatable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsFloatable());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsFloatable());
 
 
                 return;
@@ -32990,7 +32990,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFixed)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsFixed())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsFixed());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsFixed());
 
 
                 return;
@@ -33097,7 +33097,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsDocked)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsDocked())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsDocked());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsDocked());
 
 
                 return;
@@ -33204,7 +33204,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsDockable)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsDockable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsDockable());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsDockable());
 
 
                 return;
@@ -33311,7 +33311,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsBottomDockable)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsBottomDockable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->IsBottomDockable());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->IsBottomDockable());
 
 
                 return;
@@ -33696,7 +33696,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasPinButton)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasPinButton())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->HasPinButton());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->HasPinButton());
 
 
                 return;
@@ -33803,7 +33803,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasMinimizeButton)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasMinimizeButton())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->HasMinimizeButton());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->HasMinimizeButton());
 
 
                 return;
@@ -33910,7 +33910,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasMaximizeButton)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasMaximizeButton())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->HasMaximizeButton());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->HasMaximizeButton());
 
 
                 return;
@@ -34017,7 +34017,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasGripperTop)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasGripperTop())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->HasGripperTop());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->HasGripperTop());
 
 
                 return;
@@ -34124,7 +34124,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasGripper)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasGripper())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->HasGripper());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->HasGripper());
 
 
                 return;
@@ -34236,7 +34236,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasFlag)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasFlag((int) flag0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->HasFlag((int) flag0));
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->HasFlag((int) flag0));
 
 
                 return;
@@ -34343,7 +34343,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasCloseButton)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasCloseButton())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->HasCloseButton());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->HasCloseButton());
 
 
                 return;
@@ -34450,7 +34450,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasCaption)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasCaption())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->HasCaption());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->HasCaption());
 
 
                 return;
@@ -34557,7 +34557,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasBorder)
                 php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasBorder())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)native_object)->HasBorder());
+                RETVAL_BOOL(((wxAuiPaneInfo_php*)native_object)->HasBorder());
 
 
                 return;
@@ -39101,7 +39101,7 @@ PHP_METHOD(php_wxAuiManagerEvent, GetVeto)
                 php_printf("Executing RETURN_BOOL(wxAuiManagerEvent::GetVeto())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManagerEvent_php*)native_object)->GetVeto());
+                RETVAL_BOOL(((wxAuiManagerEvent_php*)native_object)->GetVeto());
 
 
                 return;
@@ -39211,7 +39211,7 @@ PHP_METHOD(php_wxAuiManagerEvent, GetPane)
                 value_to_return0 = (wxAuiPaneInfo_php*) ((wxAuiManagerEvent_php*)native_object)->GetPane();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -39340,7 +39340,7 @@ PHP_METHOD(php_wxAuiManagerEvent, GetManager)
                 value_to_return0 = (wxAuiManager_php*) ((wxAuiManagerEvent_php*)native_object)->GetManager();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -39469,7 +39469,7 @@ PHP_METHOD(php_wxAuiManagerEvent, GetDC)
                 value_to_return0 = (wxDC_php*) ((wxAuiManagerEvent_php*)native_object)->GetDC();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -39594,7 +39594,7 @@ PHP_METHOD(php_wxAuiManagerEvent, GetButton)
                 php_printf("Executing RETURN_LONG(wxAuiManagerEvent::GetButton())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAuiManagerEvent_php*)native_object)->GetButton());
+                RETVAL_LONG(((wxAuiManagerEvent_php*)native_object)->GetButton());
 
 
                 return;
@@ -39700,7 +39700,7 @@ PHP_METHOD(php_wxAuiManagerEvent, CanVeto)
                 php_printf("Executing RETURN_BOOL(wxAuiManagerEvent::CanVeto())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAuiManagerEvent_php*)native_object)->CanVeto());
+                RETVAL_BOOL(((wxAuiManagerEvent_php*)native_object)->CanVeto());
 
 
                 return;

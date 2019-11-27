@@ -98,8 +98,7 @@ zend_object* php_wxGridCellRenderer_new(zend_class_entry *class_type)
     custom_object->native_object = NULL;
 
     zval temp;
-    Z_TYPE_INFO(temp) = IS_OBJECT;
-    Z_OBJ(temp) = &custom_object->zo;
+    ZVAL_OBJ(&temp, &custom_object->zo);
 
     custom_object->native_object = new wxGridCellRenderer_php();
     custom_object->native_object->phpObj = temp;
@@ -1492,7 +1491,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetFormat)
                 php_printf("Executing RETURN_LONG(wxGridCellFloatRenderer::GetFormat())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridCellFloatRenderer_php*)native_object)->GetFormat());
+                RETVAL_LONG(((wxGridCellFloatRenderer_php*)native_object)->GetFormat());
 
 
                 return;
@@ -1599,7 +1598,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetPrecision)
                 php_printf("Executing RETURN_LONG(wxGridCellFloatRenderer::GetPrecision())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridCellFloatRenderer_php*)native_object)->GetPrecision());
+                RETVAL_LONG(((wxGridCellFloatRenderer_php*)native_object)->GetPrecision());
 
 
                 return;
@@ -1706,7 +1705,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetWidth)
                 php_printf("Executing RETURN_LONG(wxGridCellFloatRenderer::GetWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridCellFloatRenderer_php*)native_object)->GetWidth());
+                RETVAL_LONG(((wxGridCellFloatRenderer_php*)native_object)->GetWidth());
 
 
                 return;
@@ -3531,7 +3530,7 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -3841,35 +3840,35 @@ PHP_METHOD(php_wxGridCellEditor, IsCreated)
 
                 if(current_object_type == PHP_WXGRIDCELLBOOLEDITOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxGridCellBoolEditor_php*)native_object)->IsCreated());
+                    RETVAL_BOOL(((wxGridCellBoolEditor_php*)native_object)->IsCreated());
                 }
                 else if(current_object_type == PHP_WXGRIDCELLCHOICEEDITOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxGridCellChoiceEditor_php*)native_object)->IsCreated());
+                    RETVAL_BOOL(((wxGridCellChoiceEditor_php*)native_object)->IsCreated());
                 }
                 else if(current_object_type == PHP_WXGRIDCELLENUMEDITOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxGridCellEnumEditor_php*)native_object)->IsCreated());
+                    RETVAL_BOOL(((wxGridCellEnumEditor_php*)native_object)->IsCreated());
                 }
                 else if(current_object_type == PHP_WXGRIDCELLTEXTEDITOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxGridCellTextEditor_php*)native_object)->IsCreated());
+                    RETVAL_BOOL(((wxGridCellTextEditor_php*)native_object)->IsCreated());
                 }
                 else if(current_object_type == PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxGridCellAutoWrapStringEditor_php*)native_object)->IsCreated());
+                    RETVAL_BOOL(((wxGridCellAutoWrapStringEditor_php*)native_object)->IsCreated());
                 }
                 else if(current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxGridCellFloatEditor_php*)native_object)->IsCreated());
+                    RETVAL_BOOL(((wxGridCellFloatEditor_php*)native_object)->IsCreated());
                 }
                 else if(current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxGridCellNumberEditor_php*)native_object)->IsCreated());
+                    RETVAL_BOOL(((wxGridCellNumberEditor_php*)native_object)->IsCreated());
                 }
                 else if(current_object_type == PHP_WXGRIDCELLEDITOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxGridCellEditor_php*)native_object)->IsCreated());
+                    RETVAL_BOOL(((wxGridCellEditor_php*)native_object)->IsCreated());
                 }
 
 
@@ -5028,7 +5027,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, IsTrueValue)
                 php_printf("Executing RETURN_BOOL(wxGridCellBoolEditor::IsTrueValue(wxString(value0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxGridCellBoolEditor::IsTrueValue(wxString(value0, wxConvUTF8)));
+                RETVAL_BOOL(wxGridCellBoolEditor::IsTrueValue(wxString(value0, wxConvUTF8)));
 
 
                 return;
@@ -6704,7 +6703,7 @@ PHP_METHOD(php_wxGridCellAttr, CloneMethod)
                 value_to_return0 = (wxGridCellAttr_php*) ((wxGridCellAttr_php*)native_object)->Clone();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -7223,7 +7222,7 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
                 value_to_return3 = (wxGridCellEditor_php*) ((wxGridCellAttr_php*)native_object)->GetEditor((const wxGrid*) object_pointer0_0, (int) row0, (int) col0);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -7636,7 +7635,7 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
                 value_to_return3 = (wxGridCellRenderer_php*) ((wxGridCellAttr_php*)native_object)->GetRenderer((const wxGrid*) object_pointer0_0, (int) row0, (int) col0);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -7890,7 +7889,7 @@ PHP_METHOD(php_wxGridCellAttr, HasAlignment)
                 php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasAlignment())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)native_object)->HasAlignment());
+                RETVAL_BOOL(((wxGridCellAttr_php*)native_object)->HasAlignment());
 
 
                 return;
@@ -7997,7 +7996,7 @@ PHP_METHOD(php_wxGridCellAttr, HasBackgroundColour)
                 php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasBackgroundColour())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)native_object)->HasBackgroundColour());
+                RETVAL_BOOL(((wxGridCellAttr_php*)native_object)->HasBackgroundColour());
 
 
                 return;
@@ -8104,7 +8103,7 @@ PHP_METHOD(php_wxGridCellAttr, HasEditor)
                 php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasEditor())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)native_object)->HasEditor());
+                RETVAL_BOOL(((wxGridCellAttr_php*)native_object)->HasEditor());
 
 
                 return;
@@ -8211,7 +8210,7 @@ PHP_METHOD(php_wxGridCellAttr, HasFont)
                 php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasFont())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)native_object)->HasFont());
+                RETVAL_BOOL(((wxGridCellAttr_php*)native_object)->HasFont());
 
 
                 return;
@@ -8318,7 +8317,7 @@ PHP_METHOD(php_wxGridCellAttr, HasRenderer)
                 php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasRenderer())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)native_object)->HasRenderer());
+                RETVAL_BOOL(((wxGridCellAttr_php*)native_object)->HasRenderer());
 
 
                 return;
@@ -8425,7 +8424,7 @@ PHP_METHOD(php_wxGridCellAttr, HasTextColour)
                 php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasTextColour())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)native_object)->HasTextColour());
+                RETVAL_BOOL(((wxGridCellAttr_php*)native_object)->HasTextColour());
 
 
                 return;
@@ -8639,7 +8638,7 @@ PHP_METHOD(php_wxGridCellAttr, IsReadOnly)
                 php_printf("Executing RETURN_BOOL(wxGridCellAttr::IsReadOnly())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)native_object)->IsReadOnly());
+                RETVAL_BOOL(((wxGridCellAttr_php*)native_object)->IsReadOnly());
 
 
                 return;
@@ -10070,7 +10069,7 @@ PHP_METHOD(php_wxGridTableBase, AppendCols)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::AppendCols())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->AppendCols());
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->AppendCols());
 
 
                 return;
@@ -10082,7 +10081,7 @@ PHP_METHOD(php_wxGridTableBase, AppendCols)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::AppendCols((size_t) numCols0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->AppendCols((size_t) numCols0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->AppendCols((size_t) numCols0));
 
 
                 return;
@@ -10194,7 +10193,7 @@ PHP_METHOD(php_wxGridTableBase, AppendRows)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::AppendRows())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->AppendRows());
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->AppendRows());
 
 
                 return;
@@ -10206,7 +10205,7 @@ PHP_METHOD(php_wxGridTableBase, AppendRows)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::AppendRows((size_t) numRows0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->AppendRows((size_t) numRows0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->AppendRows((size_t) numRows0));
 
 
                 return;
@@ -10321,7 +10320,7 @@ PHP_METHOD(php_wxGridTableBase, CanGetValueAs)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::CanGetValueAs((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->CanGetValueAs((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->CanGetValueAs((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)));
 
 
                 return;
@@ -10428,7 +10427,7 @@ PHP_METHOD(php_wxGridTableBase, CanHaveAttributes)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::CanHaveAttributes())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->CanHaveAttributes());
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->CanHaveAttributes());
 
 
                 return;
@@ -10543,7 +10542,7 @@ PHP_METHOD(php_wxGridTableBase, CanSetValueAs)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::CanSetValueAs((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->CanSetValueAs((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->CanSetValueAs((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)));
 
 
                 return;
@@ -10763,7 +10762,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteCols)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteCols())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->DeleteCols());
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->DeleteCols());
 
 
                 return;
@@ -10775,7 +10774,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteCols)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteCols((size_t) pos0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->DeleteCols((size_t) pos0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->DeleteCols((size_t) pos0));
 
 
                 return;
@@ -10787,7 +10786,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteCols)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteCols((size_t) pos0, (size_t) numCols0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->DeleteCols((size_t) pos0, (size_t) numCols0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->DeleteCols((size_t) pos0, (size_t) numCols0));
 
 
                 return;
@@ -10900,7 +10899,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteRows)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteRows())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->DeleteRows());
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->DeleteRows());
 
 
                 return;
@@ -10912,7 +10911,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteRows)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteRows((size_t) pos0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->DeleteRows((size_t) pos0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->DeleteRows((size_t) pos0));
 
 
                 return;
@@ -10924,7 +10923,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteRows)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteRows((size_t) pos0, (size_t) numRows0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->DeleteRows((size_t) pos0, (size_t) numRows0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->DeleteRows((size_t) pos0, (size_t) numRows0));
 
 
                 return;
@@ -11042,7 +11041,7 @@ PHP_METHOD(php_wxGridTableBase, GetAttr)
                 value_to_return3 = (wxGridCellAttr_php*) ((wxGridTableBase_php*)native_object)->GetAttr((int) row0, (int) col0, (wxGridCellAttr::wxAttrKind) kind0);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -11172,7 +11171,7 @@ PHP_METHOD(php_wxGridTableBase, GetAttrProvider)
                 value_to_return0 = (wxGridCellAttrProvider_php*) ((wxGridTableBase_php*)native_object)->GetAttrProvider();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -11305,7 +11304,7 @@ PHP_METHOD(php_wxGridTableBase, GetColLabelValue)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxGridTableBase_php*)native_object)->GetColLabelValue((int) col0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -11412,7 +11411,7 @@ PHP_METHOD(php_wxGridTableBase, GetColsCount)
                 php_printf("Executing RETURN_LONG(wxGridTableBase::GetColsCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridTableBase_php*)native_object)->GetColsCount());
+                RETVAL_LONG(((wxGridTableBase_php*)native_object)->GetColsCount());
 
 
                 return;
@@ -11686,7 +11685,7 @@ PHP_METHOD(php_wxGridTableBase, GetRowLabelValue)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxGridTableBase_php*)native_object)->GetRowLabelValue((int) row0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -11793,7 +11792,7 @@ PHP_METHOD(php_wxGridTableBase, GetRowsCount)
                 php_printf("Executing RETURN_LONG(wxGridTableBase::GetRowsCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridTableBase_php*)native_object)->GetRowsCount());
+                RETVAL_LONG(((wxGridTableBase_php*)native_object)->GetRowsCount());
 
 
                 return;
@@ -11908,7 +11907,7 @@ PHP_METHOD(php_wxGridTableBase, GetTypeName)
 
                 wxString value_to_return2;
                 value_to_return2 = ((wxGridTableBase_php*)native_object)->GetTypeName((int) row0, (int) col0);
-                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
+                RETVAL_STRING(value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -12112,7 +12111,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsBool)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::GetValueAsBool((int) row0, (int) col0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->GetValueAsBool((int) row0, (int) col0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->GetValueAsBool((int) row0, (int) col0));
 
 
                 return;
@@ -12227,7 +12226,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsCustom)
                 php_printf("Executing wxGridTableBase::GetValueAsCustom((int) row0, (int) col0, wxString(typeName0, wxConvUTF8))\n\n");
                 #endif
 
-                ZVAL_STRING(return_value, (char*) ((wxGridTableBase_php*)native_object)->GetValueAsCustom((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)));
+                RETVAL_STRING((char*) ((wxGridTableBase_php*)native_object)->GetValueAsCustom((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)));
 
 
                 return;
@@ -12340,7 +12339,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsDouble)
                 php_printf("Executing RETURN_LONG(wxGridTableBase::GetValueAsDouble((int) row0, (int) col0))\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxGridTableBase_php*)native_object)->GetValueAsDouble((int) row0, (int) col0));
+                RETVAL_DOUBLE(((wxGridTableBase_php*)native_object)->GetValueAsDouble((int) row0, (int) col0));
 
 
                 return;
@@ -12453,7 +12452,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsLong)
                 php_printf("Executing RETURN_LONG(wxGridTableBase::GetValueAsLong((int) row0, (int) col0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridTableBase_php*)native_object)->GetValueAsLong((int) row0, (int) col0));
+                RETVAL_LONG(((wxGridTableBase_php*)native_object)->GetValueAsLong((int) row0, (int) col0));
 
 
                 return;
@@ -12564,7 +12563,7 @@ PHP_METHOD(php_wxGridTableBase, GetView)
                 value_to_return0 = (wxGrid_php*) ((wxGridTableBase_php*)native_object)->GetView();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -12696,7 +12695,7 @@ PHP_METHOD(php_wxGridTableBase, InsertCols)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertCols())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->InsertCols());
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->InsertCols());
 
 
                 return;
@@ -12708,7 +12707,7 @@ PHP_METHOD(php_wxGridTableBase, InsertCols)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertCols((size_t) pos0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->InsertCols((size_t) pos0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->InsertCols((size_t) pos0));
 
 
                 return;
@@ -12720,7 +12719,7 @@ PHP_METHOD(php_wxGridTableBase, InsertCols)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertCols((size_t) pos0, (size_t) numCols0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->InsertCols((size_t) pos0, (size_t) numCols0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->InsertCols((size_t) pos0, (size_t) numCols0));
 
 
                 return;
@@ -12833,7 +12832,7 @@ PHP_METHOD(php_wxGridTableBase, InsertRows)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertRows())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->InsertRows());
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->InsertRows());
 
 
                 return;
@@ -12845,7 +12844,7 @@ PHP_METHOD(php_wxGridTableBase, InsertRows)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertRows((size_t) pos0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->InsertRows((size_t) pos0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->InsertRows((size_t) pos0));
 
 
                 return;
@@ -12857,7 +12856,7 @@ PHP_METHOD(php_wxGridTableBase, InsertRows)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertRows((size_t) pos0, (size_t) numRows0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->InsertRows((size_t) pos0, (size_t) numRows0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->InsertRows((size_t) pos0, (size_t) numRows0));
 
 
                 return;
@@ -12987,7 +12986,7 @@ PHP_METHOD(php_wxGridTableBase, IsEmpty)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::IsEmpty(*(wxGridCellCoords*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->IsEmpty(*(wxGridCellCoords*) object_pointer0_0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->IsEmpty(*(wxGridCellCoords*) object_pointer0_0));
 
                 references->AddReference(coords0, "wxGridTableBase::IsEmpty at call 3 with 1 argument(s)");
 
@@ -13101,7 +13100,7 @@ PHP_METHOD(php_wxGridTableBase, IsEmptyCell)
                 php_printf("Executing RETURN_BOOL(wxGridTableBase::IsEmptyCell((int) row0, (int) col0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridTableBase_php*)native_object)->IsEmptyCell((int) row0, (int) col0));
+                RETVAL_BOOL(((wxGridTableBase_php*)native_object)->IsEmptyCell((int) row0, (int) col0));
 
 
                 return;
@@ -14975,7 +14974,7 @@ PHP_METHOD(php_wxGridSizesInfo, GetSize)
                 php_printf("Executing RETURN_LONG(wxGridSizesInfo::GetSize((unsigned) pos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridSizesInfo_php*)native_object)->GetSize((unsigned) pos0));
+                RETVAL_LONG(((wxGridSizesInfo_php*)native_object)->GetSize((unsigned) pos0));
 
 
                 return;
@@ -15138,7 +15137,7 @@ PHP_METHOD(php_wxGrid, AppendCols)
                 php_printf("Executing RETURN_BOOL(wxGrid::AppendCols())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->AppendCols());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->AppendCols());
 
 
                 return;
@@ -15150,7 +15149,7 @@ PHP_METHOD(php_wxGrid, AppendCols)
                 php_printf("Executing RETURN_BOOL(wxGrid::AppendCols((int) numCols0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->AppendCols((int) numCols0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->AppendCols((int) numCols0));
 
 
                 return;
@@ -15162,7 +15161,7 @@ PHP_METHOD(php_wxGrid, AppendCols)
                 php_printf("Executing RETURN_BOOL(wxGrid::AppendCols((int) numCols0, updateLabels0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->AppendCols((int) numCols0, updateLabels0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->AppendCols((int) numCols0, updateLabels0));
 
 
                 return;
@@ -15275,7 +15274,7 @@ PHP_METHOD(php_wxGrid, AppendRows)
                 php_printf("Executing RETURN_BOOL(wxGrid::AppendRows())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->AppendRows());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->AppendRows());
 
 
                 return;
@@ -15287,7 +15286,7 @@ PHP_METHOD(php_wxGrid, AppendRows)
                 php_printf("Executing RETURN_BOOL(wxGrid::AppendRows((int) numRows0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->AppendRows((int) numRows0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->AppendRows((int) numRows0));
 
 
                 return;
@@ -15299,7 +15298,7 @@ PHP_METHOD(php_wxGrid, AppendRows)
                 php_printf("Executing RETURN_BOOL(wxGrid::AppendRows((int) numRows0, updateLabels0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->AppendRows((int) numRows0, updateLabels0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->AppendRows((int) numRows0, updateLabels0));
 
 
                 return;
@@ -15406,7 +15405,7 @@ PHP_METHOD(php_wxGrid, AreHorzGridLinesClipped)
                 php_printf("Executing RETURN_BOOL(wxGrid::AreHorzGridLinesClipped())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->AreHorzGridLinesClipped());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->AreHorzGridLinesClipped());
 
 
                 return;
@@ -15513,7 +15512,7 @@ PHP_METHOD(php_wxGrid, AreVertGridLinesClipped)
                 php_printf("Executing RETURN_BOOL(wxGrid::AreVertGridLinesClipped())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->AreVertGridLinesClipped());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->AreVertGridLinesClipped());
 
 
                 return;
@@ -16715,7 +16714,7 @@ PHP_METHOD(php_wxGrid, CanDragCell)
                 php_printf("Executing RETURN_BOOL(wxGrid::CanDragCell())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->CanDragCell());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->CanDragCell());
 
 
                 return;
@@ -16822,7 +16821,7 @@ PHP_METHOD(php_wxGrid, CanDragColMove)
                 php_printf("Executing RETURN_BOOL(wxGrid::CanDragColMove())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->CanDragColMove());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->CanDragColMove());
 
 
                 return;
@@ -16934,7 +16933,7 @@ PHP_METHOD(php_wxGrid, CanDragColSize)
                 php_printf("Executing RETURN_BOOL(wxGrid::CanDragColSize((int) col0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->CanDragColSize((int) col0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->CanDragColSize((int) col0));
 
 
                 return;
@@ -17041,7 +17040,7 @@ PHP_METHOD(php_wxGrid, CanDragGridSize)
                 php_printf("Executing RETURN_BOOL(wxGrid::CanDragGridSize())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->CanDragGridSize());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->CanDragGridSize());
 
 
                 return;
@@ -17153,7 +17152,7 @@ PHP_METHOD(php_wxGrid, CanDragRowSize)
                 php_printf("Executing RETURN_BOOL(wxGrid::CanDragRowSize((int) row0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->CanDragRowSize((int) row0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->CanDragRowSize((int) row0));
 
 
                 return;
@@ -17260,7 +17259,7 @@ PHP_METHOD(php_wxGrid, CanEnableCellControl)
                 php_printf("Executing RETURN_BOOL(wxGrid::CanEnableCellControl())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->CanEnableCellControl());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->CanEnableCellControl());
 
 
                 return;
@@ -18058,7 +18057,7 @@ PHP_METHOD(php_wxGrid, Create)
                 php_printf("Executing RETURN_BOOL(wxGrid::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxGrid::Create at call 1 with 2 argument(s)");
 
@@ -18071,7 +18070,7 @@ PHP_METHOD(php_wxGrid, Create)
                 php_printf("Executing RETURN_BOOL(wxGrid::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
                 references->AddReference(parent0, "wxGrid::Create at call 1 with 3 argument(s)");
                 references->AddReference(pos0, "wxGrid::Create at call 3 with 3 argument(s)");
@@ -18085,7 +18084,7 @@ PHP_METHOD(php_wxGrid, Create)
                 php_printf("Executing RETURN_BOOL(wxGrid::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxGrid::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxGrid::Create at call 3 with 4 argument(s)");
@@ -18100,7 +18099,7 @@ PHP_METHOD(php_wxGrid, Create)
                 php_printf("Executing RETURN_BOOL(wxGrid::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
                 references->AddReference(parent0, "wxGrid::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxGrid::Create at call 3 with 5 argument(s)");
@@ -18115,7 +18114,7 @@ PHP_METHOD(php_wxGrid, Create)
                 php_printf("Executing RETURN_BOOL(wxGrid::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxGrid::Create at call 1 with 6 argument(s)");
                 references->AddReference(pos0, "wxGrid::Create at call 3 with 6 argument(s)");
@@ -18232,7 +18231,7 @@ PHP_METHOD(php_wxGrid, CreateGrid)
                 php_printf("Executing RETURN_BOOL(wxGrid::CreateGrid((int) numRows0, (int) numCols0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->CreateGrid((int) numRows0, (int) numCols0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->CreateGrid((int) numRows0, (int) numCols0));
 
 
                 return;
@@ -18244,7 +18243,7 @@ PHP_METHOD(php_wxGrid, CreateGrid)
                 php_printf("Executing RETURN_BOOL(wxGrid::CreateGrid((int) numRows0, (int) numCols0, (wxGrid::wxGridSelectionModes) selmode0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->CreateGrid((int) numRows0, (int) numCols0, (wxGrid::wxGridSelectionModes) selmode0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->CreateGrid((int) numRows0, (int) numCols0, (wxGrid::wxGridSelectionModes) selmode0));
 
 
                 return;
@@ -18358,7 +18357,7 @@ PHP_METHOD(php_wxGrid, DeleteCols)
                 php_printf("Executing RETURN_BOOL(wxGrid::DeleteCols())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->DeleteCols());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->DeleteCols());
 
 
                 return;
@@ -18370,7 +18369,7 @@ PHP_METHOD(php_wxGrid, DeleteCols)
                 php_printf("Executing RETURN_BOOL(wxGrid::DeleteCols((int) pos0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->DeleteCols((int) pos0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->DeleteCols((int) pos0));
 
 
                 return;
@@ -18382,7 +18381,7 @@ PHP_METHOD(php_wxGrid, DeleteCols)
                 php_printf("Executing RETURN_BOOL(wxGrid::DeleteCols((int) pos0, (int) numCols0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->DeleteCols((int) pos0, (int) numCols0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->DeleteCols((int) pos0, (int) numCols0));
 
 
                 return;
@@ -18394,7 +18393,7 @@ PHP_METHOD(php_wxGrid, DeleteCols)
                 php_printf("Executing RETURN_BOOL(wxGrid::DeleteCols((int) pos0, (int) numCols0, updateLabels0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->DeleteCols((int) pos0, (int) numCols0, updateLabels0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->DeleteCols((int) pos0, (int) numCols0, updateLabels0));
 
 
                 return;
@@ -18508,7 +18507,7 @@ PHP_METHOD(php_wxGrid, DeleteRows)
                 php_printf("Executing RETURN_BOOL(wxGrid::DeleteRows())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->DeleteRows());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->DeleteRows());
 
 
                 return;
@@ -18520,7 +18519,7 @@ PHP_METHOD(php_wxGrid, DeleteRows)
                 php_printf("Executing RETURN_BOOL(wxGrid::DeleteRows((int) pos0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->DeleteRows((int) pos0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->DeleteRows((int) pos0));
 
 
                 return;
@@ -18532,7 +18531,7 @@ PHP_METHOD(php_wxGrid, DeleteRows)
                 php_printf("Executing RETURN_BOOL(wxGrid::DeleteRows((int) pos0, (int) numRows0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->DeleteRows((int) pos0, (int) numRows0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->DeleteRows((int) pos0, (int) numRows0));
 
 
                 return;
@@ -18544,7 +18543,7 @@ PHP_METHOD(php_wxGrid, DeleteRows)
                 php_printf("Executing RETURN_BOOL(wxGrid::DeleteRows((int) pos0, (int) numRows0, updateLabels0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->DeleteRows((int) pos0, (int) numRows0, updateLabels0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->DeleteRows((int) pos0, (int) numRows0, updateLabels0));
 
 
                 return;
@@ -20711,7 +20710,7 @@ PHP_METHOD(php_wxGrid, GetBatchCount)
                 php_printf("Executing RETURN_LONG(wxGrid::GetBatchCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetBatchCount());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetBatchCount());
 
 
                 return;
@@ -21081,7 +21080,7 @@ PHP_METHOD(php_wxGrid, GetCellEditor)
                 value_to_return2 = (wxGridCellEditor_php*) ((wxGrid_php*)native_object)->GetCellEditor((int) row0, (int) col0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -21338,7 +21337,7 @@ PHP_METHOD(php_wxGrid, GetCellRenderer)
                 value_to_return2 = (wxGridCellRenderer_php*) ((wxGrid_php*)native_object)->GetCellRenderer((int) row0, (int) col0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -21516,7 +21515,7 @@ PHP_METHOD(php_wxGrid, GetCellSize)
                 php_printf("Executing RETURN_LONG(wxGrid::GetCellSize((int) row0, (int) col0, (int*) num_rows0, (int*) num_cols0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetCellSize((int) row0, (int) col0, (int*) num_rows0, (int*) num_cols0));
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetCellSize((int) row0, (int) col0, (int*) num_rows0, (int*) num_cols0));
 
                 size_t elements_returned0_2 = sizeof(num_rows0)/sizeof(*num_rows0);
                 array_init(&num_rows0_ref);
@@ -21830,7 +21829,7 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 
                 wxString value_to_return2;
                 value_to_return2 = ((wxGrid_php*)native_object)->GetCellValue((int) row0, (int) col0);
-                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
+                RETVAL_STRING(value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -21851,7 +21850,7 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxGrid_php*)native_object)->GetCellValue(*(wxGridCellCoords*) object_pointer1_0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
                 references->AddReference(coords1, "wxGrid::GetCellValue at call 3 with 1 argument(s)");
 
@@ -21964,7 +21963,7 @@ PHP_METHOD(php_wxGrid, GetColAt)
                 php_printf("Executing RETURN_LONG(wxGrid::GetColAt((int) colPos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetColAt((int) colPos0));
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetColAt((int) colPos0));
 
 
                 return;
@@ -22321,7 +22320,7 @@ PHP_METHOD(php_wxGrid, GetColLabelSize)
                 php_printf("Executing RETURN_LONG(wxGrid::GetColLabelSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetColLabelSize());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetColLabelSize());
 
 
                 return;
@@ -22428,7 +22427,7 @@ PHP_METHOD(php_wxGrid, GetColLabelTextOrientation)
                 php_printf("Executing RETURN_LONG(wxGrid::GetColLabelTextOrientation())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetColLabelTextOrientation());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetColLabelTextOrientation());
 
 
                 return;
@@ -22542,7 +22541,7 @@ PHP_METHOD(php_wxGrid, GetColLabelValue)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxGrid_php*)native_object)->GetColLabelValue((int) col0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -22649,7 +22648,7 @@ PHP_METHOD(php_wxGrid, GetColMinimalAcceptableWidth)
                 php_printf("Executing RETURN_LONG(wxGrid::GetColMinimalAcceptableWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetColMinimalAcceptableWidth());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetColMinimalAcceptableWidth());
 
 
                 return;
@@ -22761,7 +22760,7 @@ PHP_METHOD(php_wxGrid, GetColPos)
                 php_printf("Executing RETURN_LONG(wxGrid::GetColPos((int) colID0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetColPos((int) colID0));
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetColPos((int) colID0));
 
 
                 return;
@@ -22873,7 +22872,7 @@ PHP_METHOD(php_wxGrid, GetColSize)
                 php_printf("Executing RETURN_LONG(wxGrid::GetColSize((int) col0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetColSize((int) col0));
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetColSize((int) col0));
 
 
                 return;
@@ -23570,7 +23569,7 @@ PHP_METHOD(php_wxGrid, GetDefaultColLabelSize)
                 php_printf("Executing RETURN_LONG(wxGrid::GetDefaultColLabelSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetDefaultColLabelSize());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetDefaultColLabelSize());
 
 
                 return;
@@ -23677,7 +23676,7 @@ PHP_METHOD(php_wxGrid, GetDefaultColSize)
                 php_printf("Executing RETURN_LONG(wxGrid::GetDefaultColSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetDefaultColSize());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetDefaultColSize());
 
 
                 return;
@@ -23788,7 +23787,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditor)
                 value_to_return0 = (wxGridCellEditor_php*) ((wxGrid_php*)native_object)->GetDefaultEditor();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -23941,7 +23940,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForCell)
                 value_to_return1 = (wxGridCellEditor_php*) ((wxGrid_php*)native_object)->GetDefaultEditorForCell(*(wxGridCellCoords*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -24078,7 +24077,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
                 value_to_return1 = (wxGridCellEditor_php*) ((wxGrid_php*)native_object)->GetDefaultEditorForType(wxString(typeName0, wxConvUTF8));
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -24323,7 +24322,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRenderer)
                 value_to_return0 = (wxGridCellRenderer_php*) ((wxGrid_php*)native_object)->GetDefaultRenderer();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -24459,7 +24458,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForCell)
                 value_to_return2 = (wxGridCellRenderer_php*) ((wxGrid_php*)native_object)->GetDefaultRendererForCell((int) row0, (int) col0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -24595,7 +24594,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
                 value_to_return1 = (wxGridCellRenderer_php*) ((wxGrid_php*)native_object)->GetDefaultRendererForType(wxString(typeName0, wxConvUTF8));
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -24721,7 +24720,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRowLabelSize)
                 php_printf("Executing RETURN_LONG(wxGrid::GetDefaultRowLabelSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetDefaultRowLabelSize());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetDefaultRowLabelSize());
 
 
                 return;
@@ -24828,7 +24827,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRowSize)
                 php_printf("Executing RETURN_LONG(wxGrid::GetDefaultRowSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetDefaultRowSize());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetDefaultRowSize());
 
 
                 return;
@@ -24939,7 +24938,7 @@ PHP_METHOD(php_wxGrid, GetGridColHeader)
                 value_to_return0 = (wxHeaderCtrl_php*) ((wxGrid_php*)native_object)->GetGridColHeader();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -25069,7 +25068,7 @@ PHP_METHOD(php_wxGrid, GetGridColLabelWindow)
                 value_to_return0 = (wxWindow_php*) ((wxGrid_php*)native_object)->GetGridColLabelWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -25199,7 +25198,7 @@ PHP_METHOD(php_wxGrid, GetGridCornerLabelWindow)
                 value_to_return0 = (wxWindow_php*) ((wxGrid_php*)native_object)->GetGridCornerLabelWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -25325,7 +25324,7 @@ PHP_METHOD(php_wxGrid, GetGridCursorCol)
                 php_printf("Executing RETURN_LONG(wxGrid::GetGridCursorCol())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetGridCursorCol());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetGridCursorCol());
 
 
                 return;
@@ -25432,7 +25431,7 @@ PHP_METHOD(php_wxGrid, GetGridCursorRow)
                 php_printf("Executing RETURN_LONG(wxGrid::GetGridCursorRow())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetGridCursorRow());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetGridCursorRow());
 
 
                 return;
@@ -25658,7 +25657,7 @@ PHP_METHOD(php_wxGrid, GetGridRowLabelWindow)
                 value_to_return0 = (wxWindow_php*) ((wxGrid_php*)native_object)->GetGridRowLabelWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -25788,7 +25787,7 @@ PHP_METHOD(php_wxGrid, GetGridWindow)
                 value_to_return0 = (wxWindow_php*) ((wxGrid_php*)native_object)->GetGridWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -26259,7 +26258,7 @@ PHP_METHOD(php_wxGrid, GetNumberCols)
                 php_printf("Executing RETURN_LONG(wxGrid::GetNumberCols())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetNumberCols());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetNumberCols());
 
 
                 return;
@@ -26366,7 +26365,7 @@ PHP_METHOD(php_wxGrid, GetNumberRows)
                 php_printf("Executing RETURN_LONG(wxGrid::GetNumberRows())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetNumberRows());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetNumberRows());
 
 
                 return;
@@ -26483,7 +26482,7 @@ PHP_METHOD(php_wxGrid, GetOrCreateCellAttr)
                 value_to_return2 = (wxGridCellAttr_php*) ((wxGrid_php*)native_object)->GetOrCreateCellAttr((int) row0, (int) col0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -26859,7 +26858,7 @@ PHP_METHOD(php_wxGrid, GetRowLabelSize)
                 php_printf("Executing RETURN_LONG(wxGrid::GetRowLabelSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetRowLabelSize());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetRowLabelSize());
 
 
                 return;
@@ -26973,7 +26972,7 @@ PHP_METHOD(php_wxGrid, GetRowLabelValue)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxGrid_php*)native_object)->GetRowLabelValue((int) row0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -27080,7 +27079,7 @@ PHP_METHOD(php_wxGrid, GetRowMinimalAcceptableHeight)
                 php_printf("Executing RETURN_LONG(wxGrid::GetRowMinimalAcceptableHeight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetRowMinimalAcceptableHeight());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetRowMinimalAcceptableHeight());
 
 
                 return;
@@ -27192,7 +27191,7 @@ PHP_METHOD(php_wxGrid, GetRowSize)
                 php_printf("Executing RETURN_LONG(wxGrid::GetRowSize((int) row0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetRowSize((int) row0));
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetRowSize((int) row0));
 
 
                 return;
@@ -27414,7 +27413,7 @@ PHP_METHOD(php_wxGrid, GetScrollLineX)
                 php_printf("Executing RETURN_LONG(wxGrid::GetScrollLineX())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetScrollLineX());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetScrollLineX());
 
 
                 return;
@@ -27521,7 +27520,7 @@ PHP_METHOD(php_wxGrid, GetScrollLineY)
                 php_printf("Executing RETURN_LONG(wxGrid::GetScrollLineY())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetScrollLineY());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetScrollLineY());
 
 
                 return;
@@ -27858,7 +27857,7 @@ PHP_METHOD(php_wxGrid, GetSelectionMode)
                 php_printf("Executing RETURN_LONG(wxGrid::GetSelectionMode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetSelectionMode());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetSelectionMode());
 
 
                 return;
@@ -27965,7 +27964,7 @@ PHP_METHOD(php_wxGrid, GetSortingColumn)
                 php_printf("Executing RETURN_LONG(wxGrid::GetSortingColumn())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->GetSortingColumn());
+                RETVAL_LONG(((wxGrid_php*)native_object)->GetSortingColumn());
 
 
                 return;
@@ -28076,7 +28075,7 @@ PHP_METHOD(php_wxGrid, GetTable)
                 value_to_return0 = (wxGridTableBase_php*) ((wxGrid_php*)native_object)->GetTable();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -28374,7 +28373,7 @@ PHP_METHOD(php_wxGrid, GridLinesEnabled)
                 php_printf("Executing RETURN_BOOL(wxGrid::GridLinesEnabled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->GridLinesEnabled());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->GridLinesEnabled());
 
 
                 return;
@@ -29033,7 +29032,7 @@ PHP_METHOD(php_wxGrid, InsertCols)
                 php_printf("Executing RETURN_BOOL(wxGrid::InsertCols())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->InsertCols());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->InsertCols());
 
 
                 return;
@@ -29045,7 +29044,7 @@ PHP_METHOD(php_wxGrid, InsertCols)
                 php_printf("Executing RETURN_BOOL(wxGrid::InsertCols((int) pos0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->InsertCols((int) pos0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->InsertCols((int) pos0));
 
 
                 return;
@@ -29057,7 +29056,7 @@ PHP_METHOD(php_wxGrid, InsertCols)
                 php_printf("Executing RETURN_BOOL(wxGrid::InsertCols((int) pos0, (int) numCols0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->InsertCols((int) pos0, (int) numCols0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->InsertCols((int) pos0, (int) numCols0));
 
 
                 return;
@@ -29069,7 +29068,7 @@ PHP_METHOD(php_wxGrid, InsertCols)
                 php_printf("Executing RETURN_BOOL(wxGrid::InsertCols((int) pos0, (int) numCols0, updateLabels0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->InsertCols((int) pos0, (int) numCols0, updateLabels0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->InsertCols((int) pos0, (int) numCols0, updateLabels0));
 
 
                 return;
@@ -29183,7 +29182,7 @@ PHP_METHOD(php_wxGrid, InsertRows)
                 php_printf("Executing RETURN_BOOL(wxGrid::InsertRows())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->InsertRows());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->InsertRows());
 
 
                 return;
@@ -29195,7 +29194,7 @@ PHP_METHOD(php_wxGrid, InsertRows)
                 php_printf("Executing RETURN_BOOL(wxGrid::InsertRows((int) pos0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->InsertRows((int) pos0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->InsertRows((int) pos0));
 
 
                 return;
@@ -29207,7 +29206,7 @@ PHP_METHOD(php_wxGrid, InsertRows)
                 php_printf("Executing RETURN_BOOL(wxGrid::InsertRows((int) pos0, (int) numRows0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->InsertRows((int) pos0, (int) numRows0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->InsertRows((int) pos0, (int) numRows0));
 
 
                 return;
@@ -29219,7 +29218,7 @@ PHP_METHOD(php_wxGrid, InsertRows)
                 php_printf("Executing RETURN_BOOL(wxGrid::InsertRows((int) pos0, (int) numRows0, updateLabels0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->InsertRows((int) pos0, (int) numRows0, updateLabels0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->InsertRows((int) pos0, (int) numRows0, updateLabels0));
 
 
                 return;
@@ -29326,7 +29325,7 @@ PHP_METHOD(php_wxGrid, IsCellEditControlEnabled)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsCellEditControlEnabled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsCellEditControlEnabled());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsCellEditControlEnabled());
 
 
                 return;
@@ -29433,7 +29432,7 @@ PHP_METHOD(php_wxGrid, IsCurrentCellReadOnly)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsCurrentCellReadOnly())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsCurrentCellReadOnly());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsCurrentCellReadOnly());
 
 
                 return;
@@ -29540,7 +29539,7 @@ PHP_METHOD(php_wxGrid, IsEditable)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsEditable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsEditable());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsEditable());
 
 
                 return;
@@ -29652,7 +29651,7 @@ PHP_METHOD(php_wxGrid, IsColShown)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsColShown((int) col0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsColShown((int) col0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsColShown((int) col0));
 
 
                 return;
@@ -29804,7 +29803,7 @@ PHP_METHOD(php_wxGrid, IsInSelection)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsInSelection((int) row0, (int) col0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsInSelection((int) row0, (int) col0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsInSelection((int) row0, (int) col0));
 
 
                 return;
@@ -29823,7 +29822,7 @@ PHP_METHOD(php_wxGrid, IsInSelection)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsInSelection(*(wxGridCellCoords*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsInSelection(*(wxGridCellCoords*) object_pointer1_0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsInSelection(*(wxGridCellCoords*) object_pointer1_0));
 
                 references->AddReference(coords1, "wxGrid::IsInSelection at call 3 with 1 argument(s)");
 
@@ -29937,7 +29936,7 @@ PHP_METHOD(php_wxGrid, IsReadOnly)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsReadOnly((int) row0, (int) col0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsReadOnly((int) row0, (int) col0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsReadOnly((int) row0, (int) col0));
 
 
                 return;
@@ -30049,7 +30048,7 @@ PHP_METHOD(php_wxGrid, IsRowShown)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsRowShown((int) row0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsRowShown((int) row0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsRowShown((int) row0));
 
 
                 return;
@@ -30156,7 +30155,7 @@ PHP_METHOD(php_wxGrid, IsSelection)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsSelection())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsSelection());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsSelection());
 
 
                 return;
@@ -30263,7 +30262,7 @@ PHP_METHOD(php_wxGrid, IsSortOrderAscending)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsSortOrderAscending())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsSortOrderAscending());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsSortOrderAscending());
 
 
                 return;
@@ -30375,7 +30374,7 @@ PHP_METHOD(php_wxGrid, IsSortingBy)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsSortingBy((int) col0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsSortingBy((int) col0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsSortingBy((int) col0));
 
 
                 return;
@@ -30529,7 +30528,7 @@ PHP_METHOD(php_wxGrid, IsVisible)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsVisible((int) row0, (int) col0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsVisible((int) row0, (int) col0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsVisible((int) row0, (int) col0));
 
 
                 return;
@@ -30541,7 +30540,7 @@ PHP_METHOD(php_wxGrid, IsVisible)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsVisible((int) row0, (int) col0, wholeCellVisible0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsVisible((int) row0, (int) col0, wholeCellVisible0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsVisible((int) row0, (int) col0, wholeCellVisible0));
 
 
                 return;
@@ -30560,7 +30559,7 @@ PHP_METHOD(php_wxGrid, IsVisible)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsVisible(*(wxGridCellCoords*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsVisible(*(wxGridCellCoords*) object_pointer1_0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsVisible(*(wxGridCellCoords*) object_pointer1_0));
 
                 references->AddReference(coords1, "wxGrid::IsVisible at call 3 with 1 argument(s)");
 
@@ -30573,7 +30572,7 @@ PHP_METHOD(php_wxGrid, IsVisible)
                 php_printf("Executing RETURN_BOOL(wxGrid::IsVisible(*(wxGridCellCoords*) object_pointer1_0, wholeCellVisible1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->IsVisible(*(wxGridCellCoords*) object_pointer1_0, wholeCellVisible1));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->IsVisible(*(wxGridCellCoords*) object_pointer1_0, wholeCellVisible1));
 
                 references->AddReference(coords1, "wxGrid::IsVisible at call 3 with 2 argument(s)");
 
@@ -30858,7 +30857,7 @@ PHP_METHOD(php_wxGrid, MoveCursorDown)
                 php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorDown(expandSelection0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->MoveCursorDown(expandSelection0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->MoveCursorDown(expandSelection0));
 
 
                 return;
@@ -30970,7 +30969,7 @@ PHP_METHOD(php_wxGrid, MoveCursorDownBlock)
                 php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorDownBlock(expandSelection0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->MoveCursorDownBlock(expandSelection0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->MoveCursorDownBlock(expandSelection0));
 
 
                 return;
@@ -31082,7 +31081,7 @@ PHP_METHOD(php_wxGrid, MoveCursorLeft)
                 php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorLeft(expandSelection0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->MoveCursorLeft(expandSelection0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->MoveCursorLeft(expandSelection0));
 
 
                 return;
@@ -31194,7 +31193,7 @@ PHP_METHOD(php_wxGrid, MoveCursorLeftBlock)
                 php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorLeftBlock(expandSelection0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->MoveCursorLeftBlock(expandSelection0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->MoveCursorLeftBlock(expandSelection0));
 
 
                 return;
@@ -31306,7 +31305,7 @@ PHP_METHOD(php_wxGrid, MoveCursorRight)
                 php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorRight(expandSelection0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->MoveCursorRight(expandSelection0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->MoveCursorRight(expandSelection0));
 
 
                 return;
@@ -31418,7 +31417,7 @@ PHP_METHOD(php_wxGrid, MoveCursorRightBlock)
                 php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorRightBlock(expandSelection0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->MoveCursorRightBlock(expandSelection0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->MoveCursorRightBlock(expandSelection0));
 
 
                 return;
@@ -31530,7 +31529,7 @@ PHP_METHOD(php_wxGrid, MoveCursorUp)
                 php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorUp(expandSelection0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->MoveCursorUp(expandSelection0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->MoveCursorUp(expandSelection0));
 
 
                 return;
@@ -31642,7 +31641,7 @@ PHP_METHOD(php_wxGrid, MoveCursorUpBlock)
                 php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorUpBlock(expandSelection0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->MoveCursorUpBlock(expandSelection0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->MoveCursorUpBlock(expandSelection0));
 
 
                 return;
@@ -31749,7 +31748,7 @@ PHP_METHOD(php_wxGrid, MovePageDown)
                 php_printf("Executing RETURN_BOOL(wxGrid::MovePageDown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->MovePageDown());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->MovePageDown());
 
 
                 return;
@@ -31856,7 +31855,7 @@ PHP_METHOD(php_wxGrid, MovePageUp)
                 php_printf("Executing RETURN_BOOL(wxGrid::MovePageUp())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->MovePageUp());
+                RETVAL_BOOL(((wxGrid_php*)native_object)->MovePageUp());
 
 
                 return;
@@ -39537,7 +39536,7 @@ PHP_METHOD(php_wxGrid, SetTable)
                 php_printf("Executing RETURN_BOOL(wxGrid::SetTable((wxGridTableBase*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->SetTable((wxGridTableBase*) object_pointer0_0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->SetTable((wxGridTableBase*) object_pointer0_0));
 
                 references->AddReference(table0, "wxGrid::SetTable at call 1 with 1 argument(s)");
 
@@ -39550,7 +39549,7 @@ PHP_METHOD(php_wxGrid, SetTable)
                 php_printf("Executing RETURN_BOOL(wxGrid::SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0));
 
                 references->AddReference(table0, "wxGrid::SetTable at call 1 with 2 argument(s)");
 
@@ -39563,7 +39562,7 @@ PHP_METHOD(php_wxGrid, SetTable)
                 php_printf("Executing RETURN_BOOL(wxGrid::SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0, (wxGrid::wxGridSelectionModes) selmode0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGrid_php*)native_object)->SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0, (wxGrid::wxGridSelectionModes) selmode0));
+                RETVAL_BOOL(((wxGrid_php*)native_object)->SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0, (wxGrid::wxGridSelectionModes) selmode0));
 
                 references->AddReference(table0, "wxGrid::SetTable at call 1 with 3 argument(s)");
 
@@ -40363,7 +40362,7 @@ PHP_METHOD(php_wxGrid, XToCol)
                 php_printf("Executing RETURN_LONG(wxGrid::XToCol((int) x0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->XToCol((int) x0));
+                RETVAL_LONG(((wxGrid_php*)native_object)->XToCol((int) x0));
 
 
                 return;
@@ -40375,7 +40374,7 @@ PHP_METHOD(php_wxGrid, XToCol)
                 php_printf("Executing RETURN_LONG(wxGrid::XToCol((int) x0, clipToMinMax0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->XToCol((int) x0, clipToMinMax0));
+                RETVAL_LONG(((wxGrid_php*)native_object)->XToCol((int) x0, clipToMinMax0));
 
 
                 return;
@@ -40487,7 +40486,7 @@ PHP_METHOD(php_wxGrid, XToEdgeOfCol)
                 php_printf("Executing RETURN_LONG(wxGrid::XToEdgeOfCol((int) x0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->XToEdgeOfCol((int) x0));
+                RETVAL_LONG(((wxGrid_php*)native_object)->XToEdgeOfCol((int) x0));
 
 
                 return;
@@ -40785,7 +40784,7 @@ PHP_METHOD(php_wxGrid, YToEdgeOfRow)
                 php_printf("Executing RETURN_LONG(wxGrid::YToEdgeOfRow((int) y0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->YToEdgeOfRow((int) y0));
+                RETVAL_LONG(((wxGrid_php*)native_object)->YToEdgeOfRow((int) y0));
 
 
                 return;
@@ -40898,7 +40897,7 @@ PHP_METHOD(php_wxGrid, YToRow)
                 php_printf("Executing RETURN_LONG(wxGrid::YToRow((int) y0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->YToRow((int) y0));
+                RETVAL_LONG(((wxGrid_php*)native_object)->YToRow((int) y0));
 
 
                 return;
@@ -40910,7 +40909,7 @@ PHP_METHOD(php_wxGrid, YToRow)
                 php_printf("Executing RETURN_LONG(wxGrid::YToRow((int) y0, clipToMinMax0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGrid_php*)native_object)->YToRow((int) y0, clipToMinMax0));
+                RETVAL_LONG(((wxGrid_php*)native_object)->YToRow((int) y0, clipToMinMax0));
 
 
                 return;

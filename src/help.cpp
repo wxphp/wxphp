@@ -263,7 +263,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpController::AddBook(*(wxFileName*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)native_object)->AddBook(*(wxFileName*) object_pointer0_0));
+                RETVAL_BOOL(((wxHtmlHelpController_php*)native_object)->AddBook(*(wxFileName*) object_pointer0_0));
 
                 references->AddReference(bookFile0, "wxHtmlHelpController::AddBook at call 3 with 1 argument(s)");
 
@@ -276,7 +276,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpController::AddBook(*(wxFileName*) object_pointer0_0, showWaitMsg0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)native_object)->AddBook(*(wxFileName*) object_pointer0_0, showWaitMsg0));
+                RETVAL_BOOL(((wxHtmlHelpController_php*)native_object)->AddBook(*(wxFileName*) object_pointer0_0, showWaitMsg0));
 
                 references->AddReference(bookFile0, "wxHtmlHelpController::AddBook at call 3 with 2 argument(s)");
 
@@ -296,7 +296,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpController::AddBook(wxString(bookUrl1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)native_object)->AddBook(wxString(bookUrl1, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlHelpController_php*)native_object)->AddBook(wxString(bookUrl1, wxConvUTF8)));
 
 
                 return;
@@ -308,7 +308,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpController::AddBook(wxString(bookUrl1, wxConvUTF8), showWaitMsg1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)native_object)->AddBook(wxString(bookUrl1, wxConvUTF8), showWaitMsg1));
+                RETVAL_BOOL(((wxHtmlHelpController_php*)native_object)->AddBook(wxString(bookUrl1, wxConvUTF8), showWaitMsg1));
 
 
                 return;
@@ -652,7 +652,7 @@ PHP_METHOD(php_wxHtmlHelpController, Display)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpController::Display(wxString(x0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)native_object)->Display(wxString(x0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlHelpController_php*)native_object)->Display(wxString(x0, wxConvUTF8)));
 
 
                 return;
@@ -671,7 +671,7 @@ PHP_METHOD(php_wxHtmlHelpController, Display)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpController::Display((int) id1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)native_object)->Display((int) id1));
+                RETVAL_BOOL(((wxHtmlHelpController_php*)native_object)->Display((int) id1));
 
 
                 return;
@@ -778,7 +778,7 @@ PHP_METHOD(php_wxHtmlHelpController, DisplayContents)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpController::DisplayContents())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)native_object)->DisplayContents());
+                RETVAL_BOOL(((wxHtmlHelpController_php*)native_object)->DisplayContents());
 
 
                 return;
@@ -885,7 +885,7 @@ PHP_METHOD(php_wxHtmlHelpController, DisplayIndex)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpController::DisplayIndex())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)native_object)->DisplayIndex());
+                RETVAL_BOOL(((wxHtmlHelpController_php*)native_object)->DisplayIndex());
 
 
                 return;
@@ -999,7 +999,7 @@ PHP_METHOD(php_wxHtmlHelpController, KeywordSearch)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpController::KeywordSearch(wxString(keyword0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)native_object)->KeywordSearch(wxString(keyword0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlHelpController_php*)native_object)->KeywordSearch(wxString(keyword0, wxConvUTF8)));
 
 
                 return;
@@ -1011,7 +1011,7 @@ PHP_METHOD(php_wxHtmlHelpController, KeywordSearch)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpController::KeywordSearch(wxString(keyword0, wxConvUTF8), (wxHelpSearchMode) mode0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)native_object)->KeywordSearch(wxString(keyword0, wxConvUTF8), (wxHelpSearchMode) mode0));
+                RETVAL_BOOL(((wxHtmlHelpController_php*)native_object)->KeywordSearch(wxString(keyword0, wxConvUTF8), (wxHelpSearchMode) mode0));
 
 
                 return;
@@ -2324,7 +2324,7 @@ PHP_METHOD(php_wxHtmlHelpData, AddBook)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpData::AddBook(wxString(book_url0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpData_php*)native_object)->AddBook(wxString(book_url0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlHelpData_php*)native_object)->AddBook(wxString(book_url0, wxConvUTF8)));
 
 
                 return;
@@ -2438,7 +2438,7 @@ PHP_METHOD(php_wxHtmlHelpData, FindPageById)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxHtmlHelpData_php*)native_object)->FindPageById((int) id0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -2553,7 +2553,7 @@ PHP_METHOD(php_wxHtmlHelpData, FindPageByName)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxHtmlHelpData_php*)native_object)->FindPageByName(wxString(page0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -3062,7 +3062,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpDialog::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxHtmlHelpDialog::Create at call 1 with 2 argument(s)");
 
@@ -3075,7 +3075,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpDialog::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxHtmlHelpDialog::Create at call 1 with 3 argument(s)");
 
@@ -3088,7 +3088,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpDialog::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0));
+                RETVAL_BOOL(((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0));
 
                 references->AddReference(parent0, "wxHtmlHelpDialog::Create at call 1 with 4 argument(s)");
 
@@ -3200,7 +3200,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, GetController)
                 value_to_return0 = (wxHtmlHelpController_php*) ((wxHtmlHelpDialog_php*)native_object)->GetController();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -4032,7 +4032,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpFrame::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxHtmlHelpFrame::Create at call 1 with 2 argument(s)");
 
@@ -4045,7 +4045,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpFrame::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxHtmlHelpFrame::Create at call 1 with 3 argument(s)");
 
@@ -4058,7 +4058,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpFrame::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0));
+                RETVAL_BOOL(((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0));
 
                 references->AddReference(parent0, "wxHtmlHelpFrame::Create at call 1 with 4 argument(s)");
 
@@ -4071,7 +4071,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpFrame::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4));
+                RETVAL_BOOL(((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4));
 
                 references->AddReference(parent0, "wxHtmlHelpFrame::Create at call 1 with 5 argument(s)");
                 references->AddReference(config0, "wxHtmlHelpFrame::Create at call 1 with 5 argument(s)");
@@ -4085,7 +4085,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpFrame::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4, wxString(rootpath0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4, wxString(rootpath0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4, wxString(rootpath0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxHtmlHelpFrame::Create at call 1 with 6 argument(s)");
                 references->AddReference(config0, "wxHtmlHelpFrame::Create at call 1 with 6 argument(s)");
@@ -4198,7 +4198,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, GetController)
                 value_to_return0 = (wxHtmlHelpController_php*) ((wxHtmlHelpFrame_php*)native_object)->GetController();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -5094,7 +5094,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxHtmlHelpWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxHtmlHelpWindow::Create at call 1 with 2 argument(s)");
 
@@ -5107,7 +5107,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
+                RETVAL_BOOL(((wxHtmlHelpWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
                 references->AddReference(parent0, "wxHtmlHelpWindow::Create at call 1 with 3 argument(s)");
                 references->AddReference(pos0, "wxHtmlHelpWindow::Create at call 3 with 3 argument(s)");
@@ -5121,7 +5121,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
+                RETVAL_BOOL(((wxHtmlHelpWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxHtmlHelpWindow::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxHtmlHelpWindow::Create at call 3 with 4 argument(s)");
@@ -5136,7 +5136,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0));
+                RETVAL_BOOL(((wxHtmlHelpWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0));
 
                 references->AddReference(parent0, "wxHtmlHelpWindow::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxHtmlHelpWindow::Create at call 3 with 5 argument(s)");
@@ -5151,7 +5151,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0, (int) helpStyle0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0, (int) helpStyle0));
+                RETVAL_BOOL(((wxHtmlHelpWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0, (int) helpStyle0));
 
                 references->AddReference(parent0, "wxHtmlHelpWindow::Create at call 1 with 6 argument(s)");
                 references->AddReference(pos0, "wxHtmlHelpWindow::Create at call 3 with 6 argument(s)");
@@ -5288,7 +5288,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Display)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Display(wxString(x0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)native_object)->Display(wxString(x0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlHelpWindow_php*)native_object)->Display(wxString(x0, wxConvUTF8)));
 
 
                 return;
@@ -5307,7 +5307,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Display)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Display((const int) id1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)native_object)->Display((const int) id1));
+                RETVAL_BOOL(((wxHtmlHelpWindow_php*)native_object)->Display((const int) id1));
 
 
                 return;
@@ -5414,7 +5414,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, DisplayIndex)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::DisplayIndex())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)native_object)->DisplayIndex());
+                RETVAL_BOOL(((wxHtmlHelpWindow_php*)native_object)->DisplayIndex());
 
 
                 return;
@@ -5525,7 +5525,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, GetData)
                 value_to_return0 = (wxHtmlHelpData_php*) ((wxHtmlHelpWindow_php*)native_object)->GetData();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -5651,7 +5651,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, DisplayContents)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::DisplayContents())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)native_object)->DisplayContents());
+                RETVAL_BOOL(((wxHtmlHelpWindow_php*)native_object)->DisplayContents());
 
 
                 return;
@@ -5765,7 +5765,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, KeywordSearch)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::KeywordSearch(wxString(keyword0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)native_object)->KeywordSearch(wxString(keyword0, wxConvUTF8)));
+                RETVAL_BOOL(((wxHtmlHelpWindow_php*)native_object)->KeywordSearch(wxString(keyword0, wxConvUTF8)));
 
 
                 return;
@@ -5777,7 +5777,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, KeywordSearch)
                 php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::KeywordSearch(wxString(keyword0, wxConvUTF8), (wxHelpSearchMode) mode0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)native_object)->KeywordSearch(wxString(keyword0, wxConvUTF8), (wxHelpSearchMode) mode0));
+                RETVAL_BOOL(((wxHtmlHelpWindow_php*)native_object)->KeywordSearch(wxString(keyword0, wxConvUTF8), (wxHelpSearchMode) mode0));
 
 
                 return;
@@ -7358,7 +7358,7 @@ PHP_METHOD(php_wxToolTip, GetWindow)
                 value_to_return0 = (wxWindow_php*) ((wxToolTip_php*)native_object)->GetWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -7486,7 +7486,7 @@ PHP_METHOD(php_wxToolTip, GetTip)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxToolTip_php*)native_object)->GetTip();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;

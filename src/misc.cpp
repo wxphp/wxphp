@@ -240,7 +240,7 @@ PHP_METHOD(php_wxArtProvider, Remove)
                 php_printf("Executing RETURN_BOOL(wxArtProvider::Remove((wxArtProvider*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxArtProvider::Remove((wxArtProvider*) object_pointer0_0));
+                RETVAL_BOOL(wxArtProvider::Remove((wxArtProvider*) object_pointer0_0));
 
 
                 return;
@@ -610,7 +610,7 @@ PHP_METHOD(php_wxArtProvider, Pop)
                 php_printf("Executing RETURN_BOOL(wxArtProvider::Pop())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxArtProvider::Pop());
+                RETVAL_BOOL(wxArtProvider::Pop());
 
 
                 return;
@@ -718,7 +718,7 @@ PHP_METHOD(php_wxArtProvider, HasNativeProvider)
                 php_printf("Executing RETURN_BOOL(wxArtProvider::HasNativeProvider())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxArtProvider::HasNativeProvider());
+                RETVAL_BOOL(wxArtProvider::HasNativeProvider());
 
 
                 return;
@@ -1643,7 +1643,7 @@ PHP_METHOD(php_wxArtProvider, Delete)
                 php_printf("Executing RETURN_BOOL(wxArtProvider::Delete((wxArtProvider*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxArtProvider::Delete((wxArtProvider*) object_pointer0_0));
+                RETVAL_BOOL(wxArtProvider::Delete((wxArtProvider*) object_pointer0_0));
 
 
                 return;
@@ -2553,7 +2553,7 @@ PHP_METHOD(php_wxCaret, IsVisible)
                 php_printf("Executing RETURN_BOOL(wxCaret::IsVisible())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCaret_php*)native_object)->IsVisible());
+                RETVAL_BOOL(((wxCaret_php*)native_object)->IsVisible());
 
 
                 return;
@@ -2660,7 +2660,7 @@ PHP_METHOD(php_wxCaret, IsOk)
                 php_printf("Executing RETURN_BOOL(wxCaret::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCaret_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxCaret_php*)native_object)->IsOk());
 
 
                 return;
@@ -2878,7 +2878,7 @@ PHP_METHOD(php_wxCaret, GetWindow)
                 value_to_return0 = (wxWindow_php*) ((wxCaret_php*)native_object)->GetWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -3177,7 +3177,7 @@ PHP_METHOD(php_wxCaret, GetBlinkTime)
                 php_printf("Executing RETURN_LONG(wxCaret::GetBlinkTime())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxCaret::GetBlinkTime());
+                RETVAL_LONG(wxCaret::GetBlinkTime());
 
 
                 return;
@@ -3536,7 +3536,7 @@ PHP_METHOD(php_wxNotificationMessage, Close)
                 php_printf("Executing RETURN_BOOL(wxNotificationMessage::Close())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxNotificationMessage_php*)native_object)->Close());
+                RETVAL_BOOL(((wxNotificationMessage_php*)native_object)->Close());
 
 
                 return;
@@ -4117,7 +4117,7 @@ PHP_METHOD(php_wxNotificationMessage, Show)
                 php_printf("Executing RETURN_BOOL(wxNotificationMessage::Show())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxNotificationMessage_php*)native_object)->Show());
+                RETVAL_BOOL(((wxNotificationMessage_php*)native_object)->Show());
 
 
                 return;
@@ -4129,7 +4129,7 @@ PHP_METHOD(php_wxNotificationMessage, Show)
                 php_printf("Executing RETURN_BOOL(wxNotificationMessage::Show((int) timeout0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxNotificationMessage_php*)native_object)->Show((int) timeout0));
+                RETVAL_BOOL(((wxNotificationMessage_php*)native_object)->Show((int) timeout0));
 
 
                 return;
@@ -4578,7 +4578,7 @@ PHP_METHOD(php_wxStopWatch, Time)
                 php_printf("Executing RETURN_LONG(wxStopWatch::Time())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStopWatch_php*)native_object)->Time());
+                RETVAL_LONG(((wxStopWatch_php*)native_object)->Time());
 
 
                 return;
@@ -5304,7 +5304,7 @@ PHP_METHOD(php_wxTaskBarIcon, IsAvailable)
                 php_printf("Executing RETURN_BOOL(wxTaskBarIcon::IsAvailable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxTaskBarIcon::IsAvailable());
+                RETVAL_BOOL(wxTaskBarIcon::IsAvailable());
 
 
                 return;
@@ -5411,7 +5411,7 @@ PHP_METHOD(php_wxTaskBarIcon, IsIconInstalled)
                 php_printf("Executing RETURN_BOOL(wxTaskBarIcon::IsIconInstalled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)native_object)->IsIconInstalled());
+                RETVAL_BOOL(((wxTaskBarIcon_php*)native_object)->IsIconInstalled());
 
 
                 return;
@@ -5518,7 +5518,7 @@ PHP_METHOD(php_wxTaskBarIcon, IsOk)
                 php_printf("Executing RETURN_BOOL(wxTaskBarIcon::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxTaskBarIcon_php*)native_object)->IsOk());
 
 
                 return;
@@ -5648,7 +5648,7 @@ PHP_METHOD(php_wxTaskBarIcon, PopupMenu)
                 php_printf("Executing RETURN_BOOL(wxTaskBarIcon::PopupMenu((wxMenu*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)native_object)->PopupMenu((wxMenu*) object_pointer0_0));
+                RETVAL_BOOL(((wxTaskBarIcon_php*)native_object)->PopupMenu((wxMenu*) object_pointer0_0));
 
                 references->AddReference(menu0, "wxTaskBarIcon::PopupMenu at call 1 with 1 argument(s)");
 
@@ -5756,7 +5756,7 @@ PHP_METHOD(php_wxTaskBarIcon, RemoveIcon)
                 php_printf("Executing RETURN_BOOL(wxTaskBarIcon::RemoveIcon())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)native_object)->RemoveIcon());
+                RETVAL_BOOL(((wxTaskBarIcon_php*)native_object)->RemoveIcon());
 
 
                 return;
@@ -5888,7 +5888,7 @@ PHP_METHOD(php_wxTaskBarIcon, SetIcon)
                 php_printf("Executing RETURN_BOOL(wxTaskBarIcon::SetIcon(*(wxIcon*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)native_object)->SetIcon(*(wxIcon*) object_pointer0_0));
+                RETVAL_BOOL(((wxTaskBarIcon_php*)native_object)->SetIcon(*(wxIcon*) object_pointer0_0));
 
                 references->AddReference(icon0, "wxTaskBarIcon::SetIcon at call 3 with 1 argument(s)");
 
@@ -5901,7 +5901,7 @@ PHP_METHOD(php_wxTaskBarIcon, SetIcon)
                 php_printf("Executing RETURN_BOOL(wxTaskBarIcon::SetIcon(*(wxIcon*) object_pointer0_0, wxString(tooltip0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)native_object)->SetIcon(*(wxIcon*) object_pointer0_0, wxString(tooltip0, wxConvUTF8)));
+                RETVAL_BOOL(((wxTaskBarIcon_php*)native_object)->SetIcon(*(wxIcon*) object_pointer0_0, wxString(tooltip0, wxConvUTF8)));
 
                 references->AddReference(icon0, "wxTaskBarIcon::SetIcon at call 3 with 2 argument(s)");
 
@@ -6187,7 +6187,7 @@ PHP_METHOD(php_wxTimer, GetId)
                 php_printf("Executing RETURN_LONG(wxTimer::GetId())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTimer_php*)native_object)->GetId());
+                RETVAL_LONG(((wxTimer_php*)native_object)->GetId());
 
 
                 return;
@@ -6294,7 +6294,7 @@ PHP_METHOD(php_wxTimer, GetInterval)
                 php_printf("Executing RETURN_LONG(wxTimer::GetInterval())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTimer_php*)native_object)->GetInterval());
+                RETVAL_LONG(((wxTimer_php*)native_object)->GetInterval());
 
 
                 return;
@@ -6405,7 +6405,7 @@ PHP_METHOD(php_wxTimer, GetOwner)
                 value_to_return0 = (wxEvtHandler_php*) ((wxTimer_php*)native_object)->GetOwner();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -6531,7 +6531,7 @@ PHP_METHOD(php_wxTimer, IsOneShot)
                 php_printf("Executing RETURN_BOOL(wxTimer::IsOneShot())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimer_php*)native_object)->IsOneShot());
+                RETVAL_BOOL(((wxTimer_php*)native_object)->IsOneShot());
 
 
                 return;
@@ -6638,7 +6638,7 @@ PHP_METHOD(php_wxTimer, IsRunning)
                 php_printf("Executing RETURN_BOOL(wxTimer::IsRunning())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimer_php*)native_object)->IsRunning());
+                RETVAL_BOOL(((wxTimer_php*)native_object)->IsRunning());
 
 
                 return;
@@ -7003,7 +7003,7 @@ PHP_METHOD(php_wxTimer, Start)
                 php_printf("Executing RETURN_BOOL(wxTimer::Start())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimer_php*)native_object)->Start());
+                RETVAL_BOOL(((wxTimer_php*)native_object)->Start());
 
 
                 return;
@@ -7015,7 +7015,7 @@ PHP_METHOD(php_wxTimer, Start)
                 php_printf("Executing RETURN_BOOL(wxTimer::Start((int) milliseconds0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimer_php*)native_object)->Start((int) milliseconds0));
+                RETVAL_BOOL(((wxTimer_php*)native_object)->Start((int) milliseconds0));
 
 
                 return;
@@ -7027,7 +7027,7 @@ PHP_METHOD(php_wxTimer, Start)
                 php_printf("Executing RETURN_BOOL(wxTimer::Start((int) milliseconds0, oneShot0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxTimer_php*)native_object)->Start((int) milliseconds0, oneShot0));
+                RETVAL_BOOL(((wxTimer_php*)native_object)->Start((int) milliseconds0, oneShot0));
 
 
                 return;

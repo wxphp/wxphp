@@ -206,7 +206,7 @@ bool wxEventLoopBase_php::Dispatch()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -390,7 +390,7 @@ PHP_METHOD(php_wxEventLoopBase, GetActive)
                 wxEventLoopBase_php* value_to_return0;
                 value_to_return0 = (wxEventLoopBase_php*) wxEventLoopBase::GetActive();
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -520,7 +520,7 @@ PHP_METHOD(php_wxEventLoopBase, IsEventAllowedInsideYield)
 
                 if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxEventLoopBase_php*)native_object)->IsEventAllowedInsideYield((wxEventCategory) cat0));
+                    RETVAL_BOOL(((wxEventLoopBase_php*)native_object)->IsEventAllowedInsideYield((wxEventCategory) cat0));
                 }
 
 
@@ -630,7 +630,7 @@ PHP_METHOD(php_wxEventLoopBase, IsMain)
 
                 if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxEventLoopBase_php*)native_object)->IsMain());
+                    RETVAL_BOOL(((wxEventLoopBase_php*)native_object)->IsMain());
                 }
 
 
@@ -740,7 +740,7 @@ PHP_METHOD(php_wxEventLoopBase, IsOk)
 
                 if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxEventLoopBase_php*)native_object)->IsOk());
+                    RETVAL_BOOL(((wxEventLoopBase_php*)native_object)->IsOk());
                 }
 
 
@@ -850,7 +850,7 @@ PHP_METHOD(php_wxEventLoopBase, IsRunning)
 
                 if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxEventLoopBase_php*)native_object)->IsRunning());
+                    RETVAL_BOOL(((wxEventLoopBase_php*)native_object)->IsRunning());
                 }
 
 
@@ -960,7 +960,7 @@ PHP_METHOD(php_wxEventLoopBase, IsYielding)
 
                 if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxEventLoopBase_php*)native_object)->IsYielding());
+                    RETVAL_BOOL(((wxEventLoopBase_php*)native_object)->IsYielding());
                 }
 
 
@@ -1142,7 +1142,7 @@ bool wxEventLoopBase_php::Pending()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -1234,7 +1234,7 @@ PHP_METHOD(php_wxEventLoopBase, ProcessIdle)
 
                 if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxEventLoopBase_php*)native_object)->ProcessIdle());
+                    RETVAL_BOOL(((wxEventLoopBase_php*)native_object)->ProcessIdle());
                 }
 
 
@@ -1880,7 +1880,7 @@ PHP_METHOD(php_wxEventLoopBase, YieldMethod)
 
                 if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxEventLoopBase_php*)native_object)->Yield());
+                    RETVAL_BOOL(((wxEventLoopBase_php*)native_object)->Yield());
                 }
 
 
@@ -1895,7 +1895,7 @@ PHP_METHOD(php_wxEventLoopBase, YieldMethod)
 
                 if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxEventLoopBase_php*)native_object)->Yield(onlyIfNeeded0));
+                    RETVAL_BOOL(((wxEventLoopBase_php*)native_object)->Yield(onlyIfNeeded0));
                 }
 
 
@@ -2010,7 +2010,7 @@ PHP_METHOD(php_wxEventLoopBase, YieldFor)
 
                 if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxEventLoopBase_php*)native_object)->YieldFor((long) eventsToProcess0));
+                    RETVAL_BOOL(((wxEventLoopBase_php*)native_object)->YieldFor((long) eventsToProcess0));
                 }
 
 
@@ -2453,7 +2453,7 @@ bool wxModule_php::OnInit()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -2925,7 +2925,7 @@ PHP_METHOD(php_wxProcess, Exists)
                 php_printf("Executing RETURN_BOOL(wxProcess::Exists((int) pid0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxProcess::Exists((int) pid0));
+                RETVAL_BOOL(wxProcess::Exists((int) pid0));
 
 
                 return;
@@ -3036,7 +3036,7 @@ PHP_METHOD(php_wxProcess, GetErrorStream)
                 value_to_return0 = (wxInputStream_php*) ((wxProcess_php*)native_object)->GetErrorStream();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -3166,7 +3166,7 @@ PHP_METHOD(php_wxProcess, GetInputStream)
                 value_to_return0 = (wxInputStream_php*) ((wxProcess_php*)native_object)->GetInputStream();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -3296,7 +3296,7 @@ PHP_METHOD(php_wxProcess, GetOutputStream)
                 value_to_return0 = (wxOutputStream_php*) ((wxProcess_php*)native_object)->GetOutputStream();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -3422,7 +3422,7 @@ PHP_METHOD(php_wxProcess, GetPid)
                 php_printf("Executing RETURN_LONG(wxProcess::GetPid())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxProcess_php*)native_object)->GetPid());
+                RETVAL_LONG(((wxProcess_php*)native_object)->GetPid());
 
 
                 return;
@@ -3529,7 +3529,7 @@ PHP_METHOD(php_wxProcess, IsErrorAvailable)
                 php_printf("Executing RETURN_BOOL(wxProcess::IsErrorAvailable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxProcess_php*)native_object)->IsErrorAvailable());
+                RETVAL_BOOL(((wxProcess_php*)native_object)->IsErrorAvailable());
 
 
                 return;
@@ -3636,7 +3636,7 @@ PHP_METHOD(php_wxProcess, IsInputOpened)
                 php_printf("Executing RETURN_BOOL(wxProcess::IsInputOpened())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxProcess_php*)native_object)->IsInputOpened());
+                RETVAL_BOOL(((wxProcess_php*)native_object)->IsInputOpened());
 
 
                 return;
@@ -3751,7 +3751,7 @@ PHP_METHOD(php_wxProcess, Kill)
                 php_printf("Executing RETURN_LONG(wxProcess::Kill((int) pid0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxProcess::Kill((int) pid0));
+                RETVAL_LONG(wxProcess::Kill((int) pid0));
 
 
                 return;
@@ -3764,7 +3764,7 @@ PHP_METHOD(php_wxProcess, Kill)
                 php_printf("Executing RETURN_LONG(wxProcess::Kill((int) pid0, (wxSignal) sig0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxProcess::Kill((int) pid0, (wxSignal) sig0));
+                RETVAL_LONG(wxProcess::Kill((int) pid0, (wxSignal) sig0));
 
 
                 return;
@@ -3777,7 +3777,7 @@ PHP_METHOD(php_wxProcess, Kill)
                 php_printf("Executing RETURN_LONG(wxProcess::Kill((int) pid0, (wxSignal) sig0, (int) flags0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxProcess::Kill((int) pid0, (wxSignal) sig0, (int) flags0));
+                RETVAL_LONG(wxProcess::Kill((int) pid0, (wxSignal) sig0, (int) flags0));
 
 
                 return;
@@ -3884,7 +3884,7 @@ PHP_METHOD(php_wxProcess, IsInputAvailable)
                 php_printf("Executing RETURN_BOOL(wxProcess::IsInputAvailable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxProcess_php*)native_object)->IsInputAvailable());
+                RETVAL_BOOL(((wxProcess_php*)native_object)->IsInputAvailable());
 
 
                 return;
@@ -4204,7 +4204,7 @@ PHP_METHOD(php_wxProcess, Open)
                 wxProcess_php* value_to_return1;
                 value_to_return1 = (wxProcess_php*) wxProcess::Open(wxString(cmd0, wxConvUTF8));
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -4236,7 +4236,7 @@ PHP_METHOD(php_wxProcess, Open)
                 wxProcess_php* value_to_return2;
                 value_to_return2 = (wxProcess_php*) wxProcess::Open(wxString(cmd0, wxConvUTF8), (int) flags0);
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -4616,7 +4616,7 @@ PHP_METHOD(php_wxSingleInstanceChecker, Create)
                 php_printf("Executing RETURN_BOOL(wxSingleInstanceChecker::Create(wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSingleInstanceChecker_php*)native_object)->Create(wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxSingleInstanceChecker_php*)native_object)->Create(wxString(name0, wxConvUTF8)));
 
 
                 return;
@@ -4628,7 +4628,7 @@ PHP_METHOD(php_wxSingleInstanceChecker, Create)
                 php_printf("Executing RETURN_BOOL(wxSingleInstanceChecker::Create(wxString(name0, wxConvUTF8), wxString(path0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSingleInstanceChecker_php*)native_object)->Create(wxString(name0, wxConvUTF8), wxString(path0, wxConvUTF8)));
+                RETVAL_BOOL(((wxSingleInstanceChecker_php*)native_object)->Create(wxString(name0, wxConvUTF8), wxString(path0, wxConvUTF8)));
 
 
                 return;
@@ -4735,7 +4735,7 @@ PHP_METHOD(php_wxSingleInstanceChecker, CreateDefault)
                 php_printf("Executing RETURN_BOOL(wxSingleInstanceChecker::CreateDefault())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSingleInstanceChecker_php*)native_object)->CreateDefault());
+                RETVAL_BOOL(((wxSingleInstanceChecker_php*)native_object)->CreateDefault());
 
 
                 return;
@@ -4842,7 +4842,7 @@ PHP_METHOD(php_wxSingleInstanceChecker, IsAnotherRunning)
                 php_printf("Executing RETURN_BOOL(wxSingleInstanceChecker::IsAnotherRunning())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSingleInstanceChecker_php*)native_object)->IsAnotherRunning());
+                RETVAL_BOOL(((wxSingleInstanceChecker_php*)native_object)->IsAnotherRunning());
 
 
                 return;

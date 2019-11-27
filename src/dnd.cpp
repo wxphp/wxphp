@@ -239,7 +239,7 @@ PHP_METHOD(php_wxClipboard, AddData)
                 php_printf("Executing RETURN_BOOL(wxClipboard::AddData((wxDataObject*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxClipboard_php*)native_object)->AddData((wxDataObject*) object_pointer0_0));
+                RETVAL_BOOL(((wxClipboard_php*)native_object)->AddData((wxDataObject*) object_pointer0_0));
 
                 references->AddReference(data0, "wxClipboard::AddData at call 1 with 1 argument(s)");
 
@@ -561,7 +561,7 @@ PHP_METHOD(php_wxClipboard, Flush)
                 php_printf("Executing RETURN_BOOL(wxClipboard::Flush())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxClipboard_php*)native_object)->Flush());
+                RETVAL_BOOL(((wxClipboard_php*)native_object)->Flush());
 
 
                 return;
@@ -691,7 +691,7 @@ PHP_METHOD(php_wxClipboard, GetData)
                 php_printf("Executing RETURN_BOOL(wxClipboard::GetData(*(wxDataObject*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxClipboard_php*)native_object)->GetData(*(wxDataObject*) object_pointer0_0));
+                RETVAL_BOOL(((wxClipboard_php*)native_object)->GetData(*(wxDataObject*) object_pointer0_0));
 
                 references->AddReference(data0, "wxClipboard::GetData at call 3 with 1 argument(s)");
 
@@ -799,7 +799,7 @@ PHP_METHOD(php_wxClipboard, IsOpened)
                 php_printf("Executing RETURN_BOOL(wxClipboard::IsOpened())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxClipboard_php*)native_object)->IsOpened());
+                RETVAL_BOOL(((wxClipboard_php*)native_object)->IsOpened());
 
 
                 return;
@@ -929,7 +929,7 @@ PHP_METHOD(php_wxClipboard, IsSupported)
                 php_printf("Executing RETURN_BOOL(wxClipboard::IsSupported(*(wxDataFormat*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxClipboard_php*)native_object)->IsSupported(*(wxDataFormat*) object_pointer0_0));
+                RETVAL_BOOL(((wxClipboard_php*)native_object)->IsSupported(*(wxDataFormat*) object_pointer0_0));
 
                 references->AddReference(format0, "wxClipboard::IsSupported at call 3 with 1 argument(s)");
 
@@ -1037,7 +1037,7 @@ PHP_METHOD(php_wxClipboard, IsUsingPrimarySelection)
                 php_printf("Executing RETURN_BOOL(wxClipboard::IsUsingPrimarySelection())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxClipboard_php*)native_object)->IsUsingPrimarySelection());
+                RETVAL_BOOL(((wxClipboard_php*)native_object)->IsUsingPrimarySelection());
 
 
                 return;
@@ -1144,7 +1144,7 @@ PHP_METHOD(php_wxClipboard, Open)
                 php_printf("Executing RETURN_BOOL(wxClipboard::Open())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxClipboard_php*)native_object)->Open());
+                RETVAL_BOOL(((wxClipboard_php*)native_object)->Open());
 
 
                 return;
@@ -1274,7 +1274,7 @@ PHP_METHOD(php_wxClipboard, SetData)
                 php_printf("Executing RETURN_BOOL(wxClipboard::SetData((wxDataObject*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxClipboard_php*)native_object)->SetData((wxDataObject*) object_pointer0_0));
+                RETVAL_BOOL(((wxClipboard_php*)native_object)->SetData((wxDataObject*) object_pointer0_0));
 
                 references->AddReference(data0, "wxClipboard::SetData at call 1 with 1 argument(s)");
 
@@ -1593,7 +1593,7 @@ PHP_METHOD(php_wxClipboard, Get)
                 wxClipboard_php* value_to_return0;
                 value_to_return0 = (wxClipboard_php*) wxClipboard::Get();
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -1797,7 +1797,7 @@ PHP_METHOD(php_wxDataFormat, GetId)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxDataFormat_php*)native_object)->GetId();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1904,7 +1904,7 @@ PHP_METHOD(php_wxDataFormat, GetType)
                 php_printf("Executing RETURN_LONG(wxDataFormat::GetType())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxDataFormat_php*)native_object)->GetType());
+                RETVAL_LONG(((wxDataFormat_php*)native_object)->GetType());
 
 
                 return;
@@ -2523,7 +2523,7 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -2946,7 +2946,7 @@ PHP_METHOD(php_wxDataObject, IsSupported)
                 php_printf("Executing RETURN_BOOL(wxDataObject::IsSupported(*(wxDataFormat*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDataObject_php*)native_object)->IsSupported(*(wxDataFormat*) object_pointer0_0));
+                RETVAL_BOOL(((wxDataObject_php*)native_object)->IsSupported(*(wxDataFormat*) object_pointer0_0));
 
                 references->AddReference(format0, "wxDataObject::IsSupported at call 3 with 1 argument(s)");
 
@@ -2959,7 +2959,7 @@ PHP_METHOD(php_wxDataObject, IsSupported)
                 php_printf("Executing RETURN_BOOL(wxDataObject::IsSupported(*(wxDataFormat*) object_pointer0_0, (wxDataObject::Direction) dir0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDataObject_php*)native_object)->IsSupported(*(wxDataFormat*) object_pointer0_0, (wxDataObject::Direction) dir0));
+                RETVAL_BOOL(((wxDataObject_php*)native_object)->IsSupported(*(wxDataFormat*) object_pointer0_0, (wxDataObject::Direction) dir0));
 
                 references->AddReference(format0, "wxDataObject::IsSupported at call 3 with 2 argument(s)");
 
@@ -3167,7 +3167,7 @@ PHP_METHOD(php_wxDataObject, SetData)
                 php_printf("Executing RETURN_BOOL(wxDataObject::SetData(*(wxDataFormat*) object_pointer0_0, (size_t) len0, (const void*) buf0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDataObject_php*)native_object)->SetData(*(wxDataFormat*) object_pointer0_0, (size_t) len0, (const void*) buf0));
+                RETVAL_BOOL(((wxDataObject_php*)native_object)->SetData(*(wxDataFormat*) object_pointer0_0, (size_t) len0, (const void*) buf0));
 
                 references->AddReference(format0, "wxDataObject::SetData at call 3 with 3 argument(s)");
 
@@ -3187,7 +3187,7 @@ PHP_METHOD(php_wxDataObject, SetData)
                 php_printf("Executing RETURN_BOOL(wxDataObjectSimple::SetData((size_t) len1, (const void*) buf1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDataObjectSimple_php*)native_object)->SetData((size_t) len1, (const void*) buf1));
+                RETVAL_BOOL(((wxDataObjectSimple_php*)native_object)->SetData((size_t) len1, (const void*) buf1));
 
 
                 return;
@@ -3206,7 +3206,7 @@ PHP_METHOD(php_wxDataObject, SetData)
                 php_printf("Executing RETURN_BOOL(wxCustomDataObject::SetData((size_t) size2, (const void*) data2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCustomDataObject_php*)native_object)->SetData((size_t) size2, (const void*) data2));
+                RETVAL_BOOL(((wxCustomDataObject_php*)native_object)->SetData((size_t) size2, (const void*) data2));
 
 
                 return;
@@ -3452,7 +3452,7 @@ PHP_METHOD(php_wxCustomDataObject, Alloc)
                 php_printf("Executing wxCustomDataObject::Alloc((size_t) size0)\n\n");
                 #endif
 
-                ZVAL_STRING(return_value, (char*) ((wxCustomDataObject_php*)native_object)->Alloc((size_t) size0));
+                RETVAL_STRING((char*) ((wxCustomDataObject_php*)native_object)->Alloc((size_t) size0));
 
 
                 return;
@@ -3666,7 +3666,7 @@ PHP_METHOD(php_wxCustomDataObject, GetData)
                 php_printf("Executing wxCustomDataObject::GetData()\n\n");
                 #endif
 
-                ZVAL_STRING(return_value, (char*) ((wxCustomDataObject_php*)native_object)->GetData());
+                RETVAL_STRING((char*) ((wxCustomDataObject_php*)native_object)->GetData());
 
 
                 return;
@@ -3773,7 +3773,7 @@ PHP_METHOD(php_wxCustomDataObject, GetSize)
                 php_printf("Executing RETURN_LONG(wxCustomDataObject::GetSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxCustomDataObject_php*)native_object)->GetSize());
+                RETVAL_LONG(((wxCustomDataObject_php*)native_object)->GetSize());
 
 
                 return;
@@ -3887,7 +3887,7 @@ PHP_METHOD(php_wxCustomDataObject, SetData)
                 php_printf("Executing RETURN_BOOL(wxCustomDataObject::SetData((size_t) size0, (const void*) data0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCustomDataObject_php*)native_object)->SetData((size_t) size0, (const void*) data0));
+                RETVAL_BOOL(((wxCustomDataObject_php*)native_object)->SetData((size_t) size0, (const void*) data0));
 
 
                 return;
@@ -4652,7 +4652,7 @@ PHP_METHOD(php_wxDataObjectComposite, GetObject)
                 value_to_return1 = (wxDataObjectSimple_php*) ((wxDataObjectComposite_php*)native_object)->GetObject(*(wxDataFormat*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -4688,7 +4688,7 @@ PHP_METHOD(php_wxDataObjectComposite, GetObject)
                 value_to_return2 = (wxDataObjectSimple_php*) ((wxDataObjectComposite_php*)native_object)->GetObject(*(wxDataFormat*) object_pointer0_0, (wxDataObject::Direction) dir0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -4896,7 +4896,7 @@ PHP_METHOD(php_wxDataObjectSimple, GetDataHere)
                 php_printf("Executing RETURN_BOOL(wxDataObjectSimple::GetDataHere((void*) buf0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDataObjectSimple_php*)native_object)->GetDataHere((void*) buf0));
+                RETVAL_BOOL(((wxDataObjectSimple_php*)native_object)->GetDataHere((void*) buf0));
 
                 ZVAL_STRING(&buf0_ref, (char*) buf0);
 
@@ -5024,7 +5024,7 @@ PHP_METHOD(php_wxDataObjectSimple, GetDataSize)
                 php_printf("Executing RETURN_LONG(wxDataObjectSimple::GetDataSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxDataObjectSimple_php*)native_object)->GetDataSize());
+                RETVAL_LONG(((wxDataObjectSimple_php*)native_object)->GetDataSize());
 
 
                 return;
@@ -5305,7 +5305,7 @@ PHP_METHOD(php_wxDataObjectSimple, SetData)
                 php_printf("Executing RETURN_BOOL(wxDataObjectSimple::SetData((size_t) len0, (const void*) buf0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDataObjectSimple_php*)native_object)->SetData((size_t) len0, (const void*) buf0));
+                RETVAL_BOOL(((wxDataObjectSimple_php*)native_object)->SetData((size_t) len0, (const void*) buf0));
 
 
                 return;
@@ -6149,7 +6149,7 @@ PHP_METHOD(php_wxURLDataObject, GetURL)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxURLDataObject_php*)native_object)->GetURL();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -6657,7 +6657,7 @@ PHP_METHOD(php_wxTextDataObject, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextDataObject_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -6768,7 +6768,7 @@ PHP_METHOD(php_wxTextDataObject, GetTextLength)
                 php_printf("Executing RETURN_LONG(wxTextDataObject::GetTextLength())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextDataObject_php*)native_object)->GetTextLength());
+                RETVAL_LONG(((wxTextDataObject_php*)native_object)->GetTextLength());
 
 
                 return;
@@ -6884,7 +6884,7 @@ PHP_METHOD(php_wxTextDataObject, GetFormatCount)
                 php_printf("Executing RETURN_LONG(wxTextDataObject::GetFormatCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextDataObject_php*)native_object)->GetFormatCount());
+                RETVAL_LONG(((wxTextDataObject_php*)native_object)->GetFormatCount());
 
 
                 return;
@@ -6896,7 +6896,7 @@ PHP_METHOD(php_wxTextDataObject, GetFormatCount)
                 php_printf("Executing RETURN_LONG(wxTextDataObject::GetFormatCount((wxDataObject::Direction) dir0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextDataObject_php*)native_object)->GetFormatCount((wxDataObject::Direction) dir0));
+                RETVAL_LONG(((wxTextDataObject_php*)native_object)->GetFormatCount((wxDataObject::Direction) dir0));
 
 
                 return;
@@ -8321,7 +8321,7 @@ PHP_METHOD(php_wxDropTarget, GetData)
                 php_printf("Executing RETURN_BOOL(wxDropTarget::GetData())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDropTarget_php*)native_object)->GetData());
+                RETVAL_BOOL(((wxDropTarget_php*)native_object)->GetData());
 
 
                 return;
@@ -8516,7 +8516,7 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -8751,7 +8751,7 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -8837,7 +8837,7 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -9076,7 +9076,7 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -9162,7 +9162,7 @@ bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG

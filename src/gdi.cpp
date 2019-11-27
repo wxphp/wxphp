@@ -343,7 +343,7 @@ PHP_METHOD(php_wxGraphicsGradientStop, GetPosition)
                 php_printf("Executing RETURN_LONG(wxGraphicsGradientStop::GetPosition())\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxGraphicsGradientStop_php*)native_object)->GetPosition());
+                RETVAL_DOUBLE(((wxGraphicsGradientStop_php*)native_object)->GetPosition());
 
 
                 return;
@@ -1091,7 +1091,7 @@ PHP_METHOD(php_wxGraphicsGradientStops, GetCount)
                 php_printf("Executing RETURN_LONG(wxGraphicsGradientStops::GetCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGraphicsGradientStops_php*)native_object)->GetCount());
+                RETVAL_LONG(((wxGraphicsGradientStops_php*)native_object)->GetCount());
 
 
                 return;
@@ -2038,7 +2038,7 @@ PHP_METHOD(php_wxAnimation, GetDelay)
                 php_printf("Executing RETURN_LONG(wxAnimation::GetDelay((unsigned int) i0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAnimation_php*)native_object)->GetDelay((unsigned int) i0));
+                RETVAL_LONG(((wxAnimation_php*)native_object)->GetDelay((unsigned int) i0));
 
 
                 return;
@@ -2265,7 +2265,7 @@ PHP_METHOD(php_wxAnimation, GetFrameCount)
                 php_printf("Executing RETURN_LONG(wxAnimation::GetFrameCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxAnimation_php*)native_object)->GetFrameCount());
+                RETVAL_LONG(((wxAnimation_php*)native_object)->GetFrameCount());
 
 
                 return;
@@ -2486,7 +2486,7 @@ PHP_METHOD(php_wxAnimation, IsOk)
                 php_printf("Executing RETURN_BOOL(wxAnimation::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAnimation_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxAnimation_php*)native_object)->IsOk());
 
 
                 return;
@@ -2600,7 +2600,7 @@ PHP_METHOD(php_wxAnimation, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxAnimation::LoadFile(wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAnimation_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxAnimation_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8)));
 
 
                 return;
@@ -2612,7 +2612,7 @@ PHP_METHOD(php_wxAnimation, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxAnimation::LoadFile(wxString(name0, wxConvUTF8), (wxAnimationType) type0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAnimation_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8), (wxAnimationType) type0));
+                RETVAL_BOOL(((wxAnimation_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8), (wxAnimationType) type0));
 
 
                 return;
@@ -2902,7 +2902,7 @@ PHP_METHOD(php_wxAnimation, Load)
                 php_printf("Executing RETURN_BOOL(wxAnimation::Load(*(wxInputStream*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAnimation_php*)native_object)->Load(*(wxInputStream*) object_pointer0_0));
+                RETVAL_BOOL(((wxAnimation_php*)native_object)->Load(*(wxInputStream*) object_pointer0_0));
 
                 references->AddReference(stream0, "wxAnimation::Load at call 3 with 1 argument(s)");
 
@@ -2915,7 +2915,7 @@ PHP_METHOD(php_wxAnimation, Load)
                 php_printf("Executing RETURN_BOOL(wxAnimation::Load(*(wxInputStream*) object_pointer0_0, (wxAnimationType) type0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAnimation_php*)native_object)->Load(*(wxInputStream*) object_pointer0_0, (wxAnimationType) type0));
+                RETVAL_BOOL(((wxAnimation_php*)native_object)->Load(*(wxInputStream*) object_pointer0_0, (wxAnimationType) type0));
 
                 references->AddReference(stream0, "wxAnimation::Load at call 3 with 2 argument(s)");
 
@@ -3551,7 +3551,7 @@ PHP_METHOD(php_wxBitmapHandler, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxBitmapHandler::LoadFile((wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0, (int) desiredWidth0, (int) desiredHeight0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmapHandler_php*)native_object)->LoadFile((wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0, (int) desiredWidth0, (int) desiredHeight0));
+                RETVAL_BOOL(((wxBitmapHandler_php*)native_object)->LoadFile((wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0, (int) desiredWidth0, (int) desiredHeight0));
 
                 references->AddReference(bitmap0, "wxBitmapHandler::LoadFile at call 1 with 5 argument(s)");
 
@@ -3659,7 +3659,7 @@ PHP_METHOD(php_wxBitmapHandler, GetType)
                 php_printf("Executing RETURN_LONG(wxBitmapHandler::GetType())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxBitmapHandler_php*)native_object)->GetType());
+                RETVAL_LONG(((wxBitmapHandler_php*)native_object)->GetType());
 
 
                 return;
@@ -3768,7 +3768,7 @@ PHP_METHOD(php_wxBitmapHandler, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxBitmapHandler_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3877,7 +3877,7 @@ PHP_METHOD(php_wxBitmapHandler, GetExtension)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxBitmapHandler_php*)native_object)->GetExtension();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -4029,7 +4029,7 @@ PHP_METHOD(php_wxBitmapHandler, SaveFile)
                 php_printf("Executing RETURN_BOOL(wxBitmapHandler::SaveFile((const wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmapHandler_php*)native_object)->SaveFile((const wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0));
+                RETVAL_BOOL(((wxBitmapHandler_php*)native_object)->SaveFile((const wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0));
 
                 references->AddReference(bitmap0, "wxBitmapHandler::SaveFile at call 1 with 3 argument(s)");
 
@@ -4042,7 +4042,7 @@ PHP_METHOD(php_wxBitmapHandler, SaveFile)
                 php_printf("Executing RETURN_BOOL(wxBitmapHandler::SaveFile((const wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0, (const wxPalette*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmapHandler_php*)native_object)->SaveFile((const wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0, (const wxPalette*) object_pointer0_3));
+                RETVAL_BOOL(((wxBitmapHandler_php*)native_object)->SaveFile((const wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0, (const wxPalette*) object_pointer0_3));
 
                 references->AddReference(bitmap0, "wxBitmapHandler::SaveFile at call 1 with 4 argument(s)");
                 references->AddReference(palette0, "wxBitmapHandler::SaveFile at call 1 with 4 argument(s)");
@@ -4180,7 +4180,7 @@ PHP_METHOD(php_wxBitmapHandler, Create)
                 php_printf("Executing RETURN_BOOL(wxBitmapHandler::Create((wxBitmap*) object_pointer0_0, (const void*) data0, (wxBitmapType) type0, (int) width0, (int) height0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmapHandler_php*)native_object)->Create((wxBitmap*) object_pointer0_0, (const void*) data0, (wxBitmapType) type0, (int) width0, (int) height0));
+                RETVAL_BOOL(((wxBitmapHandler_php*)native_object)->Create((wxBitmap*) object_pointer0_0, (const void*) data0, (wxBitmapType) type0, (int) width0, (int) height0));
 
                 references->AddReference(bitmap0, "wxBitmapHandler::Create at call 1 with 5 argument(s)");
 
@@ -4193,7 +4193,7 @@ PHP_METHOD(php_wxBitmapHandler, Create)
                 php_printf("Executing RETURN_BOOL(wxBitmapHandler::Create((wxBitmap*) object_pointer0_0, (const void*) data0, (wxBitmapType) type0, (int) width0, (int) height0, (int) depth0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmapHandler_php*)native_object)->Create((wxBitmap*) object_pointer0_0, (const void*) data0, (wxBitmapType) type0, (int) width0, (int) height0, (int) depth0));
+                RETVAL_BOOL(((wxBitmapHandler_php*)native_object)->Create((wxBitmap*) object_pointer0_0, (const void*) data0, (wxBitmapType) type0, (int) width0, (int) height0, (int) depth0));
 
                 references->AddReference(bitmap0, "wxBitmapHandler::Create at call 1 with 6 argument(s)");
 
@@ -5153,7 +5153,7 @@ PHP_METHOD(php_wxBitmap, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxBitmap::LoadFile(wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmap_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxBitmap_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8)));
 
 
                 return;
@@ -5165,7 +5165,7 @@ PHP_METHOD(php_wxBitmap, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxBitmap::LoadFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmap_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0));
+                RETVAL_BOOL(((wxBitmap_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0));
 
 
                 return;
@@ -5279,7 +5279,7 @@ PHP_METHOD(php_wxBitmap, RemoveHandler)
                 php_printf("Executing RETURN_BOOL(wxBitmap::RemoveHandler(wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxBitmap::RemoveHandler(wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(wxBitmap::RemoveHandler(wxString(name0, wxConvUTF8)));
 
 
                 return;
@@ -5412,7 +5412,7 @@ PHP_METHOD(php_wxBitmap, SaveFile)
                 php_printf("Executing RETURN_BOOL(wxBitmap::SaveFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmap_php*)native_object)->SaveFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0));
+                RETVAL_BOOL(((wxBitmap_php*)native_object)->SaveFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0));
 
 
                 return;
@@ -5424,7 +5424,7 @@ PHP_METHOD(php_wxBitmap, SaveFile)
                 php_printf("Executing RETURN_BOOL(wxBitmap::SaveFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0, (const wxPalette*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmap_php*)native_object)->SaveFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0, (const wxPalette*) object_pointer0_2));
+                RETVAL_BOOL(((wxBitmap_php*)native_object)->SaveFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0, (const wxPalette*) object_pointer0_2));
 
                 references->AddReference(palette0, "wxBitmap::SaveFile at call 1 with 3 argument(s)");
 
@@ -6006,7 +6006,7 @@ PHP_METHOD(php_wxBitmap, CopyFromIcon)
                 php_printf("Executing RETURN_BOOL(wxBitmap::CopyFromIcon(*(wxIcon*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmap_php*)native_object)->CopyFromIcon(*(wxIcon*) object_pointer0_0));
+                RETVAL_BOOL(((wxBitmap_php*)native_object)->CopyFromIcon(*(wxIcon*) object_pointer0_0));
 
                 references->AddReference(icon0, "wxBitmap::CopyFromIcon at call 3 with 1 argument(s)");
 
@@ -6161,7 +6161,7 @@ PHP_METHOD(php_wxBitmap, Create)
                 php_printf("Executing RETURN_BOOL(wxBitmap::Create((int) width0, (int) height0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmap_php*)native_object)->Create((int) width0, (int) height0));
+                RETVAL_BOOL(((wxBitmap_php*)native_object)->Create((int) width0, (int) height0));
 
 
                 return;
@@ -6173,7 +6173,7 @@ PHP_METHOD(php_wxBitmap, Create)
                 php_printf("Executing RETURN_BOOL(wxBitmap::Create((int) width0, (int) height0, (int) depth0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmap_php*)native_object)->Create((int) width0, (int) height0, (int) depth0));
+                RETVAL_BOOL(((wxBitmap_php*)native_object)->Create((int) width0, (int) height0, (int) depth0));
 
 
                 return;
@@ -6192,7 +6192,7 @@ PHP_METHOD(php_wxBitmap, Create)
                 php_printf("Executing RETURN_BOOL(wxBitmap::Create(*(wxSize*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmap_php*)native_object)->Create(*(wxSize*) object_pointer1_0));
+                RETVAL_BOOL(((wxBitmap_php*)native_object)->Create(*(wxSize*) object_pointer1_0));
 
                 references->AddReference(sz1, "wxBitmap::Create at call 3 with 1 argument(s)");
 
@@ -6205,7 +6205,7 @@ PHP_METHOD(php_wxBitmap, Create)
                 php_printf("Executing RETURN_BOOL(wxBitmap::Create(*(wxSize*) object_pointer1_0, (int) depth1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmap_php*)native_object)->Create(*(wxSize*) object_pointer1_0, (int) depth1));
+                RETVAL_BOOL(((wxBitmap_php*)native_object)->Create(*(wxSize*) object_pointer1_0, (int) depth1));
 
                 references->AddReference(sz1, "wxBitmap::Create at call 3 with 2 argument(s)");
 
@@ -6367,7 +6367,7 @@ PHP_METHOD(php_wxBitmap, FindHandler)
                 wxBitmapHandler_php* value_to_return1;
                 value_to_return1 = (wxBitmapHandler_php*) wxBitmap::FindHandler(wxString(name0, wxConvUTF8));
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -6406,7 +6406,7 @@ PHP_METHOD(php_wxBitmap, FindHandler)
                 wxBitmapHandler_php* value_to_return2;
                 value_to_return2 = (wxBitmapHandler_php*) wxBitmap::FindHandler(wxString(extension1, wxConvUTF8), (wxBitmapType) bitmapType1);
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -6445,7 +6445,7 @@ PHP_METHOD(php_wxBitmap, FindHandler)
                 wxBitmapHandler_php* value_to_return1;
                 value_to_return1 = (wxBitmapHandler_php*) wxBitmap::FindHandler((wxBitmapType) bitmapType2);
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -6568,7 +6568,7 @@ PHP_METHOD(php_wxBitmap, GetDepth)
                 php_printf("Executing RETURN_LONG(wxBitmap::GetDepth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxBitmap_php*)native_object)->GetDepth());
+                RETVAL_LONG(((wxBitmap_php*)native_object)->GetDepth());
 
 
                 return;
@@ -6675,7 +6675,7 @@ PHP_METHOD(php_wxBitmap, GetHeight)
                 php_printf("Executing RETURN_LONG(wxBitmap::GetHeight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxBitmap_php*)native_object)->GetHeight());
+                RETVAL_LONG(((wxBitmap_php*)native_object)->GetHeight());
 
 
                 return;
@@ -6786,7 +6786,7 @@ PHP_METHOD(php_wxBitmap, GetMask)
                 value_to_return0 = (wxMask_php*) ((wxBitmap_php*)native_object)->GetMask();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -6916,7 +6916,7 @@ PHP_METHOD(php_wxBitmap, GetPalette)
                 value_to_return0 = (wxPalette_php*) ((wxBitmap_php*)native_object)->GetPalette();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -7295,7 +7295,7 @@ PHP_METHOD(php_wxBitmap, GetWidth)
                 php_printf("Executing RETURN_LONG(wxBitmap::GetWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxBitmap_php*)native_object)->GetWidth());
+                RETVAL_LONG(((wxBitmap_php*)native_object)->GetWidth());
 
 
                 return;
@@ -7641,7 +7641,7 @@ PHP_METHOD(php_wxBitmap, IsOk)
                 php_printf("Executing RETURN_BOOL(wxBitmap::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBitmap_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxBitmap_php*)native_object)->IsOk());
 
 
                 return;
@@ -8210,7 +8210,7 @@ PHP_METHOD(php_wxMask, Create)
                 php_printf("Executing RETURN_BOOL(wxMask::Create(*(wxBitmap*) object_pointer0_0, (int) index0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMask_php*)native_object)->Create(*(wxBitmap*) object_pointer0_0, (int) index0));
+                RETVAL_BOOL(((wxMask_php*)native_object)->Create(*(wxBitmap*) object_pointer0_0, (int) index0));
 
                 references->AddReference(bitmap0, "wxMask::Create at call 3 with 2 argument(s)");
 
@@ -8230,7 +8230,7 @@ PHP_METHOD(php_wxMask, Create)
                 php_printf("Executing RETURN_BOOL(wxMask::Create(*(wxBitmap*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMask_php*)native_object)->Create(*(wxBitmap*) object_pointer1_0));
+                RETVAL_BOOL(((wxMask_php*)native_object)->Create(*(wxBitmap*) object_pointer1_0));
 
                 references->AddReference(bitmap1, "wxMask::Create at call 3 with 1 argument(s)");
 
@@ -8250,7 +8250,7 @@ PHP_METHOD(php_wxMask, Create)
                 php_printf("Executing RETURN_BOOL(wxMask::Create(*(wxBitmap*) object_pointer2_0, *(wxColour*) object_pointer2_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMask_php*)native_object)->Create(*(wxBitmap*) object_pointer2_0, *(wxColour*) object_pointer2_1));
+                RETVAL_BOOL(((wxMask_php*)native_object)->Create(*(wxBitmap*) object_pointer2_0, *(wxColour*) object_pointer2_1));
 
                 references->AddReference(bitmap2, "wxMask::Create at call 3 with 2 argument(s)");
                 references->AddReference(colour2, "wxMask::Create at call 3 with 2 argument(s)");
@@ -8835,7 +8835,7 @@ PHP_METHOD(php_wxBrush, GetStipple)
                 value_to_return0 = (wxBitmap_php*) ((wxBrush_php*)native_object)->GetStipple();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -8961,7 +8961,7 @@ PHP_METHOD(php_wxBrush, GetStyle)
                 php_printf("Executing RETURN_LONG(wxBrush::GetStyle())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxBrush_php*)native_object)->GetStyle());
+                RETVAL_LONG(((wxBrush_php*)native_object)->GetStyle());
 
 
                 return;
@@ -9068,7 +9068,7 @@ PHP_METHOD(php_wxBrush, IsHatch)
                 php_printf("Executing RETURN_BOOL(wxBrush::IsHatch())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBrush_php*)native_object)->IsHatch());
+                RETVAL_BOOL(((wxBrush_php*)native_object)->IsHatch());
 
 
                 return;
@@ -9175,7 +9175,7 @@ PHP_METHOD(php_wxBrush, IsNonTransparent)
                 php_printf("Executing RETURN_BOOL(wxBrush::IsNonTransparent())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBrush_php*)native_object)->IsNonTransparent());
+                RETVAL_BOOL(((wxBrush_php*)native_object)->IsNonTransparent());
 
 
                 return;
@@ -9282,7 +9282,7 @@ PHP_METHOD(php_wxBrush, IsOk)
                 php_printf("Executing RETURN_BOOL(wxBrush::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBrush_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxBrush_php*)native_object)->IsOk());
 
 
                 return;
@@ -9389,7 +9389,7 @@ PHP_METHOD(php_wxBrush, IsTransparent)
                 php_printf("Executing RETURN_BOOL(wxBrush::IsTransparent())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxBrush_php*)native_object)->IsTransparent());
+                RETVAL_BOOL(((wxBrush_php*)native_object)->IsTransparent());
 
 
                 return;
@@ -10576,7 +10576,7 @@ PHP_METHOD(php_wxColour, Set)
                 php_printf("Executing RETURN_BOOL(wxColour::Set(wxString(str2, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColour_php*)native_object)->Set(wxString(str2, wxConvUTF8)));
+                RETVAL_BOOL(((wxColour_php*)native_object)->Set(wxString(str2, wxConvUTF8)));
 
 
                 return;
@@ -10683,7 +10683,7 @@ PHP_METHOD(php_wxColour, Red)
                 php_printf("Executing RETURN_LONG(wxColour::Red())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxColour_php*)native_object)->Red());
+                RETVAL_LONG(((wxColour_php*)native_object)->Red());
 
 
                 return;
@@ -11014,7 +11014,7 @@ PHP_METHOD(php_wxColour, Blue)
                 php_printf("Executing RETURN_LONG(wxColour::Blue())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxColour_php*)native_object)->Blue());
+                RETVAL_LONG(((wxColour_php*)native_object)->Blue());
 
 
                 return;
@@ -11121,7 +11121,7 @@ PHP_METHOD(php_wxColour, Green)
                 php_printf("Executing RETURN_LONG(wxColour::Green())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxColour_php*)native_object)->Green());
+                RETVAL_LONG(((wxColour_php*)native_object)->Green());
 
 
                 return;
@@ -11228,7 +11228,7 @@ PHP_METHOD(php_wxColour, GetRGBA)
                 php_printf("Executing RETURN_LONG(wxColour::GetRGBA())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxColour_php*)native_object)->GetRGBA());
+                RETVAL_LONG(((wxColour_php*)native_object)->GetRGBA());
 
 
                 return;
@@ -11335,7 +11335,7 @@ PHP_METHOD(php_wxColour, GetRGB)
                 php_printf("Executing RETURN_LONG(wxColour::GetRGB())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxColour_php*)native_object)->GetRGB());
+                RETVAL_LONG(((wxColour_php*)native_object)->GetRGB());
 
 
                 return;
@@ -11442,7 +11442,7 @@ PHP_METHOD(php_wxColour, Alpha)
                 php_printf("Executing RETURN_LONG(wxColour::Alpha())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxColour_php*)native_object)->Alpha());
+                RETVAL_LONG(((wxColour_php*)native_object)->Alpha());
 
 
                 return;
@@ -11628,7 +11628,7 @@ PHP_METHOD(php_wxCursor, IsOk)
                 php_printf("Executing RETURN_BOOL(wxCursor::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxCursor_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxCursor_php*)native_object)->IsOk());
 
 
                 return;
@@ -12970,7 +12970,7 @@ PHP_METHOD(php_wxFont, GetDefaultEncoding)
                 php_printf("Executing RETURN_LONG(wxFont::GetDefaultEncoding())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxFont::GetDefaultEncoding());
+                RETVAL_LONG(wxFont::GetDefaultEncoding());
 
 
                 return;
@@ -13077,7 +13077,7 @@ PHP_METHOD(php_wxFont, GetEncoding)
                 php_printf("Executing RETURN_LONG(wxFont::GetEncoding())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFont_php*)native_object)->GetEncoding());
+                RETVAL_LONG(((wxFont_php*)native_object)->GetEncoding());
 
 
                 return;
@@ -13186,7 +13186,7 @@ PHP_METHOD(php_wxFont, GetFaceName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFont_php*)native_object)->GetFaceName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -13293,7 +13293,7 @@ PHP_METHOD(php_wxFont, GetFamily)
                 php_printf("Executing RETURN_LONG(wxFont::GetFamily())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFont_php*)native_object)->GetFamily());
+                RETVAL_LONG(((wxFont_php*)native_object)->GetFamily());
 
 
                 return;
@@ -13402,7 +13402,7 @@ PHP_METHOD(php_wxFont, GetNativeFontInfoDesc)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFont_php*)native_object)->GetNativeFontInfoDesc();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -13511,7 +13511,7 @@ PHP_METHOD(php_wxFont, GetNativeFontInfoUserDesc)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFont_php*)native_object)->GetNativeFontInfoUserDesc();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -13732,7 +13732,7 @@ PHP_METHOD(php_wxFont, GetPointSize)
                 php_printf("Executing RETURN_LONG(wxFont::GetPointSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFont_php*)native_object)->GetPointSize());
+                RETVAL_LONG(((wxFont_php*)native_object)->GetPointSize());
 
 
                 return;
@@ -13839,7 +13839,7 @@ PHP_METHOD(php_wxFont, GetStyle)
                 php_printf("Executing RETURN_LONG(wxFont::GetStyle())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFont_php*)native_object)->GetStyle());
+                RETVAL_LONG(((wxFont_php*)native_object)->GetStyle());
 
 
                 return;
@@ -13946,7 +13946,7 @@ PHP_METHOD(php_wxFont, GetUnderlined)
                 php_printf("Executing RETURN_BOOL(wxFont::GetUnderlined())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFont_php*)native_object)->GetUnderlined());
+                RETVAL_BOOL(((wxFont_php*)native_object)->GetUnderlined());
 
 
                 return;
@@ -14053,7 +14053,7 @@ PHP_METHOD(php_wxFont, GetWeight)
                 php_printf("Executing RETURN_LONG(wxFont::GetWeight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFont_php*)native_object)->GetWeight());
+                RETVAL_LONG(((wxFont_php*)native_object)->GetWeight());
 
 
                 return;
@@ -14160,7 +14160,7 @@ PHP_METHOD(php_wxFont, IsFixedWidth)
                 php_printf("Executing RETURN_BOOL(wxFont::IsFixedWidth())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFont_php*)native_object)->IsFixedWidth());
+                RETVAL_BOOL(((wxFont_php*)native_object)->IsFixedWidth());
 
 
                 return;
@@ -14267,7 +14267,7 @@ PHP_METHOD(php_wxFont, IsOk)
                 php_printf("Executing RETURN_BOOL(wxFont::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFont_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxFont_php*)native_object)->IsOk());
 
 
                 return;
@@ -15432,7 +15432,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return4;
                 value_to_return4 = (wxFont_php*) wxFont::New((int) pointSize0, (wxFontFamily) family0, (wxFontStyle) style0, (wxFontWeight) weight0);
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -15464,7 +15464,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return5;
                 value_to_return5 = (wxFont_php*) wxFont::New((int) pointSize0, (wxFontFamily) family0, (wxFontStyle) style0, (wxFontWeight) weight0, underline0);
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -15496,7 +15496,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return6;
                 value_to_return6 = (wxFont_php*) wxFont::New((int) pointSize0, (wxFontFamily) family0, (wxFontStyle) style0, (wxFontWeight) weight0, underline0, wxString(faceName0, wxConvUTF8));
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -15528,7 +15528,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return7;
                 value_to_return7 = (wxFont_php*) wxFont::New((int) pointSize0, (wxFontFamily) family0, (wxFontStyle) style0, (wxFontWeight) weight0, underline0, wxString(faceName0, wxConvUTF8), (wxFontEncoding) encoding0);
                 if(value_to_return7 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return7->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return7->phpObj)){
@@ -15567,7 +15567,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return2;
                 value_to_return2 = (wxFont_php*) wxFont::New((int) pointSize1, (wxFontFamily) family1);
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -15599,7 +15599,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return3;
                 value_to_return3 = (wxFont_php*) wxFont::New((int) pointSize1, (wxFontFamily) family1, (int) flags1);
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -15631,7 +15631,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return4;
                 value_to_return4 = (wxFont_php*) wxFont::New((int) pointSize1, (wxFontFamily) family1, (int) flags1, wxString(faceName1, wxConvUTF8));
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -15663,7 +15663,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return5;
                 value_to_return5 = (wxFont_php*) wxFont::New((int) pointSize1, (wxFontFamily) family1, (int) flags1, wxString(faceName1, wxConvUTF8), (wxFontEncoding) encoding1);
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -15702,7 +15702,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return4;
                 value_to_return4 = (wxFont_php*) wxFont::New(*(wxSize*) object_pointer2_0, (wxFontFamily) family2, (wxFontStyle) style2, (wxFontWeight) weight2);
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -15734,7 +15734,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return5;
                 value_to_return5 = (wxFont_php*) wxFont::New(*(wxSize*) object_pointer2_0, (wxFontFamily) family2, (wxFontStyle) style2, (wxFontWeight) weight2, underline2);
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -15766,7 +15766,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return6;
                 value_to_return6 = (wxFont_php*) wxFont::New(*(wxSize*) object_pointer2_0, (wxFontFamily) family2, (wxFontStyle) style2, (wxFontWeight) weight2, underline2, wxString(faceName2, wxConvUTF8));
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -15798,7 +15798,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return7;
                 value_to_return7 = (wxFont_php*) wxFont::New(*(wxSize*) object_pointer2_0, (wxFontFamily) family2, (wxFontStyle) style2, (wxFontWeight) weight2, underline2, wxString(faceName2, wxConvUTF8), (wxFontEncoding) encoding2);
                 if(value_to_return7 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return7->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return7->phpObj)){
@@ -15837,7 +15837,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return2;
                 value_to_return2 = (wxFont_php*) wxFont::New(*(wxSize*) object_pointer3_0, (wxFontFamily) family3);
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -15869,7 +15869,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return3;
                 value_to_return3 = (wxFont_php*) wxFont::New(*(wxSize*) object_pointer3_0, (wxFontFamily) family3, (int) flags3);
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -15901,7 +15901,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return4;
                 value_to_return4 = (wxFont_php*) wxFont::New(*(wxSize*) object_pointer3_0, (wxFontFamily) family3, (int) flags3, wxString(faceName3, wxConvUTF8));
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -15933,7 +15933,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return5;
                 value_to_return5 = (wxFont_php*) wxFont::New(*(wxSize*) object_pointer3_0, (wxFontFamily) family3, (int) flags3, wxString(faceName3, wxConvUTF8), (wxFontEncoding) encoding3);
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -15972,7 +15972,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return1;
                 value_to_return1 = (wxFont_php*) wxFont::New(wxString(nativeInfoString4, wxConvUTF8));
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -16011,7 +16011,7 @@ PHP_METHOD(php_wxFont, NewMethod)
                 wxFont_php* value_to_return1;
                 value_to_return1 = (wxFont_php*) wxFont::New(*(wxNativeFontInfo*) object_pointer5_0);
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -16617,7 +16617,7 @@ PHP_METHOD(php_wxFont, SetFaceName)
                 php_printf("Executing RETURN_BOOL(wxFont::SetFaceName(wxString(faceName0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFont_php*)native_object)->SetFaceName(wxString(faceName0, wxConvUTF8)));
+                RETVAL_BOOL(((wxFont_php*)native_object)->SetFaceName(wxString(faceName0, wxConvUTF8)));
 
 
                 return;
@@ -16881,7 +16881,7 @@ PHP_METHOD(php_wxFont, SetNativeFontInfo)
                 php_printf("Executing RETURN_BOOL(wxFont::SetNativeFontInfo(wxString(info0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFont_php*)native_object)->SetNativeFontInfo(wxString(info0, wxConvUTF8)));
+                RETVAL_BOOL(((wxFont_php*)native_object)->SetNativeFontInfo(wxString(info0, wxConvUTF8)));
 
 
                 return;
@@ -17014,7 +17014,7 @@ PHP_METHOD(php_wxFont, SetNativeFontInfoUserDesc)
                 php_printf("Executing RETURN_BOOL(wxFont::SetNativeFontInfoUserDesc(wxString(info0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFont_php*)native_object)->SetNativeFontInfoUserDesc(wxString(info0, wxConvUTF8)));
+                RETVAL_BOOL(((wxFont_php*)native_object)->SetNativeFontInfoUserDesc(wxString(info0, wxConvUTF8)));
 
 
                 return;
@@ -18159,7 +18159,7 @@ PHP_METHOD(php_wxFont, GetNativeFontInfo)
                 value_to_return0 = (wxNativeFontInfo_php*) ((wxFont_php*)native_object)->GetNativeFontInfo();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -18463,7 +18463,7 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
                 value_to_return4 = (wxFont_php*) ((wxFontList_php*)native_object)->FindOrCreateFont((int) point_size0, (wxFontFamily) family0, (wxFontStyle) style0, (wxFontWeight) weight0);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -18498,7 +18498,7 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
                 value_to_return5 = (wxFont_php*) ((wxFontList_php*)native_object)->FindOrCreateFont((int) point_size0, (wxFontFamily) family0, (wxFontStyle) style0, (wxFontWeight) weight0, underline0);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -18533,7 +18533,7 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
                 value_to_return6 = (wxFont_php*) ((wxFontList_php*)native_object)->FindOrCreateFont((int) point_size0, (wxFontFamily) family0, (wxFontStyle) style0, (wxFontWeight) weight0, underline0, wxString(facename0, wxConvUTF8));
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -18568,7 +18568,7 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
                 value_to_return7 = (wxFont_php*) ((wxFontList_php*)native_object)->FindOrCreateFont((int) point_size0, (wxFontFamily) family0, (wxFontStyle) style0, (wxFontWeight) weight0, underline0, wxString(facename0, wxConvUTF8), (wxFontEncoding) encoding0);
 
                 if(value_to_return7 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return7->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return7->phpObj)){
@@ -18769,7 +18769,7 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -18863,7 +18863,7 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -18969,7 +18969,7 @@ PHP_METHOD(php_wxFontEnumerator, IsValidFacename)
                 php_printf("Executing RETURN_BOOL(wxFontEnumerator::IsValidFacename(wxString(facename0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxFontEnumerator::IsValidFacename(wxString(facename0, wxConvUTF8)));
+                RETVAL_BOOL(wxFontEnumerator::IsValidFacename(wxString(facename0, wxConvUTF8)));
 
 
                 return;
@@ -19381,7 +19381,7 @@ PHP_METHOD(php_wxFontEnumerator, EnumerateFacenames)
 
                 if(current_object_type == PHP_WXFONTENUMERATOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFontEnumerator_php*)native_object)->EnumerateFacenames());
+                    RETVAL_BOOL(((wxFontEnumerator_php*)native_object)->EnumerateFacenames());
                 }
 
 
@@ -19396,7 +19396,7 @@ PHP_METHOD(php_wxFontEnumerator, EnumerateFacenames)
 
                 if(current_object_type == PHP_WXFONTENUMERATOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFontEnumerator_php*)native_object)->EnumerateFacenames((wxFontEncoding) encoding0));
+                    RETVAL_BOOL(((wxFontEnumerator_php*)native_object)->EnumerateFacenames((wxFontEncoding) encoding0));
                 }
 
 
@@ -19411,7 +19411,7 @@ PHP_METHOD(php_wxFontEnumerator, EnumerateFacenames)
 
                 if(current_object_type == PHP_WXFONTENUMERATOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFontEnumerator_php*)native_object)->EnumerateFacenames((wxFontEncoding) encoding0, fixedWidthOnly0));
+                    RETVAL_BOOL(((wxFontEnumerator_php*)native_object)->EnumerateFacenames((wxFontEncoding) encoding0, fixedWidthOnly0));
                 }
 
 
@@ -19527,7 +19527,7 @@ PHP_METHOD(php_wxFontEnumerator, EnumerateEncodings)
 
                 if(current_object_type == PHP_WXFONTENUMERATOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFontEnumerator_php*)native_object)->EnumerateEncodings());
+                    RETVAL_BOOL(((wxFontEnumerator_php*)native_object)->EnumerateEncodings());
                 }
 
 
@@ -19542,7 +19542,7 @@ PHP_METHOD(php_wxFontEnumerator, EnumerateEncodings)
 
                 if(current_object_type == PHP_WXFONTENUMERATOR_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxFontEnumerator_php*)native_object)->EnumerateEncodings(wxString(font0, wxConvUTF8)));
+                    RETVAL_BOOL(((wxFontEnumerator_php*)native_object)->EnumerateEncodings(wxString(font0, wxConvUTF8)));
                 }
 
 
@@ -19874,7 +19874,7 @@ PHP_METHOD(php_wxNativeFontInfo, FromString)
                 php_printf("Executing RETURN_BOOL(wxNativeFontInfo::FromString(wxString(s0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxNativeFontInfo_php*)native_object)->FromString(wxString(s0, wxConvUTF8)));
+                RETVAL_BOOL(((wxNativeFontInfo_php*)native_object)->FromString(wxString(s0, wxConvUTF8)));
 
 
                 return;
@@ -19986,7 +19986,7 @@ PHP_METHOD(php_wxNativeFontInfo, FromUserString)
                 php_printf("Executing RETURN_BOOL(wxNativeFontInfo::FromUserString(wxString(s0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxNativeFontInfo_php*)native_object)->FromUserString(wxString(s0, wxConvUTF8)));
+                RETVAL_BOOL(((wxNativeFontInfo_php*)native_object)->FromUserString(wxString(s0, wxConvUTF8)));
 
 
                 return;
@@ -20092,7 +20092,7 @@ PHP_METHOD(php_wxNativeFontInfo, GetEncoding)
                 php_printf("Executing RETURN_LONG(wxNativeFontInfo::GetEncoding())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxNativeFontInfo_php*)native_object)->GetEncoding());
+                RETVAL_LONG(((wxNativeFontInfo_php*)native_object)->GetEncoding());
 
 
                 return;
@@ -20200,7 +20200,7 @@ PHP_METHOD(php_wxNativeFontInfo, GetFaceName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxNativeFontInfo_php*)native_object)->GetFaceName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -20306,7 +20306,7 @@ PHP_METHOD(php_wxNativeFontInfo, GetFamily)
                 php_printf("Executing RETURN_LONG(wxNativeFontInfo::GetFamily())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxNativeFontInfo_php*)native_object)->GetFamily());
+                RETVAL_LONG(((wxNativeFontInfo_php*)native_object)->GetFamily());
 
 
                 return;
@@ -20412,7 +20412,7 @@ PHP_METHOD(php_wxNativeFontInfo, GetPointSize)
                 php_printf("Executing RETURN_LONG(wxNativeFontInfo::GetPointSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxNativeFontInfo_php*)native_object)->GetPointSize());
+                RETVAL_LONG(((wxNativeFontInfo_php*)native_object)->GetPointSize());
 
 
                 return;
@@ -20518,7 +20518,7 @@ PHP_METHOD(php_wxNativeFontInfo, GetStyle)
                 php_printf("Executing RETURN_LONG(wxNativeFontInfo::GetStyle())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxNativeFontInfo_php*)native_object)->GetStyle());
+                RETVAL_LONG(((wxNativeFontInfo_php*)native_object)->GetStyle());
 
 
                 return;
@@ -20624,7 +20624,7 @@ PHP_METHOD(php_wxNativeFontInfo, GetUnderlined)
                 php_printf("Executing RETURN_BOOL(wxNativeFontInfo::GetUnderlined())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxNativeFontInfo_php*)native_object)->GetUnderlined());
+                RETVAL_BOOL(((wxNativeFontInfo_php*)native_object)->GetUnderlined());
 
 
                 return;
@@ -20730,7 +20730,7 @@ PHP_METHOD(php_wxNativeFontInfo, GetWeight)
                 php_printf("Executing RETURN_LONG(wxNativeFontInfo::GetWeight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxNativeFontInfo_php*)native_object)->GetWeight());
+                RETVAL_LONG(((wxNativeFontInfo_php*)native_object)->GetWeight());
 
 
                 return;
@@ -21210,7 +21210,7 @@ PHP_METHOD(php_wxNativeFontInfo, SetFaceName)
                 php_printf("Executing RETURN_BOOL(wxNativeFontInfo::SetFaceName(wxString(facename0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxNativeFontInfo_php*)native_object)->SetFaceName(wxString(facename0, wxConvUTF8)));
+                RETVAL_BOOL(((wxNativeFontInfo_php*)native_object)->SetFaceName(wxString(facename0, wxConvUTF8)));
 
 
                 return;
@@ -21910,7 +21910,7 @@ PHP_METHOD(php_wxNativeFontInfo, ToString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxNativeFontInfo_php*)native_object)->ToString();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22018,7 +22018,7 @@ PHP_METHOD(php_wxNativeFontInfo, ToUserString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxNativeFontInfo_php*)native_object)->ToUserString();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22483,7 +22483,7 @@ PHP_METHOD(php_wxColourDatabase, FindName)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxColourDatabase_php*)native_object)->FindName(*(wxColour*) object_pointer0_0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
                 references->AddReference(colour0, "wxColourDatabase::FindName at call 3 with 1 argument(s)");
 
@@ -23575,7 +23575,7 @@ PHP_METHOD(php_wxIcon, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxIcon::LoadFile(wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxIcon_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxIcon_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8)));
 
 
                 return;
@@ -23587,7 +23587,7 @@ PHP_METHOD(php_wxIcon, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxIcon::LoadFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxIcon_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0));
+                RETVAL_BOOL(((wxIcon_php*)native_object)->LoadFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0));
 
 
                 return;
@@ -23606,7 +23606,7 @@ PHP_METHOD(php_wxIcon, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxIcon::LoadFile(wxString(name1, wxConvUTF8), (wxBitmapType) type1, (int) desiredWidth1, (int) desiredHeight1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxIcon_php*)native_object)->LoadFile(wxString(name1, wxConvUTF8), (wxBitmapType) type1, (int) desiredWidth1, (int) desiredHeight1));
+                RETVAL_BOOL(((wxIcon_php*)native_object)->LoadFile(wxString(name1, wxConvUTF8), (wxBitmapType) type1, (int) desiredWidth1, (int) desiredHeight1));
 
 
                 return;
@@ -23713,7 +23713,7 @@ PHP_METHOD(php_wxIcon, IsOk)
                 php_printf("Executing RETURN_BOOL(wxIcon::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxIcon_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxIcon_php*)native_object)->IsOk());
 
 
                 return;
@@ -23820,7 +23820,7 @@ PHP_METHOD(php_wxIcon, GetWidth)
                 php_printf("Executing RETURN_LONG(wxIcon::GetWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxIcon_php*)native_object)->GetWidth());
+                RETVAL_LONG(((wxIcon_php*)native_object)->GetWidth());
 
 
                 return;
@@ -23927,7 +23927,7 @@ PHP_METHOD(php_wxIcon, GetHeight)
                 php_printf("Executing RETURN_LONG(wxIcon::GetHeight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxIcon_php*)native_object)->GetHeight());
+                RETVAL_LONG(((wxIcon_php*)native_object)->GetHeight());
 
 
                 return;
@@ -24034,7 +24034,7 @@ PHP_METHOD(php_wxIcon, GetDepth)
                 php_printf("Executing RETURN_LONG(wxIcon::GetDepth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxIcon_php*)native_object)->GetDepth());
+                RETVAL_LONG(((wxIcon_php*)native_object)->GetDepth());
 
 
                 return;
@@ -24673,7 +24673,7 @@ PHP_METHOD(php_wxIconBundle, IsEmpty)
                 php_printf("Executing RETURN_BOOL(wxIconBundle::IsEmpty())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxIconBundle_php*)native_object)->IsEmpty());
+                RETVAL_BOOL(((wxIconBundle_php*)native_object)->IsEmpty());
 
 
                 return;
@@ -24919,7 +24919,7 @@ PHP_METHOD(php_wxIconBundle, GetIconCount)
                 php_printf("Executing RETURN_LONG(wxIconBundle::GetIconCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxIconBundle_php*)native_object)->GetIconCount());
+                RETVAL_LONG(((wxIconBundle_php*)native_object)->GetIconCount());
 
 
                 return;
@@ -25780,7 +25780,7 @@ PHP_METHOD(php_wxImageHandler, CanRead)
 
                 if(current_object_type == PHP_WXIMAGEHANDLER_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxImageHandler_php*)native_object)->CanRead(*(wxInputStream*) object_pointer0_0));
+                    RETVAL_BOOL(((wxImageHandler_php*)native_object)->CanRead(*(wxInputStream*) object_pointer0_0));
                 }
 
                 references->AddReference(stream0, "wxImageHandler::CanRead at call 3 with 1 argument(s)");
@@ -25803,7 +25803,7 @@ PHP_METHOD(php_wxImageHandler, CanRead)
 
                 if(current_object_type == PHP_WXIMAGEHANDLER_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxImageHandler_php*)native_object)->CanRead(wxString(filename1, wxConvUTF8)));
+                    RETVAL_BOOL(((wxImageHandler_php*)native_object)->CanRead(wxString(filename1, wxConvUTF8)));
                 }
 
 
@@ -26032,7 +26032,7 @@ PHP_METHOD(php_wxImageHandler, GetExtension)
                 {
                     value_to_return0 = ((wxImageHandler_php*)native_object)->GetExtension();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26164,7 +26164,7 @@ PHP_METHOD(php_wxImageHandler, GetImageCount)
 
                 if(current_object_type == PHP_WXIMAGEHANDLER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxImageHandler_php*)native_object)->GetImageCount(*(wxInputStream*) object_pointer0_0));
+                    RETVAL_LONG(((wxImageHandler_php*)native_object)->GetImageCount(*(wxInputStream*) object_pointer0_0));
                 }
 
                 references->AddReference(stream0, "wxImageHandler::GetImageCount at call 3 with 1 argument(s)");
@@ -26278,7 +26278,7 @@ PHP_METHOD(php_wxImageHandler, GetMimeType)
                 {
                     value_to_return0 = ((wxImageHandler_php*)native_object)->GetMimeType();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26390,7 +26390,7 @@ PHP_METHOD(php_wxImageHandler, GetName)
                 {
                     value_to_return0 = ((wxImageHandler_php*)native_object)->GetName();
                 }
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26499,7 +26499,7 @@ PHP_METHOD(php_wxImageHandler, GetType)
 
                 if(current_object_type == PHP_WXIMAGEHANDLER_TYPE)
                 {
-                    ZVAL_LONG(return_value, ((wxImageHandler_php*)native_object)->GetType());
+                    RETVAL_LONG(((wxImageHandler_php*)native_object)->GetType());
                 }
 
 
@@ -26653,7 +26653,7 @@ PHP_METHOD(php_wxImageHandler, LoadFile)
 
                 if(current_object_type == PHP_WXIMAGEHANDLER_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxImageHandler_php*)native_object)->LoadFile((wxImage*) object_pointer0_0, *(wxInputStream*) object_pointer0_1));
+                    RETVAL_BOOL(((wxImageHandler_php*)native_object)->LoadFile((wxImage*) object_pointer0_0, *(wxInputStream*) object_pointer0_1));
                 }
 
                 references->AddReference(image0, "wxImageHandler::LoadFile at call 1 with 2 argument(s)");
@@ -26670,7 +26670,7 @@ PHP_METHOD(php_wxImageHandler, LoadFile)
 
                 if(current_object_type == PHP_WXIMAGEHANDLER_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxImageHandler_php*)native_object)->LoadFile((wxImage*) object_pointer0_0, *(wxInputStream*) object_pointer0_1, verbose0));
+                    RETVAL_BOOL(((wxImageHandler_php*)native_object)->LoadFile((wxImage*) object_pointer0_0, *(wxInputStream*) object_pointer0_1, verbose0));
                 }
 
                 references->AddReference(image0, "wxImageHandler::LoadFile at call 1 with 3 argument(s)");
@@ -26687,7 +26687,7 @@ PHP_METHOD(php_wxImageHandler, LoadFile)
 
                 if(current_object_type == PHP_WXIMAGEHANDLER_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxImageHandler_php*)native_object)->LoadFile((wxImage*) object_pointer0_0, *(wxInputStream*) object_pointer0_1, verbose0, (int) index0));
+                    RETVAL_BOOL(((wxImageHandler_php*)native_object)->LoadFile((wxImage*) object_pointer0_0, *(wxInputStream*) object_pointer0_1, verbose0, (int) index0));
                 }
 
                 references->AddReference(image0, "wxImageHandler::LoadFile at call 1 with 4 argument(s)");
@@ -26842,7 +26842,7 @@ PHP_METHOD(php_wxImageHandler, SaveFile)
 
                 if(current_object_type == PHP_WXIMAGEHANDLER_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxImageHandler_php*)native_object)->SaveFile((wxImage*) object_pointer0_0, *(wxOutputStream*) object_pointer0_1));
+                    RETVAL_BOOL(((wxImageHandler_php*)native_object)->SaveFile((wxImage*) object_pointer0_0, *(wxOutputStream*) object_pointer0_1));
                 }
 
                 references->AddReference(image0, "wxImageHandler::SaveFile at call 1 with 2 argument(s)");
@@ -26859,7 +26859,7 @@ PHP_METHOD(php_wxImageHandler, SaveFile)
 
                 if(current_object_type == PHP_WXIMAGEHANDLER_TYPE)
                 {
-                    ZVAL_BOOL(return_value, ((wxImageHandler_php*)native_object)->SaveFile((wxImage*) object_pointer0_0, *(wxOutputStream*) object_pointer0_1, verbose0));
+                    RETVAL_BOOL(((wxImageHandler_php*)native_object)->SaveFile((wxImage*) object_pointer0_0, *(wxOutputStream*) object_pointer0_1, verbose0));
                 }
 
                 references->AddReference(image0, "wxImageHandler::SaveFile at call 1 with 3 argument(s)");
@@ -28840,7 +28840,7 @@ PHP_METHOD(php_wxImage, SetMaskFromImage)
                 php_printf("Executing RETURN_BOOL(wxImage::SetMaskFromImage(*(wxImage*) object_pointer0_0, (unsigned char) mr0, (unsigned char) mg0, (unsigned char) mb0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->SetMaskFromImage(*(wxImage*) object_pointer0_0, (unsigned char) mr0, (unsigned char) mg0, (unsigned char) mb0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->SetMaskFromImage(*(wxImage*) object_pointer0_0, (unsigned char) mr0, (unsigned char) mg0, (unsigned char) mb0));
 
                 references->AddReference(mask0, "wxImage::SetMaskFromImage at call 3 with 4 argument(s)");
 
@@ -29898,7 +29898,7 @@ PHP_METHOD(php_wxImage, SaveFile)
                 php_printf("Executing RETURN_BOOL(wxImage::SaveFile(*(wxOutputStream*) object_pointer0_0, (wxBitmapType) type0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->SaveFile(*(wxOutputStream*) object_pointer0_0, (wxBitmapType) type0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->SaveFile(*(wxOutputStream*) object_pointer0_0, (wxBitmapType) type0));
 
                 references->AddReference(stream0, "wxImage::SaveFile at call 3 with 2 argument(s)");
 
@@ -29918,7 +29918,7 @@ PHP_METHOD(php_wxImage, SaveFile)
                 php_printf("Executing RETURN_BOOL(wxImage::SaveFile(wxString(name1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->SaveFile(wxString(name1, wxConvUTF8)));
+                RETVAL_BOOL(((wxImage_php*)native_object)->SaveFile(wxString(name1, wxConvUTF8)));
 
 
                 return;
@@ -29937,7 +29937,7 @@ PHP_METHOD(php_wxImage, SaveFile)
                 php_printf("Executing RETURN_BOOL(wxImage::SaveFile(wxString(name2, wxConvUTF8), (wxBitmapType) type2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->SaveFile(wxString(name2, wxConvUTF8), (wxBitmapType) type2));
+                RETVAL_BOOL(((wxImage_php*)native_object)->SaveFile(wxString(name2, wxConvUTF8), (wxBitmapType) type2));
 
 
                 return;
@@ -29956,7 +29956,7 @@ PHP_METHOD(php_wxImage, SaveFile)
                 php_printf("Executing RETURN_BOOL(wxImage::SaveFile(*(wxOutputStream*) object_pointer3_0, wxString(mimetype3, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->SaveFile(*(wxOutputStream*) object_pointer3_0, wxString(mimetype3, wxConvUTF8)));
+                RETVAL_BOOL(((wxImage_php*)native_object)->SaveFile(*(wxOutputStream*) object_pointer3_0, wxString(mimetype3, wxConvUTF8)));
 
                 references->AddReference(stream3, "wxImage::SaveFile at call 3 with 2 argument(s)");
 
@@ -29976,7 +29976,7 @@ PHP_METHOD(php_wxImage, SaveFile)
                 php_printf("Executing RETURN_BOOL(wxImage::SaveFile(wxString(name4, wxConvUTF8), wxString(mimetype4, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->SaveFile(wxString(name4, wxConvUTF8), wxString(mimetype4, wxConvUTF8)));
+                RETVAL_BOOL(((wxImage_php*)native_object)->SaveFile(wxString(name4, wxConvUTF8), wxString(mimetype4, wxConvUTF8)));
 
 
                 return;
@@ -31219,7 +31219,7 @@ PHP_METHOD(php_wxImage, RemoveHandler)
                 php_printf("Executing RETURN_BOOL(wxImage::RemoveHandler(wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxImage::RemoveHandler(wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(wxImage::RemoveHandler(wxString(name0, wxConvUTF8)));
 
 
                 return;
@@ -31715,7 +31715,7 @@ PHP_METHOD(php_wxImage, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxImage::LoadFile(*(wxInputStream*) object_pointer0_0, wxString(mimetype0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->LoadFile(*(wxInputStream*) object_pointer0_0, wxString(mimetype0, wxConvUTF8)));
+                RETVAL_BOOL(((wxImage_php*)native_object)->LoadFile(*(wxInputStream*) object_pointer0_0, wxString(mimetype0, wxConvUTF8)));
 
                 references->AddReference(stream0, "wxImage::LoadFile at call 3 with 2 argument(s)");
 
@@ -31728,7 +31728,7 @@ PHP_METHOD(php_wxImage, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxImage::LoadFile(*(wxInputStream*) object_pointer0_0, wxString(mimetype0, wxConvUTF8), (int) index0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->LoadFile(*(wxInputStream*) object_pointer0_0, wxString(mimetype0, wxConvUTF8), (int) index0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->LoadFile(*(wxInputStream*) object_pointer0_0, wxString(mimetype0, wxConvUTF8), (int) index0));
 
                 references->AddReference(stream0, "wxImage::LoadFile at call 3 with 3 argument(s)");
 
@@ -31748,7 +31748,7 @@ PHP_METHOD(php_wxImage, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxImage::LoadFile(wxString(name1, wxConvUTF8), wxString(mimetype1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->LoadFile(wxString(name1, wxConvUTF8), wxString(mimetype1, wxConvUTF8)));
+                RETVAL_BOOL(((wxImage_php*)native_object)->LoadFile(wxString(name1, wxConvUTF8), wxString(mimetype1, wxConvUTF8)));
 
 
                 return;
@@ -31760,7 +31760,7 @@ PHP_METHOD(php_wxImage, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxImage::LoadFile(wxString(name1, wxConvUTF8), wxString(mimetype1, wxConvUTF8), (int) index1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->LoadFile(wxString(name1, wxConvUTF8), wxString(mimetype1, wxConvUTF8), (int) index1));
+                RETVAL_BOOL(((wxImage_php*)native_object)->LoadFile(wxString(name1, wxConvUTF8), wxString(mimetype1, wxConvUTF8), (int) index1));
 
 
                 return;
@@ -31779,7 +31779,7 @@ PHP_METHOD(php_wxImage, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxImage::LoadFile(wxString(name2, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->LoadFile(wxString(name2, wxConvUTF8)));
+                RETVAL_BOOL(((wxImage_php*)native_object)->LoadFile(wxString(name2, wxConvUTF8)));
 
 
                 return;
@@ -31791,7 +31791,7 @@ PHP_METHOD(php_wxImage, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxImage::LoadFile(wxString(name2, wxConvUTF8), (wxBitmapType) type2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->LoadFile(wxString(name2, wxConvUTF8), (wxBitmapType) type2));
+                RETVAL_BOOL(((wxImage_php*)native_object)->LoadFile(wxString(name2, wxConvUTF8), (wxBitmapType) type2));
 
 
                 return;
@@ -31803,7 +31803,7 @@ PHP_METHOD(php_wxImage, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxImage::LoadFile(wxString(name2, wxConvUTF8), (wxBitmapType) type2, (int) index2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->LoadFile(wxString(name2, wxConvUTF8), (wxBitmapType) type2, (int) index2));
+                RETVAL_BOOL(((wxImage_php*)native_object)->LoadFile(wxString(name2, wxConvUTF8), (wxBitmapType) type2, (int) index2));
 
 
                 return;
@@ -31822,7 +31822,7 @@ PHP_METHOD(php_wxImage, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxImage::LoadFile(*(wxInputStream*) object_pointer3_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->LoadFile(*(wxInputStream*) object_pointer3_0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->LoadFile(*(wxInputStream*) object_pointer3_0));
 
                 references->AddReference(stream3, "wxImage::LoadFile at call 3 with 1 argument(s)");
 
@@ -31835,7 +31835,7 @@ PHP_METHOD(php_wxImage, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxImage::LoadFile(*(wxInputStream*) object_pointer3_0, (wxBitmapType) type3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->LoadFile(*(wxInputStream*) object_pointer3_0, (wxBitmapType) type3));
+                RETVAL_BOOL(((wxImage_php*)native_object)->LoadFile(*(wxInputStream*) object_pointer3_0, (wxBitmapType) type3));
 
                 references->AddReference(stream3, "wxImage::LoadFile at call 3 with 2 argument(s)");
 
@@ -31848,7 +31848,7 @@ PHP_METHOD(php_wxImage, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxImage::LoadFile(*(wxInputStream*) object_pointer3_0, (wxBitmapType) type3, (int) index3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->LoadFile(*(wxInputStream*) object_pointer3_0, (wxBitmapType) type3, (int) index3));
+                RETVAL_BOOL(((wxImage_php*)native_object)->LoadFile(*(wxInputStream*) object_pointer3_0, (wxBitmapType) type3, (int) index3));
 
                 references->AddReference(stream3, "wxImage::LoadFile at call 3 with 3 argument(s)");
 
@@ -31963,7 +31963,7 @@ PHP_METHOD(php_wxImage, IsTransparent)
                 php_printf("Executing RETURN_BOOL(wxImage::IsTransparent((int) x0, (int) y0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->IsTransparent((int) x0, (int) y0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->IsTransparent((int) x0, (int) y0));
 
 
                 return;
@@ -31975,7 +31975,7 @@ PHP_METHOD(php_wxImage, IsTransparent)
                 php_printf("Executing RETURN_BOOL(wxImage::IsTransparent((int) x0, (int) y0, (unsigned char) threshold0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->IsTransparent((int) x0, (int) y0, (unsigned char) threshold0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->IsTransparent((int) x0, (int) y0, (unsigned char) threshold0));
 
 
                 return;
@@ -32082,7 +32082,7 @@ PHP_METHOD(php_wxImage, IsOk)
                 php_printf("Executing RETURN_BOOL(wxImage::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxImage_php*)native_object)->IsOk());
 
 
                 return;
@@ -32541,7 +32541,7 @@ PHP_METHOD(php_wxImage, HasOption)
                 php_printf("Executing RETURN_BOOL(wxImage::HasOption(wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->HasOption(wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxImage_php*)native_object)->HasOption(wxString(name0, wxConvUTF8)));
 
 
                 return;
@@ -32648,7 +32648,7 @@ PHP_METHOD(php_wxImage, HasMask)
                 php_printf("Executing RETURN_BOOL(wxImage::HasMask())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->HasMask());
+                RETVAL_BOOL(((wxImage_php*)native_object)->HasMask());
 
 
                 return;
@@ -32755,7 +32755,7 @@ PHP_METHOD(php_wxImage, HasAlpha)
                 php_printf("Executing RETURN_BOOL(wxImage::HasAlpha())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->HasAlpha());
+                RETVAL_BOOL(((wxImage_php*)native_object)->HasAlpha());
 
 
                 return;
@@ -32862,7 +32862,7 @@ PHP_METHOD(php_wxImage, GetWidth)
                 php_printf("Executing RETURN_LONG(wxImage::GetWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImage_php*)native_object)->GetWidth());
+                RETVAL_LONG(((wxImage_php*)native_object)->GetWidth());
 
 
                 return;
@@ -32969,7 +32969,7 @@ PHP_METHOD(php_wxImage, GetType)
                 php_printf("Executing RETURN_LONG(wxImage::GetType())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImage_php*)native_object)->GetType());
+                RETVAL_LONG(((wxImage_php*)native_object)->GetType());
 
 
                 return;
@@ -33335,7 +33335,7 @@ PHP_METHOD(php_wxImage, GetRed)
                 php_printf("Executing RETURN_LONG(wxImage::GetRed((int) x0, (int) y0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImage_php*)native_object)->GetRed((int) x0, (int) y0));
+                RETVAL_LONG(((wxImage_php*)native_object)->GetRed((int) x0, (int) y0));
 
 
                 return;
@@ -33582,7 +33582,7 @@ PHP_METHOD(php_wxImage, GetOrFindMaskColour)
                 php_printf("Executing RETURN_BOOL(wxImage::GetOrFindMaskColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->GetOrFindMaskColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->GetOrFindMaskColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0));
 
                 size_t elements_returned0_0 = sizeof(r0)/sizeof(*r0);
                 array_init(&r0_ref);
@@ -33713,7 +33713,7 @@ PHP_METHOD(php_wxImage, GetOptionInt)
                 php_printf("Executing RETURN_LONG(wxImage::GetOptionInt(wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImage_php*)native_object)->GetOptionInt(wxString(name0, wxConvUTF8)));
+                RETVAL_LONG(((wxImage_php*)native_object)->GetOptionInt(wxString(name0, wxConvUTF8)));
 
 
                 return;
@@ -33828,7 +33828,7 @@ PHP_METHOD(php_wxImage, GetOption)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxImage_php*)native_object)->GetOption(wxString(name0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -33935,7 +33935,7 @@ PHP_METHOD(php_wxImage, GetMaskRed)
                 php_printf("Executing RETURN_LONG(wxImage::GetMaskRed())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImage_php*)native_object)->GetMaskRed());
+                RETVAL_LONG(((wxImage_php*)native_object)->GetMaskRed());
 
 
                 return;
@@ -34042,7 +34042,7 @@ PHP_METHOD(php_wxImage, GetMaskGreen)
                 php_printf("Executing RETURN_LONG(wxImage::GetMaskGreen())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImage_php*)native_object)->GetMaskGreen());
+                RETVAL_LONG(((wxImage_php*)native_object)->GetMaskGreen());
 
 
                 return;
@@ -34149,7 +34149,7 @@ PHP_METHOD(php_wxImage, GetMaskBlue)
                 php_printf("Executing RETURN_LONG(wxImage::GetMaskBlue())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImage_php*)native_object)->GetMaskBlue());
+                RETVAL_LONG(((wxImage_php*)native_object)->GetMaskBlue());
 
 
                 return;
@@ -34259,7 +34259,7 @@ PHP_METHOD(php_wxImage, GetImageExtWildcard)
 
                 wxString value_to_return0;
                 value_to_return0 = wxImage::GetImageExtWildcard();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -34414,7 +34414,7 @@ PHP_METHOD(php_wxImage, GetImageCount)
                 php_printf("Executing RETURN_LONG(wxImage::GetImageCount(*(wxInputStream*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxImage::GetImageCount(*(wxInputStream*) object_pointer0_0));
+                RETVAL_LONG(wxImage::GetImageCount(*(wxInputStream*) object_pointer0_0));
 
 
                 return;
@@ -34427,7 +34427,7 @@ PHP_METHOD(php_wxImage, GetImageCount)
                 php_printf("Executing RETURN_LONG(wxImage::GetImageCount(*(wxInputStream*) object_pointer0_0, (wxBitmapType) type0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxImage::GetImageCount(*(wxInputStream*) object_pointer0_0, (wxBitmapType) type0));
+                RETVAL_LONG(wxImage::GetImageCount(*(wxInputStream*) object_pointer0_0, (wxBitmapType) type0));
 
 
                 return;
@@ -34447,7 +34447,7 @@ PHP_METHOD(php_wxImage, GetImageCount)
                 php_printf("Executing RETURN_LONG(wxImage::GetImageCount(wxString(filename1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxImage::GetImageCount(wxString(filename1, wxConvUTF8)));
+                RETVAL_LONG(wxImage::GetImageCount(wxString(filename1, wxConvUTF8)));
 
 
                 return;
@@ -34460,7 +34460,7 @@ PHP_METHOD(php_wxImage, GetImageCount)
                 php_printf("Executing RETURN_LONG(wxImage::GetImageCount(wxString(filename1, wxConvUTF8), (wxBitmapType) type1))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxImage::GetImageCount(wxString(filename1, wxConvUTF8), (wxBitmapType) type1));
+                RETVAL_LONG(wxImage::GetImageCount(wxString(filename1, wxConvUTF8), (wxBitmapType) type1));
 
 
                 return;
@@ -34567,7 +34567,7 @@ PHP_METHOD(php_wxImage, GetHeight)
                 php_printf("Executing RETURN_LONG(wxImage::GetHeight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImage_php*)native_object)->GetHeight());
+                RETVAL_LONG(((wxImage_php*)native_object)->GetHeight());
 
 
                 return;
@@ -34680,7 +34680,7 @@ PHP_METHOD(php_wxImage, GetGreen)
                 php_printf("Executing RETURN_LONG(wxImage::GetGreen((int) x0, (int) y0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImage_php*)native_object)->GetGreen((int) x0, (int) y0));
+                RETVAL_LONG(((wxImage_php*)native_object)->GetGreen((int) x0, (int) y0));
 
 
                 return;
@@ -34801,8 +34801,7 @@ PHP_METHOD(php_wxImage, GetData)
                     bytes_count
                 );
 
-                ZVAL_STRINGL(
-                    return_value,
+                RETVAL_STRINGL(
                     (char*) value_to_return0,
                     bytes_count
                 );
@@ -34916,7 +34915,7 @@ PHP_METHOD(php_wxImage, GetBlue)
                 php_printf("Executing RETURN_LONG(wxImage::GetBlue((int) x0, (int) y0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImage_php*)native_object)->GetBlue((int) x0, (int) y0));
+                RETVAL_LONG(((wxImage_php*)native_object)->GetBlue((int) x0, (int) y0));
 
 
                 return;
@@ -35045,7 +35044,7 @@ PHP_METHOD(php_wxImage, GetAlpha)
                 php_printf("Executing RETURN_LONG(wxImage::GetAlpha((int) x0, (int) y0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImage_php*)native_object)->GetAlpha((int) x0, (int) y0));
+                RETVAL_LONG(((wxImage_php*)native_object)->GetAlpha((int) x0, (int) y0));
 
 
                 return;
@@ -35064,7 +35063,7 @@ PHP_METHOD(php_wxImage, GetAlpha)
                 php_printf("Executing RETURN_LONG(wxImage::GetAlpha())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, *(((wxImage_php*)native_object)->GetAlpha()));
+                RETVAL_LONG(*(((wxImage_php*)native_object)->GetAlpha()));
 
 
                 return;
@@ -35181,7 +35180,7 @@ PHP_METHOD(php_wxImage, FindHandlerMime)
                 wxImageHandler_php* value_to_return1;
                 value_to_return1 = (wxImageHandler_php*) wxImage::FindHandlerMime(wxString(mimetype0, wxConvUTF8));
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -35358,7 +35357,7 @@ PHP_METHOD(php_wxImage, FindHandler)
                 wxImageHandler_php* value_to_return1;
                 value_to_return1 = (wxImageHandler_php*) wxImage::FindHandler((wxBitmapType) imageType0);
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -35397,7 +35396,7 @@ PHP_METHOD(php_wxImage, FindHandler)
                 wxImageHandler_php* value_to_return2;
                 value_to_return2 = (wxImageHandler_php*) wxImage::FindHandler(wxString(extension1, wxConvUTF8), (wxBitmapType) imageType1);
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -35436,7 +35435,7 @@ PHP_METHOD(php_wxImage, FindHandler)
                 wxImageHandler_php* value_to_return1;
                 value_to_return1 = (wxImageHandler_php*) wxImage::FindHandler(wxString(name2, wxConvUTF8));
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -35575,7 +35574,7 @@ PHP_METHOD(php_wxImage, FindFirstUnusedColour)
                 php_printf("Executing RETURN_BOOL(wxImage::FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0));
 
                 size_t elements_returned0_0 = sizeof(r0)/sizeof(*r0);
                 array_init(&r0_ref);
@@ -35605,7 +35604,7 @@ PHP_METHOD(php_wxImage, FindFirstUnusedColour)
                 php_printf("Executing RETURN_BOOL(wxImage::FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0, (unsigned char) startR0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0, (unsigned char) startR0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0, (unsigned char) startR0));
 
                 size_t elements_returned0_0 = sizeof(r0)/sizeof(*r0);
                 array_init(&r0_ref);
@@ -35635,7 +35634,7 @@ PHP_METHOD(php_wxImage, FindFirstUnusedColour)
                 php_printf("Executing RETURN_BOOL(wxImage::FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0, (unsigned char) startR0, (unsigned char) startG0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0, (unsigned char) startR0, (unsigned char) startG0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0, (unsigned char) startR0, (unsigned char) startG0));
 
                 size_t elements_returned0_0 = sizeof(r0)/sizeof(*r0);
                 array_init(&r0_ref);
@@ -35665,7 +35664,7 @@ PHP_METHOD(php_wxImage, FindFirstUnusedColour)
                 php_printf("Executing RETURN_BOOL(wxImage::FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0, (unsigned char) startR0, (unsigned char) startG0, (unsigned char) startB0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0, (unsigned char) startR0, (unsigned char) startG0, (unsigned char) startB0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->FindFirstUnusedColour((unsigned char*) r0, (unsigned char*) g0, (unsigned char*) b0, (unsigned char) startR0, (unsigned char) startG0, (unsigned char) startB0));
 
                 size_t elements_returned0_0 = sizeof(r0)/sizeof(*r0);
                 array_init(&r0_ref);
@@ -36094,7 +36093,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create(*(wxSize*) object_pointer0_0, (unsigned char*) data0, (unsigned char*) alpha0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer0_0, (unsigned char*) data0, (unsigned char*) alpha0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer0_0, (unsigned char*) data0, (unsigned char*) alpha0));
 
                 references->AddReference(sz0, "wxImage::Create at call 3 with 3 argument(s)");
                 size_t elements_returned0_1 = sizeof(data0)/sizeof(*data0);
@@ -36119,7 +36118,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create(*(wxSize*) object_pointer0_0, (unsigned char*) data0, (unsigned char*) alpha0, static_data0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer0_0, (unsigned char*) data0, (unsigned char*) alpha0, static_data0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer0_0, (unsigned char*) data0, (unsigned char*) alpha0, static_data0));
 
                 references->AddReference(sz0, "wxImage::Create at call 3 with 4 argument(s)");
                 size_t elements_returned0_1 = sizeof(data0)/sizeof(*data0);
@@ -36151,7 +36150,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create((int) width1, (int) height1, (unsigned char*) data1, (unsigned char*) alpha1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create((int) width1, (int) height1, (unsigned char*) data1, (unsigned char*) alpha1));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create((int) width1, (int) height1, (unsigned char*) data1, (unsigned char*) alpha1));
 
                 size_t elements_returned1_2 = sizeof(data1)/sizeof(*data1);
                 array_init(&data1_ref);
@@ -36175,7 +36174,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create((int) width1, (int) height1, (unsigned char*) data1, (unsigned char*) alpha1, static_data1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create((int) width1, (int) height1, (unsigned char*) data1, (unsigned char*) alpha1, static_data1));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create((int) width1, (int) height1, (unsigned char*) data1, (unsigned char*) alpha1, static_data1));
 
                 size_t elements_returned1_2 = sizeof(data1)/sizeof(*data1);
                 array_init(&data1_ref);
@@ -36206,7 +36205,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create(*(wxSize*) object_pointer2_0, (unsigned char*) data2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer2_0, (unsigned char*) data2));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer2_0, (unsigned char*) data2));
 
                 references->AddReference(sz2, "wxImage::Create at call 3 with 2 argument(s)");
                 size_t elements_returned2_1 = sizeof(data2)/sizeof(*data2);
@@ -36225,7 +36224,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create(*(wxSize*) object_pointer2_0, (unsigned char*) data2, static_data2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer2_0, (unsigned char*) data2, static_data2));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer2_0, (unsigned char*) data2, static_data2));
 
                 references->AddReference(sz2, "wxImage::Create at call 3 with 3 argument(s)");
                 size_t elements_returned2_1 = sizeof(data2)/sizeof(*data2);
@@ -36251,7 +36250,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create((int) width3, (int) height3, (unsigned char*) data3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create((int) width3, (int) height3, (unsigned char*) data3));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create((int) width3, (int) height3, (unsigned char*) data3));
 
                 size_t elements_returned3_2 = sizeof(data3)/sizeof(*data3);
                 array_init(&data3_ref);
@@ -36269,7 +36268,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create((int) width3, (int) height3, (unsigned char*) data3, static_data3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create((int) width3, (int) height3, (unsigned char*) data3, static_data3));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create((int) width3, (int) height3, (unsigned char*) data3, static_data3));
 
                 size_t elements_returned3_2 = sizeof(data3)/sizeof(*data3);
                 array_init(&data3_ref);
@@ -36294,7 +36293,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create(*(wxSize*) object_pointer4_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer4_0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer4_0));
 
                 references->AddReference(sz4, "wxImage::Create at call 3 with 1 argument(s)");
 
@@ -36307,7 +36306,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create(*(wxSize*) object_pointer4_0, clear4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer4_0, clear4));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create(*(wxSize*) object_pointer4_0, clear4));
 
                 references->AddReference(sz4, "wxImage::Create at call 3 with 2 argument(s)");
 
@@ -36327,7 +36326,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create((int) width5, (int) height5))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create((int) width5, (int) height5));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create((int) width5, (int) height5));
 
 
                 return;
@@ -36339,7 +36338,7 @@ PHP_METHOD(php_wxImage, Create)
                 php_printf("Executing RETURN_BOOL(wxImage::Create((int) width5, (int) height5, clear5))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->Create((int) width5, (int) height5, clear5));
+                RETVAL_BOOL(((wxImage_php*)native_object)->Create((int) width5, (int) height5, clear5));
 
 
                 return;
@@ -37017,7 +37016,7 @@ PHP_METHOD(php_wxImage, ConvertAlphaToMask)
                 php_printf("Executing RETURN_BOOL(wxImage::ConvertAlphaToMask((unsigned char) mr0, (unsigned char) mg0, (unsigned char) mb0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->ConvertAlphaToMask((unsigned char) mr0, (unsigned char) mg0, (unsigned char) mb0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->ConvertAlphaToMask((unsigned char) mr0, (unsigned char) mg0, (unsigned char) mb0));
 
 
                 return;
@@ -37029,7 +37028,7 @@ PHP_METHOD(php_wxImage, ConvertAlphaToMask)
                 php_printf("Executing RETURN_BOOL(wxImage::ConvertAlphaToMask((unsigned char) mr0, (unsigned char) mg0, (unsigned char) mb0, (unsigned char) threshold0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->ConvertAlphaToMask((unsigned char) mr0, (unsigned char) mg0, (unsigned char) mb0, (unsigned char) threshold0));
+                RETVAL_BOOL(((wxImage_php*)native_object)->ConvertAlphaToMask((unsigned char) mr0, (unsigned char) mg0, (unsigned char) mb0, (unsigned char) threshold0));
 
 
                 return;
@@ -37048,7 +37047,7 @@ PHP_METHOD(php_wxImage, ConvertAlphaToMask)
                 php_printf("Executing RETURN_BOOL(wxImage::ConvertAlphaToMask())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->ConvertAlphaToMask());
+                RETVAL_BOOL(((wxImage_php*)native_object)->ConvertAlphaToMask());
 
 
                 return;
@@ -37060,7 +37059,7 @@ PHP_METHOD(php_wxImage, ConvertAlphaToMask)
                 php_printf("Executing RETURN_BOOL(wxImage::ConvertAlphaToMask((unsigned char) threshold1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImage_php*)native_object)->ConvertAlphaToMask((unsigned char) threshold1));
+                RETVAL_BOOL(((wxImage_php*)native_object)->ConvertAlphaToMask((unsigned char) threshold1));
 
 
                 return;
@@ -37552,7 +37551,7 @@ PHP_METHOD(php_wxImage, CanRead)
                 php_printf("Executing RETURN_BOOL(wxImage::CanRead(*(wxInputStream*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxImage::CanRead(*(wxInputStream*) object_pointer0_0));
+                RETVAL_BOOL(wxImage::CanRead(*(wxInputStream*) object_pointer0_0));
 
 
                 return;
@@ -37572,7 +37571,7 @@ PHP_METHOD(php_wxImage, CanRead)
                 php_printf("Executing RETURN_BOOL(wxImage::CanRead(wxString(filename1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxImage::CanRead(wxString(filename1, wxConvUTF8)));
+                RETVAL_BOOL(wxImage::CanRead(wxString(filename1, wxConvUTF8)));
 
 
                 return;
@@ -38577,7 +38576,7 @@ PHP_METHOD(php_wxImageList, Add)
                 php_printf("Executing RETURN_LONG(wxImageList::Add(*(wxBitmap*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImageList_php*)native_object)->Add(*(wxBitmap*) object_pointer0_0));
+                RETVAL_LONG(((wxImageList_php*)native_object)->Add(*(wxBitmap*) object_pointer0_0));
 
                 references->AddReference(bitmap0, "wxImageList::Add at call 3 with 1 argument(s)");
 
@@ -38590,7 +38589,7 @@ PHP_METHOD(php_wxImageList, Add)
                 php_printf("Executing RETURN_LONG(wxImageList::Add(*(wxBitmap*) object_pointer0_0, *(wxBitmap*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImageList_php*)native_object)->Add(*(wxBitmap*) object_pointer0_0, *(wxBitmap*) object_pointer0_1));
+                RETVAL_LONG(((wxImageList_php*)native_object)->Add(*(wxBitmap*) object_pointer0_0, *(wxBitmap*) object_pointer0_1));
 
                 references->AddReference(bitmap0, "wxImageList::Add at call 3 with 2 argument(s)");
                 references->AddReference(mask0, "wxImageList::Add at call 3 with 2 argument(s)");
@@ -38611,7 +38610,7 @@ PHP_METHOD(php_wxImageList, Add)
                 php_printf("Executing RETURN_LONG(wxImageList::Add(*(wxBitmap*) object_pointer1_0, *(wxColour*) object_pointer1_1))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImageList_php*)native_object)->Add(*(wxBitmap*) object_pointer1_0, *(wxColour*) object_pointer1_1));
+                RETVAL_LONG(((wxImageList_php*)native_object)->Add(*(wxBitmap*) object_pointer1_0, *(wxColour*) object_pointer1_1));
 
                 references->AddReference(bitmap1, "wxImageList::Add at call 3 with 2 argument(s)");
                 references->AddReference(maskColour1, "wxImageList::Add at call 3 with 2 argument(s)");
@@ -38728,7 +38727,7 @@ PHP_METHOD(php_wxImageList, Create)
                 php_printf("Executing RETURN_BOOL(wxImageList::Create((int) width0, (int) height0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImageList_php*)native_object)->Create((int) width0, (int) height0));
+                RETVAL_BOOL(((wxImageList_php*)native_object)->Create((int) width0, (int) height0));
 
 
                 return;
@@ -38740,7 +38739,7 @@ PHP_METHOD(php_wxImageList, Create)
                 php_printf("Executing RETURN_BOOL(wxImageList::Create((int) width0, (int) height0, mask0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImageList_php*)native_object)->Create((int) width0, (int) height0, mask0));
+                RETVAL_BOOL(((wxImageList_php*)native_object)->Create((int) width0, (int) height0, mask0));
 
 
                 return;
@@ -38752,7 +38751,7 @@ PHP_METHOD(php_wxImageList, Create)
                 php_printf("Executing RETURN_BOOL(wxImageList::Create((int) width0, (int) height0, mask0, (int) initialCount0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImageList_php*)native_object)->Create((int) width0, (int) height0, mask0, (int) initialCount0));
+                RETVAL_BOOL(((wxImageList_php*)native_object)->Create((int) width0, (int) height0, mask0, (int) initialCount0));
 
 
                 return;
@@ -39099,7 +39098,7 @@ PHP_METHOD(php_wxImageList, GetImageCount)
                 php_printf("Executing RETURN_LONG(wxImageList::GetImageCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxImageList_php*)native_object)->GetImageCount());
+                RETVAL_LONG(((wxImageList_php*)native_object)->GetImageCount());
 
 
                 return;
@@ -39218,7 +39217,7 @@ PHP_METHOD(php_wxImageList, GetSize)
                 php_printf("Executing RETURN_BOOL(wxImageList::GetSize((int) index0, (int&) width0, (int&) height0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImageList_php*)native_object)->GetSize((int) index0, (int&) width0, (int&) height0));
+                RETVAL_BOOL(((wxImageList_php*)native_object)->GetSize((int) index0, (int&) width0, (int&) height0));
 
                 ZVAL_LONG(&width0_ref, width0);
                 ZVAL_LONG(&height0_ref, height0);
@@ -39332,7 +39331,7 @@ PHP_METHOD(php_wxImageList, Remove)
                 php_printf("Executing RETURN_BOOL(wxImageList::Remove((int) index0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImageList_php*)native_object)->Remove((int) index0));
+                RETVAL_BOOL(((wxImageList_php*)native_object)->Remove((int) index0));
 
 
                 return;
@@ -39439,7 +39438,7 @@ PHP_METHOD(php_wxImageList, RemoveAll)
                 php_printf("Executing RETURN_BOOL(wxImageList::RemoveAll())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImageList_php*)native_object)->RemoveAll());
+                RETVAL_BOOL(((wxImageList_php*)native_object)->RemoveAll());
 
 
                 return;
@@ -39589,7 +39588,7 @@ PHP_METHOD(php_wxImageList, Replace)
                 php_printf("Executing RETURN_BOOL(wxImageList::Replace((int) index0, *(wxBitmap*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImageList_php*)native_object)->Replace((int) index0, *(wxBitmap*) object_pointer0_1));
+                RETVAL_BOOL(((wxImageList_php*)native_object)->Replace((int) index0, *(wxBitmap*) object_pointer0_1));
 
                 references->AddReference(bitmap0, "wxImageList::Replace at call 3 with 2 argument(s)");
 
@@ -39602,7 +39601,7 @@ PHP_METHOD(php_wxImageList, Replace)
                 php_printf("Executing RETURN_BOOL(wxImageList::Replace((int) index0, *(wxBitmap*) object_pointer0_1, *(wxBitmap*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImageList_php*)native_object)->Replace((int) index0, *(wxBitmap*) object_pointer0_1, *(wxBitmap*) object_pointer0_2));
+                RETVAL_BOOL(((wxImageList_php*)native_object)->Replace((int) index0, *(wxBitmap*) object_pointer0_1, *(wxBitmap*) object_pointer0_2));
 
                 references->AddReference(bitmap0, "wxImageList::Replace at call 3 with 3 argument(s)");
                 references->AddReference(mask0, "wxImageList::Replace at call 3 with 3 argument(s)");
@@ -39886,7 +39885,7 @@ PHP_METHOD(php_wxImageList, Draw)
                 php_printf("Executing RETURN_BOOL(wxImageList::Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImageList_php*)native_object)->Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0));
+                RETVAL_BOOL(((wxImageList_php*)native_object)->Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0));
 
                 references->AddReference(dc0, "wxImageList::Draw at call 3 with 4 argument(s)");
 
@@ -39899,7 +39898,7 @@ PHP_METHOD(php_wxImageList, Draw)
                 php_printf("Executing RETURN_BOOL(wxImageList::Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0, (int) flags0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImageList_php*)native_object)->Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0, (int) flags0));
+                RETVAL_BOOL(((wxImageList_php*)native_object)->Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0, (int) flags0));
 
                 references->AddReference(dc0, "wxImageList::Draw at call 3 with 5 argument(s)");
 
@@ -39912,7 +39911,7 @@ PHP_METHOD(php_wxImageList, Draw)
                 php_printf("Executing RETURN_BOOL(wxImageList::Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0, (int) flags0, solidBackground0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxImageList_php*)native_object)->Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0, (int) flags0, solidBackground0));
+                RETVAL_BOOL(((wxImageList_php*)native_object)->Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0, (int) flags0, solidBackground0));
 
                 references->AddReference(dc0, "wxImageList::Draw at call 3 with 6 argument(s)");
 
@@ -40357,7 +40356,7 @@ PHP_METHOD(php_wxPalette, IsOk)
                 php_printf("Executing RETURN_BOOL(wxPalette::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPalette_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxPalette_php*)native_object)->IsOk());
 
 
                 return;
@@ -40471,7 +40470,7 @@ PHP_METHOD(php_wxPalette, GetPixel)
                 php_printf("Executing RETURN_LONG(wxPalette::GetPixel((unsigned char) red0, (unsigned char) green0, (unsigned char) blue0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPalette_php*)native_object)->GetPixel((unsigned char) red0, (unsigned char) green0, (unsigned char) blue0));
+                RETVAL_LONG(((wxPalette_php*)native_object)->GetPixel((unsigned char) red0, (unsigned char) green0, (unsigned char) blue0));
 
 
                 return;
@@ -40578,7 +40577,7 @@ PHP_METHOD(php_wxPalette, GetColoursCount)
                 php_printf("Executing RETURN_LONG(wxPalette::GetColoursCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPalette_php*)native_object)->GetColoursCount());
+                RETVAL_LONG(((wxPalette_php*)native_object)->GetColoursCount());
 
 
                 return;
@@ -40768,7 +40767,7 @@ PHP_METHOD(php_wxPalette, Create)
                 php_printf("Executing RETURN_BOOL(wxPalette::Create((int) n0, (const unsigned char*) integers_array0_1, (const unsigned char*) integers_array0_2, (const unsigned char*) integers_array0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPalette_php*)native_object)->Create((int) n0, (const unsigned char*) integers_array0_1, (const unsigned char*) integers_array0_2, (const unsigned char*) integers_array0_3));
+                RETVAL_BOOL(((wxPalette_php*)native_object)->Create((int) n0, (const unsigned char*) integers_array0_1, (const unsigned char*) integers_array0_2, (const unsigned char*) integers_array0_3));
 
                 delete[] integers_array0_1;
                 delete[] integers_array0_2;
@@ -40892,7 +40891,7 @@ PHP_METHOD(php_wxPalette, GetRGB)
                 php_printf("Executing RETURN_BOOL(wxPalette::GetRGB((int) pixel0, (unsigned char*) red0, (unsigned char*) green0, (unsigned char*) blue0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPalette_php*)native_object)->GetRGB((int) pixel0, (unsigned char*) red0, (unsigned char*) green0, (unsigned char*) blue0));
+                RETVAL_BOOL(((wxPalette_php*)native_object)->GetRGB((int) pixel0, (unsigned char*) red0, (unsigned char*) green0, (unsigned char*) blue0));
 
                 size_t elements_returned0_1 = sizeof(red0)/sizeof(*red0);
                 array_init(&red0_ref);
@@ -41263,7 +41262,7 @@ PHP_METHOD(php_wxPen, IsTransparent)
                 php_printf("Executing RETURN_BOOL(wxPen::IsTransparent())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPen_php*)native_object)->IsTransparent());
+                RETVAL_BOOL(((wxPen_php*)native_object)->IsTransparent());
 
 
                 return;
@@ -41370,7 +41369,7 @@ PHP_METHOD(php_wxPen, IsOk)
                 php_printf("Executing RETURN_BOOL(wxPen::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPen_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxPen_php*)native_object)->IsOk());
 
 
                 return;
@@ -41477,7 +41476,7 @@ PHP_METHOD(php_wxPen, IsNonTransparent)
                 php_printf("Executing RETURN_BOOL(wxPen::IsNonTransparent())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPen_php*)native_object)->IsNonTransparent());
+                RETVAL_BOOL(((wxPen_php*)native_object)->IsNonTransparent());
 
 
                 return;
@@ -41584,7 +41583,7 @@ PHP_METHOD(php_wxPen, GetWidth)
                 php_printf("Executing RETURN_LONG(wxPen::GetWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPen_php*)native_object)->GetWidth());
+                RETVAL_LONG(((wxPen_php*)native_object)->GetWidth());
 
 
                 return;
@@ -41691,7 +41690,7 @@ PHP_METHOD(php_wxPen, GetStyle)
                 php_printf("Executing RETURN_LONG(wxPen::GetStyle())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPen_php*)native_object)->GetStyle());
+                RETVAL_LONG(((wxPen_php*)native_object)->GetStyle());
 
 
                 return;
@@ -41802,7 +41801,7 @@ PHP_METHOD(php_wxPen, GetStipple)
                 value_to_return0 = (wxBitmap_php*) ((wxPen_php*)native_object)->GetStipple();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -41928,7 +41927,7 @@ PHP_METHOD(php_wxPen, GetJoin)
                 php_printf("Executing RETURN_LONG(wxPen::GetJoin())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPen_php*)native_object)->GetJoin());
+                RETVAL_LONG(((wxPen_php*)native_object)->GetJoin());
 
 
                 return;
@@ -42150,7 +42149,7 @@ PHP_METHOD(php_wxPen, GetCap)
                 php_printf("Executing RETURN_LONG(wxPen::GetCap())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPen_php*)native_object)->GetCap());
+                RETVAL_LONG(((wxPen_php*)native_object)->GetCap());
 
 
                 return;
@@ -43117,7 +43116,7 @@ PHP_METHOD(php_wxPenList, FindOrCreatePen)
                 value_to_return1 = (wxPen_php*) ((wxPenList_php*)native_object)->FindOrCreatePen(*(wxColour*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -43153,7 +43152,7 @@ PHP_METHOD(php_wxPenList, FindOrCreatePen)
                 value_to_return2 = (wxPen_php*) ((wxPenList_php*)native_object)->FindOrCreatePen(*(wxColour*) object_pointer0_0, (int) width0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -43189,7 +43188,7 @@ PHP_METHOD(php_wxPenList, FindOrCreatePen)
                 value_to_return3 = (wxPen_php*) ((wxPenList_php*)native_object)->FindOrCreatePen(*(wxColour*) object_pointer0_0, (int) width0, (wxPenStyle) style0);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -45393,7 +45392,7 @@ PHP_METHOD(php_wxRendererNative, Load)
                 wxRendererNative_php* value_to_return1;
                 value_to_return1 = (wxRendererNative_php*) wxRendererNative::Load(wxString(name0, wxConvUTF8));
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -45543,7 +45542,7 @@ PHP_METHOD(php_wxRendererNative, Set)
                 wxRendererNative_php* value_to_return1;
                 value_to_return1 = (wxRendererNative_php*) wxRendererNative::Set((wxRendererNative*) object_pointer0_0);
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){

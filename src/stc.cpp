@@ -403,7 +403,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCurrent)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetCurrent())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetCurrent());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AutoCompGetCurrent());
 
 
                 return;
@@ -517,7 +517,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDragOver)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::DoDragOver((wxCoord) x0, (wxCoord) y0, (wxDragResult) defaultRes0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->DoDragOver((wxCoord) x0, (wxCoord) y0, (wxDragResult) defaultRes0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->DoDragOver((wxCoord) x0, (wxCoord) y0, (wxDragResult) defaultRes0));
 
 
                 return;
@@ -624,7 +624,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretSticky)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCaretSticky())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetCaretSticky());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetCaretSticky());
 
 
                 return;
@@ -733,7 +733,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharacterPointer)
 
                 char* value_to_return0;
                 value_to_return0 = (char*) ((wxStyledTextCtrl_php*)native_object)->GetCharacterPointer();
-                ZVAL_STRING(return_value, value_to_return0);
+                RETVAL_STRING(value_to_return0);
 
 
                 return;
@@ -846,7 +846,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LoadFile)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::LoadFile(wxString(filename0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->LoadFile(wxString(filename0, wxConvUTF8)));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->LoadFile(wxString(filename0, wxConvUTF8)));
 
 
                 return;
@@ -959,7 +959,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SaveFile)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::SaveFile(wxString(filename0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->SaveFile(wxString(filename0, wxConvUTF8)));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->SaveFile(wxString(filename0, wxConvUTF8)));
 
 
                 return;
@@ -1511,7 +1511,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddSelection)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AddSelection((int) caret0, (int) anchor0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AddSelection((int) caret0, (int) anchor0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AddSelection((int) caret0, (int) anchor0));
 
 
                 return;
@@ -1623,7 +1623,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WrapCount)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::WrapCount((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->WrapCount((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->WrapCount((int) line0));
 
 
                 return;
@@ -1736,7 +1736,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordStartPosition)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::WordStartPosition((int) pos0, onlyWordCharacters0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->WordStartPosition((int) pos0, onlyWordCharacters0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->WordStartPosition((int) pos0, onlyWordCharacters0));
 
 
                 return;
@@ -2287,7 +2287,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetLines)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AnnotationGetLines((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AnnotationGetLines((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AnnotationGetLines((int) line0));
 
 
                 return;
@@ -2399,7 +2399,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyle)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AnnotationGetStyle((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AnnotationGetStyle((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AnnotationGetStyle((int) line0));
 
 
                 return;
@@ -2506,7 +2506,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyleOffset)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AnnotationGetStyleOffset())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AnnotationGetStyleOffset());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AnnotationGetStyleOffset());
 
 
                 return;
@@ -2620,7 +2620,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyles)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->AnnotationGetStyles((int) line0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -2734,7 +2734,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->AnnotationGetText((int) line0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -2841,7 +2841,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetVisible)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AnnotationGetVisible())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AnnotationGetVisible());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AnnotationGetVisible());
 
 
                 return;
@@ -3626,7 +3626,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompActive)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompActive())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompActive());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->AutoCompActive());
 
 
                 return;
@@ -3947,7 +3947,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetAutoHide)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompGetAutoHide())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetAutoHide());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->AutoCompGetAutoHide());
 
 
                 return;
@@ -4054,7 +4054,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCancelAtStart)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompGetCancelAtStart())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetCancelAtStart());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->AutoCompGetCancelAtStart());
 
 
                 return;
@@ -4161,7 +4161,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetChooseSingle)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompGetChooseSingle())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetChooseSingle());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->AutoCompGetChooseSingle());
 
 
                 return;
@@ -4268,7 +4268,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetDropRestOfWord)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompGetDropRestOfWord())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetDropRestOfWord());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->AutoCompGetDropRestOfWord());
 
 
                 return;
@@ -4375,7 +4375,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetIgnoreCase)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompGetIgnoreCase())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetIgnoreCase());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->AutoCompGetIgnoreCase());
 
 
                 return;
@@ -4482,7 +4482,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxHeight)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetMaxHeight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetMaxHeight());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AutoCompGetMaxHeight());
 
 
                 return;
@@ -4589,7 +4589,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxWidth)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetMaxWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetMaxWidth());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AutoCompGetMaxWidth());
 
 
                 return;
@@ -4696,7 +4696,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetSeparator)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetSeparator())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetSeparator());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AutoCompGetSeparator());
 
 
                 return;
@@ -4803,7 +4803,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetTypeSeparator)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetTypeSeparator())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetTypeSeparator());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AutoCompGetTypeSeparator());
 
 
                 return;
@@ -4910,7 +4910,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompPosStart)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompPosStart())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompPosStart());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AutoCompPosStart());
 
 
                 return;
@@ -6922,7 +6922,7 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceMatch)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::BraceMatch((int) pos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->BraceMatch((int) pos0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->BraceMatch((int) pos0));
 
 
                 return;
@@ -7029,7 +7029,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipActive)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::CallTipActive())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->CallTipActive());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->CallTipActive());
 
 
                 return;
@@ -7243,7 +7243,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipPosAtStart)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::CallTipPosAtStart())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->CallTipPosAtStart());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->CallTipPosAtStart());
 
 
                 return;
@@ -8082,7 +8082,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CanPaste)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::CanPaste())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->CanPaste());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->CanPaste());
 
 
                 return;
@@ -8189,7 +8189,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CanRedo)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::CanRedo())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->CanRedo());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->CanRedo());
 
 
                 return;
@@ -8296,7 +8296,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CanUndo)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::CanUndo())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->CanUndo());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->CanUndo());
 
 
                 return;
@@ -8837,7 +8837,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPoint)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::CharPositionFromPoint((int) x0, (int) y0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->CharPositionFromPoint((int) x0, (int) y0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->CharPositionFromPoint((int) x0, (int) y0));
 
 
                 return;
@@ -8950,7 +8950,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPointClose)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::CharPositionFromPointClose((int) x0, (int) y0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->CharPositionFromPointClose((int) x0, (int) y0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->CharPositionFromPointClose((int) x0, (int) y0));
 
 
                 return;
@@ -11197,7 +11197,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 1 argument(s)");
 
@@ -11210,7 +11210,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 2 argument(s)");
 
@@ -11223,7 +11223,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
                 references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 3 argument(s)");
                 references->AddReference(pos0, "wxStyledTextCtrl::Create at call 3 with 3 argument(s)");
@@ -11237,7 +11237,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxStyledTextCtrl::Create at call 3 with 4 argument(s)");
@@ -11252,7 +11252,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
                 references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxStyledTextCtrl::Create at call 3 with 5 argument(s)");
@@ -11267,7 +11267,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxStyledTextCtrl::Create at call 1 with 6 argument(s)");
                 references->AddReference(pos0, "wxStyledTextCtrl::Create at call 3 with 6 argument(s)");
@@ -11377,7 +11377,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CreateDocument)
                 php_printf("Executing wxStyledTextCtrl::CreateDocument()\n\n");
                 #endif
 
-                ZVAL_STRING(return_value, (char*) ((wxStyledTextCtrl_php*)native_object)->CreateDocument());
+                RETVAL_STRING((char*) ((wxStyledTextCtrl_php*)native_object)->CreateDocument());
 
 
                 return;
@@ -12241,7 +12241,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDropText)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::DoDropText((long) x0, (long) y0, wxString(data0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->DoDropText((long) x0, (long) y0, wxString(data0, wxConvUTF8)));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->DoDropText((long) x0, (long) y0, wxString(data0, wxConvUTF8)));
 
 
                 return;
@@ -12353,7 +12353,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DocLineFromVisible)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::DocLineFromVisible((int) lineDisplay0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->DocLineFromVisible((int) lineDisplay0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->DocLineFromVisible((int) lineDisplay0));
 
 
                 return;
@@ -13546,7 +13546,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FindColumn)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::FindColumn((int) line0, (int) column0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->FindColumn((int) line0, (int) column0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->FindColumn((int) line0, (int) column0));
 
 
                 return;
@@ -13662,7 +13662,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FindText)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::FindText((int) minPos0, (int) maxPos0, wxString(text0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->FindText((int) minPos0, (int) maxPos0, wxString(text0, wxConvUTF8)));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->FindText((int) minPos0, (int) maxPos0, wxString(text0, wxConvUTF8)));
 
 
                 return;
@@ -13674,7 +13674,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FindText)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::FindText((int) minPos0, (int) maxPos0, wxString(text0, wxConvUTF8), (int) flags0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->FindText((int) minPos0, (int) maxPos0, wxString(text0, wxConvUTF8), (int) flags0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->FindText((int) minPos0, (int) maxPos0, wxString(text0, wxConvUTF8), (int) flags0));
 
 
                 return;
@@ -13971,7 +13971,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::FormatRange(doDraw0, (int) startPos0, (int) endPos0, (wxDC*) object_pointer0_3, (wxDC*) object_pointer0_4, *(wxRect*) object_pointer0_5, *(wxRect*) object_pointer0_6))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->FormatRange(doDraw0, (int) startPos0, (int) endPos0, (wxDC*) object_pointer0_3, (wxDC*) object_pointer0_4, *(wxRect*) object_pointer0_5, *(wxRect*) object_pointer0_6));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->FormatRange(doDraw0, (int) startPos0, (int) endPos0, (wxDC*) object_pointer0_3, (wxDC*) object_pointer0_4, *(wxRect*) object_pointer0_5, *(wxRect*) object_pointer0_6));
 
                 references->AddReference(draw0, "wxStyledTextCtrl::FormatRange at call 1 with 7 argument(s)");
                 references->AddReference(target0, "wxStyledTextCtrl::FormatRange at call 1 with 7 argument(s)");
@@ -14195,7 +14195,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsBlink)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetAdditionalCaretsBlink())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetAdditionalCaretsBlink());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetAdditionalCaretsBlink());
 
 
                 return;
@@ -14302,7 +14302,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsVisible)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetAdditionalCaretsVisible())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetAdditionalCaretsVisible());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetAdditionalCaretsVisible());
 
 
                 return;
@@ -14409,7 +14409,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelAlpha)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetAdditionalSelAlpha())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetAdditionalSelAlpha());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetAdditionalSelAlpha());
 
 
                 return;
@@ -14516,7 +14516,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelectionTyping)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetAdditionalSelectionTyping())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetAdditionalSelectionTyping());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetAdditionalSelectionTyping());
 
 
                 return;
@@ -14623,7 +14623,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAnchor)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetAnchor())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetAnchor());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetAnchor());
 
 
                 return;
@@ -14730,7 +14730,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetBackSpaceUnIndents)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetBackSpaceUnIndents())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetBackSpaceUnIndents());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetBackSpaceUnIndents());
 
 
                 return;
@@ -14837,7 +14837,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetBufferedDraw)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetBufferedDraw())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetBufferedDraw());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetBufferedDraw());
 
 
                 return;
@@ -15059,7 +15059,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackAlpha)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCaretLineBackAlpha())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetCaretLineBackAlpha());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetCaretLineBackAlpha());
 
 
                 return;
@@ -15281,7 +15281,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineVisible)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetCaretLineVisible())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetCaretLineVisible());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetCaretLineVisible());
 
 
                 return;
@@ -15388,7 +15388,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretPeriod)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCaretPeriod())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetCaretPeriod());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetCaretPeriod());
 
 
                 return;
@@ -15495,7 +15495,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretWidth)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCaretWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetCaretWidth());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetCaretWidth());
 
 
                 return;
@@ -15607,7 +15607,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharAt)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCharAt((int) pos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetCharAt((int) pos0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetCharAt((int) pos0));
 
 
                 return;
@@ -15714,7 +15714,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCodePage)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCodePage())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetCodePage());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetCodePage());
 
 
                 return;
@@ -15826,7 +15826,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetColumn)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetColumn((int) pos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetColumn((int) pos0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetColumn((int) pos0));
 
 
                 return;
@@ -15933,7 +15933,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetControlCharSymbol)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetControlCharSymbol())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetControlCharSymbol());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetControlCharSymbol());
 
 
                 return;
@@ -16040,7 +16040,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurrentLine)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCurrentLine())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetCurrentLine());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetCurrentLine());
 
 
                 return;
@@ -16147,7 +16147,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurrentPos)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCurrentPos())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetCurrentPos());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetCurrentPos());
 
 
                 return;
@@ -16254,7 +16254,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEOLMode)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetEOLMode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetEOLMode());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetEOLMode());
 
 
                 return;
@@ -16476,7 +16476,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColumn)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetEdgeColumn())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetEdgeColumn());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetEdgeColumn());
 
 
                 return;
@@ -16583,7 +16583,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeMode)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetEdgeMode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetEdgeMode());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetEdgeMode());
 
 
                 return;
@@ -16690,7 +16690,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEndAtLastLine)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetEndAtLastLine())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetEndAtLastLine());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetEndAtLastLine());
 
 
                 return;
@@ -16797,7 +16797,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEndStyled)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetEndStyled())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetEndStyled());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetEndStyled());
 
 
                 return;
@@ -16904,7 +16904,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetExtraAscent)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetExtraAscent())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetExtraAscent());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetExtraAscent());
 
 
                 return;
@@ -17011,7 +17011,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetExtraDescent)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetExtraDescent())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetExtraDescent());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetExtraDescent());
 
 
                 return;
@@ -17118,7 +17118,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFirstVisibleLine)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetFirstVisibleLine())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetFirstVisibleLine());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetFirstVisibleLine());
 
 
                 return;
@@ -17230,7 +17230,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldExpanded)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetFoldExpanded((int) line0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetFoldExpanded((int) line0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetFoldExpanded((int) line0));
 
 
                 return;
@@ -17342,7 +17342,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldLevel)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetFoldLevel((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetFoldLevel((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetFoldLevel((int) line0));
 
 
                 return;
@@ -17454,7 +17454,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldParent)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetFoldParent((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetFoldParent((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetFoldParent((int) line0));
 
 
                 return;
@@ -17561,7 +17561,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetHighlightGuide)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetHighlightGuide())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetHighlightGuide());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetHighlightGuide());
 
 
                 return;
@@ -17668,7 +17668,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndent)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetIndent())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetIndent());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetIndent());
 
 
                 return;
@@ -17775,7 +17775,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndentationGuides)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetIndentationGuides())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetIndentationGuides());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetIndentationGuides());
 
 
                 return;
@@ -17882,7 +17882,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetKeysUnicode)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetKeysUnicode())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetKeysUnicode());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetKeysUnicode());
 
 
                 return;
@@ -17995,7 +17995,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastChild)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLastChild((int) line0, (int) level0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLastChild((int) line0, (int) level0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLastChild((int) line0, (int) level0));
 
 
                 return;
@@ -18102,7 +18102,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastKeydownProcessed)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetLastKeydownProcessed())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLastKeydownProcessed());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetLastKeydownProcessed());
 
 
                 return;
@@ -18209,7 +18209,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLayoutCache)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLayoutCache())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLayoutCache());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLayoutCache());
 
 
                 return;
@@ -18316,7 +18316,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLength)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLength())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLength());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLength());
 
 
                 return;
@@ -18423,7 +18423,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLexer)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLexer())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLexer());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLexer());
 
 
                 return;
@@ -18651,7 +18651,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLine)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetLine((int) line0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -18758,7 +18758,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineCount)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLineCount());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLineCount());
 
 
                 return;
@@ -18870,7 +18870,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineEndPosition)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineEndPosition((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLineEndPosition((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLineEndPosition((int) line0));
 
 
                 return;
@@ -18982,7 +18982,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentPosition)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineIndentPosition((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLineIndentPosition((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLineIndentPosition((int) line0));
 
 
                 return;
@@ -19094,7 +19094,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentation)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineIndentation((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLineIndentation((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLineIndentation((int) line0));
 
 
                 return;
@@ -19206,7 +19206,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelEndPosition)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineSelEndPosition((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLineSelEndPosition((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLineSelEndPosition((int) line0));
 
 
                 return;
@@ -19318,7 +19318,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelStartPosition)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineSelStartPosition((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLineSelStartPosition((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLineSelStartPosition((int) line0));
 
 
                 return;
@@ -19430,7 +19430,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineState)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineState((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLineState((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLineState((int) line0));
 
 
                 return;
@@ -19542,7 +19542,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineVisible)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetLineVisible((int) line0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLineVisible((int) line0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetLineVisible((int) line0));
 
 
                 return;
@@ -19649,7 +19649,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMainSelection)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMainSelection())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMainSelection());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMainSelection());
 
 
                 return;
@@ -19756,7 +19756,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginLeft)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginLeft())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMarginLeft());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMarginLeft());
 
 
                 return;
@@ -19868,7 +19868,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginMask)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginMask((int) margin0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMarginMask((int) margin0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMarginMask((int) margin0));
 
 
                 return;
@@ -19975,7 +19975,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginRight)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginRight())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMarginRight());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMarginRight());
 
 
                 return;
@@ -20087,7 +20087,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginSensitive)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetMarginSensitive((int) margin0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMarginSensitive((int) margin0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetMarginSensitive((int) margin0));
 
 
                 return;
@@ -20199,7 +20199,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginType)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginType((int) margin0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMarginType((int) margin0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMarginType((int) margin0));
 
 
                 return;
@@ -20311,7 +20311,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginWidth)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginWidth((int) margin0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMarginWidth((int) margin0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMarginWidth((int) margin0));
 
 
                 return;
@@ -20423,7 +20423,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarkerSymbolDefined)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarkerSymbolDefined((int) markerNumber0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMarkerSymbolDefined((int) markerNumber0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMarkerSymbolDefined((int) markerNumber0));
 
 
                 return;
@@ -20530,7 +20530,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMaxLineState)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMaxLineState())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMaxLineState());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMaxLineState());
 
 
                 return;
@@ -20637,7 +20637,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetModEventMask)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetModEventMask())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetModEventMask());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetModEventMask());
 
 
                 return;
@@ -20744,7 +20744,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetModify)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetModify())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetModify());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetModify());
 
 
                 return;
@@ -20851,7 +20851,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMouseDownCaptures)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetMouseDownCaptures())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMouseDownCaptures());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetMouseDownCaptures());
 
 
                 return;
@@ -20958,7 +20958,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMouseDwellTime)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMouseDwellTime())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMouseDwellTime());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMouseDwellTime());
 
 
                 return;
@@ -21065,7 +21065,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMultipleSelection)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetMultipleSelection())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMultipleSelection());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetMultipleSelection());
 
 
                 return;
@@ -21172,7 +21172,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetOvertype)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetOvertype())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetOvertype());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetOvertype());
 
 
                 return;
@@ -21279,7 +21279,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPasteConvertEndings)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetPasteConvertEndings())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetPasteConvertEndings());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetPasteConvertEndings());
 
 
                 return;
@@ -21386,7 +21386,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintColourMode)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetPrintColourMode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetPrintColourMode());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetPrintColourMode());
 
 
                 return;
@@ -21493,7 +21493,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintMagnification)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetPrintMagnification())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetPrintMagnification());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetPrintMagnification());
 
 
                 return;
@@ -21600,7 +21600,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintWrapMode)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetPrintWrapMode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetPrintWrapMode());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetPrintWrapMode());
 
 
                 return;
@@ -21715,7 +21715,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetProperty)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetProperty(wxString(key0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -21830,7 +21830,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyExpanded)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetPropertyExpanded(wxString(key0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -21943,7 +21943,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyInt)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetPropertyInt(wxString(key0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetPropertyInt(wxString(key0, wxConvUTF8)));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetPropertyInt(wxString(key0, wxConvUTF8)));
 
 
                 return;
@@ -22050,7 +22050,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetReadOnly)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetReadOnly())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetReadOnly());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetReadOnly());
 
 
                 return;
@@ -22156,7 +22156,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchor)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetRectangularSelectionAnchor())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetRectangularSelectionAnchor());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetRectangularSelectionAnchor());
 
 
                 return;
@@ -22262,7 +22262,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchorVirtualSpace)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetRectangularSelectionAnchorVirtualSpace())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetRectangularSelectionAnchorVirtualSpace());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetRectangularSelectionAnchorVirtualSpace());
 
 
                 return;
@@ -22368,7 +22368,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaret)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetRectangularSelectionCaret())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetRectangularSelectionCaret());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetRectangularSelectionCaret());
 
 
                 return;
@@ -22474,7 +22474,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaretVirtualSpace)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetRectangularSelectionCaretVirtualSpace())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetRectangularSelectionCaretVirtualSpace());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetRectangularSelectionCaretVirtualSpace());
 
 
                 return;
@@ -22581,7 +22581,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionModifier)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetRectangularSelectionModifier())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetRectangularSelectionModifier());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetRectangularSelectionModifier());
 
 
                 return;
@@ -22688,7 +22688,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSTCCursor)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSTCCursor())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSTCCursor());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSTCCursor());
 
 
                 return;
@@ -22795,7 +22795,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSTCFocus)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetSTCFocus())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSTCFocus());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetSTCFocus());
 
 
                 return;
@@ -22902,7 +22902,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetScrollWidth)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetScrollWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetScrollWidth());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetScrollWidth());
 
 
                 return;
@@ -23009,7 +23009,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSearchFlags)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSearchFlags())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSearchFlags());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSearchFlags());
 
 
                 return;
@@ -23116,7 +23116,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelAlpha)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelAlpha())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelAlpha());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSelAlpha());
 
 
                 return;
@@ -23225,7 +23225,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectedText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetSelectedText();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -23332,7 +23332,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionEnd)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionEnd())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelectionEnd());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSelectionEnd());
 
 
                 return;
@@ -23439,7 +23439,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionMode)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionMode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelectionMode());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSelectionMode());
 
 
                 return;
@@ -23550,7 +23550,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchor)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNAnchor((int) selection0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelectionNAnchor((int) selection0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSelectionNAnchor((int) selection0));
 
 
                 return;
@@ -23661,7 +23661,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchorVirtualSpace)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNAnchorVirtualSpace((int) selection0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelectionNAnchorVirtualSpace((int) selection0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSelectionNAnchorVirtualSpace((int) selection0));
 
 
                 return;
@@ -23772,7 +23772,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaret)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNCaret((int) selection0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelectionNCaret((int) selection0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSelectionNCaret((int) selection0));
 
 
                 return;
@@ -23883,7 +23883,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaretVirtualSpace)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNCaretVirtualSpace((int) selection0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelectionNCaretVirtualSpace((int) selection0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSelectionNCaretVirtualSpace((int) selection0));
 
 
                 return;
@@ -23995,7 +23995,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNEnd)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNEnd((int) selection0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelectionNEnd((int) selection0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSelectionNEnd((int) selection0));
 
 
                 return;
@@ -24107,7 +24107,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNStart)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNStart((int) selection0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelectionNStart((int) selection0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSelectionNStart((int) selection0));
 
 
                 return;
@@ -24214,7 +24214,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionStart)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionStart())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelectionStart());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSelectionStart());
 
 
                 return;
@@ -24321,7 +24321,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelections)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelections())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelections());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetSelections());
 
 
                 return;
@@ -24428,7 +24428,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStatus)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetStatus())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetStatus());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetStatus());
 
 
                 return;
@@ -24540,7 +24540,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleAt)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetStyleAt((int) pos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetStyleAt((int) pos0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetStyleAt((int) pos0));
 
 
                 return;
@@ -24647,7 +24647,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleBits)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetStyleBits())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetStyleBits());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetStyleBits());
 
 
                 return;
@@ -24754,7 +24754,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleBitsNeeded)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetStyleBitsNeeded())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetStyleBitsNeeded());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetStyleBitsNeeded());
 
 
                 return;
@@ -24861,7 +24861,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTabIndents)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetTabIndents())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetTabIndents());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetTabIndents());
 
 
                 return;
@@ -24968,7 +24968,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTabWidth)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetTabWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetTabWidth());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetTabWidth());
 
 
                 return;
@@ -25075,7 +25075,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTargetEnd)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetTargetEnd())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetTargetEnd());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetTargetEnd());
 
 
                 return;
@@ -25182,7 +25182,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTargetStart)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetTargetStart())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetTargetStart());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetTargetStart());
 
 
                 return;
@@ -25291,7 +25291,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetText)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetText();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -25398,7 +25398,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextLength)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetTextLength())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetTextLength());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetTextLength());
 
 
                 return;
@@ -25513,7 +25513,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextRange)
 
                 wxString value_to_return2;
                 value_to_return2 = ((wxStyledTextCtrl_php*)native_object)->GetTextRange((int) startPos0, (int) endPos0);
-                ZVAL_STRING(return_value, value_to_return2.ToUTF8().data());
+                RETVAL_STRING(value_to_return2.ToUTF8().data());
 
 
                 return;
@@ -25620,7 +25620,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTwoPhaseDraw)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetTwoPhaseDraw())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetTwoPhaseDraw());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetTwoPhaseDraw());
 
 
                 return;
@@ -25727,7 +25727,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUndoCollection)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetUndoCollection())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetUndoCollection());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetUndoCollection());
 
 
                 return;
@@ -25834,7 +25834,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseHorizontalScrollBar)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetUseHorizontalScrollBar())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetUseHorizontalScrollBar());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetUseHorizontalScrollBar());
 
 
                 return;
@@ -25941,7 +25941,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseTabs)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetUseTabs())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetUseTabs());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetUseTabs());
 
 
                 return;
@@ -26048,7 +26048,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseVerticalScrollBar)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetUseVerticalScrollBar())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetUseVerticalScrollBar());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetUseVerticalScrollBar());
 
 
                 return;
@@ -26155,7 +26155,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetViewEOL)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetViewEOL())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetViewEOL());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetViewEOL());
 
 
                 return;
@@ -26262,7 +26262,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetViewWhiteSpace)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetViewWhiteSpace())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetViewWhiteSpace());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetViewWhiteSpace());
 
 
                 return;
@@ -26368,7 +26368,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetVirtualSpaceOptions)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetVirtualSpaceOptions())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetVirtualSpaceOptions());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetVirtualSpaceOptions());
 
 
                 return;
@@ -26475,7 +26475,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWhitespaceSize)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWhitespaceSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetWhitespaceSize());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetWhitespaceSize());
 
 
                 return;
@@ -26582,7 +26582,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapIndentMode)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWrapIndentMode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetWrapIndentMode());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetWrapIndentMode());
 
 
                 return;
@@ -26689,7 +26689,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapMode)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWrapMode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetWrapMode());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetWrapMode());
 
 
                 return;
@@ -26796,7 +26796,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapStartIndent)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWrapStartIndent())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetWrapStartIndent());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetWrapStartIndent());
 
 
                 return;
@@ -26903,7 +26903,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlags)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWrapVisualFlags())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetWrapVisualFlags());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetWrapVisualFlags());
 
 
                 return;
@@ -27010,7 +27010,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlagsLocation)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWrapVisualFlagsLocation())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetWrapVisualFlagsLocation());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetWrapVisualFlagsLocation());
 
 
                 return;
@@ -27116,7 +27116,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetXOffset)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetXOffset())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetXOffset());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetXOffset());
 
 
                 return;
@@ -27223,7 +27223,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetZoom)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetZoom())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetZoom());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetZoom());
 
 
                 return;
@@ -28532,7 +28532,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetAlpha)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorGetAlpha((int) indicator0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorGetAlpha((int) indicator0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->IndicatorGetAlpha((int) indicator0));
 
 
                 return;
@@ -28764,7 +28764,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetStyle)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorGetStyle((int) indic0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorGetStyle((int) indic0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->IndicatorGetStyle((int) indic0));
 
 
                 return;
@@ -30958,7 +30958,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineFromPosition)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::LineFromPosition((int) pos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->LineFromPosition((int) pos0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->LineFromPosition((int) pos0));
 
 
                 return;
@@ -31070,7 +31070,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineLength)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::LineLength((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->LineLength((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->LineLength((int) line0));
 
 
                 return;
@@ -32039,7 +32039,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesOnScreen)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::LinesOnScreen())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->LinesOnScreen());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->LinesOnScreen());
 
 
                 return;
@@ -32370,7 +32370,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyle)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarginGetStyle((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->MarginGetStyle((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->MarginGetStyle((int) line0));
 
 
                 return;
@@ -32477,7 +32477,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyleOffset)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarginGetStyleOffset())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->MarginGetStyleOffset());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->MarginGetStyleOffset());
 
 
                 return;
@@ -32591,7 +32591,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyles)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->MarginGetStyles((int) line0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -32705,7 +32705,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->MarginGetText((int) line0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -33378,7 +33378,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerAdd)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarkerAdd((int) line0, (int) markerNumber0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->MarkerAdd((int) line0, (int) markerNumber0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->MarkerAdd((int) line0, (int) markerNumber0));
 
 
                 return;
@@ -34250,7 +34250,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerGet)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarkerGet((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->MarkerGet((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->MarkerGet((int) line0));
 
 
                 return;
@@ -34362,7 +34362,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerLineFromHandle)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarkerLineFromHandle((int) handle0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->MarkerLineFromHandle((int) handle0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->MarkerLineFromHandle((int) handle0));
 
 
                 return;
@@ -34475,7 +34475,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerNext)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarkerNext((int) lineStart0, (int) markerMask0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->MarkerNext((int) lineStart0, (int) markerMask0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->MarkerNext((int) lineStart0, (int) markerMask0));
 
 
                 return;
@@ -34588,7 +34588,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerPrevious)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarkerPrevious((int) lineStart0, (int) markerMask0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->MarkerPrevious((int) lineStart0, (int) markerMask0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->MarkerPrevious((int) lineStart0, (int) markerMask0));
 
 
                 return;
@@ -36585,7 +36585,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionAfter)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PositionAfter((int) pos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->PositionAfter((int) pos0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->PositionAfter((int) pos0));
 
 
                 return;
@@ -36697,7 +36697,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionBefore)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PositionBefore((int) pos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->PositionBefore((int) pos0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->PositionBefore((int) pos0));
 
 
                 return;
@@ -36809,7 +36809,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromLine)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PositionFromLine((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->PositionFromLine((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->PositionFromLine((int) line0));
 
 
                 return;
@@ -36939,7 +36939,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPoint)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PositionFromPoint(*(wxPoint*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->PositionFromPoint(*(wxPoint*) object_pointer0_0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->PositionFromPoint(*(wxPoint*) object_pointer0_0));
 
 
                 return;
@@ -37052,7 +37052,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPointClose)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PositionFromPointClose((int) x0, (int) y0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->PositionFromPointClose((int) x0, (int) y0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->PositionFromPointClose((int) x0, (int) y0));
 
 
                 return;
@@ -37517,7 +37517,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTarget)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::ReplaceTarget(wxString(text0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->ReplaceTarget(wxString(text0, wxConvUTF8)));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->ReplaceTarget(wxString(text0, wxConvUTF8)));
 
 
                 return;
@@ -37630,7 +37630,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTargetRE)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::ReplaceTargetRE(wxString(text0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->ReplaceTargetRE(wxString(text0, wxConvUTF8)));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->ReplaceTargetRE(wxString(text0, wxConvUTF8)));
 
 
                 return;
@@ -38181,7 +38181,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchInTarget)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::SearchInTarget(wxString(text0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->SearchInTarget(wxString(text0, wxConvUTF8)));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->SearchInTarget(wxString(text0, wxConvUTF8)));
 
 
                 return;
@@ -38295,7 +38295,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchNext)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::SearchNext((int) flags0, wxString(text0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->SearchNext((int) flags0, wxString(text0, wxConvUTF8)));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->SearchNext((int) flags0, wxString(text0, wxConvUTF8)));
 
 
                 return;
@@ -38409,7 +38409,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchPrev)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::SearchPrev((int) flags0, wxString(text0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->SearchPrev((int) flags0, wxString(text0, wxConvUTF8)));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->SearchPrev((int) flags0, wxString(text0, wxConvUTF8)));
 
 
                 return;
@@ -38730,7 +38730,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectionIsRectangle)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::SelectionIsRectangle())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->SelectionIsRectangle());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->SelectionIsRectangle());
 
 
                 return;
@@ -56452,7 +56452,7 @@ PHP_METHOD(php_wxStyledTextCtrl, TextHeight)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::TextHeight((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->TextHeight((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->TextHeight((int) line0));
 
 
                 return;
@@ -56566,7 +56566,7 @@ PHP_METHOD(php_wxStyledTextCtrl, TextWidth)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::TextWidth((int) style0, wxString(text0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->TextWidth((int) style0, wxString(text0, wxConvUTF8)));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->TextWidth((int) style0, wxString(text0, wxConvUTF8)));
 
 
                 return;
@@ -57870,7 +57870,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VisibleFromDocLine)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::VisibleFromDocLine((int) line0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->VisibleFromDocLine((int) line0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->VisibleFromDocLine((int) line0));
 
 
                 return;
@@ -57983,7 +57983,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordEndPosition)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::WordEndPosition((int) pos0, onlyWordCharacters0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->WordEndPosition((int) pos0, onlyWordCharacters0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->WordEndPosition((int) pos0, onlyWordCharacters0));
 
 
                 return;
@@ -60096,7 +60096,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCaseInsensitiveBehaviour)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetCaseInsensitiveBehaviour())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetCaseInsensitiveBehaviour());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->AutoCompGetCaseInsensitiveBehaviour());
 
 
                 return;
@@ -60659,7 +60659,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ChangeLexerState)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::ChangeLexerState((int) start0, (int) end0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->ChangeLexerState((int) start0, (int) end0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->ChangeLexerState((int) start0, (int) end0));
 
 
                 return;
@@ -60771,7 +60771,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ContractedFoldNext)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::ContractedFoldNext((int) lineStart0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->ContractedFoldNext((int) lineStart0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->ContractedFoldNext((int) lineStart0));
 
 
                 return;
@@ -60884,7 +60884,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CountCharacters)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::CountCharacters((int) startPos0, (int) endPos0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->CountCharacters((int) startPos0, (int) endPos0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->CountCharacters((int) startPos0, (int) endPos0));
 
 
                 return;
@@ -61214,7 +61214,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DescribeKeyWordSets)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->DescribeKeyWordSets();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -61329,7 +61329,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DescribeProperty)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->DescribeProperty(wxString(name0, wxConvUTF8));
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -61542,7 +61542,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAllLinesVisible)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetAllLinesVisible())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetAllLinesVisible());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetAllLinesVisible());
 
 
                 return;
@@ -61649,7 +61649,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretStyle)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCaretStyle())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetCaretStyle());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetCaretStyle());
 
 
                 return;
@@ -61767,7 +61767,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurLine)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetCurLine();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -61781,7 +61781,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurLine)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetCurLine((int*) linePos0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
                 size_t elements_returned0_0 = sizeof(linePos0)/sizeof(*linePos0);
                 array_init(&linePos0_ref);
@@ -61894,7 +61894,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetGapPosition)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetGapPosition())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetGapPosition());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetGapPosition());
 
 
                 return;
@@ -62231,7 +62231,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetHotspotActiveUnderline)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetHotspotActiveUnderline())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetHotspotActiveUnderline());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetHotspotActiveUnderline());
 
 
                 return;
@@ -62338,7 +62338,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetHotspotSingleLine)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetHotspotSingleLine())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetHotspotSingleLine());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetHotspotSingleLine());
 
 
                 return;
@@ -62445,7 +62445,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIdentifier)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetIdentifier())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetIdentifier());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetIdentifier());
 
 
                 return;
@@ -62552,7 +62552,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndicatorCurrent)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetIndicatorCurrent())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetIndicatorCurrent());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetIndicatorCurrent());
 
 
                 return;
@@ -62659,7 +62659,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndicatorValue)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetIndicatorValue())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetIndicatorValue());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetIndicatorValue());
 
 
                 return;
@@ -62766,7 +62766,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetInsertionPoint)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetInsertionPoint())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetInsertionPoint());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetInsertionPoint());
 
 
                 return;
@@ -62877,7 +62877,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineLength)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineLength((long) n0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLineLength((long) n0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLineLength((long) n0));
 
 
                 return;
@@ -62990,7 +62990,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineText)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetLineText((long) n0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -63102,7 +63102,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginCursor)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginCursor((int) margin0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMarginCursor((int) margin0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMarginCursor((int) margin0));
 
 
                 return;
@@ -63209,7 +63209,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginOptions)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginOptions())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMarginOptions());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMarginOptions());
 
 
                 return;
@@ -63316,7 +63316,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMultiPaste)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMultiPaste())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMultiPaste());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetMultiPaste());
 
 
                 return;
@@ -63422,7 +63422,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetNumberOfLines)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetNumberOfLines())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetNumberOfLines());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetNumberOfLines());
 
 
                 return;
@@ -63529,7 +63529,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPositionCacheSize)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetPositionCacheSize())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetPositionCacheSize());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetPositionCacheSize());
 
 
                 return;
@@ -63638,7 +63638,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPunctuationChars)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetPunctuationChars();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -63745,7 +63745,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetScrollWidthTracking)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetScrollWidthTracking())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetScrollWidthTracking());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetScrollWidthTracking());
 
 
                 return;
@@ -63852,7 +63852,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelEOLFilled)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetSelEOLFilled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelEOLFilled());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetSelEOLFilled());
 
 
                 return;
@@ -64096,7 +64096,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTag)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetTag((int) tagNumber0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -64203,7 +64203,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTechnology)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetTechnology())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetTechnology());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetTechnology());
 
 
                 return;
@@ -64312,7 +64312,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWhitespaceChars)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetWhitespaceChars();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -64421,7 +64421,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWordChars)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetWordChars();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -64533,7 +64533,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorAllOnFor)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorAllOnFor((int) position0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorAllOnFor((int) position0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->IndicatorAllOnFor((int) position0));
 
 
                 return;
@@ -64759,7 +64759,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorEnd)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorEnd((int) indicator0, (int) position0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorEnd((int) indicator0, (int) position0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->IndicatorEnd((int) indicator0, (int) position0));
 
 
                 return;
@@ -64984,7 +64984,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetOutlineAlpha)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorGetOutlineAlpha((int) indicator0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorGetOutlineAlpha((int) indicator0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->IndicatorGetOutlineAlpha((int) indicator0));
 
 
                 return;
@@ -65096,7 +65096,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetUnder)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::IndicatorGetUnder((int) indic0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorGetUnder((int) indic0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->IndicatorGetUnder((int) indic0));
 
 
                 return;
@@ -65435,7 +65435,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorStart)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorStart((int) indicator0, (int) position0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorStart((int) indicator0, (int) position0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->IndicatorStart((int) indicator0, (int) position0));
 
 
                 return;
@@ -65548,7 +65548,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorValueAt)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorValueAt((int) indicator0, (int) position0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorValueAt((int) indicator0, (int) position0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->IndicatorValueAt((int) indicator0, (int) position0));
 
 
                 return;
@@ -65655,7 +65655,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IsEditable)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::IsEditable())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->IsEditable());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->IsEditable());
 
 
                 return;
@@ -65761,7 +65761,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IsModified)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::IsModified())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->IsModified());
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->IsModified());
 
 
                 return;
@@ -66323,7 +66323,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PropertyNames)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->PropertyNames();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -66436,7 +66436,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PropertyType)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PropertyType(wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->PropertyType(wxString(name0, wxConvUTF8)));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->PropertyType(wxString(name0, wxConvUTF8)));
 
 
                 return;
@@ -67471,7 +67471,7 @@ PHP_METHOD(php_wxStyledTextCtrl, XYToPosition)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::XYToPosition((long) x0, (long) y0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->XYToPosition((long) x0, (long) y0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->XYToPosition((long) x0, (long) y0));
 
 
                 return;
@@ -68036,7 +68036,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetBold)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetBold((int) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetBold((int) style0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->StyleGetBold((int) style0));
 
 
                 return;
@@ -68148,7 +68148,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetCase)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::StyleGetCase((int) style0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetCase((int) style0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->StyleGetCase((int) style0));
 
 
                 return;
@@ -68260,7 +68260,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetChangeable)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetChangeable((int) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetChangeable((int) style0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->StyleGetChangeable((int) style0));
 
 
                 return;
@@ -68372,7 +68372,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetCharacterSet)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::StyleGetCharacterSet((int) style0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetCharacterSet((int) style0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->StyleGetCharacterSet((int) style0));
 
 
                 return;
@@ -68484,7 +68484,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetEOLFilled)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetEOLFilled((int) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetEOLFilled((int) style0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->StyleGetEOLFilled((int) style0));
 
 
                 return;
@@ -68598,7 +68598,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetFaceName)
 
                 wxString value_to_return1;
                 value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->StyleGetFaceName((int) style0);
-                ZVAL_STRING(return_value, value_to_return1.ToUTF8().data());
+                RETVAL_STRING(value_to_return1.ToUTF8().data());
 
 
                 return;
@@ -68950,7 +68950,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetHotSpot)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetHotSpot((int) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetHotSpot((int) style0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->StyleGetHotSpot((int) style0));
 
 
                 return;
@@ -69062,7 +69062,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetItalic)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetItalic((int) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetItalic((int) style0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->StyleGetItalic((int) style0));
 
 
                 return;
@@ -69174,7 +69174,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetSize)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::StyleGetSize((int) style0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetSize((int) style0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->StyleGetSize((int) style0));
 
 
                 return;
@@ -69286,7 +69286,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetSizeFractional)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::StyleGetSizeFractional((int) style0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetSizeFractional((int) style0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->StyleGetSizeFractional((int) style0));
 
 
                 return;
@@ -69398,7 +69398,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetUnderline)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetUnderline((int) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetUnderline((int) style0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->StyleGetUnderline((int) style0));
 
 
                 return;
@@ -69510,7 +69510,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetVisible)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetVisible((int) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetVisible((int) style0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->StyleGetVisible((int) style0));
 
 
                 return;
@@ -69622,7 +69622,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetWeight)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::StyleGetWeight((int) style0))\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetWeight((int) style0));
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->StyleGetWeight((int) style0));
 
 
                 return;
@@ -69864,7 +69864,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyle)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::SetStyle((long) start0, (long) end0, *(wxTextAttr*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->SetStyle((long) start0, (long) end0, *(wxTextAttr*) object_pointer0_2));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->SetStyle((long) start0, (long) end0, *(wxTextAttr*) object_pointer0_2));
 
                 references->AddReference(style0, "wxStyledTextCtrl::SetStyle at call 3 with 3 argument(s)");
 
@@ -70891,7 +70891,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetDefaultStyle)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::SetDefaultStyle(*(wxTextAttr*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->SetDefaultStyle(*(wxTextAttr*) object_pointer0_0));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->SetDefaultStyle(*(wxTextAttr*) object_pointer0_0));
 
                 references->AddReference(style0, "wxStyledTextCtrl::SetDefaultStyle at call 3 with 1 argument(s)");
 
@@ -71022,7 +71022,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyle)
                 php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetStyle((long) position0, *(wxTextAttr*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetStyle((long) position0, *(wxTextAttr*) object_pointer0_1));
+                RETVAL_BOOL(((wxStyledTextCtrl_php*)native_object)->GetStyle((long) position0, *(wxTextAttr*) object_pointer0_1));
 
                 references->AddReference(style0, "wxStyledTextCtrl::GetStyle at call 3 with 2 argument(s)");
 
@@ -71130,7 +71130,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastPosition)
                 php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLastPosition())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLastPosition());
+                RETVAL_LONG(((wxStyledTextCtrl_php*)native_object)->GetLastPosition());
 
 
                 return;

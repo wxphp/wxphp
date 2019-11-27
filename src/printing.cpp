@@ -595,7 +595,7 @@ PHP_METHOD(php_wxPreviewControlBar, GetZoomControl)
                 php_printf("Executing RETURN_LONG(wxPreviewControlBar::GetZoomControl())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPreviewControlBar_php*)native_object)->GetZoomControl());
+                RETVAL_LONG(((wxPreviewControlBar_php*)native_object)->GetZoomControl());
 
 
                 return;
@@ -1894,7 +1894,7 @@ PHP_METHOD(php_wxPrintPreview, GetCanvas)
                 value_to_return0 = (wxPreviewCanvas_php*) ((wxPrintPreview_php*)native_object)->GetCanvas();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -2020,7 +2020,7 @@ PHP_METHOD(php_wxPrintPreview, GetCurrentPage)
                 php_printf("Executing RETURN_LONG(wxPrintPreview::GetCurrentPage())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPrintPreview_php*)native_object)->GetCurrentPage());
+                RETVAL_LONG(((wxPrintPreview_php*)native_object)->GetCurrentPage());
 
 
                 return;
@@ -2131,7 +2131,7 @@ PHP_METHOD(php_wxPrintPreview, GetFrame)
                 value_to_return0 = (wxFrame_php*) ((wxPrintPreview_php*)native_object)->GetFrame();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -2257,7 +2257,7 @@ PHP_METHOD(php_wxPrintPreview, GetMaxPage)
                 php_printf("Executing RETURN_LONG(wxPrintPreview::GetMaxPage())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPrintPreview_php*)native_object)->GetMaxPage());
+                RETVAL_LONG(((wxPrintPreview_php*)native_object)->GetMaxPage());
 
 
                 return;
@@ -2364,7 +2364,7 @@ PHP_METHOD(php_wxPrintPreview, GetMinPage)
                 php_printf("Executing RETURN_LONG(wxPrintPreview::GetMinPage())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPrintPreview_php*)native_object)->GetMinPage());
+                RETVAL_LONG(((wxPrintPreview_php*)native_object)->GetMinPage());
 
 
                 return;
@@ -2475,7 +2475,7 @@ PHP_METHOD(php_wxPrintPreview, GetPrintout)
                 value_to_return0 = (wxPrintout_php*) ((wxPrintPreview_php*)native_object)->GetPrintout();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -2605,7 +2605,7 @@ PHP_METHOD(php_wxPrintPreview, GetPrintoutForPrinting)
                 value_to_return0 = (wxPrintout_php*) ((wxPrintPreview_php*)native_object)->GetPrintoutForPrinting();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -2731,7 +2731,7 @@ PHP_METHOD(php_wxPrintPreview, IsOk)
                 php_printf("Executing RETURN_BOOL(wxPrintPreview::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintPreview_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxPrintPreview_php*)native_object)->IsOk());
 
 
                 return;
@@ -2880,7 +2880,7 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
                 php_printf("Executing RETURN_BOOL(wxPrintPreview::PaintPage((wxPreviewCanvas*) object_pointer0_0, *(wxDC*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintPreview_php*)native_object)->PaintPage((wxPreviewCanvas*) object_pointer0_0, *(wxDC*) object_pointer0_1));
+                RETVAL_BOOL(((wxPrintPreview_php*)native_object)->PaintPage((wxPreviewCanvas*) object_pointer0_0, *(wxDC*) object_pointer0_1));
 
                 references->AddReference(canvas0, "wxPrintPreview::PaintPage at call 1 with 2 argument(s)");
                 references->AddReference(dc0, "wxPrintPreview::PaintPage at call 3 with 2 argument(s)");
@@ -2994,7 +2994,7 @@ PHP_METHOD(php_wxPrintPreview, PrintMethod)
                 php_printf("Executing RETURN_BOOL(wxPrintPreview::Print(prompt0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintPreview_php*)native_object)->Print(prompt0));
+                RETVAL_BOOL(((wxPrintPreview_php*)native_object)->Print(prompt0));
 
 
                 return;
@@ -3106,7 +3106,7 @@ PHP_METHOD(php_wxPrintPreview, RenderPage)
                 php_printf("Executing RETURN_BOOL(wxPrintPreview::RenderPage((int) pageNum0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintPreview_php*)native_object)->RenderPage((int) pageNum0));
+                RETVAL_BOOL(((wxPrintPreview_php*)native_object)->RenderPage((int) pageNum0));
 
 
                 return;
@@ -3349,7 +3349,7 @@ PHP_METHOD(php_wxPrintPreview, SetCurrentPage)
                 php_printf("Executing RETURN_BOOL(wxPrintPreview::SetCurrentPage((int) pageNum0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintPreview_php*)native_object)->SetCurrentPage((int) pageNum0));
+                RETVAL_BOOL(((wxPrintPreview_php*)native_object)->SetCurrentPage((int) pageNum0));
 
 
                 return;
@@ -4081,7 +4081,7 @@ PHP_METHOD(php_wxPrinter, GetAbort)
                 php_printf("Executing RETURN_BOOL(wxPrinter::GetAbort())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrinter_php*)native_object)->GetAbort());
+                RETVAL_BOOL(((wxPrinter_php*)native_object)->GetAbort());
 
 
                 return;
@@ -4189,7 +4189,7 @@ PHP_METHOD(php_wxPrinter, GetLastError)
                 php_printf("Executing RETURN_LONG(wxPrinter::GetLastError())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxPrinter::GetLastError());
+                RETVAL_LONG(wxPrinter::GetLastError());
 
 
                 return;
@@ -4466,7 +4466,7 @@ PHP_METHOD(php_wxPrinter, PrintMethod)
                 php_printf("Executing RETURN_BOOL(wxPrinter::Print((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrinter_php*)native_object)->Print((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1));
+                RETVAL_BOOL(((wxPrinter_php*)native_object)->Print((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1));
 
                 references->AddReference(parent0, "wxPrinter::Print at call 1 with 2 argument(s)");
                 references->AddReference(printout0, "wxPrinter::Print at call 1 with 2 argument(s)");
@@ -4480,7 +4480,7 @@ PHP_METHOD(php_wxPrinter, PrintMethod)
                 php_printf("Executing RETURN_BOOL(wxPrinter::Print((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1, prompt0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrinter_php*)native_object)->Print((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1, prompt0));
+                RETVAL_BOOL(((wxPrinter_php*)native_object)->Print((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1, prompt0));
 
                 references->AddReference(parent0, "wxPrinter::Print at call 1 with 3 argument(s)");
                 references->AddReference(printout0, "wxPrinter::Print at call 1 with 3 argument(s)");
@@ -4616,7 +4616,7 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
                 value_to_return1 = (wxDC_php*) ((wxPrinter_php*)native_object)->PrintDialog((wxWindow*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -4919,7 +4919,7 @@ PHP_METHOD(php_wxPrinter, Setup)
                 php_printf("Executing RETURN_BOOL(wxPrinter::Setup((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrinter_php*)native_object)->Setup((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxPrinter_php*)native_object)->Setup((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxPrinter::Setup at call 1 with 1 argument(s)");
 
@@ -5657,7 +5657,7 @@ PHP_METHOD(php_wxPrintout, GetDC)
                 value_to_return0 = (wxDC_php*) ((wxPrintout_php*)native_object)->GetDC();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -6977,7 +6977,7 @@ PHP_METHOD(php_wxPrintout, GetPreview)
                 value_to_return0 = (wxPrintPreview_php*) ((wxPrintout_php*)native_object)->GetPreview();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -7109,7 +7109,7 @@ PHP_METHOD(php_wxPrintout, GetTitle)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxPrintout_php*)native_object)->GetTitle();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -7225,7 +7225,7 @@ PHP_METHOD(php_wxPrintout, HasPage)
                 php_printf("Executing RETURN_BOOL(wxPrintout::HasPage((int) pageNum0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintout_php*)native_object)->HasPage((int) pageNum0));
+                RETVAL_BOOL(((wxPrintout_php*)native_object)->HasPage((int) pageNum0));
 
 
                 return;
@@ -7336,7 +7336,7 @@ PHP_METHOD(php_wxPrintout, IsPreview)
                 php_printf("Executing RETURN_BOOL(wxPrintout::IsPreview())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintout_php*)native_object)->IsPreview());
+                RETVAL_BOOL(((wxPrintout_php*)native_object)->IsPreview());
 
 
                 return;
@@ -8024,7 +8024,7 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -8459,7 +8459,7 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -8849,7 +8849,7 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDC)
                 value_to_return0 = (wxDC_php*) ((wxPrintDialog_php*)native_object)->GetPrintDC();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -9102,7 +9102,7 @@ PHP_METHOD(php_wxPrintDialog, ShowModal)
                 php_printf("Executing RETURN_LONG(wxPrintDialog::ShowModal())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPrintDialog_php*)native_object)->ShowModal());
+                RETVAL_LONG(((wxPrintDialog_php*)native_object)->ShowModal());
 
 
                 return;
@@ -9898,7 +9898,7 @@ PHP_METHOD(php_wxPageSetupDialog, ShowModal)
                 php_printf("Executing RETURN_LONG(wxPageSetupDialog::ShowModal())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPageSetupDialog_php*)native_object)->ShowModal());
+                RETVAL_LONG(((wxPageSetupDialog_php*)native_object)->ShowModal());
 
 
                 return;

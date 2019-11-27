@@ -969,7 +969,7 @@ PHP_METHOD(php_wxLog, EnableLogging)
                 php_printf("Executing RETURN_BOOL(wxLog::EnableLogging())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxLog::EnableLogging());
+                RETVAL_BOOL(wxLog::EnableLogging());
 
 
                 return;
@@ -982,7 +982,7 @@ PHP_METHOD(php_wxLog, EnableLogging)
                 php_printf("Executing RETURN_BOOL(wxLog::EnableLogging(enable0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxLog::EnableLogging(enable0));
+                RETVAL_BOOL(wxLog::EnableLogging(enable0));
 
 
                 return;
@@ -1399,7 +1399,7 @@ PHP_METHOD(php_wxLog, GetActiveTarget)
                 wxLog_php* value_to_return0;
                 value_to_return0 = (wxLog_php*) wxLog::GetActiveTarget();
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -1547,7 +1547,7 @@ PHP_METHOD(php_wxLog, GetLogLevel)
                 php_printf("Executing RETURN_LONG(wxLog::GetLogLevel())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxLog::GetLogLevel());
+                RETVAL_LONG(wxLog::GetLogLevel());
 
 
                 return;
@@ -1679,7 +1679,7 @@ PHP_METHOD(php_wxLog, GetRepetitionCounting)
                 php_printf("Executing RETURN_BOOL(wxLog::GetRepetitionCounting())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxLog::GetRepetitionCounting());
+                RETVAL_BOOL(wxLog::GetRepetitionCounting());
 
 
                 return;
@@ -1813,7 +1813,7 @@ PHP_METHOD(php_wxLog, GetTimestamp)
 
                 wxString value_to_return0;
                 value_to_return0 = wxLog::GetTimestamp();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -2083,7 +2083,7 @@ PHP_METHOD(php_wxLog, GetVerbose)
                 php_printf("Executing RETURN_BOOL(wxLog::GetVerbose())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxLog::GetVerbose());
+                RETVAL_BOOL(wxLog::GetVerbose());
 
 
                 return;
@@ -2221,7 +2221,7 @@ PHP_METHOD(php_wxLog, IsAllowedTraceMask)
                 php_printf("Executing RETURN_BOOL(wxLog::IsAllowedTraceMask(wxString(mask0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxLog::IsAllowedTraceMask(wxString(mask0, wxConvUTF8)));
+                RETVAL_BOOL(wxLog::IsAllowedTraceMask(wxString(mask0, wxConvUTF8)));
 
 
                 return;
@@ -2353,7 +2353,7 @@ PHP_METHOD(php_wxLog, IsEnabled)
                 php_printf("Executing RETURN_BOOL(wxLog::IsEnabled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxLog::IsEnabled());
+                RETVAL_BOOL(wxLog::IsEnabled());
 
 
                 return;
@@ -2492,7 +2492,7 @@ PHP_METHOD(php_wxLog, IsLevelEnabled)
                 php_printf("Executing RETURN_BOOL(wxLog::IsLevelEnabled((wxLogLevel) level0, wxString(component0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxLog::IsLevelEnabled((wxLogLevel) level0, wxString(component0, wxConvUTF8)));
+                RETVAL_BOOL(wxLog::IsLevelEnabled((wxLogLevel) level0, wxString(component0, wxConvUTF8)));
 
 
                 return;
@@ -2920,7 +2920,7 @@ PHP_METHOD(php_wxLog, SetActiveTarget)
                 wxLog_php* value_to_return1;
                 value_to_return1 = (wxLog_php*) wxLog::SetActiveTarget((wxLog*) object_pointer0_0);
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -3520,7 +3520,7 @@ PHP_METHOD(php_wxLog, SetThreadActiveTarget)
                 wxLog_php* value_to_return1;
                 value_to_return1 = (wxLog_php*) wxLog::SetThreadActiveTarget((wxLog*) object_pointer0_0);
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -4269,7 +4269,7 @@ PHP_METHOD(php_wxLogChain, GetOldLog)
                 value_to_return0 = (wxLog_php*) ((wxLogChain_php*)native_object)->GetOldLog();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -4403,7 +4403,7 @@ PHP_METHOD(php_wxLogChain, IsPassingMessages)
                 php_printf("Executing RETURN_BOOL(wxLogChain::IsPassingMessages())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxLogChain_php*)native_object)->IsPassingMessages());
+                RETVAL_BOOL(((wxLogChain_php*)native_object)->IsPassingMessages());
 
 
                 return;
@@ -5226,7 +5226,7 @@ PHP_METHOD(php_wxLogBuffer, GetBuffer)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxLogBuffer_php*)native_object)->GetBuffer();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -5499,7 +5499,7 @@ PHP_METHOD(php_wxLogWindow, GetFrame)
                 value_to_return0 = (wxFrame_php*) ((wxLogWindow_php*)native_object)->GetFrame();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -5621,7 +5621,7 @@ bool wxLogWindow_php::OnFrameClose(wxFrame* frame)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG

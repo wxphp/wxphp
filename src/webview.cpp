@@ -308,7 +308,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetUrl)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxWebViewHistoryItem_php*)native_object)->GetUrl();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -416,7 +416,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetTitle)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxWebViewHistoryItem_php*)native_object)->GetTitle();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -696,7 +696,7 @@ PHP_METHOD(php_wxWebViewHandler, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxWebViewHandler_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1079,7 +1079,7 @@ PHP_METHOD(php_wxWebViewArchiveHandler, GetFile)
                 value_to_return1 = (wxFSFile_php*) ((wxWebViewArchiveHandler_php*)native_object)->GetFile(wxString(uri0, wxConvUTF8));
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){

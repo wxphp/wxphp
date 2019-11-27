@@ -894,7 +894,7 @@ PHP_METHOD(php_wxAboutDialogInfo, GetCopyright)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAboutDialogInfo_php*)native_object)->GetCopyright();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1003,7 +1003,7 @@ PHP_METHOD(php_wxAboutDialogInfo, GetDescription)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAboutDialogInfo_php*)native_object)->GetDescription();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -1110,7 +1110,7 @@ PHP_METHOD(php_wxAboutDialogInfo, HasCopyright)
                 php_printf("Executing RETURN_BOOL(wxAboutDialogInfo::HasCopyright())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAboutDialogInfo_php*)native_object)->HasCopyright());
+                RETVAL_BOOL(((wxAboutDialogInfo_php*)native_object)->HasCopyright());
 
 
                 return;
@@ -1217,7 +1217,7 @@ PHP_METHOD(php_wxAboutDialogInfo, HasDescription)
                 php_printf("Executing RETURN_BOOL(wxAboutDialogInfo::HasDescription())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxAboutDialogInfo_php*)native_object)->HasDescription());
+                RETVAL_BOOL(((wxAboutDialogInfo_php*)native_object)->HasDescription());
 
 
                 return;
@@ -2655,7 +2655,7 @@ PHP_METHOD(php_wxAboutDialogInfo, GetName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxAboutDialogInfo_php*)native_object)->GetName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3008,7 +3008,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, GetSelection)
                 php_printf("Executing RETURN_LONG(wxSingleChoiceDialog::GetSelection())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSingleChoiceDialog_php*)native_object)->GetSelection());
+                RETVAL_LONG(((wxSingleChoiceDialog_php*)native_object)->GetSelection());
 
 
                 return;
@@ -3117,7 +3117,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, GetStringSelection)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxSingleChoiceDialog_php*)native_object)->GetStringSelection();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -3336,7 +3336,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, ShowModal)
                 php_printf("Executing RETURN_LONG(wxSingleChoiceDialog::ShowModal())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSingleChoiceDialog_php*)native_object)->ShowModal());
+                RETVAL_LONG(((wxSingleChoiceDialog_php*)native_object)->ShowModal());
 
 
                 return;
@@ -3878,7 +3878,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, GetSelectionData)
                 php_printf("Executing wxSingleChoiceDialog::GetSelectionData()\n\n");
                 #endif
 
-                ZVAL_STRING(return_value, (char*) ((wxSingleChoiceDialog_php*)native_object)->GetSelectionData());
+                RETVAL_STRING((char*) ((wxSingleChoiceDialog_php*)native_object)->GetSelectionData());
 
 
                 return;
@@ -4512,7 +4512,7 @@ PHP_METHOD(php_wxPrintDialogData, GetAllPages)
                 php_printf("Executing RETURN_BOOL(wxPrintDialogData::GetAllPages())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintDialogData_php*)native_object)->GetAllPages());
+                RETVAL_BOOL(((wxPrintDialogData_php*)native_object)->GetAllPages());
 
 
                 return;
@@ -4619,7 +4619,7 @@ PHP_METHOD(php_wxPrintDialogData, GetCollate)
                 php_printf("Executing RETURN_BOOL(wxPrintDialogData::GetCollate())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintDialogData_php*)native_object)->GetCollate());
+                RETVAL_BOOL(((wxPrintDialogData_php*)native_object)->GetCollate());
 
 
                 return;
@@ -4726,7 +4726,7 @@ PHP_METHOD(php_wxPrintDialogData, GetFromPage)
                 php_printf("Executing RETURN_LONG(wxPrintDialogData::GetFromPage())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPrintDialogData_php*)native_object)->GetFromPage());
+                RETVAL_LONG(((wxPrintDialogData_php*)native_object)->GetFromPage());
 
 
                 return;
@@ -4833,7 +4833,7 @@ PHP_METHOD(php_wxPrintDialogData, GetMaxPage)
                 php_printf("Executing RETURN_LONG(wxPrintDialogData::GetMaxPage())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPrintDialogData_php*)native_object)->GetMaxPage());
+                RETVAL_LONG(((wxPrintDialogData_php*)native_object)->GetMaxPage());
 
 
                 return;
@@ -4940,7 +4940,7 @@ PHP_METHOD(php_wxPrintDialogData, GetMinPage)
                 php_printf("Executing RETURN_LONG(wxPrintDialogData::GetMinPage())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPrintDialogData_php*)native_object)->GetMinPage());
+                RETVAL_LONG(((wxPrintDialogData_php*)native_object)->GetMinPage());
 
 
                 return;
@@ -5047,7 +5047,7 @@ PHP_METHOD(php_wxPrintDialogData, GetNoCopies)
                 php_printf("Executing RETURN_LONG(wxPrintDialogData::GetNoCopies())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPrintDialogData_php*)native_object)->GetNoCopies());
+                RETVAL_LONG(((wxPrintDialogData_php*)native_object)->GetNoCopies());
 
 
                 return;
@@ -5281,7 +5281,7 @@ PHP_METHOD(php_wxPrintDialogData, GetPrintToFile)
                 php_printf("Executing RETURN_BOOL(wxPrintDialogData::GetPrintToFile())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintDialogData_php*)native_object)->GetPrintToFile());
+                RETVAL_BOOL(((wxPrintDialogData_php*)native_object)->GetPrintToFile());
 
 
                 return;
@@ -5388,7 +5388,7 @@ PHP_METHOD(php_wxPrintDialogData, GetSelection)
                 php_printf("Executing RETURN_BOOL(wxPrintDialogData::GetSelection())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintDialogData_php*)native_object)->GetSelection());
+                RETVAL_BOOL(((wxPrintDialogData_php*)native_object)->GetSelection());
 
 
                 return;
@@ -5495,7 +5495,7 @@ PHP_METHOD(php_wxPrintDialogData, GetToPage)
                 php_printf("Executing RETURN_LONG(wxPrintDialogData::GetToPage())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxPrintDialogData_php*)native_object)->GetToPage());
+                RETVAL_LONG(((wxPrintDialogData_php*)native_object)->GetToPage());
 
 
                 return;
@@ -5602,7 +5602,7 @@ PHP_METHOD(php_wxPrintDialogData, IsOk)
                 php_printf("Executing RETURN_BOOL(wxPrintDialogData::IsOk())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxPrintDialogData_php*)native_object)->IsOk());
+                RETVAL_BOOL(((wxPrintDialogData_php*)native_object)->IsOk());
 
 
                 return;
@@ -7063,7 +7063,7 @@ PHP_METHOD(php_wxColourDialog, ShowModal)
                 php_printf("Executing RETURN_LONG(wxColourDialog::ShowModal())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxColourDialog_php*)native_object)->ShowModal());
+                RETVAL_LONG(((wxColourDialog_php*)native_object)->ShowModal());
 
 
                 return;
@@ -7339,7 +7339,7 @@ PHP_METHOD(php_wxColourDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxColourDialog::Create((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxColourDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxColourDialog::Create at call 1 with 1 argument(s)");
 
@@ -7352,7 +7352,7 @@ PHP_METHOD(php_wxColourDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxColourDialog::Create((wxWindow*) object_pointer0_0, (wxColourData*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxColourData*) object_pointer0_1));
+                RETVAL_BOOL(((wxColourDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxColourData*) object_pointer0_1));
 
                 references->AddReference(parent0, "wxColourDialog::Create at call 1 with 2 argument(s)");
                 references->AddReference(data0, "wxColourDialog::Create at call 1 with 2 argument(s)");
@@ -7625,7 +7625,7 @@ PHP_METHOD(php_wxColourData, ToString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxColourData_php*)native_object)->ToString();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -8354,7 +8354,7 @@ PHP_METHOD(php_wxColourData, GetChooseFull)
                 php_printf("Executing RETURN_BOOL(wxColourData::GetChooseFull())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourData_php*)native_object)->GetChooseFull());
+                RETVAL_BOOL(((wxColourData_php*)native_object)->GetChooseFull());
 
 
                 return;
@@ -8467,7 +8467,7 @@ PHP_METHOD(php_wxColourData, FromString)
                 php_printf("Executing RETURN_BOOL(wxColourData::FromString(wxString(str0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourData_php*)native_object)->FromString(wxString(str0, wxConvUTF8)));
+                RETVAL_BOOL(((wxColourData_php*)native_object)->FromString(wxString(str0, wxConvUTF8)));
 
 
                 return;
@@ -9476,7 +9476,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxDialog::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
+                RETVAL_BOOL(((wxDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxDialog::Create at call 1 with 3 argument(s)");
 
@@ -9489,7 +9489,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxDialog::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
+                RETVAL_BOOL(((wxDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxDialog::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxDialog::Create at call 3 with 4 argument(s)");
@@ -9503,7 +9503,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxDialog::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+                RETVAL_BOOL(((wxDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
                 references->AddReference(parent0, "wxDialog::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxDialog::Create at call 3 with 5 argument(s)");
@@ -9518,7 +9518,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxDialog::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+                RETVAL_BOOL(((wxDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
                 references->AddReference(parent0, "wxDialog::Create at call 1 with 6 argument(s)");
                 references->AddReference(pos0, "wxDialog::Create at call 3 with 6 argument(s)");
@@ -9533,7 +9533,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxDialog::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)));
+                RETVAL_BOOL(((wxDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxDialog::Create at call 1 with 7 argument(s)");
                 references->AddReference(pos0, "wxDialog::Create at call 3 with 7 argument(s)");
@@ -9555,7 +9555,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxFindReplaceDialog::Create((wxWindow*) object_pointer1_0, (wxFindReplaceData*) object_pointer1_1, wxString(title1, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFindReplaceDialog_php*)native_object)->Create((wxWindow*) object_pointer1_0, (wxFindReplaceData*) object_pointer1_1, wxString(title1, wxConvUTF8)));
+                RETVAL_BOOL(((wxFindReplaceDialog_php*)native_object)->Create((wxWindow*) object_pointer1_0, (wxFindReplaceData*) object_pointer1_1, wxString(title1, wxConvUTF8)));
 
                 references->AddReference(parent1, "wxDialog::Create at call 1 with 3 argument(s)");
                 references->AddReference(data1, "wxDialog::Create at call 1 with 3 argument(s)");
@@ -9569,7 +9569,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxFindReplaceDialog::Create((wxWindow*) object_pointer1_0, (wxFindReplaceData*) object_pointer1_1, wxString(title1, wxConvUTF8), (int) style1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFindReplaceDialog_php*)native_object)->Create((wxWindow*) object_pointer1_0, (wxFindReplaceData*) object_pointer1_1, wxString(title1, wxConvUTF8), (int) style1));
+                RETVAL_BOOL(((wxFindReplaceDialog_php*)native_object)->Create((wxWindow*) object_pointer1_0, (wxFindReplaceData*) object_pointer1_1, wxString(title1, wxConvUTF8), (int) style1));
 
                 references->AddReference(parent1, "wxDialog::Create at call 1 with 4 argument(s)");
                 references->AddReference(data1, "wxDialog::Create at call 1 with 4 argument(s)");
@@ -9590,7 +9590,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3));
 
                 references->AddReference(parent2, "wxDialog::Create at call 1 with 4 argument(s)");
 
@@ -9603,7 +9603,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2));
 
                 references->AddReference(parent2, "wxDialog::Create at call 1 with 5 argument(s)");
 
@@ -9616,7 +9616,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8)));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8)));
 
                 references->AddReference(parent2, "wxDialog::Create at call 1 with 6 argument(s)");
 
@@ -9629,7 +9629,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8), *(wxPoint*) object_pointer2_6))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8), *(wxPoint*) object_pointer2_6));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8), *(wxPoint*) object_pointer2_6));
 
                 references->AddReference(parent2, "wxDialog::Create at call 1 with 7 argument(s)");
                 references->AddReference(pos2, "wxDialog::Create at call 3 with 7 argument(s)");
@@ -9643,7 +9643,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8), *(wxPoint*) object_pointer2_6, *(wxSize*) object_pointer2_7))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8), *(wxPoint*) object_pointer2_6, *(wxSize*) object_pointer2_7));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8), *(wxPoint*) object_pointer2_6, *(wxSize*) object_pointer2_7));
 
                 references->AddReference(parent2, "wxDialog::Create at call 1 with 8 argument(s)");
                 references->AddReference(pos2, "wxDialog::Create at call 3 with 8 argument(s)");
@@ -9658,7 +9658,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8), *(wxPoint*) object_pointer2_6, *(wxSize*) object_pointer2_7, (long) style2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8), *(wxPoint*) object_pointer2_6, *(wxSize*) object_pointer2_7, (long) style2));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol2, wxConvUTF8), wxString(initialFont2, wxConvUTF8), wxString(normalTextFont2, wxConvUTF8), (wxWindow*) object_pointer2_3, (wxWindowID) id2, wxString(caption2, wxConvUTF8), *(wxPoint*) object_pointer2_6, *(wxSize*) object_pointer2_7, (long) style2));
 
                 references->AddReference(parent2, "wxDialog::Create at call 1 with 9 argument(s)");
                 references->AddReference(pos2, "wxDialog::Create at call 3 with 9 argument(s)");
@@ -9680,7 +9680,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer3_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0));
 
                 references->AddReference(parent3, "wxDialog::Create at call 1 with 1 argument(s)");
 
@@ -9693,7 +9693,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer3_0, (int) id3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0, (int) id3));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0, (int) id3));
 
                 references->AddReference(parent3, "wxDialog::Create at call 1 with 2 argument(s)");
 
@@ -9706,7 +9706,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8)));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8)));
 
                 references->AddReference(parent3, "wxDialog::Create at call 1 with 3 argument(s)");
 
@@ -9719,7 +9719,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8), *(wxBitmap*) object_pointer3_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8), *(wxBitmap*) object_pointer3_3));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8), *(wxBitmap*) object_pointer3_3));
 
                 references->AddReference(parent3, "wxDialog::Create at call 1 with 4 argument(s)");
                 references->AddReference(bitmap3, "wxDialog::Create at call 3 with 4 argument(s)");
@@ -9733,7 +9733,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8), *(wxBitmap*) object_pointer3_3, *(wxPoint*) object_pointer3_4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8), *(wxBitmap*) object_pointer3_3, *(wxPoint*) object_pointer3_4));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8), *(wxBitmap*) object_pointer3_3, *(wxPoint*) object_pointer3_4));
 
                 references->AddReference(parent3, "wxDialog::Create at call 1 with 5 argument(s)");
                 references->AddReference(bitmap3, "wxDialog::Create at call 3 with 5 argument(s)");
@@ -9748,7 +9748,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8), *(wxBitmap*) object_pointer3_3, *(wxPoint*) object_pointer3_4, (long) style3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8), *(wxBitmap*) object_pointer3_3, *(wxPoint*) object_pointer3_4, (long) style3));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer3_0, (int) id3, wxString(title3, wxConvUTF8), *(wxBitmap*) object_pointer3_3, *(wxPoint*) object_pointer3_4, (long) style3));
 
                 references->AddReference(parent3, "wxDialog::Create at call 1 with 6 argument(s)");
                 references->AddReference(bitmap3, "wxDialog::Create at call 3 with 6 argument(s)");
@@ -9770,7 +9770,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxColourDialog::Create((wxWindow*) object_pointer4_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourDialog_php*)native_object)->Create((wxWindow*) object_pointer4_0));
+                RETVAL_BOOL(((wxColourDialog_php*)native_object)->Create((wxWindow*) object_pointer4_0));
 
                 references->AddReference(parent4, "wxDialog::Create at call 1 with 1 argument(s)");
 
@@ -9783,7 +9783,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxColourDialog::Create((wxWindow*) object_pointer4_0, (wxColourData*) object_pointer4_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxColourDialog_php*)native_object)->Create((wxWindow*) object_pointer4_0, (wxColourData*) object_pointer4_1));
+                RETVAL_BOOL(((wxColourDialog_php*)native_object)->Create((wxWindow*) object_pointer4_0, (wxColourData*) object_pointer4_1));
 
                 references->AddReference(parent4, "wxDialog::Create at call 1 with 2 argument(s)");
                 references->AddReference(data4, "wxDialog::Create at call 1 with 2 argument(s)");
@@ -9804,7 +9804,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxFontDialog::Create((wxWindow*) object_pointer5_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontDialog_php*)native_object)->Create((wxWindow*) object_pointer5_0));
+                RETVAL_BOOL(((wxFontDialog_php*)native_object)->Create((wxWindow*) object_pointer5_0));
 
                 references->AddReference(parent5, "wxDialog::Create at call 1 with 1 argument(s)");
 
@@ -9824,7 +9824,7 @@ PHP_METHOD(php_wxDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxFontDialog::Create((wxWindow*) object_pointer6_0, *(wxFontData*) object_pointer6_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontDialog_php*)native_object)->Create((wxWindow*) object_pointer6_0, *(wxFontData*) object_pointer6_1));
+                RETVAL_BOOL(((wxFontDialog_php*)native_object)->Create((wxWindow*) object_pointer6_0, *(wxFontData*) object_pointer6_1));
 
                 references->AddReference(parent6, "wxDialog::Create at call 1 with 2 argument(s)");
                 references->AddReference(data6, "wxDialog::Create at call 3 with 2 argument(s)");
@@ -9998,7 +9998,7 @@ PHP_METHOD(php_wxDialog, CreateButtonSizer)
                 value_to_return1 = (wxSizer_php*) ((wxDialog_php*)native_object)->CreateButtonSizer((long) flags0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -10189,7 +10189,7 @@ PHP_METHOD(php_wxDialog, CreateSeparatedButtonSizer)
                 value_to_return1 = (wxSizer_php*) ((wxDialog_php*)native_object)->CreateSeparatedButtonSizer((long) flags0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -10398,7 +10398,7 @@ PHP_METHOD(php_wxDialog, CreateSeparatedSizer)
                 value_to_return1 = (wxSizer_php*) ((wxDialog_php*)native_object)->CreateSeparatedSizer((wxSizer*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -10590,7 +10590,7 @@ PHP_METHOD(php_wxDialog, CreateStdDialogButtonSizer)
                 value_to_return1 = (wxStdDialogButtonSizer_php*) ((wxDialog_php*)native_object)->CreateStdDialogButtonSizer((long) flags0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -10940,7 +10940,7 @@ PHP_METHOD(php_wxDialog, GetAffirmativeId)
                 php_printf("Executing RETURN_LONG(wxDialog::GetAffirmativeId())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxDialog_php*)native_object)->GetAffirmativeId());
+                RETVAL_LONG(((wxDialog_php*)native_object)->GetAffirmativeId());
 
 
                 return;
@@ -11107,7 +11107,7 @@ PHP_METHOD(php_wxDialog, GetContentWindow)
                 value_to_return0 = (wxWindow_php*) ((wxDialog_php*)native_object)->GetContentWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -11289,7 +11289,7 @@ PHP_METHOD(php_wxDialog, GetEscapeId)
                 php_printf("Executing RETURN_LONG(wxDialog::GetEscapeId())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxDialog_php*)native_object)->GetEscapeId());
+                RETVAL_LONG(((wxDialog_php*)native_object)->GetEscapeId());
 
 
                 return;
@@ -11452,7 +11452,7 @@ PHP_METHOD(php_wxDialog, GetReturnCode)
                 php_printf("Executing RETURN_LONG(wxDialog::GetReturnCode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxDialog_php*)native_object)->GetReturnCode());
+                RETVAL_LONG(((wxDialog_php*)native_object)->GetReturnCode());
 
 
                 return;
@@ -11795,7 +11795,7 @@ PHP_METHOD(php_wxDialog, IsIconized)
                 php_printf("Executing RETURN_BOOL(wxDialog::IsIconized())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->IsIconized());
+                RETVAL_BOOL(((wxDialog_php*)native_object)->IsIconized());
 
 
                 return;
@@ -11958,7 +11958,7 @@ PHP_METHOD(php_wxDialog, IsModal)
                 php_printf("Executing RETURN_BOOL(wxDialog::IsModal())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->IsModal());
+                RETVAL_BOOL(((wxDialog_php*)native_object)->IsModal());
 
 
                 return;
@@ -12692,7 +12692,7 @@ PHP_METHOD(php_wxDialog, ShowModal)
                 php_printf("Executing RETURN_LONG(wxDialog::ShowModal())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxDialog_php*)native_object)->ShowModal());
+                RETVAL_LONG(((wxDialog_php*)native_object)->ShowModal());
 
 
                 return;
@@ -12860,7 +12860,7 @@ PHP_METHOD(php_wxDialog, Show)
                 php_printf("Executing RETURN_BOOL(wxDialog::Show())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->Show());
+                RETVAL_BOOL(((wxDialog_php*)native_object)->Show());
 
 
                 return;
@@ -12872,7 +12872,7 @@ PHP_METHOD(php_wxDialog, Show)
                 php_printf("Executing RETURN_BOOL(wxDialog::Show(show0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->Show(show0));
+                RETVAL_BOOL(((wxDialog_php*)native_object)->Show(show0));
 
 
                 return;
@@ -14249,7 +14249,7 @@ PHP_METHOD(php_wxDialog, GetLayoutAdaptationDone)
                 php_printf("Executing RETURN_BOOL(wxDialog::GetLayoutAdaptationDone())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->GetLayoutAdaptationDone());
+                RETVAL_BOOL(((wxDialog_php*)native_object)->GetLayoutAdaptationDone());
 
 
                 return;
@@ -14412,7 +14412,7 @@ PHP_METHOD(php_wxDialog, GetLayoutAdaptationLevel)
                 php_printf("Executing RETURN_LONG(wxDialog::GetLayoutAdaptationLevel())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxDialog_php*)native_object)->GetLayoutAdaptationLevel());
+                RETVAL_LONG(((wxDialog_php*)native_object)->GetLayoutAdaptationLevel());
 
 
                 return;
@@ -14744,7 +14744,7 @@ PHP_METHOD(php_wxDialog, DoLayoutAdaptation)
                 php_printf("Executing RETURN_BOOL(wxDialog::DoLayoutAdaptation())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->DoLayoutAdaptation());
+                RETVAL_BOOL(((wxDialog_php*)native_object)->DoLayoutAdaptation());
 
 
                 return;
@@ -14907,7 +14907,7 @@ PHP_METHOD(php_wxDialog, CanDoLayoutAdaptation)
                 php_printf("Executing RETURN_BOOL(wxDialog::CanDoLayoutAdaptation())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxDialog_php*)native_object)->CanDoLayoutAdaptation());
+                RETVAL_BOOL(((wxDialog_php*)native_object)->CanDoLayoutAdaptation());
 
 
                 return;
@@ -15071,7 +15071,7 @@ PHP_METHOD(php_wxDialog, IsLayoutAdaptationEnabled)
                 php_printf("Executing RETURN_BOOL(wxDialog::IsLayoutAdaptationEnabled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, wxDialog::IsLayoutAdaptationEnabled());
+                RETVAL_BOOL(wxDialog::IsLayoutAdaptationEnabled());
 
 
                 return;
@@ -15227,7 +15227,7 @@ PHP_METHOD(php_wxDirDialog, GetMessage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxDirDialog_php*)native_object)->GetMessage();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -15336,7 +15336,7 @@ PHP_METHOD(php_wxDirDialog, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxDirDialog_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -15669,7 +15669,7 @@ PHP_METHOD(php_wxDirDialog, ShowModal)
                 php_printf("Executing RETURN_LONG(wxDirDialog::ShowModal())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxDirDialog_php*)native_object)->ShowModal());
+                RETVAL_LONG(((wxDirDialog_php*)native_object)->ShowModal());
 
 
                 return;
@@ -16086,7 +16086,7 @@ PHP_METHOD(php_wxFindReplaceData, GetFindString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFindReplaceData_php*)native_object)->GetFindString();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -16195,7 +16195,7 @@ PHP_METHOD(php_wxFindReplaceData, GetReplaceString)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFindReplaceData_php*)native_object)->GetReplaceString();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -16302,7 +16302,7 @@ PHP_METHOD(php_wxFindReplaceData, GetFlags)
                 php_printf("Executing RETURN_LONG(wxFindReplaceData::GetFlags())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFindReplaceData_php*)native_object)->GetFlags());
+                RETVAL_LONG(((wxFindReplaceData_php*)native_object)->GetFlags());
 
 
                 return;
@@ -16938,7 +16938,7 @@ PHP_METHOD(php_wxFindReplaceDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxFindReplaceDialog::Create((wxWindow*) object_pointer0_0, (wxFindReplaceData*) object_pointer0_1, wxString(title0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFindReplaceDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxFindReplaceData*) object_pointer0_1, wxString(title0, wxConvUTF8)));
+                RETVAL_BOOL(((wxFindReplaceDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxFindReplaceData*) object_pointer0_1, wxString(title0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxFindReplaceDialog::Create at call 1 with 3 argument(s)");
                 references->AddReference(data0, "wxFindReplaceDialog::Create at call 1 with 3 argument(s)");
@@ -16952,7 +16952,7 @@ PHP_METHOD(php_wxFindReplaceDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxFindReplaceDialog::Create((wxWindow*) object_pointer0_0, (wxFindReplaceData*) object_pointer0_1, wxString(title0, wxConvUTF8), (int) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFindReplaceDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxFindReplaceData*) object_pointer0_1, wxString(title0, wxConvUTF8), (int) style0));
+                RETVAL_BOOL(((wxFindReplaceDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxFindReplaceData*) object_pointer0_1, wxString(title0, wxConvUTF8), (int) style0));
 
                 references->AddReference(parent0, "wxFindReplaceDialog::Create at call 1 with 4 argument(s)");
                 references->AddReference(data0, "wxFindReplaceDialog::Create at call 1 with 4 argument(s)");
@@ -17065,7 +17065,7 @@ PHP_METHOD(php_wxFindReplaceDialog, GetData)
                 value_to_return0 = (wxFindReplaceData_php*) ((wxFindReplaceDialog_php*)native_object)->GetData();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -17672,7 +17672,7 @@ PHP_METHOD(php_wxFileDialog, ShowModal)
                 php_printf("Executing RETURN_LONG(wxFileDialog::ShowModal())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFileDialog_php*)native_object)->ShowModal());
+                RETVAL_LONG(((wxFileDialog_php*)native_object)->ShowModal());
 
 
                 return;
@@ -18458,7 +18458,7 @@ PHP_METHOD(php_wxFileDialog, GetWildcard)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDialog_php*)native_object)->GetWildcard();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18703,7 +18703,7 @@ PHP_METHOD(php_wxFileDialog, GetMessage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDialog_php*)native_object)->GetMessage();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18812,7 +18812,7 @@ PHP_METHOD(php_wxFileDialog, GetPath)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDialog_php*)native_object)->GetPath();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -18919,7 +18919,7 @@ PHP_METHOD(php_wxFileDialog, GetFilterIndex)
                 php_printf("Executing RETURN_LONG(wxFileDialog::GetFilterIndex())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFileDialog_php*)native_object)->GetFilterIndex());
+                RETVAL_LONG(((wxFileDialog_php*)native_object)->GetFilterIndex());
 
 
                 return;
@@ -19164,7 +19164,7 @@ PHP_METHOD(php_wxFileDialog, GetFilename)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDialog_php*)native_object)->GetFilename();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -19275,7 +19275,7 @@ PHP_METHOD(php_wxFileDialog, GetExtraControl)
                 value_to_return0 = (wxWindow_php*) ((wxFileDialog_php*)native_object)->GetExtraControl();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -19403,7 +19403,7 @@ PHP_METHOD(php_wxFileDialog, GetDirectory)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxFileDialog_php*)native_object)->GetDirectory();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -20402,7 +20402,7 @@ PHP_METHOD(php_wxFontData, GetShowHelp)
                 php_printf("Executing RETURN_BOOL(wxFontData::GetShowHelp())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontData_php*)native_object)->GetShowHelp());
+                RETVAL_BOOL(((wxFontData_php*)native_object)->GetShowHelp());
 
 
                 return;
@@ -20624,7 +20624,7 @@ PHP_METHOD(php_wxFontData, GetEnableEffects)
                 php_printf("Executing RETURN_BOOL(wxFontData::GetEnableEffects())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontData_php*)native_object)->GetEnableEffects());
+                RETVAL_BOOL(((wxFontData_php*)native_object)->GetEnableEffects());
 
 
                 return;
@@ -20973,7 +20973,7 @@ PHP_METHOD(php_wxFontData, GetAllowSymbols)
                 php_printf("Executing RETURN_BOOL(wxFontData::GetAllowSymbols())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontData_php*)native_object)->GetAllowSymbols());
+                RETVAL_BOOL(((wxFontData_php*)native_object)->GetAllowSymbols());
 
 
                 return;
@@ -21320,7 +21320,7 @@ PHP_METHOD(php_wxFontDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxFontDialog::Create((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxFontDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxFontDialog::Create at call 1 with 1 argument(s)");
 
@@ -21340,7 +21340,7 @@ PHP_METHOD(php_wxFontDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxFontDialog::Create((wxWindow*) object_pointer1_0, *(wxFontData*) object_pointer1_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFontDialog_php*)native_object)->Create((wxWindow*) object_pointer1_0, *(wxFontData*) object_pointer1_1));
+                RETVAL_BOOL(((wxFontDialog_php*)native_object)->Create((wxWindow*) object_pointer1_0, *(wxFontData*) object_pointer1_1));
 
                 references->AddReference(parent1, "wxFontDialog::Create at call 1 with 2 argument(s)");
                 references->AddReference(data1, "wxFontDialog::Create at call 3 with 2 argument(s)");
@@ -21631,7 +21631,7 @@ PHP_METHOD(php_wxFontDialog, ShowModal)
                 php_printf("Executing RETURN_LONG(wxFontDialog::ShowModal())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFontDialog_php*)native_object)->ShowModal());
+                RETVAL_LONG(((wxFontDialog_php*)native_object)->ShowModal());
 
 
                 return;
@@ -22005,7 +22005,7 @@ PHP_METHOD(php_wxMessageDialog, GetCancelLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetCancelLabel();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22113,7 +22113,7 @@ PHP_METHOD(php_wxMessageDialog, GetCaption)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetCaption();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22219,7 +22219,7 @@ PHP_METHOD(php_wxMessageDialog, GetEffectiveIcon)
                 php_printf("Executing RETURN_LONG(wxMessageDialog::GetEffectiveIcon())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMessageDialog_php*)native_object)->GetEffectiveIcon());
+                RETVAL_LONG(((wxMessageDialog_php*)native_object)->GetEffectiveIcon());
 
 
                 return;
@@ -22327,7 +22327,7 @@ PHP_METHOD(php_wxMessageDialog, GetExtendedMessage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetExtendedMessage();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22435,7 +22435,7 @@ PHP_METHOD(php_wxMessageDialog, GetHelpLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetHelpLabel();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22543,7 +22543,7 @@ PHP_METHOD(php_wxMessageDialog, GetMessage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetMessage();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22649,7 +22649,7 @@ PHP_METHOD(php_wxMessageDialog, GetMessageDialogStyle)
                 php_printf("Executing RETURN_LONG(wxMessageDialog::GetMessageDialogStyle())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMessageDialog_php*)native_object)->GetMessageDialogStyle());
+                RETVAL_LONG(((wxMessageDialog_php*)native_object)->GetMessageDialogStyle());
 
 
                 return;
@@ -22757,7 +22757,7 @@ PHP_METHOD(php_wxMessageDialog, GetNoLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetNoLabel();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22865,7 +22865,7 @@ PHP_METHOD(php_wxMessageDialog, GetOKLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetOKLabel();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -22973,7 +22973,7 @@ PHP_METHOD(php_wxMessageDialog, GetYesLabel)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxMessageDialog_php*)native_object)->GetYesLabel();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -23079,7 +23079,7 @@ PHP_METHOD(php_wxMessageDialog, HasCustomLabels)
                 php_printf("Executing RETURN_BOOL(wxMessageDialog::HasCustomLabels())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMessageDialog_php*)native_object)->HasCustomLabels());
+                RETVAL_BOOL(((wxMessageDialog_php*)native_object)->HasCustomLabels());
 
 
                 return;
@@ -23467,7 +23467,7 @@ PHP_METHOD(php_wxMessageDialog, ShowModal)
                 php_printf("Executing RETURN_LONG(wxMessageDialog::ShowModal())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxMessageDialog_php*)native_object)->ShowModal());
+                RETVAL_LONG(((wxMessageDialog_php*)native_object)->ShowModal());
 
 
                 return;
@@ -23582,7 +23582,7 @@ PHP_METHOD(php_wxMessageDialog, SetYesNoLabels)
                 php_printf("Executing RETURN_BOOL(wxMessageDialog::SetYesNoLabels(wxString(yes0, wxConvUTF8), wxString(no0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMessageDialog_php*)native_object)->SetYesNoLabels(wxString(yes0, wxConvUTF8), wxString(no0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMessageDialog_php*)native_object)->SetYesNoLabels(wxString(yes0, wxConvUTF8), wxString(no0, wxConvUTF8)));
 
 
                 return;
@@ -23699,7 +23699,7 @@ PHP_METHOD(php_wxMessageDialog, SetYesNoCancelLabels)
                 php_printf("Executing RETURN_BOOL(wxMessageDialog::SetYesNoCancelLabels(wxString(yes0, wxConvUTF8), wxString(no0, wxConvUTF8), wxString(cancel0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMessageDialog_php*)native_object)->SetYesNoCancelLabels(wxString(yes0, wxConvUTF8), wxString(no0, wxConvUTF8), wxString(cancel0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMessageDialog_php*)native_object)->SetYesNoCancelLabels(wxString(yes0, wxConvUTF8), wxString(no0, wxConvUTF8), wxString(cancel0, wxConvUTF8)));
 
 
                 return;
@@ -23812,7 +23812,7 @@ PHP_METHOD(php_wxMessageDialog, SetOKLabel)
                 php_printf("Executing RETURN_BOOL(wxMessageDialog::SetOKLabel(wxString(ok0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMessageDialog_php*)native_object)->SetOKLabel(wxString(ok0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMessageDialog_php*)native_object)->SetOKLabel(wxString(ok0, wxConvUTF8)));
 
 
                 return;
@@ -23927,7 +23927,7 @@ PHP_METHOD(php_wxMessageDialog, SetOKCancelLabels)
                 php_printf("Executing RETURN_BOOL(wxMessageDialog::SetOKCancelLabels(wxString(ok0, wxConvUTF8), wxString(cancel0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMessageDialog_php*)native_object)->SetOKCancelLabels(wxString(ok0, wxConvUTF8), wxString(cancel0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMessageDialog_php*)native_object)->SetOKCancelLabels(wxString(ok0, wxConvUTF8), wxString(cancel0, wxConvUTF8)));
 
 
                 return;
@@ -24153,7 +24153,7 @@ PHP_METHOD(php_wxMessageDialog, SetHelpLabel)
                 php_printf("Executing RETURN_BOOL(wxMessageDialog::SetHelpLabel(wxString(help0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxMessageDialog_php*)native_object)->SetHelpLabel(wxString(help0, wxConvUTF8)));
+                RETVAL_BOOL(((wxMessageDialog_php*)native_object)->SetHelpLabel(wxString(help0, wxConvUTF8)));
 
 
                 return;
@@ -24313,7 +24313,7 @@ PHP_METHOD(php_wxGenericProgressDialog, GetMessage)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxGenericProgressDialog_php*)native_object)->GetMessage();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -24424,7 +24424,7 @@ PHP_METHOD(php_wxGenericProgressDialog, GetRange)
                 php_printf("Executing RETURN_LONG(wxGenericProgressDialog::GetRange())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGenericProgressDialog_php*)native_object)->GetRange());
+                RETVAL_LONG(((wxGenericProgressDialog_php*)native_object)->GetRange());
 
 
                 return;
@@ -24535,7 +24535,7 @@ PHP_METHOD(php_wxGenericProgressDialog, GetValue)
                 php_printf("Executing RETURN_LONG(wxGenericProgressDialog::GetValue())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGenericProgressDialog_php*)native_object)->GetValue());
+                RETVAL_LONG(((wxGenericProgressDialog_php*)native_object)->GetValue());
 
 
                 return;
@@ -24768,7 +24768,7 @@ PHP_METHOD(php_wxGenericProgressDialog, Pulse)
                 php_printf("Executing RETURN_BOOL(wxGenericProgressDialog::Pulse())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGenericProgressDialog_php*)native_object)->Pulse());
+                RETVAL_BOOL(((wxGenericProgressDialog_php*)native_object)->Pulse());
 
 
                 return;
@@ -24780,7 +24780,7 @@ PHP_METHOD(php_wxGenericProgressDialog, Pulse)
                 php_printf("Executing RETURN_BOOL(wxGenericProgressDialog::Pulse(wxString(newmsg0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGenericProgressDialog_php*)native_object)->Pulse(wxString(newmsg0, wxConvUTF8)));
+                RETVAL_BOOL(((wxGenericProgressDialog_php*)native_object)->Pulse(wxString(newmsg0, wxConvUTF8)));
 
 
                 return;
@@ -24792,7 +24792,7 @@ PHP_METHOD(php_wxGenericProgressDialog, Pulse)
                 php_printf("Executing RETURN_BOOL(wxGenericProgressDialog::Pulse(wxString(newmsg0, wxConvUTF8), skip0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGenericProgressDialog_php*)native_object)->Pulse(wxString(newmsg0, wxConvUTF8), skip0));
+                RETVAL_BOOL(((wxGenericProgressDialog_php*)native_object)->Pulse(wxString(newmsg0, wxConvUTF8), skip0));
 
                 size_t elements_returned0_1 = sizeof(skip0)/sizeof(*skip0);
                 array_init(&skip0_ref);
@@ -25037,7 +25037,7 @@ PHP_METHOD(php_wxGenericProgressDialog, Update)
                 php_printf("Executing RETURN_BOOL(wxGenericProgressDialog::Update((int) value0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGenericProgressDialog_php*)native_object)->Update((int) value0));
+                RETVAL_BOOL(((wxGenericProgressDialog_php*)native_object)->Update((int) value0));
 
 
                 return;
@@ -25049,7 +25049,7 @@ PHP_METHOD(php_wxGenericProgressDialog, Update)
                 php_printf("Executing RETURN_BOOL(wxGenericProgressDialog::Update((int) value0, wxString(newmsg0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGenericProgressDialog_php*)native_object)->Update((int) value0, wxString(newmsg0, wxConvUTF8)));
+                RETVAL_BOOL(((wxGenericProgressDialog_php*)native_object)->Update((int) value0, wxString(newmsg0, wxConvUTF8)));
 
 
                 return;
@@ -25061,7 +25061,7 @@ PHP_METHOD(php_wxGenericProgressDialog, Update)
                 php_printf("Executing RETURN_BOOL(wxGenericProgressDialog::Update((int) value0, wxString(newmsg0, wxConvUTF8), skip0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGenericProgressDialog_php*)native_object)->Update((int) value0, wxString(newmsg0, wxConvUTF8), skip0));
+                RETVAL_BOOL(((wxGenericProgressDialog_php*)native_object)->Update((int) value0, wxString(newmsg0, wxConvUTF8), skip0));
 
                 size_t elements_returned0_2 = sizeof(skip0)/sizeof(*skip0);
                 array_init(&skip0_ref);
@@ -25178,7 +25178,7 @@ PHP_METHOD(php_wxGenericProgressDialog, WasCancelled)
                 php_printf("Executing RETURN_BOOL(wxGenericProgressDialog::WasCancelled())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGenericProgressDialog_php*)native_object)->WasCancelled());
+                RETVAL_BOOL(((wxGenericProgressDialog_php*)native_object)->WasCancelled());
 
 
                 return;
@@ -25289,7 +25289,7 @@ PHP_METHOD(php_wxGenericProgressDialog, WasSkipped)
                 php_printf("Executing RETURN_BOOL(wxGenericProgressDialog::WasSkipped())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGenericProgressDialog_php*)native_object)->WasSkipped());
+                RETVAL_BOOL(((wxGenericProgressDialog_php*)native_object)->WasSkipped());
 
 
                 return;
@@ -25757,7 +25757,7 @@ PHP_METHOD(php_wxRearrangeDialog, GetList)
                 value_to_return0 = (wxRearrangeList_php*) ((wxRearrangeDialog_php*)native_object)->GetList();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -26084,7 +26084,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxSymbolPickerDialog::Create at call 1 with 4 argument(s)");
 
@@ -26097,7 +26097,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxSymbolPickerDialog::Create at call 1 with 5 argument(s)");
 
@@ -26110,7 +26110,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8)));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxSymbolPickerDialog::Create at call 1 with 6 argument(s)");
 
@@ -26123,7 +26123,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6));
 
                 references->AddReference(parent0, "wxSymbolPickerDialog::Create at call 1 with 7 argument(s)");
                 references->AddReference(pos0, "wxSymbolPickerDialog::Create at call 3 with 7 argument(s)");
@@ -26137,7 +26137,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6, *(wxSize*) object_pointer0_7))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6, *(wxSize*) object_pointer0_7));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6, *(wxSize*) object_pointer0_7));
 
                 references->AddReference(parent0, "wxSymbolPickerDialog::Create at call 1 with 8 argument(s)");
                 references->AddReference(pos0, "wxSymbolPickerDialog::Create at call 3 with 8 argument(s)");
@@ -26152,7 +26152,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6, *(wxSize*) object_pointer0_7, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6, *(wxSize*) object_pointer0_7, (long) style0));
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6, *(wxSize*) object_pointer0_7, (long) style0));
 
                 references->AddReference(parent0, "wxSymbolPickerDialog::Create at call 1 with 9 argument(s)");
                 references->AddReference(pos0, "wxSymbolPickerDialog::Create at call 3 with 9 argument(s)");
@@ -26264,7 +26264,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetFontName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxSymbolPickerDialog_php*)native_object)->GetFontName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26371,7 +26371,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetFromUnicode)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::GetFromUnicode())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->GetFromUnicode());
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->GetFromUnicode());
 
 
                 return;
@@ -26480,7 +26480,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetNormalTextFontName)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxSymbolPickerDialog_php*)native_object)->GetNormalTextFontName();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26589,7 +26589,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetSymbol)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxSymbolPickerDialog_php*)native_object)->GetSymbol();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -26696,7 +26696,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetSymbolChar)
                 php_printf("Executing RETURN_LONG(wxSymbolPickerDialog::GetSymbolChar())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSymbolPickerDialog_php*)native_object)->GetSymbolChar());
+                RETVAL_LONG(((wxSymbolPickerDialog_php*)native_object)->GetSymbolChar());
 
 
                 return;
@@ -26803,7 +26803,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, HasSelection)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::HasSelection())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->HasSelection());
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->HasSelection());
 
 
                 return;
@@ -27473,7 +27473,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, UseNormalFont)
                 php_printf("Executing RETURN_BOOL(wxSymbolPickerDialog::UseNormalFont())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->UseNormalFont());
+                RETVAL_BOOL(((wxSymbolPickerDialog_php*)native_object)->UseNormalFont());
 
 
                 return;
@@ -28116,7 +28116,7 @@ PHP_METHOD(php_wxTextEntryDialog, GetValue)
 
                 wxString value_to_return0;
                 value_to_return0 = ((wxTextEntryDialog_php*)native_object)->GetValue();
-                ZVAL_STRING(return_value, value_to_return0.ToUTF8().data());
+                RETVAL_STRING(value_to_return0.ToUTF8().data());
 
 
                 return;
@@ -28344,7 +28344,7 @@ PHP_METHOD(php_wxTextEntryDialog, ShowModal)
                 php_printf("Executing RETURN_LONG(wxTextEntryDialog::ShowModal())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxTextEntryDialog_php*)native_object)->ShowModal());
+                RETVAL_LONG(((wxTextEntryDialog_php*)native_object)->ShowModal());
 
 
                 return;
@@ -28745,7 +28745,7 @@ PHP_METHOD(php_wxWizard, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxWizard::Create at call 1 with 1 argument(s)");
 
@@ -28758,7 +28758,7 @@ PHP_METHOD(php_wxWizard, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer0_0, (int) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0, (int) id0));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0, (int) id0));
 
                 references->AddReference(parent0, "wxWizard::Create at call 1 with 2 argument(s)");
 
@@ -28771,7 +28771,7 @@ PHP_METHOD(php_wxWizard, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8)));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxWizard::Create at call 1 with 3 argument(s)");
 
@@ -28784,7 +28784,7 @@ PHP_METHOD(php_wxWizard, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxWizard::Create at call 1 with 4 argument(s)");
                 references->AddReference(bitmap0, "wxWizard::Create at call 3 with 4 argument(s)");
@@ -28798,7 +28798,7 @@ PHP_METHOD(php_wxWizard, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4));
 
                 references->AddReference(parent0, "wxWizard::Create at call 1 with 5 argument(s)");
                 references->AddReference(bitmap0, "wxWizard::Create at call 3 with 5 argument(s)");
@@ -28813,7 +28813,7 @@ PHP_METHOD(php_wxWizard, Create)
                 php_printf("Executing RETURN_BOOL(wxWizard::Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, (long) style0));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, (long) style0));
 
                 references->AddReference(parent0, "wxWizard::Create at call 1 with 6 argument(s)");
                 references->AddReference(bitmap0, "wxWizard::Create at call 3 with 6 argument(s)");
@@ -29308,7 +29308,7 @@ PHP_METHOD(php_wxWizard, GetBitmapPlacement)
                 php_printf("Executing RETURN_LONG(wxWizard::GetBitmapPlacement())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxWizard_php*)native_object)->GetBitmapPlacement());
+                RETVAL_LONG(((wxWizard_php*)native_object)->GetBitmapPlacement());
 
 
                 return;
@@ -29419,7 +29419,7 @@ PHP_METHOD(php_wxWizard, GetCurrentPage)
                 value_to_return0 = (wxWizardPage_php*) ((wxWizard_php*)native_object)->GetCurrentPage();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -29545,7 +29545,7 @@ PHP_METHOD(php_wxWizard, GetMinimumBitmapWidth)
                 php_printf("Executing RETURN_LONG(wxWizard::GetMinimumBitmapWidth())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxWizard_php*)native_object)->GetMinimumBitmapWidth());
+                RETVAL_LONG(((wxWizard_php*)native_object)->GetMinimumBitmapWidth());
 
 
                 return;
@@ -29789,7 +29789,7 @@ PHP_METHOD(php_wxWizard, HasNextPage)
                 php_printf("Executing RETURN_BOOL(wxWizard::HasNextPage((wxWizardPage*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->HasNextPage((wxWizardPage*) object_pointer0_0));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->HasNextPage((wxWizardPage*) object_pointer0_0));
 
                 references->AddReference(page0, "wxWizard::HasNextPage at call 1 with 1 argument(s)");
 
@@ -29920,7 +29920,7 @@ PHP_METHOD(php_wxWizard, HasPrevPage)
                 php_printf("Executing RETURN_BOOL(wxWizard::HasPrevPage((wxWizardPage*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->HasPrevPage((wxWizardPage*) object_pointer0_0));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->HasPrevPage((wxWizardPage*) object_pointer0_0));
 
                 references->AddReference(page0, "wxWizard::HasPrevPage at call 1 with 1 argument(s)");
 
@@ -30051,7 +30051,7 @@ PHP_METHOD(php_wxWizard, RunWizard)
                 php_printf("Executing RETURN_BOOL(wxWizard::RunWizard((wxWizardPage*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->RunWizard((wxWizardPage*) object_pointer0_0));
+                RETVAL_BOOL(((wxWizard_php*)native_object)->RunWizard((wxWizardPage*) object_pointer0_0));
 
                 references->AddReference(firstPage0, "wxWizard::RunWizard at call 1 with 1 argument(s)");
 
@@ -31140,7 +31140,7 @@ PHP_METHOD(php_wxWizard, GetPageAreaSizer)
                 value_to_return0 = (wxSizer_php*) ((wxWizard_php*)native_object)->GetPageAreaSizer();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){

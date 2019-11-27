@@ -216,7 +216,7 @@ PHP_METHOD(php_wxGBPosition, GetCol)
                 php_printf("Executing RETURN_LONG(wxGBPosition::GetCol())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGBPosition_php*)native_object)->GetCol());
+                RETVAL_LONG(((wxGBPosition_php*)native_object)->GetCol());
 
 
                 return;
@@ -323,7 +323,7 @@ PHP_METHOD(php_wxGBPosition, GetRow)
                 php_printf("Executing RETURN_LONG(wxGBPosition::GetRow())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGBPosition_php*)native_object)->GetRow());
+                RETVAL_LONG(((wxGBPosition_php*)native_object)->GetRow());
 
 
                 return;
@@ -1131,7 +1131,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return2 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -1168,7 +1168,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return3 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -1206,7 +1206,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return4 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2, (int) flag0);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -1244,7 +1244,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return5 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2, (int) flag0, (int) border0);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -1282,7 +1282,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return6 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2, (int) flag0, (int) border0, (wxObject*) object_pointer0_5);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -1328,7 +1328,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return2 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -1365,7 +1365,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return3 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -1403,7 +1403,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return4 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -1441,7 +1441,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return5 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -1479,7 +1479,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return6 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1, (wxObject*) object_pointer1_5);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -1525,7 +1525,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return3 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -1561,7 +1561,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return4 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -1598,7 +1598,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return5 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3, (int) flag2);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -1635,7 +1635,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return6 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3, (int) flag2, (int) border2);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -1672,7 +1672,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return7 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3, (int) flag2, (int) border2, (wxObject*) object_pointer2_6);
 
                 if(value_to_return7 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return7->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return7->phpObj)){
@@ -1717,7 +1717,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
                 value_to_return1 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxGBSizerItem*) object_pointer3_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -2077,7 +2077,7 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
                 php_printf("Executing RETURN_BOOL(wxGridBagSizer::CheckForIntersection((wxGBSizerItem*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)native_object)->CheckForIntersection((wxGBSizerItem*) object_pointer0_0));
+                RETVAL_BOOL(((wxGridBagSizer_php*)native_object)->CheckForIntersection((wxGBSizerItem*) object_pointer0_0));
 
                 references->AddReference(item0, "wxGridBagSizer::CheckForIntersection at call 1 with 1 argument(s)");
 
@@ -2090,7 +2090,7 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
                 php_printf("Executing RETURN_BOOL(wxGridBagSizer::CheckForIntersection((wxGBSizerItem*) object_pointer0_0, (wxGBSizerItem*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)native_object)->CheckForIntersection((wxGBSizerItem*) object_pointer0_0, (wxGBSizerItem*) object_pointer0_1));
+                RETVAL_BOOL(((wxGridBagSizer_php*)native_object)->CheckForIntersection((wxGBSizerItem*) object_pointer0_0, (wxGBSizerItem*) object_pointer0_1));
 
                 references->AddReference(item0, "wxGridBagSizer::CheckForIntersection at call 1 with 2 argument(s)");
                 references->AddReference(excludeItem0, "wxGridBagSizer::CheckForIntersection at call 1 with 2 argument(s)");
@@ -2111,7 +2111,7 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
                 php_printf("Executing RETURN_BOOL(wxGridBagSizer::CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)native_object)->CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1));
+                RETVAL_BOOL(((wxGridBagSizer_php*)native_object)->CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1));
 
                 references->AddReference(pos1, "wxGridBagSizer::CheckForIntersection at call 3 with 2 argument(s)");
                 references->AddReference(span1, "wxGridBagSizer::CheckForIntersection at call 3 with 2 argument(s)");
@@ -2125,7 +2125,7 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
                 php_printf("Executing RETURN_BOOL(wxGridBagSizer::CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1, (wxGBSizerItem*) object_pointer1_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)native_object)->CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1, (wxGBSizerItem*) object_pointer1_2));
+                RETVAL_BOOL(((wxGridBagSizer_php*)native_object)->CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1, (wxGBSizerItem*) object_pointer1_2));
 
                 references->AddReference(pos1, "wxGridBagSizer::CheckForIntersection at call 3 with 3 argument(s)");
                 references->AddReference(span1, "wxGridBagSizer::CheckForIntersection at call 3 with 3 argument(s)");
@@ -2301,7 +2301,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItem)
                 value_to_return1 = (wxGBSizerItem_php*) ((wxGridBagSizer_php*)native_object)->FindItem((wxWindow*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -2344,7 +2344,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItem)
                 value_to_return1 = (wxGBSizerItem_php*) ((wxGridBagSizer_php*)native_object)->FindItem((wxSizer*) object_pointer1_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -2498,7 +2498,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItemAtPoint)
                 value_to_return1 = (wxGBSizerItem_php*) ((wxGridBagSizer_php*)native_object)->FindItemAtPoint(*(wxPoint*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -2652,7 +2652,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItemAtPosition)
                 value_to_return1 = (wxGBSizerItem_php*) ((wxGridBagSizer_php*)native_object)->FindItemAtPosition(*(wxGBPosition*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -2806,7 +2806,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItemWithData)
                 value_to_return1 = (wxGBSizerItem_php*) ((wxGridBagSizer_php*)native_object)->FindItemWithData((const wxObject*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -4047,7 +4047,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
                 php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemPosition((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)native_object)->SetItemPosition((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1));
+                RETVAL_BOOL(((wxGridBagSizer_php*)native_object)->SetItemPosition((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1));
 
                 references->AddReference(window0, "wxGridBagSizer::SetItemPosition at call 1 with 2 argument(s)");
                 references->AddReference(pos0, "wxGridBagSizer::SetItemPosition at call 3 with 2 argument(s)");
@@ -4068,7 +4068,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
                 php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemPosition((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)native_object)->SetItemPosition((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1));
+                RETVAL_BOOL(((wxGridBagSizer_php*)native_object)->SetItemPosition((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1));
 
                 references->AddReference(sizer1, "wxGridBagSizer::SetItemPosition at call 1 with 2 argument(s)");
                 references->AddReference(pos1, "wxGridBagSizer::SetItemPosition at call 3 with 2 argument(s)");
@@ -4089,7 +4089,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
                 php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemPosition((size_t) index2, *(wxGBPosition*) object_pointer2_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)native_object)->SetItemPosition((size_t) index2, *(wxGBPosition*) object_pointer2_1));
+                RETVAL_BOOL(((wxGridBagSizer_php*)native_object)->SetItemPosition((size_t) index2, *(wxGBPosition*) object_pointer2_1));
 
                 references->AddReference(pos2, "wxGridBagSizer::SetItemPosition at call 3 with 2 argument(s)");
 
@@ -4337,7 +4337,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
                 php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemSpan((wxWindow*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)native_object)->SetItemSpan((wxWindow*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1));
+                RETVAL_BOOL(((wxGridBagSizer_php*)native_object)->SetItemSpan((wxWindow*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1));
 
                 references->AddReference(window0, "wxGridBagSizer::SetItemSpan at call 1 with 2 argument(s)");
                 references->AddReference(span0, "wxGridBagSizer::SetItemSpan at call 3 with 2 argument(s)");
@@ -4358,7 +4358,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
                 php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemSpan((wxSizer*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)native_object)->SetItemSpan((wxSizer*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1));
+                RETVAL_BOOL(((wxGridBagSizer_php*)native_object)->SetItemSpan((wxSizer*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1));
 
                 references->AddReference(sizer1, "wxGridBagSizer::SetItemSpan at call 1 with 2 argument(s)");
                 references->AddReference(span1, "wxGridBagSizer::SetItemSpan at call 3 with 2 argument(s)");
@@ -4379,7 +4379,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
                 php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemSpan((size_t) index2, *(wxGBSpan*) object_pointer2_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)native_object)->SetItemSpan((size_t) index2, *(wxGBSpan*) object_pointer2_1));
+                RETVAL_BOOL(((wxGridBagSizer_php*)native_object)->SetItemSpan((size_t) index2, *(wxGBSpan*) object_pointer2_1));
 
                 references->AddReference(span2, "wxGridBagSizer::SetItemSpan at call 3 with 2 argument(s)");
 
@@ -5252,7 +5252,7 @@ PHP_METHOD(php_wxGBSizerItem, SetSpan)
                 php_printf("Executing RETURN_BOOL(wxGBSizerItem::SetSpan(*(wxGBSpan*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)native_object)->SetSpan(*(wxGBSpan*) object_pointer0_0));
+                RETVAL_BOOL(((wxGBSizerItem_php*)native_object)->SetSpan(*(wxGBSpan*) object_pointer0_0));
 
                 references->AddReference(span0, "wxGBSizerItem::SetSpan at call 3 with 1 argument(s)");
 
@@ -5383,7 +5383,7 @@ PHP_METHOD(php_wxGBSizerItem, SetPos)
                 php_printf("Executing RETURN_BOOL(wxGBSizerItem::SetPos(*(wxGBPosition*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)native_object)->SetPos(*(wxGBPosition*) object_pointer0_0));
+                RETVAL_BOOL(((wxGBSizerItem_php*)native_object)->SetPos(*(wxGBPosition*) object_pointer0_0));
 
                 references->AddReference(pos0, "wxGBSizerItem::SetPos at call 3 with 1 argument(s)");
 
@@ -5702,7 +5702,7 @@ PHP_METHOD(php_wxGBSizerItem, Intersects)
                 php_printf("Executing RETURN_BOOL(wxGBSizerItem::Intersects(*(wxGBPosition*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)native_object)->Intersects(*(wxGBPosition*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1));
+                RETVAL_BOOL(((wxGBSizerItem_php*)native_object)->Intersects(*(wxGBPosition*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1));
 
                 references->AddReference(pos0, "wxGBSizerItem::Intersects at call 3 with 2 argument(s)");
                 references->AddReference(span0, "wxGBSizerItem::Intersects at call 3 with 2 argument(s)");
@@ -5723,7 +5723,7 @@ PHP_METHOD(php_wxGBSizerItem, Intersects)
                 php_printf("Executing RETURN_BOOL(wxGBSizerItem::Intersects(*(wxGBSizerItem*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)native_object)->Intersects(*(wxGBSizerItem*) object_pointer1_0));
+                RETVAL_BOOL(((wxGBSizerItem_php*)native_object)->Intersects(*(wxGBSizerItem*) object_pointer1_0));
 
                 references->AddReference(other1, "wxGBSizerItem::Intersects at call 3 with 1 argument(s)");
 
@@ -6158,7 +6158,7 @@ PHP_METHOD(php_wxGBSizerItem, GetGBSizer)
                 value_to_return0 = (wxGridBagSizer_php*) ((wxGBSizerItem_php*)native_object)->GetGBSizer();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -6483,7 +6483,7 @@ PHP_METHOD(php_wxGBSpan, GetColspan)
                 php_printf("Executing RETURN_LONG(wxGBSpan::GetColspan())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGBSpan_php*)native_object)->GetColspan());
+                RETVAL_LONG(((wxGBSpan_php*)native_object)->GetColspan());
 
 
                 return;
@@ -6590,7 +6590,7 @@ PHP_METHOD(php_wxGBSpan, GetRowspan)
                 php_printf("Executing RETURN_LONG(wxGBSpan::GetRowspan())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGBSpan_php*)native_object)->GetRowspan());
+                RETVAL_LONG(((wxGBSpan_php*)native_object)->GetRowspan());
 
 
                 return;
@@ -7165,7 +7165,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutFrame)
                 php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutFrame((wxFrame*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)native_object)->LayoutFrame((wxFrame*) object_pointer0_0));
+                RETVAL_BOOL(((wxLayoutAlgorithm_php*)native_object)->LayoutFrame((wxFrame*) object_pointer0_0));
 
                 references->AddReference(frame0, "wxLayoutAlgorithm::LayoutFrame at call 1 with 1 argument(s)");
 
@@ -7178,7 +7178,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutFrame)
                 php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)native_object)->LayoutFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1));
+                RETVAL_BOOL(((wxLayoutAlgorithm_php*)native_object)->LayoutFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1));
 
                 references->AddReference(frame0, "wxLayoutAlgorithm::LayoutFrame at call 1 with 2 argument(s)");
                 references->AddReference(mainWindow0, "wxLayoutAlgorithm::LayoutFrame at call 1 with 2 argument(s)");
@@ -7329,7 +7329,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutMDIFrame)
                 php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)native_object)->LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0));
+                RETVAL_BOOL(((wxLayoutAlgorithm_php*)native_object)->LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0));
 
                 references->AddReference(frame0, "wxLayoutAlgorithm::LayoutMDIFrame at call 1 with 1 argument(s)");
 
@@ -7342,7 +7342,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutMDIFrame)
                 php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0, (wxRect*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)native_object)->LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0, (wxRect*) object_pointer0_1));
+                RETVAL_BOOL(((wxLayoutAlgorithm_php*)native_object)->LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0, (wxRect*) object_pointer0_1));
 
                 references->AddReference(frame0, "wxLayoutAlgorithm::LayoutMDIFrame at call 1 with 2 argument(s)");
                 references->AddReference(rect0, "wxLayoutAlgorithm::LayoutMDIFrame at call 1 with 2 argument(s)");
@@ -7493,7 +7493,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutWindow)
                 php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutWindow((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)native_object)->LayoutWindow((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxLayoutAlgorithm_php*)native_object)->LayoutWindow((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxLayoutAlgorithm::LayoutWindow at call 1 with 1 argument(s)");
 
@@ -7506,7 +7506,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutWindow)
                 php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutWindow((wxWindow*) object_pointer0_0, (wxWindow*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)native_object)->LayoutWindow((wxWindow*) object_pointer0_0, (wxWindow*) object_pointer0_1));
+                RETVAL_BOOL(((wxLayoutAlgorithm_php*)native_object)->LayoutWindow((wxWindow*) object_pointer0_0, (wxWindow*) object_pointer0_1));
 
                 references->AddReference(parent0, "wxLayoutAlgorithm::LayoutWindow at call 1 with 2 argument(s)");
                 references->AddReference(mainWindow0, "wxLayoutAlgorithm::LayoutWindow at call 1 with 2 argument(s)");
@@ -7893,7 +7893,7 @@ PHP_METHOD(php_wxSizer, Show)
                 php_printf("Executing RETURN_BOOL(wxSizer::Show((wxSizer*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Show((wxSizer*) object_pointer0_0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Show((wxSizer*) object_pointer0_0));
 
                 references->AddReference(sizer0, "wxSizer::Show at call 1 with 1 argument(s)");
 
@@ -7906,7 +7906,7 @@ PHP_METHOD(php_wxSizer, Show)
                 php_printf("Executing RETURN_BOOL(wxSizer::Show((wxSizer*) object_pointer0_0, show0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Show((wxSizer*) object_pointer0_0, show0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Show((wxSizer*) object_pointer0_0, show0));
 
                 references->AddReference(sizer0, "wxSizer::Show at call 1 with 2 argument(s)");
 
@@ -7919,7 +7919,7 @@ PHP_METHOD(php_wxSizer, Show)
                 php_printf("Executing RETURN_BOOL(wxSizer::Show((wxSizer*) object_pointer0_0, show0, recursive0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Show((wxSizer*) object_pointer0_0, show0, recursive0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Show((wxSizer*) object_pointer0_0, show0, recursive0));
 
                 references->AddReference(sizer0, "wxSizer::Show at call 1 with 3 argument(s)");
 
@@ -7939,7 +7939,7 @@ PHP_METHOD(php_wxSizer, Show)
                 php_printf("Executing RETURN_BOOL(wxSizer::Show((size_t) index1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Show((size_t) index1));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Show((size_t) index1));
 
 
                 return;
@@ -7951,7 +7951,7 @@ PHP_METHOD(php_wxSizer, Show)
                 php_printf("Executing RETURN_BOOL(wxSizer::Show((size_t) index1, show1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Show((size_t) index1, show1));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Show((size_t) index1, show1));
 
 
                 return;
@@ -7970,7 +7970,7 @@ PHP_METHOD(php_wxSizer, Show)
                 php_printf("Executing RETURN_BOOL(wxSizer::Show((wxWindow*) object_pointer2_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Show((wxWindow*) object_pointer2_0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Show((wxWindow*) object_pointer2_0));
 
                 references->AddReference(window2, "wxSizer::Show at call 1 with 1 argument(s)");
 
@@ -7983,7 +7983,7 @@ PHP_METHOD(php_wxSizer, Show)
                 php_printf("Executing RETURN_BOOL(wxSizer::Show((wxWindow*) object_pointer2_0, show2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Show((wxWindow*) object_pointer2_0, show2));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Show((wxWindow*) object_pointer2_0, show2));
 
                 references->AddReference(window2, "wxSizer::Show at call 1 with 2 argument(s)");
 
@@ -7996,7 +7996,7 @@ PHP_METHOD(php_wxSizer, Show)
                 php_printf("Executing RETURN_BOOL(wxSizer::Show((wxWindow*) object_pointer2_0, show2, recursive2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Show((wxWindow*) object_pointer2_0, show2, recursive2));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Show((wxWindow*) object_pointer2_0, show2, recursive2));
 
                 references->AddReference(window2, "wxSizer::Show at call 1 with 3 argument(s)");
 
@@ -8819,7 +8819,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
                 php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((size_t) index0, *(wxSize*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->SetItemMinSize((size_t) index0, *(wxSize*) object_pointer0_1));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->SetItemMinSize((size_t) index0, *(wxSize*) object_pointer0_1));
 
                 references->AddReference(size0, "wxSizer::SetItemMinSize at call 3 with 2 argument(s)");
 
@@ -8839,7 +8839,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
                 php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((size_t) index1, (int) width1, (int) height1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->SetItemMinSize((size_t) index1, (int) width1, (int) height1));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->SetItemMinSize((size_t) index1, (int) width1, (int) height1));
 
 
                 return;
@@ -8858,7 +8858,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
                 php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((wxSizer*) object_pointer2_0, *(wxSize*) object_pointer2_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->SetItemMinSize((wxSizer*) object_pointer2_0, *(wxSize*) object_pointer2_1));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->SetItemMinSize((wxSizer*) object_pointer2_0, *(wxSize*) object_pointer2_1));
 
                 references->AddReference(sizer2, "wxSizer::SetItemMinSize at call 1 with 2 argument(s)");
                 references->AddReference(size2, "wxSizer::SetItemMinSize at call 3 with 2 argument(s)");
@@ -8879,7 +8879,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
                 php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((wxSizer*) object_pointer3_0, (int) width3, (int) height3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->SetItemMinSize((wxSizer*) object_pointer3_0, (int) width3, (int) height3));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->SetItemMinSize((wxSizer*) object_pointer3_0, (int) width3, (int) height3));
 
                 references->AddReference(sizer3, "wxSizer::SetItemMinSize at call 1 with 3 argument(s)");
 
@@ -8899,7 +8899,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
                 php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((wxWindow*) object_pointer4_0, *(wxSize*) object_pointer4_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->SetItemMinSize((wxWindow*) object_pointer4_0, *(wxSize*) object_pointer4_1));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->SetItemMinSize((wxWindow*) object_pointer4_0, *(wxSize*) object_pointer4_1));
 
                 references->AddReference(window4, "wxSizer::SetItemMinSize at call 1 with 2 argument(s)");
                 references->AddReference(size4, "wxSizer::SetItemMinSize at call 3 with 2 argument(s)");
@@ -8920,7 +8920,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
                 php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((wxWindow*) object_pointer5_0, (int) width5, (int) height5))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->SetItemMinSize((wxWindow*) object_pointer5_0, (int) width5, (int) height5));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->SetItemMinSize((wxWindow*) object_pointer5_0, (int) width5, (int) height5));
 
                 references->AddReference(window5, "wxSizer::SetItemMinSize at call 1 with 3 argument(s)");
 
@@ -9420,7 +9420,7 @@ PHP_METHOD(php_wxSizer, Replace)
                 php_printf("Executing RETURN_BOOL(wxSizer::Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1));
 
                 references->AddReference(oldsz0, "wxSizer::Replace at call 1 with 2 argument(s)");
                 references->AddReference(newsz0, "wxSizer::Replace at call 1 with 2 argument(s)");
@@ -9434,7 +9434,7 @@ PHP_METHOD(php_wxSizer, Replace)
                 php_printf("Executing RETURN_BOOL(wxSizer::Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1, recursive0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1, recursive0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1, recursive0));
 
                 references->AddReference(oldsz0, "wxSizer::Replace at call 1 with 3 argument(s)");
                 references->AddReference(newsz0, "wxSizer::Replace at call 1 with 3 argument(s)");
@@ -9455,7 +9455,7 @@ PHP_METHOD(php_wxSizer, Replace)
                 php_printf("Executing RETURN_BOOL(wxSizer::Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1));
 
                 references->AddReference(oldwin1, "wxSizer::Replace at call 1 with 2 argument(s)");
                 references->AddReference(newwin1, "wxSizer::Replace at call 1 with 2 argument(s)");
@@ -9469,7 +9469,7 @@ PHP_METHOD(php_wxSizer, Replace)
                 php_printf("Executing RETURN_BOOL(wxSizer::Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1, recursive1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1, recursive1));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1, recursive1));
 
                 references->AddReference(oldwin1, "wxSizer::Replace at call 1 with 3 argument(s)");
                 references->AddReference(newwin1, "wxSizer::Replace at call 1 with 3 argument(s)");
@@ -9490,7 +9490,7 @@ PHP_METHOD(php_wxSizer, Replace)
                 php_printf("Executing RETURN_BOOL(wxSizer::Replace((size_t) index2, (wxSizerItem*) object_pointer2_1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Replace((size_t) index2, (wxSizerItem*) object_pointer2_1));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Replace((size_t) index2, (wxSizerItem*) object_pointer2_1));
 
                 references->AddReference(newitem2, "wxSizer::Replace at call 1 with 2 argument(s)");
 
@@ -9670,7 +9670,7 @@ PHP_METHOD(php_wxSizer, Remove)
                 php_printf("Executing RETURN_BOOL(wxSizer::Remove((int) index0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Remove((int) index0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Remove((int) index0));
 
 
                 return;
@@ -9689,7 +9689,7 @@ PHP_METHOD(php_wxSizer, Remove)
                 php_printf("Executing RETURN_BOOL(wxSizer::Remove((wxSizer*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Remove((wxSizer*) object_pointer1_0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Remove((wxSizer*) object_pointer1_0));
 
                 references->AddReference(sizer1, "wxSizer::Remove at call 1 with 1 argument(s)");
 
@@ -9914,7 +9914,7 @@ PHP_METHOD(php_wxSizer, PrependStretchSpacer)
                 value_to_return0 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->PrependStretchSpacer();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -9949,7 +9949,7 @@ PHP_METHOD(php_wxSizer, PrependStretchSpacer)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->PrependStretchSpacer((int) prop0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -10112,7 +10112,7 @@ PHP_METHOD(php_wxSizer, PrependSpacer)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->PrependSpacer((int) size0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -10574,7 +10574,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxSizerItem*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -10617,7 +10617,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((int) width1, (int) height1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -10652,7 +10652,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((int) width1, (int) height1, (int) proportion1);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -10687,7 +10687,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((int) width1, (int) height1, (int) proportion1, (int) flag1);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -10722,7 +10722,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((int) width1, (int) height1, (int) proportion1, (int) flag1, (int) border1);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -10757,7 +10757,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return6 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((int) width1, (int) height1, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_5);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -10800,7 +10800,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxSizer*) object_pointer2_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -10836,7 +10836,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxSizer*) object_pointer2_0, (int) proportion2);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -10872,7 +10872,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxSizer*) object_pointer2_0, (int) proportion2, (int) flag2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -10908,7 +10908,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxSizer*) object_pointer2_0, (int) proportion2, (int) flag2, (int) border2);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -10944,7 +10944,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxSizer*) object_pointer2_0, (int) proportion2, (int) flag2, (int) border2, (wxObject*) object_pointer2_4);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -10988,7 +10988,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxWindow*) object_pointer3_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -11024,7 +11024,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxWindow*) object_pointer3_0, (int) proportion3);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -11060,7 +11060,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxWindow*) object_pointer3_0, (int) proportion3, (int) flag3);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -11096,7 +11096,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxWindow*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -11132,7 +11132,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxWindow*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_4);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -11176,7 +11176,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxWindow*) object_pointer4_0, *(wxSizerFlags*) object_pointer4_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -11220,7 +11220,7 @@ PHP_METHOD(php_wxSizer, Prepend)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Prepend((wxSizer*) object_pointer5_0, *(wxSizerFlags*) object_pointer5_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -11594,7 +11594,7 @@ PHP_METHOD(php_wxSizer, IsShown)
                 php_printf("Executing RETURN_BOOL(wxSizer::IsShown((size_t) index0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->IsShown((size_t) index0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->IsShown((size_t) index0));
 
 
                 return;
@@ -11613,7 +11613,7 @@ PHP_METHOD(php_wxSizer, IsShown)
                 php_printf("Executing RETURN_BOOL(wxSizer::IsShown((wxSizer*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->IsShown((wxSizer*) object_pointer1_0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->IsShown((wxSizer*) object_pointer1_0));
 
                 references->AddReference(sizer1, "wxSizer::IsShown at call 1 with 1 argument(s)");
 
@@ -11633,7 +11633,7 @@ PHP_METHOD(php_wxSizer, IsShown)
                 php_printf("Executing RETURN_BOOL(wxSizer::IsShown((wxWindow*) object_pointer2_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->IsShown((wxWindow*) object_pointer2_0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->IsShown((wxWindow*) object_pointer2_0));
 
                 references->AddReference(window2, "wxSizer::IsShown at call 1 with 1 argument(s)");
 
@@ -11769,7 +11769,7 @@ PHP_METHOD(php_wxSizer, IsEmpty)
                 php_printf("Executing RETURN_BOOL(wxSizer::IsEmpty())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->IsEmpty());
+                RETVAL_BOOL(((wxSizer_php*)native_object)->IsEmpty());
 
 
                 return;
@@ -11914,7 +11914,7 @@ PHP_METHOD(php_wxSizer, InsertStretchSpacer)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->InsertStretchSpacer((size_t) index0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -11949,7 +11949,7 @@ PHP_METHOD(php_wxSizer, InsertStretchSpacer)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->InsertStretchSpacer((size_t) index0, (int) prop0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -12113,7 +12113,7 @@ PHP_METHOD(php_wxSizer, InsertSpacer)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->InsertSpacer((size_t) index0, (int) size0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -12582,7 +12582,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index0, (int) width0, (int) height0);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -12617,7 +12617,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -12652,7 +12652,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0, (int) flag0);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -12687,7 +12687,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return6 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0, (int) flag0, (int) border0);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -12722,7 +12722,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return7 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0, (int) flag0, (int) border0, (wxObject*) object_pointer0_6);
 
                 if(value_to_return7 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return7->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return7->phpObj)){
@@ -12765,7 +12765,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index1, (wxSizer*) object_pointer1_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -12801,7 +12801,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -12837,7 +12837,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1, (int) flag1);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -12873,7 +12873,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1, (int) flag1, (int) border1);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -12909,7 +12909,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return6 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_5);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -12953,7 +12953,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index2, (wxSizer*) object_pointer2_1, *(wxSizerFlags*) object_pointer2_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -12997,7 +12997,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index3, (wxWindow*) object_pointer3_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -13033,7 +13033,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -13069,7 +13069,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3, (int) flag3);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -13105,7 +13105,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3, (int) flag3, (int) border3);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -13141,7 +13141,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return6 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_5);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -13185,7 +13185,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index4, (wxWindow*) object_pointer4_1, *(wxSizerFlags*) object_pointer4_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -13229,7 +13229,7 @@ PHP_METHOD(php_wxSizer, Insert)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Insert((size_t) index5, (wxSizerItem*) object_pointer5_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -13391,7 +13391,7 @@ PHP_METHOD(php_wxSizer, InformFirstDirection)
                 php_printf("Executing RETURN_BOOL(wxSizer::InformFirstDirection((int) direction0, (int) size0, (int) availableOtherDir0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->InformFirstDirection((int) direction0, (int) size0, (int) availableOtherDir0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->InformFirstDirection((int) direction0, (int) size0, (int) availableOtherDir0));
 
 
                 return;
@@ -13611,7 +13611,7 @@ PHP_METHOD(php_wxSizer, Hide)
                 php_printf("Executing RETURN_BOOL(wxSizer::Hide((size_t) index0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Hide((size_t) index0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Hide((size_t) index0));
 
 
                 return;
@@ -13630,7 +13630,7 @@ PHP_METHOD(php_wxSizer, Hide)
                 php_printf("Executing RETURN_BOOL(wxSizer::Hide((wxSizer*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Hide((wxSizer*) object_pointer1_0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Hide((wxSizer*) object_pointer1_0));
 
                 references->AddReference(sizer1, "wxSizer::Hide at call 1 with 1 argument(s)");
 
@@ -13643,7 +13643,7 @@ PHP_METHOD(php_wxSizer, Hide)
                 php_printf("Executing RETURN_BOOL(wxSizer::Hide((wxSizer*) object_pointer1_0, recursive1))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Hide((wxSizer*) object_pointer1_0, recursive1));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Hide((wxSizer*) object_pointer1_0, recursive1));
 
                 references->AddReference(sizer1, "wxSizer::Hide at call 1 with 2 argument(s)");
 
@@ -13663,7 +13663,7 @@ PHP_METHOD(php_wxSizer, Hide)
                 php_printf("Executing RETURN_BOOL(wxSizer::Hide((wxWindow*) object_pointer2_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Hide((wxWindow*) object_pointer2_0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Hide((wxWindow*) object_pointer2_0));
 
                 references->AddReference(window2, "wxSizer::Hide at call 1 with 1 argument(s)");
 
@@ -13676,7 +13676,7 @@ PHP_METHOD(php_wxSizer, Hide)
                 php_printf("Executing RETURN_BOOL(wxSizer::Hide((wxWindow*) object_pointer2_0, recursive2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Hide((wxWindow*) object_pointer2_0, recursive2));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Hide((wxWindow*) object_pointer2_0, recursive2));
 
                 references->AddReference(window2, "wxSizer::Hide at call 1 with 2 argument(s)");
 
@@ -14239,7 +14239,7 @@ PHP_METHOD(php_wxSizer, GetItemCount)
                 php_printf("Executing RETURN_LONG(wxSizer::GetItemCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSizer_php*)native_object)->GetItemCount());
+                RETVAL_LONG(((wxSizer_php*)native_object)->GetItemCount());
 
 
                 return;
@@ -14782,7 +14782,7 @@ PHP_METHOD(php_wxSizer, Detach)
                 php_printf("Executing RETURN_BOOL(wxSizer::Detach((int) index0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Detach((int) index0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Detach((int) index0));
 
 
                 return;
@@ -14801,7 +14801,7 @@ PHP_METHOD(php_wxSizer, Detach)
                 php_printf("Executing RETURN_BOOL(wxSizer::Detach((wxSizer*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Detach((wxSizer*) object_pointer1_0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Detach((wxSizer*) object_pointer1_0));
 
                 references->AddReference(sizer1, "wxSizer::Detach at call 1 with 1 argument(s)");
 
@@ -14821,7 +14821,7 @@ PHP_METHOD(php_wxSizer, Detach)
                 php_printf("Executing RETURN_BOOL(wxSizer::Detach((wxWindow*) object_pointer2_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizer_php*)native_object)->Detach((wxWindow*) object_pointer2_0));
+                RETVAL_BOOL(((wxSizer_php*)native_object)->Detach((wxWindow*) object_pointer2_0));
 
                 references->AddReference(window2, "wxSizer::Detach at call 1 with 1 argument(s)");
 
@@ -15914,7 +15914,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxWindow*) object_pointer0_0, *(wxSizerFlags*) object_pointer0_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -15958,7 +15958,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxWindow*) object_pointer1_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -15994,7 +15994,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxWindow*) object_pointer1_0, (int) proportion1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -16030,7 +16030,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -16066,7 +16066,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -16102,7 +16102,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_4);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -16146,7 +16146,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxSizer*) object_pointer2_0, *(wxSizerFlags*) object_pointer2_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -16190,7 +16190,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxSizer*) object_pointer3_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -16226,7 +16226,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxSizer*) object_pointer3_0, (int) proportion3);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -16262,7 +16262,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -16298,7 +16298,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -16334,7 +16334,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_4);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -16378,7 +16378,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((int) width4, (int) height4);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -16413,7 +16413,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((int) width4, (int) height4, (int) proportion4);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -16448,7 +16448,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((int) width4, (int) height4, (int) proportion4, (int) flag4);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -16483,7 +16483,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((int) width4, (int) height4, (int) proportion4, (int) flag4, (int) border4);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -16518,7 +16518,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return6 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((int) width4, (int) height4, (int) proportion4, (int) flag4, (int) border4, (wxObject*) object_pointer4_5);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -16561,7 +16561,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->Add((wxSizerItem*) object_pointer5_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -16604,7 +16604,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return2 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxWindow*) object_pointer6_0, *(wxGBPosition*) object_pointer6_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -16641,7 +16641,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return3 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxWindow*) object_pointer6_0, *(wxGBPosition*) object_pointer6_1, *(wxGBSpan*) object_pointer6_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -16679,7 +16679,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return4 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxWindow*) object_pointer6_0, *(wxGBPosition*) object_pointer6_1, *(wxGBSpan*) object_pointer6_2, (int) flag6);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -16717,7 +16717,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return5 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxWindow*) object_pointer6_0, *(wxGBPosition*) object_pointer6_1, *(wxGBSpan*) object_pointer6_2, (int) flag6, (int) border6);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -16755,7 +16755,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return6 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxWindow*) object_pointer6_0, *(wxGBPosition*) object_pointer6_1, *(wxGBSpan*) object_pointer6_2, (int) flag6, (int) border6, (wxObject*) object_pointer6_5);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -16801,7 +16801,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return2 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxSizer*) object_pointer7_0, *(wxGBPosition*) object_pointer7_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -16838,7 +16838,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return3 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxSizer*) object_pointer7_0, *(wxGBPosition*) object_pointer7_1, *(wxGBSpan*) object_pointer7_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -16876,7 +16876,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return4 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxSizer*) object_pointer7_0, *(wxGBPosition*) object_pointer7_1, *(wxGBSpan*) object_pointer7_2, (int) flag7);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -16914,7 +16914,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return5 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxSizer*) object_pointer7_0, *(wxGBPosition*) object_pointer7_1, *(wxGBSpan*) object_pointer7_2, (int) flag7, (int) border7);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -16952,7 +16952,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return6 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxSizer*) object_pointer7_0, *(wxGBPosition*) object_pointer7_1, *(wxGBSpan*) object_pointer7_2, (int) flag7, (int) border7, (wxObject*) object_pointer7_5);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -16998,7 +16998,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return3 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((int) width8, (int) height8, *(wxGBPosition*) object_pointer8_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -17034,7 +17034,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return4 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((int) width8, (int) height8, *(wxGBPosition*) object_pointer8_2, *(wxGBSpan*) object_pointer8_3);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -17071,7 +17071,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return5 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((int) width8, (int) height8, *(wxGBPosition*) object_pointer8_2, *(wxGBSpan*) object_pointer8_3, (int) flag8);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -17108,7 +17108,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return6 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((int) width8, (int) height8, *(wxGBPosition*) object_pointer8_2, *(wxGBSpan*) object_pointer8_3, (int) flag8, (int) border8);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -17145,7 +17145,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return7 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((int) width8, (int) height8, *(wxGBPosition*) object_pointer8_2, *(wxGBSpan*) object_pointer8_3, (int) flag8, (int) border8, (wxObject*) object_pointer8_6);
 
                 if(value_to_return7 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return7->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return7->phpObj)){
@@ -17190,7 +17190,7 @@ PHP_METHOD(php_wxSizer, Add)
                 value_to_return1 = (wxSizerItem_php*) ((wxGridBagSizer_php*)native_object)->Add((wxGBSizerItem*) object_pointer9_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -17354,7 +17354,7 @@ PHP_METHOD(php_wxSizer, AddSpacer)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->AddSpacer((int) size0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -17517,7 +17517,7 @@ PHP_METHOD(php_wxSizer, AddStretchSpacer)
                 value_to_return0 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->AddStretchSpacer();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -17552,7 +17552,7 @@ PHP_METHOD(php_wxSizer, AddStretchSpacer)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->AddStretchSpacer((int) prop0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -17952,7 +17952,7 @@ PHP_METHOD(php_wxSizer, GetContainingWindow)
                 value_to_return0 = (wxWindow_php*) ((wxSizer_php*)native_object)->GetContainingWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -18195,7 +18195,7 @@ PHP_METHOD(php_wxSizer, GetItem)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->GetItem((wxWindow*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -18231,7 +18231,7 @@ PHP_METHOD(php_wxSizer, GetItem)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->GetItem((wxWindow*) object_pointer0_0, recursive0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -18274,7 +18274,7 @@ PHP_METHOD(php_wxSizer, GetItem)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->GetItem((wxSizer*) object_pointer1_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -18310,7 +18310,7 @@ PHP_METHOD(php_wxSizer, GetItem)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->GetItem((wxSizer*) object_pointer1_0, recursive1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -18353,7 +18353,7 @@ PHP_METHOD(php_wxSizer, GetItem)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->GetItem((size_t) index2);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -18517,7 +18517,7 @@ PHP_METHOD(php_wxSizer, GetItemById)
                 value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->GetItemById((int) id0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -18552,7 +18552,7 @@ PHP_METHOD(php_wxSizer, GetItemById)
                 value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)native_object)->GetItemById((int) id0, recursive0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -21692,7 +21692,7 @@ PHP_METHOD(php_wxSizerItem, IsWindow)
                 php_printf("Executing RETURN_BOOL(wxSizerItem::IsWindow())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizerItem_php*)native_object)->IsWindow());
+                RETVAL_BOOL(((wxSizerItem_php*)native_object)->IsWindow());
 
 
                 return;
@@ -21803,7 +21803,7 @@ PHP_METHOD(php_wxSizerItem, IsSpacer)
                 php_printf("Executing RETURN_BOOL(wxSizerItem::IsSpacer())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizerItem_php*)native_object)->IsSpacer());
+                RETVAL_BOOL(((wxSizerItem_php*)native_object)->IsSpacer());
 
 
                 return;
@@ -21914,7 +21914,7 @@ PHP_METHOD(php_wxSizerItem, IsSizer)
                 php_printf("Executing RETURN_BOOL(wxSizerItem::IsSizer())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizerItem_php*)native_object)->IsSizer());
+                RETVAL_BOOL(((wxSizerItem_php*)native_object)->IsSizer());
 
 
                 return;
@@ -22025,7 +22025,7 @@ PHP_METHOD(php_wxSizerItem, IsShown)
                 php_printf("Executing RETURN_BOOL(wxSizerItem::IsShown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxSizerItem_php*)native_object)->IsShown());
+                RETVAL_BOOL(((wxSizerItem_php*)native_object)->IsShown());
 
 
                 return;
@@ -22922,7 +22922,7 @@ PHP_METHOD(php_wxSizerItem, GetBorder)
                 php_printf("Executing RETURN_LONG(wxSizerItem::GetBorder())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSizerItem_php*)native_object)->GetBorder());
+                RETVAL_LONG(((wxSizerItem_php*)native_object)->GetBorder());
 
 
                 return;
@@ -23033,7 +23033,7 @@ PHP_METHOD(php_wxSizerItem, GetFlag)
                 php_printf("Executing RETURN_LONG(wxSizerItem::GetFlag())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSizerItem_php*)native_object)->GetFlag());
+                RETVAL_LONG(((wxSizerItem_php*)native_object)->GetFlag());
 
 
                 return;
@@ -23144,7 +23144,7 @@ PHP_METHOD(php_wxSizerItem, GetId)
                 php_printf("Executing RETURN_LONG(wxSizerItem::GetId())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSizerItem_php*)native_object)->GetId());
+                RETVAL_LONG(((wxSizerItem_php*)native_object)->GetId());
 
 
                 return;
@@ -23492,7 +23492,7 @@ PHP_METHOD(php_wxSizerItem, GetProportion)
                 php_printf("Executing RETURN_LONG(wxSizerItem::GetProportion())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxSizerItem_php*)native_object)->GetProportion());
+                RETVAL_LONG(((wxSizerItem_php*)native_object)->GetProportion());
 
 
                 return;
@@ -23603,7 +23603,7 @@ PHP_METHOD(php_wxSizerItem, GetRatio)
                 php_printf("Executing RETURN_LONG(wxSizerItem::GetRatio())\n\n");
                 #endif
 
-                ZVAL_DOUBLE(return_value, ((wxSizerItem_php*)native_object)->GetRatio());
+                RETVAL_DOUBLE(((wxSizerItem_php*)native_object)->GetRatio());
 
 
                 return;
@@ -23955,7 +23955,7 @@ PHP_METHOD(php_wxSizerItem, GetSizer)
                 value_to_return0 = (wxSizer_php*) ((wxSizerItem_php*)native_object)->GetSizer();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -24207,7 +24207,7 @@ PHP_METHOD(php_wxSizerItem, GetUserData)
                 value_to_return0 = (wxObject_php*) ((wxSizerItem_php*)native_object)->GetUserData();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -24341,7 +24341,7 @@ PHP_METHOD(php_wxSizerItem, GetWindow)
                 value_to_return0 = (wxWindow_php*) ((wxSizerItem_php*)native_object)->GetWindow();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -25577,7 +25577,7 @@ PHP_METHOD(php_wxSizerFlags, GetDefaultBorder)
                 php_printf("Executing RETURN_LONG(wxSizerFlags::GetDefaultBorder())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, wxSizerFlags::GetDefaultBorder());
+                RETVAL_LONG(wxSizerFlags::GetDefaultBorder());
 
 
                 return;
@@ -27397,7 +27397,7 @@ PHP_METHOD(php_wxFlexGridSizer, GetFlexibleDirection)
                 php_printf("Executing RETURN_LONG(wxFlexGridSizer::GetFlexibleDirection())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFlexGridSizer_php*)native_object)->GetFlexibleDirection());
+                RETVAL_LONG(((wxFlexGridSizer_php*)native_object)->GetFlexibleDirection());
 
 
                 return;
@@ -27508,7 +27508,7 @@ PHP_METHOD(php_wxFlexGridSizer, GetNonFlexibleGrowMode)
                 php_printf("Executing RETURN_LONG(wxFlexGridSizer::GetNonFlexibleGrowMode())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxFlexGridSizer_php*)native_object)->GetNonFlexibleGrowMode());
+                RETVAL_LONG(((wxFlexGridSizer_php*)native_object)->GetNonFlexibleGrowMode());
 
 
                 return;
@@ -27624,7 +27624,7 @@ PHP_METHOD(php_wxFlexGridSizer, IsColGrowable)
                 php_printf("Executing RETURN_BOOL(wxFlexGridSizer::IsColGrowable((size_t) idx0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFlexGridSizer_php*)native_object)->IsColGrowable((size_t) idx0));
+                RETVAL_BOOL(((wxFlexGridSizer_php*)native_object)->IsColGrowable((size_t) idx0));
 
 
                 return;
@@ -27740,7 +27740,7 @@ PHP_METHOD(php_wxFlexGridSizer, IsRowGrowable)
                 php_printf("Executing RETURN_BOOL(wxFlexGridSizer::IsRowGrowable((size_t) idx0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxFlexGridSizer_php*)native_object)->IsRowGrowable((size_t) idx0));
+                RETVAL_BOOL(((wxFlexGridSizer_php*)native_object)->IsRowGrowable((size_t) idx0));
 
 
                 return;
@@ -28864,7 +28864,7 @@ PHP_METHOD(php_wxGridSizer, GetCols)
                 php_printf("Executing RETURN_LONG(wxGridSizer::GetCols())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridSizer_php*)native_object)->GetCols());
+                RETVAL_LONG(((wxGridSizer_php*)native_object)->GetCols());
 
 
                 return;
@@ -28979,7 +28979,7 @@ PHP_METHOD(php_wxGridSizer, GetEffectiveColsCount)
                 php_printf("Executing RETURN_LONG(wxGridSizer::GetEffectiveColsCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridSizer_php*)native_object)->GetEffectiveColsCount());
+                RETVAL_LONG(((wxGridSizer_php*)native_object)->GetEffectiveColsCount());
 
 
                 return;
@@ -29094,7 +29094,7 @@ PHP_METHOD(php_wxGridSizer, GetEffectiveRowsCount)
                 php_printf("Executing RETURN_LONG(wxGridSizer::GetEffectiveRowsCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridSizer_php*)native_object)->GetEffectiveRowsCount());
+                RETVAL_LONG(((wxGridSizer_php*)native_object)->GetEffectiveRowsCount());
 
 
                 return;
@@ -29209,7 +29209,7 @@ PHP_METHOD(php_wxGridSizer, GetHGap)
                 php_printf("Executing RETURN_LONG(wxGridSizer::GetHGap())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridSizer_php*)native_object)->GetHGap());
+                RETVAL_LONG(((wxGridSizer_php*)native_object)->GetHGap());
 
 
                 return;
@@ -29324,7 +29324,7 @@ PHP_METHOD(php_wxGridSizer, GetRows)
                 php_printf("Executing RETURN_LONG(wxGridSizer::GetRows())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridSizer_php*)native_object)->GetRows());
+                RETVAL_LONG(((wxGridSizer_php*)native_object)->GetRows());
 
 
                 return;
@@ -29439,7 +29439,7 @@ PHP_METHOD(php_wxGridSizer, GetVGap)
                 php_printf("Executing RETURN_LONG(wxGridSizer::GetVGap())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxGridSizer_php*)native_object)->GetVGap());
+                RETVAL_LONG(((wxGridSizer_php*)native_object)->GetVGap());
 
 
                 return;
@@ -30571,7 +30571,7 @@ PHP_METHOD(php_wxStaticBoxSizer, GetStaticBox)
                 value_to_return0 = (wxStaticBox_php*) ((wxStaticBoxSizer_php*)native_object)->GetStaticBox();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -31254,7 +31254,7 @@ PHP_METHOD(php_wxBoxSizer, GetOrientation)
                 php_printf("Executing RETURN_LONG(wxBoxSizer::GetOrientation())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxBoxSizer_php*)native_object)->GetOrientation());
+                RETVAL_LONG(((wxBoxSizer_php*)native_object)->GetOrientation());
 
 
                 return;
@@ -31508,7 +31508,7 @@ PHP_METHOD(php_wxBoxSizer, AddSpacer)
                 value_to_return1 = (wxSizerItem_php*) ((wxBoxSizer_php*)native_object)->AddSpacer((int) size0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -31898,7 +31898,7 @@ bool wxWrapSizer_php::IsSpaceItem(wxSizerItem* item)const
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE_INFO(return_value) == IS_TRUE;
+        return Z_TYPE(return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -32004,7 +32004,7 @@ PHP_METHOD(php_wxWrapSizer, InformFirstDirection)
                 php_printf("Executing RETURN_BOOL(wxWrapSizer::InformFirstDirection((int) direction0, (int) size0, (int) availableOtherDir0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxWrapSizer_php*)native_object)->InformFirstDirection((int) direction0, (int) size0, (int) availableOtherDir0));
+                RETVAL_BOOL(((wxWrapSizer_php*)native_object)->InformFirstDirection((int) direction0, (int) size0, (int) availableOtherDir0));
 
 
                 return;

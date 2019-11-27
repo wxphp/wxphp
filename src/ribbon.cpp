@@ -3622,7 +3622,7 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE_INFO(return_value) == IS_TRUE;
+    return Z_TYPE(return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -3762,7 +3762,7 @@ PHP_METHOD(php_wxRibbonBar, ArePanelsShown)
                 php_printf("Executing RETURN_BOOL(wxRibbonBar::ArePanelsShown())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonBar_php*)native_object)->ArePanelsShown());
+                RETVAL_BOOL(((wxRibbonBar_php*)native_object)->ArePanelsShown());
 
 
                 return;
@@ -3932,7 +3932,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonBar::Create((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxRibbonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxRibbonBar::Create at call 1 with 1 argument(s)");
 
@@ -3945,7 +3945,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxRibbonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxRibbonBar::Create at call 1 with 2 argument(s)");
 
@@ -3958,7 +3958,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
+                RETVAL_BOOL(((wxRibbonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
                 references->AddReference(parent0, "wxRibbonBar::Create at call 1 with 3 argument(s)");
                 references->AddReference(pos0, "wxRibbonBar::Create at call 3 with 3 argument(s)");
@@ -3972,7 +3972,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
+                RETVAL_BOOL(((wxRibbonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxRibbonBar::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxRibbonBar::Create at call 3 with 4 argument(s)");
@@ -3987,7 +3987,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
+                RETVAL_BOOL(((wxRibbonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
                 references->AddReference(parent0, "wxRibbonBar::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxRibbonBar::Create at call 3 with 5 argument(s)");
@@ -4097,7 +4097,7 @@ PHP_METHOD(php_wxRibbonBar, DismissExpandedPanel)
                 php_printf("Executing RETURN_BOOL(wxRibbonBar::DismissExpandedPanel())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonBar_php*)native_object)->DismissExpandedPanel());
+                RETVAL_BOOL(((wxRibbonBar_php*)native_object)->DismissExpandedPanel());
 
 
                 return;
@@ -4204,7 +4204,7 @@ PHP_METHOD(php_wxRibbonBar, GetActivePage)
                 php_printf("Executing RETURN_LONG(wxRibbonBar::GetActivePage())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxRibbonBar_php*)native_object)->GetActivePage());
+                RETVAL_LONG(((wxRibbonBar_php*)native_object)->GetActivePage());
 
 
                 return;
@@ -4320,7 +4320,7 @@ PHP_METHOD(php_wxRibbonBar, GetPage)
                 value_to_return1 = (wxRibbonPage_php*) ((wxRibbonBar_php*)native_object)->GetPage((int) n0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -4553,7 +4553,7 @@ PHP_METHOD(php_wxRibbonBar, Realize)
                 php_printf("Executing RETURN_BOOL(wxRibbonBar::Realize())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonBar_php*)native_object)->Realize());
+                RETVAL_BOOL(((wxRibbonBar_php*)native_object)->Realize());
 
 
                 return;
@@ -4704,7 +4704,7 @@ PHP_METHOD(php_wxRibbonBar, SetActivePage)
                 php_printf("Executing RETURN_BOOL(wxRibbonBar::SetActivePage((size_t) page0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonBar_php*)native_object)->SetActivePage((size_t) page0));
+                RETVAL_BOOL(((wxRibbonBar_php*)native_object)->SetActivePage((size_t) page0));
 
 
                 return;
@@ -4723,7 +4723,7 @@ PHP_METHOD(php_wxRibbonBar, SetActivePage)
                 php_printf("Executing RETURN_BOOL(wxRibbonBar::SetActivePage((wxRibbonPage*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonBar_php*)native_object)->SetActivePage((wxRibbonPage*) object_pointer1_0));
+                RETVAL_BOOL(((wxRibbonBar_php*)native_object)->SetActivePage((wxRibbonPage*) object_pointer1_0));
 
                 references->AddReference(page1, "wxRibbonBar::SetActivePage at call 1 with 1 argument(s)");
 
@@ -5515,7 +5515,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
                 value_to_return3 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddDropdownButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -5551,7 +5551,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
                 value_to_return4 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddDropdownButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8));
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -5710,7 +5710,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
                 value_to_return3 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddHybridButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -5746,7 +5746,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
                 value_to_return4 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddHybridButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8));
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -5905,7 +5905,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
                 value_to_return3 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddToggleButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -5941,7 +5941,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
                 value_to_return4 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddToggleButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8));
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -6238,7 +6238,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Create((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxRibbonButtonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxRibbonButtonBar::Create at call 1 with 1 argument(s)");
 
@@ -6251,7 +6251,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxRibbonButtonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxRibbonButtonBar::Create at call 1 with 2 argument(s)");
 
@@ -6264,7 +6264,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
+                RETVAL_BOOL(((wxRibbonButtonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
                 references->AddReference(parent0, "wxRibbonButtonBar::Create at call 1 with 3 argument(s)");
                 references->AddReference(pos0, "wxRibbonButtonBar::Create at call 3 with 3 argument(s)");
@@ -6278,7 +6278,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
+                RETVAL_BOOL(((wxRibbonButtonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxRibbonButtonBar::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxRibbonButtonBar::Create at call 3 with 4 argument(s)");
@@ -6293,7 +6293,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
+                RETVAL_BOOL(((wxRibbonButtonBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
                 references->AddReference(parent0, "wxRibbonButtonBar::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxRibbonButtonBar::Create at call 3 with 5 argument(s)");
@@ -6408,7 +6408,7 @@ PHP_METHOD(php_wxRibbonButtonBar, DeleteButton)
                 php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::DeleteButton((int) button_id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)native_object)->DeleteButton((int) button_id0));
+                RETVAL_BOOL(((wxRibbonButtonBar_php*)native_object)->DeleteButton((int) button_id0));
 
 
                 return;
@@ -6640,7 +6640,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Realize)
                 php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Realize())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)native_object)->Realize());
+                RETVAL_BOOL(((wxRibbonButtonBar_php*)native_object)->Realize());
 
 
                 return;
@@ -7229,7 +7229,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
                 value_to_return4 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8));
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -7265,7 +7265,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
                 value_to_return5 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8), (wxRibbonButtonKind) kind0);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -7308,7 +7308,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
                 value_to_return3 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -7344,7 +7344,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
                 value_to_return4 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -7381,7 +7381,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
                 value_to_return5 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -7419,7 +7419,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
                 value_to_return6 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4, *(wxBitmap*) object_pointer1_5);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -7458,7 +7458,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
                 value_to_return7 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4, *(wxBitmap*) object_pointer1_5, (wxRibbonButtonKind) kind1);
 
                 if(value_to_return7 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return7->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return7->phpObj)){
@@ -7497,7 +7497,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
                 value_to_return8 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)native_object)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4, *(wxBitmap*) object_pointer1_5, (wxRibbonButtonKind) kind1, wxString(help_string1, wxConvUTF8));
 
                 if(value_to_return8 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return8->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return8->phpObj)){
@@ -7917,7 +7917,7 @@ PHP_METHOD(php_wxRibbonControl, GetArtProvider)
                 value_to_return0 = (wxRibbonArtProvider_php*) ((wxRibbonControl_php*)native_object)->GetArtProvider();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -8484,7 +8484,7 @@ PHP_METHOD(php_wxRibbonControl, IsSizingContinuous)
                 php_printf("Executing RETURN_BOOL(wxRibbonControl::IsSizingContinuous())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonControl_php*)native_object)->IsSizingContinuous());
+                RETVAL_BOOL(((wxRibbonControl_php*)native_object)->IsSizingContinuous());
 
 
                 return;
@@ -8615,7 +8615,7 @@ PHP_METHOD(php_wxRibbonControl, Realise)
                 php_printf("Executing RETURN_BOOL(wxRibbonControl::Realise())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonControl_php*)native_object)->Realise());
+                RETVAL_BOOL(((wxRibbonControl_php*)native_object)->Realise());
 
 
                 return;
@@ -8746,7 +8746,7 @@ PHP_METHOD(php_wxRibbonControl, Realize)
                 php_printf("Executing RETURN_BOOL(wxRibbonControl::Realize())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonControl_php*)native_object)->Realize());
+                RETVAL_BOOL(((wxRibbonControl_php*)native_object)->Realize());
 
 
                 return;
@@ -9464,7 +9464,7 @@ PHP_METHOD(php_wxRibbonGallery, Append)
                 value_to_return2 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)native_object)->Append(*(wxBitmap*) object_pointer0_0, (int) id0);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -9507,7 +9507,7 @@ PHP_METHOD(php_wxRibbonGallery, Append)
                 value_to_return3 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)native_object)->Append(*(wxBitmap*) object_pointer1_0, (int) id1, (void*) clientData1);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -9551,7 +9551,7 @@ PHP_METHOD(php_wxRibbonGallery, Append)
                 value_to_return3 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)native_object)->Append(*(wxBitmap*) object_pointer2_0, (int) id2, (wxClientData*) object_pointer2_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -9849,7 +9849,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonGallery::Create((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)native_object)->Create((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxRibbonGallery_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxRibbonGallery::Create at call 1 with 1 argument(s)");
 
@@ -9862,7 +9862,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonGallery::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxRibbonGallery_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxRibbonGallery::Create at call 1 with 2 argument(s)");
 
@@ -9875,7 +9875,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonGallery::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
+                RETVAL_BOOL(((wxRibbonGallery_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
                 references->AddReference(parent0, "wxRibbonGallery::Create at call 1 with 3 argument(s)");
                 references->AddReference(pos0, "wxRibbonGallery::Create at call 3 with 3 argument(s)");
@@ -9889,7 +9889,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonGallery::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
+                RETVAL_BOOL(((wxRibbonGallery_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxRibbonGallery::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxRibbonGallery::Create at call 3 with 4 argument(s)");
@@ -9904,7 +9904,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonGallery::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
+                RETVAL_BOOL(((wxRibbonGallery_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
                 references->AddReference(parent0, "wxRibbonGallery::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxRibbonGallery::Create at call 3 with 5 argument(s)");
@@ -10149,7 +10149,7 @@ PHP_METHOD(php_wxRibbonGallery, GetActiveItem)
                 value_to_return0 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)native_object)->GetActiveItem();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -10275,7 +10275,7 @@ PHP_METHOD(php_wxRibbonGallery, GetCount)
                 php_printf("Executing RETURN_LONG(wxRibbonGallery::GetCount())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxRibbonGallery_php*)native_object)->GetCount());
+                RETVAL_LONG(((wxRibbonGallery_php*)native_object)->GetCount());
 
 
                 return;
@@ -10382,7 +10382,7 @@ PHP_METHOD(php_wxRibbonGallery, GetDownButtonState)
                 php_printf("Executing RETURN_LONG(wxRibbonGallery::GetDownButtonState())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxRibbonGallery_php*)native_object)->GetDownButtonState());
+                RETVAL_LONG(((wxRibbonGallery_php*)native_object)->GetDownButtonState());
 
 
                 return;
@@ -10489,7 +10489,7 @@ PHP_METHOD(php_wxRibbonGallery, GetExtensionButtonState)
                 php_printf("Executing RETURN_LONG(wxRibbonGallery::GetExtensionButtonState())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxRibbonGallery_php*)native_object)->GetExtensionButtonState());
+                RETVAL_LONG(((wxRibbonGallery_php*)native_object)->GetExtensionButtonState());
 
 
                 return;
@@ -10600,7 +10600,7 @@ PHP_METHOD(php_wxRibbonGallery, GetHoveredItem)
                 value_to_return0 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)native_object)->GetHoveredItem();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -10735,7 +10735,7 @@ PHP_METHOD(php_wxRibbonGallery, GetItem)
                 value_to_return1 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)native_object)->GetItem((unsigned int) n0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -10884,7 +10884,7 @@ PHP_METHOD(php_wxRibbonGallery, GetItemClientData)
                 php_printf("Executing wxRibbonGallery::GetItemClientData((const wxRibbonGalleryItem*) object_pointer0_0)\n\n");
                 #endif
 
-                ZVAL_STRING(return_value, (char*) ((wxRibbonGallery_php*)native_object)->GetItemClientData((const wxRibbonGalleryItem*) object_pointer0_0));
+                RETVAL_STRING((char*) ((wxRibbonGallery_php*)native_object)->GetItemClientData((const wxRibbonGalleryItem*) object_pointer0_0));
 
                 references->AddReference(item0, "wxRibbonGallery::GetItemClientData at call 1 with 1 argument(s)");
 
@@ -11019,7 +11019,7 @@ PHP_METHOD(php_wxRibbonGallery, GetItemClientObject)
                 value_to_return1 = (wxClientData_php*) ((wxRibbonGallery_php*)native_object)->GetItemClientObject((const wxRibbonGalleryItem*) object_pointer0_0);
 
                 if(value_to_return1 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return1->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return1->phpObj)){
@@ -11150,7 +11150,7 @@ PHP_METHOD(php_wxRibbonGallery, GetSelection)
                 value_to_return0 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)native_object)->GetSelection();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -11276,7 +11276,7 @@ PHP_METHOD(php_wxRibbonGallery, GetUpButtonState)
                 php_printf("Executing RETURN_LONG(wxRibbonGallery::GetUpButtonState())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxRibbonGallery_php*)native_object)->GetUpButtonState());
+                RETVAL_LONG(((wxRibbonGallery_php*)native_object)->GetUpButtonState());
 
 
                 return;
@@ -11383,7 +11383,7 @@ PHP_METHOD(php_wxRibbonGallery, IsEmpty)
                 php_printf("Executing RETURN_BOOL(wxRibbonGallery::IsEmpty())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)native_object)->IsEmpty());
+                RETVAL_BOOL(((wxRibbonGallery_php*)native_object)->IsEmpty());
 
 
                 return;
@@ -11490,7 +11490,7 @@ PHP_METHOD(php_wxRibbonGallery, IsHovered)
                 php_printf("Executing RETURN_BOOL(wxRibbonGallery::IsHovered())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)native_object)->IsHovered());
+                RETVAL_BOOL(((wxRibbonGallery_php*)native_object)->IsHovered());
 
 
                 return;
@@ -11602,7 +11602,7 @@ PHP_METHOD(php_wxRibbonGallery, ScrollLines)
                 php_printf("Executing RETURN_BOOL(wxRibbonGallery::ScrollLines((int) lines0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)native_object)->ScrollLines((int) lines0));
+                RETVAL_BOOL(((wxRibbonGallery_php*)native_object)->ScrollLines((int) lines0));
 
 
                 return;
@@ -11714,7 +11714,7 @@ PHP_METHOD(php_wxRibbonGallery, ScrollPixels)
                 php_printf("Executing RETURN_BOOL(wxRibbonGallery::ScrollPixels((int) pixels0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)native_object)->ScrollPixels((int) pixels0));
+                RETVAL_BOOL(((wxRibbonGallery_php*)native_object)->ScrollPixels((int) pixels0));
 
 
                 return;
@@ -12702,7 +12702,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPage::Create((wxRibbonBar*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPage_php*)native_object)->Create((wxRibbonBar*) object_pointer0_0));
+                RETVAL_BOOL(((wxRibbonPage_php*)native_object)->Create((wxRibbonBar*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxRibbonPage::Create at call 1 with 1 argument(s)");
 
@@ -12715,7 +12715,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPage::Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPage_php*)native_object)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxRibbonPage_php*)native_object)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxRibbonPage::Create at call 1 with 2 argument(s)");
 
@@ -12728,7 +12728,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPage::Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPage_php*)native_object)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)));
+                RETVAL_BOOL(((wxRibbonPage_php*)native_object)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxRibbonPage::Create at call 1 with 3 argument(s)");
 
@@ -12741,7 +12741,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPage::Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPage_php*)native_object)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3));
+                RETVAL_BOOL(((wxRibbonPage_php*)native_object)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxRibbonPage::Create at call 1 with 4 argument(s)");
                 references->AddReference(icon0, "wxRibbonPage::Create at call 3 with 4 argument(s)");
@@ -12755,7 +12755,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPage::Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPage_php*)native_object)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, (long) style0));
+                RETVAL_BOOL(((wxRibbonPage_php*)native_object)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, (long) style0));
 
                 references->AddReference(parent0, "wxRibbonPage::Create at call 1 with 5 argument(s)");
                 references->AddReference(icon0, "wxRibbonPage::Create at call 3 with 5 argument(s)");
@@ -12864,7 +12864,7 @@ PHP_METHOD(php_wxRibbonPage, DismissExpandedPanel)
                 php_printf("Executing RETURN_BOOL(wxRibbonPage::DismissExpandedPanel())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPage_php*)native_object)->DismissExpandedPanel());
+                RETVAL_BOOL(((wxRibbonPage_php*)native_object)->DismissExpandedPanel());
 
 
                 return;
@@ -13098,7 +13098,7 @@ PHP_METHOD(php_wxRibbonPage, GetMajorAxis)
                 php_printf("Executing RETURN_LONG(wxRibbonPage::GetMajorAxis())\n\n");
                 #endif
 
-                ZVAL_LONG(return_value, ((wxRibbonPage_php*)native_object)->GetMajorAxis());
+                RETVAL_LONG(((wxRibbonPage_php*)native_object)->GetMajorAxis());
 
 
                 return;
@@ -13205,7 +13205,7 @@ PHP_METHOD(php_wxRibbonPage, Realize)
                 php_printf("Executing RETURN_BOOL(wxRibbonPage::Realize())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPage_php*)native_object)->Realize());
+                RETVAL_BOOL(((wxRibbonPage_php*)native_object)->Realize());
 
 
                 return;
@@ -13317,7 +13317,7 @@ PHP_METHOD(php_wxRibbonPage, ScrollLines)
                 php_printf("Executing RETURN_BOOL(wxRibbonPage::ScrollLines((int) lines0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPage_php*)native_object)->ScrollLines((int) lines0));
+                RETVAL_BOOL(((wxRibbonPage_php*)native_object)->ScrollLines((int) lines0));
 
 
                 return;
@@ -13429,7 +13429,7 @@ PHP_METHOD(php_wxRibbonPage, ScrollPixels)
                 php_printf("Executing RETURN_BOOL(wxRibbonPage::ScrollPixels((int) pixels0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPage_php*)native_object)->ScrollPixels((int) pixels0));
+                RETVAL_BOOL(((wxRibbonPage_php*)native_object)->ScrollPixels((int) pixels0));
 
 
                 return;
@@ -14046,7 +14046,7 @@ PHP_METHOD(php_wxRibbonPanel, CanAutoMinimise)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::CanAutoMinimise())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->CanAutoMinimise());
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->CanAutoMinimise());
 
 
                 return;
@@ -14237,7 +14237,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxRibbonPanel::Create at call 1 with 1 argument(s)");
 
@@ -14250,7 +14250,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxRibbonPanel::Create at call 1 with 2 argument(s)");
 
@@ -14263,7 +14263,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)));
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)));
 
                 references->AddReference(parent0, "wxRibbonPanel::Create at call 1 with 3 argument(s)");
 
@@ -14276,7 +14276,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3));
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxRibbonPanel::Create at call 1 with 4 argument(s)");
                 references->AddReference(icon0, "wxRibbonPanel::Create at call 3 with 4 argument(s)");
@@ -14290,7 +14290,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4));
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4));
 
                 references->AddReference(parent0, "wxRibbonPanel::Create at call 1 with 5 argument(s)");
                 references->AddReference(icon0, "wxRibbonPanel::Create at call 3 with 5 argument(s)");
@@ -14305,7 +14305,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5));
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5));
 
                 references->AddReference(parent0, "wxRibbonPanel::Create at call 1 with 6 argument(s)");
                 references->AddReference(icon0, "wxRibbonPanel::Create at call 3 with 6 argument(s)");
@@ -14321,7 +14321,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0));
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0));
 
                 references->AddReference(parent0, "wxRibbonPanel::Create at call 1 with 7 argument(s)");
                 references->AddReference(icon0, "wxRibbonPanel::Create at call 3 with 7 argument(s)");
@@ -14436,7 +14436,7 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedDummy)
                 value_to_return0 = (wxRibbonPanel_php*) ((wxRibbonPanel_php*)native_object)->GetExpandedDummy();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -14566,7 +14566,7 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedPanel)
                 value_to_return0 = (wxRibbonPanel_php*) ((wxRibbonPanel_php*)native_object)->GetExpandedPanel();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -14874,7 +14874,7 @@ PHP_METHOD(php_wxRibbonPanel, HideExpanded)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::HideExpanded())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->HideExpanded());
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->HideExpanded());
 
 
                 return;
@@ -14981,7 +14981,7 @@ PHP_METHOD(php_wxRibbonPanel, IsHovered)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::IsHovered())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->IsHovered());
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->IsHovered());
 
 
                 return;
@@ -15127,7 +15127,7 @@ PHP_METHOD(php_wxRibbonPanel, IsMinimised)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::IsMinimised())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->IsMinimised());
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->IsMinimised());
 
 
                 return;
@@ -15146,7 +15146,7 @@ PHP_METHOD(php_wxRibbonPanel, IsMinimised)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::IsMinimised(*(wxSize*) object_pointer1_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->IsMinimised(*(wxSize*) object_pointer1_0));
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->IsMinimised(*(wxSize*) object_pointer1_0));
 
 
                 return;
@@ -15253,7 +15253,7 @@ PHP_METHOD(php_wxRibbonPanel, Realize)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::Realize())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->Realize());
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->Realize());
 
 
                 return;
@@ -15491,7 +15491,7 @@ PHP_METHOD(php_wxRibbonPanel, ShowExpanded)
                 php_printf("Executing RETURN_BOOL(wxRibbonPanel::ShowExpanded())\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)native_object)->ShowExpanded());
+                RETVAL_BOOL(((wxRibbonPanel_php*)native_object)->ShowExpanded());
 
 
                 return;
@@ -15961,7 +15961,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
                 value_to_return2 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddDropdownTool((int) tool_id0, *(wxBitmap*) object_pointer0_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -15997,7 +15997,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
                 value_to_return3 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddDropdownTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -16154,7 +16154,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
                 value_to_return2 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddHybridTool((int) tool_id0, *(wxBitmap*) object_pointer0_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -16190,7 +16190,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
                 value_to_return3 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddHybridTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -16321,7 +16321,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddSeparator)
                 value_to_return0 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddSeparator();
 
                 if(value_to_return0 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return0->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return0->phpObj)){
@@ -16559,7 +16559,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
                 value_to_return3 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8));
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -16595,7 +16595,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
                 value_to_return4 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8), (wxRibbonButtonKind) kind0);
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -16638,7 +16638,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
                 value_to_return2 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1);
 
                 if(value_to_return2 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return2->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return2->phpObj)){
@@ -16674,7 +16674,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
                 value_to_return3 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2);
 
                 if(value_to_return3 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return3->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return3->phpObj)){
@@ -16711,7 +16711,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
                 value_to_return4 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2, wxString(help_string1, wxConvUTF8));
 
                 if(value_to_return4 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return4->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return4->phpObj)){
@@ -16748,7 +16748,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
                 value_to_return5 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2, wxString(help_string1, wxConvUTF8), (wxRibbonButtonKind) kind1);
 
                 if(value_to_return5 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return5->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return5->phpObj)){
@@ -16785,7 +16785,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
                 value_to_return6 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)native_object)->AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2, wxString(help_string1, wxConvUTF8), (wxRibbonButtonKind) kind1, (wxObject*) object_pointer1_5);
 
                 if(value_to_return6 == NULL){
-                    ZVAL_NULL(return_value);
+                    RETVAL_NULL();
                 }
                 else if(value_to_return6->references.IsUserInitialized()){
                     if(!Z_ISNULL(value_to_return6->phpObj)){
@@ -16977,7 +16977,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonToolBar::Create((wxWindow*) object_pointer0_0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)native_object)->Create((wxWindow*) object_pointer0_0));
+                RETVAL_BOOL(((wxRibbonToolBar_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
                 references->AddReference(parent0, "wxRibbonToolBar::Create at call 1 with 1 argument(s)");
 
@@ -16990,7 +16990,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonToolBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+                RETVAL_BOOL(((wxRibbonToolBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
                 references->AddReference(parent0, "wxRibbonToolBar::Create at call 1 with 2 argument(s)");
 
@@ -17003,7 +17003,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonToolBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
+                RETVAL_BOOL(((wxRibbonToolBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
                 references->AddReference(parent0, "wxRibbonToolBar::Create at call 1 with 3 argument(s)");
                 references->AddReference(pos0, "wxRibbonToolBar::Create at call 3 with 3 argument(s)");
@@ -17017,7 +17017,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonToolBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
+                RETVAL_BOOL(((wxRibbonToolBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
                 references->AddReference(parent0, "wxRibbonToolBar::Create at call 1 with 4 argument(s)");
                 references->AddReference(pos0, "wxRibbonToolBar::Create at call 3 with 4 argument(s)");
@@ -17032,7 +17032,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
                 php_printf("Executing RETURN_BOOL(wxRibbonToolBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
                 #endif
 
-                ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
+                RETVAL_BOOL(((wxRibbonToolBar_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
                 references->AddReference(parent0, "wxRibbonToolBar::Create at call 1 with 5 argument(s)");
                 references->AddReference(pos0, "wxRibbonToolBar::Create at call 3 with 5 argument(s)");
