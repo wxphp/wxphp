@@ -643,7 +643,7 @@ PHP_METHOD(php_wxApp, GetInstance)
 
     if(instance == NULL)
     {
-        RETVAL_NULL();
+        RETURN_NULL();
     }
     else if(!Z_ISNULL(instance->phpObj)) // Todo: Does this work?
     {
@@ -677,7 +677,7 @@ PHP_METHOD(php_wxApp, GetAppDisplayName)
 
     wxString value_to_return = native_object->GetAppDisplayName();
 
-    RETVAL_STRING(value_to_return.ToUTF8().data());
+    RETURN_STRING(value_to_return.ToUTF8().data());
 }
 /* }}} */
 
@@ -688,7 +688,7 @@ PHP_METHOD(php_wxApp, GetAppName)
 
     wxString value_to_return = native_object->GetAppName();
 
-    RETVAL_STRING(value_to_return.ToUTF8().data());
+    RETURN_STRING(value_to_return.ToUTF8().data());
 }
 /* }}} */
 
@@ -699,7 +699,7 @@ PHP_METHOD(php_wxApp, GetClassName)
 
     wxString value_to_return = native_object->GetClassName();
 
-    RETVAL_STRING(value_to_return.ToUTF8().data());
+    RETURN_STRING(value_to_return.ToUTF8().data());
 }
 /* }}} */
 
@@ -710,7 +710,7 @@ PHP_METHOD(php_wxApp, GetVendorDisplayName)
 
     wxString value_to_return = native_object->GetVendorDisplayName();
 
-    RETVAL_STRING(value_to_return.ToUTF8().data());
+    RETURN_STRING(value_to_return.ToUTF8().data());
 }
 /* }}} */
 
@@ -721,7 +721,7 @@ PHP_METHOD(php_wxApp, GetVendorName)
 
     wxString value_to_return = native_object->GetVendorName();
 
-    RETVAL_STRING(value_to_return.ToUTF8().data());
+    RETURN_STRING(value_to_return.ToUTF8().data());
 }
 /* }}} */
 

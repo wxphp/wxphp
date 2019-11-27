@@ -101,14 +101,14 @@ PHP_FUNCTION(php_wxExecute)
         {
             case 1:
                 ret = wxExecute(wxString(_argStr0, wxConvUTF8));
-                RETURN_LONG(ret)
+                RETURN_LONG(ret);
                 break;
 
             case 2:
                 ret = wxExecute(
                     wxString(_argStr0, wxConvUTF8), (int) flags
                 );
-                RETURN_LONG(ret)
+                RETURN_LONG(ret);
                 break;
 
             case 3:
@@ -120,7 +120,7 @@ PHP_FUNCTION(php_wxExecute)
                     (int) flags,
                     process
                 );
-                RETURN_LONG(ret)
+                RETURN_LONG(ret);
                 break;
 
             default:
@@ -128,7 +128,7 @@ PHP_FUNCTION(php_wxExecute)
         }
     }
 
-    RETURN_LONG((long) 0)
+    RETURN_LONG((long) 0);
 }
 /* }}} */
 
@@ -153,7 +153,7 @@ PHP_FUNCTION(php_wxEntry)
     char application_name[] = "wxPHP";
     char *argv[2] = { application_name, NULL };
 
-    RETVAL_LONG(wxEntry(argc, argv));
+    RETURN_LONG(wxEntry(argc, argv));
 }
 /* }}} */
 
