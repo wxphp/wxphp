@@ -18703,7 +18703,7 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnFontEncoding");
     char* temp_string;
@@ -18721,7 +18721,7 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnFontEncoding");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -18737,7 +18737,7 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
             &cached_function,
             "OnFontEncoding",
             14,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -18769,7 +18769,7 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -18798,7 +18798,7 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnFacename");
     char* temp_string;
@@ -18815,7 +18815,7 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnFacename");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -18831,7 +18831,7 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
             &cached_function,
             "OnFacename",
             10,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -18863,7 +18863,7 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -43407,7 +43407,7 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawCheckBox");
     char* temp_string;
@@ -43430,7 +43430,7 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawCheckBox");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -43446,7 +43446,7 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
             &cached_function,
             "DrawCheckBox",
             12,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -43503,7 +43503,7 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawChoice");
     char* temp_string;
@@ -43526,7 +43526,7 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawChoice");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -43542,7 +43542,7 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
             &cached_function,
             "DrawChoice",
             10,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -43599,7 +43599,7 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawComboBox");
     char* temp_string;
@@ -43622,7 +43622,7 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawComboBox");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -43638,7 +43638,7 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
             &cached_function,
             "DrawComboBox",
             12,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -43695,7 +43695,7 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawComboBoxDropButton");
     char* temp_string;
@@ -43718,7 +43718,7 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawComboBoxDropButton");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -43734,7 +43734,7 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
             &cached_function,
             "DrawComboBoxDropButton",
             22,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -43791,7 +43791,7 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawDropArrow");
     char* temp_string;
@@ -43814,7 +43814,7 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawDropArrow");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -43830,7 +43830,7 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
             &cached_function,
             "DrawDropArrow",
             13,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -43887,7 +43887,7 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawFocusRect");
     char* temp_string;
@@ -43910,7 +43910,7 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawFocusRect");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -43926,7 +43926,7 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
             &cached_function,
             "DrawFocusRect",
             13,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -43983,7 +43983,7 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawPushButton");
     char* temp_string;
@@ -44006,7 +44006,7 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawPushButton");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -44022,7 +44022,7 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
             &cached_function,
             "DrawPushButton",
             14,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -44079,7 +44079,7 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawItemSelectionRect");
     char* temp_string;
@@ -44102,7 +44102,7 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawItemSelectionRect");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -44118,7 +44118,7 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
             &cached_function,
             "DrawItemSelectionRect",
             21,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -44175,7 +44175,7 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawRadioBitmap");
     char* temp_string;
@@ -44198,7 +44198,7 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawRadioBitmap");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -44214,7 +44214,7 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
             &cached_function,
             "DrawRadioBitmap",
             15,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -44271,7 +44271,7 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawSplitterBorder");
     char* temp_string;
@@ -44294,7 +44294,7 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawSplitterBorder");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -44310,7 +44310,7 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
             &cached_function,
             "DrawSplitterBorder",
             18,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -44367,7 +44367,7 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
     zval* params[6];
     zval arguments[6];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawSplitterSash");
     char* temp_string;
@@ -44392,7 +44392,7 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawSplitterSash");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -44408,7 +44408,7 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
             &cached_function,
             "DrawSplitterSash",
             16,
-            &return_value,
+            &function_return_value,
             6,
             params
         );
@@ -44465,7 +44465,7 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawTextCtrl");
     char* temp_string;
@@ -44488,7 +44488,7 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawTextCtrl");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -44504,7 +44504,7 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
             &cached_function,
             "DrawTextCtrl",
             12,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -44561,7 +44561,7 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawTreeItemButton");
     char* temp_string;
@@ -44584,7 +44584,7 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawTreeItemButton");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -44600,7 +44600,7 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
             &cached_function,
             "DrawTreeItemButton",
             18,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -44781,7 +44781,7 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetCheckBoxSize");
     char* temp_string;
@@ -44799,7 +44799,7 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetCheckBoxSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -44815,7 +44815,7 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
             &cached_function,
             "GetCheckBoxSize",
             15,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -44852,13 +44852,13 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -45130,7 +45130,7 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetHeaderButtonHeight");
     char* temp_string;
@@ -45148,7 +45148,7 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetHeaderButtonHeight");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -45164,7 +45164,7 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
             &cached_function,
             "GetHeaderButtonHeight",
             21,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -45201,7 +45201,7 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -45221,7 +45221,7 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetHeaderButtonMargin");
     char* temp_string;
@@ -45239,7 +45239,7 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetHeaderButtonMargin");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -45255,7 +45255,7 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
             &cached_function,
             "GetHeaderButtonMargin",
             21,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -45292,7 +45292,7 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */

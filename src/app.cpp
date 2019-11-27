@@ -79,7 +79,7 @@ bool wxAppWrapper::OnInit()
     zval function_name;
     ZVAL_STRINGL(&function_name, "OnInit", 6);
 
-    zval return_value;
+    zval function_return_value;
 
     int function_called;
 
@@ -99,7 +99,7 @@ bool wxAppWrapper::OnInit()
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, &phpObj, &function_name, &return_value,
+            NULL, &phpObj, &function_name, &function_return_value,
             0, NULL, 0, NULL
         );
     }
@@ -134,7 +134,7 @@ int wxAppWrapper::OnExit()
     zval function_name;
     ZVAL_STRINGL(&function_name, "OnExit", 6);
 
-    zval return_value;
+    zval function_return_value;
 
     int function_called;
 
@@ -154,7 +154,7 @@ int wxAppWrapper::OnExit()
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, &phpObj, &function_name, &return_value,
+            NULL, &phpObj, &function_name, &function_return_value,
             0, NULL, 0, NULL
         );
     }
@@ -188,7 +188,7 @@ void wxAppWrapper::MacNewFile()
     zval function_name;
     ZVAL_STRINGL(&function_name, "MacNewFile", 10);
 
-    zval return_value;
+    zval function_return_value;
 
     int function_called;
 
@@ -208,7 +208,7 @@ void wxAppWrapper::MacNewFile()
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value,
+            NULL, phpObj, &function_name, &function_return_value,
             0, NULL, 0, NULL
         );
     }
@@ -242,7 +242,7 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
 
     int function_called;
 
@@ -275,7 +275,7 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value,
+            NULL, phpObj, &function_name, &function_return_value,
             1, params, 0, NULL
         );
     }
@@ -312,7 +312,7 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
 
     int function_called;
 
@@ -338,7 +338,7 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value,
+            NULL, phpObj, &function_name, &function_return_value,
             1, params, 0, NULL
         );
     }
@@ -375,7 +375,7 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
 
     int function_called;
 
@@ -401,7 +401,7 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value,
+            NULL, phpObj, &function_name, &function_return_value,
             1, params, 0, NULL
         );
     }
@@ -438,7 +438,7 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
 
     int function_called;
 
@@ -464,7 +464,7 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value,
+            NULL, phpObj, &function_name, &function_return_value,
             1, params, 0, NULL
         );
     }
@@ -498,7 +498,7 @@ void wxAppWrapper::MacReopenApp()
     zval function_name;
     ZVAL_STRINGL(&function_name, "MacReopenApp", 12);
 
-    zval return_value;
+    zval function_return_value;
 
     int function_called;
 
@@ -518,7 +518,7 @@ void wxAppWrapper::MacReopenApp()
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value,
+            NULL, phpObj, &function_name, &function_return_value,
             0, NULL, 0, NULL
         );
     }
@@ -549,7 +549,7 @@ bool wxAppWrapper::OSXIsGUIApplication()
     zval function_name;
     ZVAL_STRINGL(&function_name, "OSXIsGUIApplication", 19);
 
-    zval return_value;
+    zval function_return_value;
 
     int function_called;
 
@@ -569,7 +569,7 @@ bool wxAppWrapper::OSXIsGUIApplication()
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, phpObj, &function_name, &return_value,
+            NULL, phpObj, &function_name, &function_return_value,
             0, NULL, 0, NULL
         );
     }
@@ -593,7 +593,7 @@ bool wxAppWrapper::OSXIsGUIApplication()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 }
 #endif
 
@@ -653,7 +653,6 @@ PHP_METHOD(php_wxApp, GetInstance)
     else
     {
         object_init_ex(return_value, php_wxApp_entry);
-
         Z_wxApp_P(return_value)->native_object = instance;
     }
 }

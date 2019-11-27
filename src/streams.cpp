@@ -2984,7 +2984,7 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnSysSeek");
     char* temp_string;
@@ -3002,7 +3002,7 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnSysSeek");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3018,7 +3018,7 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
             &cached_function,
             "OnSysSeek",
             9,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -3050,7 +3050,7 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return (wxFileOffset) Z_LVAL(return_value);
+        return (wxFileOffset) Z_LVAL(function_return_value);
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -3079,7 +3079,7 @@ wxFileOffset wxStreamBase_php::OnSysTell()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnSysTell");
     char* temp_string;
@@ -3091,7 +3091,7 @@ wxFileOffset wxStreamBase_php::OnSysTell()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnSysTell");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3107,7 +3107,7 @@ wxFileOffset wxStreamBase_php::OnSysTell()const
             &cached_function,
             "OnSysTell",
             9,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -3134,7 +3134,7 @@ wxFileOffset wxStreamBase_php::OnSysTell()const
         php_printf("Returning userspace value.\n");
         #endif
 
-        return (wxFileOffset) Z_LVAL(return_value);
+        return (wxFileOffset) Z_LVAL(function_return_value);
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -5148,7 +5148,7 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnSysRead");
     char* temp_string;
@@ -5165,7 +5165,7 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnSysRead");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5181,7 +5181,7 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
             &cached_function,
             "OnSysRead",
             9,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -5222,7 +5222,7 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (size_t) Z_LVAL(return_value);
+    return (size_t) Z_LVAL(function_return_value);
 
 }
 /* }}} */

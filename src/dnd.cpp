@@ -2356,7 +2356,7 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetAllFormats");
     char* temp_string;
@@ -2375,7 +2375,7 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetAllFormats");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2391,7 +2391,7 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
             &cached_function,
             "GetAllFormats",
             13,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -2448,7 +2448,7 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetDataHere");
     char* temp_string;
@@ -2466,7 +2466,7 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetDataHere");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2482,7 +2482,7 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
             &cached_function,
             "GetDataHere",
             11,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -2523,7 +2523,7 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -2543,7 +2543,7 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetDataSize");
     char* temp_string;
@@ -2561,7 +2561,7 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetDataSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2577,7 +2577,7 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
             &cached_function,
             "GetDataSize",
             11,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -2614,7 +2614,7 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (size_t) Z_LVAL(return_value);
+    return (size_t) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -2634,7 +2634,7 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetFormatCount");
     char* temp_string;
@@ -2651,7 +2651,7 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetFormatCount");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2667,7 +2667,7 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
             &cached_function,
             "GetFormatCount",
             14,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -2704,7 +2704,7 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (size_t) Z_LVAL(return_value);
+    return (size_t) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -2724,7 +2724,7 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetPreferredFormat");
     char* temp_string;
@@ -2741,7 +2741,7 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetPreferredFormat");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2757,7 +2757,7 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
             &cached_function,
             "GetPreferredFormat",
             18,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -2794,13 +2794,13 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxDataFormat_P(&return_value)->native_object;
+        return_object = (void*) Z_wxDataFormat_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxDataFormat_P(&return_value)->is_user_initialized = 0;
+    Z_wxDataFormat_P(&function_return_value)->is_user_initialized = 0;
     wxDataFormat_php* var = (wxDataFormat_php*) return_object;
     var->references.UnInitialize();
 
@@ -7710,7 +7710,7 @@ void wxDropTarget_php::OnLeave()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnLeave");
     char* temp_string;
@@ -7722,7 +7722,7 @@ void wxDropTarget_php::OnLeave()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnLeave");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -7738,7 +7738,7 @@ void wxDropTarget_php::OnLeave()
             &cached_function,
             "OnLeave",
             7,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -8051,7 +8051,7 @@ wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnDragOver");
     char* temp_string;
@@ -8070,7 +8070,7 @@ wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnDragOver");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8086,7 +8086,7 @@ wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def
             &cached_function,
             "OnDragOver",
             10,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -8118,7 +8118,7 @@ wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def
         php_printf("Returning userspace value.\n");
         #endif
 
-        return (wxDragResult) Z_LVAL(return_value);
+        return (wxDragResult) Z_LVAL(function_return_value);
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -8147,7 +8147,7 @@ wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult defRes
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnEnter");
     char* temp_string;
@@ -8166,7 +8166,7 @@ wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult defRes
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnEnter");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8182,7 +8182,7 @@ wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult defRes
             &cached_function,
             "OnEnter",
             7,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -8214,7 +8214,7 @@ wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult defRes
         php_printf("Returning userspace value.\n");
         #endif
 
-        return (wxDragResult) Z_LVAL(return_value);
+        return (wxDragResult) Z_LVAL(function_return_value);
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -8358,7 +8358,7 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult defResu
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnData");
     char* temp_string;
@@ -8377,7 +8377,7 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult defResu
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnData");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8393,7 +8393,7 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult defResu
             &cached_function,
             "OnData",
             6,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -8430,7 +8430,7 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult defResu
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (wxDragResult) Z_LVAL(return_value);
+    return (wxDragResult) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -8450,7 +8450,7 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnDrop");
     char* temp_string;
@@ -8468,7 +8468,7 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnDrop");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8484,7 +8484,7 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
             &cached_function,
             "OnDrop",
             6,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -8516,7 +8516,7 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -8679,7 +8679,7 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnDropText");
     char* temp_string;
@@ -8698,7 +8698,7 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnDropText");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8714,7 +8714,7 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
             &cached_function,
             "OnDropText",
             10,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -8751,7 +8751,7 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -8771,7 +8771,7 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnDrop");
     char* temp_string;
@@ -8789,7 +8789,7 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnDrop");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8805,7 +8805,7 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
             &cached_function,
             "OnDrop",
             6,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -8837,7 +8837,7 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -9000,7 +9000,7 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnDropFiles");
     char* temp_string;
@@ -9023,7 +9023,7 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnDropFiles");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -9039,7 +9039,7 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
             &cached_function,
             "OnDropFiles",
             11,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -9076,7 +9076,7 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -9096,7 +9096,7 @@ bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnDrop");
     char* temp_string;
@@ -9114,7 +9114,7 @@ bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnDrop");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -9130,7 +9130,7 @@ bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
             &cached_function,
             "OnDrop",
             6,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -9162,7 +9162,7 @@ bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG

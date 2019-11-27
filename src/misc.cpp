@@ -5032,7 +5032,7 @@ wxMenu* wxTaskBarIcon_php::CreatePopupMenu()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "CreatePopupMenu");
     char* temp_string;
@@ -5044,7 +5044,7 @@ wxMenu* wxTaskBarIcon_php::CreatePopupMenu()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "CreatePopupMenu");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5060,7 +5060,7 @@ wxMenu* wxTaskBarIcon_php::CreatePopupMenu()
             &cached_function,
             "CreatePopupMenu",
             15,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -5087,13 +5087,13 @@ wxMenu* wxTaskBarIcon_php::CreatePopupMenu()
         php_printf("Returning userspace value.\n");
         #endif
 
-        if(Z_TYPE(return_value) == IS_OBJECT)
+        if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxMenu_P(&return_value)->native_object;
+        return_object = (void*) Z_wxMenu_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxMenu_P(&return_value)->is_user_initialized = 0;
+    Z_wxMenu_P(&function_return_value)->is_user_initialized = 0;
     wxMenu_php* var = (wxMenu_php*) return_object;
     var->references.UnInitialize();
 

@@ -1576,7 +1576,7 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "CanOpen");
     char* temp_string;
@@ -1593,7 +1593,7 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "CanOpen");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1609,7 +1609,7 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
             &cached_function,
             "CanOpen",
             7,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -1646,7 +1646,7 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -2021,7 +2021,7 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OpenFile");
     char* temp_string;
@@ -2040,7 +2040,7 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OpenFile");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2056,7 +2056,7 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
             &cached_function,
             "OpenFile",
             8,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -2093,13 +2093,13 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxFSFile_P(&return_value)->native_object;
+        return_object = (void*) Z_wxFSFile_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxFSFile_P(&return_value)->is_user_initialized = 0;
+    Z_wxFSFile_P(&function_return_value)->is_user_initialized = 0;
     wxFSFile_php* var = (wxFSFile_php*) return_object;
     var->references.UnInitialize();
 

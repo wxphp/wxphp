@@ -345,7 +345,7 @@ wxHtmlHelpDialog* wxHtmlHelpController_php::CreateHelpDialog(wxHtmlHelpData* dat
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "CreateHelpDialog");
     char* temp_string;
@@ -363,7 +363,7 @@ wxHtmlHelpDialog* wxHtmlHelpController_php::CreateHelpDialog(wxHtmlHelpData* dat
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "CreateHelpDialog");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -379,7 +379,7 @@ wxHtmlHelpDialog* wxHtmlHelpController_php::CreateHelpDialog(wxHtmlHelpData* dat
             &cached_function,
             "CreateHelpDialog",
             16,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -411,13 +411,13 @@ wxHtmlHelpDialog* wxHtmlHelpController_php::CreateHelpDialog(wxHtmlHelpData* dat
         php_printf("Returning userspace value.\n");
         #endif
 
-        if(Z_TYPE(return_value) == IS_OBJECT)
+        if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxHtmlHelpDialog_P(&return_value)->native_object;
+        return_object = (void*) Z_wxHtmlHelpDialog_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxHtmlHelpDialog_P(&return_value)->is_user_initialized = 0;
+    Z_wxHtmlHelpDialog_P(&function_return_value)->is_user_initialized = 0;
     wxHtmlHelpDialog_php* var = (wxHtmlHelpDialog_php*) return_object;
     var->references.UnInitialize();
 
@@ -450,7 +450,7 @@ wxHtmlHelpFrame* wxHtmlHelpController_php::CreateHelpFrame(wxHtmlHelpData* data)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "CreateHelpFrame");
     char* temp_string;
@@ -468,7 +468,7 @@ wxHtmlHelpFrame* wxHtmlHelpController_php::CreateHelpFrame(wxHtmlHelpData* data)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "CreateHelpFrame");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -484,7 +484,7 @@ wxHtmlHelpFrame* wxHtmlHelpController_php::CreateHelpFrame(wxHtmlHelpData* data)
             &cached_function,
             "CreateHelpFrame",
             15,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -516,13 +516,13 @@ wxHtmlHelpFrame* wxHtmlHelpController_php::CreateHelpFrame(wxHtmlHelpData* data)
         php_printf("Returning userspace value.\n");
         #endif
 
-        if(Z_TYPE(return_value) == IS_OBJECT)
+        if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxHtmlHelpFrame_P(&return_value)->native_object;
+        return_object = (void*) Z_wxHtmlHelpFrame_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxHtmlHelpFrame_P(&return_value)->is_user_initialized = 0;
+    Z_wxHtmlHelpFrame_P(&function_return_value)->is_user_initialized = 0;
     wxHtmlHelpFrame_php* var = (wxHtmlHelpFrame_php*) return_object;
     var->references.UnInitialize();
 
@@ -4864,7 +4864,7 @@ void wxHtmlHelpWindow_php::AddToolbarButtons(wxToolBar* toolBar, int style)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "AddToolbarButtons");
     char* temp_string;
@@ -4883,7 +4883,7 @@ void wxHtmlHelpWindow_php::AddToolbarButtons(wxToolBar* toolBar, int style)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "AddToolbarButtons");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -4899,7 +4899,7 @@ void wxHtmlHelpWindow_php::AddToolbarButtons(wxToolBar* toolBar, int style)
             &cached_function,
             "AddToolbarButtons",
             17,
-            &return_value,
+            &function_return_value,
             2,
             params
         );

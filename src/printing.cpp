@@ -7958,7 +7958,7 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnBeginDocument");
     char* temp_string;
@@ -7976,7 +7976,7 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnBeginDocument");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -7992,7 +7992,7 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
             &cached_function,
             "OnBeginDocument",
             15,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -8024,7 +8024,7 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -8053,7 +8053,7 @@ void wxPrintout_php::OnBeginPrinting()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnBeginPrinting");
     char* temp_string;
@@ -8065,7 +8065,7 @@ void wxPrintout_php::OnBeginPrinting()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnBeginPrinting");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8081,7 +8081,7 @@ void wxPrintout_php::OnBeginPrinting()
             &cached_function,
             "OnBeginPrinting",
             15,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -8137,7 +8137,7 @@ void wxPrintout_php::OnEndDocument()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnEndDocument");
     char* temp_string;
@@ -8149,7 +8149,7 @@ void wxPrintout_php::OnEndDocument()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnEndDocument");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8165,7 +8165,7 @@ void wxPrintout_php::OnEndDocument()
             &cached_function,
             "OnEndDocument",
             13,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -8221,7 +8221,7 @@ void wxPrintout_php::OnEndPrinting()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnEndPrinting");
     char* temp_string;
@@ -8233,7 +8233,7 @@ void wxPrintout_php::OnEndPrinting()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnEndPrinting");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8249,7 +8249,7 @@ void wxPrintout_php::OnEndPrinting()
             &cached_function,
             "OnEndPrinting",
             13,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -8305,7 +8305,7 @@ void wxPrintout_php::OnPreparePrinting()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnPreparePrinting");
     char* temp_string;
@@ -8317,7 +8317,7 @@ void wxPrintout_php::OnPreparePrinting()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnPreparePrinting");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8333,7 +8333,7 @@ void wxPrintout_php::OnPreparePrinting()
             &cached_function,
             "OnPreparePrinting",
             17,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -8389,7 +8389,7 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnPrintPage");
     char* temp_string;
@@ -8406,7 +8406,7 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnPrintPage");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8422,7 +8422,7 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
             &cached_function,
             "OnPrintPage",
             11,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -8459,7 +8459,7 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */

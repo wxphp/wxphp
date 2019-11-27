@@ -548,7 +548,7 @@ void wxLog_php::DoLogText(const wxString& msg)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DoLogText");
     char* temp_string;
@@ -565,7 +565,7 @@ void wxLog_php::DoLogText(const wxString& msg)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DoLogText");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -581,7 +581,7 @@ void wxLog_php::DoLogText(const wxString& msg)
             &cached_function,
             "DoLogText",
             9,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -642,7 +642,7 @@ void wxLog_php::DoLogTextAtLevel(wxLogLevel level, const wxString& msg)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DoLogTextAtLevel");
     char* temp_string;
@@ -660,7 +660,7 @@ void wxLog_php::DoLogTextAtLevel(wxLogLevel level, const wxString& msg)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DoLogTextAtLevel");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -676,7 +676,7 @@ void wxLog_php::DoLogTextAtLevel(wxLogLevel level, const wxString& msg)
             &cached_function,
             "DoLogTextAtLevel",
             16,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -5555,7 +5555,7 @@ bool wxLogWindow_php::OnFrameClose(wxFrame* frame)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnFrameClose");
     char* temp_string;
@@ -5573,7 +5573,7 @@ bool wxLogWindow_php::OnFrameClose(wxFrame* frame)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnFrameClose");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5589,7 +5589,7 @@ bool wxLogWindow_php::OnFrameClose(wxFrame* frame)
             &cached_function,
             "OnFrameClose",
             12,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -5621,7 +5621,7 @@ bool wxLogWindow_php::OnFrameClose(wxFrame* frame)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -5650,7 +5650,7 @@ void wxLogWindow_php::OnFrameDelete(wxFrame* frame)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnFrameDelete");
     char* temp_string;
@@ -5668,7 +5668,7 @@ void wxLogWindow_php::OnFrameDelete(wxFrame* frame)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnFrameDelete");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5684,7 +5684,7 @@ void wxLogWindow_php::OnFrameDelete(wxFrame* frame)
             &cached_function,
             "OnFrameDelete",
             13,
-            &return_value,
+            &function_return_value,
             1,
             params
         );

@@ -146,7 +146,7 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "CanHandle");
     char* temp_string;
@@ -164,7 +164,7 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "CanHandle");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -180,7 +180,7 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
             &cached_function,
             "CanHandle",
             9,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -217,7 +217,7 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -431,7 +431,7 @@ wxObject* wxXmlResourceHandler_php::DoCreateResource()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DoCreateResource");
     char* temp_string;
@@ -443,7 +443,7 @@ wxObject* wxXmlResourceHandler_php::DoCreateResource()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DoCreateResource");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -459,7 +459,7 @@ wxObject* wxXmlResourceHandler_php::DoCreateResource()
             &cached_function,
             "DoCreateResource",
             16,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -491,13 +491,13 @@ wxObject* wxXmlResourceHandler_php::DoCreateResource()
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxObject_P(&return_value)->native_object;
+        return_object = (void*) Z_wxObject_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxObject_P(&return_value)->is_user_initialized = 0;
+    Z_wxObject_P(&function_return_value)->is_user_initialized = 0;
     wxObject_php* var = (wxObject_php*) return_object;
     var->references.UnInitialize();
 
@@ -1333,7 +1333,7 @@ void wxXmlResource_php::DoReportError(const wxString& xrcFile, const wxXmlNode* 
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DoReportError");
     char* temp_string;
@@ -1353,7 +1353,7 @@ void wxXmlResource_php::DoReportError(const wxString& xrcFile, const wxXmlNode* 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DoReportError");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1369,7 +1369,7 @@ void wxXmlResource_php::DoReportError(const wxString& xrcFile, const wxXmlNode* 
             &cached_function,
             "DoReportError",
             13,
-            &return_value,
+            &function_return_value,
             3,
             params
         );

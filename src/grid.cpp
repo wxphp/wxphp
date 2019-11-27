@@ -124,7 +124,7 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
     zval* params[5];
     zval arguments[5];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetBestSize");
     char* temp_string;
@@ -148,7 +148,7 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetBestSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -164,7 +164,7 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
             &cached_function,
             "GetBestSize",
             11,
-            &return_value,
+            &function_return_value,
             5,
             params
         );
@@ -201,13 +201,13 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -231,7 +231,7 @@ void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, 
     zval* params[7];
     zval arguments[7];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Draw");
     char* temp_string;
@@ -258,7 +258,7 @@ void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Draw");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -274,7 +274,7 @@ void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, 
             &cached_function,
             "Draw",
             4,
-            &return_value,
+            &function_return_value,
             7,
             params
         );
@@ -331,7 +331,7 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Clone");
     char* temp_string;
@@ -343,7 +343,7 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Clone");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -359,7 +359,7 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
             &cached_function,
             "Clone",
             5,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -391,13 +391,13 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxGridCellRenderer_P(&return_value)->native_object;
+        return_object = (void*) Z_wxGridCellRenderer_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxGridCellRenderer_P(&return_value)->is_user_initialized = 0;
+    Z_wxGridCellRenderer_P(&function_return_value)->is_user_initialized = 0;
     wxGridCellRenderer_php* var = (wxGridCellRenderer_php*) return_object;
     var->references.UnInitialize();
 
@@ -2919,7 +2919,7 @@ void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "ApplyEdit");
     char* temp_string;
@@ -2939,7 +2939,7 @@ void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "ApplyEdit");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2955,7 +2955,7 @@ void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
             &cached_function,
             "ApplyEdit",
             9,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -3012,7 +3012,7 @@ void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "BeginEdit");
     char* temp_string;
@@ -3032,7 +3032,7 @@ void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "BeginEdit");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3048,7 +3048,7 @@ void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
             &cached_function,
             "BeginEdit",
             9,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -3105,7 +3105,7 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Clone");
     char* temp_string;
@@ -3117,7 +3117,7 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Clone");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3133,7 +3133,7 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
             &cached_function,
             "Clone",
             5,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -3165,13 +3165,13 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxGridCellEditor_P(&return_value)->native_object;
+        return_object = (void*) Z_wxGridCellEditor_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxGridCellEditor_P(&return_value)->is_user_initialized = 0;
+    Z_wxGridCellEditor_P(&function_return_value)->is_user_initialized = 0;
     wxGridCellEditor_php* var = (wxGridCellEditor_php*) return_object;
     var->references.UnInitialize();
 
@@ -3195,7 +3195,7 @@ void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler*
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Create");
     char* temp_string;
@@ -3216,7 +3216,7 @@ void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler*
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Create");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3232,7 +3232,7 @@ void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler*
             &cached_function,
             "Create",
             6,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -3455,7 +3455,7 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
     zval* params[5];
     zval arguments[5];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "EndEdit");
     char* temp_string;
@@ -3477,7 +3477,7 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "EndEdit");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3493,7 +3493,7 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
             &cached_function,
             "EndEdit",
             7,
-            &return_value,
+            &function_return_value,
             5,
             params
         );
@@ -3530,7 +3530,7 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -4096,7 +4096,7 @@ void wxGridCellEditor_php::Reset()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Reset");
     char* temp_string;
@@ -4108,7 +4108,7 @@ void wxGridCellEditor_php::Reset()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Reset");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -4124,7 +4124,7 @@ void wxGridCellEditor_php::Reset()
             &cached_function,
             "Reset",
             5,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -11448,7 +11448,7 @@ int wxGridTableBase_php::GetNumberCols()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetNumberCols");
     char* temp_string;
@@ -11460,7 +11460,7 @@ int wxGridTableBase_php::GetNumberCols()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetNumberCols");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -11476,7 +11476,7 @@ int wxGridTableBase_php::GetNumberCols()
             &cached_function,
             "GetNumberCols",
             13,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -11508,7 +11508,7 @@ int wxGridTableBase_php::GetNumberCols()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -11528,7 +11528,7 @@ int wxGridTableBase_php::GetNumberRows()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetNumberRows");
     char* temp_string;
@@ -11540,7 +11540,7 @@ int wxGridTableBase_php::GetNumberRows()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetNumberRows");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -11556,7 +11556,7 @@ int wxGridTableBase_php::GetNumberRows()
             &cached_function,
             "GetNumberRows",
             13,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -11588,7 +11588,7 @@ int wxGridTableBase_php::GetNumberRows()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -11944,7 +11944,7 @@ wxString wxGridTableBase_php::GetValue(int row, int col)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetValue");
     char* temp_string;
@@ -11962,7 +11962,7 @@ wxString wxGridTableBase_php::GetValue(int row, int col)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetValue");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -11978,7 +11978,7 @@ wxString wxGridTableBase_php::GetValue(int row, int col)
             &cached_function,
             "GetValue",
             8,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -12015,7 +12015,7 @@ wxString wxGridTableBase_php::GetValue(int row, int col)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return wxString(Z_STRVAL(return_value), wxConvUTF8);
+    return wxString(Z_STRVAL(function_return_value), wxConvUTF8);
 
 }
 /* }}} */
@@ -13893,7 +13893,7 @@ void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetValue");
     char* temp_string;
@@ -13912,7 +13912,7 @@ void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetValue");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -13928,7 +13928,7 @@ void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
             &cached_function,
             "SetValue",
             8,
-            &return_value,
+            &function_return_value,
             3,
             params
         );

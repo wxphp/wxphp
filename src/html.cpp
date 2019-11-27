@@ -146,7 +146,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetSelectedTextBgColour");
     char* temp_string;
@@ -164,7 +164,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetSelectedTextBgColour");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -180,7 +180,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
             &cached_function,
             "GetSelectedTextBgColour",
             23,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -217,13 +217,13 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxColour_P(&return_value)->native_object;
+        return_object = (void*) Z_wxColour_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxColour_P(&return_value)->is_user_initialized = 0;
+    Z_wxColour_P(&function_return_value)->is_user_initialized = 0;
     wxColour_php* var = (wxColour_php*) return_object;
     var->references.UnInitialize();
 
@@ -247,7 +247,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetSelectedTextColour");
     char* temp_string;
@@ -265,7 +265,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetSelectedTextColour");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -281,7 +281,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
             &cached_function,
             "GetSelectedTextColour",
             21,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -318,13 +318,13 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxColour_P(&return_value)->native_object;
+        return_object = (void*) Z_wxColour_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxColour_P(&return_value)->is_user_initialized = 0;
+    Z_wxColour_P(&function_return_value)->is_user_initialized = 0;
     wxColour_php* var = (wxColour_php*) return_object;
     var->references.UnInitialize();
 
@@ -6371,7 +6371,7 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "CanRead");
     char* temp_string;
@@ -6389,7 +6389,7 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "CanRead");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6405,7 +6405,7 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
             &cached_function,
             "CanRead",
             7,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -6442,7 +6442,7 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -6462,7 +6462,7 @@ wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "ReadFile");
     char* temp_string;
@@ -6480,7 +6480,7 @@ wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "ReadFile");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6496,7 +6496,7 @@ wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
             &cached_function,
             "ReadFile",
             8,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -6533,7 +6533,7 @@ wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return wxString(Z_STRVAL(return_value), wxConvUTF8);
+    return wxString(Z_STRVAL(function_return_value), wxConvUTF8);
 
 }
 /* }}} */
@@ -6716,7 +6716,7 @@ wxString wxHtmlTagHandler_php::GetSupportedTags()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetSupportedTags");
     char* temp_string;
@@ -6728,7 +6728,7 @@ wxString wxHtmlTagHandler_php::GetSupportedTags()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetSupportedTags");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6744,7 +6744,7 @@ wxString wxHtmlTagHandler_php::GetSupportedTags()
             &cached_function,
             "GetSupportedTags",
             16,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -6776,7 +6776,7 @@ wxString wxHtmlTagHandler_php::GetSupportedTags()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return wxString(Z_STRVAL(return_value), wxConvUTF8);
+    return wxString(Z_STRVAL(function_return_value), wxConvUTF8);
 
 }
 /* }}} */
@@ -6796,7 +6796,7 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "HandleTag");
     char* temp_string;
@@ -6814,7 +6814,7 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "HandleTag");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6830,7 +6830,7 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
             &cached_function,
             "HandleTag",
             9,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -6867,7 +6867,7 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -9624,7 +9624,7 @@ bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, con
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnCellClicked");
     char* temp_string;
@@ -9646,7 +9646,7 @@ bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, con
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnCellClicked");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -9662,7 +9662,7 @@ bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, con
             &cached_function,
             "OnCellClicked",
             13,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -9694,7 +9694,7 @@ bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, con
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -9723,7 +9723,7 @@ void wxHtmlWindow_php::OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y)
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnCellMouseHover");
     char* temp_string;
@@ -9743,7 +9743,7 @@ void wxHtmlWindow_php::OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnCellMouseHover");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -9759,7 +9759,7 @@ void wxHtmlWindow_php::OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y)
             &cached_function,
             "OnCellMouseHover",
             16,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -9820,7 +9820,7 @@ void wxHtmlWindow_php::OnLinkClicked(const wxHtmlLinkInfo& link)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnLinkClicked");
     char* temp_string;
@@ -9838,7 +9838,7 @@ void wxHtmlWindow_php::OnLinkClicked(const wxHtmlLinkInfo& link)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnLinkClicked");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -9854,7 +9854,7 @@ void wxHtmlWindow_php::OnLinkClicked(const wxHtmlLinkInfo& link)
             &cached_function,
             "OnLinkClicked",
             13,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -9915,7 +9915,7 @@ void wxHtmlWindow_php::OnSetTitle(const wxString& title)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnSetTitle");
     char* temp_string;
@@ -9932,7 +9932,7 @@ void wxHtmlWindow_php::OnSetTitle(const wxString& title)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnSetTitle");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -9948,7 +9948,7 @@ void wxHtmlWindow_php::OnSetTitle(const wxString& title)
             &cached_function,
             "OnSetTitle",
             10,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -10009,7 +10009,7 @@ wxHtmlOpeningStatus wxHtmlWindow_php::OnOpeningURL(wxHtmlURLType type, const wxS
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnOpeningURL");
     char* temp_string;
@@ -10028,7 +10028,7 @@ wxHtmlOpeningStatus wxHtmlWindow_php::OnOpeningURL(wxHtmlURLType type, const wxS
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnOpeningURL");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -10044,7 +10044,7 @@ wxHtmlOpeningStatus wxHtmlWindow_php::OnOpeningURL(wxHtmlURLType type, const wxS
             &cached_function,
             "OnOpeningURL",
             12,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -10076,7 +10076,7 @@ wxHtmlOpeningStatus wxHtmlWindow_php::OnOpeningURL(wxHtmlURLType type, const wxS
         php_printf("Returning userspace value.\n");
         #endif
 
-        return (wxHtmlOpeningStatus) Z_LVAL(return_value);
+        return (wxHtmlOpeningStatus) Z_LVAL(function_return_value);
     }
 
     #ifdef USE_WXPHP_DEBUG

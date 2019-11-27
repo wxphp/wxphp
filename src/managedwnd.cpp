@@ -1927,7 +1927,7 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnCreateStatusBar");
     char* temp_string;
@@ -1947,7 +1947,7 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnCreateStatusBar");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1963,7 +1963,7 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
             &cached_function,
             "OnCreateStatusBar",
             17,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -1995,13 +1995,13 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
         php_printf("Returning userspace value.\n");
         #endif
 
-        if(Z_TYPE(return_value) == IS_OBJECT)
+        if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxStatusBar_P(&return_value)->native_object;
+        return_object = (void*) Z_wxStatusBar_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxStatusBar_P(&return_value)->is_user_initialized = 0;
+    Z_wxStatusBar_P(&function_return_value)->is_user_initialized = 0;
     wxStatusBar_php* var = (wxStatusBar_php*) return_object;
     var->references.UnInitialize();
 
@@ -3239,7 +3239,7 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnCreateToolBar");
     char* temp_string;
@@ -3258,7 +3258,7 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnCreateToolBar");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3274,7 +3274,7 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
             &cached_function,
             "OnCreateToolBar",
             15,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -3306,13 +3306,13 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
         php_printf("Returning userspace value.\n");
         #endif
 
-        if(Z_TYPE(return_value) == IS_OBJECT)
+        if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxToolBar_P(&return_value)->native_object;
+        return_object = (void*) Z_wxToolBar_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxToolBar_P(&return_value)->is_user_initialized = 0;
+    Z_wxToolBar_P(&function_return_value)->is_user_initialized = 0;
     wxToolBar_php* var = (wxToolBar_php*) return_object;
     var->references.UnInitialize();
 
@@ -5469,7 +5469,7 @@ wxMDIClientWindow* wxMDIParentFrame_php::OnCreateClient()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnCreateClient");
     char* temp_string;
@@ -5481,7 +5481,7 @@ wxMDIClientWindow* wxMDIParentFrame_php::OnCreateClient()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnCreateClient");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5497,7 +5497,7 @@ wxMDIClientWindow* wxMDIParentFrame_php::OnCreateClient()
             &cached_function,
             "OnCreateClient",
             14,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -5524,13 +5524,13 @@ wxMDIClientWindow* wxMDIParentFrame_php::OnCreateClient()
         php_printf("Returning userspace value.\n");
         #endif
 
-        if(Z_TYPE(return_value) == IS_OBJECT)
+        if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxMDIClientWindow_P(&return_value)->native_object;
+        return_object = (void*) Z_wxMDIClientWindow_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxMDIClientWindow_P(&return_value)->is_user_initialized = 0;
+    Z_wxMDIClientWindow_P(&function_return_value)->is_user_initialized = 0;
     wxMDIClientWindow_php* var = (wxMDIClientWindow_php*) return_object;
     var->references.UnInitialize();
 

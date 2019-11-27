@@ -9727,7 +9727,7 @@ void wxSizer_php::RecalcSizes()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "RecalcSizes");
     char* temp_string;
@@ -9739,7 +9739,7 @@ void wxSizer_php::RecalcSizes()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "RecalcSizes");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -9755,7 +9755,7 @@ void wxSizer_php::RecalcSizes()
             &cached_function,
             "RecalcSizes",
             11,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -17608,7 +17608,7 @@ wxSize wxSizer_php::CalcMin()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "CalcMin");
     char* temp_string;
@@ -17620,7 +17620,7 @@ wxSize wxSizer_php::CalcMin()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "CalcMin");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -17636,7 +17636,7 @@ wxSize wxSizer_php::CalcMin()
             &cached_function,
             "CalcMin",
             7,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -17668,13 +17668,13 @@ wxSize wxSizer_php::CalcMin()
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -31832,7 +31832,7 @@ bool wxWrapSizer_php::IsSpaceItem(wxSizerItem* item)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "IsSpaceItem");
     char* temp_string;
@@ -31850,7 +31850,7 @@ bool wxWrapSizer_php::IsSpaceItem(wxSizerItem* item)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "IsSpaceItem");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -31866,7 +31866,7 @@ bool wxWrapSizer_php::IsSpaceItem(wxSizerItem* item)const
             &cached_function,
             "IsSpaceItem",
             11,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -31898,7 +31898,7 @@ bool wxWrapSizer_php::IsSpaceItem(wxSizerItem* item)const
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG

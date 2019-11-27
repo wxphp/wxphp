@@ -2592,7 +2592,7 @@ wxString wxTextValidator_php::IsValid(const wxString& val)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "IsValid");
     char* temp_string;
@@ -2609,7 +2609,7 @@ wxString wxTextValidator_php::IsValid(const wxString& val)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "IsValid");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2625,7 +2625,7 @@ wxString wxTextValidator_php::IsValid(const wxString& val)const
             &cached_function,
             "IsValid",
             7,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -2657,7 +2657,7 @@ wxString wxTextValidator_php::IsValid(const wxString& val)const
         php_printf("Returning userspace value.\n");
         #endif
 
-        return wxString(Z_STRVAL(return_value), wxConvUTF8);
+        return wxString(Z_STRVAL(function_return_value), wxConvUTF8);
     }
 
     #ifdef USE_WXPHP_DEBUG

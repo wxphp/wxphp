@@ -17,7 +17,7 @@
     zval arguments[<?=count($method_definition["parameters_type"])?>];
 <? } ?>
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "<?=$method_name?>");
     char* temp_string;
@@ -35,7 +35,7 @@
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "<?=$method_name?>");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -51,7 +51,7 @@
             &cached_function,
             "<?=$method_name?>",
             <?=strlen($method_name)?>,
-            &return_value,
+            &function_return_value,
             <?=count($method_definition["parameters_type"])?>,
             params
         );

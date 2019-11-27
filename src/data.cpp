@@ -30909,7 +30909,7 @@ bool wxVariantData_php::Eq(wxVariantData& data)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Eq");
     char* temp_string;
@@ -30927,7 +30927,7 @@ bool wxVariantData_php::Eq(wxVariantData& data)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Eq");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -30943,7 +30943,7 @@ bool wxVariantData_php::Eq(wxVariantData& data)const
             &cached_function,
             "Eq",
             2,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -30980,7 +30980,7 @@ bool wxVariantData_php::Eq(wxVariantData& data)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -31000,7 +31000,7 @@ wxString wxVariantData_php::GetType()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetType");
     char* temp_string;
@@ -31012,7 +31012,7 @@ wxString wxVariantData_php::GetType()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetType");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -31028,7 +31028,7 @@ wxString wxVariantData_php::GetType()const
             &cached_function,
             "GetType",
             7,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -31060,7 +31060,7 @@ wxString wxVariantData_php::GetType()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return wxString(Z_STRVAL(return_value), wxConvUTF8);
+    return wxString(Z_STRVAL(function_return_value), wxConvUTF8);
 
 }
 /* }}} */

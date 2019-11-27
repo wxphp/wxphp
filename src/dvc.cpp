@@ -1494,7 +1494,7 @@ unsigned int wxDataViewModel_php::GetColumnCount()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetColumnCount");
     char* temp_string;
@@ -1506,7 +1506,7 @@ unsigned int wxDataViewModel_php::GetColumnCount()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetColumnCount");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1522,7 +1522,7 @@ unsigned int wxDataViewModel_php::GetColumnCount()const
             &cached_function,
             "GetColumnCount",
             14,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -1554,7 +1554,7 @@ unsigned int wxDataViewModel_php::GetColumnCount()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (unsigned int) Z_LVAL(return_value);
+    return (unsigned int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -1574,7 +1574,7 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetColumnType");
     char* temp_string;
@@ -1591,7 +1591,7 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetColumnType");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1607,7 +1607,7 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
             &cached_function,
             "GetColumnType",
             13,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -1644,7 +1644,7 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return wxString(Z_STRVAL(return_value), wxConvUTF8);
+    return wxString(Z_STRVAL(function_return_value), wxConvUTF8);
 
 }
 /* }}} */
@@ -1664,7 +1664,7 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetParent");
     char* temp_string;
@@ -1682,7 +1682,7 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetParent");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1698,7 +1698,7 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
             &cached_function,
             "GetParent",
             9,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -1735,13 +1735,13 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxDataViewItem_P(&return_value)->native_object;
+        return_object = (void*) Z_wxDataViewItem_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxDataViewItem_P(&return_value)->is_user_initialized = 0;
+    Z_wxDataViewItem_P(&function_return_value)->is_user_initialized = 0;
     wxDataViewItem_php* var = (wxDataViewItem_php*) return_object;
     var->references.UnInitialize();
 
@@ -1765,7 +1765,7 @@ void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& ite
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetValue");
     char* temp_string;
@@ -1786,7 +1786,7 @@ void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& ite
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetValue");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1802,7 +1802,7 @@ void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& ite
             &cached_function,
             "GetValue",
             8,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -2358,7 +2358,7 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "IsContainer");
     char* temp_string;
@@ -2376,7 +2376,7 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "IsContainer");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2392,7 +2392,7 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
             &cached_function,
             "IsContainer",
             11,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -2429,7 +2429,7 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -3510,7 +3510,7 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetValue");
     char* temp_string;
@@ -3531,7 +3531,7 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetValue");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3547,7 +3547,7 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
             &cached_function,
             "SetValue",
             8,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -3584,7 +3584,7 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -4018,7 +4018,7 @@ void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetValueByRow");
     char* temp_string;
@@ -4038,7 +4038,7 @@ void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetValueByRow");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -4054,7 +4054,7 @@ void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row
             &cached_function,
             "GetValueByRow",
             13,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -4111,7 +4111,7 @@ unsigned int wxDataViewListModel_php::GetCount()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetCount");
     char* temp_string;
@@ -4123,7 +4123,7 @@ unsigned int wxDataViewListModel_php::GetCount()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetCount");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -4139,7 +4139,7 @@ unsigned int wxDataViewListModel_php::GetCount()const
             &cached_function,
             "GetCount",
             8,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -4171,7 +4171,7 @@ unsigned int wxDataViewListModel_php::GetCount()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (unsigned int) Z_LVAL(return_value);
+    return (unsigned int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -4191,7 +4191,7 @@ unsigned int wxDataViewListModel_php::GetRow(const wxDataViewItem& item)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetRow");
     char* temp_string;
@@ -4209,7 +4209,7 @@ unsigned int wxDataViewListModel_php::GetRow(const wxDataViewItem& item)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetRow");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -4225,7 +4225,7 @@ unsigned int wxDataViewListModel_php::GetRow(const wxDataViewItem& item)const
             &cached_function,
             "GetRow",
             6,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -4262,7 +4262,7 @@ unsigned int wxDataViewListModel_php::GetRow(const wxDataViewItem& item)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (unsigned int) Z_LVAL(return_value);
+    return (unsigned int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -4422,7 +4422,7 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetValueByRow");
     char* temp_string;
@@ -4442,7 +4442,7 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetValueByRow");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -4458,7 +4458,7 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
             &cached_function,
             "SetValueByRow",
             13,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -4495,7 +4495,7 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -5747,7 +5747,7 @@ bool wxDataViewModelNotifier_php::Cleared()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Cleared");
     char* temp_string;
@@ -5759,7 +5759,7 @@ bool wxDataViewModelNotifier_php::Cleared()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Cleared");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5775,7 +5775,7 @@ bool wxDataViewModelNotifier_php::Cleared()
             &cached_function,
             "Cleared",
             7,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -5807,7 +5807,7 @@ bool wxDataViewModelNotifier_php::Cleared()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -5957,7 +5957,7 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "ItemAdded");
     char* temp_string;
@@ -5977,7 +5977,7 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "ItemAdded");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5993,7 +5993,7 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
             &cached_function,
             "ItemAdded",
             9,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -6030,7 +6030,7 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -6050,7 +6050,7 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "ItemChanged");
     char* temp_string;
@@ -6068,7 +6068,7 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "ItemChanged");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6084,7 +6084,7 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
             &cached_function,
             "ItemChanged",
             11,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -6121,7 +6121,7 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -6141,7 +6141,7 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "ItemDeleted");
     char* temp_string;
@@ -6161,7 +6161,7 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "ItemDeleted");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6177,7 +6177,7 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
             &cached_function,
             "ItemDeleted",
             11,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -6214,7 +6214,7 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -6234,7 +6234,7 @@ void wxDataViewModelNotifier_php::Resort()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Resort");
     char* temp_string;
@@ -6246,7 +6246,7 @@ void wxDataViewModelNotifier_php::Resort()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Resort");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6262,7 +6262,7 @@ void wxDataViewModelNotifier_php::Resort()
             &cached_function,
             "Resort",
             6,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -6445,7 +6445,7 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "ValueChanged");
     char* temp_string;
@@ -6464,7 +6464,7 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "ValueChanged");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6480,7 +6480,7 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
             &cached_function,
             "ValueChanged",
             12,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -6517,7 +6517,7 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -7879,7 +7879,7 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetValue");
     char* temp_string;
@@ -7897,7 +7897,7 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetValue");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -7913,7 +7913,7 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
             &cached_function,
             "GetValue",
             8,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -7950,7 +7950,7 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -8547,7 +8547,7 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetValue");
     char* temp_string;
@@ -8565,7 +8565,7 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetValue");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -8581,7 +8581,7 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
             &cached_function,
             "SetValue",
             8,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -8618,7 +8618,7 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -10690,7 +10690,7 @@ wxSize wxDataViewCustomRenderer_php::GetSize()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetSize");
     char* temp_string;
@@ -10702,7 +10702,7 @@ wxSize wxDataViewCustomRenderer_php::GetSize()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -10718,7 +10718,7 @@ wxSize wxDataViewCustomRenderer_php::GetSize()const
             &cached_function,
             "GetSize",
             7,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -10750,13 +10750,13 @@ wxSize wxDataViewCustomRenderer_php::GetSize()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -11060,7 +11060,7 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Render");
     char* temp_string;
@@ -11081,7 +11081,7 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Render");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -11097,7 +11097,7 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
             &cached_function,
             "Render",
             6,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -11134,7 +11134,7 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */

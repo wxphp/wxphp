@@ -4756,7 +4756,7 @@ wxString wxTextCompleter_php::GetNext()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetNext");
     char* temp_string;
@@ -4768,7 +4768,7 @@ wxString wxTextCompleter_php::GetNext()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetNext");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -4784,7 +4784,7 @@ wxString wxTextCompleter_php::GetNext()
             &cached_function,
             "GetNext",
             7,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -4816,7 +4816,7 @@ wxString wxTextCompleter_php::GetNext()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return wxString(Z_STRVAL(return_value), wxConvUTF8);
+    return wxString(Z_STRVAL(function_return_value), wxConvUTF8);
 
 }
 /* }}} */
@@ -4836,7 +4836,7 @@ bool wxTextCompleter_php::Start(const wxString& prefix)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Start");
     char* temp_string;
@@ -4853,7 +4853,7 @@ bool wxTextCompleter_php::Start(const wxString& prefix)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Start");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -4869,7 +4869,7 @@ bool wxTextCompleter_php::Start(const wxString& prefix)
             &cached_function,
             "Start",
             5,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -4906,7 +4906,7 @@ bool wxTextCompleter_php::Start(const wxString& prefix)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -11083,7 +11083,7 @@ void wxGridCornerHeaderRenderer_php::DrawBorder(const wxGrid& grid, wxDC& dc, wx
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawBorder");
     char* temp_string;
@@ -11105,7 +11105,7 @@ void wxGridCornerHeaderRenderer_php::DrawBorder(const wxGrid& grid, wxDC& dc, wx
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawBorder");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -11121,7 +11121,7 @@ void wxGridCornerHeaderRenderer_php::DrawBorder(const wxGrid& grid, wxDC& dc, wx
             &cached_function,
             "DrawBorder",
             10,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -17703,7 +17703,7 @@ void wxTextCompleterSimple_php::GetCompletions(const wxString& prefix, wxArraySt
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetCompletions");
     char* temp_string;
@@ -17725,7 +17725,7 @@ void wxTextCompleterSimple_php::GetCompletions(const wxString& prefix, wxArraySt
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetCompletions");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -17741,7 +17741,7 @@ void wxTextCompleterSimple_php::GetCompletions(const wxString& prefix, wxArraySt
             &cached_function,
             "GetCompletions",
             14,
-            &return_value,
+            &function_return_value,
             2,
             params
         );

@@ -146,7 +146,7 @@ bool wxEventLoopBase_php::Dispatch()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Dispatch");
     char* temp_string;
@@ -158,7 +158,7 @@ bool wxEventLoopBase_php::Dispatch()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Dispatch");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -174,7 +174,7 @@ bool wxEventLoopBase_php::Dispatch()
             &cached_function,
             "Dispatch",
             8,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -206,7 +206,7 @@ bool wxEventLoopBase_php::Dispatch()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -226,7 +226,7 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DispatchTimeout");
     char* temp_string;
@@ -243,7 +243,7 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DispatchTimeout");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -259,7 +259,7 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
             &cached_function,
             "DispatchTimeout",
             15,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -296,7 +296,7 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -998,7 +998,7 @@ void wxEventLoopBase_php::OnExit()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnExit");
     char* temp_string;
@@ -1010,7 +1010,7 @@ void wxEventLoopBase_php::OnExit()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnExit");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1026,7 +1026,7 @@ void wxEventLoopBase_php::OnExit()
             &cached_function,
             "OnExit",
             6,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -1082,7 +1082,7 @@ bool wxEventLoopBase_php::Pending()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Pending");
     char* temp_string;
@@ -1094,7 +1094,7 @@ bool wxEventLoopBase_php::Pending()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Pending");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1110,7 +1110,7 @@ bool wxEventLoopBase_php::Pending()const
             &cached_function,
             "Pending",
             7,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -1142,7 +1142,7 @@ bool wxEventLoopBase_php::Pending()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -1272,7 +1272,7 @@ int wxEventLoopBase_php::Run()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Run");
     char* temp_string;
@@ -1284,7 +1284,7 @@ int wxEventLoopBase_php::Run()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Run");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1300,7 +1300,7 @@ int wxEventLoopBase_php::Run()
             &cached_function,
             "Run",
             3,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -1332,7 +1332,7 @@ int wxEventLoopBase_php::Run()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -1613,7 +1613,7 @@ void wxEventLoopBase_php::WakeUp()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "WakeUp");
     char* temp_string;
@@ -1625,7 +1625,7 @@ void wxEventLoopBase_php::WakeUp()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "WakeUp");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1641,7 +1641,7 @@ void wxEventLoopBase_php::WakeUp()
             &cached_function,
             "WakeUp",
             6,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -2313,7 +2313,7 @@ void wxModule_php::OnExit()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnExit");
     char* temp_string;
@@ -2325,7 +2325,7 @@ void wxModule_php::OnExit()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnExit");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2341,7 +2341,7 @@ void wxModule_php::OnExit()
             &cached_function,
             "OnExit",
             6,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -2393,7 +2393,7 @@ bool wxModule_php::OnInit()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnInit");
     char* temp_string;
@@ -2405,7 +2405,7 @@ bool wxModule_php::OnInit()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnInit");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2421,7 +2421,7 @@ bool wxModule_php::OnInit()
             &cached_function,
             "OnInit",
             6,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -2453,7 +2453,7 @@ bool wxModule_php::OnInit()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -3921,7 +3921,7 @@ void wxProcess_php::OnTerminate(int pid, int status)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "OnTerminate");
     char* temp_string;
@@ -3939,7 +3939,7 @@ void wxProcess_php::OnTerminate(int pid, int status)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "OnTerminate");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3955,7 +3955,7 @@ void wxProcess_php::OnTerminate(int pid, int status)
             &cached_function,
             "OnTerminate",
             11,
-            &return_value,
+            &function_return_value,
             2,
             params
         );

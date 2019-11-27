@@ -146,7 +146,7 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "FilterEvent");
     char* temp_string;
@@ -164,7 +164,7 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "FilterEvent");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -180,7 +180,7 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
             &cached_function,
             "FilterEvent",
             11,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -217,7 +217,7 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -9806,7 +9806,7 @@ wxEvent* wxEvent_php::Clone()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Clone");
     char* temp_string;
@@ -9818,7 +9818,7 @@ wxEvent* wxEvent_php::Clone()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Clone");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -9834,7 +9834,7 @@ wxEvent* wxEvent_php::Clone()const
             &cached_function,
             "Clone",
             5,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -9866,13 +9866,13 @@ wxEvent* wxEvent_php::Clone()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxEvent_P(&return_value)->native_object;
+        return_object = (void*) Z_wxEvent_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxEvent_P(&return_value)->is_user_initialized = 0;
+    Z_wxEvent_P(&function_return_value)->is_user_initialized = 0;
     wxEvent_php* var = (wxEvent_php*) return_object;
     var->references.UnInitialize();
 
@@ -21709,7 +21709,7 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "TryAfter");
     char* temp_string;
@@ -21727,7 +21727,7 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "TryAfter");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -21743,7 +21743,7 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
             &cached_function,
             "TryAfter",
             8,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -21775,7 +21775,7 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -21804,7 +21804,7 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "TryBefore");
     char* temp_string;
@@ -21822,7 +21822,7 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "TryBefore");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -21838,7 +21838,7 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
             &cached_function,
             "TryBefore",
             9,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -21870,7 +21870,7 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG
@@ -56752,7 +56752,7 @@ void wxMouseEventsManager_php::MouseClickBegin(int item)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "MouseClickBegin");
     char* temp_string;
@@ -56769,7 +56769,7 @@ void wxMouseEventsManager_php::MouseClickBegin(int item)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "MouseClickBegin");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -56785,7 +56785,7 @@ void wxMouseEventsManager_php::MouseClickBegin(int item)
             &cached_function,
             "MouseClickBegin",
             15,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -56846,7 +56846,7 @@ void wxMouseEventsManager_php::MouseClickCancelled(int item)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "MouseClickCancelled");
     char* temp_string;
@@ -56863,7 +56863,7 @@ void wxMouseEventsManager_php::MouseClickCancelled(int item)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "MouseClickCancelled");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -56879,7 +56879,7 @@ void wxMouseEventsManager_php::MouseClickCancelled(int item)
             &cached_function,
             "MouseClickCancelled",
             19,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -56940,7 +56940,7 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "MouseClicked");
     char* temp_string;
@@ -56957,7 +56957,7 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "MouseClicked");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -56973,7 +56973,7 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
             &cached_function,
             "MouseClicked",
             12,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -57010,7 +57010,7 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -57030,7 +57030,7 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "MouseDragBegin");
     char* temp_string;
@@ -57049,7 +57049,7 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "MouseDragBegin");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -57065,7 +57065,7 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
             &cached_function,
             "MouseDragBegin",
             14,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -57102,7 +57102,7 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -57122,7 +57122,7 @@ void wxMouseEventsManager_php::MouseDragCancelled(int item)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "MouseDragCancelled");
     char* temp_string;
@@ -57139,7 +57139,7 @@ void wxMouseEventsManager_php::MouseDragCancelled(int item)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "MouseDragCancelled");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -57155,7 +57155,7 @@ void wxMouseEventsManager_php::MouseDragCancelled(int item)
             &cached_function,
             "MouseDragCancelled",
             18,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -57212,7 +57212,7 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "MouseDragEnd");
     char* temp_string;
@@ -57231,7 +57231,7 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "MouseDragEnd");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -57247,7 +57247,7 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
             &cached_function,
             "MouseDragEnd",
             12,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -57304,7 +57304,7 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "MouseDragging");
     char* temp_string;
@@ -57323,7 +57323,7 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "MouseDragging");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -57339,7 +57339,7 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
             &cached_function,
             "MouseDragging",
             13,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -57396,7 +57396,7 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "MouseHitTest");
     char* temp_string;
@@ -57414,7 +57414,7 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "MouseHitTest");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -57430,7 +57430,7 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
             &cached_function,
             "MouseHitTest",
             12,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -57467,7 +57467,7 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */

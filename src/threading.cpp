@@ -4540,7 +4540,7 @@ void* wxThread_php::Entry()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Entry");
     char* temp_string;
@@ -4552,7 +4552,7 @@ void* wxThread_php::Entry()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Entry");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -4568,7 +4568,7 @@ void* wxThread_php::Entry()
             &cached_function,
             "Entry",
             5,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -4600,7 +4600,7 @@ void* wxThread_php::Entry()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (void*) Z_STRVAL(return_value);
+    return (void*) Z_STRVAL(function_return_value);
 
 }
 /* }}} */

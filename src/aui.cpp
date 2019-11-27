@@ -5411,7 +5411,7 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Clone");
     char* temp_string;
@@ -5423,7 +5423,7 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Clone");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5439,7 +5439,7 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
             &cached_function,
             "Clone",
             5,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -5471,13 +5471,13 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxAuiToolBarArt_P(&return_value)->native_object;
+        return_object = (void*) Z_wxAuiToolBarArt_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxAuiToolBarArt_P(&return_value)->is_user_initialized = 0;
+    Z_wxAuiToolBarArt_P(&function_return_value)->is_user_initialized = 0;
     wxAuiToolBarArt_php* var = (wxAuiToolBarArt_php*) return_object;
     var->references.UnInitialize();
 
@@ -5500,7 +5500,7 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawBackground");
     char* temp_string;
@@ -5522,7 +5522,7 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawBackground");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5538,7 +5538,7 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
             &cached_function,
             "DrawBackground",
             14,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -5594,7 +5594,7 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawButton");
     char* temp_string;
@@ -5618,7 +5618,7 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawButton");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5634,7 +5634,7 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
             &cached_function,
             "DrawButton",
             10,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -5690,7 +5690,7 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawControlLabel");
     char* temp_string;
@@ -5714,7 +5714,7 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawControlLabel");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5730,7 +5730,7 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
             &cached_function,
             "DrawControlLabel",
             16,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -5786,7 +5786,7 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawDropDownButton");
     char* temp_string;
@@ -5810,7 +5810,7 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawDropDownButton");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5826,7 +5826,7 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
             &cached_function,
             "DrawDropDownButton",
             18,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -5882,7 +5882,7 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawGripper");
     char* temp_string;
@@ -5904,7 +5904,7 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawGripper");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -5920,7 +5920,7 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
             &cached_function,
             "DrawGripper",
             11,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -5976,7 +5976,7 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawLabel");
     char* temp_string;
@@ -6000,7 +6000,7 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawLabel");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6016,7 +6016,7 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
             &cached_function,
             "DrawLabel",
             9,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -6072,7 +6072,7 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawOverflowButton");
     char* temp_string;
@@ -6095,7 +6095,7 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawOverflowButton");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6111,7 +6111,7 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
             &cached_function,
             "DrawOverflowButton",
             18,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -6167,7 +6167,7 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawSeparator");
     char* temp_string;
@@ -6189,7 +6189,7 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawSeparator");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6205,7 +6205,7 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
             &cached_function,
             "DrawSeparator",
             13,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -6261,7 +6261,7 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetElementSize");
     char* temp_string;
@@ -6278,7 +6278,7 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetElementSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6294,7 +6294,7 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
             &cached_function,
             "GetElementSize",
             14,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -6331,7 +6331,7 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -6350,7 +6350,7 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetFlags");
     char* temp_string;
@@ -6362,7 +6362,7 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetFlags");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6378,7 +6378,7 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
             &cached_function,
             "GetFlags",
             8,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -6410,7 +6410,7 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (unsigned int) Z_LVAL(return_value);
+    return (unsigned int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -6429,7 +6429,7 @@ wxFont wxAuiToolBarArt_php::GetFont()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetFont");
     char* temp_string;
@@ -6441,7 +6441,7 @@ wxFont wxAuiToolBarArt_php::GetFont()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetFont");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6457,7 +6457,7 @@ wxFont wxAuiToolBarArt_php::GetFont()
             &cached_function,
             "GetFont",
             7,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -6489,13 +6489,13 @@ wxFont wxAuiToolBarArt_php::GetFont()
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxFont_P(&return_value)->native_object;
+        return_object = (void*) Z_wxFont_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxFont_P(&return_value)->is_user_initialized = 0;
+    Z_wxFont_P(&function_return_value)->is_user_initialized = 0;
     wxFont_php* var = (wxFont_php*) return_object;
     var->references.UnInitialize();
 
@@ -6518,7 +6518,7 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetLabelSize");
     char* temp_string;
@@ -6540,7 +6540,7 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetLabelSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6556,7 +6556,7 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
             &cached_function,
             "GetLabelSize",
             12,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -6593,13 +6593,13 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -6622,7 +6622,7 @@ int wxAuiToolBarArt_php::GetTextOrientation()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetTextOrientation");
     char* temp_string;
@@ -6634,7 +6634,7 @@ int wxAuiToolBarArt_php::GetTextOrientation()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetTextOrientation");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6650,7 +6650,7 @@ int wxAuiToolBarArt_php::GetTextOrientation()
             &cached_function,
             "GetTextOrientation",
             18,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -6682,7 +6682,7 @@ int wxAuiToolBarArt_php::GetTextOrientation()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -6701,7 +6701,7 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetToolSize");
     char* temp_string;
@@ -6723,7 +6723,7 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetToolSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6739,7 +6739,7 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
             &cached_function,
             "GetToolSize",
             11,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -6776,13 +6776,13 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -6805,7 +6805,7 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetElementSize");
     char* temp_string;
@@ -6823,7 +6823,7 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetElementSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6839,7 +6839,7 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
             &cached_function,
             "SetElementSize",
             14,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -6895,7 +6895,7 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetFlags");
     char* temp_string;
@@ -6912,7 +6912,7 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetFlags");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -6928,7 +6928,7 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
             &cached_function,
             "SetFlags",
             8,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -6984,7 +6984,7 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetFont");
     char* temp_string;
@@ -7002,7 +7002,7 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetFont");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -7018,7 +7018,7 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
             &cached_function,
             "SetFont",
             7,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -7074,7 +7074,7 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetTextOrientation");
     char* temp_string;
@@ -7091,7 +7091,7 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetTextOrientation");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -7107,7 +7107,7 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
             &cached_function,
             "SetTextOrientation",
             18,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -22407,7 +22407,7 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetSizingInfo");
     char* temp_string;
@@ -22426,7 +22426,7 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetSizingInfo");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -22442,7 +22442,7 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
             &cached_function,
             "SetSizingInfo",
             13,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -22499,7 +22499,7 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetSelectedFont");
     char* temp_string;
@@ -22517,7 +22517,7 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetSelectedFont");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -22533,7 +22533,7 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
             &cached_function,
             "SetSelectedFont",
             15,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -22590,7 +22590,7 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetNormalFont");
     char* temp_string;
@@ -22608,7 +22608,7 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetNormalFont");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -22624,7 +22624,7 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
             &cached_function,
             "SetNormalFont",
             13,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -22681,7 +22681,7 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetMeasuringFont");
     char* temp_string;
@@ -22699,7 +22699,7 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetMeasuringFont");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -22715,7 +22715,7 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
             &cached_function,
             "SetMeasuringFont",
             16,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -22772,7 +22772,7 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetFlags");
     char* temp_string;
@@ -22789,7 +22789,7 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetFlags");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -22805,7 +22805,7 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
             &cached_function,
             "SetFlags",
             8,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -22862,7 +22862,7 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetColour");
     char* temp_string;
@@ -22880,7 +22880,7 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetColour");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -22896,7 +22896,7 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
             &cached_function,
             "SetColour",
             9,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -22953,7 +22953,7 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetActiveColour");
     char* temp_string;
@@ -22971,7 +22971,7 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetActiveColour");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -22987,7 +22987,7 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
             &cached_function,
             "SetActiveColour",
             15,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -23044,7 +23044,7 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
     zval* params[7];
     zval arguments[7];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetTabSize");
     char* temp_string;
@@ -23070,7 +23070,7 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetTabSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -23086,7 +23086,7 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
             &cached_function,
             "GetTabSize",
             10,
-            &return_value,
+            &function_return_value,
             7,
             params
         );
@@ -23123,13 +23123,13 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -23153,7 +23153,7 @@ int wxAuiTabArt_php::GetIndentSize()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetIndentSize");
     char* temp_string;
@@ -23165,7 +23165,7 @@ int wxAuiTabArt_php::GetIndentSize()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetIndentSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -23181,7 +23181,7 @@ int wxAuiTabArt_php::GetIndentSize()
             &cached_function,
             "GetIndentSize",
             13,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -23213,7 +23213,7 @@ int wxAuiTabArt_php::GetIndentSize()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -23233,7 +23233,7 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
     zval* params[7];
     zval arguments[7];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawButton");
     char* temp_string;
@@ -23260,7 +23260,7 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawButton");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -23276,7 +23276,7 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
             &cached_function,
             "DrawButton",
             10,
-            &return_value,
+            &function_return_value,
             7,
             params
         );
@@ -23333,7 +23333,7 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawBackground");
     char* temp_string;
@@ -23355,7 +23355,7 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawBackground");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -23371,7 +23371,7 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
             &cached_function,
             "DrawBackground",
             14,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -23428,7 +23428,7 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Clone");
     char* temp_string;
@@ -23440,7 +23440,7 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Clone");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -23456,7 +23456,7 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
             &cached_function,
             "Clone",
             5,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -23488,13 +23488,13 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxAuiTabArt_P(&return_value)->native_object;
+        return_object = (void*) Z_wxAuiTabArt_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxAuiTabArt_P(&return_value)->is_user_initialized = 0;
+    Z_wxAuiTabArt_P(&function_return_value)->is_user_initialized = 0;
     wxAuiTabArt_php* var = (wxAuiTabArt_php*) return_object;
     var->references.UnInitialize();
 
@@ -23680,7 +23680,7 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetMetric");
     char* temp_string;
@@ -23698,7 +23698,7 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetMetric");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -23714,7 +23714,7 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
             &cached_function,
             "SetMetric",
             9,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -23771,7 +23771,7 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetFont");
     char* temp_string;
@@ -23790,7 +23790,7 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetFont");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -23806,7 +23806,7 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
             &cached_function,
             "SetFont",
             7,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -23863,7 +23863,7 @@ int wxAuiDockArt_php::GetMetric(int id)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetMetric");
     char* temp_string;
@@ -23880,7 +23880,7 @@ int wxAuiDockArt_php::GetMetric(int id)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetMetric");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -23896,7 +23896,7 @@ int wxAuiDockArt_php::GetMetric(int id)
             &cached_function,
             "GetMetric",
             9,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -23933,7 +23933,7 @@ int wxAuiDockArt_php::GetMetric(int id)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -23953,7 +23953,7 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetColour");
     char* temp_string;
@@ -23972,7 +23972,7 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetColour");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -23988,7 +23988,7 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
             &cached_function,
             "SetColour",
             9,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -24045,7 +24045,7 @@ wxFont wxAuiDockArt_php::GetFont(int id)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetFont");
     char* temp_string;
@@ -24062,7 +24062,7 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetFont");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -24078,7 +24078,7 @@ wxFont wxAuiDockArt_php::GetFont(int id)
             &cached_function,
             "GetFont",
             7,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -24115,13 +24115,13 @@ wxFont wxAuiDockArt_php::GetFont(int id)
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxFont_P(&return_value)->native_object;
+        return_object = (void*) Z_wxFont_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxFont_P(&return_value)->is_user_initialized = 0;
+    Z_wxFont_P(&function_return_value)->is_user_initialized = 0;
     wxFont_php* var = (wxFont_php*) return_object;
     var->references.UnInitialize();
 
@@ -24145,7 +24145,7 @@ wxColour wxAuiDockArt_php::GetColour(int id)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetColour");
     char* temp_string;
@@ -24162,7 +24162,7 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetColour");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -24178,7 +24178,7 @@ wxColour wxAuiDockArt_php::GetColour(int id)
             &cached_function,
             "GetColour",
             9,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -24215,13 +24215,13 @@ wxColour wxAuiDockArt_php::GetColour(int id)
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxColour_P(&return_value)->native_object;
+        return_object = (void*) Z_wxColour_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxColour_P(&return_value)->is_user_initialized = 0;
+    Z_wxColour_P(&function_return_value)->is_user_initialized = 0;
     wxColour_php* var = (wxColour_php*) return_object;
     var->references.UnInitialize();
 
@@ -24245,7 +24245,7 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawSash");
     char* temp_string;
@@ -24268,7 +24268,7 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawSash");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -24284,7 +24284,7 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
             &cached_function,
             "DrawSash",
             8,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -24341,7 +24341,7 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
     zval* params[6];
     zval arguments[6];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawPaneButton");
     char* temp_string;
@@ -24367,7 +24367,7 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawPaneButton");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -24383,7 +24383,7 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
             &cached_function,
             "DrawPaneButton",
             14,
-            &return_value,
+            &function_return_value,
             6,
             params
         );
@@ -24440,7 +24440,7 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawGripper");
     char* temp_string;
@@ -24464,7 +24464,7 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawGripper");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -24480,7 +24480,7 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
             &cached_function,
             "DrawGripper",
             11,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -24537,7 +24537,7 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
     zval* params[5];
     zval arguments[5];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawCaption");
     char* temp_string;
@@ -24562,7 +24562,7 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawCaption");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -24578,7 +24578,7 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
             &cached_function,
             "DrawCaption",
             11,
-            &return_value,
+            &function_return_value,
             5,
             params
         );
@@ -24635,7 +24635,7 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawBorder");
     char* temp_string;
@@ -24659,7 +24659,7 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawBorder");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -24675,7 +24675,7 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
             &cached_function,
             "DrawBorder",
             10,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -24732,7 +24732,7 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawBackground");
     char* temp_string;
@@ -24755,7 +24755,7 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawBackground");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -24771,7 +24771,7 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
             &cached_function,
             "DrawBackground",
             14,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -26083,7 +26083,7 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "ProcessDockResult");
     char* temp_string;
@@ -26103,7 +26103,7 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "ProcessDockResult");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -26119,7 +26119,7 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
             &cached_function,
             "ProcessDockResult",
             17,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -26151,7 +26151,7 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
         php_printf("Returning userspace value.\n");
         #endif
 
-        return Z_TYPE(return_value) == IS_TRUE;
+        return Z_TYPE(function_return_value) == IS_TRUE;
     }
 
     #ifdef USE_WXPHP_DEBUG

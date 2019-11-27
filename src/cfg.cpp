@@ -277,7 +277,7 @@ bool wxConfigBase_php::DeleteAll()
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DeleteAll");
     char* temp_string;
@@ -289,7 +289,7 @@ bool wxConfigBase_php::DeleteAll()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DeleteAll");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -305,7 +305,7 @@ bool wxConfigBase_php::DeleteAll()
             &cached_function,
             "DeleteAll",
             9,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -337,7 +337,7 @@ bool wxConfigBase_php::DeleteAll()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -357,7 +357,7 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DeleteEntry");
     char* temp_string;
@@ -375,7 +375,7 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DeleteEntry");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -391,7 +391,7 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
             &cached_function,
             "DeleteEntry",
             11,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -428,7 +428,7 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -448,7 +448,7 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DeleteGroup");
     char* temp_string;
@@ -465,7 +465,7 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DeleteGroup");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -481,7 +481,7 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
             &cached_function,
             "DeleteGroup",
             11,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -518,7 +518,7 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -773,7 +773,7 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Flush");
     char* temp_string;
@@ -790,7 +790,7 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Flush");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -806,7 +806,7 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
             &cached_function,
             "Flush",
             5,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -843,7 +843,7 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -1275,7 +1275,7 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetFirstEntry");
     char* temp_string;
@@ -1293,7 +1293,7 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetFirstEntry");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1309,7 +1309,7 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
             &cached_function,
             "GetFirstEntry",
             13,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -1346,7 +1346,7 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -1366,7 +1366,7 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetFirstGroup");
     char* temp_string;
@@ -1384,7 +1384,7 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetFirstGroup");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1400,7 +1400,7 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
             &cached_function,
             "GetFirstGroup",
             13,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -1437,7 +1437,7 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -1457,7 +1457,7 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetNextEntry");
     char* temp_string;
@@ -1475,7 +1475,7 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetNextEntry");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1491,7 +1491,7 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
             &cached_function,
             "GetNextEntry",
             12,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -1528,7 +1528,7 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -1548,7 +1548,7 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetNextGroup");
     char* temp_string;
@@ -1566,7 +1566,7 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetNextGroup");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1582,7 +1582,7 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
             &cached_function,
             "GetNextGroup",
             12,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -1619,7 +1619,7 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -1639,7 +1639,7 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetNumberOfEntries");
     char* temp_string;
@@ -1656,7 +1656,7 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetNumberOfEntries");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1672,7 +1672,7 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
             &cached_function,
             "GetNumberOfEntries",
             18,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -1709,7 +1709,7 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (size_t) Z_LVAL(return_value);
+    return (size_t) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -1729,7 +1729,7 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetNumberOfGroups");
     char* temp_string;
@@ -1746,7 +1746,7 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetNumberOfGroups");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1762,7 +1762,7 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
             &cached_function,
             "GetNumberOfGroups",
             17,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -1799,7 +1799,7 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (size_t) Z_LVAL(return_value);
+    return (size_t) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -1819,7 +1819,7 @@ const wxString& wxConfigBase_php::GetPath()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetPath");
     char* temp_string;
@@ -1831,7 +1831,7 @@ const wxString& wxConfigBase_php::GetPath()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetPath");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1847,7 +1847,7 @@ const wxString& wxConfigBase_php::GetPath()const
             &cached_function,
             "GetPath",
             7,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -1879,7 +1879,7 @@ const wxString& wxConfigBase_php::GetPath()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return wxString(Z_STRVAL(return_value), wxConvUTF8);
+    return wxString(Z_STRVAL(function_return_value), wxConvUTF8);
 
 }
 /* }}} */
@@ -2018,7 +2018,7 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "HasEntry");
     char* temp_string;
@@ -2035,7 +2035,7 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "HasEntry");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2051,7 +2051,7 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
             &cached_function,
             "HasEntry",
             8,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -2088,7 +2088,7 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -2107,7 +2107,7 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "HasGroup");
     char* temp_string;
@@ -2124,7 +2124,7 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "HasGroup");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2140,7 +2140,7 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
             &cached_function,
             "HasGroup",
             8,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -2177,7 +2177,7 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -3526,7 +3526,7 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "RenameEntry");
     char* temp_string;
@@ -3544,7 +3544,7 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "RenameEntry");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3560,7 +3560,7 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
             &cached_function,
             "RenameEntry",
             11,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -3597,7 +3597,7 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -3617,7 +3617,7 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "RenameGroup");
     char* temp_string;
@@ -3635,7 +3635,7 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "RenameGroup");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3651,7 +3651,7 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
             &cached_function,
             "RenameGroup",
             11,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -3688,7 +3688,7 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -4004,7 +4004,7 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetPath");
     char* temp_string;
@@ -4021,7 +4021,7 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetPath");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -4037,7 +4037,7 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
             &cached_function,
             "SetPath",
             7,
-            &return_value,
+            &function_return_value,
             1,
             params
         );

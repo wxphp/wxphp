@@ -2532,7 +2532,7 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
     zval* params[5];
     zval arguments[5];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "InsertPage");
     char* temp_string;
@@ -2554,7 +2554,7 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "InsertPage");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2570,7 +2570,7 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
             &cached_function,
             "InsertPage",
             10,
-            &return_value,
+            &function_return_value,
             5,
             params
         );
@@ -2607,7 +2607,7 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -2786,7 +2786,7 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetPageImage");
     char* temp_string;
@@ -2804,7 +2804,7 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetPageImage");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2820,7 +2820,7 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
             &cached_function,
             "SetPageImage",
             12,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -2857,7 +2857,7 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -3059,7 +3059,7 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetPageText");
     char* temp_string;
@@ -3077,7 +3077,7 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetPageText");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3093,7 +3093,7 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
             &cached_function,
             "SetPageText",
             11,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -3130,7 +3130,7 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -3150,7 +3150,7 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetSelection");
     char* temp_string;
@@ -3167,7 +3167,7 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetSelection");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3183,7 +3183,7 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
             &cached_function,
             "SetSelection",
             12,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -3220,7 +3220,7 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -3240,7 +3240,7 @@ int wxBookCtrlBase_php::GetSelection()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetSelection");
     char* temp_string;
@@ -3252,7 +3252,7 @@ int wxBookCtrlBase_php::GetSelection()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetSelection");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3268,7 +3268,7 @@ int wxBookCtrlBase_php::GetSelection()const
             &cached_function,
             "GetSelection",
             12,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -3300,7 +3300,7 @@ int wxBookCtrlBase_php::GetSelection()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -3320,7 +3320,7 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetPageText");
     char* temp_string;
@@ -3337,7 +3337,7 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetPageText");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3353,7 +3353,7 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
             &cached_function,
             "GetPageText",
             11,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -3390,7 +3390,7 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return wxString(Z_STRVAL(return_value), wxConvUTF8);
+    return wxString(Z_STRVAL(function_return_value), wxConvUTF8);
 
 }
 /* }}} */
@@ -3410,7 +3410,7 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetPageImage");
     char* temp_string;
@@ -3427,7 +3427,7 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetPageImage");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3443,7 +3443,7 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
             &cached_function,
             "GetPageImage",
             12,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -3480,7 +3480,7 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -3500,7 +3500,7 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "ChangeSelection");
     char* temp_string;
@@ -3517,7 +3517,7 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "ChangeSelection");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3533,7 +3533,7 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
             &cached_function,
             "ChangeSelection",
             15,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -3570,7 +3570,7 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */

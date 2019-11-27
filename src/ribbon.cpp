@@ -146,7 +146,7 @@ wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "Clone");
     char* temp_string;
@@ -158,7 +158,7 @@ wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "Clone");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -174,7 +174,7 @@ wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
             &cached_function,
             "Clone",
             5,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -206,13 +206,13 @@ wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxRibbonArtProvider_P(&return_value)->native_object;
+        return_object = (void*) Z_wxRibbonArtProvider_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxRibbonArtProvider_P(&return_value)->is_user_initialized = 0;
+    Z_wxRibbonArtProvider_P(&function_return_value)->is_user_initialized = 0;
     wxRibbonArtProvider_php* var = (wxRibbonArtProvider_php*) return_object;
     var->references.UnInitialize();
 
@@ -236,7 +236,7 @@ void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, c
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawButtonBarBackground");
     char* temp_string;
@@ -258,7 +258,7 @@ void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, c
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawButtonBarBackground");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -274,7 +274,7 @@ void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, c
             &cached_function,
             "DrawButtonBarBackground",
             23,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -331,7 +331,7 @@ void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* w
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawGalleryBackground");
     char* temp_string;
@@ -353,7 +353,7 @@ void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* w
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawGalleryBackground");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -369,7 +369,7 @@ void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* w
             &cached_function,
             "DrawGalleryBackground",
             21,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -426,7 +426,7 @@ void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGaller
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawGalleryItemBackground");
     char* temp_string;
@@ -450,7 +450,7 @@ void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGaller
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawGalleryItemBackground");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -466,7 +466,7 @@ void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGaller
             &cached_function,
             "DrawGalleryItemBackground",
             25,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -523,7 +523,7 @@ void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, c
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawMinimisedPanel");
     char* temp_string;
@@ -547,7 +547,7 @@ void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, c
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawMinimisedPanel");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -563,7 +563,7 @@ void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, c
             &cached_function,
             "DrawMinimisedPanel",
             18,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -620,7 +620,7 @@ void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const 
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawPageBackground");
     char* temp_string;
@@ -642,7 +642,7 @@ void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawPageBackground");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -658,7 +658,7 @@ void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const 
             &cached_function,
             "DrawPageBackground",
             18,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -715,7 +715,7 @@ void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, 
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawPanelBackground");
     char* temp_string;
@@ -737,7 +737,7 @@ void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawPanelBackground");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -753,7 +753,7 @@ void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, 
             &cached_function,
             "DrawPanelBackground",
             19,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -810,7 +810,7 @@ void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wx
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawScrollButton");
     char* temp_string;
@@ -833,7 +833,7 @@ void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wx
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawScrollButton");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -849,7 +849,7 @@ void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wx
             &cached_function,
             "DrawScrollButton",
             16,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -906,7 +906,7 @@ void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, con
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawTabCtrlBackground");
     char* temp_string;
@@ -928,7 +928,7 @@ void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, con
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawTabCtrlBackground");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -944,7 +944,7 @@ void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, con
             &cached_function,
             "DrawTabCtrlBackground",
             21,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -1001,7 +1001,7 @@ void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wx
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawTabSeparator");
     char* temp_string;
@@ -1024,7 +1024,7 @@ void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wx
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawTabSeparator");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1040,7 +1040,7 @@ void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wx
             &cached_function,
             "DrawTabSeparator",
             16,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -1097,7 +1097,7 @@ void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& re
     zval* params[6];
     zval arguments[6];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawTool");
     char* temp_string;
@@ -1123,7 +1123,7 @@ void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& re
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawTool");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1139,7 +1139,7 @@ void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& re
             &cached_function,
             "DrawTool",
             8,
-            &return_value,
+            &function_return_value,
             6,
             params
         );
@@ -1196,7 +1196,7 @@ void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, con
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawToolBarBackground");
     char* temp_string;
@@ -1218,7 +1218,7 @@ void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, con
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawToolBarBackground");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1234,7 +1234,7 @@ void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, con
             &cached_function,
             "DrawToolBarBackground",
             21,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -1291,7 +1291,7 @@ void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, c
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawToolGroupBackground");
     char* temp_string;
@@ -1313,7 +1313,7 @@ void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, c
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawToolGroupBackground");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1329,7 +1329,7 @@ void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, c
             &cached_function,
             "DrawToolGroupBackground",
             23,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -1386,7 +1386,7 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
     zval* params[8];
     zval arguments[8];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetBarTabWidth");
     char* temp_string;
@@ -1413,7 +1413,7 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetBarTabWidth");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1429,7 +1429,7 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
             &cached_function,
             "GetBarTabWidth",
             14,
-            &return_value,
+            &function_return_value,
             8,
             params
         );
@@ -1608,7 +1608,7 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetColour");
     char* temp_string;
@@ -1625,7 +1625,7 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetColour");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1641,7 +1641,7 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
             &cached_function,
             "GetColour",
             9,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -1678,13 +1678,13 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxColour_P(&return_value)->native_object;
+        return_object = (void*) Z_wxColour_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxColour_P(&return_value)->is_user_initialized = 0;
+    Z_wxColour_P(&function_return_value)->is_user_initialized = 0;
     wxColour_php* var = (wxColour_php*) return_object;
     var->references.UnInitialize();
 
@@ -1708,7 +1708,7 @@ void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secon
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetColourScheme");
     char* temp_string;
@@ -1730,7 +1730,7 @@ void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secon
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetColourScheme");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1746,7 +1746,7 @@ void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secon
             &cached_function,
             "GetColourScheme",
             15,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -1803,7 +1803,7 @@ long wxRibbonArtProvider_php::GetFlags()const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetFlags");
     char* temp_string;
@@ -1815,7 +1815,7 @@ long wxRibbonArtProvider_php::GetFlags()const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetFlags");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1831,7 +1831,7 @@ long wxRibbonArtProvider_php::GetFlags()const
             &cached_function,
             "GetFlags",
             8,
-            &return_value,
+            &function_return_value,
             0,
             params
         );
@@ -1863,7 +1863,7 @@ long wxRibbonArtProvider_php::GetFlags()const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (long) Z_LVAL(return_value);
+    return (long) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -1883,7 +1883,7 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetFont");
     char* temp_string;
@@ -1900,7 +1900,7 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetFont");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -1916,7 +1916,7 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
             &cached_function,
             "GetFont",
             7,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -1953,13 +1953,13 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxFont_P(&return_value)->native_object;
+        return_object = (void*) Z_wxFont_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxFont_P(&return_value)->is_user_initialized = 0;
+    Z_wxFont_P(&function_return_value)->is_user_initialized = 0;
     wxFont_php* var = (wxFont_php*) return_object;
     var->references.UnInitialize();
 
@@ -1983,7 +1983,7 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
     zval* params[7];
     zval arguments[7];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetGalleryClientSize");
     char* temp_string;
@@ -2013,7 +2013,7 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetGalleryClientSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2029,7 +2029,7 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
             &cached_function,
             "GetGalleryClientSize",
             20,
-            &return_value,
+            &function_return_value,
             7,
             params
         );
@@ -2066,13 +2066,13 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -2096,7 +2096,7 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetGallerySize");
     char* temp_string;
@@ -2118,7 +2118,7 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetGallerySize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2134,7 +2134,7 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
             &cached_function,
             "GetGallerySize",
             14,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -2171,13 +2171,13 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -2201,7 +2201,7 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetMetric");
     char* temp_string;
@@ -2218,7 +2218,7 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetMetric");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2234,7 +2234,7 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
             &cached_function,
             "GetMetric",
             9,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -2271,7 +2271,7 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
     php_printf("Returning userspace value.\n");
     #endif
 
-    return (int) Z_LVAL(return_value);
+    return (int) Z_LVAL(function_return_value);
 
 }
 /* }}} */
@@ -2291,7 +2291,7 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetMinimisedPanelMinimumSize");
     char* temp_string;
@@ -2314,7 +2314,7 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetMinimisedPanelMinimumSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2330,7 +2330,7 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
             &cached_function,
             "GetMinimisedPanelMinimumSize",
             28,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -2367,13 +2367,13 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -2397,7 +2397,7 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetPageBackgroundRedrawArea");
     char* temp_string;
@@ -2421,7 +2421,7 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetPageBackgroundRedrawArea");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2437,7 +2437,7 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
             &cached_function,
             "GetPageBackgroundRedrawArea",
             27,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -2474,13 +2474,13 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxRect_P(&return_value)->native_object;
+        return_object = (void*) Z_wxRect_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxRect_P(&return_value)->is_user_initialized = 0;
+    Z_wxRect_P(&function_return_value)->is_user_initialized = 0;
     wxRect_php* var = (wxRect_php*) return_object;
     var->references.UnInitialize();
 
@@ -2504,7 +2504,7 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetPanelClientSize");
     char* temp_string;
@@ -2528,7 +2528,7 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetPanelClientSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2544,7 +2544,7 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
             &cached_function,
             "GetPanelClientSize",
             18,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -2581,13 +2581,13 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -2611,7 +2611,7 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
     zval* params[4];
     zval arguments[4];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetPanelSize");
     char* temp_string;
@@ -2635,7 +2635,7 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetPanelSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2651,7 +2651,7 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
             &cached_function,
             "GetPanelSize",
             12,
-            &return_value,
+            &function_return_value,
             4,
             params
         );
@@ -2688,13 +2688,13 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -2718,7 +2718,7 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetScrollButtonMinimumSize");
     char* temp_string;
@@ -2739,7 +2739,7 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetScrollButtonMinimumSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2755,7 +2755,7 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
             &cached_function,
             "GetScrollButtonMinimumSize",
             26,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -2792,13 +2792,13 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -2822,7 +2822,7 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
     zval* params[7];
     zval arguments[7];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetToolSize");
     char* temp_string;
@@ -2849,7 +2849,7 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetToolSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -2865,7 +2865,7 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
             &cached_function,
             "GetToolSize",
             11,
-            &return_value,
+            &function_return_value,
             7,
             params
         );
@@ -2902,13 +2902,13 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -3066,7 +3066,7 @@ void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxC
     zval* params[3];
     zval arguments[3];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetColourScheme");
     char* temp_string;
@@ -3088,7 +3088,7 @@ void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxC
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetColourScheme");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3104,7 +3104,7 @@ void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxC
             &cached_function,
             "SetColourScheme",
             15,
-            &return_value,
+            &function_return_value,
             3,
             params
         );
@@ -3161,7 +3161,7 @@ void wxRibbonArtProvider_php::SetFlags(long flags)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetFlags");
     char* temp_string;
@@ -3178,7 +3178,7 @@ void wxRibbonArtProvider_php::SetFlags(long flags)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetFlags");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3194,7 +3194,7 @@ void wxRibbonArtProvider_php::SetFlags(long flags)
             &cached_function,
             "SetFlags",
             8,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -3251,7 +3251,7 @@ void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetFont");
     char* temp_string;
@@ -3270,7 +3270,7 @@ void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetFont");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3286,7 +3286,7 @@ void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
             &cached_function,
             "SetFont",
             7,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -3343,7 +3343,7 @@ void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "SetMetric");
     char* temp_string;
@@ -3361,7 +3361,7 @@ void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "SetMetric");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3377,7 +3377,7 @@ void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
             &cached_function,
             "SetMetric",
             9,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -3434,7 +3434,7 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
     zval* params[8];
     zval arguments[8];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DrawButtonBarButton");
     char* temp_string;
@@ -3463,7 +3463,7 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DrawButtonBarButton");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3479,7 +3479,7 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
             &cached_function,
             "DrawButtonBarButton",
             19,
-            &return_value,
+            &function_return_value,
             8,
             params
         );
@@ -3536,7 +3536,7 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
     zval* params[10];
     zval arguments[10];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetButtonBarButtonSize");
     char* temp_string;
@@ -3569,7 +3569,7 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetButtonBarButtonSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -3585,7 +3585,7 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
             &cached_function,
             "GetButtonBarButtonSize",
             22,
-            &return_value,
+            &function_return_value,
             10,
             params
         );
@@ -3622,7 +3622,7 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_TYPE(return_value) == IS_TRUE;
+    return Z_TYPE(function_return_value) == IS_TRUE;
 
 }
 /* }}} */
@@ -7607,7 +7607,7 @@ wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize 
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DoGetNextLargerSize");
     char* temp_string;
@@ -7626,7 +7626,7 @@ wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize 
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DoGetNextLargerSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -7642,7 +7642,7 @@ wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize 
             &cached_function,
             "DoGetNextLargerSize",
             19,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -7674,13 +7674,13 @@ wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize 
         php_printf("Returning userspace value.\n");
         #endif
 
-        if(Z_TYPE(return_value) == IS_OBJECT)
+        if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 
@@ -7713,7 +7713,7 @@ wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize
     zval* params[2];
     zval arguments[2];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "DoGetNextSmallerSize");
     char* temp_string;
@@ -7732,7 +7732,7 @@ wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "DoGetNextSmallerSize");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -7748,7 +7748,7 @@ wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize
             &cached_function,
             "DoGetNextSmallerSize",
             20,
-            &return_value,
+            &function_return_value,
             2,
             params
         );
@@ -7780,13 +7780,13 @@ wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize
         php_printf("Returning userspace value.\n");
         #endif
 
-        if(Z_TYPE(return_value) == IS_OBJECT)
+        if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxSize_P(&return_value)->native_object;
+        return_object = (void*) Z_wxSize_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxSize_P(&return_value)->is_user_initialized = 0;
+    Z_wxSize_P(&function_return_value)->is_user_initialized = 0;
     wxSize_php* var = (wxSize_php*) return_object;
     var->references.UnInitialize();
 

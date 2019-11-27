@@ -345,24 +345,24 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
     {
         case    "bool":
         {
-            $output = "return Z_TYPE_INFO(return_value) == IS_TRUE;\n";
+            $output = "return Z_TYPE(function_return_value) == IS_TRUE;\n";
             break;
         }
         case    "integer":
         case    "class_enum":
         case    "global_enum":
         {
-            $output .= "return ($return_type) Z_LVAL(return_value);\n";
+            $output .= "return ($return_type) Z_LVAL(function_return_value);\n";
             break;
         }
         case    "float":
         {
-            $output .= "return Z_DVAL(return_value);\n";
+            $output .= "return Z_DVAL(function_return_value);\n";
             break;
         }
         case    "characters":
         {
-            $output .= "return Z_STRVAL(return_value);\n";
+            $output .= "return Z_STRVAL(function_return_value);\n";
             break;
         }
         case "void":
@@ -371,7 +371,7 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
             {
                 case "const_pointer":
                 case "pointer":
-                    $output .= "return (void*) Z_STRVAL(return_value);\n";
+                    $output .= "return (void*) Z_STRVAL(function_return_value);\n";
                     break;
 
                 default:
@@ -382,12 +382,12 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
         }
         case    "date":
         {
-            $output .= "return wxDateTime(Z_LVAL(return_value));\n";
+            $output .= "return wxDateTime(Z_LVAL(function_return_value));\n";
             break;
         }
         case    "string":
         {
-            $output .= "return wxString(Z_STRVAL(return_value), wxConvUTF8);\n";
+            $output .= "return wxString(Z_STRVAL(function_return_value), wxConvUTF8);\n";
             break;
         }
         /*case "strings_array":
@@ -396,13 +396,13 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 
         case "object":
         {
-            $output .= "if(Z_TYPE(return_value) == IS_OBJECT)\n";
+            $output .= "if(Z_TYPE(function_return_value) == IS_OBJECT)\n";
             $output .= tabs(1) . "{\n";
-            $output .= tabs(2) . "return_object = (void*) Z_{$return_type}_P(&return_value)->native_object;\n";
+            $output .= tabs(2) . "return_object = (void*) Z_{$return_type}_P(&function_return_value)->native_object;\n";
             $output .= tabs(1) . "}\n\n";
 
             $output .= tabs(1) . "//Threat it as a normal object on the calling function and not a php user space intiialized one\n";
-            $output .= tabs(1) . "Z_{$return_type}_P(&return_value)->is_user_initialized = 0;\n";
+            $output .= tabs(1) . "Z_{$return_type}_P(&function_return_value)->is_user_initialized = 0;\n";
             $output .= tabs(1) . "{$return_type}_php* var = ({$return_type}_php*) return_object;\n";
             $output .= tabs(1) . "var->references.UnInitialize();\n\n";
 

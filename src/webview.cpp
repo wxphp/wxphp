@@ -732,7 +732,7 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
     zval* params[1];
     zval arguments[1];
 
-    zval return_value;
+    zval function_return_value;
     zval function_name;
     ZVAL_STRING(&function_name, "GetFile");
     char* temp_string;
@@ -749,7 +749,7 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Trying to call user defined method '%s'", "GetFile");
-    
+
     if (this->phpObj.value.obj->ce == NULL) {
     php_printf(" on NULL!\n");
     } else {
@@ -765,7 +765,7 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
             &cached_function,
             "GetFile",
             7,
-            &return_value,
+            &function_return_value,
             1,
             params
         );
@@ -802,13 +802,13 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
     php_printf("Returning userspace value.\n");
     #endif
 
-    if(Z_TYPE(return_value) == IS_OBJECT)
+    if(Z_TYPE(function_return_value) == IS_OBJECT)
     {
-        return_object = (void*) Z_wxFSFile_P(&return_value)->native_object;
+        return_object = (void*) Z_wxFSFile_P(&function_return_value)->native_object;
     }
 
     //Threat it as a normal object on the calling function and not a php user space intiialized one
-    Z_wxFSFile_P(&return_value)->is_user_initialized = 0;
+    Z_wxFSFile_P(&function_return_value)->is_user_initialized = 0;
     wxFSFile_php* var = (wxFSFile_php*) return_object;
     var->references.UnInitialize();
 
