@@ -199,7 +199,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 
     fc_obj = zend_hash_index_find(Z_ARRVAL_P(fc), 0);
     fc_name = zend_hash_index_find(Z_ARRVAL_P(fc), 1);
-    Z_ADDREF_P(fc_obj);
+    Z_TRY_ADDREF_P(fc_obj);
 
     ct = Z_STRVAL_P(fc_name);
 
