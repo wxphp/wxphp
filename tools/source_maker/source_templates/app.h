@@ -34,6 +34,7 @@ class wxAppWrapper : public wxApp
         bool OSXIsGUIApplication();
         #endif
 
+        bool is_php_user_space_implemented = false;
         zval phpObj;
 };
 

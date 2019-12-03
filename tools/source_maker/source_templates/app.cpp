@@ -69,8 +69,6 @@ END_EXTERN_C()
 
 bool wxAppWrapper::OnInit()
 {
-    static bool is_php_user_space_implemented = true;
-
     #ifdef USE_WXPHP_DEBUG
     php_printf("Invoking virtual wxApp::OnInit\n");
     php_printf("===========================================\n");
@@ -85,47 +83,33 @@ bool wxAppWrapper::OnInit()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf(
-        "Trying to call user defined method '%s'",
+        "Trying to call user defined method '%s' on wxApp\n",
         Z_STRVAL(function_name)
     );
-
-    if (phpObj.value.obj->ce == NULL) {
-        php_printf(" on NULL!\n");
-    } else {
-        php_printf(" on '%s'\n", ZSTR_VAL(phpObj.value.obj->ce->name));
-    }
     #endif
 
     if(is_php_user_space_implemented)
     {
         function_called = call_user_function_ex(
-            NULL, &phpObj, &function_name, &function_return_value,
-            0, NULL, 0, NULL
+                NULL, &phpObj, &function_name, &function_return_value,
+                0, NULL, 0, NULL
         );
-    }
-    else
-    {
-        function_called = FAILURE;
-    }
 
-    if(function_called == FAILURE)
-    {
-        is_php_user_space_implemented = false;
+        if(function_called == SUCCESS)
+        {
+            return true;
+        }
 
         #ifdef USE_WXPHP_DEBUG
-        php_printf("Invocation of user defined method failed\n");
+        php_printf("Invocation of user defined method failed. Calling native method instead.\n");
         #endif
-
-        return false;
     }
 
-    return true;
+    return wxApp::OnInit();
 }
 
 int wxAppWrapper::OnExit()
 {
-    static bool is_php_user_space_implemented = true;
-
     #ifdef USE_WXPHP_DEBUG
     php_printf("Invoking virtual wxApp::OnExit\n");
     php_printf("===========================================\n");
@@ -140,15 +124,9 @@ int wxAppWrapper::OnExit()
 
     #ifdef USE_WXPHP_DEBUG
     php_printf(
-        "Trying to call user defined method '%s'",
+        "Trying to call user defined method '%s' on wxApp\n",
         Z_STRVAL(function_name)
     );
-
-    if (phpObj.value.obj->ce == NULL) {
-        php_printf(" on NULL!\n");
-    } else {
-        php_printf(" on '%s'\n", ZSTR_VAL(phpObj.value.obj->ce->name));
-    }
     #endif
 
     if(is_php_user_space_implemented)
@@ -157,22 +135,18 @@ int wxAppWrapper::OnExit()
             NULL, &phpObj, &function_name, &function_return_value,
             0, NULL, 0, NULL
         );
-    }
-    else
-    {
-        function_called = FAILURE;
-    }
 
-    if(function_called == FAILURE)
-    {
-        is_php_user_space_implemented = false;
+        if(function_called == SUCCESS)
+        {
+            return true;
+        }
 
         #ifdef USE_WXPHP_DEBUG
-        php_printf("Invocation of user defined method failed\n");
+        php_printf("Invocation of user defined method failed. Calling native method instead.\n");
         #endif
     }
 
-    return 0;
+    return wxApp::OnExit();
 }
 
 #ifdef __WXMAC__
@@ -605,6 +579,7 @@ PHP_METHOD(php_wxApp, __construct)
 
     wxAppWrapper* native_object = new wxAppWrapper();
     native_object->phpObj = *getThis();
+    native_object->is_php_user_space_implemented = true;
 
     current_object = Z_wxApp_P(getThis());
 
