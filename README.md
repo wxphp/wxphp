@@ -61,7 +61,7 @@ SourceForge.net project page which hosts the binary builds.
 
 * [https://sourceforge.net/projects/wxphp](https://sourceforge.net/projects/wxphp)
 
-## Contributors
+## Contributors & Sponsors
 
 This project is possible thanks to the following people and all of
 those that report issues on the issue tracker. Thanks to Everyone!
@@ -71,3 +71,9 @@ those that report issues on the issue tracker. Thanks to Everyone!
 </a>
 
 Made with [contributors-img](https://contributors-img.firebaseapp.com).
+
+PHP 7 upgrade has been sponsored by
+
+<a href="https://rangee.com/">
+  <img src="https://rangee.com/wp-content/uploads/2018/09/Rangee_Logo_2018_small.jpg"/>
+</a>

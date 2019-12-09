@@ -2,6 +2,7 @@
 /**
  * @author Mário Soares
  * @contributors Jefferson González
+ * @contributors René Vögeli / Rangee GmbH
  *
  * @license
  * This file is part of wxPHP check the LICENSE file for information.
@@ -1756,6 +1757,7 @@ function classes_author_header()
     $header = "/*\n";
     $header .= " * @author Mário Soares\n";
     $header .= " * @contributors Jefferson González\n";
+    $header .= " * @contributors René Vögeli / Rangee GmbH\n";
     $header .= " * \n";
     $header .= " * @license \n";
     $header .= " * This file is part of wxPHP check the LICENSE file for information.\n";

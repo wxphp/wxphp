@@ -1,5 +1,6 @@
 /*
  * @author Jefferson González
+ * @contributors René Vögeli / Rangee GmbH
  *
  * @license
  * This file is part of wxPHP check the LICENSE file for information.
