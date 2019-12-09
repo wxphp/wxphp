@@ -110,12 +110,15 @@ END_EXTERN_C()
 
 class wxPhpClientData : public wxClientData
 {
-    public:
-    wxPhpClientData(zval& phpObj)
+public:
+    wxPhpClientData(zend_fcall_info& fci, zend_fcall_info_cache& fci_cache)
     {
-        this->phpObj = phpObj;
+        this->fci = fci;
+        this->fci_cache = fci_cache;
     }
-    zval phpObj;
+
+    zend_fcall_info fci;
+    zend_fcall_info_cache fci_cache;
 };
 
 /**

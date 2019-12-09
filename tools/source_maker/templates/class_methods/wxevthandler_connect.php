@@ -50,26 +50,17 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
     }
 
     zval dummy;
-    zval fc_name;
     wxCommandEvent* ce;
     wxPhpClientData* co;
 
     ce = (wxCommandEvent*) evnt.m_callbackUserData;
     co = (wxPhpClientData*) ce->GetClientObject();
+    co->fci.retval = &dummy;
+    co->fci.param_count = 1;
+    co->fci.params = arg;
+    co->fci.no_separation = 0;
 
-    wxString fname = ce->GetString();
-    ZVAL_STRING(&fc_name, fname);
-
-    if(
-        call_user_function(
-            NULL,
-            &co->phpObj,
-            &fc_name,
-            &dummy,
-            1,
-            arg
-        ) == FAILURE
-    )
+    if(zend_call_function(&co->fci, &co->fci_cache) == FAILURE)
     {
         wxString errorMessage = "Failed to call method: '";
         errorMessage += ce->GetString().char_str();
@@ -79,7 +70,6 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
     }
 
     zval_ptr_dtor(&arg[0]);
-    zval_ptr_dtor(&fc_name);
 }
 
 PHP_METHOD(php_<?=$class_name?>, Connect)
@@ -118,24 +108,21 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
         zend_error(E_ERROR, "Could not process Connect call as static\n");
     }
 
-    zval* fc;
+    zend_fcall_info fci = empty_fcall_info;
+    zend_fcall_info_cache fci_cache = empty_fcall_info_cache;
     long flag, id0 = 0, id1 = 0;
-
-    zval* fc_obj;
-    zval* fc_name;
-    char* ct;
     int args = ZEND_NUM_ARGS();
 
     //To supress some warnings due to passing a string directly
-    char parse_parameters_4[] = "lllz";
-    char parse_parameters_3[] = "llz";
-    char parse_parameters_2[] = "lz";
+    char parse_parameters_4[] = "lllf";
+    char parse_parameters_3[] = "llf";
+    char parse_parameters_2[] = "lf";
 
     switch(args)
     {
         case 4:
             #ifdef USE_WXPHP_DEBUG
-            php_printf("Parsing parameters with \"lllz\"\n");
+            php_printf("Parsing parameters with \"lllf\"\n");
             #endif
 
             if(
@@ -146,7 +133,8 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
                     &id0,
                     &id1,
                     &flag,
-                    (void**)&fc
+                    &fci,
+                    &fci_cache
                 ) == FAILURE
             )
             {
@@ -156,7 +144,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
             break;
         case 3:
             #ifdef USE_WXPHP_DEBUG
-            php_printf("Parsing parameters with \"llz\"\n");
+            php_printf("Parsing parameters with \"llf\"\n");
             #endif
 
             if(
@@ -166,7 +154,8 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
                     parse_parameters_3,
                     &id0,
                     &flag,
-                    (void**)&fc
+                    &fci,
+                    &fci_cache
                 ) == FAILURE
             )
             {
@@ -176,7 +165,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
             break;
         case 2:
             #ifdef USE_WXPHP_DEBUG
-            php_printf("Parsing parameters with \"lz\"\n");
+            php_printf("Parsing parameters with \"lf\"\n");
             #endif
 
             if(
@@ -185,7 +174,8 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
                     args,
                     parse_parameters_2,
                     &flag,
-                    (void**)&fc
+                    &fci,
+                    &fci_cache
                 ) == FAILURE
             )
             {
@@ -197,15 +187,8 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
             zend_error(E_ERROR, "Wrong amount of parameters");
     }
 
-    fc_obj = zend_hash_index_find(Z_ARRVAL_P(fc), 0);
-    fc_name = zend_hash_index_find(Z_ARRVAL_P(fc), 1);
-    Z_TRY_ADDREF_P(fc_obj);
-
-    ct = Z_STRVAL_P(fc_name);
-
     wxCommandEvent* ce = new wxCommandEvent();
-    ce->SetString(wxString::Format(wxT("%s"), ct));
-    ce->SetClientObject(new wxPhpClientData(*fc_obj));
+    ce->SetClientObject(new wxPhpClientData(fci, fci_cache));
 
     switch(args)
     {
