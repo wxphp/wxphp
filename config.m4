@@ -20,7 +20,7 @@ PHP_ARG_ENABLE(wxwidgets-monolithic, whether to link to monolithic build of wxWi
 if test "$PHP_WXWIDGETS" != "no"; then
 
     dnl Set the wxWidgets version to download and compile
-    PHP_WX_VERSION="3.0.4"
+    PHP_WX_VERSION="3.0.5"
 
     if test "$PHP_WXWIDGETS_VERSION" != "no"; then
         PHP_WX_VERSION=$PHP_WXWIDGETS_VERSION
