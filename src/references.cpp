@@ -58,7 +58,7 @@ void wxPHPObjectReferences::RemoveReferences()
 
         for(unsigned int i=0; i<m_references.size(); i++)
         {
-            if (Z_REFCOUNTED_P((m_references[i])) && m_references[i]->value.counted != nullptr) {
+            if (Z_REFCOUNTED_P((m_references[i])) && Z_TYPE_P(m_references[i]) <= _IS_ERROR) {
                 #ifdef USE_WXPHP_DEBUG
                 php_printf("Removing reference: %i\n", i);
                 #endif
