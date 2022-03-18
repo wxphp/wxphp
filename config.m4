@@ -17,6 +17,10 @@ PHP_ARG_ENABLE(wxwidgets-monolithic, whether to link to monolithic build of wxWi
 [  --enable-wxwidgets-monolithic
                           Link to monolithic build of wxWidgets], no, no)
 
+PHP_ARG_ENABLE(wxphp-references-management, whether to enable references management in wxPHP,
+[  --enable-wxphp-references-management
+                          Enable references management in wxPHP], yes, no)
+
 if test "$PHP_WXWIDGETS" != "no"; then
 
     dnl Set the wxWidgets version to download and compile
@@ -190,6 +194,12 @@ if test "$PHP_WXWIDGETS" != "no"; then
 
         CFLAGS="$CFLAGS -O0 -g"
         CXXFLAGS="$CXXFLAGS -O0 -g"
+    fi
+
+    dnl Check whether to enable WxPHP references management
+    if test "$PHP_WXPHP_REFERENCES_MANAGEMENT" != "no"; then
+        dnl Yes, so set the C macro
+        AC_DEFINE(USE_WXPHP_REFERENCES_MANAGEMENT,1,[Enable references management in wxPHP])
     fi
 
     dnl Add additional includes directory

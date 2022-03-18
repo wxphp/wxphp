@@ -36,6 +36,7 @@ bool wxPHPObjectReferences::IsUserInitialized()
 
 void wxPHPObjectReferences::AddReference(zval* var, std::string class_and_method)
 {
+    #ifdef USE_WXPHP_REFERENCES_MANAGEMENT
     if(IsUserInitialized())
     {
         #ifdef USE_WXPHP_DEBUG
@@ -46,10 +47,12 @@ void wxPHPObjectReferences::AddReference(zval* var, std::string class_and_method
 
         m_references.push_back(var);
     }
+    #endif
 }
 
 void wxPHPObjectReferences::RemoveReferences()
 {
+    #ifdef USE_WXPHP_REFERENCES_MANAGEMENT
     if(IsUserInitialized())
     {
         #ifdef USE_WXPHP_DEBUG
@@ -58,7 +61,7 @@ void wxPHPObjectReferences::RemoveReferences()
 
         for(unsigned int i=0; i<m_references.size(); i++)
         {
-            if (Z_REFCOUNTED_P((m_references[i])) && Z_TYPE_P(m_references[i]) <= _IS_ERROR) {
+            if (Z_REFCOUNTED_P((m_references[i])) && Z_TYPE_P(m_references[i]) > IS_UNDEF && Z_TYPE_P(m_references[i]) <= _IS_ERROR) {
                 #ifdef USE_WXPHP_DEBUG
                 php_printf("Removing reference: %i\n", i);
                 #endif
@@ -67,4 +70,5 @@ void wxPHPObjectReferences::RemoveReferences()
             }
         }
     }
+    #endif
 }
