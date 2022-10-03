@@ -23,7 +23,7 @@
  * Define Extension Properties
  */
 #define PHP_WXWIDGETS_EXTNAME        "wxWidgets"
-#define PHP_WXWIDGETS_VERSION        "3.0.5.0"
+#define PHP_WXWIDGETS_VERSION        "3.0.5.1"
 
 /**
  * Define php compatible library version string
@@ -463,6 +463,7 @@ PHP_METHOD(php_wxRealPoint, __get);
 PHP_METHOD(php_wxRealPoint, __construct);
 PHP_METHOD(php_wxEvtHandler, __construct);
 PHP_METHOD(php_wxEvtHandler, Connect);
+PHP_METHOD(php_wxEvtHandler, Disconnect);
 PHP_METHOD(php_wxEvtHandler, AddFilter);
 PHP_METHOD(php_wxEvtHandler, AddPendingEvent);
 PHP_METHOD(php_wxEvtHandler, DeletePendingEvents);

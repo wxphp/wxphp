@@ -445,6 +445,7 @@ END_EXTERN_C()
 static zend_function_entry php_wxEvtHandler_functions[] = {
     PHP_ME(php_wxEvtHandler, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_ME(php_wxEvtHandler, Connect, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEvtHandler, Disconnect, NULL, ZEND_ACC_PUBLIC)
     PHP_ME(php_wxEvtHandler, AddFilter, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
     PHP_ME(php_wxEvtHandler, AddPendingEvent, NULL, ZEND_ACC_PUBLIC)
     PHP_ME(php_wxEvtHandler, DeletePendingEvents, NULL, ZEND_ACC_PUBLIC)

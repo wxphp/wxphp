@@ -107,6 +107,7 @@ static zend_function_entry php_wxBookCtrlBase_functions[] = {
     PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
     PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
     PHP_ME(php_wxEvtHandler, Connect, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEvtHandler, Disconnect, NULL, ZEND_ACC_PUBLIC)
     PHP_ME(php_wxEvtHandler, AddFilter, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
     PHP_ME(php_wxEvtHandler, AddPendingEvent, NULL, ZEND_ACC_PUBLIC)
     PHP_ME(php_wxEvtHandler, DeletePendingEvents, NULL, ZEND_ACC_PUBLIC)
