@@ -906,3 +906,47 @@ provides it as follows: (seems to be already added on wxWidgets svn trunk)
 
 14. Add "deprecated":true to wxDataViewCustomRenderer::LeftClick and
     wxDataViewCustomRenderer::Activate
+
+15. Added customized Disconnect to wxEvtHandler
+
+    "Disconnect":[
+        {
+            "return_type":"bool",
+            "brief_description":"Disconnects functions dynamically from the event handler, using the specified parameters as search criteria and returning true if a matching function has been found and removed.",
+            "constant":false,
+            "virtual":false,
+            "pure_virtual":false,
+            "static":false,
+            "protected":false,
+            "parameters_type":[
+                "int",
+                "int",
+                "wxEventType"
+            ],
+            "parameters_is_array":[
+                false,
+                false,
+                false
+            ],
+            "parameters_extra":[
+                false,
+                false,
+                false
+            ],
+            "parameters_name":[
+                "id",
+                "lastId",
+                "eventType"
+            ],
+            "parameters_required":[
+                true,
+                true,
+                true
+            ],
+            "parameters_default_value":[
+                null,
+                null,
+                null
+            ]
+        }
+    ],

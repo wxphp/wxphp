@@ -124,12 +124,13 @@ PHP_METHOD(php_<?=$class_name?>, Disconnect)
             );
             #endif
 
-            native_object->Disconnect(
+            RETVAL_BOOL(native_object->Disconnect(
                 id0,
                 id1,
                 flag,
                 wxEventHandler(<?=$class_name?>_php::onEvent)
-            );
+            ));
+            return;
             break;
         case 2:
             #ifdef USE_WXPHP_DEBUG
@@ -144,11 +145,12 @@ PHP_METHOD(php_<?=$class_name?>, Disconnect)
             );
             #endif
 
-            native_object->Disconnect(
+            RETVAL_BOOL(native_object->Disconnect(
                 id0,
                 flag,
                 wxEventHandler(<?=$class_name?>_php::onEvent)
-            );
+            ));
+            return;
             break;
         case 1:
             #ifdef USE_WXPHP_DEBUG
@@ -161,10 +163,11 @@ PHP_METHOD(php_<?=$class_name?>, Disconnect)
             php_printf("Event type: %d\n", (int)flag);
             #endif
 
-            native_object->Disconnect(
+            RETVAL_BOOL(native_object->Disconnect(
                 flag,
                 wxEventHandler(<?=$class_name?>_php::onEvent)
-            );
+            ));
+            return;
             break;
         default:
             wxMessageBox(
