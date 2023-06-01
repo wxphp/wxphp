@@ -642,7 +642,7 @@ PHP_METHOD(php_wxApp, Yield)
     if (zend_parse_parameters_none() == FAILURE)
         return;
 
-    RETURN_BOOL(native_object->Yield())
+    RETURN_BOOL(native_object->Yield());
 }
 /* }}} */
 
