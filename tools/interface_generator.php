@@ -351,7 +351,7 @@ foreach($defIni as $class_name=>$class_methods)
 	
 	foreach($class_methods as $method_name=>$method_definitions)
 	{
-		if($method_name{0} != "_" || $method_name{1} == "_")
+		if($method_name[0] !== "_" || $method_name[1] === "_")
 		{
 			$method_name       = lcfirst($method_name);
 			$method_definition = combine_arrays($method_definitions);
@@ -389,13 +389,13 @@ foreach($defIni as $class_name=>$class_methods)
 							$argument_value = "null";
 						elseif($argument_value == "wxString()")
 							$argument_value = "''";
-						elseif($argument_value{0} == "(")
+						elseif($argument_value[0] === "(")
 							$argument_value = "null";
-						elseif($argument_value{0} == "_" && $argument_value{1} == "(")
+						elseif($argument_value[0] === "_" && $argument_value[1] === "(")
 							$argument_value = str_replace(array("_(", ")"), "", $argument_value);
-						elseif($argument_value{0} == "w" && $argument_value{1} == "x" && $argument_value{2} == "T" && $argument_value{3} == "(")
+						elseif($argument_value[0] === "w" && $argument_value[1] === "x" && $argument_value[2] === "T" && $argument_value[3] === "(")
 							$argument_value = str_replace(array("wxT(", ")"), "", $argument_value);
-						elseif($argument_value{0} == "w" && $argument_value{1} == "x" && "" . strstr($argument_value, "(") . "" != "")
+						elseif($argument_value[0] === "w" && $argument_value[1] === "x" && "" . strstr($argument_value, "(") . "" != "")
 							$argument_value = "null";
 						elseif(strpos($argument_value, "|") !== false)
 							$argument_value = "null";
@@ -1094,7 +1094,7 @@ function cleanup_constant_value($constant_value)
 		$constant_value = "'{$constant_value}'";
 	}
 	
-	if($constant_value{0} == "(" && substr($constant_value, -1) == ")")
+	if($constant_value[0] === "(" && substr($constant_value, -1) == ")")
 	{
 		$constant_value = substr($constant_value, 1, -1);
 	}

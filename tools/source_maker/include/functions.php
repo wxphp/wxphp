@@ -359,7 +359,7 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array(), $multiple_inher
 
     foreach($classDef as $funcName => $funcDef)
     {
-        if($funcName{0}=="_")
+        if($funcName[0] === "_")
             continue;
 
         if(($funcDef[0]["virtual"] && $funcDef[0]["protected"]) || $funcDef[0]["pure_virtual"] ||
@@ -621,7 +621,7 @@ function classes_method_merger(&$classes)
                 {
 
                     //Skip internal structures
-                    if($parent_class_method_name{0}=="_")
+                    if($parent_class_method_name[0] === "_")
                         continue;
 
                     //Skip constructros since they cannot be overloaded in C++
@@ -694,7 +694,7 @@ function remove_protected_methods(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements (inheritance) list
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //Remove protected methods from method_definitions
@@ -753,7 +753,7 @@ function remove_virtual_methods_overrides(&$classes)
             if(count($method_definitions) > 1)
             {
                 //Skip _implements (inheritance) list
-                if($method_name{0} == "_")
+                if($method_name[0] === "_")
                     continue;
 
                 //Not remove if all overrides are virtual
@@ -878,7 +878,7 @@ function remove_methods_duplicated_on_base_classes(&$classes)
             foreach($method_definitions as $method_name=>$method_definition)
             {
                 //Skip _implements
-                if($method_name{0} == "_")
+                if($method_name[0] === "_")
                     continue;
 
                 //Stores the amount of base classes that implement the method
@@ -926,7 +926,7 @@ function remove_methods_implementing_unknown_types(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //Skip wxEvtHandler
@@ -1166,7 +1166,7 @@ function remove_classes_and_methods_not_crossplatform(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements, _platforms (inheritance) list
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //Remove not crossplatform methods from method_definitions
@@ -1225,7 +1225,7 @@ function remove_deprecated_methods(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements (inheritance) list
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //Remove protected methods from method_definitions
@@ -1272,7 +1272,7 @@ function remove_methods_implementing_unhandled_arguments(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements, _platforms (inheritance) list
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //Remove methods implementing unhandled argument declarations from method_definitions

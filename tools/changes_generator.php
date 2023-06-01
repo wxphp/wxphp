@@ -47,7 +47,7 @@ for($i=0; $i<$lines_count; $i++)
 	$revision_data = array();
 	$reading_revision_message = false;
 	
-	if($changes[$i]{0} == "r")
+	if($changes[$i][0] === "r")
 	{
 		$reading_revision_message = true;	
 		$revision_data = explode("|", $changes[$i]);

@@ -50,7 +50,7 @@ function class_virtual_declarations($class_name, $class_methods)
                 "".strpos($method_name, "On")."" == "0"
             )
             {
-                if($method_name{0} != "_")
+                if($method_name[0] !== "_")
                 {
                     $virtual_methods .= $method_definition["return_type"] . " {$method_name}(";
 

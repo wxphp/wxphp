@@ -278,7 +278,7 @@ class myFrame extends wxFrame
 				}
 				
 				//Skip non methods like _implements
-				if($method_name{0}=="_")
+				if($method_name[0]=="_")
 					continue;
 				
 					
@@ -394,7 +394,7 @@ class myFrame extends wxFrame
 		$methods_count = 0;
 		foreach($cls[$selClass] as $method_name=>$method_definitions)
 		{
-			if($method_name{0} == "_")
+			if($method_name[0] == "_")
 				continue;
 				
 			foreach($method_definitions as $method_definition)

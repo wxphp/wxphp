@@ -93,7 +93,7 @@ if(file_exists("./../../json/classes.json"))
     //Unmark webview methods as pure virtual since they can be used
     foreach($defIni["wxWebView"] as $method_name=>$method_definitions)
     {
-        if($method_name{0} != "_")
+        if($method_name[0] !== "_")
         {
             foreach($defIni["wxWebView"][$method_name] as $method_index=>$method_data)
             {
@@ -322,7 +322,7 @@ foreach($defClassGroups as $file_name => $class_list)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements (inheritance) list
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //On the documentation the width and height seems to be optional but not on gtk :S
@@ -921,7 +921,7 @@ foreach($defIni as $className => $classDef)
     foreach($classDef as $fcName => $fc)
     {
         //Skip specification attributes like _pure_virtual, _implements, etc...
-        if($fcName{0}=="_")
+        if($fcName[0] === "_")
         {
             continue;
         }

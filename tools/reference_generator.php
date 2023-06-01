@@ -471,7 +471,7 @@ foreach($defIni as $class_name=>$class_methods)
 	$static_found = false;
 	foreach($class_methods as $method_name=>$method_definitions)
 	{
-		if($method_name{0} != "_" && !$method_definitions[0]["static"])
+		if($method_name[0] !== "_" && !$method_definitions[0]["static"])
 		{
 			$content .= "\t<li><a href=\"#$method_name\" target=\"content\">".php_method_name($method_name)."</a>";
 			if($method_definitions[0]["brief_description"])
@@ -497,7 +497,7 @@ foreach($defIni as $class_name=>$class_methods)
 		
 		foreach($class_methods as $method_name=>$method_definitions)
 		{
-			if($method_name{0} != "_" && $method_definitions[0]["static"])
+			if($method_name[0] !== "_" && $method_definitions[0]["static"])
 			{
 				$content .= "\t<li><a href=\"#$method_name\" target=\"content\">".php_method_name($method_name)."</a>";
 				if($method_definitions[0]["brief_description"])
@@ -517,7 +517,7 @@ foreach($defIni as $class_name=>$class_methods)
 	{
 		$content .= "<a name=\"$method_name\"></a>\n";
 		
-		if($method_name{0} != "_")
+		if($method_name[0] !== "_")
 		{
 			$content .= "<h3>".php_method_name($method_name)."</h3>\n";
 			$content .= "<ul>\n";
