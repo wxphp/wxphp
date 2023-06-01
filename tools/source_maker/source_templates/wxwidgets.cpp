@@ -101,7 +101,6 @@ int wxphp_call_method(zval *object_p, zend_class_entry *obj_ce, zend_function **
     fci.retval = retval_ptr ? retval_ptr : retval;
     fci.param_count = param_count;
     fci.params = *params;
-    fci.no_separation = 1;
 
     if (!fn_proxy && !obj_ce) {
         /* no interest in caching and no information already present that is
