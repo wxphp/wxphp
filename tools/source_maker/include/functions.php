@@ -347,7 +347,7 @@ function derivationsOfClass($class)
  *
  * @return array All function names
  */
-function funcsOfClass($classN, $ctor=0, &$output, $ar = array(), $multiple_inheritance = false)
+function funcsOfClass($classN, $ctor, &$output, $ar = array(), $multiple_inheritance = false)
 {
     global $defIni;
     $class_methods = "";
