@@ -750,7 +750,7 @@ function remove_virtual_methods_overrides(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Only remove virtual methods that override non virtual methods with the same name
-            if(count($method_definitions) > 1)
+            if(is_countable($method_definitions) && count($method_definitions) > 1)
             {
                 //Skip _implements (inheritance) list
                 if($method_name[0] === "_")
