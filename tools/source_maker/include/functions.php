@@ -1612,7 +1612,11 @@ function parameter_type($parameter_type, $is_array, $function_name, $class_name=
 {
     global $defIni, $defTypedef;
 
-    $cleaned_type = str_replace(array("const ", "&", "*"), "", $parameter_type);
+    $cleaned_type = "";
+
+    if ($parameter_type !== null) {
+        $cleaned_type = str_replace(array("const ", "&", "*"), "", $parameter_type);
+    }
 
     $parameter_modifier = type_modifier($parameter_type, $is_array);
 
@@ -1889,7 +1893,11 @@ function get_proto_php_type($type, $type_name, $function_name, $class_name=null)
     $declaration_modifier = "";
     $standard_type = parameter_type($type, false, $function_name, $class_name, $declaration_modifier, true);
 
-    $cleaned_type = str_replace(array("const ", "*", "&"), "", $type);
+    $cleaned_type = "";
+
+    if ($type !== null) {
+        $cleaned_type = str_replace(array("const ", "*", "&"), "", $type);
+    }
 
     $method_type = "";
 
