@@ -1721,25 +1721,29 @@ function type_modifier($type, $is_array=false)
 {
     $modifier = "";
 
-    if("".stristr($type, "const ")."" != "")
-    {
-        $modifier .= "const_";
-    }
+    if ($type !== null) {
+        if("".stristr($type, "const ")."" != "")
+        {
+            $modifier .= "const_";
+        }
 
-    if("".stristr($type, "**")."" != "")
-    {
-        $modifier .= "pointer_pointer";
-    }
-    elseif("".stristr($type, "*")."" != "")
-    {
-        $modifier .= "pointer";
-    }
-    elseif("".stristr($type, "&")."" != "")
-    {
-        $modifier .= "reference";
-    }
-    else
-    {
+        if("".stristr($type, "**")."" != "")
+        {
+            $modifier .= "pointer_pointer";
+        }
+        elseif("".stristr($type, "*")."" != "")
+        {
+            $modifier .= "pointer";
+        }
+        elseif("".stristr($type, "&")."" != "")
+        {
+            $modifier .= "reference";
+        }
+        else
+        {
+            $modifier .= "none";
+        }
+    } else {
         $modifier .= "none";
     }
 
