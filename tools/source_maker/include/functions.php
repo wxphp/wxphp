@@ -1792,7 +1792,9 @@ function function_arguments_string($function_definition, $default_argument=true)
             $arguments .= "[]";
         }
 
-        if(strlen($function_definition["parameters_default_value"][$parameter_index]) > 0 && $default_argument)
+        if(is_string($function_definition["parameters_default_value"][$parameter_index])
+            && $function_definition["parameters_default_value"][$parameter_index] !== ""
+            && $default_argument)
         {
             $arguments .= "=" . $function_definition["parameters_default_value"][$parameter_index];
         }
