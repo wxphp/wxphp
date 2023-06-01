@@ -45,15 +45,13 @@ zval * wxphp_sprintf(INTERNAL_FUNCTION_PARAMETERS, int offset = 0)
     ZVAL_STRINGL(&funcName, "sprintf", sizeof("sprintf") - 1);
 
     if (
-        call_user_function_ex(
+        call_user_function(
             EG(function_table),
             NULL,
             &funcName,
             string,
             argc - offset,
-            argv + offset,
-            0,
-            NULL
+            argv + offset
         ) == SUCCESS
     )
     {
