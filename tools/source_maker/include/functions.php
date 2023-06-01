@@ -1336,68 +1336,77 @@ function remove_old_src_and_headers()
     //Remove unneeded cpp files
     $src_dir = opendir("./../../src");
 
-    while (false !== ($current_file = readdir($src_dir)))
-    {
-        if("".strpos($current_file, ".cpp")."" != "")
+    if ($src_dir !== false) {
+        while (false !== ($current_file = readdir($src_dir)))
         {
-            $valid_src = false;
-            foreach($defClassGroups as $file_name => $class_list)
+            if("".strpos($current_file, ".cpp")."" != "")
             {
-                //Strip group_class_
-                $file_name = str_replace("group_class_", "", $file_name) . ".cpp";
-
-                if($file_name == $current_file)
+                $valid_src = false;
+                foreach($defClassGroups as $file_name => $class_list)
                 {
-                    $valid_src = true;
-                    break;
+                    //Strip group_class_
+                    $file_name = str_replace("group_class_", "", $file_name) . ".cpp";
+
+                    if($file_name == $current_file)
+                    {
+                        $valid_src = true;
+                        break;
+                    }
                 }
-            }
 
-            if(!$valid_src)
-            {
-                if(!file_exists("source_templates/$current_file"))
+                if(!$valid_src)
                 {
-                    print "Removing: " . $current_file . "\n";
-                    unlink("./../../src/$current_file");
+                    if(!file_exists("source_templates/$current_file"))
+                    {
+                        print "Removing: " . $current_file . "\n";
+                        unlink("./../../src/$current_file");
+                    }
                 }
             }
         }
+
+        closedir($src_dir);
+    } else {
+        exit("----\nsrc directory missing\n----\n");
     }
 
-    closedir($src_dir);
 
     //Remove unneeded h files
     $include_dir = opendir("./../../includes");
 
-    while (false !== ($current_file = readdir($include_dir)))
-    {
-        if("".strpos($current_file, ".h")."" != "")
+    if ($include_dir !== false) {
+        while (false !== ($current_file = readdir($include_dir)))
         {
-            $valid_include = false;
-            foreach($defClassGroups as $file_name => $class_list)
+            if("".strpos($current_file, ".h")."" != "")
             {
-                //Strip group_class_
-                $file_name = str_replace("group_class_", "", $file_name) . ".h";
-
-                if($file_name == $current_file)
+                $valid_include = false;
+                foreach($defClassGroups as $file_name => $class_list)
                 {
-                    $valid_include = true;
-                    break;
+                    //Strip group_class_
+                    $file_name = str_replace("group_class_", "", $file_name) . ".h";
+
+                    if($file_name == $current_file)
+                    {
+                        $valid_include = true;
+                        break;
+                    }
                 }
-            }
 
-            if(!$valid_include)
-            {
-                if(!file_exists("source_templates/$current_file"))
+                if(!$valid_include)
                 {
-                    print "Removing: " . $current_file . "\n";
-                    unlink("./../../includes/$current_file");
+                    if(!file_exists("source_templates/$current_file"))
+                    {
+                        print "Removing: " . $current_file . "\n";
+                        unlink("./../../includes/$current_file");
+                    }
                 }
             }
         }
-    }
 
-    closedir($include_dir);
+        closedir($include_dir);
+    } else {
+        exit("----\nincludes directory missing\n----\n");
+    }
 }
 
 /**
