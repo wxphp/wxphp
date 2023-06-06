@@ -15,6 +15,7 @@
 #define WXPHP_APP_H_GUARD
 
 #include "object_types.h"
+#include "arginfo_void.h"
 
 extern zend_class_entry *php_wxApp_entry;
 extern zend_object_handlers wxphp_wxApp_object_handlers;

@@ -432,7 +432,8 @@ foreach($defClassGroups as $file_name => $class_list)
 		. "#ifndef WXPHP_".strtoupper($file_name)."_H_GUARD\n"
 		. "#define WXPHP_".strtoupper($file_name)."_H_GUARD\n\n"
 		. "#include \"references.h\"\n"
-		. "#include \"object_types.h\"\n\n"
+		. "#include \"object_types.h\"\n"
+		. "#include \"arginfo_void.h\"\n\n"
 		. "ZEND_BEGIN_ARG_INFO_EX(wxphp_{$file_name}_get_args, 0, 0, 1)\n"
 		. tabs(1) . "ZEND_ARG_INFO(0, name)\n"
 		. "ZEND_END_ARG_INFO()\n\n"
@@ -461,6 +462,20 @@ foreach($defClassGroups as $file_name => $class_list)
 	);
 
 } //Ends foreach($defClassGroups as $file_name => $class_list)
+
+
+// Generate arginfo_void.h code
+$arginfo_void_h_source = "";
+echo "Generating arginfo_void.h\n";
+ob_start();
+    include("source_templates/arginfo_void.h");
+    $arginfo_void_h_source .= ob_get_contents();
+ob_end_clean();
+
+file_put_contents_if_different(
+	"./../../includes/arginfo_void.h",
+	$arginfo_void_h_source
+);
 
 
 //Generate functions.h prototypes and functions.cpp code

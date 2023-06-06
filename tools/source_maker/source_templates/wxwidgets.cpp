@@ -16,6 +16,7 @@
 #include "php_wxwidgets.h"
 #include "app.h"
 #include "functions.h"
+#include "arginfo_void.h"
 
 #ifdef __WXMSW__
 #include <wx/msw/private.h>
