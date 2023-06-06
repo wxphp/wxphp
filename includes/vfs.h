@@ -15,6 +15,7 @@
 
 #include "references.h"
 #include "object_types.h"
+#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_vfs_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -49,17 +50,17 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileSystem_functions[] = {
-    PHP_ME(php_wxFileSystem, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxFileSystem, URLToFileName, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystem, OpenFile, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystem, HasHandlerForPath, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystem, GetPath, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystem, FindNext, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystem, FindFirst, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystem, FindFileInPath, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystem, FileNameToURL, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystem, ChangePathTo, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystem, AddHandler, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystem, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxFileSystem, URLToFileName, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystem, OpenFile, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystem, HasHandlerForPath, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystem, GetPath, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystem, FindNext, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystem, FindFirst, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystem, FindFileInPath, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystem, FileNameToURL, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystem, ChangePathTo, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystem, AddHandler, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -104,10 +105,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileSystemHandler_functions[] = {
-    PHP_ME(php_wxFileSystemHandler, FindFirst, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystemHandler, FindNext, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystemHandler, GetMimeTypeFromExt, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileSystemHandler, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxFileSystemHandler, FindFirst, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystemHandler, FindNext, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystemHandler, GetMimeTypeFromExt, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileSystemHandler, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif

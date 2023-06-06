@@ -15,6 +15,7 @@
 
 #include "references.h"
 #include "object_types.h"
+#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_docview_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -49,19 +50,19 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileHistory_functions[] = {
-    PHP_ME(php_wxFileHistory, AddFileToHistory, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, AddFilesToMenu, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, GetBaseId, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, GetCount, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, GetHistoryFile, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, GetMaxFiles, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, Load, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, RemoveFileFromHistory, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, RemoveMenu, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, Save, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, SetBaseId, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, UseMenu, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileHistory, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxFileHistory, AddFileToHistory, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, AddFilesToMenu, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, GetBaseId, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, GetCount, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, GetHistoryFile, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, GetMaxFiles, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, Load, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, RemoveFileFromHistory, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, RemoveMenu, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, Save, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, SetBaseId, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, UseMenu, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileHistory, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif

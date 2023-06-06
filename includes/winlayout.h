@@ -15,6 +15,7 @@
 
 #include "references.h"
 #include "object_types.h"
+#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_winlayout_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -50,11 +51,11 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGBPosition_functions[] = {
-    PHP_ME(php_wxGBPosition, GetCol, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBPosition, GetRow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBPosition, SetCol, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBPosition, SetRow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBPosition, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxGBPosition, GetCol, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBPosition, GetRow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBPosition, SetCol, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBPosition, SetRow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBPosition, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -97,22 +98,22 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridBagSizer_functions[] = {
-    PHP_ME(php_wxGridBagSizer, Add, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, CheckForIntersection, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, FindItem, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, FindItemAtPoint, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, FindItemAtPosition, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, FindItemWithData, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, GetCellSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, GetEmptyCellSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, GetItemPosition, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, GetItemSpan, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, SetEmptyCellSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, SetItemPosition, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, SetItemSpan, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridBagSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxGridBagSizer, Add, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, CalcMin, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, CheckForIntersection, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, FindItem, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, FindItemAtPoint, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, FindItemAtPosition, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, FindItemWithData, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, GetCellSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, GetEmptyCellSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, GetItemPosition, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, GetItemSpan, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, RecalcSizes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, SetEmptyCellSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, SetItemPosition, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, SetItemSpan, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridBagSizer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -157,15 +158,15 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGBSizerItem_functions[] = {
-    PHP_ME(php_wxGBSizerItem, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxGBSizerItem, SetSpan, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBSizerItem, SetPos, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBSizerItem, SetGBSizer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBSizerItem, Intersects, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBSizerItem, GetSpan, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBSizerItem, GetPos, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBSizerItem, GetGBSizer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBSizerItem, GetEndPos, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxGBSizerItem, SetSpan, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, SetPos, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, SetGBSizer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, Intersects, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, GetSpan, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, GetPos, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, GetGBSizer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSizerItem, GetEndPos, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -209,11 +210,11 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGBSpan_functions[] = {
-    PHP_ME(php_wxGBSpan, GetColspan, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBSpan, GetRowspan, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBSpan, SetColspan, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBSpan, SetRowspan, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGBSpan, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxGBSpan, GetColspan, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSpan, GetRowspan, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSpan, SetColspan, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSpan, SetRowspan, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGBSpan, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -256,10 +257,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLayoutAlgorithm_functions[] = {
-    PHP_ME(php_wxLayoutAlgorithm, LayoutFrame, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxLayoutAlgorithm, LayoutMDIFrame, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxLayoutAlgorithm, LayoutWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxLayoutAlgorithm, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxLayoutAlgorithm, LayoutFrame, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxLayoutAlgorithm, LayoutMDIFrame, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxLayoutAlgorithm, LayoutWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxLayoutAlgorithm, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -304,41 +305,41 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSizer_functions[] = {
-    PHP_ME(php_wxSizer, Show, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxSizer, SetSizeHints, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, SetMinSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, SetItemMinSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, SetDimension, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, Replace, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, Remove, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, PrependStretchSpacer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, PrependSpacer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, Prepend, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, Layout, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, IsShown, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, IsEmpty, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, InsertStretchSpacer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, InsertSpacer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, Insert, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, InformFirstDirection, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, Hide, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, GetSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, GetPosition, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, GetMinSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, GetItemCount, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, FitInside, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, Fit, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, Detach, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, ComputeFittingWindowSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, ComputeFittingClientSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, Add, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, AddSpacer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, AddStretchSpacer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, Clear, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, GetContainingWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, GetItem, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizer, GetItemById, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Show, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxSizer, SetSizeHints, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, SetMinSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, SetItemMinSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, SetDimension, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Replace, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Remove, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, PrependStretchSpacer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, PrependSpacer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Prepend, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Layout, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, IsShown, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, IsEmpty, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, InsertStretchSpacer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, InsertSpacer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Insert, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, InformFirstDirection, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Hide, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetPosition, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetMinSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetItemCount, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, FitInside, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Fit, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Detach, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, ComputeFittingWindowSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, ComputeFittingClientSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Add, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, AddSpacer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, AddStretchSpacer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, Clear, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetContainingWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetItem, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizer, GetItemById, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -381,14 +382,14 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStdDialogButtonSizer_functions[] = {
-    PHP_ME(php_wxStdDialogButtonSizer, AddButton, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStdDialogButtonSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStdDialogButtonSizer, Realize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStdDialogButtonSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStdDialogButtonSizer, SetAffirmativeButton, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStdDialogButtonSizer, SetCancelButton, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStdDialogButtonSizer, SetNegativeButton, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStdDialogButtonSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxStdDialogButtonSizer, AddButton, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, CalcMin, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, Realize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, RecalcSizes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, SetAffirmativeButton, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, SetCancelButton, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, SetNegativeButton, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStdDialogButtonSizer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -435,40 +436,40 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSizerItem_functions[] = {
-    PHP_ME(php_wxSizerItem, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxSizerItem, Show, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, SetUserData, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, SetRatio, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, SetProportion, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, SetMinSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, SetInitSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, SetId, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, SetFlag, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, SetDimension, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, SetBorder, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, IsWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, IsSpacer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, IsSizer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, IsShown, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, AssignSizer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, AssignSpacer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, AssignWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, CalcMin, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, DeleteWindows, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, DetachSizer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetBorder, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetFlag, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetId, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetMinSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetPosition, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetProportion, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetRatio, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetRect, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetSizer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetSpacer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetUserData, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerItem, GetWindow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxSizerItem, Show, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetUserData, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetRatio, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetProportion, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetMinSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetInitSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetId, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetFlag, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetDimension, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, SetBorder, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, IsWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, IsSpacer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, IsSizer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, IsShown, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, AssignSizer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, AssignSpacer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, AssignWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, CalcMin, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, DeleteWindows, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, DetachSizer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetBorder, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetFlag, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetId, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetMinSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetPosition, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetProportion, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetRatio, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetRect, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetSizer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetSpacer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetUserData, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerItem, GetWindow, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -511,24 +512,24 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSizerFlags_functions[] = {
-    PHP_ME(php_wxSizerFlags, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxSizerFlags, TripleBorder, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, Top, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, Shaped, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, Right, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, ReserveSpaceEvenIfHidden, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, Proportion, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, Left, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, GetDefaultBorder, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, FixedMinSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, Expand, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, DoubleHorzBorder, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, DoubleBorder, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, Centre, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, Center, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, Bottom, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, Border, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSizerFlags, Align, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxSizerFlags, TripleBorder, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Top, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Shaped, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Right, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, ReserveSpaceEvenIfHidden, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Proportion, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Left, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, GetDefaultBorder, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, FixedMinSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Expand, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, DoubleHorzBorder, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, DoubleBorder, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Centre, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Center, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Bottom, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Border, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSizerFlags, Align, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -574,19 +575,19 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFlexGridSizer_functions[] = {
-    PHP_ME(php_wxFlexGridSizer, AddGrowableCol, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, AddGrowableRow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, GetFlexibleDirection, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, GetNonFlexibleGrowMode, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, IsColGrowable, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, IsRowGrowable, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, RemoveGrowableCol, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, RemoveGrowableRow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, SetFlexibleDirection, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, SetNonFlexibleGrowMode, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFlexGridSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxFlexGridSizer, AddGrowableCol, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, AddGrowableRow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, CalcMin, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, GetFlexibleDirection, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, GetNonFlexibleGrowMode, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, IsColGrowable, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, IsRowGrowable, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, RecalcSizes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, RemoveGrowableCol, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, RemoveGrowableRow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, SetFlexibleDirection, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, SetNonFlexibleGrowMode, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFlexGridSizer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -632,19 +633,19 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridSizer_functions[] = {
-    PHP_ME(php_wxGridSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, GetCols, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, GetEffectiveColsCount, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, GetEffectiveRowsCount, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, GetHGap, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, GetRows, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, GetVGap, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, SetCols, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, SetHGap, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, SetRows, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, SetVGap, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGridSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxGridSizer, CalcMin, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetCols, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetEffectiveColsCount, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetEffectiveRowsCount, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetHGap, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetRows, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, GetVGap, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, RecalcSizes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, SetCols, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, SetHGap, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, SetRows, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, SetVGap, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGridSizer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -688,10 +689,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStaticBoxSizer_functions[] = {
-    PHP_ME(php_wxStaticBoxSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStaticBoxSizer, GetStaticBox, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStaticBoxSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStaticBoxSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxStaticBoxSizer, CalcMin, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStaticBoxSizer, GetStaticBox, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStaticBoxSizer, RecalcSizes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStaticBoxSizer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -734,11 +735,11 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBoxSizer_functions[] = {
-    PHP_ME(php_wxBoxSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxBoxSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxBoxSizer, GetOrientation, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxBoxSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxBoxSizer, AddSpacer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxBoxSizer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxBoxSizer, RecalcSizes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxBoxSizer, GetOrientation, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxBoxSizer, CalcMin, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxBoxSizer, AddSpacer, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -782,10 +783,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWrapSizer_functions[] = {
-    PHP_ME(php_wxWrapSizer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxWrapSizer, RecalcSizes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxWrapSizer, InformFirstDirection, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxWrapSizer, CalcMin, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxWrapSizer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxWrapSizer, RecalcSizes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxWrapSizer, InformFirstDirection, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxWrapSizer, CalcMin, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif

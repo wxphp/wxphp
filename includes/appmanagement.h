@@ -15,6 +15,7 @@
 
 #include "references.h"
 #include "object_types.h"
+#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_appmanagement_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -54,18 +55,18 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxEventLoopBase_functions[] = {
-    PHP_ME(php_wxEventLoopBase, GetActive, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxEventLoopBase, IsEventAllowedInsideYield, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxEventLoopBase, IsMain, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxEventLoopBase, IsOk, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxEventLoopBase, IsRunning, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxEventLoopBase, IsYielding, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxEventLoopBase, ProcessIdle, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxEventLoopBase, ExitMethod, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxEventLoopBase, SetActive, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxEventLoopBase, WakeUpIdle, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxEventLoopBase, YieldMethod, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxEventLoopBase, YieldFor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, GetActive, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, IsEventAllowedInsideYield, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, IsMain, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, IsOk, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, IsRunning, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, IsYielding, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, ProcessIdle, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, ExitMethod, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, SetActive, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, WakeUpIdle, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, YieldMethod, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxEventLoopBase, YieldFor, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -108,7 +109,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxEventLoopActivator_functions[] = {
-    PHP_ME(php_wxEventLoopActivator, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxEventLoopActivator, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -153,7 +154,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxModule_functions[] = {
-    PHP_ME(php_wxModule, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxModule, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -198,20 +199,20 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxProcess_functions[] = {
-    PHP_ME(php_wxProcess, CloseOutput, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, Detach, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, Exists, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, GetErrorStream, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, GetInputStream, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, GetOutputStream, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, GetPid, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, IsErrorAvailable, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, IsInputOpened, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, Kill, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, IsInputAvailable, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, Redirect, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, Open, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxProcess, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxProcess, CloseOutput, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, Detach, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, Exists, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, GetErrorStream, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, GetInputStream, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, GetOutputStream, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, GetPid, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, IsErrorAvailable, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, IsInputOpened, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, Kill, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, IsInputAvailable, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, Redirect, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, Open, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxProcess, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -255,10 +256,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSingleInstanceChecker_functions[] = {
-    PHP_ME(php_wxSingleInstanceChecker, Create, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSingleInstanceChecker, CreateDefault, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSingleInstanceChecker, IsAnotherRunning, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSingleInstanceChecker, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxSingleInstanceChecker, Create, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSingleInstanceChecker, CreateDefault, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSingleInstanceChecker, IsAnotherRunning, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSingleInstanceChecker, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif

@@ -15,6 +15,7 @@
 
 #include "references.h"
 #include "object_types.h"
+#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_html_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -92,9 +93,9 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlRenderingInfo_functions[] = {
-    PHP_ME(php_wxHtmlRenderingInfo, GetStyle, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlRenderingInfo, SetStyle, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlRenderingInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlRenderingInfo, GetStyle, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlRenderingInfo, SetStyle, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlRenderingInfo, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -137,24 +138,24 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlCell_functions[] = {
-    PHP_ME(php_wxHtmlCell, GetDescent, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, GetFirstChild, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, GetHeight, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, GetId, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, GetLink, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, GetNext, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, GetParent, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, GetPosX, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, GetPosY, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, GetWidth, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, Layout, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, SetId, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, SetLink, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, SetNext, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, SetParent, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, SetPos, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCell, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxHtmlCell, Find, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, GetDescent, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, GetFirstChild, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, GetHeight, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, GetId, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, GetLink, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, GetNext, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, GetParent, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, GetPosX, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, GetPosY, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, GetWidth, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, Layout, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, SetId, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, SetLink, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, SetNext, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, SetParent, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, SetPos, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCell, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlCell, Find, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -197,21 +198,21 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlContainerCell_functions[] = {
-    PHP_ME(php_wxHtmlContainerCell, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxHtmlContainerCell, SetWidthFloat, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, SetMinHeight, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, SetIndent, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, SetBorder, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, SetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, SetAlignVer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, SetAlignHor, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, SetAlign, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, InsertCell, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, GetIndentUnits, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, GetIndent, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, GetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, GetAlignVer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlContainerCell, GetAlignHor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlContainerCell, SetWidthFloat, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, SetMinHeight, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, SetIndent, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, SetBorder, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, SetBackgroundColour, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, SetAlignVer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, SetAlignHor, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, SetAlign, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, InsertCell, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, GetIndentUnits, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, GetIndent, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, GetBackgroundColour, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, GetAlignVer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlContainerCell, GetAlignHor, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -255,11 +256,11 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlLinkInfo_functions[] = {
-    PHP_ME(php_wxHtmlLinkInfo, GetEvent, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlLinkInfo, GetHref, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlLinkInfo, GetHtmlCell, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlLinkInfo, GetTarget, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlLinkInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlLinkInfo, GetEvent, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlLinkInfo, GetHref, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlLinkInfo, GetHtmlCell, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlLinkInfo, GetTarget, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlLinkInfo, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -302,7 +303,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlColourCell_functions[] = {
-    PHP_ME(php_wxHtmlColourCell, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlColourCell, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -345,7 +346,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlWidgetCell_functions[] = {
-    PHP_ME(php_wxHtmlWidgetCell, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlWidgetCell, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -390,7 +391,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlFilter_functions[] = {
-    PHP_ME(php_wxHtmlFilter, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlFilter, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -447,7 +448,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlTagHandler_functions[] = {
-    PHP_ME(php_wxHtmlTagHandler, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlTagHandler, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_ME(php_wxHtmlTagHandler, __get, wxphp_html_get_args, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
@@ -490,15 +491,15 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlTag_functions[] = {
-    PHP_ME(php_wxHtmlTag, GetAllParams, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlTag, GetName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlTag, GetParam, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlTag, GetParamAsColour, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlTag, HasEnding, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlTag, HasParam, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlTag, ParseAsColour, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlTag, ScanParam, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlTag, GetParamAsInt, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlTag, GetAllParams, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlTag, GetName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlTag, GetParam, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlTag, GetParamAsColour, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlTag, HasEnding, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlTag, HasParam, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlTag, ParseAsColour, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlTag, ScanParam, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlTag, GetParamAsInt, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -547,33 +548,33 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlWindow_functions[] = {
-    PHP_ME(php_wxHtmlWindow, AppendToPage, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, GetOpenedAnchor, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, GetOpenedPage, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, GetOpenedPageTitle, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, GetRelatedFrame, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, HistoryBack, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, HistoryCanBack, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, HistoryCanForward, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, HistoryClear, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, HistoryForward, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, LoadPage, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, LoadFile, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, SelectAll, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, SelectLine, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, SelectWord, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, SelectionToText, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, SetBorders, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, SetPage, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, SetRelatedFrame, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, SetRelatedStatusBar, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, SetStandardFonts, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, ToText, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, WriteCustomization, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxHtmlWindow, GetInternalRepresentation, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, AddFilter, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWindow, SetFonts, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, AppendToPage, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, GetOpenedAnchor, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, GetOpenedPage, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, GetOpenedPageTitle, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, GetRelatedFrame, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, HistoryBack, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, HistoryCanBack, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, HistoryCanForward, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, HistoryClear, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, HistoryForward, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, LoadPage, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, LoadFile, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, SelectAll, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, SelectLine, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, SelectWord, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, SelectionToText, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, SetBorders, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, SetPage, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, SetRelatedFrame, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, SetRelatedStatusBar, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, SetStandardFonts, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, ToText, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, WriteCustomization, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlWindow, GetInternalRepresentation, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, AddFilter, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWindow, SetFonts, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -616,8 +617,8 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlLinkEvent_functions[] = {
-    PHP_ME(php_wxHtmlLinkEvent, GetLinkInfo, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlLinkEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlLinkEvent, GetLinkInfo, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlLinkEvent, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -660,11 +661,11 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlCellEvent_functions[] = {
-    PHP_ME(php_wxHtmlCellEvent, GetCell, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCellEvent, GetLinkClicked, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCellEvent, GetPoint, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCellEvent, SetLinkClicked, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlCellEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlCellEvent, GetCell, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCellEvent, GetLinkClicked, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCellEvent, GetPoint, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCellEvent, SetLinkClicked, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlCellEvent, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -707,14 +708,14 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlDCRenderer_functions[] = {
-    PHP_ME(php_wxHtmlDCRenderer, GetTotalHeight, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlDCRenderer, GetTotalWidth, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlDCRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxHtmlDCRenderer, SetStandardFonts, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlDCRenderer, SetSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlDCRenderer, SetHtmlText, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlDCRenderer, SetFonts, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlDCRenderer, SetDC, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlDCRenderer, GetTotalHeight, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlDCRenderer, GetTotalWidth, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlDCRenderer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlDCRenderer, SetStandardFonts, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlDCRenderer, SetSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlDCRenderer, SetHtmlText, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlDCRenderer, SetFonts, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlDCRenderer, SetDC, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -757,22 +758,22 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlEasyPrinting_functions[] = {
-    PHP_ME(php_wxHtmlEasyPrinting, GetName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, GetPageSetupData, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, GetParentWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, GetPrintData, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, PageSetup, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, PreviewFile, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, PreviewText, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, PrintFile, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, PrintText, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, SetFooter, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, SetHeader, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxHtmlEasyPrinting, SetStandardFonts, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, SetParentWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, SetName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlEasyPrinting, SetFonts, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, GetName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, GetPageSetupData, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, GetParentWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, GetPrintData, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, PageSetup, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, PreviewFile, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, PreviewText, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, PrintFile, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, PrintText, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, SetFooter, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, SetHeader, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlEasyPrinting, SetStandardFonts, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, SetParentWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, SetName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlEasyPrinting, SetFonts, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -815,14 +816,14 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlPrintout_functions[] = {
-    PHP_ME(php_wxHtmlPrintout, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxHtmlPrintout, SetMargins, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlPrintout, SetHtmlText, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlPrintout, SetHtmlFile, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlPrintout, SetHeader, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlPrintout, SetFooter, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlPrintout, SetFonts, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlPrintout, AddFilter, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlPrintout, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxHtmlPrintout, SetMargins, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlPrintout, SetHtmlText, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlPrintout, SetHtmlFile, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlPrintout, SetHeader, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlPrintout, SetFooter, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlPrintout, SetFonts, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlPrintout, AddFilter, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -864,7 +865,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlTagsModule_functions[] = {
-    PHP_ME(php_wxHtmlTagsModule, FillHandlersTable, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlTagsModule, FillHandlersTable, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -959,37 +960,37 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlWinParser_functions[] = {
-    PHP_ME(php_wxHtmlWinParser, AddModule, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, CloseContainer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, CreateCurrentFont, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetActualColor, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetAlign, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetCharHeight, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetCharWidth, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetContainer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetDC, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetFontBold, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetFontFace, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetFontFixed, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetFontItalic, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetFontSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetFontUnderlined, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetLink, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, GetLinkColor, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetActualColor, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetAlign, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetContainer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetDC, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, OpenContainer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetFontBold, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetFontFace, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetFontFixed, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetFontItalic, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetFontSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetFontUnderlined, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetFonts, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetLink, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxHtmlWinParser, SetLinkColor, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, AddModule, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, CloseContainer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, CreateCurrentFont, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetActualColor, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetAlign, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetCharHeight, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetCharWidth, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetContainer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetDC, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetFontBold, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetFontFace, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetFontFixed, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetFontItalic, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetFontSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetFontUnderlined, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetLink, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, GetLinkColor, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetActualColor, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetAlign, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetContainer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetDC, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, OpenContainer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetFontBold, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetFontFace, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetFontFixed, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetFontItalic, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetFontSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetFontUnderlined, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetFonts, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetLink, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxHtmlWinParser, SetLinkColor, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif

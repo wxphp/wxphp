@@ -15,6 +15,7 @@
 
 #include "references.h"
 #include "object_types.h"
+#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_streams_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -48,12 +49,12 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataOutputStream_functions[] = {
-    PHP_ME(php_wxDataOutputStream, BigEndianOrdered, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataOutputStream, Write16, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataOutputStream, Write32, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataOutputStream, Write8, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataOutputStream, WriteDouble, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataOutputStream, WriteString, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataOutputStream, BigEndianOrdered, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataOutputStream, Write16, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataOutputStream, Write32, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataOutputStream, Write8, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataOutputStream, WriteDouble, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataOutputStream, WriteString, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -95,12 +96,12 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataInputStream_functions[] = {
-    PHP_ME(php_wxDataInputStream, ReadString, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataInputStream, ReadDouble, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataInputStream, Read8, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataInputStream, Read32, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataInputStream, Read16, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataInputStream, BigEndianOrdered, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataInputStream, ReadString, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataInputStream, ReadDouble, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataInputStream, Read8, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataInputStream, Read32, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataInputStream, Read16, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataInputStream, BigEndianOrdered, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -145,13 +146,13 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStreamBase_functions[] = {
-    PHP_ME(php_wxStreamBase, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, IsSeekable, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, IsOk, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, GetSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, GetLength, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, GetLastError, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxStreamBase, Reset, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, IsSeekable, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, IsOk, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, GetSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, GetLength, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, GetLastError, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -194,13 +195,13 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxOutputStream_functions[] = {
-    PHP_ME(php_wxOutputStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxOutputStream, Write, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, TellO, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, SeekO, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, PutC, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, Close, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, LastWrite, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxOutputStream, Write, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, TellO, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, SeekO, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, PutC, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, Close, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, LastWrite, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -244,16 +245,16 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxInputStream_functions[] = {
-    PHP_ME(php_wxInputStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxInputStream, Ungetch, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, TellI, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, SeekI, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, Read, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, Peek, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, LastRead, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, GetC, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, Eof, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, CanRead, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxInputStream, Ungetch, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, TellI, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, SeekI, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, Read, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, Peek, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, LastRead, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, GetC, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, Eof, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, CanRead, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -297,8 +298,8 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFFileOutputStream_functions[] = {
-    PHP_ME(php_wxFFileOutputStream, IsOk, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFFileOutputStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxFFileOutputStream, IsOk, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFFileOutputStream, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -343,8 +344,8 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileOutputStream_functions[] = {
-    PHP_ME(php_wxFileOutputStream, IsOk, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileOutputStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxFileOutputStream, IsOk, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileOutputStream, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -389,8 +390,8 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileInputStream_functions[] = {
-    PHP_ME(php_wxFileInputStream, IsOk, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileInputStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxFileInputStream, IsOk, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileInputStream, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -434,8 +435,8 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFFileInputStream_functions[] = {
-    PHP_ME(php_wxFFileInputStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxFFileInputStream, IsOk, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFFileInputStream, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxFFileInputStream, IsOk, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -478,28 +479,28 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFFileStream_functions[] = {
-    PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, IsSeekable, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, GetSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, GetLength, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, GetLastError, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, Ungetch, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, TellI, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, SeekI, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, Read, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, Peek, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, LastRead, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, GetC, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, Eof, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, CanRead, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, Write, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, TellO, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, SeekO, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, PutC, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, Close, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, LastWrite, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFFileStream, IsOk, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFFileStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxStreamBase, Reset, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, IsSeekable, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, GetSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, GetLength, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, GetLastError, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, Ungetch, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, TellI, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, SeekI, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, Read, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, Peek, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, LastRead, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, GetC, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, Eof, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, CanRead, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, Write, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, TellO, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, SeekO, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, PutC, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, Close, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, LastWrite, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFFileStream, IsOk, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFFileStream, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -542,28 +543,28 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileStream_functions[] = {
-    PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, IsSeekable, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, GetSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, GetLength, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxStreamBase, GetLastError, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, Write, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, TellO, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, SeekO, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, PutC, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, Close, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxOutputStream, LastWrite, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, Ungetch, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, TellI, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, SeekI, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, Read, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, Peek, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, LastRead, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, GetC, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, Eof, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxInputStream, CanRead, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileStream, IsOk, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxStreamBase, Reset, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, IsSeekable, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, GetSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, GetLength, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxStreamBase, GetLastError, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, Write, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, TellO, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, SeekO, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, PutC, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, Close, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxOutputStream, LastWrite, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, Ungetch, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, TellI, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, SeekI, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, Read, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, Peek, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, LastRead, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, GetC, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, Eof, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxInputStream, CanRead, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileStream, IsOk, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileStream, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif

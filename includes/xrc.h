@@ -15,6 +15,7 @@
 
 #include "references.h"
 #include "object_types.h"
+#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_xrc_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -51,9 +52,9 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlResourceHandler_functions[] = {
-    PHP_ME(php_wxXmlResourceHandler, CreateResource, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResourceHandler, SetParentResource, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResourceHandler, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxXmlResourceHandler, CreateResource, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResourceHandler, SetParentResource, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResourceHandler, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -98,36 +99,36 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlResource_functions[] = {
-    PHP_ME(php_wxXmlResource, AddHandler, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, AttachUnknownControl, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, ClearHandlers, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, CompareVersion, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, FindXRCIDById, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, Get, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, GetDomain, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, GetFlags, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, GetResourceNode, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, GetVersion, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, GetXRCID, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, InitAllHandlers, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, Load, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadAllFiles, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadBitmap, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadDialog, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadFile, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadFrame, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadIcon, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadMenu, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadMenuBar, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadObject, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadObjectRecursively, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadPanel, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, LoadToolBar, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, Set, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, SetDomain, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, SetFlags, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, Unload, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxXmlResource, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxXmlResource, AddHandler, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, AttachUnknownControl, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, ClearHandlers, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, CompareVersion, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, FindXRCIDById, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, Get, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, GetDomain, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, GetFlags, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, GetResourceNode, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, GetVersion, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, GetXRCID, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, InitAllHandlers, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, Load, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadAllFiles, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadBitmap, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadDialog, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadFile, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadFrame, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadIcon, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadMenu, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadMenuBar, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadObject, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadObjectRecursively, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadPanel, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, LoadToolBar, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, Set, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, SetDomain, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, SetFlags, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, Unload, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxXmlResource, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif

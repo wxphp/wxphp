@@ -15,6 +15,7 @@
 
 #include "references.h"
 #include "object_types.h"
+#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_net_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -51,30 +52,30 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxURI_functions[] = {
-    PHP_ME(php_wxURI, BuildURI, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, BuildUnescapedURI, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, Create, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, GetFragment, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, GetHostType, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, GetPassword, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, GetPath, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, GetPort, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxURI, Unescape, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, Resolve, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, IsReference, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, HasUserInfo, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, HasServer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, HasScheme, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, HasQuery, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, HasPort, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, HasPath, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, HasFragment, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, GetUserInfo, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, GetUser, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, GetServer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, GetScheme, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURI, GetQuery, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, BuildURI, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, BuildUnescapedURI, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, Create, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, GetFragment, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, GetHostType, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, GetPassword, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, GetPath, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, GetPort, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxURI, Unescape, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, Resolve, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, IsReference, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, HasUserInfo, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, HasServer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, HasScheme, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, HasQuery, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, HasPort, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, HasPath, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, HasFragment, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, GetUserInfo, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, GetUser, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, GetServer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, GetScheme, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURI, GetQuery, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif

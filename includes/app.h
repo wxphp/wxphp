@@ -15,6 +15,7 @@
 #define WXPHP_APP_H_GUARD
 
 #include "object_types.h"
+#include "arginfo_void.h"
 
 extern zend_class_entry *php_wxApp_entry;
 extern zend_object_handlers wxphp_wxApp_object_handlers;
@@ -53,20 +54,20 @@ zend_object* php_wxApp_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 static zend_function_entry php_wxApp_functions[] = {
-    PHP_ME(php_wxApp, SetInstance, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetInstance, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetAppDisplayName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetAppName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetClassName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetVendorDisplayName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetVendorName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, SetAppDisplayName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, SetAppName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, SetClassName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, SetVendorDisplayName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, SetVendorName, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, Yield, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxApp, SetInstance, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetInstance, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetAppDisplayName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetAppName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetClassName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetVendorDisplayName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetVendorName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetAppDisplayName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetAppName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetClassName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetVendorDisplayName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetVendorName, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, Yield, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, __construct, arginfo_void,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     { NULL, NULL, NULL }
 };
 

@@ -15,6 +15,7 @@
 
 #include "references.h"
 #include "object_types.h"
+#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_dvc_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -49,9 +50,9 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewChoiceRenderer_functions[] = {
-    PHP_ME(php_wxDataViewChoiceRenderer, GetChoice, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewChoiceRenderer, GetChoices, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewChoiceRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewChoiceRenderer, GetChoice, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewChoiceRenderer, GetChoices, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewChoiceRenderer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -99,21 +100,21 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewModel_functions[] = {
-    PHP_ME(php_wxDataViewModel, AddNotifier, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, ChangeValue, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, Cleared, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, Compare, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, GetAttr, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, HasContainerColumns, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, HasDefaultCompare, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, HasValue, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, IsEnabled, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, ItemAdded, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, ItemChanged, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, ItemDeleted, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, RemoveNotifier, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, Resort, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModel, ValueChanged, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, AddNotifier, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, ChangeValue, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, Cleared, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, Compare, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, GetAttr, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, HasContainerColumns, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, HasDefaultCompare, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, HasValue, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, IsEnabled, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, ItemAdded, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, ItemChanged, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, ItemDeleted, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, RemoveNotifier, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, Resort, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModel, ValueChanged, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -159,8 +160,8 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewListModel_functions[] = {
-    PHP_ME(php_wxDataViewListModel, GetAttrByRow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewListModel, IsEnabledByRow, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewListModel, GetAttrByRow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewListModel, IsEnabledByRow, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -285,10 +286,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewItemAttr_functions[] = {
-    PHP_ME(php_wxDataViewItemAttr, SetBold, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewItemAttr, SetColour, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewItemAttr, SetItalic, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewItemAttr, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewItemAttr, SetBold, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewItemAttr, SetColour, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewItemAttr, SetItalic, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewItemAttr, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -333,9 +334,9 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewItem_functions[] = {
-    PHP_ME(php_wxDataViewItem, GetID, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewItem, IsOk, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewItem, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewItem, GetID, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewItem, IsOk, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewItem, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -384,9 +385,9 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewModelNotifier_functions[] = {
-    PHP_ME(php_wxDataViewModelNotifier, GetOwner, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModelNotifier, SetOwner, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewModelNotifier, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewModelNotifier, GetOwner, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModelNotifier, SetOwner, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewModelNotifier, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -430,16 +431,16 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewRenderer_functions[] = {
-    PHP_ME(php_wxDataViewRenderer, EnableEllipsize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewRenderer, DisableEllipsize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewRenderer, GetAlignment, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewRenderer, GetEllipsizeMode, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewRenderer, GetMode, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewRenderer, GetOwner, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewRenderer, GetVariantType, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewRenderer, SetAlignment, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewRenderer, SetOwner, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewRenderer, Validate, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewRenderer, EnableEllipsize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewRenderer, DisableEllipsize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewRenderer, GetAlignment, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewRenderer, GetEllipsizeMode, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewRenderer, GetMode, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewRenderer, GetOwner, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewRenderer, GetVariantType, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewRenderer, SetAlignment, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewRenderer, SetOwner, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewRenderer, Validate, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -482,7 +483,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewTextRenderer_functions[] = {
-    PHP_ME(php_wxDataViewTextRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewTextRenderer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -525,7 +526,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewIconTextRenderer_functions[] = {
-    PHP_ME(php_wxDataViewIconTextRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewIconTextRenderer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -568,7 +569,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewProgressRenderer_functions[] = {
-    PHP_ME(php_wxDataViewProgressRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewProgressRenderer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -611,7 +612,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewSpinRenderer_functions[] = {
-    PHP_ME(php_wxDataViewSpinRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewSpinRenderer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -654,7 +655,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewToggleRenderer_functions[] = {
-    PHP_ME(php_wxDataViewToggleRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewToggleRenderer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -697,7 +698,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewDateRenderer_functions[] = {
-    PHP_ME(php_wxDataViewDateRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewDateRenderer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -741,13 +742,13 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewCustomRenderer_functions[] = {
-    PHP_ME(php_wxDataViewCustomRenderer, ActivateCell, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewCustomRenderer, CreateEditorCtrl, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewCustomRenderer, GetAttr, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewCustomRenderer, HasEditorCtrl, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewCustomRenderer, RenderText, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewCustomRenderer, StartDrag, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewCustomRenderer, ActivateCell, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewCustomRenderer, CreateEditorCtrl, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewCustomRenderer, GetAttr, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewCustomRenderer, HasEditorCtrl, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewCustomRenderer, RenderText, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewCustomRenderer, StartDrag, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -790,7 +791,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewBitmapRenderer_functions[] = {
-    PHP_ME(php_wxDataViewBitmapRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewBitmapRenderer, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -834,10 +835,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewColumn_functions[] = {
-    PHP_ME(php_wxDataViewColumn, GetModelColumn, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewColumn, GetOwner, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewColumn, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxDataViewColumn, GetRenderer, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewColumn, GetModelColumn, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewColumn, GetOwner, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewColumn, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewColumn, GetRenderer, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -880,16 +881,16 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewListStore_functions[] = {
-    PHP_ME(php_wxDataViewListStore, AppendColumn, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewListStore, DeleteAllItems, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewListStore, DeleteItem, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewListStore, GetColumnCount, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewListStore, GetColumnType, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewListStore, GetValueByRow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewListStore, InsertColumn, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewListStore, PrependColumn, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewListStore, SetValueByRow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewListStore, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewListStore, AppendColumn, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewListStore, DeleteAllItems, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewListStore, DeleteItem, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewListStore, GetColumnCount, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewListStore, GetColumnType, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewListStore, GetValueByRow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewListStore, InsertColumn, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewListStore, PrependColumn, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewListStore, SetValueByRow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewListStore, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -932,25 +933,25 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewTreeStore_functions[] = {
-    PHP_ME(php_wxDataViewTreeStore, AppendContainer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, AppendItem, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, DeleteAllItems, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, DeleteChildren, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, DeleteItem, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, GetChildCount, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, GetItemData, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, GetItemExpandedIcon, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, GetItemIcon, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, GetItemText, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, GetNthChild, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, InsertContainer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, InsertItem, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, PrependContainer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, PrependItem, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, SetItemData, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, SetItemExpandedIcon, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, SetItemIcon, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewTreeStore, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewTreeStore, AppendContainer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, AppendItem, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, DeleteAllItems, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, DeleteChildren, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, DeleteItem, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, GetChildCount, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, GetItemData, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, GetItemExpandedIcon, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, GetItemIcon, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, GetItemText, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, GetNthChild, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, InsertContainer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, InsertItem, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, PrependContainer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, PrependItem, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, SetItemData, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, SetItemExpandedIcon, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, SetItemIcon, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewTreeStore, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -994,11 +995,11 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewIconText_functions[] = {
-    PHP_ME(php_wxDataViewIconText, GetIcon, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewIconText, GetText, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewIconText, SetIcon, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewIconText, SetText, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewIconText, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewIconText, GetIcon, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewIconText, GetText, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewIconText, SetIcon, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewIconText, SetText, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewIconText, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -1041,25 +1042,25 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataViewEvent_functions[] = {
-    PHP_ME(php_wxDataViewEvent, GetItem, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, SetItem, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, GetCacheFrom, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, GetCacheTo, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, GetColumn, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, GetDataBuffer, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, GetDataFormat, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, GetDataSize, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, GetDataViewColumn, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, GetModel, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, GetPosition, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, GetValue, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, IsEditCancelled, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, SetColumn, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, SetDataObject, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, SetDataViewColumn, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, SetModel, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, SetValue, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataViewEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataViewEvent, GetItem, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, SetItem, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, GetCacheFrom, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, GetCacheTo, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, GetColumn, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, GetDataBuffer, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, GetDataFormat, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, GetDataSize, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, GetDataViewColumn, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, GetModel, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, GetPosition, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, GetValue, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, IsEditCancelled, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, SetColumn, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, SetDataObject, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, SetDataViewColumn, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, SetModel, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, SetValue, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataViewEvent, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif

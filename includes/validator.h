@@ -15,6 +15,7 @@
 
 #include "references.h"
 #include "object_types.h"
+#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_validator_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -55,10 +56,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGenericValidator_functions[] = {
-    PHP_ME(php_wxGenericValidator, CloneMethod, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGenericValidator, TransferFromWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGenericValidator, TransferToWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxGenericValidator, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxGenericValidator, CloneMethod, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGenericValidator, TransferFromWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGenericValidator, TransferToWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxGenericValidator, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -101,14 +102,14 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxValidator_functions[] = {
-    PHP_ME(php_wxValidator, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxValidator, Validate, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxValidator, TransferToWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxValidator, TransferFromWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxValidator, SetWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxValidator, GetWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxValidator, SuppressBellOnError, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxValidator, CloneMethod, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxValidator, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxValidator, Validate, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxValidator, TransferToWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxValidator, TransferFromWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxValidator, SetWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxValidator, GetWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxValidator, SuppressBellOnError, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxValidator, CloneMethod, arginfo_void, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -152,20 +153,20 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextValidator_functions[] = {
-    PHP_ME(php_wxTextValidator, CloneMethod, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, GetExcludes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, GetIncludes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, GetStyle, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, HasFlag, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, SetCharExcludes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, SetCharIncludes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, SetExcludes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, SetIncludes, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, SetStyle, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, TransferFromWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, TransferToWindow, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, Validate, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextValidator, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxTextValidator, CloneMethod, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, GetExcludes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, GetIncludes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, GetStyle, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, HasFlag, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, SetCharExcludes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, SetCharIncludes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, SetExcludes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, SetIncludes, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, SetStyle, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, TransferFromWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, TransferToWindow, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, Validate, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextValidator, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
