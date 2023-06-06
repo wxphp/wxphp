@@ -384,7 +384,7 @@ function funcsOfClass($classN, $ctor, &$output, $ar = array(), $multiple_inherit
 
         $ar[] = $funcName2;
 
-        $class_methods .= tabs(1)."PHP_ME(php_{$classN}, {$funcName2}, NULL, ";
+        $class_methods .= tabs(1)."PHP_ME(php_{$classN}, {$funcName2}, arginfo_void, ";
 
         if($funcDef[0]["static"])
         {
@@ -457,11 +457,11 @@ function funcsOfClass($classN, $ctor, &$output, $ar = array(), $multiple_inherit
                 {
                     if($funcDef[0]["static"])
                     {
-                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)\n";
+                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)\n";
                     }
                     else
                     {
-                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, NULL, ZEND_ACC_PUBLIC)\n";
+                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, arginfo_void, ZEND_ACC_PUBLIC)\n";
                     }
                 }
             }

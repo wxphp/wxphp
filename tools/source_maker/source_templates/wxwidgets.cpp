@@ -249,18 +249,18 @@ BOOL WINAPI DllMain(
  * Global functions table entry used on the module initialization code
  */
 static zend_function_entry php_wxWidgets_functions[] = {
-    PHP_FALIAS(wxExecute, php_wxExecute, NULL)
-    PHP_FALIAS(wxEntry, php_wxEntry, NULL)
-    PHP_FALIAS(wxC2D, php_wxC2D, NULL)
+    PHP_FALIAS(wxExecute, php_wxExecute, arginfo_void)
+    PHP_FALIAS(wxEntry, php_wxEntry, arginfo_void)
+    PHP_FALIAS(wxC2D, php_wxC2D, arginfo_void)
 
-    PHP_FALIAS(wxLogError, php_wxLogError, NULL)
-    PHP_FALIAS(wxLogFatalError, php_wxLogFatalError, NULL)
-    PHP_FALIAS(wxLogGeneric, php_wxLogGeneric, NULL)
-    PHP_FALIAS(wxLogMessage, php_wxLogMessage, NULL)
-    PHP_FALIAS(wxLogStatus, php_wxLogStatus, NULL)
-    PHP_FALIAS(wxLogSysError, php_wxLogSysError, NULL)
-    PHP_FALIAS(wxLogVerbose, php_wxLogVerbose, NULL)
-    PHP_FALIAS(wxLogWarning, php_wxLogWarning, NULL)
+    PHP_FALIAS(wxLogError, php_wxLogError, arginfo_void)
+    PHP_FALIAS(wxLogFatalError, php_wxLogFatalError, arginfo_void)
+    PHP_FALIAS(wxLogGeneric, php_wxLogGeneric, arginfo_void)
+    PHP_FALIAS(wxLogMessage, php_wxLogMessage, arginfo_void)
+    PHP_FALIAS(wxLogStatus, php_wxLogStatus, arginfo_void)
+    PHP_FALIAS(wxLogSysError, php_wxLogSysError, arginfo_void)
+    PHP_FALIAS(wxLogVerbose, php_wxLogVerbose, arginfo_void)
+    PHP_FALIAS(wxLogWarning, php_wxLogWarning, arginfo_void)
 
     /**
      * Space reserved for the addition to functions table of
