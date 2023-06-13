@@ -45,15 +45,6 @@ of [RedTide](https://github.com/redtide) and the rest of
 [wxFormBuilder team](https://sourceforge.net/p/wxformbuilder/_members/),
 Thanks a lot!
 
-## PHP 8 Note
-To use PHP 8 in debug mode you need to change the function `zend_internal_call_should_throw` 
-to instantly return 0 at the beginning of the function inside the file `Zend/zend_execute.c` 
-and then recompile PHP 8.
-
-The main problem is that PHP 8 enforces the usage of arginfo which is not entirely possible
-in this project stated here [#100](https://github.com/wxphp/wxphp/issues/100)
-
-
 ## Support
 
 Any problems, please file an issue or visit the forums:
@@ -81,7 +72,7 @@ those that report issues on the issue tracker. Thanks to Everyone!
 
 Made with [contributors-img](https://contributors-img.firebaseapp.com).
 
-PHP 7 upgrade has been sponsored by
+PHP 7 and 8 upgrades have been sponsored by
 
 <a href="https://rangee.com/">
   <img src="https://rangee.com/wp-content/uploads/2018/09/Rangee_Logo_2018_small.jpg"/>
