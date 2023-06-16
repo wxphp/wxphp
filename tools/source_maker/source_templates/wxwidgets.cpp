@@ -51,12 +51,15 @@ void wxphp_register_object_constant(const char *name, zval object, int flags, in
     zend_constant c;
 
     c.name = zend_string_init(name, strlen(name), flags & CONST_PERSISTENT);
-    ZVAL_COPY(&c.value, &object);
 
     #if PHP_VERSION_ID < 70300
+    ZVAL_COPY(&c.value, &object);
+
     c.flags = flags;
     c.module_number = module_number;
     #else
+    c.value = object;
+
     ZEND_CONSTANT_SET_FLAGS(&c, flags, module_number);
     #endif
 

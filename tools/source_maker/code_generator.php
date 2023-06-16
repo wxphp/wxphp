@@ -727,7 +727,7 @@ foreach($defGlobals as $variable_name => $variable_type)
 			. tabs(2)
 			. "Z_wxColour_P(&z_wx_transparent_color)->native_object = (wxColour_php*) _wx_transparent_color;\n"
 			. tabs(2)
-			. "wxPHP_REGISTER_OBJECT_CONSTANT(\"wxTransparentColour\", z_wx_transparent_color, CONST_CS | CONST_PERSISTENT);\n"
+			. "wxPHP_REGISTER_OBJECT_CONSTANT(\"wxTransparentColour\", z_wx_transparent_color, CONST_CS);\n"
 		;
         continue;
     }
@@ -866,7 +866,7 @@ foreach($defGlobals as $variable_name => $variable_type)
                     $object_constants .= tabs(2) . "zval z_{$variable_name};\n";
                     $object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
                     $object_constants .= tabs(2) . "Z_{$plain_type}_P(&z_{$variable_name})->native_object = ({$plain_type}_php*) {$variable_name};\n";
-                    $object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
+                    $object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS);\n\n";
                     break;
 
                 case "reference":
@@ -876,7 +876,7 @@ foreach($defGlobals as $variable_name => $variable_type)
                     $object_constants .= tabs(2) . "zval z_{$variable_name};\n";
                     $object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
                     $object_constants .= tabs(2) . "Z_{$plain_type}_P(&z_{$variable_name})->native_object = ({$plain_type}_php*) &{$variable_name};\n";
-                    $object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
+                    $object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS);\n\n";
                     break;
             }
             break;

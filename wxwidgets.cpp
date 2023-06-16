@@ -1038,12 +1038,15 @@ void wxphp_register_object_constant(const char *name, zval object, int flags, in
     zend_constant c;
 
     c.name = zend_string_init(name, strlen(name), flags & CONST_PERSISTENT);
-    ZVAL_COPY(&c.value, &object);
 
     #if PHP_VERSION_ID < 70300
+    ZVAL_COPY(&c.value, &object);
+
     c.flags = flags;
     c.module_number = module_number;
     #else
+    c.value = object;
+
     ZEND_CONSTANT_SET_FLAGS(&c, flags, module_number);
     #endif
 
@@ -1439,307 +1442,307 @@ PHP_RINIT_FUNCTION(php_wxWidgets)
         zval z_wxNullBitmap;
         object_init_ex(&z_wxNullBitmap, php_wxBitmap_entry);
         Z_wxBitmap_P(&z_wxNullBitmap)->native_object = (wxBitmap_php*) &wxNullBitmap;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullBitmap", z_wxNullBitmap, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullBitmap", z_wxNullBitmap, CONST_CS);
 
         zval z_wxNullFont;
         object_init_ex(&z_wxNullFont, php_wxFont_entry);
         Z_wxFont_P(&z_wxNullFont)->native_object = (wxFont_php*) &wxNullFont;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullFont", z_wxNullFont, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullFont", z_wxNullFont, CONST_CS);
 
         zval z_wxNORMAL_FONT;
         object_init_ex(&z_wxNORMAL_FONT, php_wxFont_entry);
         Z_wxFont_P(&z_wxNORMAL_FONT)->native_object = (wxFont_php*) wxNORMAL_FONT;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNORMAL_FONT", z_wxNORMAL_FONT, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNORMAL_FONT", z_wxNORMAL_FONT, CONST_CS);
 
         zval z_wxSMALL_FONT;
         object_init_ex(&z_wxSMALL_FONT, php_wxFont_entry);
         Z_wxFont_P(&z_wxSMALL_FONT)->native_object = (wxFont_php*) wxSMALL_FONT;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxSMALL_FONT", z_wxSMALL_FONT, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxSMALL_FONT", z_wxSMALL_FONT, CONST_CS);
 
         zval z_wxITALIC_FONT;
         object_init_ex(&z_wxITALIC_FONT, php_wxFont_entry);
         Z_wxFont_P(&z_wxITALIC_FONT)->native_object = (wxFont_php*) wxITALIC_FONT;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxITALIC_FONT", z_wxITALIC_FONT, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxITALIC_FONT", z_wxITALIC_FONT, CONST_CS);
 
         zval z_wxSWISS_FONT;
         object_init_ex(&z_wxSWISS_FONT, php_wxFont_entry);
         Z_wxFont_P(&z_wxSWISS_FONT)->native_object = (wxFont_php*) wxSWISS_FONT;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxSWISS_FONT", z_wxSWISS_FONT, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxSWISS_FONT", z_wxSWISS_FONT, CONST_CS);
 
         zval z_wxTheFontList;
         object_init_ex(&z_wxTheFontList, php_wxFontList_entry);
         Z_wxFontList_P(&z_wxTheFontList)->native_object = (wxFontList_php*) wxTheFontList;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxTheFontList", z_wxTheFontList, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxTheFontList", z_wxTheFontList, CONST_CS);
 
         zval z_wxNullAnimation;
         object_init_ex(&z_wxNullAnimation, php_wxAnimation_entry);
         Z_wxAnimation_P(&z_wxNullAnimation)->native_object = (wxAnimation_php*) &wxNullAnimation;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullAnimation", z_wxNullAnimation, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullAnimation", z_wxNullAnimation, CONST_CS);
 
         zval z_wxNullBrush;
         object_init_ex(&z_wxNullBrush, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxNullBrush)->native_object = (wxBrush_php*) &wxNullBrush;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullBrush", z_wxNullBrush, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullBrush", z_wxNullBrush, CONST_CS);
 
         zval z_wxBLUE_BRUSH;
         object_init_ex(&z_wxBLUE_BRUSH, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxBLUE_BRUSH)->native_object = (wxBrush_php*) wxBLUE_BRUSH;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLUE_BRUSH", z_wxBLUE_BRUSH, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLUE_BRUSH", z_wxBLUE_BRUSH, CONST_CS);
 
         zval z_wxGREEN_BRUSH;
         object_init_ex(&z_wxGREEN_BRUSH, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxGREEN_BRUSH)->native_object = (wxBrush_php*) wxGREEN_BRUSH;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxGREEN_BRUSH", z_wxGREEN_BRUSH, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxGREEN_BRUSH", z_wxGREEN_BRUSH, CONST_CS);
 
         zval z_wxYELLOW_BRUSH;
         object_init_ex(&z_wxYELLOW_BRUSH, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxYELLOW_BRUSH)->native_object = (wxBrush_php*) wxYELLOW_BRUSH;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxYELLOW_BRUSH", z_wxYELLOW_BRUSH, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxYELLOW_BRUSH", z_wxYELLOW_BRUSH, CONST_CS);
 
         zval z_wxWHITE_BRUSH;
         object_init_ex(&z_wxWHITE_BRUSH, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxWHITE_BRUSH)->native_object = (wxBrush_php*) wxWHITE_BRUSH;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxWHITE_BRUSH", z_wxWHITE_BRUSH, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxWHITE_BRUSH", z_wxWHITE_BRUSH, CONST_CS);
 
         zval z_wxBLACK_BRUSH;
         object_init_ex(&z_wxBLACK_BRUSH, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxBLACK_BRUSH)->native_object = (wxBrush_php*) wxBLACK_BRUSH;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK_BRUSH", z_wxBLACK_BRUSH, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK_BRUSH", z_wxBLACK_BRUSH, CONST_CS);
 
         zval z_wxGREY_BRUSH;
         object_init_ex(&z_wxGREY_BRUSH, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxGREY_BRUSH)->native_object = (wxBrush_php*) wxGREY_BRUSH;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxGREY_BRUSH", z_wxGREY_BRUSH, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxGREY_BRUSH", z_wxGREY_BRUSH, CONST_CS);
 
         zval z_wxMEDIUM_GREY_BRUSH;
         object_init_ex(&z_wxMEDIUM_GREY_BRUSH, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxMEDIUM_GREY_BRUSH)->native_object = (wxBrush_php*) wxMEDIUM_GREY_BRUSH;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxMEDIUM_GREY_BRUSH", z_wxMEDIUM_GREY_BRUSH, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxMEDIUM_GREY_BRUSH", z_wxMEDIUM_GREY_BRUSH, CONST_CS);
 
         zval z_wxLIGHT_GREY_BRUSH;
         object_init_ex(&z_wxLIGHT_GREY_BRUSH, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxLIGHT_GREY_BRUSH)->native_object = (wxBrush_php*) wxLIGHT_GREY_BRUSH;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxLIGHT_GREY_BRUSH", z_wxLIGHT_GREY_BRUSH, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxLIGHT_GREY_BRUSH", z_wxLIGHT_GREY_BRUSH, CONST_CS);
 
         zval z_wxTRANSPARENT_BRUSH;
         object_init_ex(&z_wxTRANSPARENT_BRUSH, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxTRANSPARENT_BRUSH)->native_object = (wxBrush_php*) wxTRANSPARENT_BRUSH;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxTRANSPARENT_BRUSH", z_wxTRANSPARENT_BRUSH, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxTRANSPARENT_BRUSH", z_wxTRANSPARENT_BRUSH, CONST_CS);
 
         zval z_wxCYAN_BRUSH;
         object_init_ex(&z_wxCYAN_BRUSH, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxCYAN_BRUSH)->native_object = (wxBrush_php*) wxCYAN_BRUSH;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxCYAN_BRUSH", z_wxCYAN_BRUSH, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxCYAN_BRUSH", z_wxCYAN_BRUSH, CONST_CS);
 
         zval z_wxRED_BRUSH;
         object_init_ex(&z_wxRED_BRUSH, php_wxBrush_entry);
         Z_wxBrush_P(&z_wxRED_BRUSH)->native_object = (wxBrush_php*) wxRED_BRUSH;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxRED_BRUSH", z_wxRED_BRUSH, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxRED_BRUSH", z_wxRED_BRUSH, CONST_CS);
 
         zval z_wxNullColour;
         object_init_ex(&z_wxNullColour, php_wxColour_entry);
         Z_wxColour_P(&z_wxNullColour)->native_object = (wxColour_php*) &wxNullColour;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullColour", z_wxNullColour, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullColour", z_wxNullColour, CONST_CS);
 
         zval z_wxBLACK;
         object_init_ex(&z_wxBLACK, php_wxColour_entry);
         Z_wxColour_P(&z_wxBLACK)->native_object = (wxColour_php*) wxBLACK;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK", z_wxBLACK, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK", z_wxBLACK, CONST_CS);
 
         zval z_wxBLUE;
         object_init_ex(&z_wxBLUE, php_wxColour_entry);
         Z_wxColour_P(&z_wxBLUE)->native_object = (wxColour_php*) wxBLUE;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLUE", z_wxBLUE, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLUE", z_wxBLUE, CONST_CS);
 
         zval z_wxCYAN;
         object_init_ex(&z_wxCYAN, php_wxColour_entry);
         Z_wxColour_P(&z_wxCYAN)->native_object = (wxColour_php*) wxCYAN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxCYAN", z_wxCYAN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxCYAN", z_wxCYAN, CONST_CS);
 
         zval z_wxGREEN;
         object_init_ex(&z_wxGREEN, php_wxColour_entry);
         Z_wxColour_P(&z_wxGREEN)->native_object = (wxColour_php*) wxGREEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxGREEN", z_wxGREEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxGREEN", z_wxGREEN, CONST_CS);
 
         zval z_wxYELLOW;
         object_init_ex(&z_wxYELLOW, php_wxColour_entry);
         Z_wxColour_P(&z_wxYELLOW)->native_object = (wxColour_php*) wxYELLOW;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxYELLOW", z_wxYELLOW, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxYELLOW", z_wxYELLOW, CONST_CS);
 
         zval z_wxLIGHT_GREY;
         object_init_ex(&z_wxLIGHT_GREY, php_wxColour_entry);
         Z_wxColour_P(&z_wxLIGHT_GREY)->native_object = (wxColour_php*) wxLIGHT_GREY;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxLIGHT_GREY", z_wxLIGHT_GREY, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxLIGHT_GREY", z_wxLIGHT_GREY, CONST_CS);
 
         zval z_wxRED;
         object_init_ex(&z_wxRED, php_wxColour_entry);
         Z_wxColour_P(&z_wxRED)->native_object = (wxColour_php*) wxRED;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxRED", z_wxRED, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxRED", z_wxRED, CONST_CS);
 
         zval z_wxWHITE;
         object_init_ex(&z_wxWHITE, php_wxColour_entry);
         Z_wxColour_P(&z_wxWHITE)->native_object = (wxColour_php*) wxWHITE;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxWHITE", z_wxWHITE, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxWHITE", z_wxWHITE, CONST_CS);
 
         zval z_wxNullCursor;
         object_init_ex(&z_wxNullCursor, php_wxCursor_entry);
         Z_wxCursor_P(&z_wxNullCursor)->native_object = (wxCursor_php*) &wxNullCursor;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullCursor", z_wxNullCursor, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullCursor", z_wxNullCursor, CONST_CS);
 
         zval z_wxSTANDARD_CURSOR;
         object_init_ex(&z_wxSTANDARD_CURSOR, php_wxCursor_entry);
         Z_wxCursor_P(&z_wxSTANDARD_CURSOR)->native_object = (wxCursor_php*) wxSTANDARD_CURSOR;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxSTANDARD_CURSOR", z_wxSTANDARD_CURSOR, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxSTANDARD_CURSOR", z_wxSTANDARD_CURSOR, CONST_CS);
 
         zval z_wxHOURGLASS_CURSOR;
         object_init_ex(&z_wxHOURGLASS_CURSOR, php_wxCursor_entry);
         Z_wxCursor_P(&z_wxHOURGLASS_CURSOR)->native_object = (wxCursor_php*) wxHOURGLASS_CURSOR;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxHOURGLASS_CURSOR", z_wxHOURGLASS_CURSOR, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxHOURGLASS_CURSOR", z_wxHOURGLASS_CURSOR, CONST_CS);
 
         zval z_wxCROSS_CURSOR;
         object_init_ex(&z_wxCROSS_CURSOR, php_wxCursor_entry);
         Z_wxCursor_P(&z_wxCROSS_CURSOR)->native_object = (wxCursor_php*) wxCROSS_CURSOR;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxCROSS_CURSOR", z_wxCROSS_CURSOR, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxCROSS_CURSOR", z_wxCROSS_CURSOR, CONST_CS);
 
         zval z_wxFormatInvalid;
         object_init_ex(&z_wxFormatInvalid, php_wxDataFormat_entry);
         Z_wxDataFormat_P(&z_wxFormatInvalid)->native_object = (wxDataFormat_php*) &wxFormatInvalid;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxFormatInvalid", z_wxFormatInvalid, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxFormatInvalid", z_wxFormatInvalid, CONST_CS);
 
         zval z_wxDefaultSpan;
         object_init_ex(&z_wxDefaultSpan, php_wxGBSpan_entry);
         Z_wxGBSpan_P(&z_wxDefaultSpan)->native_object = (wxGBSpan_php*) &wxDefaultSpan;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultSpan", z_wxDefaultSpan, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultSpan", z_wxDefaultSpan, CONST_CS);
 
         zval z_wxDefaultPosition;
         object_init_ex(&z_wxDefaultPosition, php_wxPoint_entry);
         Z_wxPoint_P(&z_wxDefaultPosition)->native_object = (wxPoint_php*) &wxDefaultPosition;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultPosition", z_wxDefaultPosition, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultPosition", z_wxDefaultPosition, CONST_CS);
 
         zval z_wxTheColourDatabase;
         object_init_ex(&z_wxTheColourDatabase, php_wxColourDatabase_entry);
         Z_wxColourDatabase_P(&z_wxTheColourDatabase)->native_object = (wxColourDatabase_php*) wxTheColourDatabase;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxTheColourDatabase", z_wxTheColourDatabase, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxTheColourDatabase", z_wxTheColourDatabase, CONST_CS);
 
         zval z_wxDefaultSize;
         object_init_ex(&z_wxDefaultSize, php_wxSize_entry);
         Z_wxSize_P(&z_wxDefaultSize)->native_object = (wxSize_php*) &wxDefaultSize;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultSize", z_wxDefaultSize, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultSize", z_wxDefaultSize, CONST_CS);
 
         zval z_wxNullGraphicsMatrix;
         object_init_ex(&z_wxNullGraphicsMatrix, php_wxGraphicsMatrix_entry);
         Z_wxGraphicsMatrix_P(&z_wxNullGraphicsMatrix)->native_object = (wxGraphicsMatrix_php*) &wxNullGraphicsMatrix;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullGraphicsMatrix", z_wxNullGraphicsMatrix, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullGraphicsMatrix", z_wxNullGraphicsMatrix, CONST_CS);
 
         zval z_wxNullIcon;
         object_init_ex(&z_wxNullIcon, php_wxIcon_entry);
         Z_wxIcon_P(&z_wxNullIcon)->native_object = (wxIcon_php*) &wxNullIcon;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullIcon", z_wxNullIcon, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullIcon", z_wxNullIcon, CONST_CS);
 
         zval z_wxNullIconBundle;
         object_init_ex(&z_wxNullIconBundle, php_wxIconBundle_entry);
         Z_wxIconBundle_P(&z_wxNullIconBundle)->native_object = (wxIconBundle_php*) &wxNullIconBundle;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullIconBundle", z_wxNullIconBundle, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullIconBundle", z_wxNullIconBundle, CONST_CS);
 
         zval z_wxNullImage;
         object_init_ex(&z_wxNullImage, php_wxImage_entry);
         Z_wxImage_P(&z_wxNullImage)->native_object = (wxImage_php*) &wxNullImage;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullImage", z_wxNullImage, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullImage", z_wxNullImage, CONST_CS);
 
         zval z_wxNullPalette;
         object_init_ex(&z_wxNullPalette, php_wxPalette_entry);
         Z_wxPalette_P(&z_wxNullPalette)->native_object = (wxPalette_php*) &wxNullPalette;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullPalette", z_wxNullPalette, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullPalette", z_wxNullPalette, CONST_CS);
 
         zval z_wxNullPen;
         object_init_ex(&z_wxNullPen, php_wxPen_entry);
         Z_wxPen_P(&z_wxNullPen)->native_object = (wxPen_php*) &wxNullPen;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullPen", z_wxNullPen, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxNullPen", z_wxNullPen, CONST_CS);
 
         zval z_wxRED_PEN;
         object_init_ex(&z_wxRED_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxRED_PEN)->native_object = (wxPen_php*) wxRED_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxRED_PEN", z_wxRED_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxRED_PEN", z_wxRED_PEN, CONST_CS);
 
         zval z_wxBLUE_PEN;
         object_init_ex(&z_wxBLUE_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxBLUE_PEN)->native_object = (wxPen_php*) wxBLUE_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLUE_PEN", z_wxBLUE_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLUE_PEN", z_wxBLUE_PEN, CONST_CS);
 
         zval z_wxCYAN_PEN;
         object_init_ex(&z_wxCYAN_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxCYAN_PEN)->native_object = (wxPen_php*) wxCYAN_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxCYAN_PEN", z_wxCYAN_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxCYAN_PEN", z_wxCYAN_PEN, CONST_CS);
 
         zval z_wxGREEN_PEN;
         object_init_ex(&z_wxGREEN_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxGREEN_PEN)->native_object = (wxPen_php*) wxGREEN_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxGREEN_PEN", z_wxGREEN_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxGREEN_PEN", z_wxGREEN_PEN, CONST_CS);
 
         zval z_wxYELLOW_PEN;
         object_init_ex(&z_wxYELLOW_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxYELLOW_PEN)->native_object = (wxPen_php*) wxYELLOW_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxYELLOW_PEN", z_wxYELLOW_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxYELLOW_PEN", z_wxYELLOW_PEN, CONST_CS);
 
         zval z_wxBLACK_PEN;
         object_init_ex(&z_wxBLACK_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxBLACK_PEN)->native_object = (wxPen_php*) wxBLACK_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK_PEN", z_wxBLACK_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK_PEN", z_wxBLACK_PEN, CONST_CS);
 
         zval z_wxWHITE_PEN;
         object_init_ex(&z_wxWHITE_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxWHITE_PEN)->native_object = (wxPen_php*) wxWHITE_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxWHITE_PEN", z_wxWHITE_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxWHITE_PEN", z_wxWHITE_PEN, CONST_CS);
 
         zval z_wxTRANSPARENT_PEN;
         object_init_ex(&z_wxTRANSPARENT_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxTRANSPARENT_PEN)->native_object = (wxPen_php*) wxTRANSPARENT_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxTRANSPARENT_PEN", z_wxTRANSPARENT_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxTRANSPARENT_PEN", z_wxTRANSPARENT_PEN, CONST_CS);
 
         zval z_wxBLACK_DASHED_PEN;
         object_init_ex(&z_wxBLACK_DASHED_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxBLACK_DASHED_PEN)->native_object = (wxPen_php*) wxBLACK_DASHED_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK_DASHED_PEN", z_wxBLACK_DASHED_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK_DASHED_PEN", z_wxBLACK_DASHED_PEN, CONST_CS);
 
         zval z_wxGREY_PEN;
         object_init_ex(&z_wxGREY_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxGREY_PEN)->native_object = (wxPen_php*) wxGREY_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxGREY_PEN", z_wxGREY_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxGREY_PEN", z_wxGREY_PEN, CONST_CS);
 
         zval z_wxMEDIUM_GREY_PEN;
         object_init_ex(&z_wxMEDIUM_GREY_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxMEDIUM_GREY_PEN)->native_object = (wxPen_php*) wxMEDIUM_GREY_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxMEDIUM_GREY_PEN", z_wxMEDIUM_GREY_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxMEDIUM_GREY_PEN", z_wxMEDIUM_GREY_PEN, CONST_CS);
 
         zval z_wxLIGHT_GREY_PEN;
         object_init_ex(&z_wxLIGHT_GREY_PEN, php_wxPen_entry);
         Z_wxPen_P(&z_wxLIGHT_GREY_PEN)->native_object = (wxPen_php*) wxLIGHT_GREY_PEN;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxLIGHT_GREY_PEN", z_wxLIGHT_GREY_PEN, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxLIGHT_GREY_PEN", z_wxLIGHT_GREY_PEN, CONST_CS);
 
         zval z_wxThePenList;
         object_init_ex(&z_wxThePenList, php_wxPenList_entry);
         Z_wxPenList_P(&z_wxThePenList)->native_object = (wxPenList_php*) wxThePenList;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxThePenList", z_wxThePenList, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxThePenList", z_wxThePenList, CONST_CS);
 
         zval z_wxTLI_FIRST;
         object_init_ex(&z_wxTLI_FIRST, php_wxTreeListItem_entry);
         Z_wxTreeListItem_P(&z_wxTLI_FIRST)->native_object = (wxTreeListItem_php*) &wxTLI_FIRST;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxTLI_FIRST", z_wxTLI_FIRST, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxTLI_FIRST", z_wxTLI_FIRST, CONST_CS);
 
         zval z_wxTLI_LAST;
         object_init_ex(&z_wxTLI_LAST, php_wxTreeListItem_entry);
         Z_wxTreeListItem_P(&z_wxTLI_LAST)->native_object = (wxTreeListItem_php*) &wxTLI_LAST;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxTLI_LAST", z_wxTLI_LAST, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxTLI_LAST", z_wxTLI_LAST, CONST_CS);
 
         zval z_wxDefaultValidator;
         object_init_ex(&z_wxDefaultValidator, php_wxValidator_entry);
         Z_wxValidator_P(&z_wxDefaultValidator)->native_object = (wxValidator_php*) &wxDefaultValidator;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultValidator", z_wxDefaultValidator, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultValidator", z_wxDefaultValidator, CONST_CS);
 
         zval z_wxDefaultVideoMode;
         object_init_ex(&z_wxDefaultVideoMode, php_wxVideoMode_entry);
         Z_wxVideoMode_P(&z_wxDefaultVideoMode)->native_object = (wxVideoMode_php*) &wxDefaultVideoMode;
-        wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultVideoMode", z_wxDefaultVideoMode, CONST_CS | CONST_PERSISTENT);
+        wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultVideoMode", z_wxDefaultVideoMode, CONST_CS);
 
 
         objects_intialized = 1;
