@@ -347,7 +347,7 @@ function derivationsOfClass($class)
  *
  * @return array All function names
  */
-function funcsOfClass($classN, $ctor, &$output, $ar = array(), $multiple_inheritance = false)
+function funcsOfClass($classN, $ctor, &$output, $ar = array(), $multiple_inheritance = false, $override_class_name = null)
 {
     global $defIni;
     $class_methods = "";
@@ -356,6 +356,8 @@ function funcsOfClass($classN, $ctor, &$output, $ar = array(), $multiple_inherit
         return array();
 
     $classDef3 = $classDef = $defIni[$classN];
+
+    $className = $override_class_name ? $override_class_name : $classN;
 
     foreach($classDef as $funcName => $funcDef)
     {
@@ -384,7 +386,7 @@ function funcsOfClass($classN, $ctor, &$output, $ar = array(), $multiple_inherit
 
         $ar[] = $funcName2;
 
-        $class_methods .= tabs(1)."PHP_ME(php_{$classN}, {$funcName2}, arginfo_void, ";
+        $class_methods .= tabs(1)."PHP_ME(php_{$classN}, {$funcName2}, php_{$className}_{$funcName2}_arg_infos, ";
 
         if($funcDef[0]["static"])
         {
@@ -413,7 +415,7 @@ function funcsOfClass($classN, $ctor, &$output, $ar = array(), $multiple_inherit
 
         foreach($classDef['_implements'] as $imp)
         {
-            $ar = array_merge($ar,funcsOfClass($imp, 0, $output, $ar, $multiple_inheritance));
+            $ar = array_merge($ar,funcsOfClass($imp, 0, $output, $ar, $multiple_inheritance, $className));
             continue;
 
             if(!isset($defIni[$imp]))
@@ -457,11 +459,11 @@ function funcsOfClass($classN, $ctor, &$output, $ar = array(), $multiple_inherit
                 {
                     if($funcDef[0]["static"])
                     {
-                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)\n";
+                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, php_{$className}_{$funcName2}_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)\n";
                     }
                     else
                     {
-                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, arginfo_void, ZEND_ACC_PUBLIC)\n";
+                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, php_{$className}_{$funcName2}_arg_infos, ZEND_ACC_PUBLIC)\n";
                     }
                 }
             }
@@ -469,6 +471,84 @@ function funcsOfClass($classN, $ctor, &$output, $ar = array(), $multiple_inherit
     }
 
     $output .= $class_methods;
+
+    return $ar;
+}
+
+function funcDefsOfClass($classN)
+{
+    global $defIni;
+    $funcDefs = array();
+
+    if (!isset($defIni[$classN])) {
+        return array();
+    }
+
+    $classDef = $defIni[$classN];
+
+    foreach ($classDef as $funcName => $funcDef) {
+        if ($funcName[0] === '_') {
+            continue;
+        }
+
+        if (($funcDef[0]['virtual'] && $funcDef[0]['protected']) || $funcDef[0]['pure_virtual'] ||
+            '' . strpos($funcName, 'On') . '' == '0'
+        ) {
+            continue;
+        }
+
+        if ($classN == $funcName) {
+            $funcName = '__construct';
+        }
+
+        //Rename conflicting method names with PHP keywords
+        $funcName = php_method_name($funcName);
+
+        $funcDefs[$funcName] = $funcDef;
+    }
+
+    if (isset($classDef['_implements']) &&
+        count($classDef['_implements']) > 0) {
+        $multiple_inheritance = true;
+
+        foreach ($classDef['_implements'] as $imp) {
+            $funcDefs = array_merge_recursive($funcDefs,funcDefsOfClass($imp));
+        }
+    }
+
+    return $funcDefs;
+}
+
+function argInfosOfClass($classN, &$output)
+{
+    $class_arg_infos = "";
+    $ar = array();
+
+    $funcDefs = funcDefsOfClass($classN);
+    foreach($funcDefs as $funcName => $funcDef)
+    {
+        if(in_array($funcName, $ar))
+            continue;
+
+        $ar[] = $funcName;
+
+        $class_arg_infos .= "ZEND_BEGIN_ARG_INFO_EX(php_{$classN}_{$funcName}_arg_infos, 0, 0, 0)\n";
+
+        $maxParamsFuncDef = $funcDef[0];
+        foreach($funcDef as $func) {
+            if(count($func['parameters_name']) > count($maxParamsFuncDef['parameters_name'])) {
+                $maxParamsFuncDef = $func;
+            }
+        }
+
+        foreach($maxParamsFuncDef['parameters_name'] as $paramName) {
+            $class_arg_infos .= tabs(1)."ZEND_ARG_INFO(0, {$paramName})\n";
+        }
+
+        $class_arg_infos .= "ZEND_END_ARG_INFO()\n";
+    }
+
+    $output .= $class_arg_infos;
 
     return $ar;
 }

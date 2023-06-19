@@ -15,7 +15,6 @@
 
 #include "references.h"
 #include "object_types.h"
-#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_threading_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -49,13 +48,28 @@ zend_object* php_wxCondition_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxCondition_Broadcast_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCondition_IsOk_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCondition_Signal_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCondition_Wait_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCondition_WaitTimeout_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, milliseconds)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCondition___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, mutex)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxCondition_functions[] = {
-    PHP_ME(php_wxCondition, Broadcast, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCondition, IsOk, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCondition, Signal, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCondition, Wait, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCondition, WaitTimeout, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCondition, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxCondition, Broadcast, php_wxCondition_Broadcast_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCondition, IsOk, php_wxCondition_IsOk_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCondition, Signal, php_wxCondition_Signal_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCondition, Wait, php_wxCondition_Wait_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCondition, WaitTimeout, php_wxCondition_WaitTimeout_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCondition, __construct, php_wxCondition___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -97,8 +111,12 @@ zend_object* php_wxCriticalSectionLocker_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxCriticalSectionLocker___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, criticalsection)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxCriticalSectionLocker_functions[] = {
-    PHP_ME(php_wxCriticalSectionLocker, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxCriticalSectionLocker, __construct, php_wxCriticalSectionLocker___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -139,9 +157,16 @@ zend_object* php_wxThreadHelper_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxThreadHelper_GetThread_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThreadHelper_CreateThread_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, kind)
+    ZEND_ARG_INFO(0, stackSize)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxThreadHelper_functions[] = {
-    PHP_ME(php_wxThreadHelper, GetThread, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThreadHelper, CreateThread, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThreadHelper, GetThread, php_wxThreadHelper_GetThread_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThreadHelper, CreateThread, php_wxThreadHelper_CreateThread_arg_infos, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -183,11 +208,21 @@ zend_object* php_wxCriticalSection_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxCriticalSection_Enter_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCriticalSection_Leave_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCriticalSection_TryEnter_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCriticalSection___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, critSecType)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxCriticalSection_functions[] = {
-    PHP_ME(php_wxCriticalSection, Enter, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCriticalSection, Leave, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCriticalSection, TryEnter, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCriticalSection, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxCriticalSection, Enter, php_wxCriticalSection_Enter_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCriticalSection, Leave, php_wxCriticalSection_Leave_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCriticalSection, TryEnter, php_wxCriticalSection_TryEnter_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCriticalSection, __construct, php_wxCriticalSection___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -230,32 +265,91 @@ zend_object* php_wxThread_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, kind)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_YieldMethod_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_This_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_TestDestroy_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_SetPriority_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, priority)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_Sleep_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, milliseconds)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_SetConcurrency_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, level)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_GetCPUCount_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_GetCurrentId_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_GetId_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_GetKind_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_GetMainId_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_GetPriority_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_IsAlive_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_IsDetached_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_IsMain_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_IsPaused_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_IsRunning_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_Kill_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_Pause_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_Resume_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_Run_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_Create_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, stackSize)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_Delete_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, rc)
+    ZEND_ARG_INFO(0, waitMode)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxThread_Wait_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, flags)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxThread_functions[] = {
-    PHP_ME(php_wxThread, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxThread, YieldMethod, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, This, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, TestDestroy, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, SetPriority, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, Sleep, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, SetConcurrency, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, GetCPUCount, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, GetCurrentId, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, GetId, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, GetKind, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, GetMainId, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, GetPriority, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, IsAlive, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, IsDetached, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, IsMain, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, IsPaused, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, IsRunning, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, Kill, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, Pause, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, Resume, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, Run, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, Create, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, Delete, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxThread, Wait, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, __construct, php_wxThread___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxThread, YieldMethod, php_wxThread_YieldMethod_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, This, php_wxThread_This_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, TestDestroy, php_wxThread_TestDestroy_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, SetPriority, php_wxThread_SetPriority_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, Sleep, php_wxThread_Sleep_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, SetConcurrency, php_wxThread_SetConcurrency_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, GetCPUCount, php_wxThread_GetCPUCount_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, GetCurrentId, php_wxThread_GetCurrentId_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, GetId, php_wxThread_GetId_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, GetKind, php_wxThread_GetKind_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, GetMainId, php_wxThread_GetMainId_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, GetPriority, php_wxThread_GetPriority_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, IsAlive, php_wxThread_IsAlive_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, IsDetached, php_wxThread_IsDetached_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, IsMain, php_wxThread_IsMain_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, IsPaused, php_wxThread_IsPaused_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, IsRunning, php_wxThread_IsRunning_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, Kill, php_wxThread_Kill_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, Pause, php_wxThread_Pause_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, Resume, php_wxThread_Resume_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, Run, php_wxThread_Run_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, Create, php_wxThread_Create_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, Delete, php_wxThread_Delete_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxThread, Wait, php_wxThread_Wait_arg_infos, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -297,12 +391,26 @@ zend_object* php_wxSemaphore_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxSemaphore_Post_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxSemaphore_TryWait_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxSemaphore_Wait_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxSemaphore_WaitTimeout_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, timeout_millis)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxSemaphore___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, initialcount)
+    ZEND_ARG_INFO(0, maxcount)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxSemaphore_functions[] = {
-    PHP_ME(php_wxSemaphore, Post, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSemaphore, TryWait, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSemaphore, Wait, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSemaphore, WaitTimeout, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxSemaphore, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxSemaphore, Post, php_wxSemaphore_Post_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSemaphore, TryWait, php_wxSemaphore_TryWait_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSemaphore, Wait, php_wxSemaphore_Wait_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSemaphore, WaitTimeout, php_wxSemaphore_WaitTimeout_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxSemaphore, __construct, php_wxSemaphore___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -344,9 +452,15 @@ zend_object* php_wxMutexLocker_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxMutexLocker_IsOk_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxMutexLocker___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, mutex)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxMutexLocker_functions[] = {
-    PHP_ME(php_wxMutexLocker, IsOk, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxMutexLocker, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxMutexLocker, IsOk, php_wxMutexLocker_IsOk_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMutexLocker, __construct, php_wxMutexLocker___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -388,12 +502,25 @@ zend_object* php_wxMutex_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxMutex_Lock_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxMutex_LockTimeout_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, msec)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxMutex_TryLock_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxMutex_Unlock_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxMutex___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, type)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxMutex_functions[] = {
-    PHP_ME(php_wxMutex, Lock, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxMutex, LockTimeout, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxMutex, TryLock, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxMutex, Unlock, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxMutex, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxMutex, Lock, php_wxMutex_Lock_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMutex, LockTimeout, php_wxMutex_LockTimeout_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMutex, TryLock, php_wxMutex_TryLock_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMutex, Unlock, php_wxMutex_Unlock_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxMutex, __construct, php_wxMutex___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif

@@ -15,7 +15,6 @@
 
 #include "references.h"
 #include "object_types.h"
-#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_dnd_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -49,20 +48,68 @@ zend_object* php_wxClipboard_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_AddData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, data)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_Clear_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_Close_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_Flush_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_GetData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, data)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_IsOpened_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_IsSupported_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_IsUsingPrimarySelection_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_Open_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_SetData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, data)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_UsePrimarySelection_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, primary)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, other)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_Get_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_UnShare_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_UnRef_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_IsSameAs_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, obj)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_Ref_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, clone)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_GetClassInfo_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClipboard_IsKindOf_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, info)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxClipboard_functions[] = {
-    PHP_ME(php_wxClipboard, AddData, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClipboard, Clear, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClipboard, Close, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClipboard, Flush, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClipboard, GetData, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClipboard, IsOpened, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClipboard, IsSupported, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClipboard, IsUsingPrimarySelection, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClipboard, Open, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClipboard, SetData, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClipboard, UsePrimarySelection, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClipboard, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxClipboard, Get, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, AddData, php_wxClipboard_AddData_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, Clear, php_wxClipboard_Clear_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, Close, php_wxClipboard_Close_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, Flush, php_wxClipboard_Flush_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, GetData, php_wxClipboard_GetData_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, IsOpened, php_wxClipboard_IsOpened_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, IsSupported, php_wxClipboard_IsSupported_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, IsUsingPrimarySelection, php_wxClipboard_IsUsingPrimarySelection_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, Open, php_wxClipboard_Open_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, SetData, php_wxClipboard_SetData_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, UsePrimarySelection, php_wxClipboard_UsePrimarySelection_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClipboard, __construct, php_wxClipboard___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxClipboard, Get, php_wxClipboard_Get_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -105,12 +152,26 @@ zend_object* php_wxDataFormat_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataFormat_GetId_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataFormat_GetType_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataFormat_SetId_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataFormat_SetType_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, type)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataFormat___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxDataFormat_functions[] = {
-    PHP_ME(php_wxDataFormat, GetId, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataFormat, GetType, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataFormat, SetId, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataFormat, SetType, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataFormat, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataFormat, GetId, php_wxDataFormat_GetId_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataFormat, GetType, php_wxDataFormat_GetType_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataFormat, SetId, php_wxDataFormat_SetId_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataFormat, SetType, php_wxDataFormat_SetType_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataFormat, __construct, php_wxDataFormat___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -157,10 +218,22 @@ zend_object* php_wxDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObject_IsSupported_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObject_SetData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, len)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObject___construct_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxDataObject_functions[] = {
-    PHP_ME(php_wxDataObject, IsSupported, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataObject, SetData, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataObject, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataObject, IsSupported, php_wxDataObject_IsSupported_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObject, SetData, php_wxDataObject_SetData_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObject, __construct, php_wxDataObject___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -202,14 +275,50 @@ zend_object* php_wxCustomDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject_Alloc_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, size)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject_Free_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject_GetData_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject_GetSize_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject_SetData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, len)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject_TakeData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, size)
+    ZEND_ARG_INFO(0, data)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject_GetDataHere_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject_GetDataSize_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject_GetFormat_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject_SetFormat_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxCustomDataObject_IsSupported_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxCustomDataObject_functions[] = {
-    PHP_ME(php_wxCustomDataObject, Alloc, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCustomDataObject, Free, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCustomDataObject, GetData, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCustomDataObject, GetSize, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCustomDataObject, SetData, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCustomDataObject, TakeData, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxCustomDataObject, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxCustomDataObject, Alloc, php_wxCustomDataObject_Alloc_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, Free, php_wxCustomDataObject_Free_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, GetData, php_wxCustomDataObject_GetData_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, GetSize, php_wxCustomDataObject_GetSize_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, SetData, php_wxCustomDataObject_SetData_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, TakeData, php_wxCustomDataObject_TakeData_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxCustomDataObject, __construct, php_wxCustomDataObject___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -251,11 +360,33 @@ zend_object* php_wxDataObjectComposite_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectComposite_Add_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, dataObject)
+    ZEND_ARG_INFO(0, preferred)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectComposite_GetReceivedFormat_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectComposite___construct_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectComposite_GetObject_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectComposite_IsSupported_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectComposite_SetData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, len)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxDataObjectComposite_functions[] = {
-    PHP_ME(php_wxDataObjectComposite, Add, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataObjectComposite, GetReceivedFormat, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataObjectComposite, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxDataObjectComposite, GetObject, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectComposite, Add, php_wxDataObjectComposite_Add_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectComposite, GetReceivedFormat, php_wxDataObjectComposite_GetReceivedFormat_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectComposite, __construct, php_wxDataObjectComposite___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataObjectComposite, GetObject, php_wxDataObjectComposite_GetObject_arg_infos, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -297,13 +428,36 @@ zend_object* php_wxDataObjectSimple_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectSimple_GetDataHere_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectSimple_GetDataSize_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectSimple_GetFormat_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectSimple_SetData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, len)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectSimple_SetFormat_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectSimple___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDataObjectSimple_IsSupported_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxDataObjectSimple_functions[] = {
-    PHP_ME(php_wxDataObjectSimple, GetDataHere, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataObjectSimple, GetDataSize, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataObjectSimple, GetFormat, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataObjectSimple, SetData, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataObjectSimple, SetFormat, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDataObjectSimple, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDataObjectSimple, GetDataHere, php_wxDataObjectSimple_GetDataHere_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectSimple, GetDataSize, php_wxDataObjectSimple_GetDataSize_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectSimple, GetFormat, php_wxDataObjectSimple_GetFormat_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectSimple, SetData, php_wxDataObjectSimple_SetData_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectSimple, SetFormat, php_wxDataObjectSimple_SetFormat_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDataObjectSimple, __construct, php_wxDataObjectSimple___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -345,10 +499,38 @@ zend_object* php_wxBitmapDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxBitmapDataObject_GetBitmap_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxBitmapDataObject_SetBitmap_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, bitmap)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxBitmapDataObject___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, bitmap)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxBitmapDataObject_GetDataHere_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxBitmapDataObject_GetDataSize_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxBitmapDataObject_GetFormat_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxBitmapDataObject_SetData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, len)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxBitmapDataObject_SetFormat_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxBitmapDataObject_IsSupported_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxBitmapDataObject_functions[] = {
-    PHP_ME(php_wxBitmapDataObject, GetBitmap, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxBitmapDataObject, SetBitmap, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxBitmapDataObject, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxBitmapDataObject, GetBitmap, php_wxBitmapDataObject_GetBitmap_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxBitmapDataObject, SetBitmap, php_wxBitmapDataObject_SetBitmap_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxBitmapDataObject, __construct, php_wxBitmapDataObject___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -390,10 +572,52 @@ zend_object* php_wxURLDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_GetURL_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_SetURL_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, url)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, url)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_GetFormat_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_GetText_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_GetTextLength_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_GetFormatCount_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_GetAllFormats_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, formats)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_SetText_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, strText)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_GetDataHere_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_GetDataSize_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_SetData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, len)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_SetFormat_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxURLDataObject_IsSupported_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxURLDataObject_functions[] = {
-    PHP_ME(php_wxURLDataObject, GetURL, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURLDataObject, SetURL, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxURLDataObject, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxURLDataObject, GetURL, php_wxURLDataObject_GetURL_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURLDataObject, SetURL, php_wxURLDataObject_SetURL_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxURLDataObject, __construct, php_wxURLDataObject___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -435,14 +659,51 @@ zend_object* php_wxTextDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject_GetFormat_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject_GetText_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject_GetTextLength_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject_GetFormatCount_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject_GetAllFormats_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, formats)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject_SetText_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, strText)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, text)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject_GetDataHere_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject_GetDataSize_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject_SetData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, len)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject_SetFormat_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDataObject_IsSupported_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxTextDataObject_functions[] = {
-    PHP_ME(php_wxTextDataObject, GetFormat, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextDataObject, GetText, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextDataObject, GetTextLength, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextDataObject, GetFormatCount, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextDataObject, GetAllFormats, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextDataObject, SetText, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTextDataObject, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxTextDataObject, GetFormat, php_wxTextDataObject_GetFormat_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, GetText, php_wxTextDataObject_GetText_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, GetTextLength, php_wxTextDataObject_GetTextLength_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, GetFormatCount, php_wxTextDataObject_GetFormatCount_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, GetAllFormats, php_wxTextDataObject_GetAllFormats_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, SetText, php_wxTextDataObject_SetText_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTextDataObject, __construct, php_wxTextDataObject___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -484,10 +745,38 @@ zend_object* php_wxFileDataObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDataObject_AddFile_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, file)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDataObject_GetFilenames_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDataObject___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDataObject_GetDataHere_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDataObject_GetDataSize_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDataObject_GetFormat_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDataObject_SetData_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, len)
+    ZEND_ARG_INFO(0, buf)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDataObject_SetFormat_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDataObject_IsSupported_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, dir)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxFileDataObject_functions[] = {
-    PHP_ME(php_wxFileDataObject, AddFile, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileDataObject, GetFilenames, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxFileDataObject, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxFileDataObject, AddFile, php_wxFileDataObject_AddFile_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileDataObject, GetFilenames, php_wxFileDataObject_GetFilenames_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxFileDataObject, __construct, php_wxFileDataObject___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -534,10 +823,19 @@ zend_object* php_wxDropTarget_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxDropTarget___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, data)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDropTarget_SetDataObject_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, data)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxDropTarget_GetData_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxDropTarget_functions[] = {
-    PHP_ME(php_wxDropTarget, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxDropTarget, SetDataObject, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxDropTarget, GetData, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDropTarget, __construct, php_wxDropTarget___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxDropTarget, SetDataObject, php_wxDropTarget_SetDataObject_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxDropTarget, GetData, php_wxDropTarget_GetData_arg_infos, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif
@@ -581,8 +879,17 @@ zend_object* php_wxTextDropTarget_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDropTarget___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, data)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDropTarget_SetDataObject_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, data)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTextDropTarget_GetData_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxTextDropTarget_functions[] = {
-    PHP_ME(php_wxTextDropTarget, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxTextDropTarget, __construct, php_wxTextDropTarget___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -626,8 +933,17 @@ zend_object* php_wxFileDropTarget_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDropTarget___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, data)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDropTarget_SetDataObject_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, data)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxFileDropTarget_GetData_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxFileDropTarget_functions[] = {
-    PHP_ME(php_wxFileDropTarget, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxFileDropTarget, __construct, php_wxFileDropTarget___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif

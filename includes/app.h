@@ -15,7 +15,6 @@
 #define WXPHP_APP_H_GUARD
 
 #include "object_types.h"
-#include "arginfo_void.h"
 
 extern zend_class_entry *php_wxApp_entry;
 extern zend_object_handlers wxphp_wxApp_object_handlers;
@@ -53,21 +52,57 @@ void php_wxApp_free(void *object);
 zend_object* php_wxApp_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
+
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_SetInstance_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, app)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_GetInstance_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_GetAppDisplayName_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_GetAppName_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_GetClassName_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_GetVendorDisplayName_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_GetVendorName_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_SetAppDisplayName_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, name)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_SetAppName_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, name)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_SetClassName_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, name)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_SetVendorDisplayName_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, name)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_SetVendorName_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, name)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp_Yield_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxApp___construct_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxApp_functions[] = {
-    PHP_ME(php_wxApp, SetInstance, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetInstance, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetAppDisplayName, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetAppName, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetClassName, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetVendorDisplayName, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, GetVendorName, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, SetAppDisplayName, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, SetAppName, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, SetClassName, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, SetVendorDisplayName, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, SetVendorName, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, Yield, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxApp, __construct, arginfo_void,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxApp, SetInstance, php_wxApp_SetInstance_arg_infos, ZEND_ACC_STATIC | ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetInstance, php_wxApp_GetInstance_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetAppDisplayName, php_wxApp_GetAppDisplayName_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetAppName, php_wxApp_GetAppName_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetClassName, php_wxApp_GetClassName_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetVendorDisplayName, php_wxApp_GetVendorDisplayName_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetVendorName, php_wxApp_GetVendorName_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetAppDisplayName, php_wxApp_SetAppDisplayName_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetAppName, php_wxApp_SetAppName_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetClassName, php_wxApp_SetClassName_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetVendorDisplayName, php_wxApp_SetVendorDisplayName_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetVendorName, php_wxApp_SetVendorName_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, Yield, php_wxApp_Yield_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, __construct, php_wxApp___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     { NULL, NULL, NULL }
 };
 

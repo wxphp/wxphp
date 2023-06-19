@@ -15,7 +15,6 @@
 
 #include "references.h"
 #include "object_types.h"
-#include "arginfo_void.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_rtti_get_args, 0, 0, 1)
     ZEND_ARG_INFO(0, name)
@@ -49,11 +48,20 @@ zend_object* php_wxRefCounter_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxRefCounter_DecRef_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxRefCounter_GetRefCount_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxRefCounter_IncRef_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxRefCounter___construct_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxRefCounter_functions[] = {
-    PHP_ME(php_wxRefCounter, DecRef, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxRefCounter, GetRefCount, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxRefCounter, IncRef, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxRefCounter, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxRefCounter, DecRef, php_wxRefCounter_DecRef_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRefCounter, GetRefCount, php_wxRefCounter_GetRefCount_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRefCounter, IncRef, php_wxRefCounter_IncRef_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxRefCounter, __construct, php_wxRefCounter___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -108,14 +116,33 @@ zend_object* php_wxObject_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxObject___construct_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, other)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxObject_UnShare_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxObject_UnRef_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxObject_IsSameAs_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, obj)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxObject_Ref_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, clone)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxObject_GetClassInfo_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxObject_IsKindOf_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, info)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxObject_functions[] = {
-    PHP_ME(php_wxObject, __construct, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-    PHP_ME(php_wxObject, UnShare, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxObject, UnRef, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxObject, IsSameAs, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxObject, Ref, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxObject, GetClassInfo, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxObject, IsKindOf, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, __construct, php_wxObject___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxObject, UnShare, php_wxObject_UnShare_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, UnRef, php_wxObject_UnRef_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, IsSameAs, php_wxObject_IsSameAs_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, Ref, php_wxObject_Ref_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, GetClassInfo, php_wxObject_GetClassInfo_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxObject, IsKindOf, php_wxObject_IsKindOf_arg_infos, ZEND_ACC_PUBLIC)
     PHP_ME(php_wxObject, __get, wxphp_rtti_get_args, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
@@ -157,12 +184,25 @@ zend_object* php_wxClassInfo_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxClassInfo_CreateObject_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClassInfo_FindClass_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, className)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClassInfo_GetSize_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClassInfo_IsDynamic_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxClassInfo_IsKindOf_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, info)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxClassInfo_functions[] = {
-    PHP_ME(php_wxClassInfo, CreateObject, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClassInfo, FindClass, arginfo_void, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClassInfo, GetSize, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClassInfo, IsDynamic, arginfo_void, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxClassInfo, IsKindOf, arginfo_void, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClassInfo, CreateObject, php_wxClassInfo_CreateObject_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClassInfo, FindClass, php_wxClassInfo_FindClass_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClassInfo, GetSize, php_wxClassInfo_GetSize_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClassInfo, IsDynamic, php_wxClassInfo_IsDynamic_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxClassInfo, IsKindOf, php_wxClassInfo_IsKindOf_arg_infos, ZEND_ACC_PUBLIC)
     PHP_FE_END
 };
 #endif

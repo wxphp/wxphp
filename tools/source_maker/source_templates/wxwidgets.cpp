@@ -16,7 +16,6 @@
 #include "php_wxwidgets.h"
 #include "app.h"
 #include "functions.h"
-#include "arginfo_void.h"
 
 #ifdef __WXMSW__
 #include <wx/msw/private.h>
@@ -248,22 +247,42 @@ BOOL WINAPI DllMain(
 #undef wxLogVerbose
 #undef wxLogWarning
 
+ZEND_BEGIN_ARG_INFO_EX(php_wxExecute_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, rCommand)
+    ZEND_ARG_INFO(0, flags)
+    ZEND_ARG_INFO(0, pHandler)
+    ZEND_ARG_INFO(0, env)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxEntry_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, argc)
+    ZEND_ARG_INFO(0, argv)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxC2D_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, constantObject)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxLog_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, format)
+    ZEND_ARG_INFO(0, argptr)
+ZEND_END_ARG_INFO()
+
+<?php print $functions_arg_infos_table ?>
+
 /**
  * Global functions table entry used on the module initialization code
  */
 static zend_function_entry php_wxWidgets_functions[] = {
-    PHP_FALIAS(wxExecute, php_wxExecute, arginfo_void)
-    PHP_FALIAS(wxEntry, php_wxEntry, arginfo_void)
-    PHP_FALIAS(wxC2D, php_wxC2D, arginfo_void)
+    PHP_FALIAS(wxExecute, php_wxExecute, php_wxExecute_arg_infos)
+    PHP_FALIAS(wxEntry, php_wxEntry, php_wxEntry_arg_infos)
+    PHP_FALIAS(wxC2D, php_wxC2D, php_wxC2D_arg_infos)
 
-    PHP_FALIAS(wxLogError, php_wxLogError, arginfo_void)
-    PHP_FALIAS(wxLogFatalError, php_wxLogFatalError, arginfo_void)
-    PHP_FALIAS(wxLogGeneric, php_wxLogGeneric, arginfo_void)
-    PHP_FALIAS(wxLogMessage, php_wxLogMessage, arginfo_void)
-    PHP_FALIAS(wxLogStatus, php_wxLogStatus, arginfo_void)
-    PHP_FALIAS(wxLogSysError, php_wxLogSysError, arginfo_void)
-    PHP_FALIAS(wxLogVerbose, php_wxLogVerbose, arginfo_void)
-    PHP_FALIAS(wxLogWarning, php_wxLogWarning, arginfo_void)
+    PHP_FALIAS(wxLogError, php_wxLogError, php_wxLog_arg_infos)
+    PHP_FALIAS(wxLogFatalError, php_wxLogFatalError, php_wxLog_arg_infos)
+    PHP_FALIAS(wxLogGeneric, php_wxLogGeneric, php_wxLog_arg_infos)
+    PHP_FALIAS(wxLogMessage, php_wxLogMessage, php_wxLog_arg_infos)
+    PHP_FALIAS(wxLogStatus, php_wxLogStatus, php_wxLog_arg_infos)
+    PHP_FALIAS(wxLogSysError, php_wxLogSysError, php_wxLog_arg_infos)
+    PHP_FALIAS(wxLogVerbose, php_wxLogVerbose, php_wxLog_arg_infos)
+    PHP_FALIAS(wxLogWarning, php_wxLogWarning, php_wxLog_arg_infos)
 
     /**
      * Space reserved for the addition to functions table of
