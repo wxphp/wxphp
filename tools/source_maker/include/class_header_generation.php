@@ -46,11 +46,11 @@ function class_virtual_declarations($class_name, $class_methods)
         foreach($method_definitions as $method_definition)
         {
             //Skip constructors, static functions, and non protected virtual functions or pure virtual
-            if(($method_definition["virtual"] && $method_definition["protected"]) || $method_definition["pure_virtual"] ||
+            if( ( is_array($method_definition) && ( ($method_definition["virtual"] && $method_definition["protected"]) || $method_definition["pure_virtual"] ) ) ||
                 "".strpos($method_name, "On")."" == "0"
             )
             {
-                if($method_name{0} != "_")
+                if($method_name[0] !== "_")
                 {
                     $virtual_methods .= $method_definition["return_type"] . " {$method_name}(";
 

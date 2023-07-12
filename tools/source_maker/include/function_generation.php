@@ -665,7 +665,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
                     $object_retrieve_code .= tabs(5) . "argument_native_object = (void*) Z_{$argument_plain_type}_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.")->native_object;\n";
                     $object_retrieve_code .= tabs(5) . "object_pointer{$declaration_index}_{$parameter_index} = ($argument_plain_type*) argument_native_object;\n";
                     $object_retrieve_code .= tabs(5) . "if (!object_pointer{$declaration_index}_{$parameter_index} ";
-                    if(trim($typeVerifierStr) != "")
+                    if(is_string($typeVerifierStr) && trim($typeVerifierStr) !== "")
                     {
                          $object_retrieve_code .= "|| ($typeVerifierStr)";
                     }

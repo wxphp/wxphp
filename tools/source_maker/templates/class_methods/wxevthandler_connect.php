@@ -58,7 +58,6 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
     co->fci.retval = &dummy;
     co->fci.param_count = 1;
     co->fci.params = arg;
-    co->fci.no_separation = 0;
 
     if(zend_call_function(&co->fci, &co->fci_cache) == FAILURE)
     {

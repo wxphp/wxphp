@@ -39,6 +39,12 @@ zend_object* php_<?=$class_name?>_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+<?php
+    $arg_infos = "";
+    argInfosOfClass($class_name, $arg_infos);
+    print $arg_infos;
+?>
+
 static zend_function_entry php_<?=$class_name?>_functions[] = {
 <?php
     $methods_entry = "";

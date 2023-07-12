@@ -48,8 +48,11 @@ zend_object* php_wxClientData_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxClientData___construct_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxClientData_functions[] = {
-    PHP_ME(php_wxClientData, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxClientData, __construct, php_wxClientData___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif
@@ -91,10 +94,18 @@ zend_object* php_wxTreeItemData_new(zend_class_entry *class_type);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
+ZEND_BEGIN_ARG_INFO_EX(php_wxTreeItemData_GetId_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTreeItemData_SetId_arg_infos, 0, 0, 0)
+    ZEND_ARG_INFO(0, id)
+ZEND_END_ARG_INFO()
+ZEND_BEGIN_ARG_INFO_EX(php_wxTreeItemData___construct_arg_infos, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry php_wxTreeItemData_functions[] = {
-    PHP_ME(php_wxTreeItemData, GetId, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTreeItemData, SetId, NULL, ZEND_ACC_PUBLIC)
-    PHP_ME(php_wxTreeItemData, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    PHP_ME(php_wxTreeItemData, GetId, php_wxTreeItemData_GetId_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTreeItemData, SetId, php_wxTreeItemData_SetId_arg_infos, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxTreeItemData, __construct, php_wxTreeItemData___construct_arg_infos, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     PHP_FE_END
 };
 #endif

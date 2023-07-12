@@ -93,7 +93,7 @@ if(file_exists("./../../json/classes.json"))
     //Unmark webview methods as pure virtual since they can be used
     foreach($defIni["wxWebView"] as $method_name=>$method_definitions)
     {
-        if($method_name{0} != "_")
+        if($method_name[0] !== "_")
         {
             foreach($defIni["wxWebView"][$method_name] as $method_index=>$method_data)
             {
@@ -322,7 +322,7 @@ foreach($defClassGroups as $file_name => $class_list)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements (inheritance) list
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //On the documentation the width and height seems to be optional but not on gtk :S
@@ -712,7 +712,7 @@ foreach($defGlobals as $variable_name => $variable_type)
 			. tabs(2)
 			. "Z_wxColour_P(&z_wx_transparent_color)->native_object = (wxColour_php*) _wx_transparent_color;\n"
 			. tabs(2)
-			. "wxPHP_REGISTER_OBJECT_CONSTANT(\"wxTransparentColour\", z_wx_transparent_color, CONST_CS | CONST_PERSISTENT);\n"
+			. "wxPHP_REGISTER_OBJECT_CONSTANT(\"wxTransparentColour\", z_wx_transparent_color, CONST_CS);\n"
 		;
         continue;
     }
@@ -851,7 +851,7 @@ foreach($defGlobals as $variable_name => $variable_type)
                     $object_constants .= tabs(2) . "zval z_{$variable_name};\n";
                     $object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
                     $object_constants .= tabs(2) . "Z_{$plain_type}_P(&z_{$variable_name})->native_object = ({$plain_type}_php*) {$variable_name};\n";
-                    $object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
+                    $object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS);\n\n";
                     break;
 
                 case "reference":
@@ -861,7 +861,7 @@ foreach($defGlobals as $variable_name => $variable_type)
                     $object_constants .= tabs(2) . "zval z_{$variable_name};\n";
                     $object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
                     $object_constants .= tabs(2) . "Z_{$plain_type}_P(&z_{$variable_name})->native_object = ({$plain_type}_php*) &{$variable_name};\n";
-                    $object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
+                    $object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS);\n\n";
                     break;
             }
             break;
@@ -895,12 +895,33 @@ foreach($defEnums[0] as $enumClassName=>$classEnums)
     }
 }
 
+//Generating wxwidgets.cpp function arg_infos
+$functions_arg_infos_table = "";
+foreach($defFunctions as $function_name=>$function_data)
+{
+    $maxParamsFuncDef = $function_data[0];
+    foreach($function_data as $func) {
+        if(count($func['parameters_name']) > count($maxParamsFuncDef['parameters_name'])) {
+            $maxParamsFuncDef = $func;
+        }
+    }
+
+    $functions_arg_infos_table .= "ZEND_BEGIN_ARG_INFO_EX(php_{$function_name}_arg_infos, 0, 0, 0)\n";
+
+    foreach($maxParamsFuncDef['parameters_name'] as $paramName) {
+        $functions_arg_infos_table .= tabs(1)."ZEND_ARG_INFO(0, {$paramName})\n";
+    }
+
+    $functions_arg_infos_table .= "ZEND_END_ARG_INFO()\n";
+
+}
+
 //Generating wxwidgets.cpp function table entries
 $functions_table = "";
 foreach($defFunctions as $function_name=>$function_data)
 {
     //Write to functions table entry
-    $functions_table .= "    PHP_FALIAS($function_name, php_$function_name, NULL)\n";
+    $functions_table .= "    PHP_FALIAS($function_name, php_$function_name, php_{$function_name}_arg_infos)\n";
 }
 
 //Generate wxwidgets.cpp
@@ -921,7 +942,7 @@ foreach($defIni as $className => $classDef)
     foreach($classDef as $fcName => $fc)
     {
         //Skip specification attributes like _pure_virtual, _implements, etc...
-        if($fcName{0}=="_")
+        if($fcName[0] === "_")
         {
             continue;
         }

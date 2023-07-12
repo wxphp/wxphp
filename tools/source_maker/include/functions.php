@@ -347,7 +347,7 @@ function derivationsOfClass($class)
  *
  * @return array All function names
  */
-function funcsOfClass($classN, $ctor=0, &$output, $ar = array(), $multiple_inheritance = false)
+function funcsOfClass($classN, $ctor, &$output, $ar = array(), $multiple_inheritance = false, $override_class_name = null)
 {
     global $defIni;
     $class_methods = "";
@@ -357,9 +357,11 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array(), $multiple_inher
 
     $classDef3 = $classDef = $defIni[$classN];
 
+    $className = $override_class_name ? $override_class_name : $classN;
+
     foreach($classDef as $funcName => $funcDef)
     {
-        if($funcName{0}=="_")
+        if($funcName[0] === "_")
             continue;
 
         if(($funcDef[0]["virtual"] && $funcDef[0]["protected"]) || $funcDef[0]["pure_virtual"] ||
@@ -384,7 +386,7 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array(), $multiple_inher
 
         $ar[] = $funcName2;
 
-        $class_methods .= tabs(1)."PHP_ME(php_{$classN}, {$funcName2}, NULL, ";
+        $class_methods .= tabs(1)."PHP_ME(php_{$classN}, {$funcName2}, php_{$className}_{$funcName2}_arg_infos, ";
 
         if($funcDef[0]["static"])
         {
@@ -413,7 +415,7 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array(), $multiple_inher
 
         foreach($classDef['_implements'] as $imp)
         {
-            $ar = array_merge($ar,funcsOfClass($imp, 0, $output, $ar, $multiple_inheritance));
+            $ar = array_merge($ar,funcsOfClass($imp, 0, $output, $ar, $multiple_inheritance, $className));
             continue;
 
             if(!isset($defIni[$imp]))
@@ -457,11 +459,11 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array(), $multiple_inher
                 {
                     if($funcDef[0]["static"])
                     {
-                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)\n";
+                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, php_{$className}_{$funcName2}_arg_infos, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)\n";
                     }
                     else
                     {
-                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, NULL, ZEND_ACC_PUBLIC)\n";
+                        $class_methods .= tabs(1)."PHP_ME(php_{$imp}, {$funcName2}, php_{$className}_{$funcName2}_arg_infos, ZEND_ACC_PUBLIC)\n";
                     }
                 }
             }
@@ -469,6 +471,84 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array(), $multiple_inher
     }
 
     $output .= $class_methods;
+
+    return $ar;
+}
+
+function funcDefsOfClass($classN)
+{
+    global $defIni;
+    $funcDefs = array();
+
+    if (!isset($defIni[$classN])) {
+        return array();
+    }
+
+    $classDef = $defIni[$classN];
+
+    foreach ($classDef as $funcName => $funcDef) {
+        if ($funcName[0] === '_') {
+            continue;
+        }
+
+        if (($funcDef[0]['virtual'] && $funcDef[0]['protected']) || $funcDef[0]['pure_virtual'] ||
+            '' . strpos($funcName, 'On') . '' == '0'
+        ) {
+            continue;
+        }
+
+        if ($classN == $funcName) {
+            $funcName = '__construct';
+        }
+
+        //Rename conflicting method names with PHP keywords
+        $funcName = php_method_name($funcName);
+
+        $funcDefs[$funcName] = $funcDef;
+    }
+
+    if (isset($classDef['_implements']) &&
+        count($classDef['_implements']) > 0) {
+        $multiple_inheritance = true;
+
+        foreach ($classDef['_implements'] as $imp) {
+            $funcDefs = array_merge_recursive($funcDefs,funcDefsOfClass($imp));
+        }
+    }
+
+    return $funcDefs;
+}
+
+function argInfosOfClass($classN, &$output)
+{
+    $class_arg_infos = "";
+    $ar = array();
+
+    $funcDefs = funcDefsOfClass($classN);
+    foreach($funcDefs as $funcName => $funcDef)
+    {
+        if(in_array($funcName, $ar))
+            continue;
+
+        $ar[] = $funcName;
+
+        $class_arg_infos .= "ZEND_BEGIN_ARG_INFO_EX(php_{$classN}_{$funcName}_arg_infos, 0, 0, 0)\n";
+
+        $maxParamsFuncDef = $funcDef[0];
+        foreach($funcDef as $func) {
+            if(count($func['parameters_name']) > count($maxParamsFuncDef['parameters_name'])) {
+                $maxParamsFuncDef = $func;
+            }
+        }
+
+        foreach($maxParamsFuncDef['parameters_name'] as $paramName) {
+            $class_arg_infos .= tabs(1)."ZEND_ARG_INFO(0, {$paramName})\n";
+        }
+
+        $class_arg_infos .= "ZEND_END_ARG_INFO()\n";
+    }
+
+    $output .= $class_arg_infos;
 
     return $ar;
 }
@@ -621,7 +701,7 @@ function classes_method_merger(&$classes)
                 {
 
                     //Skip internal structures
-                    if($parent_class_method_name{0}=="_")
+                    if($parent_class_method_name[0] === "_")
                         continue;
 
                     //Skip constructros since they cannot be overloaded in C++
@@ -694,7 +774,7 @@ function remove_protected_methods(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements (inheritance) list
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //Remove protected methods from method_definitions
@@ -750,10 +830,10 @@ function remove_virtual_methods_overrides(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Only remove virtual methods that override non virtual methods with the same name
-            if(count($method_definitions) > 1)
+            if(is_countable($method_definitions) && count($method_definitions) > 1)
             {
                 //Skip _implements (inheritance) list
-                if($method_name{0} == "_")
+                if($method_name[0] === "_")
                     continue;
 
                 //Not remove if all overrides are virtual
@@ -878,7 +958,7 @@ function remove_methods_duplicated_on_base_classes(&$classes)
             foreach($method_definitions as $method_name=>$method_definition)
             {
                 //Skip _implements
-                if($method_name{0} == "_")
+                if($method_name[0] === "_")
                     continue;
 
                 //Stores the amount of base classes that implement the method
@@ -926,7 +1006,7 @@ function remove_methods_implementing_unknown_types(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //Skip wxEvtHandler
@@ -1166,7 +1246,7 @@ function remove_classes_and_methods_not_crossplatform(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements, _platforms (inheritance) list
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //Remove not crossplatform methods from method_definitions
@@ -1225,7 +1305,7 @@ function remove_deprecated_methods(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements (inheritance) list
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //Remove protected methods from method_definitions
@@ -1272,7 +1352,7 @@ function remove_methods_implementing_unhandled_arguments(&$classes)
         foreach($class_methods as $method_name=>$method_definitions)
         {
             //Skip _implements, _platforms (inheritance) list
-            if($method_name{0} == "_")
+            if($method_name[0] === "_")
                 continue;
 
             //Remove methods implementing unhandled argument declarations from method_definitions
@@ -1336,68 +1416,77 @@ function remove_old_src_and_headers()
     //Remove unneeded cpp files
     $src_dir = opendir("./../../src");
 
-    while (false !== ($current_file = readdir($src_dir)))
-    {
-        if("".strpos($current_file, ".cpp")."" != "")
+    if ($src_dir !== false) {
+        while (false !== ($current_file = readdir($src_dir)))
         {
-            $valid_src = false;
-            foreach($defClassGroups as $file_name => $class_list)
+            if("".strpos($current_file, ".cpp")."" != "")
             {
-                //Strip group_class_
-                $file_name = str_replace("group_class_", "", $file_name) . ".cpp";
-
-                if($file_name == $current_file)
+                $valid_src = false;
+                foreach($defClassGroups as $file_name => $class_list)
                 {
-                    $valid_src = true;
-                    break;
+                    //Strip group_class_
+                    $file_name = str_replace("group_class_", "", $file_name) . ".cpp";
+
+                    if($file_name == $current_file)
+                    {
+                        $valid_src = true;
+                        break;
+                    }
                 }
-            }
 
-            if(!$valid_src)
-            {
-                if(!file_exists("source_templates/$current_file"))
+                if(!$valid_src)
                 {
-                    print "Removing: " . $current_file . "\n";
-                    unlink("./../../src/$current_file");
+                    if(!file_exists("source_templates/$current_file"))
+                    {
+                        print "Removing: " . $current_file . "\n";
+                        unlink("./../../src/$current_file");
+                    }
                 }
             }
         }
+
+        closedir($src_dir);
+    } else {
+        exit("----\nsrc directory missing\n----\n");
     }
 
-    closedir($src_dir);
 
     //Remove unneeded h files
     $include_dir = opendir("./../../includes");
 
-    while (false !== ($current_file = readdir($include_dir)))
-    {
-        if("".strpos($current_file, ".h")."" != "")
+    if ($include_dir !== false) {
+        while (false !== ($current_file = readdir($include_dir)))
         {
-            $valid_include = false;
-            foreach($defClassGroups as $file_name => $class_list)
+            if("".strpos($current_file, ".h")."" != "")
             {
-                //Strip group_class_
-                $file_name = str_replace("group_class_", "", $file_name) . ".h";
-
-                if($file_name == $current_file)
+                $valid_include = false;
+                foreach($defClassGroups as $file_name => $class_list)
                 {
-                    $valid_include = true;
-                    break;
+                    //Strip group_class_
+                    $file_name = str_replace("group_class_", "", $file_name) . ".h";
+
+                    if($file_name == $current_file)
+                    {
+                        $valid_include = true;
+                        break;
+                    }
                 }
-            }
 
-            if(!$valid_include)
-            {
-                if(!file_exists("source_templates/$current_file"))
+                if(!$valid_include)
                 {
-                    print "Removing: " . $current_file . "\n";
-                    unlink("./../../includes/$current_file");
+                    if(!file_exists("source_templates/$current_file"))
+                    {
+                        print "Removing: " . $current_file . "\n";
+                        unlink("./../../includes/$current_file");
+                    }
                 }
             }
         }
-    }
 
-    closedir($include_dir);
+        closedir($include_dir);
+    } else {
+        exit("----\nincludes directory missing\n----\n");
+    }
 }
 
 /**
@@ -1612,7 +1701,11 @@ function parameter_type($parameter_type, $is_array, $function_name, $class_name=
 {
     global $defIni, $defTypedef;
 
-    $cleaned_type = str_replace(array("const ", "&", "*"), "", $parameter_type);
+    $cleaned_type = "";
+
+    if ($parameter_type !== null) {
+        $cleaned_type = str_replace(array("const ", "&", "*"), "", $parameter_type);
+    }
 
     $parameter_modifier = type_modifier($parameter_type, $is_array);
 
@@ -1717,25 +1810,29 @@ function type_modifier($type, $is_array=false)
 {
     $modifier = "";
 
-    if("".stristr($type, "const ")."" != "")
-    {
-        $modifier .= "const_";
-    }
+    if ($type !== null) {
+        if("".stristr($type, "const ")."" != "")
+        {
+            $modifier .= "const_";
+        }
 
-    if("".stristr($type, "**")."" != "")
-    {
-        $modifier .= "pointer_pointer";
-    }
-    elseif("".stristr($type, "*")."" != "")
-    {
-        $modifier .= "pointer";
-    }
-    elseif("".stristr($type, "&")."" != "")
-    {
-        $modifier .= "reference";
-    }
-    else
-    {
+        if("".stristr($type, "**")."" != "")
+        {
+            $modifier .= "pointer_pointer";
+        }
+        elseif("".stristr($type, "*")."" != "")
+        {
+            $modifier .= "pointer";
+        }
+        elseif("".stristr($type, "&")."" != "")
+        {
+            $modifier .= "reference";
+        }
+        else
+        {
+            $modifier .= "none";
+        }
+    } else {
         $modifier .= "none";
     }
 
@@ -1788,7 +1885,9 @@ function function_arguments_string($function_definition, $default_argument=true)
             $arguments .= "[]";
         }
 
-        if(strlen($function_definition["parameters_default_value"][$parameter_index]) > 0 && $default_argument)
+        if(is_string($function_definition["parameters_default_value"][$parameter_index])
+            && $function_definition["parameters_default_value"][$parameter_index] !== ""
+            && $default_argument)
         {
             $arguments .= "=" . $function_definition["parameters_default_value"][$parameter_index];
         }
@@ -1889,7 +1988,11 @@ function get_proto_php_type($type, $type_name, $function_name, $class_name=null)
     $declaration_modifier = "";
     $standard_type = parameter_type($type, false, $function_name, $class_name, $declaration_modifier, true);
 
-    $cleaned_type = str_replace(array("const ", "*", "&"), "", $type);
+    $cleaned_type = "";
+
+    if ($type !== null) {
+        $cleaned_type = str_replace(array("const ", "*", "&"), "", $type);
+    }
 
     $method_type = "";
 

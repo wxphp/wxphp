@@ -72,7 +72,7 @@ those that report issues on the issue tracker. Thanks to Everyone!
 
 Made with [contributors-img](https://contributors-img.firebaseapp.com).
 
-PHP 7 upgrade has been sponsored by
+PHP 7 and 8 upgrades have been sponsored by
 
 <a href="https://rangee.com/">
   <img src="https://rangee.com/wp-content/uploads/2018/09/Rangee_Logo_2018_small.jpg"/>
